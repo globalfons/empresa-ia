@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Cuánto cuesta viajar a Japón en 2026? Calculadora de presupuesto | ViajaIA</title>
+<meta name="description" content="Calcula en un minuto cuánto cuesta tu viaje a Japón desde España: vuelos, alojamiento, comida, trenes, seguro y eSIM. Tres estilos de viaje y cambio del yen actualizable.">
+<link rel="canonical" href="https://globalfons.github.io/empresa-ia/japon/presupuesto/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="¿Cuánto cuesta viajar a Japón? Calculadora de presupuesto 2026">
+<meta property="og:description" content="Calcula en un minuto cuánto cuesta tu viaje a Japón desde España: vuelos, alojamiento, comida, trenes, seguro y eSIM. Tres estilos de viaje y cambio del yen actualizable.">
+<meta property="og:url" content="https://globalfons.github.io/empresa-ia/japon/presupuesto/">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#b91c3c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23b91c3c'/></svg>">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"¿Cuánto cuesta viajar a Japón? Calculadora de presupuesto 2026","headline":"¿Cuánto cuesta viajar a Japón? Calculadora de presupuesto 2026","description":"Calcula en un minuto cuánto cuesta tu viaje a Japón desde España: vuelos, alojamiento, comida, trenes, seguro y eSIM. Tres estilos de viaje y cambio del yen actualizable.","inLanguage":"es","dateModified":"2026-09-27","url":"https://globalfons.github.io/empresa-ia/japon/presupuesto/","publisher":{"@type":"Organization","name":"ViajaIA","url":"https://globalfons.github.io/empresa-ia/"},"applicationCategory":"TravelApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta un viaje de 15 días a Japón?","acceptedAnswer":{"@type":"Answer","text":"Para dos personas en estilo medio, contando vuelos desde España, hoteles business, comida y trenes, el total suele rondar entre 2.500 y 3.500 € por persona. Usa la calculadora para ajustarlo a tu caso."}},{"@type":"Question","name":"¿Es caro Japón con el yen actual?","acceptedAnswer":{"@type":"Answer","text":"Con el cambio de 2026 (alrededor de 178 ¥ por euro), comer y moverse en Japón sale más barato que en muchas capitales europeas. Lo que más encarece el viaje son los vuelos y los hoteles en temporada alta."}},{"@type":"Question","name":"¿Cuándo es más barato viajar a Japón?","acceptedAnswer":{"@type":"Answer","text":"Enero y febrero (salvo Año Nuevo), junio y finales de noviembre a principios de diciembre suelen ser más baratos. Los picos de precio son la floración del cerezo (finales de marzo a principios de abril), la Golden Week (finales de abril a principios de mayo) y el Obon (mediados de agosto)."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../"><span class="dot"></span>ViajaIA</a>
+<nav><a href="../../japon/">Japón</a><a href="../../japon/calculadora-jr-pass/">JR Pass</a><a href="../../japon/presupuesto/">Presupuesto</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumbs" aria-label="Migas"><a href="../../">Inicio</a> › <a href="../../japon/">Japón</a> › <span>Presupuesto</span></nav>
+<p class="aff-note">Esta página contiene enlaces de afiliado: si compras a través de ellos, ViajaIA puede recibir una comisión sin coste extra para ti. <a href="../../legal/afiliados/">Más info</a>.</p>
+<h1>¿Cuánto cuesta viajar a Japón? Calculadora de presupuesto 2026</h1>
+<p class="lead">Ajusta días, personas y estilo de viaje. Los costes diarios están calibrados con precios de 2026 y puedes cambiar el tipo de cambio del yen.</p>
+
+<form class="calc" id="pp-form" onsubmit="return false">
+  <div class="row">
+    <div><label for="pp-dias">Días de viaje</label><input type="number" id="pp-dias" min="1" max="60" value="14"></div>
+    <div><label for="pp-pers">Personas</label><input type="number" id="pp-pers" min="1" max="10" value="2"></div>
+  </div>
+  <div class="row">
+    <div>
+      <label for="pp-estilo">Estilo</label>
+      <select id="pp-estilo">
+        <option value="mochilero">Mochilero (hostales, comida de konbini)</option>
+        <option value="medio" selected>Medio (hotel business, restaurantes normales)</option>
+        <option value="comodo">Cómodo (hoteles 4★, ryokan, buenos restaurantes)</option>
+      </select>
+    </div>
+    <div><label for="pp-rate">Cambio: yenes por euro</label><input type="number" id="pp-rate" min="50" step="0.5" value="178"></div>
+  </div>
+  <div class="row">
+    <div><label for="pp-vuelo">Vuelo ida y vuelta por persona (€)</label><input type="number" id="pp-vuelo" min="0" step="10" value="900"></div>
+    <div>
+      <label for="pp-jr">Trenes largos por persona</label>
+      <select id="pp-jr">
+        <option value="0">Casi no me muevo entre ciudades</option>
+        <option value="29000" selected>Tokio–Kioto–Osaka (billetes sueltos)</option>
+        <option value="50000">JR Pass 7 días</option>
+        <option value="80000">JR Pass 14 días</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div><label for="pp-seguro">Seguro de viaje por persona (€)</label><input type="number" id="pp-seguro" min="0" step="5" value="80"></div>
+    <div><label for="pp-esim">eSIM / internet por persona (€)</label><input type="number" id="pp-esim" min="0" step="1" value="25"></div>
+  </div>
+  <div id="pp-total" class="result yes" aria-live="polite"></div>
+  <div class="table-scroll"><table><tbody id="pp-tabla"></tbody></table></div>
+  <p class="muted">Orientativo. Seguro e internet son estimaciones: compara precios reales antes de contratar.</p>
+</form>
+
+<h2>Qué hay detrás de cada partida</h2>
+<h3>Alojamiento</h3>
+<p>Una habitación doble en un hotel business (APA, Toyoko Inn, Dormy Inn…) cuesta de media unos 16.000 ¥ por noche, más en Tokio y Kioto en temporada alta. Reserva con cancelación gratuita y compara precios con antelación, sobre todo en primavera y otoño.</p>
+<p><a class="cta alt" data-aff="booking" href="https://www.booking.com/country/jp.es.html">Ver hoteles en Japón</a></p>
+
+<h3>Trenes</h3>
+<p>El tren suele ser la partida más difícil de estimar. Antes de comprar el JR Pass, comprueba si te compensa con la <a href="../calculadora-jr-pass/">calculadora del JR Pass</a>: en muchos itinerarios clásicos sale más barato comprar billetes sueltos.</p>
+
+<h3>Seguro de viaje</h3>
+<p>La sanidad pública española no te cubre en Japón y la atención privada allí es cara para un turista. No es una partida para ahorrar. Aquí explicamos <a href="../seguro-de-viaje/">qué coberturas necesitas y cómo comparar</a>.</p>
+
+<h3>Internet</h3>
+<p>Una eSIM con datos te ahorra depender del wifi para mapas, traducción y horarios de tren. Consulta la <a href="../internet-esim/">guía de eSIM para Japón</a>.</p>
+
+<h3>Actividades</h3>
+<p>Los templos cuestan entre 400 y 1.000 ¥. Lo que más sube la cuenta son las experiencias: teamLab, excursiones al Fuji, ceremonias del té o tours guiados. Resérvalas con tiempo si viajas en temporada alta.</p>
+<p><a class="cta alt" data-aff="civitatis" data-deep href="https://www.civitatis.com/es/tokio/">Actividades en español en Tokio</a></p>
+
+<section class="faq"><h2>Preguntas frecuentes</h2><details><summary>¿Cuánto cuesta un viaje de 15 días a Japón?</summary><p>Para dos personas en estilo medio, contando vuelos desde España, hoteles business, comida y trenes, el total suele rondar entre 2.500 y 3.500 € por persona. Usa la calculadora para ajustarlo a tu caso.</p></details><details><summary>¿Es caro Japón con el yen actual?</summary><p>Con el cambio de 2026 (alrededor de 178 ¥ por euro), comer y moverse en Japón sale más barato que en muchas capitales europeas. Lo que más encarece el viaje son los vuelos y los hoteles en temporada alta.</p></details><details><summary>¿Cuándo es más barato viajar a Japón?</summary><p>Enero y febrero (salvo Año Nuevo), junio y finales de noviembre a principios de diciembre suelen ser más baratos. Los picos de precio son la floración del cerezo (finales de marzo a principios de abril), la Golden Week (finales de abril a principios de mayo) y el Obon (mediados de agosto).</p></details></section>
+<p class="updated">Última revisión: 2026-09-27</p>
+</main>
+<footer class="foot"><div class="wrap">
+<p><strong>ViajaIA</strong> — Calculadoras y guías honestas para planificar tu viaje a Japón.</p>
+<p><a href="../../legal/afiliados/">Afiliados</a> · <a href="../../legal/privacidad/">Privacidad</a> · <a href="../../legal/aviso-legal/">Aviso legal</a></p>
+</div></footer>
+<script src="../../assets/afiliados.js" defer></script>
+<script src="../../assets/calc-presupuesto.js" defer></script>
+</body>
+</html>
