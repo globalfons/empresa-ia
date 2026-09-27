@@ -24,8 +24,17 @@ Todos son gratuitos. Usa la URL de arriba como "tu web". Por orden de prioridad:
 
 **Cuando te aprueben, pégame los IDs en el chat** y los pongo en `src/assets/afiliados.js`. Hasta entonces los enlaces funcionan, pero sin comisión.
 
-## 3. Aviso legal (1 minuto)
-En España una web con ingresos debe identificar al titular (LSSI). Pásame nombre o razón social, NIF y un email de contacto, o rellénalo tú en `src/pages/legal/aviso-legal.html`.
+## 3. Aviso legal (1 minuto) — como particular, con tu DNI
+La LSSI pide identificar al titular de una web con ingresos: nombre, DNI (tu NIF de persona física), un domicilio de contacto y un email. No hace falta empresa ni alta de autónomo para esto.
+- Crea un **email solo para la web** (por ejemplo, viajaia.contacto@gmail.com) para no exponer el personal.
+- Rellénalo en `src/pages/legal/aviso-legal.html` o pásamelo y lo pongo yo.
+
+## Impuestos siendo particular (resumen, no es asesoría)
+- Te puedes dar de alta en los programas de afiliados como **persona física con tu DNI**.
+- **Autónomos (Seguridad Social):** según la jurisprudencia del Tribunal Supremo, si los ingresos netos del año no superan el SMI (17.094 € en 2026) no hay habitualidad y no sería obligatorio el alta. Es un criterio de los tribunales, no una exención escrita en la ley.
+- **Hacienda:** todo lo que ganes se declara en la **renta**, desde el primer euro. Guarda los justificantes de pago de cada programa.
+- Técnicamente Hacienda considera la afiliación una actividad económica (alta censal con el modelo 036/037, IVA). En cantidades pequeñas es una zona gris.
+- **Cuando llegue el primer pago de verdad, consulta un gestor** (una consulta puntual cuesta unos 50–100 €) antes de la siguiente renta.
 
 ## 4. Recomendado (cuando puedas)
 - **Cuenta de Pinterest de empresa** "ViajaIA Japón": es el canal de tráfico más rápido para viajes. Yo te dejo los pines escritos en `negocio/contenido/pinterest.md`.
