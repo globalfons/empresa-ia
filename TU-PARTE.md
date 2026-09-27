@@ -20,6 +20,18 @@ En 1–3 minutos estará en https://globalfons.github.io/empresa-ia/
 
 ## 3. Aviso legal — HECHO ✅
 
+## 3b. Activar cuentas y ranking con Supabase (15 minutos, gratis)
+La web ya tiene registro, inicio de sesión, progreso en la nube y ranking programados. Solo falta la base de datos:
+1. Crea una cuenta en https://supabase.com y pulsa **New project**. Nombre: `testley`. Región: **West EU (Ireland)** o **Central EU (Frankfurt)**. Guarda la contraseña de la base de datos en un sitio seguro (no me la pases).
+2. Ve a **SQL Editor → New query**, pega el contenido entero de `supabase/esquema.sql` y pulsa **Run**.
+3. Ve a **Authentication → Sign In / Providers → Email** y desactiva **"Confirm email"**. Así la gente entra al momento; el servidor de correo gratuito de Supabase solo envía unos pocos emails por hora.
+4. Ve a **Authentication → URL Configuration** y en **Site URL** pon `https://globalfons.github.io/empresa-ia/`.
+5. Ve a **Project Settings → API** y pégame estos dos datos:
+   - **Project URL** (algo como `https://abcd.supabase.co`)
+   - **anon public key**. Es pública y va en la web, así que se puede compartir. **NO** me pases la `service_role`.
+
+Con eso activo las cuentas y el ranking en 2 minutos.
+
 ## 4. Difusión (30 minutos a la semana, cuando puedas)
 Publica los textos de `negocio/difusion.md` en 2–3 grupos de Telegram o foros de opositores. Es lo único que acelera las primeras visitas, porque yo no puedo publicar en redes.
 

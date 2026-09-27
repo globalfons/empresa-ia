@@ -1,0 +1,268 @@
+// TestLey — progreso, estadísticas, cuenta (Supabase opcional) y cabecera.
+// window.TL_CONFIG = { supabaseUrl, supabaseAnonKey, root } lo inyecta build.mjs.
+(function () {
+  var CFG = window.TL_CONFIG || {};
+  var ONLINE = !!(CFG.supabaseUrl && CFG.supabaseAnonKey);
+  var LS_PROG = "testley:progreso:v2";
+  var LS_SES = "testley:sesion";
+
+  function lsGet(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v == null ? d : v; } catch (e) { return d; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function hoy(ts) { var d = new Date(ts || Date.now()); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); }
+
+  // ---------------- Progreso local ----------------
+  // prog[ley] = { q: {qid: [aciertos, fallos, rachaPregunta, ultimoTs]}, ses: [[ts, n, ok, ko, blank]], dias: ["2026-9-27", ...] }
+  function migrarAntiguo(p) {
+    var viejo = lsGet("testley:l39", null);
+    if (!viejo || p["ley-39-2015"]) return p;
+    p["ley-39-2015"] = { q: {}, ses: [], dias: [] };
+    Object.keys(viejo.fallos || {}).forEach(function (id) { p["ley-39-2015"].q[id] = [0, 1, 0, Date.now()]; });
+    return p;
+  }
+  var prog = migrarAntiguo(lsGet(LS_PROG, {}));
+
+  function ley(l) { return prog[l] || (prog[l] = { q: {}, ses: [], dias: [] }); }
+
+  var syncTimer = null;
+  function guardar(l) {
+    lsSet(LS_PROG, prog);
+    if (ONLINE && sesion()) { clearTimeout(syncTimer); syncTimer = setTimeout(function () { subir(l); }, 1500); }
+  }
+
+  function registrarRespuesta(l, qid, correcta) {
+    var p = ley(l), r = p.q[qid] || [0, 0, 0, 0];
+    if (correcta) { r[0]++; r[2] = Math.max(1, r[2] + 1); } else { r[1]++; r[2] = 0; }
+    r[3] = Date.now();
+    p.q[qid] = r;
+    var d = hoy();
+    if (p.dias.indexOf(d) < 0) { p.dias.push(d); if (p.dias.length > 400) p.dias.shift(); }
+    guardar(l);
+  }
+  function registrarSesion(l, n, ok, ko, blank) {
+    var p = ley(l);
+    p.ses.push([Date.now(), n, ok, ko, blank]);
+    if (p.ses.length > 200) p.ses.shift();
+    guardar(l);
+  }
+  function estado(l, qid) {
+    var r = ley(l).q[qid];
+    if (!r) return "nueva";
+    if (r[2] >= 2) return "dominada";
+    if (r[2] === 1) return "aprendida";
+    return "fallada";
+  }
+
+  // ---------------- Estadísticas ----------------
+  var PROB = { dominada: 0.95, aprendida: 0.75, fallada: 0.35 };
+  var PESO = { dominada: 1, aprendida: 0.6, fallada: 0.15, nueva: 0 };
+  function netoPregunta(e) {
+    if (e === "nueva") return 0; // se dejaría en blanco
+    var p = PROB[e];
+    return Math.max(0, p - (1 - p) / 3); // penalización de 1/3 por error
+  }
+  function estrellas(nota) { return nota >= 9 ? 5 : nota >= 7.5 ? 4 : nota >= 6 ? 3 : nota >= 4 ? 2 : nota >= 2 ? 1 : 0; }
+
+  function racha(dias) {
+    if (!dias.length) return 0;
+    var set = {}; dias.forEach(function (d) { set[d] = 1; });
+    var n = 0, t = Date.now();
+    if (!set[hoy(t)]) t -= 86400000; // si hoy aún no ha estudiado, cuenta desde ayer
+    while (set[hoy(t)]) { n++; t -= 86400000; }
+    return n;
+  }
+
+  // data = { arts: {n: {t, b}}, qs: [...] }
+  function stats(l, data) {
+    var p = ley(l), porBloque = {}, porArt = {}, cuenta = { nueva: 0, fallada: 0, aprendida: 0, dominada: 0 };
+    var neto = 0, dominio = 0;
+    data.qs.forEach(function (q) {
+      var e = estado(l, q.id), b = data.arts[q.art].b;
+      cuenta[e]++; neto += netoPregunta(e); dominio += PESO[e];
+      (porBloque[b] = porBloque[b] || { n: 0, dom: 0, vistas: 0 }).n++;
+      porBloque[b].dom += PESO[e]; if (e !== "nueva") porBloque[b].vistas++;
+      (porArt[q.art] = porArt[q.art] || { n: 0, dom: 0, fallos: 0 }).n++;
+      porArt[q.art].dom += PESO[e]; if (e === "fallada") porArt[q.art].fallos++;
+    });
+    var N = data.qs.length || 1;
+    var nota = Math.round((neto / N) * 100) / 10;
+    var resp = 0, ac = 0;
+    Object.keys(p.q).forEach(function (k) { resp += p.q[k][0] + p.q[k][1]; ac += p.q[k][0]; });
+    return {
+      total: data.qs.length, cuenta: cuenta, nota: nota, estrellas: estrellas(nota),
+      dominioPct: Math.round((dominio / N) * 100), respuestas: resp, acierto: resp ? Math.round((100 * ac) / resp) : 0,
+      racha: racha(p.dias), diasEstudio: p.dias.length, sesiones: p.ses.slice(),
+      porBloque: porBloque, porArt: porArt,
+    };
+  }
+
+  function logros(s) {
+    var L = [
+      ["🎯", "Primer test", "Completa tu primer test", s.sesiones.length >= 1],
+      ["💯", "100 respuestas", "Responde 100 preguntas", s.respuestas >= 100],
+      ["🔥", "Racha de 3 días", "Estudia 3 días seguidos", s.racha >= 3],
+      ["📅", "Racha de 7 días", "Estudia 7 días seguidos", s.racha >= 7],
+      ["🧠", "25 dominadas", "Domina 25 preguntas", s.cuenta.dominada >= 25],
+      ["🏅", "Aprobado", "Nota orientativa de 5 o más", s.nota >= 5],
+      ["🏆", "Sobresaliente", "Nota orientativa de 9 o más", s.nota >= 9],
+      ["📚", "Ley completa vista", "Responde todas las preguntas al menos una vez", s.cuenta.nueva === 0],
+    ];
+    return L.map(function (x) { return { icono: x[0], nombre: x[1], desc: x[2], ok: !!x[3] }; });
+  }
+
+  // ---------------- Supabase (API REST, sin librerías) ----------------
+  function sesion() { return lsGet(LS_SES, null); }
+  function api(path, opts) {
+    opts = opts || {};
+    var h = { apikey: CFG.supabaseAnonKey, "Content-Type": "application/json" };
+    var s = sesion();
+    if (s && !opts.anon) h.Authorization = "Bearer " + s.access_token;
+    Object.keys(opts.headers || {}).forEach(function (k) { h[k] = opts.headers[k]; });
+    return fetch(CFG.supabaseUrl + path, { method: opts.method || "GET", headers: h, body: opts.body ? JSON.stringify(opts.body) : undefined })
+      .then(function (r) {
+        return r.text().then(function (t) {
+          var j = null; try { j = t ? JSON.parse(t) : null; } catch (e) {}
+          if (!r.ok) {
+            var msg = (j && (j.msg || j.error_description || j.message || j.error)) || "Error " + r.status;
+            var err = new Error(traducir(msg)); err.status = r.status; throw err;
+          }
+          return j;
+        });
+      });
+  }
+  function traducir(m) {
+    var T = {
+      "Invalid login credentials": "Email o contraseña incorrectos.",
+      "User already registered": "Ya existe una cuenta con ese email. Entra con tu contraseña.",
+      "Email not confirmed": "Confirma tu email con el enlace que te hemos enviado.",
+      "Password should be at least 6 characters.": "La contraseña debe tener al menos 6 caracteres.",
+    };
+    return T[m] || m;
+  }
+  function guardarSesion(j) {
+    if (!j || !j.access_token) return null;
+    var s = { access_token: j.access_token, refresh_token: j.refresh_token, expires_at: Date.now() + (j.expires_in || 3600) * 1000, user: { id: j.user.id, email: j.user.email } };
+    lsSet(LS_SES, s);
+    return s;
+  }
+  function refrescar() {
+    var s = sesion();
+    if (!s) return Promise.resolve(null);
+    if (s.expires_at - Date.now() > 120000) return Promise.resolve(s);
+    return api("/auth/v1/token?grant_type=refresh_token", { method: "POST", anon: true, body: { refresh_token: s.refresh_token } })
+      .then(guardarSesion)
+      .catch(function () { lsSet(LS_SES, null); return null; });
+  }
+  function registrar(email, pass, alias) {
+    return api("/auth/v1/signup", { method: "POST", anon: true, body: { email: email, password: pass, data: { alias: alias } } }).then(function (j) {
+      var s = guardarSesion(j);
+      if (s) return guardarPerfil(alias).then(function () { return subirTodo(); }).then(function () { return { sesion: s }; });
+      return { confirmar: true };
+    });
+  }
+  function entrar(email, pass) {
+    return api("/auth/v1/token?grant_type=password", { method: "POST", anon: true, body: { email: email, password: pass } }).then(function (j) {
+      guardarSesion(j);
+      return bajar().then(function () {
+        var alias = j.user && j.user.user_metadata && j.user.user_metadata.alias;
+        return alias ? guardarPerfil(alias, true) : null;
+      }).then(subirTodo);
+    });
+  }
+  function salir() {
+    var s = sesion();
+    var p = s ? api("/auth/v1/logout", { method: "POST" }).catch(function () {}) : Promise.resolve();
+    return p.then(function () { lsSet(LS_SES, null); });
+  }
+  function recordar(email) {
+    return api("/auth/v1/recover", { method: "POST", anon: true, body: { email: email } });
+  }
+  function guardarPerfil(alias, soloSiFalta) {
+    var s = sesion();
+    return api("/rest/v1/perfiles" + (soloSiFalta ? "?on_conflict=id" : ""), {
+      method: "POST",
+      headers: { Prefer: soloSiFalta ? "resolution=ignore-duplicates" : "resolution=merge-duplicates" },
+      body: { id: s.user.id, alias: alias },
+    });
+  }
+  function perfil() {
+    var s = sesion();
+    if (!s) return Promise.resolve(null);
+    return refrescar().then(function () {
+      return api("/rest/v1/perfiles?id=eq." + s.user.id + "&select=alias,en_ranking");
+    }).then(function (r) { return (r && r[0]) || null; });
+  }
+  function actualizarPerfil(campos) {
+    var s = sesion();
+    return refrescar().then(function () {
+      return api("/rest/v1/perfiles?id=eq." + s.user.id, { method: "PATCH", body: campos });
+    });
+  }
+
+  // Fusiona dos progresos quedándose con el dato más completo de cada pregunta.
+  function fusionar(a, b) {
+    var out = { q: {}, ses: [], dias: [] };
+    [a, b].forEach(function (x) {
+      if (!x) return;
+      Object.keys(x.q || {}).forEach(function (k) {
+        var r = x.q[k], o = out.q[k];
+        if (!o || r[3] > o[3]) out.q[k] = [Math.max(r[0], o ? o[0] : 0), Math.max(r[1], o ? o[1] : 0), r[2], r[3]];
+        else out.q[k] = [Math.max(r[0], o[0]), Math.max(r[1], o[1]), o[2], o[3]];
+      });
+      (x.dias || []).forEach(function (d) { if (out.dias.indexOf(d) < 0) out.dias.push(d); });
+      (x.ses || []).forEach(function (s) { if (!out.ses.some(function (y) { return y[0] === s[0]; })) out.ses.push(s); });
+    });
+    out.ses.sort(function (x, y) { return x[0] - y[0]; });
+    return out;
+  }
+  function bajar() {
+    var s = sesion();
+    return api("/rest/v1/progreso?user_id=eq." + s.user.id + "&select=ley,datos").then(function (filas) {
+      (filas || []).forEach(function (f) { prog[f.ley] = fusionar(prog[f.ley], f.datos); });
+      lsSet(LS_PROG, prog);
+    });
+  }
+  var DATOS = {}; // ley -> data de preguntas (para calcular la nota al subir)
+  function subir(l) {
+    var s = sesion();
+    if (!s || !prog[l]) return Promise.resolve();
+    var st = DATOS[l] ? stats(l, DATOS[l]) : null;
+    return refrescar().then(function () {
+      return api("/rest/v1/progreso?on_conflict=user_id,ley", {
+        method: "POST",
+        headers: { Prefer: "resolution=merge-duplicates" },
+        body: { user_id: s.user.id, ley: l, datos: prog[l], nota: st ? st.nota : 0, dominadas: st ? st.cuenta.dominada : 0, respuestas: st ? st.respuestas : 0 },
+      });
+    }).catch(function () {});
+  }
+  function subirTodo() { return Promise.all(Object.keys(prog).map(subir)); }
+  function ranking(l) {
+    return api("/rest/v1/rpc/ranking", { method: "POST", anon: !sesion(), body: { p_ley: l } });
+  }
+
+  // ---------------- Cabecera: estado de la cuenta ----------------
+  function pintarCabecera() {
+    var el = document.getElementById("cuenta-nav");
+    if (!el) return;
+    var root = CFG.root || "./";
+    var s = sesion();
+    el.innerHTML = s
+      ? '<a class="nav-user" href="' + root + 'panel/" title="' + s.user.email + '"><span class="avatar">' + s.user.email.charAt(0).toUpperCase() + "</span>Mi panel</a>"
+      : '<a class="btn-nav" href="' + root + (ONLINE ? "cuenta/" : "panel/") + '">' + (ONLINE ? "Entrar" : "Mi progreso") + "</a>";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    pintarCabecera();
+    if (ONLINE && sesion()) refrescar().then(pintarCabecera);
+  });
+
+  window.TL = {
+    online: ONLINE, root: CFG.root || "./",
+    registrarRespuesta: registrarRespuesta, registrarSesion: registrarSesion, estado: estado,
+    stats: stats, logros: logros, estrellas: estrellas,
+    sesion: sesion, registrar: registrar, entrar: entrar, salir: salir, recordar: recordar,
+    perfil: perfil, actualizarPerfil: actualizarPerfil, ranking: ranking, subir: subir, bajar: bajar,
+    setDatos: function (l, d) { DATOS[l] = d; },
+    cargar: function (l) { return fetch((CFG.root || "./") + "datos/" + l + ".json").then(function (r) { return r.json(); }).then(function (d) { DATOS[l] = d; return d; }); },
+    pintarCabecera: pintarCabecera,
+    _prog: function () { return prog; },
+  };
+})();
