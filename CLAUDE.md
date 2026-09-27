@@ -1,22 +1,20 @@
-# empresa-ia — ViajaIA
+# empresa-ia — TestLey
 
-Web de nicho monetizada con afiliación: herramientas y guías en español para viajar a Japón.
-El propietario solo gestiona cuentas (afiliados, Stripe, Pinterest, dominio). Claude opera todo lo demás con las skills `/money-*`.
+Tests de leyes para oposiciones; cada respuesta se justifica con la cita literal del BOE.
+El propietario (particular, sin empresa) solo gestiona cuentas: GitHub Pages, Lemon Squeezy y la difusión en grupos. Claude opera lo demás con las skills `/money-*`.
 
 ## Estructura
-- `src/pages/**.html`: páginas. Cada una empieza con `<!--meta {JSON} -->` (title, description, h1, faq, affiliate, crumbs, scripts, updated, noindex).
-- `src/assets/`: CSS, calculadoras y `afiliados.js` (IDs de afiliado, único sitio donde se configuran).
-- `site.json`: nombre, URL base y dominio propio.
-- `docs/`: salida generada que publica GitHub Pages. **No editar a mano.** Regenerar con `node build.mjs` y commitear siempre `src/` y `docs/` juntos.
-- `negocio/`: estrategia, plan de tráfico y contenido para canales externos.
-- `TU-PARTE.md`: tareas que solo puede hacer el propietario.
+- `datos/<ley>-articulos.json`: texto consolidado por artículo. Fuente: legalize-es, espejo de datos abiertos del BOE.
+- `datos/preguntas-<ley>.json`: preguntas `{art, q, o[4], a, cita}`. La opción correcta puede ir en cualquier posición porque la app baraja las opciones.
+- `datos/validar.py`: comprueba que cada `cita` aparece literalmente en su artículo. **Obligatorio que dé 0 errores antes de publicar.**
+- `web/assets/`: CSS y `test.js` (motor del test; el progreso se guarda en localStorage).
+- `web/paginas/`: páginas legales.
+- `build.mjs`: genera `docs/` (portada, página resumen de la ley, una página por artículo, Pase, sitemap y llms.txt). **No editar `docs/` a mano.**
+- `config.json`: nombre, URL y `checkoutUrl` (enlace de pago de Lemon Squeezy).
+- `negocio/`: plan, operación semanal y textos de difusión. `TU-PARTE.md`: tareas del propietario.
+- `archivo/viajaia/`: proyecto anterior, archivado.
 
-## Reglas de contenido
-- Nunca inventar experiencias personales ni cifras. Cada dato de precio lleva fuente enlazada o se marca como aproximado.
-- Los enlaces de afiliado usan `data-aff="<programa>"` con la URL normal como `href`. `afiliados.js` añade el ID y `rel="sponsored"`.
-- Las páginas con afiliados llevan `"affiliate": true` en su meta.
-- Las calculadoras dan el resultado honesto aunque perjudique la comisión.
-- Revisar los precios del JR Pass, las tarifas del shinkansen y el cambio del yen cada 6 meses (próxima revisión: 2027-03).
-
-## Verificación antes de hacer push
-`node build.mjs`, servir `docs/` bajo `/empresa-ia/` y comprobar que no hay enlaces internos rotos, que las calculadoras no dan errores de JS y que no hay scroll horizontal a 375 px.
+## Reglas
+- Nunca inventar preguntas sin cita verificable. Preguntas de dificultad real de examen, con distractores plausibles.
+- No prometer en la web funciones que no existan. Las funciones de pago se marcan como progresivas hasta que existan.
+- Antes de hacer push: validar, `node build.mjs`, crawler de enlaces sin roturas, test jugable en 375 px sin errores de JS.

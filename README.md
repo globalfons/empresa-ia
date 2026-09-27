@@ -1,13 +1,11 @@
-# empresa-ia — ViajaIA
+# empresa-ia — TestLey
 
-Web de herramientas y guías para viajar a Japón desde España, monetizada con afiliación.
+Test de leyes para oposiciones con la respuesta citada del BOE.
 
-- **Web:** https://globalfons.github.io/empresa-ia/ (cuando GitHub Pages esté activado, ver `TU-PARTE.md`)
-- **Estrategia:** [`negocio/estrategia.md`](negocio/estrategia.md)
-- **Plan de tráfico:** [`negocio/plan-trafico.md`](negocio/plan-trafico.md)
-- **Lo que tiene que hacer el propietario:** [`TU-PARTE.md`](TU-PARTE.md)
+- **Web:** https://globalfons.github.io/empresa-ia/
+- **Plan:** [`negocio/plan.md`](negocio/plan.md) · **Operación:** [`negocio/operacion.md`](negocio/operacion.md) · **Tu parte:** [`TU-PARTE.md`](TU-PARTE.md)
 
-## Desarrollo
 ```bash
-node build.mjs   # genera docs/ a partir de src/
+python3 datos/validar.py datos/ley-39-2015-articulos.json datos/preguntas-l39.json
+node build.mjs
 ```

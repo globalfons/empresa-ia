@@ -1,43 +1,28 @@
-# Lo que necesito de ti (unos 30 minutos en total)
+# Lo que necesito de ti
 
-Todo lo demás lo hago yo. Estas cosas no puedo hacerlas porque requieren tu identidad, tus cuentas o tu dinero.
+## 1. Activar la web (2 minutos) — IMPRESCINDIBLE
+https://github.com/globalfons/empresa-ia/settings/pages
+→ **Source:** Deploy from a branch
+→ **Branch:** `main`, carpeta `/docs`
+→ **Save**
+En 1–3 minutos estará en https://globalfons.github.io/empresa-ia/
 
-## 1. Publicar la web (2 minutos) — IMPRESCINDIBLE
-1. Ve a https://github.com/globalfons/empresa-ia/settings/pages
-2. En **Source** elige **Deploy from a branch**.
-3. En **Branch** elige `main` y la carpeta `/docs`. Pulsa **Save**.
-4. En 1–2 minutos la web estará en: https://globalfons.github.io/empresa-ia/
+## 2. Cuenta de cobro como particular (15 minutos)
+1. Crea una cuenta en https://www.lemonsqueezy.com. Elige **Individual / persona física**. Te pedirá identidad y cuenta bancaria o PayPal.
+   Lemon Squeezy es el vendedor registrado (merchant of record): factura al cliente y gestiona el IVA, así que no necesitas empresa.
+2. Crea un producto:
+   - Nombre: **"Pase Opositor — 12 meses"**
+   - Precio: **19 €**
+   - Tipo: pago único (o suscripción anual si lo prefieres)
+3. Copia el **enlace de pago (checkout link)** y pégamelo en el chat. Lo pongo en la web y el botón de compra se activa solo.
 
-> Si el repo es **privado**, GitHub Pages solo funciona con un plan de pago. Opciones: hacerlo público (no contiene nada secreto) o avisarme y lo publico en Cloudflare Pages o Netlify (gratis).
+**Si Lemon Squeezy no acepta particulares de España** cuando te registres: alternativas con el mismo modelo son **Polar.sh** o **Paddle**. Dime cuál y lo adapto.
 
-## 2. Darte de alta en los programas de afiliados (unos 20 minutos)
-Todos son gratuitos. Usa la URL de arriba como "tu web". Por orden de prioridad:
+## 3. Aviso legal (1 minuto)
+Nombre, DNI, localidad y un email solo para la web. Pásamelo y lo pongo en `web/paginas/aviso-legal.html`.
 
-| # | Programa | Dónde | Qué me pasas |
-|---|---|---|---|
-| 1 | Civitatis (tours en español, 8–10 %) | https://www.civitatis.com/es/afiliados/ | Tu `aid` |
-| 2 | IATI Seguros | https://www.iatiglobal.com/en/travel-affiliate-program/ | Tu enlace de afiliado |
-| 3 | Holafly (eSIM) | Busca "Holafly afiliados" | Tu enlace de afiliado |
-| 4 | GetYourGuide (8 %) | https://partner.getyourguide.com/es-es/ | Tu Partner ID |
-| 5 | Booking.com | https://www.booking.com/affiliate-program/v2/index.es.html | Tu `aid` |
-| 6 | Heymondo, Airalo, Klook | Sus webs → "afiliados" | Enlace o ID |
+## 4. Difusión (30 minutos a la semana, cuando puedas)
+Publica los textos de `negocio/difusion.md` en 2–3 grupos de Telegram o foros de opositores. Es lo único que acelera las primeras visitas, porque yo no puedo publicar en redes.
 
-**Cuando te aprueben, pégame los IDs en el chat** y los pongo en `src/assets/afiliados.js`. Hasta entonces los enlaces funcionan, pero sin comisión.
-
-## 3. Aviso legal (1 minuto) — como particular, con tu DNI
-La LSSI pide identificar al titular de una web con ingresos: nombre, DNI (tu NIF de persona física), un domicilio de contacto y un email. No hace falta empresa ni alta de autónomo para esto.
-- Crea un **email solo para la web** (por ejemplo, viajaia.contacto@gmail.com) para no exponer el personal.
-- Rellénalo en `src/pages/legal/aviso-legal.html` o pásamelo y lo pongo yo.
-
-## Impuestos siendo particular (resumen, no es asesoría)
-- Te puedes dar de alta en los programas de afiliados como **persona física con tu DNI**.
-- **Autónomos (Seguridad Social):** según la jurisprudencia del Tribunal Supremo, si los ingresos netos del año no superan el SMI (17.094 € en 2026) no hay habitualidad y no sería obligatorio el alta. Es un criterio de los tribunales, no una exención escrita en la ley.
-- **Hacienda:** todo lo que ganes se declara en la **renta**, desde el primer euro. Guarda los justificantes de pago de cada programa.
-- Técnicamente Hacienda considera la afiliación una actividad económica (alta censal con el modelo 036/037, IVA). En cantidades pequeñas es una zona gris.
-- **Cuando llegue el primer pago de verdad, consulta un gestor** (una consulta puntual cuesta unos 50–100 €) antes de la siguiente renta.
-
-## 4. Recomendado (cuando puedas)
-- **Cuenta de Pinterest de empresa** "ViajaIA Japón": es el canal de tráfico más rápido para viajes. Yo te dejo los pines escritos en `negocio/contenido/pinterest.md`.
-- **Google Search Console** (gratis): https://search.google.com/search-console. Añade la URL y envía `sitemap.xml`. Si me das acceso de lectura, te leo los datos.
-- **Dominio propio** (unos 10 €/año, por ejemplo viajaia.es o similar): mejora la confianza y el SEO a largo plazo. Si lo compras, dime cuál y lo conecto.
-- **Stripe**: para cuando lancemos un producto propio (una guía PDF de Japón). Todavía no hace falta.
+## 5. Google Search Console (5 minutos)
+https://search.google.com/search-console → añade la URL de la web → envía `sitemap.xml`.
