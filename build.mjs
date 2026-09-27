@@ -95,7 +95,7 @@ page(`${LEY.slug}/`, {
 <h1>Test de la Ley 39/2015 con solución</h1>
 <p class="lead">${esc(LEY.nombre)}. Responde y verás al momento la cita literal del artículo.</p>
 <div id="quiz" class="quiz" data-src="${r}datos/${LEY.slug}.json" data-base="./">Cargando preguntas…</div>
-<p class="muted">¿Encuentras un error? Dinos qué pregunta es y la revisamos contra el BOE.</p>
+<p class="muted">¿Encuentras un error? Escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> indicando la pregunta y la revisamos contra el BOE.</p>
 <h2>Artículos de la Ley 39/2015</h2>
 ${bloques
   .map(

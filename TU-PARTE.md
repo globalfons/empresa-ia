@@ -18,8 +18,7 @@ En 1–3 minutos estará en https://globalfons.github.io/empresa-ia/
 
 **Si Lemon Squeezy no acepta particulares de España** cuando te registres: alternativas con el mismo modelo son **Polar.sh** o **Paddle**. Dime cuál y lo adapto.
 
-## 3. Aviso legal (1 minuto)
-Nombre, DNI, localidad y un email solo para la web. Pásamelo y lo pongo en `web/paginas/aviso-legal.html`.
+## 3. Aviso legal — HECHO ✅
 
 ## 4. Difusión (30 minutos a la semana, cuando puedas)
 Publica los textos de `negocio/difusion.md` en 2–3 grupos de Telegram o foros de opositores. Es lo único que acelera las primeras visitas, porque yo no puedo publicar en redes.
