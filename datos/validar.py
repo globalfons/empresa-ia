@@ -14,8 +14,8 @@ for i, q in enumerate(qs):
     if q["art"] not in arts: errs.append("artículo inexistente")
     elif norm(q["cita"]) not in arts[q["art"]]: errs.append("cita no encontrada literalmente")
     else:
-        t, c = arts[q["art"]], norm(q["cita"]); i = t.find(c)
-        if (c[0].isalnum() and i > 0 and t[i - 1].isalnum()) or (c[-1].isalnum() and t[i + len(c):i + len(c) + 1].isalnum()):
+        t, c = arts[q["art"]], norm(q["cita"]); p = t.find(c)
+        if (c[0].isalnum() and p > 0 and t[p - 1].isalnum()) or (c[-1].isalnum() and t[p + len(c):p + len(c) + 1].isalnum()):
             errs.append("cita cortada a media palabra")
     if len(q["o"]) != 4 or len(set(q["o"])) != 4: errs.append("opciones")
     if q["a"] not in range(4): errs.append("respuesta")
