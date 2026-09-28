@@ -222,3 +222,25 @@ label.check input { margin-top: 5px; }
 .rank tr.me { background: var(--accent-soft); }
 .empty { text-align: center; }
 .big-ico { font-size: 2.6rem; margin: 0; }
+
+/* Oposiciones */
+.op-card .covbar { margin-top: 10px; }
+.covbar { display: block; height: 8px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.covbar i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.covbar.big { height: 12px; margin: 6px 0 10px; }
+.op-meta { margin: 0 0 6px; }
+.op-meta .pill { margin: 0 4px 4px 0; }
+.op-cta { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin: 14px 0; box-shadow: var(--shadow); }
+.op-cta .cta { margin: 0 6px 0 0; }
+.op-cta.mine { border-color: var(--ok); background: var(--ok-soft); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.temario { padding-left: 26px; }
+.temario > li { margin: 10px 0; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.temario > li p { margin: 0 0 6px; }
+.temario.compact > li { display: flex; justify-content: space-between; gap: 10px; align-items: center; font-size: .92rem; margin: 4px 0; padding: 6px 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-block; font-size: .78rem; padding: 3px 9px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.chip.ok { background: var(--ok-soft); color: var(--ok); font-weight: 600; }
+.chip.grey { background: var(--surface-2); color: var(--muted); }
+.tema-pct { font-size: .78rem; font-weight: 700; padding: 3px 9px; border-radius: 99px; color: #fff; white-space: nowrap; }
+.tema-pct.good { background: var(--ok); } .tema-pct.mid { background: #3b82f6; } .tema-pct.low { background: var(--warn); }
+.ctx-bar { margin-top: 18px; }

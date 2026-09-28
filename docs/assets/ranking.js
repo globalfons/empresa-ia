@@ -2,12 +2,19 @@
 (function () {
   var el = document.getElementById("ranking");
   if (!el || !window.TL) return;
-  var LEY = el.getAttribute("data-ley");
+  var sel = document.getElementById("ctx");
+  var qc = (location.search.match(/[?&]c=([a-z0-9-]+)/) || [])[1];
+  var LEY = qc || TL.miOposicion() || el.getAttribute("data-ley");
+  if (sel) {
+    if (![].some.call(sel.options, function (o) { return o.value === LEY; })) LEY = el.getAttribute("data-ley");
+    sel.value = LEY;
+    sel.onchange = function () { location.href = TL.root + "ranking/?c=" + sel.value; };
+  }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return (Math.round(n * 10) / 10).toLocaleString("es-ES"); }
 
   if (!TL.online) {
-    el.innerHTML = '<div class="card empty"><p class="big-ico">🏆</p><h2>El ranking se abre muy pronto</h2><p>Cuando se activen las cuentas podrás competir con otros opositores por la mejor nota. Mientras tanto, prepara tu posición: tu progreso ya se está guardando.</p><a class="cta" href="' + TL.root + LEY + '/#quiz">Practicar ahora</a></div>';
+    el.innerHTML = '<div class="card empty"><p class="big-ico">🏆</p><h2>El ranking se abre muy pronto</h2><p>Cuando se activen las cuentas podrás competir con otros opositores por la mejor nota. Mientras tanto, prepara tu posición: tu progreso ya se está guardando.</p><a class="cta" href="' + TL.root + (/^ley-/.test(LEY) ? LEY : 'oposiciones/' + LEY) + '/#quiz">Practicar ahora</a></div>';
     return;
   }
   el.innerHTML = '<p class="muted">Cargando ranking…</p>';

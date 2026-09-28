@@ -2,8 +2,19 @@
 (function () {
   var el = document.getElementById("panel");
   if (!el || !window.TL) return;
-  var LEY = el.getAttribute("data-ley");
-  var LEY_URL = TL.root + LEY + "/";
+  // Contexto: ?c=<oposición o ley>, o la oposición elegida, o la ley por defecto
+  var sel = document.getElementById("ctx");
+  var qc = (location.search.match(/[?&]c=([a-z0-9-]+)/) || [])[1];
+  var LEY = qc || TL.miOposicion() || el.getAttribute("data-ley");
+  if (sel) {
+    if (![].some.call(sel.options, function (o) { return o.value === LEY; })) LEY = el.getAttribute("data-ley");
+    sel.value = LEY;
+    sel.onchange = function () { location.href = TL.root + "panel/?c=" + sel.value; };
+  }
+  var ES_OP = !/^ley-/.test(LEY);
+  var LEY_URL = ES_OP ? TL.root + "oposiciones/" + LEY + "/" : TL.root + LEY + "/";
+  function artUrl(k) { var p = String(k).split(":"); return p.length > 1 ? TL.root + p[0] + "/articulo-" + p[1] + "/" : LEY_URL + "articulo-" + k + "/"; }
+  function artNum(k) { var p = String(k).split(":"); return p[p.length - 1]; }
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return (Math.round(n * 10) / 10).toLocaleString("es-ES"); }
@@ -57,11 +68,21 @@
       '<div class="kpi"><span class="kpi-n">' + s.cuenta.dominada + "/" + s.total + '</span><span class="kpi-l">dominadas</span></div></div>' +
 
       // Estado del banco
-      '<section class="card"><h2>Estado de las ' + s.total + " preguntas · Ley 39/2015</h2>" +
+      '<section class="card"><h2>Estado de las ' + s.total + " preguntas disponibles</h2>" +
       '<div class="stack">' + seg.map(function (k) { return s.cuenta[k] ? '<span class="st-' + k + '" style="width:' + (100 * s.cuenta[k]) / tot + '%"></span>' : ""; }).join("") + "</div>" +
       '<ul class="legend">' + seg.map(function (k) { return '<li><i class="st-' + k + '"></i>' + etiqueta[k] + " <b>" + s.cuenta[k] + "</b></li>"; }).join("") + "</ul>" +
       '<p class="muted small">Una pregunta está <b>dominada</b> cuando la aciertas dos veces seguidas; si la fallas, vuelve a <b>por repasar</b>.</p></section>' +
 
+      // Temario de la oposición
+      (s.porTema
+        ? '<section class="card"><h2>Tu temario tema a tema</h2><ol class="temario compact">' +
+          s.porTema.map(function (x) {
+            var estado = x.t.tipo === "no_legislativo" ? '<span class="chip grey">Fuera de TestLey</span>'
+              : !x.cubierto ? '<span class="chip grey">En preparación</span>'
+              : '<span class="tema-pct ' + (x.pct >= 70 ? "good" : x.pct >= 40 ? "mid" : "low") + '">' + x.pct + " %</span>";
+            return '<li value="' + x.t.n + '"><span>' + esc(x.t.t.length > 90 ? x.t.t.slice(0, 88) + "…" : x.t.t) + "</span>" + estado + "</li>";
+          }).join("") + '</ol><p class="muted small">El % es tu dominio de las preguntas de las leyes de ese tema. Los temas "en preparación" se irán activando a medida que publiquemos sus leyes.</p></section>'
+        : "") +
       // Por título
       '<section class="card"><h2>Qué dominas y qué no</h2>' +
       bloques.map(function (b) {
@@ -74,7 +95,7 @@
       '<section class="card"><h2>Tus puntos débiles</h2>' +
       (debiles.length
         ? '<ul class="weak">' + debiles.map(function (d) {
-            return '<li><a href="' + LEY_URL + "articulo-" + d.a + '/"><b>Art. ' + d.a + "</b> · " + esc(data.arts[d.a].t) + "</a><span>" + d.fallos + " fallo" + (d.fallos > 1 ? "s" : "") + "</span></li>";
+            return '<li><a href="' + artUrl(d.a) + '"><b>' + (ES_OP ? esc(data.arts[d.a].b) + " · " : "") + "Art. " + artNum(d.a) + "</b> · " + esc(data.arts[d.a].t) + "</a><span>" + d.fallos + " fallo" + (d.fallos > 1 ? "s" : "") + "</span></li>";
           }).join("") + '</ul><a class="btn primary" href="' + LEY_URL + '#quiz">Repasar mis fallos</a>'
         : '<p class="muted">' + (s.respuestas ? "¡Ningún fallo pendiente! Sigue con preguntas nuevas." : "Aparecerán aquí los artículos que más fallas.") + "</p>") + "</section>" +
 
@@ -121,7 +142,7 @@
   TL.cargar(LEY).then(function (data) {
     pintar(data, null);
     if (TL.online && TL.sesion()) {
-      TL.bajar().then(function () { return TL.perfil(); }).then(function (p) { pintar(data, p); }).catch(function () {});
+      TL.bajar().then(function () { TL.subir(LEY); return TL.perfil(); }).then(function (p) { pintar(data, p); }).catch(function () {});
     }
   }).catch(function () { el.innerHTML = "<p>No se ha podido cargar tu progreso. Recarga la página.</p>"; });
 })();

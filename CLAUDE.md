@@ -10,6 +10,8 @@ El propietario (particular, sin empresa) solo gestiona cuentas: GitHub Pages, Le
 - `web/assets/`: CSS; `store.js` (progreso local, estadísticas, nota orientativa, cliente REST de Supabase sin librerías y cabecera de cuenta); `test.js` (modos repaso/simulacro/rápido/fallos); `panel.js`, `ranking.js`, `cuenta.js`.
 - `supabase/esquema.sql`: tablas `perfiles` y `progreso` con RLS, trigger de perfil y función `ranking(p_ley)`. Si `config.json` no tiene `supabaseUrl`/`supabaseAnonKey`, la web funciona en modo invitado (sin cuentas ni ranking) y nunca muestra datos inventados.
 - Pruebas del modo cuentas: `TL_SUPABASE_URL=http://127.0.0.1:8766 TL_OUT=/tmp/... node build.mjs` contra un mock local.
+- `catalogo/`: oposiciones con su temario oficial (`construir.py` a partir de la convocatoria guardada en `catalogo/fuentes/`), `normas.json` con la cola de prioridad, y `validar_catalogo.py`. En `build.mjs`, `PUB` asocia cada id del BOE con su ley publicada: al publicar una ley nueva, se añade ahí y se vuelve a ejecutar `construir.py` para recalcular la cobertura.
+- Oposiciones en la web: `/oposiciones/` (directorio) y `/oposiciones/<id>/` (temario, cobertura, test combinado `datos/<id>.json`, botón "Preparar esta oposición"). El progreso de cada pregunta se guarda por ley; las sesiones y el ranking, por contexto (id de la oposición o slug de la ley). `panel/?c=` y `ranking/?c=` seleccionan el contexto.
 - `web/paginas/`: páginas legales.
 - `build.mjs`: genera `docs/` (portada, página resumen de la ley, una página por artículo, Pase, sitemap y llms.txt). **No editar `docs/` a mano.**
 - `config.json`: nombre, URL y `checkoutUrl` (enlace de pago de Lemon Squeezy).

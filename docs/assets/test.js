@@ -6,6 +6,7 @@
   var base = el.getAttribute("data-base") || "./";
   var data, queue, idx, ok, ko, blank, modo, timer, fin;
 
+  function nombreLey(q) { return (data.leyes && data.leyes[q.ley]) || "Ley 39/2015"; }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return (Math.round(n * 100) / 100).toLocaleString("es-ES"); }
@@ -13,7 +14,7 @@
   // Repaso inteligente: primero falladas, luego nuevas, luego aprendidas; nunca dominadas salvo que no quede nada.
   function repaso(n) {
     var orden = { fallada: 0, nueva: 1, aprendida: 2, dominada: 3 };
-    var qs = shuffle(data.qs).sort(function (a, b) { return orden[TL.estado(LEY, a.id)] - orden[TL.estado(LEY, b.id)]; });
+    var qs = shuffle(data.qs).sort(function (a, b) { return orden[TL.estado(a.ley || LEY, a.id)] - orden[TL.estado(b.ley || LEY, b.id)]; });
     return qs.slice(0, n);
   }
 
@@ -34,7 +35,7 @@
       '<button class="mode" data-m="10"><strong>Test rápido</strong><span>10 preguntas al azar</span></button>' +
       (s.cuenta.fallada ? '<button class="mode" data-m="fallos"><strong>Mis fallos</strong><span>' + s.cuenta.fallada + " preguntas pendientes</span></button>" : "") +
       "</div>" +
-      '<label class="muted" for="bq">Practicar un título concreto</label><select id="bq" class="select"><option value="">— elegir título —</option>' +
+      '<label class="muted" for="bq">Practicar un bloque concreto</label><select id="bq" class="select"><option value="">— elegir bloque —</option>' +
       bloques.map(function (b, i) { return '<option value="' + i + '">' + esc(b) + "</option>"; }).join("") + "</select>" +
       '<p class="muted small">' + data.qs.length + ' preguntas verificadas contra el BOE. <a href="' + TL.root + 'panel/">Ver mi panel completo →</a></p>';
     el.querySelectorAll("[data-m]").forEach(function (b) {
@@ -42,7 +43,7 @@
         var m = b.getAttribute("data-m");
         if (m === "repaso") start(repaso(20), m);
         else if (m === "simulacro") start(shuffle(data.qs).slice(0, 30), m);
-        else if (m === "fallos") start(data.qs.filter(function (q) { return TL.estado(LEY, q.id) === "fallada"; }), m);
+        else if (m === "fallos") start(data.qs.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }), m);
         else start(shuffle(data.qs).slice(0, +m), m);
       };
     });
@@ -74,7 +75,7 @@
     var pct = Math.round((idx / queue.length) * 100);
     el.innerHTML =
       '<div class="meta"><span>Pregunta ' + (idx + 1) + " de " + queue.length + "</span>" +
-      (modo === "simulacro" ? '<span class="timer">30:00</span>' : "<span>Art. " + q.art + "</span>") + "</div>" +
+      (modo === "simulacro" ? '<span class="timer">30:00</span>' : "<span>" + nombreLey(q) + " · Art. " + (q.artn || q.art) + "</span>") + "</div>" +
       '<div class="bar"><span style="width:' + pct + '%"></span></div>' +
       '<p class="q">' + esc(q.q) + "</p>" +
       order.map(function (i, k) { return '<button class="opt" data-i="' + i + '"><span class="letter">' + "abcd"[k] + "</span>" + esc(q.o[i]) + "</button>"; }).join("") +
@@ -87,7 +88,7 @@
 
   function answer(q, i) {
     var right = i === q.a;
-    TL.registrarRespuesta(LEY, q.id, right);
+    TL.registrarRespuesta(q.ley || LEY, q.id, right, LEY);
     if (right) ok++; else ko++;
     el.querySelectorAll(".opt").forEach(function (b) {
       var bi = +b.getAttribute("data-i");
@@ -98,8 +99,8 @@
     if (modo === "simulacro") { setTimeout(next, 450); return; }
     el.querySelector(".fb").innerHTML =
       '<p class="verdict ' + (right ? "good" : "bad") + '">' + (right ? "✔ Correcto" : "✘ Incorrecto") + "</p>" +
-      '<blockquote><span class="src">Artículo ' + q.art + " · Ley 39/2015 (BOE)</span>«" + esc(q.cita) + "»</blockquote>" +
-      '<a href="' + base + "articulo-" + q.art + '/">Leer el artículo ' + q.art + " completo</a>";
+      '<blockquote><span class="src">Artículo ' + (q.artn || q.art) + " · " + nombreLey(q) + " (BOE)</span>«" + esc(q.cita) + "»</blockquote>" +
+      '<a href="' + TL.root + (q.ley || LEY) + "/articulo-" + (q.artn || q.art) + '/">Leer el artículo ' + (q.artn || q.art) + " completo</a>";
     var a = el.querySelector(".actions");
     a.innerHTML = '<button class="btn primary" data-next>' + (idx + 1 < queue.length ? "Siguiente →" : "Ver resultado") + "</button>";
     a.querySelector("[data-next]").onclick = next;
@@ -130,11 +131,11 @@
       "</div>";
     el.querySelector("[data-again]").onclick = function () {
       el.removeAttribute("data-art");
-      if (fallos) start(data.qs.filter(function (q) { return TL.estado(LEY, q.id) === "fallada"; }), "fallos");
+      if (fallos) start(data.qs.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }), "fallos");
       else menu();
     };
   }
 
-  TL.cargar(LEY).then(function (d) { data = d; menu(); })
+  TL.cargar(LEY).then(function (d) { data = d; if (!data.qs.length) { el.innerHTML = '<p class="muted">Aún no hay preguntas publicadas para esta oposición. Estamos preparándolas.</p>'; return; } menu(); })
     .catch(function () { el.innerHTML = "<p>No se han podido cargar las preguntas. Recarga la página.</p>"; });
 })();

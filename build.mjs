@@ -7,6 +7,7 @@ const C = JSON.parse(fs.readFileSync("config.json", "utf8"));
 // Solo para pruebas locales: TL_SUPABASE_URL / TL_SUPABASE_KEY / TL_OUT
 if (process.env.TL_SUPABASE_URL) { C.supabaseUrl = process.env.TL_SUPABASE_URL; C.supabaseAnonKey = process.env.TL_SUPABASE_KEY || "test"; }
 const OUT = process.env.TL_OUT || "docs";
+const OUT_TMP = fs.mkdtempSync(path.join((process.env.TMPDIR || "/tmp"), "tl-"));
 const LEY = {
   slug: "ley-39-2015",
   corto: "Ley 39/2015",
@@ -47,14 +48,14 @@ ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="${root}"><span class="logo" aria-hidden="true">✓</span>${C.name}</a>
-<nav class="mainnav"><a href="${root}${LEY.slug}/">Tests</a><a href="${root}panel/">Mi panel</a><a href="${root}ranking/">Ranking</a><a href="${root}pase/">Pase</a><span id="cuenta-nav"></span></nav>
+<nav class="mainnav"><a href="${root}oposiciones/">Oposiciones</a><a href="${root}panel/">Mi panel</a><a href="${root}ranking/">Ranking</a><a href="${root}pase/">Pase</a><span id="cuenta-nav"></span></nav>
 </div></header>
 <main class="wrap${wide ? " wide" : ""}">
 ${body(root)}
 </main>
 <footer class="foot"><div class="wrap foot-grid">
 <div><p class="brand"><span class="logo" aria-hidden="true">✓</span>${C.name}</p><p>${C.tagline}</p><p class="small">Fuente de los textos: Boletín Oficial del Estado, legislación consolidada. TestLey no está vinculado a ninguna Administración Pública.</p></div>
-<div><p><b>Estudiar</b></p><p><a href="${root}${LEY.slug}/">Test Ley 39/2015</a><br><a href="${root}panel/">Mi panel</a><br><a href="${root}ranking/">Ranking</a><br><a href="${root}pase/">Pase Opositor</a></p></div>
+<div><p><b>Estudiar</b></p><p><a href="${root}oposiciones/">Oposiciones</a><br><a href="${root}${LEY.slug}/">Test Ley 39/2015</a><br><a href="${root}panel/">Mi panel</a><br><a href="${root}ranking/">Ranking</a><br><a href="${root}pase/">Pase Opositor</a></p></div>
 <div><p><b>Legal</b></p><p><a href="${root}legal/aviso-legal/">Aviso legal</a><br><a href="${root}legal/privacidad/">Privacidad</a><br><a href="${root}legal/condiciones/">Condiciones</a><br><a href="mailto:globalprsx@gmail.com">Contacto</a></p></div>
 </div></footer>
 ${scripts.map((s) => `<script src="${root}assets/${s}" defer></script>`).join("\n")}
@@ -63,6 +64,31 @@ ${scripts.map((s) => `<script src="${root}assets/${s}" defer></script>`).join("\
 `;
   pages.push({ route, html, noindex });
 }
+
+// ---------- Catálogo de oposiciones ----------
+const OPOS = JSON.parse(fs.readFileSync("catalogo/oposiciones.json", "utf8"));
+const NORMAS = Object.fromEntries(JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n) => [n.id, n]));
+// Leyes con test publicado: id BOE -> datos
+const PUB = { "BOE-A-2015-10565": LEY };
+const AMBITO = { estatal: "Administración del Estado", autonomico: "Comunidades autónomas", local: "Administración local", justicia: "Justicia", otros: "Otras" };
+const fmtN = (n) => Number(n).toLocaleString("es-ES", { useGrouping: "always" });
+for (const o of OPOS) {
+  const ids = [...new Set(o.temario.flatMap((t) => t.normas))];
+  const pub = ids.filter((id) => PUB[id]);
+  o.qs = [];
+  o.arts = {};
+  o.leyes = {};
+  for (const id of pub) {
+    const L = PUB[id];
+    o.leyes[L.slug] = L.corto;
+    for (const a of L.arts) o.arts[`${L.slug}:${a.n}`] = { t: a.titulo, b: L.corto };
+    for (const q of L.qs) o.qs.push({ ...q, ley: L.slug, art: `${L.slug}:${q.art}`, artn: q.art });
+  }
+  o.temasCubiertos = o.temario.filter((t) => t.normas.some((id) => PUB[id])).length;
+}
+const opEstado = (c) => ({ prevista: "Prevista", convocada: "Convocada", examen_realizado: "Examen realizado", cerrada: "Cerrada" })[c.estado] || c.estado;
+
+const tarjetaOp = (o, r) => `<a class="card op-card" href="${r}oposiciones/${o.id}/"><span class="tag">${esc(o.grupo)} · ${esc(opEstado(o.convocatoria))}</span><strong>${esc(o.nombre)}</strong><span>${o.convocatoria.plazas ? fmtN(o.convocatoria.plazas) + " plazas (turno libre) · " : ""}${o.temario.length} temas · test en ${o.temasCubiertos} de ${o.cobertura.temas_legislativos} temas de legislación</span><span class="covbar"><i style="width:${Math.max(2, Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos)))}%"></i></span></a>`;
 
 // ---------- Portada ----------
 const NART = LEY.arts.length, NQ = LEY.qs.length;
@@ -76,7 +102,7 @@ page("", {
     <span class="pill">Oposiciones · Ley 39/2015 · Actualizado ${C.updated.split("-").reverse().join("/")}</span>
     <h1>Aprueba la parte de leyes sabiendo <em>por qué</em> cada respuesta es la correcta</h1>
     <p class="lead">Cada pregunta de TestLey lleva la cita literal del artículo del BOE que la justifica. Practica, mira tu nota orientativa y deja que el repaso inteligente se centre en lo que fallas.</p>
-    <p><a class="cta" href="${LEY.slug}/">Empezar gratis</a> <a class="cta alt" href="panel/">Ver mi panel</a></p>
+    <p><a class="cta" href="oposiciones/">Elegir mi oposición</a> <a class="cta alt" href="${LEY.slug}/">Probar un test</a></p>
     <p class="muted small">Sin registro para empezar · Sin publicidad · Funciona en el móvil</p>
   </div>
   <div class="hero-demo" aria-hidden="true">
@@ -98,6 +124,13 @@ page("", {
   <div><b>${NART}</b><span>artículos con su texto oficial</span></div>
   <div><b>100 %</b><span>de citas comprobadas contra el BOE</span></div>
   <div><b>0 €</b><span>para empezar, sin registro</span></div>
+</section>
+
+<section>
+  <h2>Elige tu oposición</h2>
+  <p class="muted">Temario oficial de la convocatoria, test combinado, progreso por tema y ranking propio para cada oposición.</p>
+  <div class="cards">${OPOS.map((o) => tarjetaOp(o, r)).join("")}</div>
+  <p><a class="cta alt" href="oposiciones/">Ver todas las oposiciones</a></p>
 </section>
 
 <section class="features">
@@ -145,12 +178,12 @@ page("", {
 page("panel/", {
   title: "Mi panel de progreso", description: "Tu progreso en TestLey: nota orientativa, dominio por título, puntos débiles, racha y logros.", noindex: true, wide: true,
   scripts: ["panel.js"],
-  body: () => `<div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
+  body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}<option value="${LEY.slug}">Solo ${LEY.corto}</option></select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
 page("ranking/", {
   title: "Ranking de opositores · Ley 39/2015", description: "Ranking de TestLey: los opositores con mejor nota orientativa en la Ley 39/2015.",
   scripts: ["ranking.js"],
-  body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <span>Ranking</span></nav><h1>Ranking · Ley 39/2015</h1><p class="lead">Los opositores con mejor nota orientativa. Para aparecer necesitas una cuenta y al menos 20 respuestas.</p><div id="ranking" data-ley="${LEY.slug}"></div>`,
+  body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <span>Ranking</span></nav><h1>Ranking de opositores</h1><p class="lead">Un ranking por cada oposición y por cada ley. Para aparecer necesitas una cuenta y al menos 20 respuestas.</p><label class="muted" for="ctx">Ranking de</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}<option value="${LEY.slug}">Solo ${LEY.corto}</option></select><div id="ranking" data-ley="${OPOS[0] ? OPOS[0].id : LEY.slug}"></div>`,
 });
 page("cuenta/", {
   title: "Entrar o crear cuenta", description: "Crea tu cuenta gratuita en TestLey para guardar tu progreso y entrar en el ranking.", noindex: true,
@@ -212,6 +245,53 @@ ${
   });
 }
 
+// ---------- Directorio y páginas de oposiciones ----------
+page("oposiciones/", {
+  title: "Oposiciones: temario oficial y tests por oposición",
+  description: `Elige tu oposición y prepárala con su temario oficial tema a tema, tests con la respuesta citada del BOE y ranking propio. ${OPOS.length} oposiciones en el catálogo.`,
+  wide: true,
+  body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <span>Oposiciones</span></nav>
+<h1>Elige tu oposición</h1>
+<p class="lead">Cada oposición tiene su temario oficial copiado de la convocatoria, un test combinado con las leyes que ya cubrimos, tu progreso tema a tema y su propio ranking.</p>
+${Object.keys(AMBITO).filter((k) => OPOS.some((o) => o.ambito === k)).map((k) => `<h2>${AMBITO[k]}</h2><div class="cards">${OPOS.filter((o) => o.ambito === k).map((o) => tarjetaOp(o, r)).join("")}</div>`).join("")}
+<div class="box"><strong>¿No está tu oposición?</strong> Añadimos oposiciones nuevas cada semana a partir de sus convocatorias oficiales. Escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> y dinos cuál preparas.</div>`,
+});
+for (const o of OPOS) {
+  const c = o.convocatoria;
+  const bloques = [...new Set(o.temario.map((t) => t.bloque))];
+  const pct = Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos));
+  const chip = (t) => {
+    if (t.tipo === "no_legislativo") return `<span class="chip grey">Fuera de TestLey (informática/ofimática)</span>`;
+    if (!t.normas.length) return `<span class="chip grey">Sin norma concreta · en preparación</span>`;
+    return t.normas.map((id) => {
+      const n = NORMAS[id] || { nombre: id };
+      return PUB[id] ? `<a class="chip ok" href="../../${PUB[id].slug}/">✔ ${esc(n.nombre)}</a>` : `<span class="chip">${esc(n.nombre)} · en preparación</span>`;
+    }).join(" ");
+  };
+  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t) => ({ b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) };
+  fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
+  fs.writeFileSync(path.join(OUT_TMP, "datos", `${o.id}.json`), JSON.stringify(datosOp));
+  page(`oposiciones/${o.id}/`, {
+    title: `${o.nombre} (${o.grupo}): temario oficial y test`,
+    description: `Prepara la oposición de ${o.nombre}: temario oficial de ${o.temario.length} temas${c.plazas ? `, ${fmtN(c.plazas)} plazas` : ""}, test con la respuesta citada del BOE, progreso por tema y ranking de opositores.`,
+    scripts: ["test.js", "oposicion.js"],
+    schema: { "@context": "https://schema.org", "@type": "Course", name: `Preparación ${o.nombre}`, inLanguage: "es", provider: { "@type": "Organization", name: C.name }, isBasedOn: o.fuente_temario },
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <span>${esc(o.grupo)}</span></nav>
+<h1>${esc(o.nombre)}</h1>
+<p class="op-meta"><span class="pill">Grupo ${esc(o.grupo)}</span> <span class="pill">${esc(opEstado(c))}</span>${c.plazas ? ` <span class="pill">${fmtN(c.plazas)} plazas turno libre</span>` : ""}</p>
+<p class="muted small">Convocatoria: <a href="${esc(c.url_oficial)}" rel="noopener">${esc(c.referencia)}</a>, publicada el ${c.fecha_publicacion.split("-").reverse().join("/")}. Temario copiado del anexo ${esc(c.anexo || "")} de la convocatoria oficial.</p>
+<div id="op-accion" data-op="${o.id}" data-nombre="${esc(o.nombre)}"></div>
+<div class="card"><h2>Cobertura de TestLey</h2>
+<div class="covbar big"><i style="width:${Math.max(2, pct)}%"></i></div>
+<p>Test disponible en <b>${o.temasCubiertos} de ${o.cobertura.temas_legislativos}</b> temas de legislación (${pct} %). ${o.cobertura.temas_no_legislativos ? `Los ${o.cobertura.temas_no_legislativos} temas de informática y ofimática no forman parte de TestLey.` : ""}</p>
+<p class="muted small">Publicamos leyes nuevas cada semana por orden de impacto en las oposiciones del catálogo. Esta página se actualiza sola.</p></div>
+${o.qs.length ? `<h2>Test de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))}</h2><div id="quiz" class="quiz" data-ley="${o.id}" data-base="./">Cargando preguntas…</div>` : ""}
+<h2>Temario oficial</h2>
+<div id="op-temario">${bloques.map((b) => `<h3>${esc(b)}</h3><ol class="temario">${o.temario.filter((t) => t.bloque === b).map((t) => `<li value="${t.tema}"><p>${esc(t.titulo)}</p><div class="chips">${chip(t)}</div></li>`).join("")}</ol>`).join("")}</div>
+<p class="muted small">Las leyes de cada tema se asignan a partir del texto del temario; cuando el tema no nombra la ley expresamente, la asignación es orientativa. Comprueba siempre las bases de tu convocatoria.</p>`,
+  });
+}
+
 // ---------- Pase opositor (preventa) ----------
 page("pase/", {
   title: "Pase Opositor: todas las leyes, simulacros y repaso inteligente",
@@ -249,6 +329,7 @@ for (const f of fs.readdirSync("web/paginas")) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, "datos"), { recursive: true });
 fs.cpSync("web/assets", path.join(OUT, "assets"), { recursive: true });
+fs.cpSync(path.join(OUT_TMP, "datos"), path.join(OUT, "datos"), { recursive: true });
 fs.writeFileSync(
   path.join(OUT, "datos", `${LEY.slug}.json`),
   JSON.stringify({ arts: Object.fromEntries(LEY.arts.map((a) => [a.n, { t: a.titulo, b: a.bloque }])), qs: LEY.qs })

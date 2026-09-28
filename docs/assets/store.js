@@ -29,14 +29,16 @@
     if (ONLINE && sesion()) { clearTimeout(syncTimer); syncTimer = setTimeout(function () { subir(l); }, 1500); }
   }
 
-  function registrarRespuesta(l, qid, correcta) {
+  // l = ley de la pregunta (donde se guarda su estado); ctx = oposición o ley desde la que se estudia
+  function marcarDia(p) { var d = hoy(); if (p.dias.indexOf(d) < 0) { p.dias.push(d); if (p.dias.length > 400) p.dias.shift(); } }
+  function registrarRespuesta(l, qid, correcta, ctx) {
     var p = ley(l), r = p.q[qid] || [0, 0, 0, 0];
     if (correcta) { r[0]++; r[2] = Math.max(1, r[2] + 1); } else { r[1]++; r[2] = 0; }
     r[3] = Date.now();
     p.q[qid] = r;
-    var d = hoy();
-    if (p.dias.indexOf(d) < 0) { p.dias.push(d); if (p.dias.length > 400) p.dias.shift(); }
+    marcarDia(p);
     guardar(l);
+    if (ctx && ctx !== l) { marcarDia(ley(ctx)); guardar(ctx); }
   }
   function registrarSesion(l, n, ok, ko, blank) {
     var p = ley(l);
@@ -71,27 +73,34 @@
     return n;
   }
 
-  // data = { arts: {n: {t, b}}, qs: [...] }
+  // data = { arts: {clave: {t, b}}, qs: [{id, ley, art, ...}], temario? }  (l = ley u oposición)
   function stats(l, data) {
-    var p = ley(l), porBloque = {}, porArt = {}, cuenta = { nueva: 0, fallada: 0, aprendida: 0, dominada: 0 };
-    var neto = 0, dominio = 0;
+    var p = ley(l), porBloque = {}, porArt = {}, porLey = {}, cuenta = { nueva: 0, fallada: 0, aprendida: 0, dominada: 0 };
+    var neto = 0, dominio = 0, resp = 0, ac = 0, dias = p.dias.slice();
     data.qs.forEach(function (q) {
-      var e = estado(l, q.id), b = data.arts[q.art].b;
+      var lq = q.ley || l, e = estado(lq, q.id), b = data.arts[q.art].b, r = ley(lq).q[q.id];
+      if (r) { resp += r[0] + r[1]; ac += r[0]; }
+      (porLey[lq] = porLey[lq] || { n: 0, dom: 0 }).n++; porLey[lq].dom += PESO[e];
       cuenta[e]++; neto += netoPregunta(e); dominio += PESO[e];
       (porBloque[b] = porBloque[b] || { n: 0, dom: 0, vistas: 0 }).n++;
       porBloque[b].dom += PESO[e]; if (e !== "nueva") porBloque[b].vistas++;
       (porArt[q.art] = porArt[q.art] || { n: 0, dom: 0, fallos: 0 }).n++;
       porArt[q.art].dom += PESO[e]; if (e === "fallada") porArt[q.art].fallos++;
     });
+    Object.keys(porLey).forEach(function (k) { if (k !== l) ley(k).dias.forEach(function (d) { if (dias.indexOf(d) < 0) dias.push(d); }); });
+    var porTema = null;
+    if (data.temario) porTema = data.temario.map(function (t) {
+      var n = 0, dom = 0;
+      (t.leyes || []).forEach(function (s) { if (porLey[s]) { n += porLey[s].n; dom += porLey[s].dom; } });
+      return { t: t, cubierto: n > 0, pct: n ? Math.round((100 * dom) / n) : 0 };
+    });
     var N = data.qs.length || 1;
     var nota = Math.round((neto / N) * 100) / 10;
-    var resp = 0, ac = 0;
-    Object.keys(p.q).forEach(function (k) { resp += p.q[k][0] + p.q[k][1]; ac += p.q[k][0]; });
     return {
       total: data.qs.length, cuenta: cuenta, nota: nota, estrellas: estrellas(nota),
       dominioPct: Math.round((dominio / N) * 100), respuestas: resp, acierto: resp ? Math.round((100 * ac) / resp) : 0,
-      racha: racha(p.dias), diasEstudio: p.dias.length, sesiones: p.ses.slice(),
-      porBloque: porBloque, porArt: porArt,
+      racha: racha(dias), diasEstudio: dias.length, sesiones: p.ses.slice(),
+      porBloque: porBloque, porArt: porArt, porTema: porTema,
     };
   }
 
@@ -224,14 +233,15 @@
   var DATOS = {}; // ley -> data de preguntas (para calcular la nota al subir)
   function subir(l) {
     var s = sesion();
-    if (!s || !prog[l]) return Promise.resolve();
+    if (!s) return Promise.resolve();
+    if (!prog[l] && !DATOS[l]) return Promise.resolve();
+    var p = ley(l);
+    // Solo se envían nota y contadores si se conocen las preguntas de ese contexto (evita pisar la nota con 0)
     var st = DATOS[l] ? stats(l, DATOS[l]) : null;
+    var fila = { user_id: s.user.id, ley: l, datos: p };
+    if (st) { fila.nota = st.nota; fila.dominadas = st.cuenta.dominada; fila.respuestas = st.respuestas; }
     return refrescar().then(function () {
-      return api("/rest/v1/progreso?on_conflict=user_id,ley", {
-        method: "POST",
-        headers: { Prefer: "resolution=merge-duplicates" },
-        body: { user_id: s.user.id, ley: l, datos: prog[l], nota: st ? st.nota : 0, dominadas: st ? st.cuenta.dominada : 0, respuestas: st ? st.respuestas : 0 },
-      });
+      return api("/rest/v1/progreso?on_conflict=user_id,ley", { method: "POST", headers: { Prefer: "resolution=merge-duplicates" }, body: fila });
     }).catch(function () {});
   }
   function subirTodo() { return Promise.all(Object.keys(prog).map(subir)); }
@@ -263,6 +273,8 @@
     setDatos: function (l, d) { DATOS[l] = d; },
     cargar: function (l) { return fetch((CFG.root || "./") + "datos/" + l + ".json").then(function (r) { return r.json(); }).then(function (d) { DATOS[l] = d; return d; }); },
     pintarCabecera: pintarCabecera,
+    miOposicion: function () { return lsGet("testley:op", null); },
+    setMiOposicion: function (id) { lsSet("testley:op", id); },
     _prog: function () { return prog; },
   };
 })();
