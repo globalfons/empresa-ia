@@ -20,7 +20,7 @@ En 1–3 minutos estará en https://globalfons.github.io/empresa-ia/
 
 ## 3. Aviso legal — HECHO ✅
 
-## 3b. Activar cuentas y ranking con Supabase (15 minutos, gratis)
+## 3b. Activar cuentas y ranking con Supabase — CONECTADO ✅ (comprueba que ejecutaste esquema.sql y desactivaste "Confirm email")
 La web ya tiene registro, inicio de sesión, progreso en la nube y ranking programados. Solo falta la base de datos:
 1. Crea una cuenta en https://supabase.com y pulsa **New project**. Nombre: `testley`. Región: **West EU (Ireland)** o **Central EU (Frankfurt)**. Guarda la contraseña de la base de datos en un sitio seguro (no me la pases).
 2. Ve a **SQL Editor → New query**, pega el contenido entero de `supabase/esquema.sql` y pulsa **Run**.
