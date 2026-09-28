@@ -2,6 +2,7 @@
 
 Rutina semanal (sesión programada o manual con "sigue con TestLey"):
 
+0. **Catálogo:** seguir `negocio/prompt-catalogo.md` (descubrir oposiciones, mapear temarios a normas, priorizar la siguiente norma).
 1. **Contenido:** añadir 40–60 preguntas nuevas.
    - Orden: completar la Ley 39/2015 (Títulos IV y VI), luego Ley 40/2015, Constitución y TREBEP.
    - Cada pregunta con `cita` literal. `python3 datos/validar.py <artículos> <preguntas>` debe dar 0 errores.
