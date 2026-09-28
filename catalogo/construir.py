@@ -48,6 +48,16 @@ REGLAS = [
     (r"Discapacidad y dependencia", ["BOE-A-2013-12632", "BOE-A-2006-21990"], False),
     (r"contratos del sector p[uú]blico|Contratos del Sector P[uú]blico", ["BOE-A-2017-12902"], False),
     (r"[Ss]ubvenciones", ["BOE-A-2003-20977"], False),
+    (r"Seguridad Social", ["BOE-A-2015-11724"], False),
+    (r"(?i:expropiaci[oó]n forzosa)", ["BOE-A-1954-15431"], False),
+    (r"(?i:r[eé]gimen patrimonial|dominio p[uú]blico|bienes patrimoniales)", ["BOE-A-2003-20254"], False),
+    (r"(?i:servicios p[uú]blicos de empleo|evoluci[oó]n del empleo)", ["BOE-A-2023-5365"], False),
+    (r"(?i:extranjeros|inmigraci[oó]n)", ["BOE-A-2000-544"], False),
+    (r"(?i:derecho de asilo|refugiado)", ["BOE-A-2009-17242"], False),
+    (r"(?i:sistema sanitario)", ["BOE-A-1986-10499"], False),
+    (r"(?i:sistema tributario|ingresos p[uú]blicos)", ["BOE-A-2003-23186"], False),
+    (r"(?i:pol[ií]tica ambiental|biodiversidad)", ["BOE-A-2007-21490"], False),
+    (r"(?i:cambio clim[aá]tico)", ["BOE-A-2021-8447"], False),
 ]
 NO_LEG = r"Inform[aá]tica|Windows|Word 365|Excel 365|Access 365|Outlook 365|Red Internet|hardware"
 

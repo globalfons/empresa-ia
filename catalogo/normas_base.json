@@ -1,23 +1,157 @@
 [
- {"id":"BOE-A-1978-31229","nombre":"Constitución Española","slug":"constitucion"},
- {"id":"BOE-A-2015-10565","nombre":"Ley 39/2015, del Procedimiento Administrativo Común","slug":"ley-39-2015"},
- {"id":"BOE-A-2015-10566","nombre":"Ley 40/2015, de Régimen Jurídico del Sector Público","slug":"ley-40-2015"},
- {"id":"BOE-A-2013-12887","nombre":"Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno","slug":"ley-19-2013"},
- {"id":"BOE-A-1997-25336","nombre":"Ley 50/1997, del Gobierno","slug":"ley-50-1997"},
- {"id":"BOE-A-1981-10325","nombre":"Ley Orgánica 3/1981, del Defensor del Pueblo","slug":"lo-3-1981"},
- {"id":"BOE-A-1985-12666","nombre":"Ley Orgánica 6/1985, del Poder Judicial","slug":"lo-6-1985"},
- {"id":"BOE-A-1979-23709","nombre":"Ley Orgánica 2/1979, del Tribunal Constitucional","slug":"lo-2-1979"},
- {"id":"BOE-A-1985-5392","nombre":"Ley 7/1985, Reguladora de las Bases del Régimen Local","slug":"ley-7-1985"},
- {"id":"BOE-A-1998-16718","nombre":"Ley 29/1998, de la Jurisdicción Contencioso-administrativa","slug":"ley-29-1998"},
- {"id":"BOE-A-2018-16673","nombre":"Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD)","slug":"lo-3-2018"},
- {"id":"BOE-A-2015-11719","nombre":"Texto refundido del Estatuto Básico del Empleado Público (TREBEP)","slug":"trebep"},
- {"id":"BOE-A-1985-151","nombre":"Ley 53/1984, de Incompatibilidades","slug":"ley-53-1984"},
- {"id":"BOE-A-2003-21614","nombre":"Ley 47/2003, General Presupuestaria","slug":"ley-47-2003"},
- {"id":"BOE-A-2007-6115","nombre":"Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres","slug":"lo-3-2007"},
- {"id":"BOE-A-2004-21760","nombre":"Ley Orgánica 1/2004, de Protección Integral contra la Violencia de Género","slug":"lo-1-2004"},
- {"id":"BOE-A-2023-5366","nombre":"Ley 4/2023, para la igualdad de las personas trans y de los derechos LGTBI","slug":"ley-4-2023"},
- {"id":"BOE-A-2013-12632","nombre":"Texto refundido de la Ley General de derechos de las personas con discapacidad","slug":"rdl-1-2013"},
- {"id":"BOE-A-2006-21990","nombre":"Ley 39/2006, de dependencia","slug":"ley-39-2006"},
- {"id":"BOE-A-2017-12902","nombre":"Ley 9/2017, de Contratos del Sector Público","slug":"ley-9-2017"},
- {"id":"BOE-A-2003-20977","nombre":"Ley 38/2003, General de Subvenciones","slug":"ley-38-2003"}
+ {
+  "id": "BOE-A-1978-31229",
+  "nombre": "Constitución Española",
+  "slug": "constitucion"
+ },
+ {
+  "id": "BOE-A-2015-10565",
+  "nombre": "Ley 39/2015, del Procedimiento Administrativo Común",
+  "slug": "ley-39-2015"
+ },
+ {
+  "id": "BOE-A-2015-10566",
+  "nombre": "Ley 40/2015, de Régimen Jurídico del Sector Público",
+  "slug": "ley-40-2015"
+ },
+ {
+  "id": "BOE-A-2013-12887",
+  "nombre": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno",
+  "slug": "ley-19-2013"
+ },
+ {
+  "id": "BOE-A-1997-25336",
+  "nombre": "Ley 50/1997, del Gobierno",
+  "slug": "ley-50-1997"
+ },
+ {
+  "id": "BOE-A-1981-10325",
+  "nombre": "Ley Orgánica 3/1981, del Defensor del Pueblo",
+  "slug": "lo-3-1981"
+ },
+ {
+  "id": "BOE-A-1985-12666",
+  "nombre": "Ley Orgánica 6/1985, del Poder Judicial",
+  "slug": "lo-6-1985"
+ },
+ {
+  "id": "BOE-A-1979-23709",
+  "nombre": "Ley Orgánica 2/1979, del Tribunal Constitucional",
+  "slug": "lo-2-1979"
+ },
+ {
+  "id": "BOE-A-1985-5392",
+  "nombre": "Ley 7/1985, Reguladora de las Bases del Régimen Local",
+  "slug": "ley-7-1985"
+ },
+ {
+  "id": "BOE-A-1998-16718",
+  "nombre": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa",
+  "slug": "ley-29-1998"
+ },
+ {
+  "id": "BOE-A-2018-16673",
+  "nombre": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD)",
+  "slug": "lo-3-2018"
+ },
+ {
+  "id": "BOE-A-2015-11719",
+  "nombre": "Texto refundido del Estatuto Básico del Empleado Público (TREBEP)",
+  "slug": "trebep"
+ },
+ {
+  "id": "BOE-A-1985-151",
+  "nombre": "Ley 53/1984, de Incompatibilidades",
+  "slug": "ley-53-1984"
+ },
+ {
+  "id": "BOE-A-2003-21614",
+  "nombre": "Ley 47/2003, General Presupuestaria",
+  "slug": "ley-47-2003"
+ },
+ {
+  "id": "BOE-A-2007-6115",
+  "nombre": "Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres",
+  "slug": "lo-3-2007"
+ },
+ {
+  "id": "BOE-A-2004-21760",
+  "nombre": "Ley Orgánica 1/2004, de Protección Integral contra la Violencia de Género",
+  "slug": "lo-1-2004"
+ },
+ {
+  "id": "BOE-A-2023-5366",
+  "nombre": "Ley 4/2023, para la igualdad de las personas trans y de los derechos LGTBI",
+  "slug": "ley-4-2023"
+ },
+ {
+  "id": "BOE-A-2013-12632",
+  "nombre": "Texto refundido de la Ley General de derechos de las personas con discapacidad",
+  "slug": "rdl-1-2013"
+ },
+ {
+  "id": "BOE-A-2006-21990",
+  "nombre": "Ley 39/2006, de dependencia",
+  "slug": "ley-39-2006"
+ },
+ {
+  "id": "BOE-A-2017-12902",
+  "nombre": "Ley 9/2017, de Contratos del Sector Público",
+  "slug": "ley-9-2017"
+ },
+ {
+  "id": "BOE-A-2003-20977",
+  "nombre": "Ley 38/2003, General de Subvenciones",
+  "slug": "ley-38-2003"
+ },
+ {
+  "id": "BOE-A-2015-11724",
+  "nombre": "Texto refundido de la Ley General de la Seguridad Social",
+  "slug": "rdl-8-2015"
+ },
+ {
+  "id": "BOE-A-1954-15431",
+  "nombre": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa",
+  "slug": "lef-1954"
+ },
+ {
+  "id": "BOE-A-2003-20254",
+  "nombre": "Ley 33/2003, del Patrimonio de las Administraciones Públicas",
+  "slug": "ley-33-2003"
+ },
+ {
+  "id": "BOE-A-2023-5365",
+  "nombre": "Ley 3/2023, de Empleo",
+  "slug": "ley-3-2023"
+ },
+ {
+  "id": "BOE-A-2000-544",
+  "nombre": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España",
+  "slug": "lo-4-2000"
+ },
+ {
+  "id": "BOE-A-2009-17242",
+  "nombre": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria",
+  "slug": "ley-12-2009"
+ },
+ {
+  "id": "BOE-A-1986-10499",
+  "nombre": "Ley 14/1986, General de Sanidad",
+  "slug": "ley-14-1986"
+ },
+ {
+  "id": "BOE-A-2003-23186",
+  "nombre": "Ley 58/2003, General Tributaria",
+  "slug": "ley-58-2003"
+ },
+ {
+  "id": "BOE-A-2007-21490",
+  "nombre": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad",
+  "slug": "ley-42-2007"
+ },
+ {
+  "id": "BOE-A-2021-8447",
+  "nombre": "Ley 7/2021, de cambio climático y transición energética",
+  "slug": "ley-7-2021"
+ }
 ]

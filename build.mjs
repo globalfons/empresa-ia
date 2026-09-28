@@ -11,7 +11,7 @@ const OUT_TMP = fs.mkdtempSync(path.join((process.env.TMPDIR || "/tmp"), "tl-"))
 // ---------- Leyes ----------
 // Una ley se publica (test + páginas) cuando existe datos/preguntas-<slug>.json con preguntas.
 const META = JSON.parse(fs.readFileSync("datos/leyes-meta.json", "utf8"));
-const CORTO = { constitucion: "Constitución Española", trebep: "TREBEP", "rdl-1-2013": "Ley General de Discapacidad (RDL 1/2013)" };
+const CORTO = { constitucion: "Constitución Española", trebep: "TREBEP", "rdl-1-2013": "Ley General de Discapacidad (RDL 1/2013)", "rdl-8-2015": "Ley General de la Seguridad Social (RDL 8/2015)", "lef-1954": "Ley de Expropiación Forzosa", "lo-4-2000": "Ley Orgánica 4/2000 de Extranjería" };
 const PREFIJO = { "ley-39-2015": "l39" }; // ids estables del progreso de los usuarios
 const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n) => {
   const fq = `datos/preguntas-${n.slug}.json`;
