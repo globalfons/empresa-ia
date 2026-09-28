@@ -6,7 +6,7 @@
   var base = el.getAttribute("data-base") || "./";
   var data, queue, idx, ok, ko, blank, modo, timer, fin;
 
-  function nombreLey(q) { return (data.leyes && data.leyes[q.ley]) || "Ley 39/2015"; }
+  function nombreLey(q) { var l = data.leyes || {}; return l[q.ley || LEY] || l[Object.keys(l)[0]] || ""; }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return (Math.round(n * 100) / 100).toLocaleString("es-ES"); }

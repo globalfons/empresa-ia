@@ -11,7 +11,7 @@
     sel.value = LEY;
     sel.onchange = function () { location.href = TL.root + "panel/?c=" + sel.value; };
   }
-  var ES_OP = !/^ley-/.test(LEY);
+  var ES_OP = /^age-/.test(LEY);
   var LEY_URL = ES_OP ? TL.root + "oposiciones/" + LEY + "/" : TL.root + LEY + "/";
   function artUrl(k) { var p = String(k).split(":"); return p.length > 1 ? TL.root + p[0] + "/articulo-" + p[1] + "/" : LEY_URL + "articulo-" + k + "/"; }
   function artNum(k) { var p = String(k).split(":"); return p[p.length - 1]; }

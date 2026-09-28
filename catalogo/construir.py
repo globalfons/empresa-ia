@@ -7,7 +7,7 @@ Uso: python3 catalogo/construir.py
 import json, re, os
 D = os.path.dirname(os.path.abspath(__file__))
 NORMAS = {n["id"]: n for n in json.load(open(os.path.join(D, "normas_base.json")))}
-PUBLICADAS = {"BOE-A-2015-10565": "ley-39-2015"}   # normas con test en la web
+PUBLICADAS = {"BOE-A-2015-10565": "ley-39-2015", "BOE-A-1978-31229": "constitucion"}   # normas con test en la web
 
 # (regex sobre el título del tema, [normas], explícita?)
 REGLAS = [
