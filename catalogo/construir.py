@@ -1,4 +1,5 @@
 """Construye catalogo/oposiciones.json y catalogo/normas.json.
+- Publicadas: se detectan solas por datos/preguntas-<slug>.json.
 - Temarios: copiados literalmente de la convocatoria oficial guardada en catalogo/fuentes/.
 - Asignación tema -> normas: 'explicita' si el tema cita la norma por su nombre; 'inferida' si se deduce
   por la materia (revisable). Los temas de ofimática/informática son 'no_legislativo'.
@@ -7,7 +8,12 @@ Uso: python3 catalogo/construir.py
 import json, re, os
 D = os.path.dirname(os.path.abspath(__file__))
 NORMAS = {n["id"]: n for n in json.load(open(os.path.join(D, "normas_base.json")))}
-PUBLICADAS = {"BOE-A-2015-10565": "ley-39-2015", "BOE-A-1978-31229": "constitucion"}   # normas con test en la web
+# Normas con test en la web: las que tienen datos/preguntas-<slug>.json con preguntas.
+_DATOS = os.path.join(D, "..", "datos")
+def _publicada(slug):
+    f = os.path.join(_DATOS, "preguntas-%s.json" % slug)
+    return os.path.exists(f) and len(json.load(open(f))) > 0
+PUBLICADAS = {nid: n["slug"] for nid, n in NORMAS.items() if _publicada(n["slug"])}
 
 # (regex sobre el título del tema, [normas], explícita?)
 REGLAS = [
