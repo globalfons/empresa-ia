@@ -62,3 +62,7 @@ language sql stable security definer set search_path = public as $$
   limit 100;
 $$;
 grant execute on function public.ranking(text) to anon, authenticated;
+
+-- Permisos de acceso desde la web (las políticas RLS de arriba limitan cada fila a su dueño)
+grant usage on schema public to anon, authenticated;
+grant select, insert, update on public.perfiles, public.progreso to authenticated;
