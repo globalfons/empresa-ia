@@ -4,7 +4,9 @@ def norm(s):
     s = unicodedata.normalize("NFC", s)
     s = s.replace(" ", " ").replace("\t", " ")
     return re.sub(r"\s+", " ", s).strip()
-arts = {a["n"]: norm(a["texto"]) for a in json.load(open(sys.argv[1]))}
+def vigente(t):  # descarta notas y redacciones anteriores (líneas citadas con ">")
+    return "\n".join(l for l in t.split("\n") if not l.lstrip().startswith(">"))
+arts = {a["n"]: norm(vigente(a["texto"])) for a in json.load(open(sys.argv[1]))}
 qs = json.load(open(sys.argv[2]))
 bad = 0
 for i, q in enumerate(qs):
