@@ -6,19 +6,34 @@
   "esfuerzo_generador": "medium"
  },
  "precios_usd_mtok": {
-  "claude-opus-5-5": [4.0, 20.0],
-  "claude-haiku-4-5": [1.0, 5.0],
-  "claude-opus-5": [5.0, 25.0],
-  "claude-opus-4-8": [5.0, 25.0],
-  "claude-sonnet-5-5": [2.0, 10.0]
+  "claude-opus-5-5": [
+   4.0,
+   20.0
+  ],
+  "claude-haiku-4-5": [
+   1.0,
+   5.0
+  ],
+  "claude-opus-5": [
+   5.0,
+   25.0
+  ],
+  "claude-opus-4-8": [
+   5.0,
+   25.0
+  ],
+  "claude-sonnet-5-5": [
+   2.0,
+   10.0
+  ]
  },
  "lote": {
   "tamano_inicial": 10,
   "tamano_maximo": 50,
   "max_preguntas_por_llamada": 3,
-  "max_rechazo": 0.30,
+  "max_rechazo": 0.3,
   "max_revision_ventana": 0.45,
-  "max_duplicados_ventana": 0.30,
+  "max_duplicados_ventana": 0.3,
   "ventana_lotes": 5,
   "max_coste_por_valida_usd": 0.25,
   "max_rechazos_por_articulo": 3
@@ -30,27 +45,79 @@
   "max_preguntas_por_articulo": 10,
   "min_palabras_articulo": 25
  },
- "dificultad_por_defecto": {"1": 0.30, "2": 0.50, "3": 0.20},
+ "dificultad_por_defecto": {
+  "1": 0.3,
+  "2": 0.5,
+  "3": 0.2
+ },
  "dificultad_por_oposicion": {},
  "tipos": {
-  "literal": {"dif": 1, "flexible": false},
-  "definiciones": {"dif": 1, "flexible": false},
-  "plazos": {"dif": 1, "flexible": true},
-  "organos": {"dif": 1, "flexible": true},
-  "conceptual": {"dif": 2, "flexible": true},
-  "competencias": {"dif": 2, "flexible": true},
-  "requisitos": {"dif": 2, "flexible": true},
-  "procedimiento": {"dif": 2, "flexible": true},
-  "aplicacion": {"dif": 2, "flexible": true},
-  "comparativa": {"dif": 2, "flexible": true},
-  "excepcion": {"dif": 2, "flexible": true},
-  "negativa": {"dif": 2, "flexible": true},
-  "caso_practico": {"dif": 3, "flexible": false},
-  "relacion_articulos": {"dif": 3, "flexible": false},
-  "dificil": {"dif": 3, "flexible": false}
+  "literal": {
+   "dif": 1,
+   "flexible": false
+  },
+  "definiciones": {
+   "dif": 1,
+   "flexible": false
+  },
+  "plazos": {
+   "dif": 1,
+   "flexible": true
+  },
+  "organos": {
+   "dif": 1,
+   "flexible": true
+  },
+  "conceptual": {
+   "dif": 2,
+   "flexible": true
+  },
+  "competencias": {
+   "dif": 2,
+   "flexible": true
+  },
+  "requisitos": {
+   "dif": 2,
+   "flexible": true
+  },
+  "procedimiento": {
+   "dif": 2,
+   "flexible": true
+  },
+  "aplicacion": {
+   "dif": 2,
+   "flexible": true
+  },
+  "comparativa": {
+   "dif": 2,
+   "flexible": true
+  },
+  "excepcion": {
+   "dif": 2,
+   "flexible": true
+  },
+  "negativa": {
+   "dif": 2,
+   "flexible": true
+  },
+  "caso_practico": {
+   "dif": 3,
+   "flexible": false
+  },
+  "relacion_articulos": {
+   "dif": 3,
+   "flexible": false
+  },
+  "dificil": {
+   "dif": 3,
+   "flexible": false
+  }
  },
- "tipos_revision_obligatoria": ["caso_practico", "relacion_articulos"],
- "max_proporcion_caso_practico": 0.10,
+ "tipos_revision_obligatoria": [
+  "caso_practico",
+  "relacion_articulos"
+ ],
+ "max_proporcion_caso_practico": 0.1,
  "similitud": {
   "duplicado_lexico": 0.88,
   "sospecha_semantica": 0.45
@@ -70,5 +137,17 @@
   "policia-nacional-basica": "policia-nacional-escala-basica",
   "policia-nacional-ejecutiva": "policia-nacional-escala-ejecutiva",
   "guardia-civil": "guardia-civil-cabos-guardias"
+ },
+ "articulos_excluidos": {
+  "lecrim": {
+   "arts": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "motivo": "datos/lecrim-articulos.json: los números 1-5 contienen el Real Decreto de aprobación de 1882, no los artículos 1-5 de la LECrim (error de extracción pendiente de corregir desde el BOE)"
+  }
  }
 }

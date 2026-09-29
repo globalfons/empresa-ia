@@ -47,6 +47,8 @@ class Ley:
     def capacidad(self, n, cfg):
         """Preguntas distintas que razonablemente admite un artículo (0 si no está vigente o es demasiado corto)."""
         c = cfg["cobertura"]
+        if n in cfg.get("articulos_excluidos", {}).get(self.slug, {}).get("arts", []):
+            return 0  # texto que no es de la norma (ver motivo en config)
         if not self.vigente(n) or self.palabras(n) < c["min_palabras_articulo"]:
             return 0
         return max(1, min(c["max_preguntas_por_articulo"], self.palabras(n) // c["palabras_por_pregunta"]))
