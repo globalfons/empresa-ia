@@ -36,11 +36,21 @@ El propietario (particular, sin empresa) solo gestiona cuentas: GitHub Pages, Le
 - Tests antes de hacer push: `npm run lint`, `npm run validar`, `npm run test:py`, `npm run build`, `npm run test:js`; además `deno test --allow-env tests/deno/` y `npm run test:sql` (PostgreSQL local) si se tocan las funciones o el esquema.
 
 ## Forma de trabajar (norma del propietario)
-- Nunca ejecutes el trabajo por tu cuenta: delega siempre la tarea a un subagente.
-- No uses siempre Fable. Usa Opus 5.5 para tareas más simples.
-- Distribución de modelos:
-  - Fable 5.1: arquitectura, bugs complejos y revisión de código.
-  - Opus 5.5: ediciones, pruebas, documentación y refactorización.
-  - Haiku 4.5: investigaciones y resúmenes.
-- Especifica el modelo en cada llamada al subagente.
-- Delegación: un subagente por tarea; planifica antes de ejecutar; ejecuta en paralelo los subagentes independientes; lee el informe del subagente, nunca los archivos.
+Prioridades: 1) correctitud, 2) seguridad y estabilidad, 3) cumplir exactamente el objetivo, 4) mínimo coste (tokens, tiempo), 5) sin trabajo redundante, 6) sin cambios no solicitados. Una tarea concreta no se convierte en auditoría general. Objetivo cumplido y verificado → DETENTE; las mejoras extra se anotan como recomendación, no se implementan.
+
+**Trabajar directamente (sin subagente):** ediciones pequeñas o de pocos archivos, HTML/SEO, metadata, JSON-LD, enlaces, sitemap, robots.txt, una página, contenido, refactor localizado, ejecutar tests, errores sencillos, documentación, y todo lo que necesite el contexto de la tarea actual. No crear subagentes para leer archivos o buscar algo sencillo.
+
+**Subagentes solo con ventaja clara:** investigación independiente, análisis complejo, arquitectura, revisión especializada, bug complejo, análisis de una parte grande, tareas independientes. Límites: máx. 1 por unidad de trabajo, máx. 2 simultáneos, sin cadenas ni subagentes que supervisen a otros. El informe del subagente debe decir qué investigó, qué encontró, archivos afectados, problemas, recomendación y nivel de confianza; se usa para no repetir trabajo, pero se puede verificar leyendo los archivos.
+
+**Modelos (el más barato que lo haga bien; especificarlo en cada llamada):**
+- Fable 5.1: solo arquitectura, decisiones técnicas complejas, bugs difíciles, análisis profundo, revisión crítica de código.
+- Opus 5.5: implementación, edición, refactor, frontend, backend, SEO técnico, contenido, documentación, tests.
+- Haiku 4.5: investigación sencilla, extracción, clasificación, resúmenes, tareas mecánicas de bajo riesgo.
+
+**Ejecución:** plan breve antes de tareas complejas; paralelizar solo tareas independientes que no toquen los mismos archivos; leer solo lo relevante y no releer lo ya conocido; no repetir búsquedas ni tests que ya pasaron salvo que algo cambió; solución más sencilla, sin abstracciones, dependencias ni archivos innecesarios; tests relevantes tras cada cambio (no modificar tests solo para que pasen).
+
+**SEO:** solo SEO y lo estrictamente necesario (titles, descriptions, headings, canonical, robots, sitemap, datos estructurados, Open Graph, URLs, enlazado interno, indexabilidad, contenido útil, rendimiento). Nada de reconstruir TestLey ni de generar páginas artificiales para inflar URLs; los datos oficiales conservan su fuente.
+
+**Datos oficiales:** nunca inventar convocatorias, plazas, fechas, requisitos, temarios, legislación, organismos, preguntas oficiales, resultados ni fuentes; lo no verificado se marca como pendiente de verificación.
+
+**Formato final:** COMPLETADO · ARCHIVOS MODIFICADOS · VERIFICACIÓN · RESULTADO · RECOMENDACIONES (solo si hay cambios relevantes no implementados). Después, detenerse.
