@@ -7,7 +7,8 @@ Método determinista y explicable (Contenido de TestLey, no oficial):
   - se comparan las palabras significativas del título oficial del tema con el nombre de cada unidad
   - una unidad se asigna si comparte ≥ 2 raíces significativas, o 1 raíz poco frecuente en la ley (p. ej. «Corona», «Senado»)
   - si ninguna unidad encaja, el tema conserva la ley entera y queda marcado «sin_precisar» en el control de calidad
-Salida: catalogo/temas_ambito.json  (se regenera con construir.py; se puede corregir a mano añadiendo "fijado": true)
+Salida: catalogo/temas_ambito.json  (se regenera con construir.py). Correcciones manuales por rangos de artículos en
+catalogo/temas_ambito_manual.json (cuando la coincidencia de palabras falla, p. ej. «concurso de delitos»).
 """
 import json, os, re, unicodedata, collections
 D = os.path.dirname(os.path.abspath(__file__)); DATOS = os.path.join(os.path.dirname(D), "datos")
@@ -51,7 +52,17 @@ def asignar(titulo, slug, cache={}):
     titulos = {k for k, _ in elegidas if "|" not in k}  # si se elige un título entero, sus capítulos sobran
     return [(k, c) for k, c in elegidas if "|" not in k or k.split("|")[0] not in titulos]
 
+def por_rangos(slug, rangos):
+    """Artículos entre dos números (inclusive), en el orden del texto consolidado."""
+    orden = [a["n"] for a in json.load(open(os.path.join(DATOS, f"{slug}-articulos.json")))]
+    out = []
+    for a, b in rangos:
+        if a not in orden or b not in orden: raise ValueError(f"{slug}: artículo {a if a not in orden else b} no existe")
+        out += orden[orden.index(a):orden.index(b) + 1]
+    return list(dict.fromkeys(out))
+
 def construir(opos):
+    manual = json.load(open(os.path.join(D, "temas_ambito_manual.json")))
     previo = json.load(open(os.path.join(D, "temas_ambito.json"))) if os.path.exists(os.path.join(D, "temas_ambito.json")) else {}
     normas = {n["id"]: n["slug"] for n in json.load(open(os.path.join(D, "normas_base.json")))}
     out = {}
@@ -63,6 +74,10 @@ def construir(opos):
                 if not slug or uso[n] < 2 or not os.path.exists(os.path.join(DATOS, f"{slug}-articulos.json")): continue
                 k = f"{o['id']}#{i}#{slug}"
                 if (previo.get(k) or {}).get("fijado"): out[k] = previo[k]; continue  # corrección manual: se respeta
+                if k in manual:  # corrección manual por rangos contra la estructura oficial (temas_ambito_manual.json)
+                    out[k] = {"tema": t["tema"], "titulo": t["titulo"][:160], "ley": slug, "unidades": manual[k]["unidades"], "coincidencias": {},
+                              "articulos": por_rangos(slug, manual[k]["rangos"]), "estado": "precisado", "metodo": "corrección manual contra la estructura oficial"}
+                    continue
                 el = asignar(t["titulo"], slug)
                 arts = sorted({a for u, _ in el for a in unidades(slug)[u]["arts"]}, key=lambda x: (int(re.match(r"\d+", x).group()) if re.match(r"\d+", x) else 9999, x))
                 out[k] = {"tema": t["tema"], "titulo": t["titulo"][:160], "ley": slug, "unidades": [u for u, _ in el], "coincidencias": {u: c for u, c in el},

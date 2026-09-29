@@ -560,6 +560,12 @@ function completitud(o) {
   r.total = Math.round((r.temario + r.temas + r.legislacion + r.contenido + r.preguntas + r.tests + r.simulacros) / 7);
   return r;
 }
+// Cobertura por oposición y tema (lo usan el informe documentacion/OPOSITIONS-COVERAGE-REPORT.md y los tests)
+fs.writeFileSync(path.join(OUT_TMP, "datos", "cobertura.json"), JSON.stringify(OPOS.map((o) => ({
+  id: o.id, nombre: o.nombre, temario_tipo: o.temario_tipo || null, completitud: completitud(o),
+  estructura: ((o.examen || {}).estructura || []).map((p) => ({ parte: p.parte, en_simulacro: !!p.en_simulacro })),
+  temas: o.temario.map((t, i) => ({ tema: t.tema, bloque: t.bloque || null, titulo: t.titulo.slice(0, 120), ...coberturaTema(o, i) })),
+}))));
 for (const o of OPOS) {
   o.completitud = completitud(o);
   const conv = o.fuentes.convocatoria || Object.values(o.fuentes)[0];
