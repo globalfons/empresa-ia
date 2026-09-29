@@ -26,6 +26,16 @@ def resumen_diff(antes, despues, max_lineas=6):
     return {"lineas_anadidas": len(add), "lineas_quitadas": len(rem),
             "muestra_anadida": [x[:200] for x in add if x][:max_lineas], "muestra_quitada": [x[:200] for x in rem if x][:max_lineas]}
 
+# Datos personales: las listas oficiales de admitidos/resultados de algunos organismos publican el DNI/NIE completo.
+# TestLey no los necesita y el repositorio es público: se eliminan las líneas que los contienen antes de guardar nada.
+DNI = re.compile(r"\b(?:\d{8}|[XYZ]\d{7})[A-HJ-NP-TV-Z]\b")
+def sanear(texto):
+    """Quita las líneas con un DNI/NIE completo. Devuelve (texto, líneas_quitadas). Los DNI enmascarados del BOE (***1234**) se conservan."""
+    lineas = texto.split("\n"); fuera = [l for l in lineas if DNI.search(l)]
+    if not fuera: return texto, 0
+    limpio = "\n".join(l for l in lineas if not DNI.search(l))
+    return limpio + f"\n\n[TestLey: {len(fuera)} líneas con DNI/NIE completos no se guardan (datos personales).]\n", len(fuera)
+
 def guardar_documento(docs, fuente, url, contenido, ctype, meta):
     """Guarda el texto parseado; detecta si es nuevo, ha cambiado o sigue igual (por hash del contenido).
     Si cambia, conserva la versión anterior (<id>.v<N>.txt), sube document_version, enlaza previous_version_id y registra el diff."""
@@ -34,6 +44,7 @@ def guardar_documento(docs, fuente, url, contenido, ctype, meta):
     if prev and prev["sha256"] == h:
         prev["retrieved_at"] = t; prev["estado"] = "sin_cambios"; return prev, "sin_cambios"
     tipo, res = P.parsear(contenido, ctype, url)
+    res["texto"], n_personales = sanear(res["texto"])
     carpeta = os.path.join(N.DOCS, fuente["id"]); os.makedirs(carpeta, exist_ok=True)
     ruta = os.path.join(carpeta, did + ".txt")
     version = (prev or {}).get("document_version", 1) + (1 if prev else 0)
@@ -51,7 +62,7 @@ def guardar_documento(docs, fuente, url, contenido, ctype, meta):
         "titulo": meta.get("titulo") or res.get("titulo", ""), "published_at": meta.get("published_at") or (prev or {}).get("published_at"),
         "retrieved_at": t, "updated_at": t, "sha256": h, "bytes": len(contenido), "texto": os.path.relpath(ruta, N.RAIZ),
         "document_version": version, "previous_version_id": f"{did}@v{version - 1}" if prev else None, "versiones": versiones[-10:],
-        "estado": cambio, "extraccion": "pendiente", "meta": {**(prev or {}).get("meta", {}), **meta.get("meta", {})},
+        "estado": cambio, "extraccion": "pendiente", "lineas_datos_personales_omitidas": n_personales, "meta": {**(prev or {}).get("meta", {}), **meta.get("meta", {})},
     })
     docs[did] = d
     with open(os.path.join(N.EST, "cambios.jsonl"), "a") as f:

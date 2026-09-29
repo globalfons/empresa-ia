@@ -45,6 +45,16 @@ class TestCambios(Temporal):
         met = [json.loads(l) for l in open(os.path.join(N.EST, "metricas.jsonl"))][-1]
         self.assertEqual((met["fuentes_fallidas"], met["fase"]), (1, "rastreo"))
 
+class TestDatosPersonales(Temporal):
+    def test_no_se_guardan_dni_completos(self):
+        texto = "Relación definitiva de aprobados\n01189424W 6,30000 APTO\nX1234567L 5,1 APTO\nPÉREZ GÓMEZ, ANA ***4567** APTO\nFin"
+        limpio, n = M.sanear(texto)
+        self.assertEqual(n, 2); self.assertNotIn("01189424W", limpio); self.assertNotIn("X1234567L", limpio)
+        self.assertIn("***4567**", limpio, "los DNI enmascarados del BOE se conservan"); self.assertIn("Relación definitiva", limpio)
+        d, _ = M.guardar_documento({}, {"id": "f"}, "https://x.es/lista", texto.encode(), "text/plain", {"titulo": "Lista"})
+        self.assertNotIn("01189424W", open(os.path.join(N.RAIZ, d["texto"])).read())
+        self.assertEqual(d["lineas_datos_personales_omitidas"], 2)
+
 class TestExtraccion(unittest.TestCase):
     doc = {"titulo": "Resolución de 1 de octubre de 2026, del Ayuntamiento de Soria, por la que se anuncia la convocatoria.", "meta": {"departamento": "ADMINISTRACIÓN LOCAL"}}
     def test_apartados_numerados_no_son_plazas(self):
