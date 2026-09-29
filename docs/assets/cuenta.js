@@ -25,7 +25,7 @@
       '<p class="form-msg ' + (tipo || "") + '" role="status">' + (msg || "") + "</p></form>" +
       (modo === "entrar" ? '<p class="small"><button class="linklike" data-t="recuperar">¿Has olvidado tu contraseña?</button></p>' : "") +
       (rec ? '<p class="small"><button class="linklike" data-t="entrar">Volver a entrar</button></p>' : "") +
-      '<p class="muted small">🔒 Solo guardamos tu email, tu nombre público y tu progreso en los tests. Sin publicidad y sin compartir datos.</p></div>';
+      '<p class="muted small">Solo guardamos tu email, tu nombre público y tu progreso en los tests. Sin publicidad y sin compartir datos.</p></div>';
 
     el.querySelectorAll("[data-t]").forEach(function (b) { b.onclick = function () { modo = b.getAttribute("data-t"); pintar(); }; });
     var f = el.querySelector("#f");

@@ -44,7 +44,7 @@
     if (window.TLEventos) TLEventos.emitir("PAYWALL_REACHED", { contexto: LEY, motivo: "muestra" }, { debounce: "paywall:" + LEY });
     var m = muestra();
     var fallos = m.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; });
-    var candado = function (t, d) { return '<a class="mode locked" href="' + TL.root + 'pase/"><strong>🔒 ' + t + "</strong><span>" + d + "</span></a>"; };
+    var candado = function (t, d) { return '<a class="mode locked" href="' + TL.root + 'pase/"><strong>' + t + "</strong><span>" + d + "</span></a>"; };
     el.innerHTML =
       '<div class="mode-grid">' +
       '<button class="mode primary" data-m="muestra"><strong>Test de muestra gratis</strong><span>' + m.length + " preguntas con la cita del BOE</span></button>" +
@@ -96,7 +96,7 @@
       (data.qs.some(function (q) { return q.dif; }) ? '<label>Dificultad<select name="dif" class="select"><option value="">Todas</option><option value="1">Fácil</option><option value="2">Media</option><option value="3">Difícil</option></select></label>' : "") +
       '<label class="check"><input type="checkbox" name="examen"> Modo examen (sin corrección hasta el final, con cronómetro)</label>' +
       '<button class="btn primary">Empezar</button><span class="muted small" id="tm-msg"></span></form></details>' +
-      '<p class="muted small">' + data.qs.length + ' preguntas verificadas contra el BOE. <a href="' + TL.root + 'panel/">Ver mi panel completo →</a></p>';
+      '<p class="muted small">' + data.qs.length + ' preguntas verificadas contra el BOE. <a href="' + TL.root + 'panel/">Ver mi panel completo</a></p>';
     el.querySelectorAll("[data-m]").forEach(function (b) {
       b.onclick = function () {
         var m = b.getAttribute("data-m");
@@ -233,7 +233,7 @@
     var tb = el.querySelector("[data-tutor]");
     if (tb) tb.onclick = function () { tb.disabled = true; window.TLTutor.explicar({ ley: q.ley || LEY, art: String(q.artn || q.art), pregunta: q.q, opciones: q.o, correcta: q.a, elegida: i, cita: q.cita }, el.querySelector(".fb")); };
     var a = el.querySelector(".actions");
-    a.innerHTML = '<button class="btn primary" data-next>' + (idx + 1 < queue.length ? "Siguiente →" : "Ver resultado") + "</button>";
+    a.innerHTML = '<button class="btn primary" data-next>' + (idx + 1 < queue.length ? "Siguiente pregunta" : "Ver resultado") + "</button>";
     a.querySelector("[data-next]").onclick = next;
     a.querySelector("[data-next]").focus();
   }

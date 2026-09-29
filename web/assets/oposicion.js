@@ -6,14 +6,14 @@
   if (box.getAttribute("data-tipo") === "convocatoria") {
     var pintarC = function () {
       var sig = TL.sigo(op);
-      box.innerHTML = '<div class="op-cta"><button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "🔔 Siguiendo esta convocatoria" : "🔔 Seguir esta convocatoria") + "</button></div>";
+      box.innerHTML = '<div class="op-cta"><button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "Siguiendo esta convocatoria" : "Seguir esta convocatoria") + "</button></div>";
       document.getElementById("seguir").onclick = function () { TL.alternarSeguir(op); pintarC(); };
     };
     pintarC(); return;
   }
   function pintar() {
     var mia = TL.miOposicion() === op, sig = TL.sigo(op);
-    var seguir = '<button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "🔔 Siguiendo la convocatoria" : "🔔 Seguir convocatoria") + "</button>";
+    var seguir = '<button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "Siguiendo la convocatoria" : "Seguir convocatoria") + "</button>";
     box.innerHTML = mia
       ? '<div class="op-cta mine"><span>✔ Es tu oposición.</span> <a class="btn primary" href="' + TL.root + "panel/?c=" + op + '">Ver mi progreso</a> <a class="btn" href="' + TL.root + "ranking/?c=" + op + '">Ranking de esta oposición</a> ' + seguir + "</div>"
       : '<div class="op-cta"><button class="cta" id="elegir">Preparar esta oposición</button> <a class="btn" href="' + TL.root + "ranking/?c=" + op + '">Ver su ranking</a> ' + seguir + '<p class="muted small">Tu panel, tu nota y tu ranking se centrarán en esta oposición. Puedes cambiarla cuando quieras.</p></div>';

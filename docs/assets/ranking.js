@@ -14,7 +14,7 @@
   function fmt(n) { return (Math.round(n * 10) / 10).toLocaleString("es-ES"); }
 
   if (!TL.online) {
-    el.innerHTML = '<div class="card empty"><p class="big-ico">🏆</p><h2>El ranking se abre muy pronto</h2><p>Cuando se activen las cuentas podrás competir con otros opositores por la mejor nota. Mientras tanto, prepara tu posición: tu progreso ya se está guardando.</p><a class="cta" href="' + TL.root + (TL.esOposicion(LEY) ? 'oposiciones/' + LEY : LEY) + '/#quiz">Practicar ahora</a></div>';
+    el.innerHTML = '<div class="card empty"><h2>El ranking se abre muy pronto</h2><p>Cuando se activen las cuentas podrás competir con otros opositores por la mejor nota. Mientras tanto, prepara tu posición: tu progreso ya se está guardando.</p><a class="cta" href="' + TL.root + (TL.esOposicion(LEY) ? 'oposiciones/' + LEY : LEY) + '/#quiz">Practicar ahora</a></div>';
     return;
   }
   el.innerHTML = '<p class="muted">Cargando ranking…</p>';
@@ -22,10 +22,10 @@
     filas = filas || [];
     var ses = TL.sesion();
     if (!filas.length) {
-      el.innerHTML = '<div class="card empty"><p class="big-ico">🏆</p><h2>Aún no hay nadie en el ranking</h2><p>Sé el primero: crea tu cuenta y haz un test.</p><a class="cta" href="' + TL.root + 'cuenta/">Crear cuenta</a></div>';
+      el.innerHTML = '<div class="card empty"><h2>Aún no hay nadie en el ranking</h2><p>Sé el primero: crea tu cuenta y haz un test.</p><a class="cta" href="' + TL.root + 'cuenta/">Crear cuenta</a></div>';
       return;
     }
-    var medal = ["🥇", "🥈", "🥉"];
+    var medal = [];
     el.innerHTML =
       '<div class="card"><div class="table-scroll"><table class="rank"><thead><tr><th>#</th><th>Opositor</th><th class="num">Nota</th><th class="num">Dominadas</th><th class="num">Respuestas</th></tr></thead><tbody>' +
       filas.map(function (f) {

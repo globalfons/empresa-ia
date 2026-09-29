@@ -73,7 +73,7 @@
   }
 
   function bloqueo(titulo, desc) {
-    return '<section class="card upsell-card"><h2>🔒 ' + titulo + '</h2><p>' + desc + '</p><a class="btn primary" href="' + TL.root + 'pase/">Probar el Pase Opositor 3 días gratis</a></section>';
+    return '<section class="card upsell-card"><h2>' + titulo + '</h2><p>' + desc + '</p><a class="btn primary" href="' + TL.root + 'pase/">Probar el Pase Opositor 3 días gratis</a></section>';
   }
   function seccionTutor() {
     if (window.TLTutor && !TL.puede("tutor")) return bloqueo("Tutor IA", "Explicaciones de cada pregunta y respuestas a tus dudas basadas en el texto oficial del BOE.");
@@ -110,7 +110,7 @@
       "<p>☆ <b>" + favs + "</b> preguntas favoritas" + (favs ? ' · <a href="' + LEY_URL + '#test=favoritas">Practicarlas</a>' : ' <span class="muted small">(márcalas con la estrella durante un test)</span>') + "</p>" +
       (sigo.length ? '<ul class="weak">' + sigo.map(function (o) { return '<li><a href="' + TL.root + "oposiciones/" + o.id + '/">' + esc(o.nombre) + '</a><span>' + esc(ESTADO[o.estado] || o.estado) + " · revisado " + o.actualizado.split("-").reverse().join("/") + "</span></li>"; }).join("") + "</ul>"
         : '<p class="muted small">Sigue una oposición desde su ficha para recibir avisos de su convocatoria.</p>') +
-      (TL.puede("alertas") ? '<div id="avisos"></div><div id="notif-email"></div>' : '<p class="muted small">🔒 Los avisos de publicaciones del BOE sobre tus convocatorias están incluidos en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.</p>') + "</section>";
+      (TL.puede("alertas") ? '<div id="avisos"></div><div id="notif-email"></div>' : '<p class="muted small">Los avisos de publicaciones del BOE sobre tus convocatorias están incluidos en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.</p>') + "</section>";
   }
 
   // «¿Qué tengo que hacer HOY?»: la primera respuesta del panel. Con Pase sale del plan adaptativo; sin Pase, una sesión básica.
@@ -195,7 +195,7 @@
       '<div class="kpis">' +
       '<div class="kpi"><span class="kpi-n">' + s.respuestas + '</span><span class="kpi-l">respuestas</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.acierto + ' %</span><span class="kpi-l">de acierto</span></div>' +
-      '<div class="kpi"><span class="kpi-n">🔥 ' + s.racha + '</span><span class="kpi-l">días de racha</span></div>' +
+      '<div class="kpi"><span class="kpi-n">' + s.racha + '</span><span class="kpi-l">días de racha</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + (s.tiempo >= 3600 ? Math.floor(s.tiempo / 3600) + " h " : "") + Math.round((s.tiempo % 3600) / 60) + ' min</span><span class="kpi-l">tiempo en tests</span></div>' +
       '<div class="kpi"><a class="kpi-n" href="' + TL.root + "errores/?c=" + LEY + '">' + s.vencidas + '</a><span class="kpi-l">repasos pendientes hoy</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.cuenta.dominada + "/" + s.total + '</span><span class="kpi-l">dominadas</span></div></div>' +

@@ -400,7 +400,7 @@
       if (!n) return;
       var a = document.createElement("a");
       a.className = "campana"; a.href = (CFG.root || "./") + "panel/#avisos-t"; a.title = n + " avisos nuevos de tus convocatorias";
-      a.innerHTML = "🔔<b>" + n + "</b>";
+      a.innerHTML = "Avisos <b>" + n + "</b>";
       el.parentNode.insertBefore(a, el);
     }).catch(function () {});
   }
