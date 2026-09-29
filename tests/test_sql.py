@@ -94,6 +94,13 @@ class TestEsquema(unittest.TestCase):
         m = json.loads(psql("select public.admin_metricas(30)", rol="admin", uid=self.ADM))
         self.assertIn("embudo", m); self.assertIn("mrr_eur", m)
         self.assertIn("embudo", json.loads(psql("select public.admin_metricas(7)", rol="service_role")))
+        # Conversión por pieza de contenido y campaña (utm_content/utm_campaign del Growth OS, last touch)
+        attr = json.dumps({"attr": {"last": {"utm_campaign": "convocatorias-2026-10", "utm_content": "telegram-BOE-A-1-abc"}}})
+        psql(f"insert into public.eventos (type, anon_id, user_id, metadata) values ('LANDING_VISIT', '{'e' * 20}', null, '{attr}'), ('USER_REGISTERED', '{'e' * 20}', '{self.B}', '{attr}')")
+        m = json.loads(psql("select public.admin_metricas(30)", rol="admin", uid=self.ADM))
+        pc = next(x for x in m["por_contenido"] if x["contenido"] == "telegram-BOE-A-1-abc")
+        self.assertEqual((pc["visitas"], pc["registros"], pc["premium"]), (1, 1, 0))
+        self.assertEqual(next(x for x in m["por_campana"] if x["campana"] == "convocatorias-2026-10")["registros"], 1)
         self.assertIn("solo administradores", falla("select * from public.admin_leads(5)", rol="authenticated", uid=self.B))
         self.assertIn("solo servicio", falla("select * from public.detectar_inactivos(5)", rol="admin", uid=self.ADM))
 

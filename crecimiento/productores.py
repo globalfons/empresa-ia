@@ -30,7 +30,8 @@ def producir():
         d = v.get("datos", {})
         pub("NEW_CONVOCATION", entity_type="convocatoria", entity_id=v["id"], idempotency_key="NEW_CONVOCATION:" + v["id"],
             payload={"titulo": v["titulo"][:300], "categoria": v["categoria"], "administracion": v.get("administracion"), "plazas": (d.get("plazas") or {}).get("valor"),
-                     "oposicion_id": v.get("oposicion_id"), "verification_status": v.get("verification_status"), "url": v["fuente"]["source_url"], "publicado": v["fuente"].get("published_at")})
+                     "oposicion_id": v.get("oposicion_id"), "verification_status": v.get("verification_status"), "url": v["fuente"]["source_url"], "publicado": v["fuente"].get("published_at"),
+                     "relacion": next((x["relacion"] for x in v.get("vinculos_oposicion", []) if x["oposicion"] == v.get("oposicion_id")), None)})
 
     for x in _j(os.path.join(CAT, "novedades-convocatorias.json"), []):
         if not reciente(x.get("detectado"), ventana): continue

@@ -1,5 +1,39 @@
 # progress.md — TestLey
 
+## Sesión 29/09/2026 (tarde): continuación del Growth OS
+Estado detallado por componente: `documentacion/GROWTH-STATUS.md`.
+
+**Verificación:**
+- Tests: 33 de Python, 7 de SQL, 14 de JS y 9 de Deno.
+- Calidad: lint, `deno check` y build de 11.264 páginas.
+- E2E en móvil y escritorio, sin errores de JavaScript.
+- Publicación: Pages desplegado con el último commit y CI verde en GitHub.
+- Sin secretos en el código.
+
+### COMPLETED (esta sesión)
+- **Vínculo convocatoria ↔ oposición** con una sola regla para todo el sistema (`catalogo/vinculos.py`, que usan la vigilancia del BOE y la extracción). Distingue `misma_convocatoria`, `nueva_convocatoria` y `mismo_cuerpo`.
+  - Antes, una convocatoria nueva de una oposición del catálogo no se vinculaba.
+  - Corregidos 3 falsos positivos: listas de aprobados, pruebas de especialidad de la AEAT y Policía Local de Galicia enlazada a Policía Nacional porque el grupo de vigilancia era demasiado amplio. Las novedades que ya no encajan se retiran.
+- **Nueva convocatoria de una oposición del catálogo:**
+  - Evento con la relación → regla → acción `update_opposition`.
+  - Crea una propuesta de actualización en HUMAN_REVIEW: dato actual frente a nuevo, con citas y URLs, y los pasos a seguir.
+  - Se ve en `/admin/growth/` y se gestiona con `crecimiento.cli propuestas | propuesta-aplicada | propuesta-descartada`. Nunca modifica la ficha sola.
+- **Deduplicación entre fuentes:** la misma convocatoria llegada desde otra web oficial que cita su BOE se fusiona como `fuentes_adicionales`, sin crear otra ficha, y se muestra en la ficha.
+- **Conversión medida por pieza de contenido y por campaña:** `utm_content` y `utm_campaign` llegan del enlace al checkout y al webhook, y se reflejan en `admin_metricas` (`por_contenido`, `por_campana`) y en `/admin/growth/`.
+- **Catálogo nacional, candidatas a partir de datos oficiales:** el analista agrupa las convocatorias por tipo de plaza y propone las más repetidas, con sus identificadores del BOE, sin crear páginas: administrativo local (97), Policía Local (64 + 43 agente + 25 oficial), auxiliar administrativo local (58), TAG (41)…
+- **Tests nuevos** en `tests/test_flujo_convocatoria.py`: flujo completo, idempotencia, fallo a medias y reintento sin duplicados, fusión entre fuentes y candidatas. También SQL `por_contenido` y el webhook con `utm_content`.
+
+### BLOCKED (nuevo)
+- **Lemon Squeezy en modo prueba.** El webhook se puede probar ya con compras de prueba si se despliega `lemon-webhook`.
+- **Crons de GitHub Actions:** 0 ejecuciones programadas en más de 5 h, aunque CI y Pages funcionan. Hay que lanzarlos una vez a mano desde Actions → «Run workflow».
+
+### NEXT
+1. Primera oposición de la categoría candidata número 1 con datos verificados: «Agente de Policía Local» como oposición tipo que agrupa las convocatorias municipales. Las bases y el temario están en cada BOP, que el entorno de desarrollo no alcanza; se hará desde Actions o con los textos que publica el BOE.
+2. Pasar la cola de contenido a Supabase para aprobar desde la web.
+3. Justicia e Instituciones Penitenciarias a partir de sus convocatorias en el BOE.
+
+---
+
 Última actualización: 29/09/2026. Verificación ejecutada en esta sesión:
 - **Lint:** `npm run lint`, 0 errores.
 - **Validadores:** `npm run validar`, 0 errores.

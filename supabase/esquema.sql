@@ -345,6 +345,15 @@ begin
         select coalesce(metadata #>> '{attr,first,utm_source}', metadata #>> '{attr,first,ref}', 'directo') as canal,
                count(*) filter (where type = 'USER_REGISTERED') as reg, count(*) filter (where type = 'SUBSCRIPTION_STARTED') as prem
         from e where type in ('USER_REGISTERED','SUBSCRIPTION_STARTED') group by 1) c),
+    -- Conversión por campaña y por pieza de contenido (last touch: utm_campaign / utm_content que pone el Growth OS en cada enlace)
+    'por_campana', (select coalesce(jsonb_agg(x), '[]') from (select metadata #>> '{attr,last,utm_campaign}' as campana,
+        count(distinct anon_id) filter (where type = 'LANDING_VISIT') as visitas, count(*) filter (where type = 'USER_REGISTERED') as registros,
+        count(*) filter (where type = 'SUBSCRIPTION_STARTED') as premium
+        from e where metadata #>> '{attr,last,utm_campaign}' is not null group by 1 order by 3 desc, 2 desc limit 20) x),
+    'por_contenido', (select coalesce(jsonb_agg(x), '[]') from (select metadata #>> '{attr,last,utm_content}' as contenido,
+        count(distinct anon_id) filter (where type = 'LANDING_VISIT') as visitas, count(*) filter (where type = 'USER_REGISTERED') as registros,
+        count(*) filter (where type = 'SUBSCRIPTION_STARTED') as premium
+        from e where metadata #>> '{attr,last,utm_content}' is not null group by 1 order by 3 desc, 2 desc limit 20) x),
     'top_landings', (select coalesce(jsonb_agg(x), '[]') from (select metadata #>> '{attr,first,landing}' as landing, count(distinct anon_id) as visitas from e
         where type = 'LANDING_VISIT' group by 1 order by 2 desc limit 10) x),
     'top_oposiciones', (select coalesce(jsonb_agg(x), '[]') from (select entity_id as oposicion, count(distinct anon_id) as visitas from e

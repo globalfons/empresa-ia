@@ -133,11 +133,47 @@ def x_publish_scheduled(job):
         _emitir("TELEGRAM_ALERT_SENT" if canal == "telegram" else "EMAIL_SENT", job, entity_type="contenido", entity_id=c["id"], payload={"canal": canal})
     return {"publicados": hechos, "pendientes_manual": manual}
 
+CAMPOS_PROPUESTA = ["plazas", "plazo_solicitudes", "sistema_selectivo", "titulacion", "grupo"]
+
+def x_update_opposition(job):
+    """Nueva convocatoria de una oposición del catálogo → PROPUESTA de actualización en HUMAN_REVIEW.
+    Nunca se modifica la ficha sola: sus datos oficiales exigen cita literal y la fuente guardada en catalogo/fuentes/ (validar_catalogo.py).
+    La propuesta compara cada dato actual con el de la nueva convocatoria (con su cita y URL oficial) y deja la lista de pasos."""
+    ev = _ev(job); op_id = ev["payload"].get("oposicion_id")
+    ruta = os.path.join(N.EST, "actualizaciones", f"{op_id}--{ev['entity_id']}.json")
+    if os.path.exists(ruta): return {"_status": "skipped", "motivo": "propuesta ya creada", "propuesta": os.path.relpath(ruta, N.EST)}
+    ficha, opos = cargar_ficha(ev["entity_id"])
+    op = next((o for o in opos if o["id"] == op_id), None)
+    if not op: raise ValueError(f"oposición {op_id} no está en el catálogo")
+    actual = lambda k: (lambda d: (d[0] if isinstance(d, list) else d) if d else None)(op.get("oficial", {}).get(k))
+    cambios = []
+    for k in CAMPOS_PROPUESTA:
+        a, n = actual(k), ficha.get("datos", {}).get(k)
+        if not a and not n: continue
+        cambios.append({"campo": k, "actual": a and a.get("valor"), "cita_actual": a and (a.get("cita") or (a.get("citas") or [None])[0]),
+                        "nuevo": n and n.get("valor"), "cita_nueva": n and n.get("cita"), "estado_nuevo": n and n.get("verification_status"),
+                        "cambia": (a and a.get("valor")) != (n and n.get("valor"))})
+    conv_actual = op.get("fuentes", {}).get("convocatoria", {})
+    prop = {"id": f"{op_id}--{ev['entity_id']}", "tipo": "nueva_convocatoria", "estado": "HUMAN_REVIEW", "oposicion": op_id, "oposicion_nombre": op["nombre"],
+            "convocatoria_actual": {"id": conv_actual.get("id"), "titulo": conv_actual.get("titulo"), "url": conv_actual.get("url")},
+            "convocatoria_nueva": {"id": ficha["id"], "titulo": ficha["titulo"], "url": ficha["fuente"]["source_url"], "publicado": ficha["fuente"].get("published_at"),
+                                   "verification_status": ficha.get("verification_status")},
+            "cambios": cambios, "evento": ev["id"], "correlation_id": ev["correlation_id"], "creado": N.iso(),
+            "pasos": ["Descargar el texto oficial de la nueva convocatoria a catalogo/fuentes/<ID>.txt",
+                      "Actualizar fuentes.convocatoria, oficial (cada dato con su cita literal), estado, temario y examen en catalogo/oposiciones/" + op_id + ".json",
+                      "Actualizar vigilancia.convocatoria_ref con la fecha de la nueva resolución",
+                      "python3 catalogo/validar_catalogo.py && python3 catalogo/construir.py && node build.mjs",
+                      "python3 -m crecimiento.cli propuesta-aplicada " + f"{op_id}--{ev['entity_id']}"]}
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    json.dump(prop, open(ruta, "w"), ensure_ascii=False, indent=1)
+    _emitir("OPPOSITION_UPDATE_PROPOSED", job, entity_type="oposicion", entity_id=op_id, payload={"convocatoria": ficha["id"], "cambios": [c["campo"] for c in cambios if c["cambia"]]})
+    return {"propuesta": prop["id"], "cambios": sum(1 for c in cambios if c["cambia"])}
+
 def x_growth_report(job):
     return analista.informe_semanal()
 
 EJECUTORES = {"update_seo": x_update_seo, "generate_content": x_generate_content, "notify_followers": x_notify_followers, "analytics_event": x_analytics_event,
-              "reactivation_email": x_reactivation_email, "daily_question": x_daily_question, "publish_scheduled": x_publish_scheduled, "growth_report": x_growth_report}
+              "reactivation_email": x_reactivation_email, "daily_question": x_daily_question, "update_opposition": x_update_opposition, "publish_scheduled": x_publish_scheduled, "growth_report": x_growth_report}
 
 def ciclo(ticks=(), productores=True):
     import time; t0 = time.time()

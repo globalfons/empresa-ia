@@ -150,16 +150,9 @@ def estado_conv(pub):
     return "activa" if dias <= 540 else "historica"
 
 OPOS_DIR = os.path.join(N.RAIZ, "catalogo", "oposiciones")
-def oposiciones_por_convocatoria():
-    """Identificador oficial de la convocatoria (p. ej. BOE-A-2026-15055) → oposición revisada del catálogo que la usa."""
-    m = {}
-    for f in sorted(os.listdir(OPOS_DIR)) if os.path.isdir(OPOS_DIR) else []:
-        if f.endswith(".json"):
-            o = json.load(open(os.path.join(OPOS_DIR, f)))
-            ref = (o.get("fuentes", {}).get("convocatoria") or {}).get("id")
-            if ref: m.setdefault(ref, []).append(o["id"])
-    return m
-OPOS_CONV = oposiciones_por_convocatoria()
+import vinculos as VINC  # misma regla que catalogo/vigilar_boe.py
+OPOS = VINC.cargar_oposiciones() if os.path.isdir(OPOS_DIR) else []
+
 NOV_CONV = os.path.join(N.RAIZ, "catalogo", "novedades-convocatorias.json")
 ETIQ = {"plazas": "plazas", "plazo_solicitudes": "plazo de solicitudes", "sistema_selectivo": "sistema selectivo", "titulacion": "titulación",
         "grupo": "grupo", "denominacion": "plaza", "pruebas": "pruebas", "organismo": "organismo", "territorio": "territorio"}
@@ -181,6 +174,21 @@ def registrar_novedad(ficha, cambios, doc):
                 "titulo": f"Cambios detectados en la convocatoria: {txt}"[:300], "url": doc["url"], "fecha": t[:10], "detectado": t})
     json.dump(nov[-2000:], open(NOV_CONV, "w"), ensure_ascii=False, indent=1)
 
+def fusionar_si_duplicada(doc, texto):
+    """La misma convocatoria publicada en otra web oficial (PAG, web del organismo, boletín autonómico) que cita su anuncio del BOE
+    no crea una ficha nueva: se añade como fuente adicional de la ficha existente. Así una convocatoria nunca aparece dos veces."""
+    if doc["domain"].endswith("boe.es"): return None
+    for bid in dict.fromkeys(re.findall(r"BOE-A-\d{4}-\d+", texto + " " + doc.get("titulo", ""))):
+        p = os.path.join(SALIDA, bid + ".json")
+        if not os.path.exists(p): continue
+        f = json.load(open(p))
+        extra = f.setdefault("fuentes_adicionales", [])
+        if not any(x["source_url"] == doc["url"] for x in extra):
+            extra.append({"source_url": doc["url"], "source_domain": doc["domain"], "titulo": doc.get("titulo", "")[:200], "retrieved_at": doc["retrieved_at"], "fuente_registro": doc["fuente"]})
+            json.dump(f, open(p, "w"), ensure_ascii=False, indent=1)
+        return f
+    return None
+
 def procesar(doc, rehacer=False):
     texto = open(os.path.join(N.RAIZ, doc["texto"])).read()
     meta = doc.get("meta", {}); tit = doc.get("titulo", "")
@@ -190,6 +198,8 @@ def procesar(doc, rehacer=False):
     datos, descartados = validar(datos, texto, tit, meta)
     cid = meta.get("boe_id") or doc["doc_id"]
     p = os.path.join(SALIDA, re.sub(r"[^A-Za-z0-9-]", "-", cid) + ".json")
+    fusion = fusionar_si_duplicada(doc, texto)
+    if fusion: return "fusionado", fusion
     if re.search(REGLAS.get("excluir_titulo", "$^"), tit):
         # No es un proceso de acceso (p. ej. provisión de puestos entre funcionarios): no es una convocatoria de oposición.
         if os.path.exists(p) and json.load(open(p)).get("revision") != "manual":
@@ -204,10 +214,12 @@ def procesar(doc, rehacer=False):
             "retrieved_at": doc["retrieved_at"], "updated_at": doc["updated_at"], "document_version": doc.get("document_version", 1)}
     for d in datos.values():
         d.update(proc); d["verification_status"] = V.de_dato(d.get("metodo")); d["last_verified_at"] = t
+    vinc = VINC.vincular(cid, tit, OPOS)
     organismo = (datos.get("organismo") or {}).get("valor", "")
     primario = " ".join([tit, (datos.get("denominacion") or {}).get("valor", ""), meta.get("epigrafe") or ""])
     ficha = {"id": cid, "call_number": meta.get("boe_id") or "", "titulo": tit,
-             "oposicion_id": (OPOS_CONV.get(cid) or [None])[0], "oposiciones_relacionadas": OPOS_CONV.get(cid, []),
+             "oposicion_id": next((v["oposicion"] for v in vinc if v["relacion"] in ("misma_convocatoria", "nueva_convocatoria")), None),
+             "oposiciones_relacionadas": [v["oposicion"] for v in vinc], "vinculos_oposicion": vinc,
              "categoria": categoria(primario, meta.get("departamento", "")), "administracion": administracion(organismo, tit),
              "organismo": organismo, "territorio": (datos.get("territorio") or {}).get("valor", "España" if not re.search(r"(?i)ayuntamiento|diputaci|cabildo|consell|comarca|mancomunidad|universi|comunidad|junta|generalitat|gobierno de|xunta|servicio .{0,20}salud|osakidetza|consorcio", tit) else ""),
              "estado": estado_conv(doc.get("published_at")), "estado_nota": "Calculado: activa si se publicó hace menos de 18 meses; se actualizará con las publicaciones posteriores.",
@@ -245,7 +257,7 @@ if __name__ == "__main__":
             r, _ = procesar(d, args.rehacer)
         except Exception as e:
             r = "error"; N.log("extraccion_error", doc=d["doc_id"], error=str(e)[:200])
-        d["extraccion"] = {"extraido": "hecha", "modificado": "hecha", "descartado": "descartada", "conservado": "hecha"}.get(r, "error")
+        d["extraccion"] = {"extraido": "hecha", "modificado": "hecha", "descartado": "descartada", "conservado": "hecha", "fusionado": "fusionada"}.get(r, "error")
         n[r] = n.get(r, 0) + 1
     N.guardar("documentos.json", docs)
     N.log("extraccion", **n); print(n); print(metricas_extraccion(n, docs, time.time() - t0))

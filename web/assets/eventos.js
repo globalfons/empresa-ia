@@ -92,7 +92,7 @@
     document.querySelectorAll('a[href*="lemonsqueezy.com/checkout"]').forEach(function (a) {
       a.addEventListener("click", function () {
         var u = new URL(a.href), at = get(LS_T, {}), ses = window.TL && TL.sesion ? TL.sesion() : null, f = at.first || {}, l = at.last || {};
-        var c = { user_id: ses && ses.user.id, anon_id: consentimiento() === true ? anonId() : null, ref: f.ref || l.ref, fs: f.utm_source, fc: f.utm_campaign, ls: l.utm_source, lc: l.utm_campaign };
+        var c = { user_id: ses && ses.user.id, anon_id: consentimiento() === true ? anonId() : null, ref: f.ref || l.ref, fs: f.utm_source, fc: f.utm_campaign, ls: l.utm_source, lc: l.utm_campaign, lx: l.utm_content };
         Object.keys(c).forEach(function (k) { if (c[k]) u.searchParams.set("checkout[custom][" + k + "]", String(c[k]).slice(0, 80)); });
         if (ses && ses.user.email) u.searchParams.set("checkout[email]", ses.user.email);
         a.href = u.toString();

@@ -19,6 +19,25 @@ def embudo_mas_debil(m):
     tasas = [t for t in tasas if t[1] is not None]
     return min(tasas, key=lambda t: t[1]) if tasas else None
 
+import re, unicodedata, collections
+VACIAS = r"\b(de la|de los|de las|del|de|la|el|los|las|y|en|a|o|plazas?|personal|funcionario|carrera|categoria|escala|subescala|clase|puestos?|plantilla|laboral|fijo)\b"
+def denominacion_tipo(t):
+    """Normaliza la denominación oficial de la plaza para agrupar convocatorias del mismo tipo (p. ej. «Agente de Policía Local»)."""
+    t = unicodedata.normalize("NFD", (t or "").lower()); t = "".join(c for c in t if unicodedata.category(c) != "Mn")
+    t = re.sub(r"[^a-z ]", " ", t.replace("/", " ")); t = re.sub(VACIAS, " ", t)
+    return " ".join(t.split()[:4])
+
+def candidatas(convs, opos_cats, minimo=15):
+    """Oposiciones candidatas a entrar en el catálogo: tipos de plaza que más se repiten en convocatorias oficiales reales.
+    Solo se proponen (con los identificadores oficiales de ejemplo); crear la ficha exige verificar sus bases y temario."""
+    c = collections.defaultdict(list)
+    for v in convs:
+        den = denominacion_tipo((v.get("datos", {}).get("denominacion") or {}).get("valor"))
+        if den: c[(v["categoria"], den)].append(v["id"])
+    out = [{"categoria": k[0], "tipo_plaza": k[1], "convocatorias": len(ids), "ejemplos": sorted(ids)[-3:], "categoria_con_ficha": k[0] in opos_cats}
+           for k, ids in c.items() if len(ids) >= minimo]
+    return sorted(out, key=lambda x: -x["convocatorias"])
+
 def informe_semanal():
     hoy = N.ahora().date(); semana = "%d-W%02d" % hoy.isocalendar()[:2]
     conts = K.todos(); jobs = N.leer("jobs.json", {})
@@ -53,6 +72,10 @@ def informe_semanal():
         if d: ops.append({"tipo": "embudo", "prioridad": "alta", "propuesta": f"Paso más débil del embudo: {d[0]} ({round(100 * d[1], 1)} %). Proponer un experimento sobre ese paso."})
         for b in (negocio.get("busquedas_sin_resultado") or [])[:5]:
             ops.append({"tipo": "contenido", "prioridad": "media", "propuesta": f"Búsqueda sin resultados «{b['q']}» ({b['n']} veces): crear o enlazar una página útil si existe la oposición."})
+    publico["candidatas_catalogo"] = candidatas(convs, opos)
+    for x in publico["candidatas_catalogo"][:5]:
+        ops.append({"tipo": "catalogo", "prioridad": "alta" if x["convocatorias"] >= 50 else "media",
+                    "propuesta": f"Candidata a oposición del catálogo: «{x['tipo_plaza']}» ({x['categoria']}), {x['convocatorias']} convocatorias oficiales. Ejemplos: {', '.join(x['ejemplos'])}."})
     publico["oportunidades"] = ops
     for o in ops:
         E.publicar("CONTENT_OPPORTUNITY", "analista", entity_type="oportunidad", entity_id=semana, payload=o, idempotency_key=f"CONTENT_OPPORTUNITY:{semana}:{N.huella(o)}")

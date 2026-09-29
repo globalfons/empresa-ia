@@ -6,6 +6,8 @@ Uso: python3 catalogo/vigilar_boe.py [--desde AAAA-MM-DD]
 """
 import json, os, re, sys, glob, datetime, urllib.request, time
 D = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, D)
+import vinculos as V
 NOV = os.path.join(D, "novedades.json")
 EST = os.path.join(D, "vigilancia-estado.json")
 TIPOS = [  # (tipo, regex sobre el título). El primero que encaja gana.
@@ -58,7 +60,7 @@ while d <= hoy:
                     t = it["titulo"]
                     for o in opos:
                         if sec["codigo"] not in o["vigilancia"]["secciones"]: continue
-                        if not any(all(term.lower() in t.lower() for term in g) for g in o["vigilancia"]["grupos"]): continue
+                        if not V.coincide(t, o["vigilancia"]["grupos"]): continue
                         if (o["id"], it["identificador"]) in vistos: continue
                         url = it.get("url_html") or f"https://www.boe.es/diario_boe/txt.php?id={it['identificador']}"
                         nov.append({"oposicion": o["id"], "fecha": d.isoformat(), "id": it["identificador"], "titulo": t, "url": url,
@@ -71,6 +73,10 @@ for o in opos:
     if (o["id"], f.get("id")) not in vistos and f.get("id"):
         nov.append({"oposicion": o["id"], "fecha": f["fecha_publicacion"], "id": f["id"], "titulo": f["titulo"], "url": f["url"],
                     "tipo": "convocatoria", "seccion": "2B", "detectado": hoy.isoformat()}); nuevas += 1
+# Si se afina la regla de vigilancia de una oposición, se retiran las novedades que ya no encajan (salvo su propia convocatoria)
+_por = {o["id"]: o for o in opos}
+nov = [n for n in nov if n["oposicion"] not in _por or n["id"] == _por[n["oposicion"]]["fuentes"][_por[n["oposicion"]]["temario"]["fuente"]].get("id")
+       or V.coincide(n["titulo"], _por[n["oposicion"]]["vigilancia"]["grupos"])]
 # Relevancia: de la convocatoria actual o solo del mismo cuerpo (se recalcula siempre con los datos vigentes)
 por_id = {o["id"]: o for o in opos}
 for n in nov:

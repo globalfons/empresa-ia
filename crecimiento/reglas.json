@@ -1,38 +1,220 @@
 {
  "_ayuda": "Growth Rules Engine. WHEN <cuando> IF <si> THEN <entonces>. Condiciones: importancia_min (LOW|MEDIUM|HIGH|CRITICAL), payload (campo: valor o lista de valores admitidos), flag (feature flag necesario). Acciones: ver crecimiento/orquestador.py → EJECUTORES. modo: AUTO_PUBLISH solo se aplica si el dato es OFFICIAL_VERIFIED y el canal lo permite en config.json → crecimiento.modo_publicacion; si no, HUMAN_REVIEW_REQUIRED.",
  "reglas": [
-  {"id": "convocatoria-nueva-relevante", "cuando": "NEW_CONVOCATION", "si": {"importancia_min": "HIGH", "flag": "growth_engine"},
+  {
+   "id": "nueva-convocatoria-de-oposicion-del-catalogo",
+   "cuando": "NEW_CONVOCATION",
+   "si": {
+    "payload": {
+     "relacion": [
+      "nueva_convocatoria"
+     ]
+    }
+   },
    "entonces": [
-    {"accion": "update_seo"},
-    {"accion": "generate_content", "canales": ["articulo", "faq", "telegram", "email", "x", "instagram", "facebook", "tiktok", "youtube_short", "cta"], "modo": "AUTO_PUBLISH", "categoria": "CONVOCATION"},
-    {"accion": "notify_followers"},
-    {"accion": "analytics_event"}
-   ]},
-  {"id": "convocatoria-nueva-media", "cuando": "NEW_CONVOCATION", "si": {"importancia_min": "MEDIUM", "flag": "growth_engine", "importancia_max": "MEDIUM"},
+    {
+     "accion": "update_opposition"
+    }
+   ]
+  },
+  {
+   "id": "convocatoria-nueva-relevante",
+   "cuando": "NEW_CONVOCATION",
+   "si": {
+    "importancia_min": "HIGH",
+    "flag": "growth_engine"
+   },
    "entonces": [
-    {"accion": "update_seo"},
-    {"accion": "generate_content", "canales": ["telegram", "cta"], "modo": "HUMAN_REVIEW_REQUIRED", "categoria": "CONVOCATION"},
-    {"accion": "analytics_event"}
-   ]},
-  {"id": "convocatoria-nueva-menor", "cuando": "NEW_CONVOCATION", "si": {"importancia_max": "LOW"},
-   "entonces": [{"accion": "update_seo"}, {"accion": "analytics_event"}]},
-  {"id": "cambio-convocatoria", "cuando": "CONVOCATION_UPDATED", "si": {"importancia_min": "MEDIUM"},
-   "entonces": [{"accion": "update_seo"}, {"accion": "notify_followers"}, {"accion": "analytics_event"}]},
-  {"id": "fecha-examen", "cuando": "EXAM_DATE_CHANGED", "si": {"importancia_min": "CRITICAL"},
-   "entonces": [{"accion": "update_seo"}, {"accion": "notify_followers"}, {"accion": "analytics_event"}]},
-  {"id": "listas-publicadas", "cuando": "OFFICIAL_LIST_PUBLISHED", "si": {},
-   "entonces": [{"accion": "notify_followers"}, {"accion": "analytics_event"}]},
-  {"id": "fuente-caida", "cuando": "OFFICIAL_SOURCE_FAILED", "si": {"importancia_min": "MEDIUM"},
-   "entonces": [{"accion": "analytics_event"}]},
-  {"id": "retencion-diaria", "cuando": "RETENTION_SCAN", "si": {"flag": "email"},
-   "entonces": [{"accion": "reactivation_email", "dias": [5, 14, 30]}]},
-  {"id": "pregunta-diaria", "cuando": "DAILY_TICK", "si": {"flag": "telegram"},
-   "entonces": [{"accion": "daily_question"}]},
-  {"id": "publicar-programado", "cuando": "DAILY_TICK", "si": {},
-   "entonces": [{"accion": "publish_scheduled"}]},
-  {"id": "informe-semanal", "cuando": "WEEKLY_TICK", "si": {},
-   "entonces": [{"accion": "growth_report"}]}
+    {
+     "accion": "update_seo"
+    },
+    {
+     "accion": "generate_content",
+     "canales": [
+      "articulo",
+      "faq",
+      "telegram",
+      "email",
+      "x",
+      "instagram",
+      "facebook",
+      "tiktok",
+      "youtube_short",
+      "cta"
+     ],
+     "modo": "AUTO_PUBLISH",
+     "categoria": "CONVOCATION"
+    },
+    {
+     "accion": "notify_followers"
+    },
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "convocatoria-nueva-media",
+   "cuando": "NEW_CONVOCATION",
+   "si": {
+    "importancia_min": "MEDIUM",
+    "flag": "growth_engine",
+    "importancia_max": "MEDIUM"
+   },
+   "entonces": [
+    {
+     "accion": "update_seo"
+    },
+    {
+     "accion": "generate_content",
+     "canales": [
+      "telegram",
+      "cta"
+     ],
+     "modo": "HUMAN_REVIEW_REQUIRED",
+     "categoria": "CONVOCATION"
+    },
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "convocatoria-nueva-menor",
+   "cuando": "NEW_CONVOCATION",
+   "si": {
+    "importancia_max": "LOW"
+   },
+   "entonces": [
+    {
+     "accion": "update_seo"
+    },
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "cambio-convocatoria",
+   "cuando": "CONVOCATION_UPDATED",
+   "si": {
+    "importancia_min": "MEDIUM"
+   },
+   "entonces": [
+    {
+     "accion": "update_seo"
+    },
+    {
+     "accion": "notify_followers"
+    },
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "fecha-examen",
+   "cuando": "EXAM_DATE_CHANGED",
+   "si": {
+    "importancia_min": "CRITICAL"
+   },
+   "entonces": [
+    {
+     "accion": "update_seo"
+    },
+    {
+     "accion": "notify_followers"
+    },
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "listas-publicadas",
+   "cuando": "OFFICIAL_LIST_PUBLISHED",
+   "si": {},
+   "entonces": [
+    {
+     "accion": "notify_followers"
+    },
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "fuente-caida",
+   "cuando": "OFFICIAL_SOURCE_FAILED",
+   "si": {
+    "importancia_min": "MEDIUM"
+   },
+   "entonces": [
+    {
+     "accion": "analytics_event"
+    }
+   ]
+  },
+  {
+   "id": "retencion-diaria",
+   "cuando": "RETENTION_SCAN",
+   "si": {
+    "flag": "email"
+   },
+   "entonces": [
+    {
+     "accion": "reactivation_email",
+     "dias": [
+      5,
+      14,
+      30
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pregunta-diaria",
+   "cuando": "DAILY_TICK",
+   "si": {
+    "flag": "telegram"
+   },
+   "entonces": [
+    {
+     "accion": "daily_question"
+    }
+   ]
+  },
+  {
+   "id": "publicar-programado",
+   "cuando": "DAILY_TICK",
+   "si": {},
+   "entonces": [
+    {
+     "accion": "publish_scheduled"
+    }
+   ]
+  },
+  {
+   "id": "informe-semanal",
+   "cuando": "WEEKLY_TICK",
+   "si": {},
+   "entonces": [
+    {
+     "accion": "growth_report"
+    }
+   ]
+  }
  ],
- "lead_scoring": {"_ayuda": "Pesos del lead scoring (se aplican en Postgres: supabase/esquema.sql v4, función admin_leads). Mantener sincronizado.",
-   "LANDING_VISIT": 1, "OPPOSITION_VIEW": 2, "TEST_STARTED": 3, "TEST_COMPLETED": 5, "USER_REGISTERED": 8, "ONBOARDING_COMPLETED": 10, "SESIONES_MULTIPLES": 15, "PAYWALL_REACHED": 30, "CHECKOUT_STARTED": 30}
+ "lead_scoring": {
+  "_ayuda": "Pesos del lead scoring (se aplican en Postgres: supabase/esquema.sql v4, función admin_leads). Mantener sincronizado.",
+  "LANDING_VISIT": 1,
+  "OPPOSITION_VIEW": 2,
+  "TEST_STARTED": 3,
+  "TEST_COMPLETED": 5,
+  "USER_REGISTERED": 8,
+  "ONBOARDING_COMPLETED": 10,
+  "SESIONES_MULTIPLES": 15,
+  "PAYWALL_REACHED": 30,
+  "CHECKOUT_STARTED": 30
+ }
 }

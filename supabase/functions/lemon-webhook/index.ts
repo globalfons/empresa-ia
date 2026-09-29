@@ -42,7 +42,7 @@ export async function procesar(body: any) {
   if (env("LS_STORE_ID") && a.store_id != null && String(a.store_id) !== env("LS_STORE_ID")) return { ignorado: "otra tienda" };
   const user_id = uuidOk(custom.user_id) ? custom.user_id : null;
   // Atribución (first/last touch) que la web añade al checkout (web/assets/checkout.js). Solo campos conocidos y acotados.
-  const attr = { first: { utm_source: txt(custom.fs), utm_campaign: txt(custom.fc), ref: txt(custom.ref, 30) }, last: { utm_source: txt(custom.ls), utm_campaign: txt(custom.lc) }, anon_id: txt(custom.anon_id, 40) };
+  const attr = { first: { utm_source: txt(custom.fs), utm_campaign: txt(custom.fc), ref: txt(custom.ref, 30) }, last: { utm_source: txt(custom.ls), utm_campaign: txt(custom.lc), utm_content: txt(custom.lx) }, anon_id: txt(custom.anon_id, 40) };
   const clave = `ls:${nombre}:${d.id}:${a.updated_at || a.created_at || ""}`;
   const meta = { attr, event_name: nombre };
 

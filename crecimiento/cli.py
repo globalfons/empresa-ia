@@ -5,6 +5,7 @@
   python3 -m crecimiento.cli aprobar ID | rechazar ID "motivo" | editar ID fichero.txt | reprogramar ID 2026-10-01T07:30:00Z | archivar ID
   python3 -m crecimiento.cli publicado ID URL          (canales manuales: marca como publicado tras publicarlo a mano)
   python3 -m crecimiento.cli jobs [ESTADO] | reintentar CLAVE | cancelar CLAVE | reactivar PROVEEDOR
+  python3 -m crecimiento.cli propuestas | propuesta-aplicada ID | propuesta-descartada ID "motivo"   (actualizar una oposición por nueva convocatoria)
   python3 -m crecimiento.cli reddit COMUNIDAD URL "contexto" "borrador"   (solo registra; nunca publica)
 """
 import sys, json
@@ -37,6 +38,15 @@ def main(a):
     elif cmd in ("reintentar", "cancelar"):
         q = Cola(); getattr(q, cmd)(r[0]); q.guardar(); print(q.jobs[r[0]]["status"])
     elif cmd == "reactivar": q = Cola(); print(q.reactivar_sin_proveedor(r[0])); q.guardar()
+    elif cmd == "propuestas":
+        import glob, os
+        for f in sorted(glob.glob(os.path.join(N.EST, "actualizaciones", "*.json"))):
+            x = json.load(open(f)); print(f"{x['estado']:13} {x['id']}  cambios: {[c['campo'] for c in x['cambios'] if c['cambia']]}")
+    elif cmd in ("propuesta-aplicada", "propuesta-descartada"):
+        import os
+        f = os.path.join(N.EST, "actualizaciones", r[0] + ".json"); x = json.load(open(f))
+        x.update(estado="APLICADA" if cmd == "propuesta-aplicada" else "DESCARTADA", resuelto=N.iso(), nota=" ".join(r[1:]) or None)
+        json.dump(x, open(f, "w"), ensure_ascii=False, indent=1); print(x["estado"])
     elif cmd == "reddit": print(CH.oportunidad_reddit(*r[:4])["id"])
     else: print(__doc__)
 

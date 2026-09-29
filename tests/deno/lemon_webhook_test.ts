@@ -26,7 +26,7 @@ Deno.test("firma HMAC: válida, alterada, ausente", async () => {
 
 Deno.test("alta de suscripción: upsert + SUBSCRIPTION_STARTED con atribución", async () => {
   llamadas.length = 0;
-  const r = await procesar({ meta: { event_name: "subscription_created", custom_data: { user_id: "11111111-1111-1111-1111-111111111111", fs: "tiktok", fc: "lanzamiento", ref: "academia1", anon_id: "a".repeat(20) } },
+  const r = await procesar({ meta: { event_name: "subscription_created", custom_data: { user_id: "11111111-1111-1111-1111-111111111111", fs: "tiktok", fc: "lanzamiento", ref: "academia1", anon_id: "a".repeat(20), lx: "telegram-BOE-A-1-abc" } },
     data: { type: "subscriptions", id: 77, attributes: { status: "on_trial", user_email: "a@x.es", created_at: "2026-09-29T10:00:00Z", variant_id: 5 } } });
   assert(r.evento === "SUBSCRIPTION_STARTED");
   const up = llamadas.find((l) => l.url.includes("suscripciones?on_conflict=id"))!;
@@ -34,6 +34,7 @@ Deno.test("alta de suscripción: upsert + SUBSCRIPTION_STARTED con atribución",
   const ev = llamadas.find((l) => l.url.includes("eventos?on_conflict=idempotency_key"))!;
   assert(ev.body.type === "SUBSCRIPTION_STARTED" && ev.body.metadata.attr.first.utm_source === "tiktok" && ev.body.idempotency_key.startsWith("ls:subscription_created:77:"));
   assert(ev.prefer.includes("ignore-duplicates"), "idempotente");
+  assert(ev.body.metadata.attr.last.utm_content === "telegram-BOE-A-1-abc", "contenido que convirtió");
 });
 
 Deno.test("user_id no válido en custom_data se ignora", async () => {
