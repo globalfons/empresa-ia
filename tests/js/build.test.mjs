@@ -5,11 +5,16 @@ import fs from "node:fs";
 const leer = (p) => fs.readFileSync("docs/" + p, "utf8");
 const existe = fs.existsSync("docs/index.html");
 
-test("sitemap solo con páginas indexables y lastmod por página", { skip: !existe }, () => {
-  const sm = leer("sitemap.xml");
+test("sitemap: índice con sitemaps por tipo, solo páginas indexables y lastmod válido", { skip: !existe }, () => {
+  const ind = leer("sitemap.xml");
+  assert.match(ind, /<sitemapindex /);
+  const hijos = [...ind.matchAll(/<loc>[^<]*\/(sitemap-[a-z]+\.xml)<\/loc>/g)].map((m) => m[1]);
+  assert.ok(hijos.length >= 2, "varios sitemaps");
+  const sm = hijos.map(leer).join("\n");
   for (const r of ["admin/growth/", "admin/system/", "panel/", "bienvenida/"]) assert.ok(!sm.includes(`/${r}<`), r);
   assert.ok(sm.includes("/oposiciones/policia-nacional-escala-basica/<"));
-  assert.ok(new Set([...sm.matchAll(/<lastmod>([^<]+)</g)].map((m) => m[1])).size > 1, "lastmod distinto por página");
+  const hoy = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
+  for (const [, f] of sm.matchAll(/<lastmod>([^<]+)</g)) assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(f) && f <= hoy, `lastmod ${f}`);
 });
 
 test("páginas de admin con noindex", { skip: !existe }, () => {

@@ -3,9 +3,9 @@
 `build.mjs` genera las páginas a partir de entidades reales. `crecimiento/seo.py` y `catalogo/seo_calidad.json` deciden si se indexan; la misma puerta de calidad se usa en Python y en la build.
 
 **Por página:**
-- `title`, `description`, `canonical` y Open Graph;
-- JSON-LD: Course + FAQPage en las fichas, BreadcrumbList en todas las páginas principales, NewsArticle y Quiz;
-- `lastmod` real en el sitemap (verificación de la ficha, publicación del artículo, fecha de actualización de la ley);
+- `title` y `description` únicos, `canonical`, Open Graph y Twitter Card (detalle en [SEO.md](SEO.md));
+- JSON-LD: FAQPage en las fichas (con el FAQ visible), BreadcrumbList a partir de las migas visibles, Organization y WebSite en portada, NewsArticle, Quiz y LearningResource;
+- sitemaps por tipo con índice en `sitemap.xml` y `lastmod` real (verificación de la ficha, publicación del artículo, último cambio de las preguntas o del texto de la ley);
 - `robots.txt` y `llms.txt`;
 - enlazado interno: categoría ↔ ficha ↔ convocatoria ↔ leyes ↔ artículos.
 
