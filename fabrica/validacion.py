@@ -12,6 +12,7 @@ from validar_lib import norm  # noqa: E402
 
 OFICIAL = re.compile(r"(?i)\b(examen oficial|pregunta oficial|convocatoria de 20\d\d, pregunta)")
 CONFIANZA_OK = "alta"
+ABSOLUTAS = re.compile(r"(?i)\b(solo|sólo|solamente|exclusivamente|únicamente|siempre|nunca|en ningún caso|en todo caso|todos?|ninguno)\b")
 
 
 def simple(t):
@@ -93,6 +94,9 @@ def comprobar(q, ley, n, tema_arts, cfg):
         if min(largos) * 4 < statistics.median(largos) and min(largos) < 6:
             p.append(("REJECTED", "opciones: una opción es desproporcionadamente corta"))
         corr = simple(q["o"][q["a"]])
+        absolutas = [bool(ABSOLUTAS.search(str(o))) for o in q["o"]]
+        if not absolutas[q["a"]] and sum(absolutas) == 3:
+            p.append(("REJECTED", "opciones: solo los distractores usan términos absolutos (solo, exclusivamente, siempre…): pista"))
         if len(corr) > 12 and corr in simple(q["q"]):
             p.append(("REJECTED", "la respuesta correcta aparece literalmente en el enunciado"))
     # Explicación: justifica con la fuente y cita el artículo
