@@ -20,7 +20,7 @@ def calcular(estado, raiz=R):
         vivos = [q for q in qs if q.get("verification_status") not in ("OUTDATED", "DEPRECATED")]
         for q in qs:
             est[q.get("verification_status", "VALID")] += 1
-            fabrica_validas += q.get("generador") == "fabrica-v1" and "verification_status" not in q
+            fabrica_validas += str(q.get("generador", "")).startswith("fabrica-v1") and "verification_status" not in q
         con = {q["art"] for q in vivos}
         por_ley[slug] = {"validas": sum(1 for q in qs if "verification_status" not in q), "articulos": len(arts),
                          "articulos_con_preguntas": len(con), "cobertura_articulos": round(len(con) / len(arts), 3) if arts else 0}
@@ -28,7 +28,7 @@ def calcular(estado, raiz=R):
     for f in glob.glob(os.path.join(raiz, "datos", "candidatas", "*.json")):
         for q in _leer(f, []):
             cola[q.get("verification_status")] += 1
-    lotes = [x for x in estado.get("lotes", []) if x.get("modo") == "real"]
+    lotes = [x for x in estado.get("lotes", []) if x.get("modo") in ("real", "sesion")]
     gen = sum(x["generadas"] for x in lotes)
     tok = collections.defaultdict(lambda: {"entrada": 0, "salida": 0})
     for x in lotes:

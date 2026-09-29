@@ -158,6 +158,37 @@ class TestCircuito(unittest.TestCase):
             for q in json.load(open(f)):
                 self.assertNotIn(q.get("tipo"), ("caso_practico", "relacion_articulos"))
 
+    def test_modo_sesion_plan_validar_cerrar(self):
+        run = lambda *a: subprocess.run([sys.executable, "-m", "fabrica.sesion", *a], cwd=self.t, capture_output=True, text=True)
+        r = run("plan", "--oposicion", "auxiliar-administrativo-age", "--lote", "6")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertNotEqual(run("plan", "--oposicion", "auxiliar-administrativo-age").returncode, 0)  # un lote abierto a la vez
+        d = os.path.join(self.t, "fabrica", "sesion", json.load(open(os.path.join(self.t, "fabrica", "sesion", "abierto.json")))["lote"])
+        plan = json.load(open(os.path.join(d, "plan.json")))
+        cands = []
+        for h in plan["huecos"]:
+            frases = [f for f in h["texto"].split(". ") if len(f.split()) >= 6]
+            n = h["art"].rstrip("abcdefghijklmnopqrstuvwxyz") if h["art"][0].isdigit() else h["art"]
+            for k, p in enumerate(h["pedidas"][:len(frases)]):
+                cands.append({"s": h["s"], "tipo": p["tipo"], "dif": p["dif"], "q": f"Pregunta de prueba {h['s']}-{k} sobre lo que dispone el artículo {h['art']}",
+                              "o": [f"Opción correcta {h['s']}{k}", f"Opción falsa {h['s']}{k}x", f"Opción falsa {h['s']}{k}y", f"Opción falsa {h['s']}{k}z"],
+                              "a": 0, "cita": frases[k].strip().rstrip("."), "apartado": "", "confianza": "alta",
+                              "exp": f"Según el artículo {n}, lo dispone literalmente el texto citado; las demás opciones no figuran en él."})
+        cands.append(dict(cands[0], q="Pregunta con cita inventada que no existe", cita="esta frase no está en el artículo"))
+        json.dump(cands, open(os.path.join(d, "candidatas.json"), "w"), ensure_ascii=False)
+        r = run("validar"); self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        rev = json.load(open(os.path.join(d, "revision.json")))
+        json.dump([{"r": it["r"], "respaldada": True, "unica": True, "clara": True, "duplicada_de": "", "motivo": ""} for it in rev["items"]],
+                  open(os.path.join(d, "veredictos.json"), "w"))
+        r = run("cerrar"); self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertFalse(os.path.exists(os.path.join(self.t, "fabrica", "sesion", "abierto.json")))
+        estado = json.load(open(os.path.join(self.t, "fabrica", "estado", "estado.json")))["lotes"][-1]
+        self.assertEqual((estado["modo"], estado["coste_usd"]), ("sesion", 0.0))
+        self.assertGreaterEqual(estado["REJECTED"], 1)  # la de cita inventada nunca entra
+        nuevas = [q for f in glob.glob(os.path.join(self.t, "datos", "preguntas-*.json")) for q in json.load(open(f)) if q.get("generador") == "fabrica-v1-sesion"]
+        self.assertEqual(len(nuevas), estado["VALID"])
+        self.assertTrue(all(q["procedencia"] == "TESTLEY_GENERATED" and q["verificada_contra"] for q in nuevas))
+
     def test_pausa_por_rechazo_y_reanudacion(self):
         r = self.run_motor("--simulado", "--simulado-fallos", "0.5", "--lote", "10", "--lotes", "3")
         self.assertEqual(r.returncode, 3, r.stdout + r.stderr)

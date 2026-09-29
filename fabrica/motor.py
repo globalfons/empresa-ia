@@ -126,7 +126,47 @@ def pedir_tipos(ley, n, k, cuenta_tipos, cuenta_dif, cfg, dist):
     return out
 
 
-# ---------- Una llamada: generar, validar, juzgar ----------
+# ---------- Validación común (API y sesión): controles deterministas + duplicados, y veredictos del juez ----------
+def validar_candidatas(slot, cands, fuentes, banco, cfg):
+    """Devuelve (res, parecidas, idx): res = [[q, problemas, dup]]; idx = las que pasan al juez semántico."""
+    ley, n, t = fuentes.ley(slot["slug"]), slot["n"], slot["tema"]
+    existentes = banco.existentes(slot["slug"], n)
+    tema_arts = set(t["arts"].get(slot["slug"], []))
+    res, aceptadas, parecidas = [], [], {}
+    for pos, q in enumerate(cands):
+        if pos >= slot["k"]:  # nunca se descartan en silencio: quedan registradas como rechazadas
+            res.append([q, [("REJECTED", "más preguntas de las pedidas para este artículo")], None]); continue
+        probs = V.comprobar(q, ley, n, tema_arts, cfg)
+        dup, did, sosp = V.duplicado(q, existentes + aceptadas, cfg) if isinstance(q.get("o"), list) and isinstance(q.get("a"), int) else (None, None, [])
+        if dup in ("exacto", "lexico"):
+            probs.append(("REJECTED", f"duplicado {dup} de {did}"))
+        if not any(e == "REJECTED" for e, _ in probs):
+            parecidas[len(res)] = sosp
+            aceptadas.append(q)
+        res.append([q, probs, dup])
+    idx = [i for i, (_, p, _) in enumerate(res) if not any(e == "REJECTED" for e, _ in p)]
+    return res, parecidas, idx
+
+
+def aplicar_veredictos(res, idx, ver):
+    """ver: lista de {i, respaldada, unica, clara, duplicada_de, motivo} (i = posición dentro de idx) o None."""
+    por_i = {v.get("i"): v for v in (ver or []) if isinstance(v, dict)}
+    for k, i in enumerate(idx):
+        v = por_i.get(k)
+        if v is None:
+            res[i][1].append(("REVIEW_REQUIRED", "el juez no devolvió veredicto"))
+        elif v.get("duplicada_de"):
+            res[i][1].append(("REJECTED", f"duplicado semántico de {v['duplicada_de']}")); res[i][2] = "semantico"
+        elif not (v.get("respaldada") and v.get("unica") and v.get("clara")):
+            res[i][1].append(("REVIEW_REQUIRED", "juez: " + str(v.get("motivo") or "respuesta no respaldada, no única o ambigua")[:200]))
+    salida = []
+    for q, probs, dup in res:
+        estado = "REJECTED" if any(e == "REJECTED" for e, _ in probs) else "REVIEW_REQUIRED" if probs else "VALID"
+        salida.append((estado, q, [m for _, m in probs], dup))
+    return salida
+
+
+# ---------- Una llamada a la API: generar, validar, juzgar ----------
 def procesar(slot, prov, fuentes, banco, cfg, pedidas):
     ley, n, t = fuentes.ley(slot["slug"]), slot["n"], slot["tema"]
     existentes = banco.existentes(slot["slug"], n)
@@ -139,44 +179,20 @@ def procesar(slot, prov, fuentes, banco, cfg, pedidas):
     usos.append(uso)
     if uso.get("incidencia"):
         incid.append(f"{slot['slug']} art. {n}: {uso['incidencia']}")
-    tema_arts = set(t["arts"].get(slot["slug"], []))
-    res, aceptadas, parecidas = [], [], {}
-    for q in cands[:slot["k"]]:
-        probs = V.comprobar(q, ley, n, tema_arts, cfg)
-        dup, did, sosp = V.duplicado(q, existentes + aceptadas, cfg) if isinstance(q.get("o"), list) and isinstance(q.get("a"), int) else (None, None, [])
-        if dup in ("exacto", "lexico"):
-            probs.append(("REJECTED", f"duplicado {dup} de {did}"))
-        if not any(e == "REJECTED" for e, _ in probs):
-            parecidas[len(res)] = sosp
-            aceptadas.append(q)
-        res.append([q, probs, dup])
-    # Juez semántico barato solo para las que pasaron los controles deterministas
-    idx = [i for i, (_, p, _) in enumerate(res) if not any(e == "REJECTED" for e, _ in p)]
-    if idx:
+    res, parecidas, idx = validar_candidatas(slot, cands, fuentes, banco, cfg)
+    ver = None
+    if idx:  # juez semántico barato solo para las que pasaron los controles deterministas
         try:
             ver, uso_j = prov.juzgar(G.prompt_juez(ley, n, [res[i][0] for i in idx], {k: parecidas.get(i, []) for k, i in enumerate(idx)}))
             usos.append(uso_j)
         except Exception as e:
-            ver = None; incid.append(f"juez {slot['slug']} art. {n}: {type(e).__name__}")
-        por_i = {v.get("i"): v for v in (ver or []) if isinstance(v, dict)}
-        for k, i in enumerate(idx):
-            v = por_i.get(k)
-            if v is None:
-                res[i][1].append(("REVIEW_REQUIRED", "el juez no devolvió veredicto"))
-            elif v.get("duplicada_de"):
-                res[i][1].append(("REJECTED", f"duplicado semántico de {v['duplicada_de']}")); res[i][2] = "semantico"
-            elif not (v.get("respaldada") and v.get("unica") and v.get("clara")):
-                res[i][1].append(("REVIEW_REQUIRED", "juez: " + str(v.get("motivo") or "respuesta no respaldada, no única o ambigua")[:200]))
-    salida = []
-    for q, probs, dup in res:
-        estado = "REJECTED" if any(e == "REJECTED" for e, _ in probs) else "REVIEW_REQUIRED" if probs else "VALID"
-        salida.append((estado, q, [m for _, m in probs], dup))
-    return salida, usos, incid
+            incid.append(f"juez {slot['slug']} art. {n}: {type(e).__name__}")
+    return aplicar_veredictos(res, idx, ver), usos, incid
 
 
-def ficha(q, estado, motivos, ley, n, slot, modelos, lote, cfg):
+def ficha(q, estado, motivos, ley, n, slot, modelos, lote, cfg, generador="fabrica-v1"):
     f = {"art": n, "q": q.get("q"), "o": q.get("o"), "a": q.get("a"), "cita": q.get("cita"), "dif": q.get("dif"), "exp": q.get("exp"),
-         "tipo": q.get("tipo"), "procedencia": "TESTLEY_GENERATED", "origen": ORIGEN, "generador": "fabrica-v1",
+         "tipo": q.get("tipo"), "procedencia": "TESTLEY_GENERATED", "origen": ORIGEN, "generador": generador,
          "modelo": modelos.get("generador"), "juez": modelos.get("juez"), "lote": lote,
          "tema_objetivo": f"{slot['tema']['oposicion']}#{slot['tema']['indice']}", "fuente_url": ley.url,
          "creada_el": hoy(), "verificada_contra": ley.version, "verificada_el": hoy()}
@@ -194,7 +210,7 @@ def comprobar_calidad(estado, cfg):
     lc, ult = cfg["lote"], estado["lotes"][-1]
     if ult["generadas"] and ult["REJECTED"] / ult["generadas"] > lc["max_rechazo"]:
         return f"tasa de rechazo {ult['REJECTED']}/{ult['generadas']} en {ult['id']} (> {lc['max_rechazo']:.0%})"
-    ven = [x for x in estado["lotes"][-lc["ventana_lotes"]:] if x.get("modo") == "real"]
+    ven = [x for x in estado["lotes"][-lc["ventana_lotes"]:] if x.get("modo") in ("real", "sesion")]
     gen = sum(x["generadas"] for x in ven)
     if len(ven) >= 3 and gen:
         if sum(x["REVIEW_REQUIRED"] for x in ven) / gen > lc["max_revision_ventana"]:
