@@ -19,6 +19,8 @@ for i, q in enumerate(qs):
             errs.append("cita cortada a media palabra")
     if len(q["o"]) != 4 or len(set(q["o"])) != 4: errs.append("opciones")
     if q["a"] not in range(4): errs.append("respuesta")
+    if "dif" in q and q["dif"] not in (1, 2, 3): errs.append("dif debe ser 1, 2 o 3")
+    if "exp" in q and len(q["exp"].strip()) < 20: errs.append("explicación demasiado corta")
     if errs:
         bad += 1; print(f"#{i} art {q['art']}: {', '.join(errs)} :: {q['cita'][:70]}")
 print(f"{len(qs)} preguntas, {bad} con errores")

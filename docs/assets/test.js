@@ -77,6 +77,7 @@
         : bloques.map(function (b, i) { return '<option value="b' + i + '">' + esc(b) + "</option>"; }).join("")) + "</select></label>" +
       '<label>Preguntas<select name="n" class="select"><option>10</option><option selected>20</option><option>30</option><option>50</option><option value="999">Todas</option></select></label>' +
       '<label>Tipo<select name="tipo" class="select"><option value="todas">Todas</option><option value="nuevas">Solo las que no he visto</option><option value="falladas">Solo mis fallos</option><option value="dificiles">Mis difíciles (falladas y aprendidas)</option><option value="favoritas">Mis favoritas ☆</option></select></label>' +
+      (data.qs.some(function (q) { return q.dif; }) ? '<label>Dificultad<select name="dif" class="select"><option value="">Todas</option><option value="1">Fácil</option><option value="2">Media</option><option value="3">Difícil</option></select></label>' : "") +
       '<label class="check"><input type="checkbox" name="examen"> Modo examen (sin corrección hasta el final, con cronómetro)</label>' +
       '<button class="btn primary">Empezar</button><span class="muted small" id="tm-msg"></span></form></details>' +
       '<p class="muted small">' + data.qs.length + ' preguntas verificadas contra el BOE. <a href="' + TL.root + 'panel/">Ver mi panel completo →</a></p>';
@@ -93,6 +94,7 @@
     f.onsubmit = function (e) {
       e.preventDefault();
       var lista = filtrarPool(f.tema.value, f.tipo.value);
+      if (f.dif && f.dif.value) lista = lista.filter(function (q) { return String(q.dif) === f.dif.value; });
       if (!lista.length) { el.querySelector("#tm-msg").textContent = "No hay preguntas con ese filtro."; return; }
       start(shuffle(lista).slice(0, +f.n.value), f.examen.checked ? "examen" : "medida");
     };
@@ -189,6 +191,7 @@
     el.querySelector(".fb").innerHTML =
       '<p class="verdict ' + (right ? "good" : "bad") + '">' + (right ? "✔ Correcto" : "✘ Incorrecto") + "</p>" +
       '<blockquote><span class="src">Artículo ' + (q.artn || q.art) + " · " + nombreLey(q) + " (BOE)</span>«" + esc(q.cita) + "»</blockquote>" +
+      (q.exp ? '<p class="exp"><span class="badge-testley">Explicación de TestLey</span> ' + esc(q.exp) + "</p>" : "") +
       '<a href="' + TL.root + (q.ley || LEY) + "/articulo-" + (q.artn || q.art) + '/">Leer el artículo ' + (q.artn || q.art) + " completo</a>" +
       (window.TLTutor ? ' · <button class="linklike" data-tutor>Explícamelo (IA)</button>' : "");
     var tb = el.querySelector("[data-tutor]");

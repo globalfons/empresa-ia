@@ -173,8 +173,10 @@
     "bloque": "A) Ciencias Jurídicas",
     "tema": 7,
     "titulo": "El Ministerio del Interior: estructura orgánica básica. La Secretaría de Estado de Seguridad: estructura y funciones.",
-    "tipo": "legislativo_generico",
-    "normas": []
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2024-3793"
+    ]
    },
    {
     "bloque": "A) Ciencias Jurídicas",
@@ -183,7 +185,8 @@
     "tipo": "legislativo",
     "normas": [
      "BOE-A-2015-8468",
-     "BOE-A-2010-8115"
+     "BOE-A-2010-8115",
+     "BOE-A-2024-3793"
     ]
    },
    {
@@ -518,5 +521,11 @@
   ]
  },
  "estado_nota": "Proceso selectivo en curso según las publicaciones oficiales vigiladas.",
- "pendientes": []
+ "pendientes": [
+  {
+   "campo": "temas_sin_fuente_consolidada",
+   "motivo": "Temas 4, 27 (Unión Europea, derechos humanos o atención al ciudadano): sus textos oficiales no están consolidados en el BOE (Tratados en el DOUE/EUR-Lex, convenios internacionales, RD 208/1996). Aún no tienen test; se añadirán cuando el motor incorpore esas fuentes oficiales.",
+   "fuente_prevista": "https://eur-lex.europa.eu/"
+  }
+ ]
 }

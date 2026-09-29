@@ -39,6 +39,11 @@ def guardar_documento(docs, fuente, url, contenido, ctype, meta):
                             "sha_anterior": (prev or {}).get("sha256"), "sha_nuevo": h, "titulo": d["titulo"][:200]}, ensure_ascii=False) + "\n")
     return d, cambio
 
+def lista(x):
+    """El sumario del BOE puede traer cada nivel como lista, objeto o texto: se normaliza a lista de objetos."""
+    if x is None: return []
+    return [y for y in (x if isinstance(x, list) else [x]) if isinstance(y, dict)]
+
 # ---------------- Crawlers ----------------
 def crawl_boe_api(fuente, est, docs, args):
     """BOE: sumario diario por API de datos abiertos; descarga cada disposición que encaja con los filtros."""
@@ -55,15 +60,14 @@ def crawl_boe_api(fuente, est, docs, args):
             if "404" in str(e): d += datetime.timedelta(1); continue  # día sin BOE
             raise
         s = json.loads(b)["data"]["sumario"]
-        for diario in s["diario"]:
-            for sec in diario["seccion"]:
-                if sec["codigo"] not in o["secciones"]: continue
-                deps = sec.get("departamento", []); deps = deps if isinstance(deps, list) else [deps]
-                for dep in deps:
-                    eps = dep.get("epigrafe", []); eps = eps if isinstance(eps, list) else [eps]
-                    items = [(e.get("nombre", ""), it) for e in eps for it in (e["item"] if isinstance(e["item"], list) else [e["item"]])]
-                    if "item" in dep: items += [("", it) for it in (dep["item"] if isinstance(dep["item"], list) else [dep["item"]])]
+        for diario in lista(s.get("diario")):
+            for sec in lista(diario.get("seccion")):
+                if sec.get("codigo") not in o["secciones"]: continue
+                for dep in lista(sec.get("departamento")):
+                    items = [(e.get("nombre", ""), it) for e in lista(dep.get("epigrafe")) for it in lista(e.get("item"))]
+                    items += [("", it) for it in lista(dep.get("item"))]
                     for epi, it in items:
+                        if not it.get("identificador") or not it.get("titulo"): continue
                         t = it["titulo"]
                         if not inc.search(t) or exc.search(t): continue
                         url = f"https://www.boe.es/diario_boe/txt.php?id={it['identificador']}"

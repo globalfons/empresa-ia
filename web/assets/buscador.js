@@ -14,7 +14,7 @@
       c.hidden = !ok; if (ok) n++;
     });
     chips.forEach(function (c) { c.classList.toggle("on", c.getAttribute("data-cat") === cat); });
-    cuenta.textContent = n + (n === 1 ? " oposición" : " oposiciones");
+    cuenta.textContent = n + " " + (n === 1 ? cuenta.getAttribute("data-uno") || "oposición" : cuenta.getAttribute("data-varios") || "oposiciones");
     vacio.hidden = n > 0;
     var u = new URLSearchParams(); if (q.value) u.set("q", q.value); if (cat) u.set("cat", cat);
     history.replaceState(null, "", location.pathname + (u.toString() ? "?" + u : ""));

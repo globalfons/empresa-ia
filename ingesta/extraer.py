@@ -41,7 +41,7 @@ def reglas(doc, texto):
         m = re.search(r"(?i)\b(\d[\d.]*|" + "|".join(NUM) + r")\s+plazas?\b(?:\s+de\s+([^,.;:(]{3,90}))?", f)
         v = m.group(1).lower(); n = NUM.get(v) or int(v.replace(".", "")) if (v in NUM or v.replace(".", "").isdigit()) else None
         if n and n < 100000: pon("plazas", n, f)
-        if m.group(2): pon("denominacion", m.group(2).strip(), f, 0.5)
+        if m.group(2) and not re.match(r"(?i)(igual|la misma|similar|nueva|dicha|esta|estas|las mismas)\b", m.group(2).strip()): pon("denominacion", re.sub(r"(?i)^(la|el|las|los)\s+", "", m.group(2).strip()), f, 0.5)
     f = primera(fr, r"(?i)(plazo de presentaci[oó]n|presentaci[oó]n de (las )?solicitudes|d[ií]as h[aá]biles contados)")
     if f:
         m = re.search(r"(?i)\b((?:\w+|\d+)(?:\s*\(\d+\))? d[ií]as (?:h[aá]biles|naturales))", f)
@@ -55,11 +55,11 @@ def reglas(doc, texto):
     f = primera(fr, r"(?i)Bolet[ií]n Oficial de (la Provincia|la Comunidad|la Regi[oó]n|Castilla|Arag[oó]n|Canarias|Navarra|Cantabria|La Rioja|las Illes|Madrid|Andaluc|la Junta)|Diari Oficial|Diario Oficial|BOP\b|B\.O\.P")
     pon("boletin_bases", "Bases publicadas en el boletín oficial citado", f, 0.7)
     # Organismo y territorio: del título oficial y del departamento del BOE
-    org = re.search(r"(?i)(?:del?|de la) (Ayuntamiento de [^,]+|Diputaci[oó]n (Provincial )?de [^,]+|Cabildo (Insular )?de [^,]+|Consell Insular de [^,]+|Universidad [^,]+|Comarca [^,]+|Mancomunidad [^,]+|Consorcio [^,]+)", tit)
-    organismo = org.group(1).strip() if org else (meta.get("departamento") or "").title()
+    org = re.search(r"(?i)(?:del?|de la|de l') ?(Ayuntamiento de [^,]+|Diputaci[oó]n (Provincial |Foral )?de [^,]+|Cabildo (Insular )?de [^,]+|Consell (Insular|Comarcal) de[l]? [^,]+|Universi(?:dad|tat|dade)[^,]+|Comarca [^,]+|Mancomunidad [^,]+|Consorcio [^,]+|Organismo Aut[oó]nomo [^,]+|Patronato [^,]+|Instituto Municipal [^,]+)", tit)
+    organismo = org.group(1).strip() if org else re.sub(r"\b(De|Del|La|Las|Los|Y|E|Para|Con|En|El)\b", lambda m: m.group(1).lower(), (meta.get("departamento") or "").title())
     if organismo: datos["organismo"] = {"valor": organismo, "cita": tit if org else meta.get("departamento", ""), "confidence": 0.9, "metodo": "reglas", "cita_en": "titulo" if org else "sumario"}
     prov = re.search(r"(?i)Bolet[ií]n Oficial de la Provincia de ([A-ZÁÉÍÓÚÑ][\wáéíóúñ/ -]+?)[»,\"”]", texto)
-    terr = (org.group(1).split(" de ", 1)[-1] if org and re.match(r"(?i)ayuntamiento|diputaci|cabildo|consell", org.group(1)) else "")
+    terr = (re.split(r" del? ", org.group(1), 1)[-1] if org and re.match(r"(?i)ayuntamiento|diputaci|cabildo|consell|comarca|mancomunidad", org.group(1)) else "")
     if terr: datos["territorio"] = {"valor": terr + (f" ({prov.group(1).strip()})" if prov and "(" not in terr and prov.group(1).strip() != terr else ""), "cita": tit, "confidence": 0.8, "metodo": "reglas", "cita_en": "titulo"}
     return datos
 
@@ -114,7 +114,7 @@ def procesar(doc, rehacer=False):
     for d in datos.values():
         d.update(proc); d["verification_status"] = "cita_verificada_automaticamente"
     ficha = {"id": cid, "titulo": tit, "categoria": categoria(" ".join([tit, (datos.get("denominacion") or {}).get("valor", ""), meta.get("departamento", "")])),
-             "organismo": (datos.get("organismo") or {}).get("valor", ""), "territorio": (datos.get("territorio") or {}).get("valor", "España" if not re.search(r"(?i)ayuntamiento|diputaci|cabildo|consell|comarca|mancomunidad|universidad", tit) else ""),
+             "organismo": (datos.get("organismo") or {}).get("valor", ""), "territorio": (datos.get("territorio") or {}).get("valor", "España" if not re.search(r"(?i)ayuntamiento|diputaci|cabildo|consell|comarca|mancomunidad|universi|comunidad|junta|generalitat|gobierno de|xunta|servicio .{0,20}salud|osakidetza", tit) else ""),
              "estado": estado_conv(doc.get("published_at")), "estado_nota": "Calculado: activa si se publicó hace menos de 18 meses; se actualizará con las publicaciones posteriores.",
              "fuente": {"tipo": "BOE" if doc["domain"].endswith("boe.es") else "Web oficial", **proc, "fuente_registro": doc["fuente"], "boe_id": meta.get("boe_id"), "departamento": meta.get("departamento"), "epigrafe": meta.get("epigrafe")},
              "datos": datos, "descartados_por_no_literales": descartados, "extraido": t, "revision": "automatica"}

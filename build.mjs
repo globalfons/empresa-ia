@@ -11,7 +11,7 @@ const OUT_TMP = fs.mkdtempSync(path.join((process.env.TMPDIR || "/tmp"), "tl-"))
 // ---------- Leyes ----------
 // Una ley se publica (test + páginas) cuando existe datos/preguntas-<slug>.json con preguntas.
 const META = JSON.parse(fs.readFileSync("datos/leyes-meta.json", "utf8"));
-const CORTO = { constitucion: "Constitución Española", trebep: "TREBEP", "rdl-1-2013": "Ley General de Discapacidad (RDL 1/2013)", "rdl-8-2015": "Ley General de la Seguridad Social (RDL 8/2015)", "lef-1954": "Ley de Expropiación Forzosa", "lo-4-2000": "Ley Orgánica 4/2000 de Extranjería", "lo-2-1986": "Ley de Fuerzas y Cuerpos de Seguridad (LO 2/1986)", "lo-4-2015": "Ley de Seguridad Ciudadana (LO 4/2015)", "lo-6-1984": "Ley de Habeas Corpus (LO 6/1984)", lecrim: "Ley de Enjuiciamiento Criminal", "codigo-penal": "Código Penal", "codigo-civil": "Código Civil", "ley-4-2015": "Estatuto de la víctima (Ley 4/2015)", "ley-5-2014": "Ley de Seguridad Privada (Ley 5/2014)", "ley-8-2011": "Ley de Infraestructuras Críticas (Ley 8/2011)", "lo-7-2021": "Ley Orgánica 7/2021 de datos penales", "ley-31-1995": "Ley de Prevención de Riesgos Laborales", "rd-240-2007": "RD 240/2007 (ciudadanos UE)", "reglamento-armas": "Reglamento de Armas", rgc: "Reglamento General de Circulación", "lo-9-2015": "LO 9/2015 de Personal de la Policía Nacional", "lo-4-2010": "LO 4/2010 Régimen disciplinario de la Policía Nacional", "ley-trafico": "Ley de Tráfico y Seguridad Vial" };
+const CORTO = { constitucion: "Constitución Española", trebep: "TREBEP", "rdl-1-2013": "Ley General de Discapacidad (RDL 1/2013)", "rdl-8-2015": "Ley General de la Seguridad Social (RDL 8/2015)", "lef-1954": "Ley de Expropiación Forzosa", "lo-4-2000": "Ley Orgánica 4/2000 de Extranjería", "lo-2-1986": "Ley de Fuerzas y Cuerpos de Seguridad (LO 2/1986)", "lo-4-2015": "Ley de Seguridad Ciudadana (LO 4/2015)", "lo-6-1984": "Ley de Habeas Corpus (LO 6/1984)", lecrim: "Ley de Enjuiciamiento Criminal", "codigo-penal": "Código Penal", "codigo-civil": "Código Civil", "ley-4-2015": "Estatuto de la víctima (Ley 4/2015)", "ley-5-2014": "Ley de Seguridad Privada (Ley 5/2014)", "ley-8-2011": "Ley de Infraestructuras Críticas (Ley 8/2011)", "lo-7-2021": "Ley Orgánica 7/2021 de datos penales", "ley-31-1995": "Ley de Prevención de Riesgos Laborales", "rd-240-2007": "RD 240/2007 (ciudadanos UE)", "reglamento-armas": "Reglamento de Armas", rgc: "Reglamento General de Circulación", "lo-9-2015": "LO 9/2015 de Personal de la Policía Nacional", "lo-4-2010": "LO 4/2010 Régimen disciplinario de la Policía Nacional", "ley-trafico": "Ley de Tráfico y Seguridad Vial", "rd-207-2024": "RD 207/2024 (estructura del Ministerio del Interior)" };
 const PREFIJO = { "ley-39-2015": "l39" }; // ids estables del progreso de los usuarios
 const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n) => {
   const fq = `datos/preguntas-${n.slug}.json`;
@@ -59,7 +59,7 @@ ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="${root}"><span class="logo" aria-hidden="true">✓</span>${C.name}</a>
-<nav class="mainnav"><a href="${root}oposiciones/">Oposiciones</a><a href="${root}panel/">Mi panel</a><a href="${root}ranking/">Ranking</a><a href="${root}pase/">Pase</a><span id="cuenta-nav"></span></nav>
+<nav class="mainnav"><a href="${root}oposiciones/">Oposiciones</a><a href="${root}convocatorias/">Convocatorias</a><a href="${root}panel/">Mi panel</a><a href="${root}ranking/">Ranking</a><a href="${root}pase/">Pase</a><span id="cuenta-nav"></span></nav>
 </div></header>
 <main class="wrap${wide ? " wide" : ""}">
 ${body(root)}
@@ -109,7 +109,7 @@ const pctOp = (o) => Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertu
 const tarjetaOp = (o, r) => `<a class="card op-card" href="${r}oposiciones/${o.id}/" data-cat="${o.categoria}" data-q="${esc(sinAcentos([o.nombre, o.organismo, o.categoria_nombre, o.grupo, o.territorio].join(" ")))}"><span class="tag">${CAT[o.categoria].icono} ${esc(o.categoria_nombre)}${o.grupo ? ` · ${esc(o.grupo)}` : ""} · ${esc(opEstado(o.convocatoria))}</span><strong>${esc(o.nombre)}</strong><span>${o.convocatoria.plazas ? fmtN(o.convocatoria.plazas) + " plazas · " : ""}${o.temario.length ? `${o.temario.length} temas · test en ${o.temasCubiertos} de ${o.cobertura.temas_legislativos} temas de legislación` : `${o.qs.length} preguntas de preparación · temario pendiente de verificación oficial`}</span>${o.temario.length ? `<span class="covbar"><i style="width:${Math.max(2, o.pctCob)}%"></i></span>` : ""}</a>`;
 
 const catCount = (id) => OPOS.filter((o) => o.categoria === id).length;
-const chipsCat = (r, activa) => `<div class="cat-chips">${CATEGORIAS.map((c) => `<a class="cat-chip${activa === c.id ? " on" : ""}${catCount(c.id) ? "" : " empty"}" href="${r}oposiciones/categoria/${c.id}/" data-cat="${c.id}">${c.icono} ${esc(c.nombre)} <b>${catCount(c.id)}</b></a>`).join("")}</div>`;
+const chipsCat = (r, activa) => `<div class="cat-chips">${CATEGORIAS.map((c) => `<a class="cat-chip${activa === c.id ? " on" : ""}${catCount(c.id) || catCountConv(c.id) ? "" : " empty"}" href="${r}oposiciones/categoria/${c.id}/" data-cat="${c.id}">${c.icono} ${esc(c.nombre)} <b>${catCount(c.id)}</b></a>`).join("")}</div>`;
 const buscador = (r) => `<form class="buscador" action="${r}oposiciones/" role="search"><label class="sr" for="q">Buscar oposición</label><input id="q" name="q" type="search" placeholder="Busca por nombre, cuerpo u organismo: policía, auxiliar, gestión…" autocomplete="off"><button class="cta" type="submit">Buscar</button></form>`;
 // Índice del catálogo para el navegador (panel, seguimiento, alertas)
 fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
@@ -179,6 +179,7 @@ page("", {
 
 <section class="trust">
   <div><b>${NQ}</b><span>preguntas verificadas</span></div>
+  <div><b>${fmtN(CONVS.length)}</b><span>convocatorias oficiales</span></div>
   <div><b>${NART}</b><span>artículos con su texto oficial</span></div>
   <div><b>100 %</b><span>de citas comprobadas contra el BOE</span></div>
   <div><b>0 €</b><span>para empezar, sin registro</span></div>
@@ -187,13 +188,13 @@ page("", {
 <section>
   <h2>Oposiciones por categoría</h2>
   <p class="muted">Solo publicamos oposiciones cuya convocatoria hemos verificado en la fuente oficial. Las categorías sin oposiciones todavía están en preparación.</p>
-  <div class="cat-grid">${CATEGORIAS.map((c) => `<a class="cat-card${catCount(c.id) ? "" : " soon"}" href="${r}oposiciones/categoria/${c.id}/"><span class="cat-ico">${c.icono}</span><strong>${esc(c.nombre)}</strong><span>${catCount(c.id) ? `${catCount(c.id)} oposición${catCount(c.id) > 1 ? "es" : ""}` : "Próximamente"}</span></a>`).join("")}</div>
+  <div class="cat-grid">${CATEGORIAS.map((c) => `<a class="cat-card${catCount(c.id) || catCountConv(c.id) ? "" : " soon"}" href="${r}oposiciones/categoria/${c.id}/"><span class="cat-ico">${c.icono}</span><strong>${esc(c.nombre)}</strong><span>${[catCount(c.id) ? `${catCount(c.id)} con tests` : "", catCountConv(c.id) ? `${catCountConv(c.id)} convocatorias` : ""].filter(Boolean).join(" · ") || "Próximamente"}</span></a>`).join("")}</div>
 </section>
 
 <section>
   <h2>Convocatorias con más plazas</h2>
   <div class="cards">${OPOS.slice(0, 6).map((o) => tarjetaOp(o, r)).join("")}</div>
-  <p><a class="cta alt" href="oposiciones/">Buscar todas las oposiciones</a></p>
+  <p><a class="cta alt" href="oposiciones/">Buscar todas las oposiciones</a> <a class="cta alt" href="convocatorias/">Ver ${fmtN(CONVS.length)} convocatorias oficiales</a></p>
 </section>
 
 <section class="features">
@@ -327,17 +328,19 @@ ${chipsCat(r, "")}
 });
 for (const c of CATEGORIAS) {
   const lista = OPOS.filter((o) => o.categoria === c.id);
+  const convs = CONVS.filter((v) => v.categoria === c.id);
   page(`oposiciones/categoria/${c.id}/`, {
     title: `Oposiciones de ${c.nombre}: convocatorias, temario y tests`,
     description: `${c.descripcion} ${lista.length ? `${lista.length} oposición${lista.length > 1 ? "es" : ""} con convocatoria oficial verificada, temario y tests.` : "Próximamente en TestLey."}`,
-    noindex: !lista.length, wide: true,
+    noindex: !lista.length && !convs.length, wide: true,
     body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <span>${esc(c.nombre)}</span></nav>
 <h1>${c.icono} Oposiciones de ${esc(c.nombre)}</h1>
 <p class="lead">${esc(c.descripcion)}</p>
 ${chipsCat(r, c.id)}
 ${lista.length
   ? `<div class="cards">${lista.map((o) => tarjetaOp(o, r)).join("")}</div>`
-  : `<div class="box"><strong>Todavía no hay oposiciones de ${esc(c.nombre)} verificadas.</strong> Solo publicamos una oposición cuando hemos leído su convocatoria oficial. Si preparas una de esta categoría, escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> y la priorizamos.</div>`}`,
+  : `<div class="box"><strong>Todavía no hay oposiciones de ${esc(c.nombre)} con temario y tests.</strong> Si preparas una de esta categoría, escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> y la priorizamos.</div>`}
+${convs.length ? `<h2>Convocatorias oficiales recientes (${convs.length})</h2><div class="cards">${convs.slice(0, 30).map((v) => tarjetaConv(v, r)).join("")}</div>${convs.length > 30 ? `<p><a class="cta alt" href="${r}convocatorias/?cat=${c.id}">Ver las ${convs.length} convocatorias</a></p>` : ""}` : ""}`,
   });
 }
 const ETIQ = { plazas: "Plazas", plazas_libres: "Plazas de acceso libre", sistema_selectivo: "Sistema selectivo", temario_referencia: "Norma que fija el temario", plazas_reservadas: "Plazas reservadas", titulacion: "Titulación", requisitos: "Requisitos", plazo_solicitudes: "Plazo de solicitudes", pruebas: "Pruebas y examen" };
@@ -412,7 +415,7 @@ page("convocatorias/", {
 <p class="lead">Convocatorias detectadas automáticamente en fuentes oficiales. Cada dato muestra la frase literal de la que sale y su procedencia. <span class="badge-oficial">Fuente oficial</span> <span class="badge-ia">Extracción automática</span></p>
 <form class="buscador" action="${r}convocatorias/" role="search"><label class="sr" for="q">Buscar convocatoria</label><input id="q" name="q" type="search" placeholder="Policía local, auxiliar administrativo, Valencia, bombero…" autocomplete="off"><button class="cta" type="submit">Buscar</button></form>
 <div class="cat-chips">${CATEGORIAS.filter((c) => catCountConv(c.id)).map((c) => `<a class="cat-chip" href="#" data-cat="${c.id}">${c.icono} ${esc(c.nombre)} <b>${catCountConv(c.id)}</b></a>`).join("")}</div>
-<p id="res-count" class="muted" aria-live="polite">${CONVS.length} convocatorias</p>
+<p id="res-count" class="muted" aria-live="polite" data-uno="convocatoria" data-varios="convocatorias">${CONVS.length} convocatorias</p>
 <div class="cards" id="res">${CONVS.map((v) => tarjetaConv(v, r)).join("")}</div>
 <p id="res-vacio" class="box" hidden>No hay convocatorias con esa búsqueda.</p>
 <p class="muted small">Estado calculado automáticamente; comprueba siempre las bases oficiales enlazadas antes de presentar tu solicitud.</p>`,
