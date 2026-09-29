@@ -133,6 +133,9 @@ def validar_candidatas(slot, cands, fuentes, banco, cfg):
     existentes = banco.existentes(slot["slug"], n)
     tema_arts = set(t["arts"].get(slot["slug"], []))
     res, aceptadas, parecidas = [], [], {}
+    for pos, q in enumerate(cands):  # id provisional: el juez puede señalar duplicados dentro del propio lote
+        if isinstance(q, dict):
+            q.setdefault("id", f"nueva:{slot['slug']}:{n}:{pos}")
     for pos, q in enumerate(cands):
         if pos >= slot["k"]:  # nunca se descartan en silencio: quedan registradas como rechazadas
             res.append([q, [("REJECTED", "más preguntas de las pedidas para este artículo")], None]); continue

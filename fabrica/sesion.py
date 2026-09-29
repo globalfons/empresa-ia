@@ -30,6 +30,15 @@ def carpeta():
     return os.path.join(DIR, ab["lote"]), ab
 
 
+def siguiente_lote(estado):
+    """Número del siguiente lote de sesión: nunca repite uno ya usado en el estado, en la cola ni en el banco."""
+    import glob, re
+    usados = [int(x["id"][1:]) for x in estado.get("lotes", []) if re.fullmatch(r"S\d+", x.get("id", ""))]
+    for f in glob.glob(os.path.join(R, "datos", "preguntas-*.json")) + glob.glob(os.path.join(R, "datos", "candidatas", "*.json")):
+        usados += [int(q["lote"][1:]) for q in B.leer(f, []) if re.fullmatch(r"S\d+", str(q.get("lote", "")))]
+    return max(usados, default=0) + 1
+
+
 def plan(a, cfg):
     if os.path.exists(ABIERTO) and not a.forzar:
         raise SystemExit(f"Ya hay un lote abierto ({B.leer(ABIERTO, {})['lote']}): ciérralo antes (o --forzar para descartarlo).")
@@ -47,7 +56,7 @@ def plan(a, cfg):
         raise SystemExit("No quedan artículos con capacidad en los temas con déficit de esas oposiciones.")
     dist = cfg["dificultad_por_oposicion"].get(oposiciones[0], cfg["dificultad_por_defecto"])
     ct, cd = collections.Counter(), collections.Counter()
-    lote = f"S{len(estado['lotes']) + 1:05d}"
+    lote = f"S{siguiente_lote(estado):05d}"
     huecos = []
     for k, s in enumerate(slots):
         ley = fuentes.ley(s["slug"])

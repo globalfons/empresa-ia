@@ -86,7 +86,7 @@ class TestCircuito(unittest.TestCase):
     def setUp(self):
         self.t = tempfile.mkdtemp()
         for d in ("datos", "scripts", "fabrica"):
-            shutil.copytree(os.path.join(R, d), os.path.join(self.t, d), ignore=shutil.ignore_patterns("estado", "__pycache__", "versiones"))
+            shutil.copytree(os.path.join(R, d), os.path.join(self.t, d), ignore=shutil.ignore_patterns("estado", "sesion", "__pycache__", "versiones"))
         os.makedirs(os.path.join(self.t, "catalogo"))
         for f in ("oposiciones.json", "normas_base.json", "temas_ambito.json"):
             shutil.copy(os.path.join(R, "catalogo", f), os.path.join(self.t, "catalogo", f))
@@ -185,7 +185,7 @@ class TestCircuito(unittest.TestCase):
         estado = json.load(open(os.path.join(self.t, "fabrica", "estado", "estado.json")))["lotes"][-1]
         self.assertEqual((estado["modo"], estado["coste_usd"]), ("sesion", 0.0))
         self.assertGreaterEqual(estado["REJECTED"], 1)  # la de cita inventada nunca entra
-        nuevas = [q for f in glob.glob(os.path.join(self.t, "datos", "preguntas-*.json")) for q in json.load(open(f)) if q.get("generador") == "fabrica-v1-sesion"]
+        nuevas = [q for f in glob.glob(os.path.join(self.t, "datos", "preguntas-*.json")) for q in json.load(open(f)) if q.get("lote") == estado["id"]]
         self.assertEqual(len(nuevas), estado["VALID"])
         self.assertTrue(all(q["procedencia"] == "TESTLEY_GENERATED" and q["verificada_contra"] for q in nuevas))
 
