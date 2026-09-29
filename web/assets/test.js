@@ -5,6 +5,10 @@
   var LEY = el.getAttribute("data-ley");
   var base = el.getAttribute("data-base") || "./";
   var data, queue, idx, ok, ko, blank, modo, timer, fin;
+  // Configuración del simulacro: la de la oposición (catalogo/oposiciones/<id>.json) o una genérica para las leyes.
+  var SIM = { preguntas: 30, minutos: 30, opciones: 4, penalizacion: 1 / 3 };
+  try { var cfg = JSON.parse(el.getAttribute("data-sim") || "null"); if (cfg) SIM = cfg; } catch (e) {}
+  function fraccion(p) { return Math.abs(p - 1 / 3) < 1e-6 ? "1/3" : Math.abs(p - 0.5) < 1e-6 ? "1/2" : Math.abs(p - 0.25) < 1e-6 ? "1/4" : fmt(p); }
 
   function nombreLey(q) { var l = data.leyes || {}; return l[q.ley || LEY] || l[Object.keys(l)[0]] || ""; }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
@@ -61,7 +65,7 @@
       '<div class="quiz-mini">Dominio <b>' + s.dominioPct + " %</b><br><b>" + s.cuenta.fallada + "</b> por repasar · <b>" + s.racha + "</b> días de racha</div></div>" +
       '<div class="mode-grid">' +
       '<button class="mode primary" data-m="repaso"><strong>Repaso inteligente</strong><span>20 preguntas: primero tus fallos y lo que no has visto</span></button>' +
-      '<button class="mode" data-m="simulacro"><strong>Simulacro</strong><span>30 preguntas, 30 minutos, corrección como en el examen</span></button>' +
+      '<button class="mode" data-m="simulacro"><strong>Simulacro</strong><span>' + Math.min(SIM.preguntas, data.qs.length) + " preguntas, " + SIM.minutos + " minutos, " + SIM.opciones + " opciones · cada error resta " + fraccion(SIM.penalizacion) + '</span></button>' +
       '<button class="mode" data-m="10"><strong>Test rápido</strong><span>10 preguntas al azar</span></button>' +
       (s.cuenta.fallada ? '<button class="mode" data-m="fallos"><strong>Mis fallos</strong><span>' + s.cuenta.fallada + " preguntas pendientes</span></button>" : "") +
       "</div>" +
@@ -72,7 +76,7 @@
       b.onclick = function () {
         var m = b.getAttribute("data-m");
         if (m === "repaso") start(repaso(20), m);
-        else if (m === "simulacro") start(shuffle(data.qs).slice(0, 30), m);
+        else if (m === "simulacro") start(shuffle(data.qs).slice(0, SIM.preguntas), m);
         else if (m === "fallos") start(data.qs.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }), m);
         else start(shuffle(data.qs).slice(0, +m), m);
       };
@@ -88,7 +92,7 @@
     if (!queue.length) { menu(); return; }
     clearInterval(timer);
     if (modo === "simulacro") {
-      fin = Date.now() + 30 * 60 * 1000;
+      fin = Date.now() + SIM.minutos * 60 * 1000;
       timer = setInterval(function () {
         var t = el.querySelector(".timer");
         var r = Math.max(0, fin - Date.now());
@@ -101,11 +105,12 @@
 
   function show() {
     var q = queue[idx];
-    var order = shuffle([0, 1, 2, 3]);
+    // En simulacros con menos opciones que la pregunta (p. ej. 3 en Policía Nacional) se quitan distractores al azar.
+    var order = modo === "simulacro" && SIM.opciones < 4 ? shuffle([q.a].concat(shuffle([0, 1, 2, 3].filter(function (i) { return i !== q.a; })).slice(0, SIM.opciones - 1))) : shuffle([0, 1, 2, 3]);
     var pct = Math.round((idx / queue.length) * 100);
     el.innerHTML =
       '<div class="meta"><span>Pregunta ' + (idx + 1) + " de " + queue.length + "</span>" +
-      (modo === "simulacro" ? '<span class="timer">30:00</span>' : "<span>" + nombreLey(q) + " · Art. " + (q.artn || q.art) + "</span>") + "</div>" +
+      (modo === "simulacro" ? '<span class="timer">' + SIM.minutos + ':00</span>' : "<span>" + nombreLey(q) + " · Art. " + (q.artn || q.art) + "</span>") + "</div>" +
       '<div class="bar"><span style="width:' + pct + '%"></span></div>' +
       '<p class="q">' + esc(q.q) + "</p>" +
       order.map(function (i, k) { return '<button class="opt" data-i="' + i + '"><span class="letter">' + "abcd"[k] + "</span>" + esc(q.o[i]) + "</button>"; }).join("") +
@@ -147,13 +152,14 @@
     var n = parcial ? idx : queue.length;
     if (parcial) blank += 0;
     TL.registrarSesion(LEY, n, ok, ko, blank);
-    var nota = n ? Math.max(0, ((ok - ko / 3) / n) * 10) : 0;
+    var pen = SIM.penalizacion; // la de la oposición (o 1/3 por defecto)
+    var nota = n ? Math.max(0, ((ok - ko * pen) / n) * 10) : 0;
     var s = TL.stats(LEY, data);
     var fallos = bloqueado() ? muestra().filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }).length : s.cuenta.fallada;
     el.innerHTML =
       '<div class="result-card"><span class="kicker">' + (modo === "simulacro" ? "Resultado del simulacro" : "Resultado") + "</span>" +
       '<p class="score">' + fmt(nota) + "<small>/10</small></p>" +
-      "<p>" + ok + " aciertos · " + ko + " errores · " + blank + " en blanco <span class=\"muted\">(cada error resta 1/3)</span></p>" +
+      "<p>" + ok + " aciertos · " + ko + " errores · " + blank + " en blanco <span class=\"muted\">(cada error resta ' + fraccion(pen) + ')</span></p>" +
       '<p class="muted">Tu nota orientativa global en la ley es ahora <b>' + fmt(s.nota) + "</b> y tu dominio del banco es del <b>" + s.dominioPct + " %</b>.</p>" +
       '<div class="actions"><button class="btn primary" data-again>' + (fallos ? "Repasar mis " + fallos + " fallos" : "Otro test") + "</button>" +
       '<a class="btn ghost" href="' + TL.root + 'panel/">Ver mi panel</a></div>' +

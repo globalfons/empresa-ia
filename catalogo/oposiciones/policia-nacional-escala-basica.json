@@ -1,0 +1,499 @@
+{
+ "id": "policia-nacional-escala-basica",
+ "nombre": "Policía Nacional, Escala Básica (categoría de Policía)",
+ "categoria": "policia",
+ "organismo": "Dirección General de la Policía",
+ "administracion": "Ministerio del Interior",
+ "ambito": "seguridad",
+ "territorio": "España",
+ "grupo": "C1",
+ "estado": "convocada",
+ "actualizado": "2026-09-29",
+ "fuentes": {
+  "convocatoria": {
+   "tipo": "BOE",
+   "id": "BOE-A-2026-15055",
+   "titulo": "Resolución de 7 de julio de 2026, de la Dirección General de la Policía (BOE-A-2026-15055)",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15055",
+   "fecha_publicacion": "2026-07-10",
+   "texto": "catalogo/fuentes/BOE-A-2026-15055.txt"
+  }
+ },
+ "oficial": {
+  "plazas": {
+   "valor": 2704,
+   "fuente": "convocatoria",
+   "cita": "Se convocan 2.704 plazas de alumnos/as de la Escuela Nacional de Policía"
+  },
+  "plazas_reservadas": {
+   "valor": "541 para militares profesionales de tropa y marinería",
+   "fuente": "convocatoria",
+   "cita": "se reservan 541 para militares profesionales de tropa y marinería"
+  },
+  "titulacion": {
+   "valor": "Bachiller o equivalente",
+   "fuente": "convocatoria",
+   "cita": "h) Estar en posesión del título de Bachiller o equivalente."
+  },
+  "requisitos": [
+   {
+    "valor": "Nacionalidad española",
+    "fuente": "convocatoria",
+    "cita": "a) Tener la nacionalidad española."
+   },
+   {
+    "valor": "Tener 18 años cumplidos",
+    "fuente": "convocatoria",
+    "cita": "b) Tener cumplidos dieciocho años de edad y no exceder de la edad máxima de jubilación en la Policía Nacional."
+   },
+   {
+    "valor": "Permiso de conducción de clase B",
+    "fuente": "convocatoria",
+    "cita": "g) Estar en posesión del permiso de conducción de la clase B sin restricción alguna sobre el vehículo a conducir."
+   },
+   {
+    "valor": "Nivel A2 de inglés o francés",
+    "fuente": "convocatoria",
+    "cita": "deberán estar en posesión de, al menos, el nivel A2 en cualquiera de los idiomas prioritarios (inglés o francés)"
+   },
+   {
+    "valor": "Compromiso de portar armas",
+    "fuente": "convocatoria",
+    "cita": "f) Prestar compromiso, mediante declaración de la persona solicitante, de portar armas y, en su caso, llegar a utilizarlas."
+   },
+   {
+    "valor": "Sin antecedentes por delito doloso ni separación del servicio",
+    "fuente": "convocatoria",
+    "cita": "c) No haber sido condenado o condenada por delito doloso, grave o menos grave"
+   }
+  ],
+  "plazo_solicitudes": {
+   "valor": "15 días hábiles desde el día siguiente a la publicación en el BOE",
+   "fuente": "convocatoria",
+   "cita": "Quince días hábiles contados a partir del día siguiente al de la publicación de la presente resolución en el «Boletín Oficial del Estado»."
+  },
+  "pruebas": [
+   {
+    "valor": "Primera prueba (conocimientos): 100 preguntas con 3 alternativas en 50 minutos",
+    "fuente": "convocatoria",
+    "cita": "La prueba consistirá en la contestación por escrito en cincuenta minutos a un cuestionario de cien preguntas, con un enunciado y tres alternativas de respuestas de las que solo una es verdadera"
+   },
+   {
+    "valor": "Corrección: [A−E/(n−1)]×10/P; mínimo 3 puntos",
+    "fuente": "convocatoria",
+    "cita": "[A–E/(n–1)]*10/P"
+   },
+   {
+    "valor": "Segunda prueba: aptitud física",
+    "fuente": "convocatoria",
+    "cita": "6.1.2 Segunda prueba (aptitud física)."
+   },
+   {
+    "valor": "Tercera prueba: reconocimiento médico, entrevista y test psicotécnicos",
+    "fuente": "convocatoria",
+    "cita": "6.1.3 Tercera prueba. Constará de tres partes eliminatorias:"
+   }
+  ]
+ },
+ "examen": {
+  "oficial": {
+   "preguntas": 100,
+   "minutos": 50,
+   "opciones": 3,
+   "penalizacion": 0.5
+  },
+  "simulacro": {
+   "preguntas": 100,
+   "minutos": 50,
+   "opciones": 3,
+   "penalizacion": 0.5,
+   "origen": "oficial",
+   "nota": "Como la primera prueba oficial: 100 preguntas, 3 opciones, 50 minutos y cada error resta medio acierto (E/(n−1) con n=3)."
+  }
+ },
+ "temario": {
+  "fuente": "convocatoria",
+  "anexo": "I",
+  "temas": [
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 1,
+    "titulo": "El Derecho: concepto y acepciones. Las normas jurídicas positivas: concepto, estructura, clases y caracteres. El principio de jerarquía normativa. La persona en sentido jurídico: concepto y clases; su nacimiento y extinción; capacidad jurídica y capacidad de obrar. Adquisición, conservación y pérdida de la nacionalidad española. El domicilio. La vecindad civil.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1889-4763"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 2,
+    "titulo": "La Constitución Española (I): estructura y caracteres de la Constitución Española de 1978. Los valores de la Constitución. Los principios del régimen constitucional: Estado democrático, Estado de derecho, Estado social, Monarquía parlamentaria y Estado autonomista. Los derechos y deberes fundamentales establecidos en la Constitución: especial referencia a los derechos fundamentales y libertades públicas, así como, a las garantías de los mismos y a la suspensión de los derechos y libertades. El Defensor del Pueblo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1981-10325"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 3,
+    "titulo": "La Constitución Española (II): De la Corona. De las Cortes Generales. Del Gobierno y la Administración. De las relaciones entre el Gobierno y las Cortes Generales. Del Poder Judicial. De la organización territorial del Estado. Del Tribunal Constitucional. De la reforma constitucional.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 4,
+    "titulo": "La Unión Europea: referencia histórica. El Derecho derivado. Instituciones más importantes de la Unión Europea. La cooperación policial internacional. Especial referencia al Tribunal Europeo de Derechos Humanos y el Tribunal de Justicia de la Unión Europea.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 5,
+    "titulo": "La organización y funcionamiento de la Administración General del Estado: Principios de organización, funcionamiento y relaciones con los ciudadanos; órganos superiores y órganos directivos en la organización central. El Gobierno: composición, organización y funciones; el Gobierno en funciones.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10566",
+     "BOE-A-1997-25336"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 6,
+    "titulo": "Los funcionarios públicos: concepto y clases. Adquisición y pérdida de la condición de funcionario.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 7,
+    "titulo": "El Ministerio del Interior: estructura orgánica básica. La Secretaría de Estado de Seguridad: estructura y funciones.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 8,
+    "titulo": "La Dirección General de la Policía. Estructura orgánica y funciones de los servicios centrales y territoriales de la Policía Nacional. La Policía Nacional: funciones, escalas y categorías; sistemas de acceso; régimen disciplinario y situaciones administrativas.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-8468",
+     "BOE-A-2010-8115"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 9,
+    "titulo": "La Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad: disposiciones generales; principios básicos de actuación; disposiciones estatutarias comunes. De las Fuerzas y Cuerpos de Seguridad del Estado: los derechos de representación colectiva; el Consejo de Policía; organización de las unidades de Policía Judicial; de las Policías de las Comunidades Autónomas; de la colaboración y coordinación entre el Estado y las Comunidades Autónomas; de las Policías Locales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1986-6859"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 10,
+    "titulo": "Entrada, libre circulación y residencia en España de ciudadanos de los Estados miembros de la Unión Europea y de otros Estados parte en el Acuerdo sobre el Espacio Económico Europeo. Derechos y libertades de los extranjeros en España y su integración social. La entrada y salida del territorio español. La autorización de estancia y de residencia.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-4184",
+     "BOE-A-2000-544"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 11,
+    "titulo": "De las infracciones en materia de extranjería y su régimen sancionador. Tipos de infracciones: infracciones leves, infracciones graves e infracciones muy graves. Sanciones. Prescripción de las infracciones y de las sanciones. Efectos de la expulsión y devolución. Efectos de la denegación de entrada.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2000-544"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 12,
+    "titulo": "La protección internacional. Reglas procedimentales para el reconocimiento de la protección internacional. De los menores y otras personas vulnerables. Centros de acogida a refugiados. Apátridas y desplazados.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2009-17242"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 13,
+    "titulo": "Disposiciones generales en materia de seguridad privada en España. Coordinación. Empresas de seguridad privada y despachos de detectives privados. Personal de seguridad privada. Servicios y medidas de seguridad.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2014-3649"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 14,
+    "titulo": "La Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana. Disposiciones generales. Documentación e identificación personal. Actuaciones para el mantenimiento y restablecimiento de la seguridad ciudadana. Potestades especiales de policía administrativa de seguridad. Régimen sancionador.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-3442"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 15,
+    "titulo": "Medidas para la Protección de Infraestructuras Críticas. El Catálogo Nacional de Infraestructuras Críticas. El Sistema de Protección de Infraestructuras Críticas. Ciberseguridad.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2011-7630"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 16,
+    "titulo": "Derecho Penal Parte General: concepto. Principios informadores del Derecho Penal. La infracción penal. Concepto material de delito. Grados de ejecución del delito. Personas físicas y jurídicas criminalmente responsables. Las consecuencias jurídicas de la infracción penal. Vigencia temporal y espacial de la Ley Penal. La edad penal y sus efectos. Circunstancias modificativas de la responsabilidad criminal.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 17,
+    "titulo": "Derecho Penal Especial: Del homicidio y sus formas. Del aborto. De las lesiones. Delitos contra la libertad. De las torturas y otros delitos contra la integridad moral. Delitos contra la libertad sexual.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 18,
+    "titulo": "Delitos contra el patrimonio y contra el orden socioeconómico. El hurto. El robo. La extorsión. Robo y hurto de uso de vehículos a motor. Usurpación. De las defraudaciones: estafas; apropiación indebida; defraudaciones de fluido eléctrico y análogo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 19,
+    "titulo": "Delitos contra el orden público: de los atentados contra la autoridad, sus agentes y los funcionarios públicos, resistencia y desobediencia. Desórdenes públicos. Disposición común. Tenencia, tráfico y depósito de armas, municiones o explosivos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 20,
+    "titulo": "Delitos informáticos. Especial consideración al derecho a la intimidad. La prueba digital en el proceso penal.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444",
+     "BOE-A-1882-6036"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 21,
+    "titulo": "Noción de Derecho Procesal Penal. Concepto de jurisdicción y de competencia. Los órganos de la jurisdicción penal. Concepto de denuncia y la obligación de denunciar. La detención: concepto y duración. La obligación de detener. Los derechos del detenido. El procedimiento de habeas corpus. Procedimiento integral de la detención policial. El Ministerio Fiscal: funciones. La Policía Judicial.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1882-6036",
+     "BOE-A-1984-11620"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 22,
+    "titulo": "La Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito. Ámbito. Concepto general de víctima. Derechos básicos. Protección de las víctimas. Medidas de protección a la víctima.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-4606"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 23,
+    "titulo": "Políticas de igualdad, protección y no discriminación en la AGE. La Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres. Los Planes para la igualdad en la Administración General del Estado y en sus organismos públicos. Políticas contra la violencia de género. La Ley Orgánica 1/2004, de 28 de diciembre, de medidas de protección integral contra la violencia de género. Políticas de integración de las personas con discapacidad. La Ley 39/2006, de 14 de diciembre, de promoción de la autonomía personal y atención a las personas en situación de dependencia. Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-6115",
+     "BOE-A-2004-21760",
+     "BOE-A-2006-21990",
+     "BOE-A-2023-5366"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 24,
+    "titulo": "Introducción a la Prevención de Riesgos Laborales. Concepto general de trabajo. Concepto de salud y condiciones de trabajo. El trabajo y la salud. Concepto general de riesgos Laborales. Principios generales de la actividad preventiva. Conceptos de prevención y protección. Consecuencia de los riesgos. Daños a la salud.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-24292"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 25,
+    "titulo": "Marco normativo básico en prevención de riesgos laborales. La Ley 31/1995, de Prevención de Riesgos Laborales. RD 39/1997, Reglamento de los servicios de prevención. El RD 2/2006, sobre Prevención de Riesgos Laborales en los funcionarios del Cuerpo Nacional de Policía. El RD 67/2010 sobre adaptación de la Prevención de Riesgos Laborales en la Administración General del Estado. Derechos y deberes básicos en materia de Prevención de Riesgos laborales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-24292"
+    ]
+   },
+   {
+    "bloque": "A) Ciencias Jurídicas",
+    "tema": 26,
+    "titulo": "La protección de datos de carácter personal: la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales. Ley Orgánica 7/2021, de 26 de mayo, de protección de datos personales tratados para fines de prevención, detección, investigación y enjuiciamiento de infracciones penales y de ejecución de sanciones penales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2018-16673",
+     "BOE-A-2021-8806"
+    ]
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 27,
+    "titulo": "Derechos Humanos. Declaración Universal de Derechos Humanos. Convenio Europeo para la Protección de los Derechos Humanos y Libertades Fundamentales. Convenio contra la Tortura. Protocolo facultativo de la Convención contra la tortura. Mecanismo Nacional de Prevención de la Tortura del Defensor del Pueblo.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 28,
+    "titulo": "Globalización y antiglobalización. Conceptos y características. Consecuencia de la globalización. Reacciones a la globalización. El Movimiento Antiglobalización: Organizaciones, objetivos e historia. El Foro Social Mundial.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 29,
+    "titulo": "Actitudes y valores sociales. Formación de las actitudes: concepto, componentes y funciones. Estereotipos, prejuicios y discriminación. Actitudes de la personalidad autoritaria: xenofobia y dogmatismo. Los grupos sociales.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 30,
+    "titulo": "Principios éticos de la sociedad actual. Transmisión de valores en la sociedad actual: proceso de socialización. Libertad responsabilidad. Igualdad-solidaridad. Tolerancia. Contravalores, reacciones sociales a los valores mayoritarios: Racismo, fanatismo, fundamentalismo, sectarismo, hooliganismo. Especial consideración de los delitos de odio.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 31,
+    "titulo": "Inmigración. Movimientos migratorios: concepto y causas de las migraciones. Tipos y efectos. Las grandes migraciones a través de la historia. Las migraciones en la actualidad. Integración social: factor esencial de la cohesión social.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 32,
+    "titulo": "Concepto de geografía humana. La ciudad, corrientes de estudio de la misma. Población, estructura y grupos sociales. La demografía: densidad demográfica, tasas de natalidad y mortalidad, crecimiento vegetativo. La sociedad de masas. Contaminación y protección del medio ambiente.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 33,
+    "titulo": "La seguridad. Concepto. Seguridad individual y seguridad colectiva. Seguridad pública y seguridad privada. La inseguridad. Teorías explicativas de la delincuencia: concepto, modelos explicativos y clases de delincuencia.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 34,
+    "titulo": "Drogodependencias. Conceptos de droga, consumidor, métodos de administración, adicción, dependencia, tolerancia, politoxicomanías. Clasificación de las drogas. Últimas tendencias en el consumo de drogas en nuestra sociedad.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 35,
+    "titulo": "El desarrollo sostenible. Concepto. Coordinación y cooperación internacional. Sociedad y desarrollo sostenible. Instrumentos de gestión ambiental.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 36,
+    "titulo": "Gramática de la lengua española. Morfología. Sufijos, sustantivos y pronombres. Adjetivos: sus grados y tipos. Los adverbios y sus tipos. Verbos: modos y conjugación. Preposiciones y conjunciones. Sintaxis. La oración: partes y tipos. Análisis sintáctico.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "B) Ciencias Sociales",
+    "tema": 37,
+    "titulo": "Ortografía de la lengua española. Reglas ortográficas. Uso de las letras o grafemas. Uso de la tilde, de los signos ortográficos y de las letras mayúsculas y minúsculas. Representación gráfica de las unidades léxicas. Ortografía de las expresiones procedentes de otras lenguas, de nombres propios y expresiones numéricas.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 38,
+    "titulo": "Fundamentos de sistemas operativos: Funciones de un sistema operativo. Tipologías: MS/DOS; UNIX; Linux; Windows; MAC OS. Sistemas operativos móviles: iOS, Android. Sistemas de almacenamiento. Sistemas de archivos.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 39,
+    "titulo": "Redes informáticas: Modelo OSI. Modelo TCP/IP. Dispositivos de red: Concentradores (hubs); conmutadores (switches); encaminadores (routers); cortafuegos (firewall); servidores DHCP; servidores DNS; servidores proxy. Direccionamiento IP: clase de redes; IPv4; IPv6.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 40,
+    "titulo": "Inteligencia: dato, información e inteligencia. Tipologías de Inteligencia. Ciclo de la Inteligencia. Inteligencia de Fuentes Abiertas (OSINT). Surface Web. Deep Web. Dark Web. Dark Net.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 41,
+    "titulo": "Ciberdelincuencia y agentes de la Amenaza: Botnet; Business E-mail Compromise; Cartas nigerianas; Cryptojacking; Denegación de servicio; Ingeniería social; Inyección SQL; Malware; Pharming; Phishing; Spear phishing; Ransomware; Skimming; Spoofing; Spyware, Troyano; XSS; Zero-day. Cibercriminales. Crimen as Service. Hacktivistas. Insider threat. APTs. Cyber Kill Chain.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 42,
+    "titulo": "Origen de las armas de fuego. Definición, clasificación, categorías y funcionamiento de las armas de fuego: especial referencia al reglamento de armas. Cartucho: definición y componentes. Armas prohibidas. Documentación que ampara la tenencia y porte de armas. Balística forense.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1993-6202"
+    ]
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 43,
+    "titulo": "El vehículo prioritario. Definición de vehículo prioritario. Facultades de los conductores de vehículos prioritarios. Comportamiento de los demás conductores respecto de los vehículos prioritarios. La conducción de vehículos en situación de emergencia. Utilización de las señales de emergencia.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-23514",
+     "BOE-A-2015-11722"
+    ]
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 44,
+    "titulo": "La Seguridad en la Conducción de Vehículos Prioritarios. Definición de Seguridad Activa y Pasiva. Sistemas de Seguridad Activa y Pasiva en vehículos tipo turismo y motocicleta. Influencia de los Sistemas de Seguridad en los accidentes de tráfico. Repercusión de los Sistemas de Seguridad en la conducción policial y traslado de detenidos.",
+    "tipo": "no_legislativo",
+    "normas": []
+   },
+   {
+    "bloque": "C) Materias Técnico-Científicas",
+    "tema": 45,
+    "titulo": "Prevención de Riesgos Laborales en Seguridad Vial. Factores del Tráfico y su influencia en la siniestralidad vial. Factor Humano, Factor Ambiental y Factor Vehículo. Riesgos Laborales en la conducción de vehículos prioritarios. Equipos de Protección Individual del conductor y pasajeros de vehículos policiales. Estrategias y mantenimiento preventivo del vehículo prioritario.",
+    "tipo": "no_legislativo",
+    "normas": []
+   }
+  ]
+ },
+ "notas": "Examen de conocimientos: 100 preguntas con 3 opciones en 50 minutos. Además hay ortografía, psicotécnicos, pruebas físicas y entrevista."
+}

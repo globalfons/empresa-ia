@@ -23,3 +23,5 @@ El propietario (particular, sin empresa) solo gestiona cuentas: GitHub Pages, Le
 - No prometer en la web funciones que no existan. Las funciones de pago se marcan como progresivas hasta que existan.
 - Antes de hacer push: validar, `node build.mjs`, crawler de enlaces sin roturas, test jugable en 375 px sin errores de JS.
 - Pase Opositor: suscripción de Lemon Squeezy (`checkoutUrl` en `config.json`). Sin Pase, la Ley 39/2015 y los tests por artículo son completos y el resto de leyes y oposiciones solo ofrecen 10 preguntas de muestra (`web/assets/test.js`). La clave de licencia se valida en el navegador contra `api.lemonsqueezy.com/v1/licenses/validate` (`store.js`, `pase.js`) y se revalida cada 24 h; `lsStoreId`/`lsProductId` en `config.json` restringen las claves a nuestra tienda.
+
+- Catálogo: una oposición por fichero en `catalogo/oposiciones/<id>.json` con datos oficiales citados literalmente (ver `ARQUITECTURA.md`). Validar con `python3 catalogo/validar_catalogo.py`, después `python3 catalogo/construir.py` y `node build.mjs`. Nunca añadir un dato oficial sin su cita y su fuente guardada en `catalogo/fuentes/`.

@@ -97,23 +97,32 @@ for (const o of OPOS) {
   }
   o.temasCubiertos = o.temario.filter((t) => t.normas.some((id) => PUB[id])).length;
 }
-const opEstado = (c) => ({ prevista: "Prevista", convocada: "Convocada", examen_realizado: "Examen realizado", cerrada: "Cerrada" })[c.estado] || c.estado;
+const opEstado = (c) => ({ prevista: "Prevista", convocada: "Convocada", plazo_abierto: "Plazo abierto", examen_realizado: "Examen realizado", cerrada: "Cerrada" })[c.estado] || c.estado;
+const CATEGORIAS = JSON.parse(fs.readFileSync("catalogo/categorias.json", "utf8"));
+const CAT = Object.fromEntries(CATEGORIAS.map((c) => [c.id, c]));
+const fmtFecha = (f) => (f ? f.split("-").reverse().join("/") : "");
+const sinAcentos = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const pctOp = (o) => Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos));
 
-const tarjetaOp = (o, r) => `<a class="card op-card" href="${r}oposiciones/${o.id}/"><span class="tag">${esc(o.grupo)} · ${esc(opEstado(o.convocatoria))}</span><strong>${esc(o.nombre)}</strong><span>${o.convocatoria.plazas ? fmtN(o.convocatoria.plazas) + " plazas (turno libre) · " : ""}${o.temario.length} temas · test en ${o.temasCubiertos} de ${o.cobertura.temas_legislativos} temas de legislación</span><span class="covbar"><i style="width:${Math.max(2, Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos)))}%"></i></span></a>`;
+const tarjetaOp = (o, r) => `<a class="card op-card" href="${r}oposiciones/${o.id}/" data-cat="${o.categoria}" data-q="${esc(sinAcentos([o.nombre, o.organismo, o.categoria_nombre, o.grupo, o.territorio].join(" ")))}"><span class="tag">${CAT[o.categoria].icono} ${esc(o.categoria_nombre)} · ${esc(o.grupo)} · ${esc(opEstado(o.convocatoria))}</span><strong>${esc(o.nombre)}</strong><span>${o.convocatoria.plazas ? fmtN(o.convocatoria.plazas) + " plazas (turno libre) · " : ""}${o.temario.length} temas · test en ${o.temasCubiertos} de ${o.cobertura.temas_legislativos} temas de legislación</span><span class="covbar"><i style="width:${Math.max(2, Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos)))}%"></i></span></a>`;
 
+const catCount = (id) => OPOS.filter((o) => o.categoria === id).length;
+const chipsCat = (r, activa) => `<div class="cat-chips">${CATEGORIAS.map((c) => `<a class="cat-chip${activa === c.id ? " on" : ""}${catCount(c.id) ? "" : " empty"}" href="${r}oposiciones/categoria/${c.id}/" data-cat="${c.id}">${c.icono} ${esc(c.nombre)} <b>${catCount(c.id)}</b></a>`).join("")}</div>`;
+const buscador = (r) => `<form class="buscador" action="${r}oposiciones/" role="search"><label class="sr" for="q">Buscar oposición</label><input id="q" name="q" type="search" placeholder="Busca por nombre, cuerpo u organismo: policía, auxiliar, gestión…" autocomplete="off"><button class="cta" type="submit">Buscar</button></form>`;
 // ---------- Portada ----------
 const NART = PUBLICADAS.reduce((t, L) => t + L.arts.length, 0), NQ = PUBLICADAS.reduce((t, L) => t + L.qs.length, 0);
 page("", {
-  title: `${C.name}: test de oposiciones con la respuesta citada del BOE`,
-  description: `Tests de la Ley 39/2015 para oposiciones con ${NQ} preguntas verificadas contra el BOE, panel de progreso, nota orientativa y simulacros. Gratis para empezar.`,
+  title: `${C.name}: encuentra tu oposición y prepárala con tests citados del BOE`,
+  description: `Buscador de oposiciones con convocatorias oficiales del BOE, temario, ${NQ} preguntas verificadas contra la ley, simulacros como el examen real y seguimiento de tu progreso.`,
   wide: true,
   body: (r) => `
 <section class="hero">
   <div class="hero-copy">
-    <span class="pill">Oposiciones · Ley 39/2015 · Actualizado ${C.updated.split("-").reverse().join("/")}</span>
-    <h1>Aprueba la parte de leyes sabiendo <em>por qué</em> cada respuesta es la correcta</h1>
-    <p class="lead">Cada pregunta de TestLey lleva la cita literal del artículo del BOE que la justifica. Practica, mira tu nota orientativa y deja que el repaso inteligente se centre en lo que fallas.</p>
-    <p><a class="cta" href="oposiciones/">Elegir mi oposición</a> <a class="cta alt" href="${LEY.slug}/">Probar un test</a></p>
+    <span class="pill">Convocatorias oficiales · Tests citados del BOE · Actualizado ${fmtFecha(C.updated)}</span>
+    <h1>Encuentra tu oposición y prepárala sabiendo <em>por qué</em> cada respuesta es la correcta</h1>
+    <p class="lead">Consulta la convocatoria oficial, el temario y los requisitos, y estudia con tests en los que cada respuesta cita el artículo del BOE. Simulacros como el examen real y un panel que te dice qué repasar.</p>
+    ${buscador(r)}
+    <p class="small populares">Populares: ${OPOS.slice(0, 4).map((o) => `<a href="${r}oposiciones/${o.id}/">${esc(o.nombre.replace(/^Cuerpo (General )?/, "").replace(/ de la Administración( Civil)? del Estado/, " (Estado)"))}</a>`).join(" · ")}</p>
     <p class="muted small">Sin registro para empezar · Sin publicidad · Funciona en el móvil</p>
   </div>
   <div class="hero-demo" aria-hidden="true">
@@ -138,10 +147,15 @@ page("", {
 </section>
 
 <section>
-  <h2>Elige tu oposición</h2>
-  <p class="muted">Temario oficial de la convocatoria, test combinado, progreso por tema y ranking propio para cada oposición.</p>
-  <div class="cards">${OPOS.map((o) => tarjetaOp(o, r)).join("")}</div>
-  <p><a class="cta alt" href="oposiciones/">Ver todas las oposiciones</a></p>
+  <h2>Oposiciones por categoría</h2>
+  <p class="muted">Solo publicamos oposiciones cuya convocatoria hemos verificado en la fuente oficial. Las categorías sin oposiciones todavía están en preparación.</p>
+  <div class="cat-grid">${CATEGORIAS.map((c) => `<a class="cat-card${catCount(c.id) ? "" : " soon"}" href="${r}oposiciones/categoria/${c.id}/"><span class="cat-ico">${c.icono}</span><strong>${esc(c.nombre)}</strong><span>${catCount(c.id) ? `${catCount(c.id)} oposición${catCount(c.id) > 1 ? "es" : ""}` : "Próximamente"}</span></a>`).join("")}</div>
+</section>
+
+<section>
+  <h2>Convocatorias con más plazas</h2>
+  <div class="cards">${OPOS.slice(0, 6).map((o) => tarjetaOp(o, r)).join("")}</div>
+  <p><a class="cta alt" href="oposiciones/">Buscar todas las oposiciones</a></p>
 </section>
 
 <section class="features">
@@ -151,7 +165,7 @@ page("", {
     <div class="card"><span class="f-ico">📊</span><strong>Panel de progreso</strong><span>Ve qué títulos dominas, cuáles te cuestan, tu racha de estudio y tu evolución test a test.</span></div>
     <div class="card"><span class="f-ico">🎯</span><strong>Nota orientativa</strong><span>Estimamos la nota que sacarías hoy en esta parte, con la penalización del examen (cada error resta 1/3).</span></div>
     <div class="card"><span class="f-ico">🧠</span><strong>Repaso inteligente</strong><span>Tus fallos vuelven hasta que los aciertas dos veces seguidas. Así se consolidan de verdad.</span></div>
-    <div class="card"><span class="f-ico">⏱️</span><strong>Simulacros</strong><span>30 preguntas en 30 minutos con corrección como en el examen real.</span></div>
+    <div class="card"><span class="f-ico">⏱️</span><strong>Simulacros como el examen</strong><span>Número de preguntas, tiempo, opciones y penalización sacados de la convocatoria oficial de cada oposición.</span></div>
     <div class="card"><span class="f-ico">🏆</span><strong>Ranking y logros</strong><span>Estrellas, rachas y logros para mantener la constancia${C.supabaseUrl ? ", y un ranking para medirte con otros opositores" : ". El ranking entre opositores llega con las cuentas"}.</span></div>
   </div>
 </section>
@@ -159,11 +173,12 @@ page("", {
 <section class="how">
   <h2>Cómo funciona</h2>
   <ol class="steps">
-    <li><b>Haz un repaso de 20 preguntas.</b> Tarda unos 10 minutos y no necesitas registrarte.</li>
-    <li><b>Lee la cita cuando falles.</b> Verás el párrafo exacto de la ley y podrás abrir el artículo completo.</li>
-    <li><b>Mira tu panel.</b> Tu nota orientativa y tus puntos débiles se actualizan con cada respuesta.</li>
+    <li><b>Busca tu oposición.</b> Mira plazas, requisitos y plazos con el texto oficial de la convocatoria.</li>
+    <li><b>Elígela y crea tu cuenta gratis.</b> Tu panel, tu temario y tu ranking se centran en ella.</li>
+    <li><b>Estudia el temario con tests.</b> Cada respuesta cita el artículo del BOE; los fallos vuelven hasta que los dominas.</li>
+    <li><b>Haz simulacros y sigue tu progreso.</b> Nota orientativa, dominio por tema y puntos débiles.</li>
   </ol>
-  <p><a class="cta" href="${LEY.slug}/">Hacer mi primer test</a></p>
+  <p><a class="cta" href="oposiciones/">Buscar mi oposición</a> <a class="cta alt" href="${LEY.slug}/">Probar un test gratis</a></p>
 </section>
 
 <section>
@@ -258,17 +273,51 @@ ${
 
 // ---------- Directorio y páginas de oposiciones ----------
 page("oposiciones/", {
-  title: "Oposiciones: temario oficial y tests por oposición",
-  description: `Elige tu oposición y prepárala con su temario oficial tema a tema, tests con la respuesta citada del BOE y ranking propio. ${OPOS.length} oposiciones en el catálogo.`,
+  title: "Buscador de oposiciones: convocatorias oficiales, temario y tests",
+  description: `Busca tu oposición por categoría u organismo y consulta su convocatoria oficial del BOE, requisitos, plazas y temario. ${OPOS.length} oposiciones verificadas en ${CATEGORIAS.filter((c) => catCount(c.id)).length} categorías.`,
   wide: true,
+  scripts: ["buscador.js"],
   body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <span>Oposiciones</span></nav>
-<h1>Elige tu oposición</h1>
-<p class="lead">Cada oposición tiene su temario oficial copiado de la convocatoria, un test combinado con las leyes que ya cubrimos, tu progreso tema a tema y su propio ranking.</p>
-${Object.keys(AMBITO).filter((k) => OPOS.some((o) => o.ambito === k)).map((k) => `<h2>${AMBITO[k]}</h2><div class="cards">${OPOS.filter((o) => o.ambito === k).map((o) => tarjetaOp(o, r)).join("")}</div>`).join("")}
-<div class="box"><strong>¿No está tu oposición?</strong> Añadimos oposiciones nuevas cada semana a partir de sus convocatorias oficiales. Escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> y dinos cuál preparas.</div>`,
+<h1>Buscador de oposiciones</h1>
+<p class="lead">Solo publicamos oposiciones cuya convocatoria hemos leído en la fuente oficial. Cada dato (plazas, requisitos, plazos) enlaza al BOE y muestra el texto literal del que sale.</p>
+${buscador(r)}
+${chipsCat(r, "")}
+<p id="res-count" class="muted" aria-live="polite">${OPOS.length} oposiciones</p>
+<div class="cards" id="res">${OPOS.map((o) => tarjetaOp(o, r)).join("")}</div>
+<p id="res-vacio" class="box" hidden>No hay ninguna oposición verificada con esa búsqueda todavía. Escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> y la añadimos a la cola a partir de su convocatoria oficial.</p>
+<div class="box"><strong>¿Cómo elegimos qué publicar?</strong> Añadimos oposiciones a partir de su convocatoria oficial. Si todavía no hay convocatoria o no hemos podido verificarla, no la mostramos: preferimos un catálogo más pequeño antes que datos inventados.</div>`,
 });
+for (const c of CATEGORIAS) {
+  const lista = OPOS.filter((o) => o.categoria === c.id);
+  page(`oposiciones/categoria/${c.id}/`, {
+    title: `Oposiciones de ${c.nombre}: convocatorias, temario y tests`,
+    description: `${c.descripcion} ${lista.length ? `${lista.length} oposición${lista.length > 1 ? "es" : ""} con convocatoria oficial verificada, temario y tests.` : "Próximamente en TestLey."}`,
+    noindex: !lista.length, wide: true,
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <span>${esc(c.nombre)}</span></nav>
+<h1>${c.icono} Oposiciones de ${esc(c.nombre)}</h1>
+<p class="lead">${esc(c.descripcion)}</p>
+${chipsCat(r, c.id)}
+${lista.length
+  ? `<div class="cards">${lista.map((o) => tarjetaOp(o, r)).join("")}</div>`
+  : `<div class="box"><strong>Todavía no hay oposiciones de ${esc(c.nombre)} verificadas.</strong> Solo publicamos una oposición cuando hemos leído su convocatoria oficial. Si preparas una de esta categoría, escríbenos a <a href="mailto:globalprsx@gmail.com">globalprsx@gmail.com</a> y la priorizamos.</div>`}`,
+  });
+}
+const ETIQ = { plazas: "Plazas", plazas_reservadas: "Plazas reservadas", titulacion: "Titulación", requisitos: "Requisitos", plazo_solicitudes: "Plazo de solicitudes", pruebas: "Pruebas y examen" };
+function oficialHtml(o) {
+  const dato = (d) => {
+    const f = o.fuentes[d.fuente];
+    return `<li><span>${esc(typeof d.valor === "number" ? fmtN(d.valor) : d.valor)}</span><details><summary>Texto oficial</summary><blockquote>«${esc(d.cita)}»<span class="src"><a href="${esc(f.url)}" rel="noopener">${esc(f.id || f.titulo)}</a> · publicado el ${fmtFecha(f.fecha_publicacion)}</span></blockquote></details></li>`;
+  };
+  const filas = Object.keys(o.oficial).map((k) => `<div class="of-row"><h3>${ETIQ[k] || esc(k)}</h3><ul class="of-list">${(Array.isArray(o.oficial[k]) ? o.oficial[k] : [o.oficial[k]]).map(dato).join("")}</ul></div>`).join("");
+  const fu = Object.values(o.fuentes).map((f) => `<li><a href="${esc(f.url)}" rel="noopener">${esc(f.titulo)}</a> · ${esc(f.tipo)}, publicado el ${fmtFecha(f.fecha_publicacion)}</li>`).join("");
+  return `<section class="card oficial"><div class="of-head"><h2>Datos oficiales de la convocatoria</h2><span class="badge-oficial">Fuente oficial</span></div>
+${filas}
+<p class="muted small">Fechas de examen: solo las mostramos cuando se publican oficialmente. Documentos oficiales:</p><ul class="small">${fu}</ul>
+<p class="muted small">Datos revisados el ${fmtFecha(o.actualizado)}. Cada dato incluye el texto literal de la fuente; si hubiera discrepancia, prevalece siempre el BOE.</p></section>`;
+}
 for (const o of OPOS) {
   const c = o.convocatoria;
+  const sim = (o.examen || {}).simulacro;
   const bloques = [...new Set(o.temario.map((t) => t.bloque))];
   const pct = Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos));
   const chip = (t) => {
@@ -291,12 +340,14 @@ for (const o of OPOS) {
 <h1>${esc(o.nombre)}</h1>
 <p class="op-meta"><span class="pill">Grupo ${esc(o.grupo)}</span> <span class="pill">${esc(opEstado(c))}</span>${c.plazas ? ` <span class="pill">${fmtN(c.plazas)} plazas turno libre</span>` : ""}</p>
 <p class="muted small">Convocatoria: <a href="${esc(c.url_oficial)}" rel="noopener">${esc(c.referencia)}</a>, publicada el ${c.fecha_publicacion.split("-").reverse().join("/")}. Temario copiado del anexo ${esc(c.anexo || "")} de la convocatoria oficial.</p>
+<p class="muted small">${CAT[o.categoria].icono} <a href="${r}oposiciones/categoria/${o.categoria}/">${esc(o.categoria_nombre)}</a> · ${esc(o.organismo)} · ${esc(o.territorio)}</p>
 <div id="op-accion" data-op="${o.id}" data-nombre="${esc(o.nombre)}"></div>
+${oficialHtml(o)}
 <div class="card"><h2>Cobertura de TestLey</h2>
 <div class="covbar big"><i style="width:${Math.max(2, pct)}%"></i></div>
 <p>Test disponible en <b>${o.temasCubiertos} de ${o.cobertura.temas_legislativos}</b> temas de legislación (${pct} %). ${o.cobertura.temas_no_legislativos ? `Los ${o.cobertura.temas_no_legislativos} temas de informática y ofimática no forman parte de TestLey.` : ""}</p>
 <p class="muted small">Publicamos leyes nuevas cada semana por orden de impacto en las oposiciones del catálogo. Esta página se actualiza sola.</p></div>
-${o.qs.length ? `<h2>Test de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))}</h2><div id="quiz" class="quiz" data-ley="${o.id}" data-base="./">Cargando preguntas…</div>` : ""}
+${o.qs.length ? `<h2>Test de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))} <span class="badge-testley">Contenido de TestLey</span></h2><p class="muted small">Preguntas redactadas por TestLey; cada respuesta cita el artículo del BOE que la justifica.${sim ? ` Simulacro: ${sim.preguntas} preguntas, ${sim.minutos} minutos, ${sim.opciones} opciones. ${esc(sim.nota)}` : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="./" data-sim="${esc(JSON.stringify(sim || null))}">Cargando preguntas…</div>` : ""}
 <h2>Temario oficial</h2>
 <div id="op-temario">${bloques.map((b) => `<h3>${esc(b)}</h3><ol class="temario">${o.temario.filter((t) => t.bloque === b).map((t) => `<li value="${t.tema}"><p>${esc(t.titulo)}</p><div class="chips">${chip(t)}</div></li>`).join("")}</ol>`).join("")}</div>
 <p class="muted small">Las leyes de cada tema se asignan a partir del texto del temario; cuando el tema no nombra la ley expresamente, la asignación es orientativa. Comprueba siempre las bases de tu convocatoria.</p>`,

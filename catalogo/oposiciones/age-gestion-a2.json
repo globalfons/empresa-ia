@@ -1,0 +1,634 @@
+{
+ "id": "age-gestion-a2",
+ "nombre": "Cuerpo de Gestión de la Administración Civil del Estado",
+ "categoria": "administracion-estado",
+ "organismo": "Secretaría de Estado de Función Pública",
+ "administracion": "AGE",
+ "ambito": "estatal",
+ "territorio": "España",
+ "grupo": "A2",
+ "estado": "convocada",
+ "actualizado": "2026-09-29",
+ "fuentes": {
+  "convocatoria": {
+   "tipo": "BOE",
+   "id": "BOE-A-2025-26262",
+   "titulo": "Resolución de 18 de diciembre de 2025, de la Secretaría de Estado de Función Pública (BOE-A-2025-26262)",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-26262",
+   "fecha_publicacion": "2025-12-22",
+   "texto": "catalogo/fuentes/BOE-A-2025-26262.txt"
+  }
+ },
+ "oficial": {
+  "plazas": {
+   "valor": 1356,
+   "fuente": "convocatoria",
+   "cita": "será de 1.356 plazas, de las que 266 se reservarán para ser cubiertas por personas con discapacidad"
+  },
+  "titulacion": {
+   "valor": "Diplomado Universitario, Ingeniero Técnico, Arquitecto Técnico o Grado",
+   "fuente": "convocatoria",
+   "cita": "Estar en posesión o en condiciones de obtener el título de Diplomado Universitario, Ingeniero Técnico, Arquitecto Técnico o Grado"
+  },
+  "requisitos": [
+   {
+    "valor": "Nacionalidad española (o de la UE y otros supuestos previstos en la base 3.2)",
+    "fuente": "convocatoria",
+    "cita": "3.2 Nacionalidad: Las personas aspirantes deberán tener la nacionalidad española."
+   },
+   {
+    "valor": "Capacidad funcional para el desempeño de las tareas",
+    "fuente": "convocatoria",
+    "cita": "3.3 Capacidad: Poseer la capacidad funcional para el desempeño de las tareas."
+   },
+   {
+    "valor": "Tener cumplidos 16 años y no exceder la edad de jubilación forzosa",
+    "fuente": "convocatoria",
+    "cita": "3.4 Edad: Tener cumplidos dieciséis años y no exceder, en su caso, de la edad máxima de jubilación forzosa, 65 años."
+   },
+   {
+    "valor": "No haber sido separado del servicio ni estar inhabilitado",
+    "fuente": "convocatoria",
+    "cita": "3.5 Habilitación: No haber sido separado mediante expediente disciplinario del servicio de cualquiera de las Administraciones Públicas"
+   }
+  ],
+  "plazo_solicitudes": {
+   "valor": "20 días hábiles desde el día siguiente a la publicación en el BOE",
+   "fuente": "convocatoria",
+   "cita": "dispondrán de un plazo de presentación de solicitudes de veinte días hábiles contados a partir del día siguiente al de la fecha de publicación de esta convocatoria en el «Boletín Oficial del Estado»"
+  },
+  "pruebas": [
+   {
+    "valor": "Primer ejercicio: cuestionario de hasta 100 preguntas sobre el programa",
+    "fuente": "convocatoria",
+    "cita": "2.1.1 Primer ejercicio: consistirá en contestar por escrito un cuestionario de un máximo de 100 preguntas basado en las materias que figuran en el programa de estas normas específicas"
+   },
+   {
+    "valor": "Tiempo máximo del primer ejercicio: 90 minutos",
+    "fuente": "convocatoria",
+    "cita": "El tiempo máximo para la realización de este ejercicio será de noventa minutos."
+   },
+   {
+    "valor": "Cada error descuenta un tercio; en blanco no penaliza",
+    "fuente": "convocatoria",
+    "cita": "cada contestación errónea se penalizará descontando un tercio del valor de una respuesta correcta. Las respuestas en blanco no penalizan."
+   }
+  ]
+ },
+ "examen": {
+  "oficial": {
+   "preguntas": 100,
+   "minutos": 90,
+   "penalizacion": 0.3333333333333333
+  },
+  "simulacro": {
+   "preguntas": 100,
+   "minutos": 90,
+   "opciones": 4,
+   "penalizacion": 0.3333333333333333,
+   "origen": "oficial",
+   "nota": "Mismo número de preguntas, tiempo y penalización que el primer ejercicio oficial."
+  }
+ },
+ "temario": {
+  "fuente": "convocatoria",
+  "anexo": "VII",
+  "temas": [
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 1,
+    "titulo": "La Constitución Española de 1978: estructura y contenido. La reforma de la Constitución.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 2,
+    "titulo": "Derechos y deberes fundamentales. Su garantía y suspensión. El Defensor del Pueblo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1981-10325"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 3,
+    "titulo": "El Tribunal Constitucional. Organización, composición y atribuciones.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1979-23709"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 4,
+    "titulo": "La Corona. Funciones constitucionales del Rey. Sucesión y regencia. El refrendo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 5,
+    "titulo": "El poder legislativo. Las Cortes Generales. Composición y atribuciones del Congreso de los Diputados y del Senado.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 6,
+    "titulo": "El poder ejecutivo. El Presidente del Gobierno y el Consejo de Ministros. Relaciones entre el Gobierno y las Cortes Generales. Designación, causas de cese y responsabilidad del Gobierno. El Consejo de Estado.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1997-25336"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 7,
+    "titulo": "El Poder Judicial. El principio de unidad jurisdiccional. El Consejo General del Poder Judicial. La organización judicial española.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1985-12666"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 8,
+    "titulo": "La Administración General del Estado. Principios de organización y funcionamiento. Órganos centrales. Órganos superiores y órganos directivos: creación, nombramiento, cese y funciones. Los servicios comunes de los ministerios. Órganos territoriales. La Administración del Estado en el Exterior.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10566"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 9,
+    "titulo": "El sector público institucional: entidades que lo integran y régimen jurídico.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10566"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 10,
+    "titulo": "Organización territorial (I): las Comunidades Autónomas. Los Estatutos de Autonomía. Organización política y administrativa. La delimitación de competencias entre el Estado y las Comunidades Autónomas en la Constitución y en los Estatutos de Autonomía.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229"
+    ]
+   },
+   {
+    "bloque": "I. Organización del Estado y de la Administración Pública",
+    "tema": 11,
+    "titulo": "Organización territorial (II): la Administración local: entidades que la integran. La autonomía local. El municipio: organización y competencias. La provincia: organización y competencias.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1985-5392"
+    ]
+   },
+   {
+    "bloque": "II. Unión Europea",
+    "tema": 1,
+    "titulo": "La Unión Europea: Antecedentes. Objetivos y naturaleza jurídica. Los Tratados originarios y modificativos. El Tratado de la Unión Europea y el Tratado de Funcionamiento de la Unión Europea. El proceso de ampliación. Las cooperaciones reforzadas.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "II. Unión Europea",
+    "tema": 2,
+    "titulo": "La organización de la Unión Europea (I): el Consejo Europeo, el Consejo y la Comisión Europea. Composición y funciones. El procedimiento decisorio. La participación de los Estados miembros en las diferentes fases del proceso.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "II. Unión Europea",
+    "tema": 3,
+    "titulo": "La organización de la Unión Europea (II): el Parlamento Europeo. El Tribunal de Justicia de la Unión Europea. El Tribunal de Cuentas. El Banco Central Europeo.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "II. Unión Europea",
+    "tema": 4,
+    "titulo": "Las fuentes del derecho de la Unión Europea. Derecho originario. Derecho derivado: Reglamentos, directivas y decisiones. Otras fuentes. Las relaciones entre el Derecho de la Unión Europea y el ordenamiento jurídico de los Estados miembros.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "II. Unión Europea",
+    "tema": 5,
+    "titulo": "El presupuesto comunitario. Los fondos europeos. La cohesión económica y social.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "II. Unión Europea",
+    "tema": 6,
+    "titulo": "Políticas de la Unión Europea: mercado interior. Política económica y monetaria. Política exterior y de seguridad común. El espacio de seguridad, libertad y justicia. Defensa de la competencia. Política agrícola y pesquera.",
+    "tipo": "legislativo_generico",
+    "normas": []
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 1,
+    "titulo": "Políticas de modernización de la Administración General del Estado. La Administración electrónica. Acceso electrónico de los ciudadanos a los servicios públicos. La Agenda Digital para España. La calidad de los servicios públicos y de atención al ciudadano. Mejora Regulatoria y Análisis de Impacto Normativo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10566"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 2,
+    "titulo": "Política económica actual. Política presupuestaria. Evolución y distribución actual del gasto público. Política fiscal. La unidad de mercado.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 3,
+    "titulo": "Política ambiental. Distribución de competencias. Conservación de la biodiversidad. Prevención de la contaminación y el cambio climático.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-21490",
+     "BOE-A-2021-8447"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 4,
+    "titulo": "La Seguridad Social: estructura y financiación. Problemas actuales y líneas de actuación. El régimen general y los regímenes especiales. La acción protectora de la Seguridad Social. Tipos y características de las prestaciones.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11724"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 5,
+    "titulo": "La evolución del empleo en España. Los servicios públicos de empleo: régimen de prestaciones y políticas de empleo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2023-5365"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 6,
+    "titulo": "Política de inmigración. Régimen de los extranjeros en España. Derecho de asilo y condición de refugiado.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2000-544",
+     "BOE-A-2009-17242"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 7,
+    "titulo": "El Gobierno Abierto: concepto, principios informadores y planes de acción de España. La Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2013-12887"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 8,
+    "titulo": "La protección de datos personales y su régimen jurídico: principios, derechos, responsable y encargado del tratamiento, delegado y autoridades de protección de datos. Derechos digitales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2018-16673"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 9,
+    "titulo": "Políticas de igualdad y contra la violencia de género: régimen jurídico. Políticas de igualdad de trato y no discriminación de las personas LGTBI. Discapacidad y dependencia: régimen jurídico.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-6115",
+     "BOE-A-2004-21760",
+     "BOE-A-2023-5366",
+     "BOE-A-2013-12632",
+     "BOE-A-2006-21990"
+    ]
+   },
+   {
+    "bloque": "III. Políticas públicas",
+    "tema": 10,
+    "titulo": "Otras políticas públicas. El sistema sanitario: distribución de competencias, gestión y financiación. Política exterior y de cooperación al desarrollo. Régimen de telecomunicaciones y desarrollo de la sociedad de la información. La Agenda 2030 y los Objetivos de Desarrollo Sostenible.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1986-10499"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 1,
+    "titulo": "Las fuentes del derecho administrativo: concepto y clases. La jerarquía de las fuentes.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-2015-10565",
+     "BOE-A-1997-25336"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 2,
+    "titulo": "La ley. Tipos de leyes. Reserva de ley. Disposiciones del Gobierno con fuerza de ley: decreto-ley y decreto legislativo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-2015-10565",
+     "BOE-A-1997-25336"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 3,
+    "titulo": "El reglamento: concepto, clases y límites. Los principios generales del Derecho. Los tratados internacionales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-2015-10565",
+     "BOE-A-1997-25336"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 4,
+    "titulo": "El acto administrativo: concepto, clases y elementos. Eficacia y validez de los actos administrativos. Su motivación y notificación.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10565"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 5,
+    "titulo": "Los contratos del sector público (I): concepto, clases y elementos. Preparación, adjudicación, efectos, cumplimiento y extinción. La revisión de precios y otras alteraciones contractuales. Régimen de invalidez y recursos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2017-12902"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 6,
+    "titulo": "Los contratos regulados por la Ley de Contratos del Sector Público (II). Tipos. Características generales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2017-12902"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 7,
+    "titulo": "Procedimientos y formas de la actividad administrativa. La actividad de intervención, arbitral, de servicio público y de fomento. Formas de gestión de los servicios públicos. Ayudas y subvenciones públicas: régimen jurídico.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-20977"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 8,
+    "titulo": "La expropiación forzosa: concepto, naturaleza y elementos. Procedimientos de expropiación. Garantías jurisdiccionales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1954-15431"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 9,
+    "titulo": "El régimen patrimonial de las Administraciones públicas. El dominio público. Los bienes patrimoniales del Estado. El Patrimonio Nacional. Los bienes comunales.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-20254"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 10,
+    "titulo": "La responsabilidad patrimonial de las Administraciones públicas. Procedimiento de responsabilidad patrimonial.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10566",
+     "BOE-A-2015-10565"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 11,
+    "titulo": "Las Leyes del Procedimiento Administrativo Común de las Administraciones Públicas y del Régimen Jurídico del Sector Público. Procedimiento administrativo común y su alcance: iniciación, ordenación, instrucción y terminación. La obligación de resolver. El silencio administrativo.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10565",
+     "BOE-A-2015-10566"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 12,
+    "titulo": "Los derechos de los ciudadanos en el procedimiento administrativo. Las garantías en el desarrollo del procedimiento. La revisión de los actos en vía administrativa: revisión de oficio y recursos administrativos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10565"
+    ]
+   },
+   {
+    "bloque": "IV. Derecho administrativo general",
+    "tema": 13,
+    "titulo": "La jurisdicción contencioso-administrativa: funciones, órganos y competencias. El recurso contencioso-administrativo. Actividad administrativa impugnable. Las partes: capacidad, legitimación, representación y defensa.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1998-16718"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 1,
+    "titulo": "El personal al servicio de las Administraciones públicas: concepto y clases. Adquisición y pérdida de la relación de servicio. Régimen jurídico.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 2,
+    "titulo": "Derechos y deberes del personal al servicio de las Administraciones Públicas. Régimen disciplinario.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 3,
+    "titulo": "Planificación de recursos humanos. Ofertas de empleo público. Selección de personal. Las competencias en materia de personal.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 4,
+    "titulo": "Formas de provisión de puestos de trabajo y movilidad en la Administración del Estado. Promoción interna y carrera profesional.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 5,
+    "titulo": "Situaciones administrativas del personal al servicio de las administraciones públicas. Incompatibilidades.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719",
+     "BOE-A-1985-151"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 6,
+    "titulo": "El sistema de retribuciones de los funcionarios. Retribuciones básicas y retribuciones complementarias. Las indemnizaciones por razón del servicio.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 7,
+    "titulo": "El personal laboral al servicio de las Administraciones públicas: su régimen jurídico. El IV Convenio Único para el personal laboral al servicio de la Administración General del Estado: ámbito de aplicación y sistema de clasificación.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 8,
+    "titulo": "Negociación colectiva, representación y participación institucional de los empleados públicos. El derecho de huelga y su ejercicio.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 9,
+    "titulo": "El régimen especial de la Seguridad Social de los funcionarios civiles del Estado. MUFACE y las clases pasivas: acción protectora. Concepto y clases de prestaciones. Derechos pasivos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719",
+     "BOE-A-2015-11724"
+    ]
+   },
+   {
+    "bloque": "V. Administración de recursos humanos",
+    "tema": 10,
+    "titulo": "Acceso al empleo público y provisión de puestos de trabajo de las personas con discapacidad.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719",
+     "BOE-A-2013-12632"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 1,
+    "titulo": "El presupuesto. Concepto y clases. La Ley General Presupuestaria: principios generales y estructura. Las leyes de estabilidad presupuestaria.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 2,
+    "titulo": "Las leyes anuales de presupuestos. Su contenido. El presupuesto del Estado. Principios de programación y de gestión. Contenido, elaboración y estructura. Desglose de aplicaciones presupuestarias.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 3,
+    "titulo": "Gastos plurianuales. Modificaciones de los créditos iniciales. Transferencias de crédito. Créditos extraordinarios. Suplementos de crédito. Ampliaciones de créditos. Incorporaciones de créditos. Generaciones de créditos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 4,
+    "titulo": "Control del gasto público en España. La Intervención General de la Administración del Estado. Función interventora, control financiero permanente y auditoría pública. El Tribunal de Cuentas.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 5,
+    "titulo": "El procedimiento administrativo de ejecución del presupuesto de gasto. Órganos competentes. Fases del procedimiento y su relación con la actuación administrativa. Especial referencia a la contratación administrativa y la gestión de subvenciones. Documentos contables que intervienen en la ejecución de los gastos y de los pagos. Gestión de la tesorería del Estado.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614",
+     "BOE-A-2003-20977"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 6,
+    "titulo": "Gastos para la compra de bienes y servicios. Gastos de inversión. Gastos de transferencias: corrientes y de capital. Anticipos de caja fija. Pagos «a justificar». Justificación de libramientos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-21614"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 7,
+    "titulo": "Los ingresos públicos: concepto y clasificación. El sistema tributario español: régimen actual. Especial referencia al régimen de tasas y precios públicos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2003-23186"
+    ]
+   },
+   {
+    "bloque": "VI. Gestión financiera y Seguridad Social",
+    "tema": 8,
+    "titulo": "Retribuciones de los funcionarios públicos. Nóminas: estructura y normas de confección. Altas y bajas, su justificación. Ingresos en formalización. Devengo y liquidación de derechos económicos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ]
+   }
+  ]
+ },
+ "notas": ""
+}
