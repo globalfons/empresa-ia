@@ -60,3 +60,11 @@ Qué hace la build (`build.mjs`) para que Google y Bing puedan rastrear, entende
    - Noticias de convocatorias nuevas (el sistema ya las genera; publicar las que pasen la puerta de calidad).
    - Tras 4-8 semanas, mirar en Search Console qué consultas dan impresiones con CTR bajo y ajustar esos títulos y descripciones.
 5. **Seguimiento**: tras cada cambio grande, comprobar la cobertura en Search Console y la prueba de resultados enriquecidos de Google en una ficha de oposición y un artículo.
+
+## Correcciones tras la auditoría (29/09/2026)
+- **Estado de las convocatorias**: se calcula en cada build a partir de la fecha de publicación en el BOE y el plazo citado (días hábiles: + fines de semana, con 7 días de margen por festivos). Solo se muestra «Activa» o «Cerrada» cuando el cálculo es seguro; si no, «Plazo por verificar». El `lastmod` del sitemap es la fecha del último cambio de estado, no la de la verificación automática diaria.
+- **Artículos**: solo se indexan los que tienen test propio. El resto (copia del texto del BOE) y los derogados o suprimidos llevan `noindex` y salen del sitemap. Siguen accesibles y enlazados.
+- **Convocatorias**: listado paginado en HTML estático (`/convocatorias/pagina-N/`), así que todas las fichas indexables tienen un enlace rastreable.
+- **Datos estructurados**: se quita `Quiz` de las páginas de ley (las preguntas se cargan por JavaScript) y `LearningResource` de los artículos sin test; se elimina el identificador del BOE repetido en la FAQ de las fichas.
+- **Ámbito del tema 1 de Policía Nacional (Escala Básica)**: el Código Civil se limita a los arts. 1-41 (`catalogo/temas_ambito_manual.json`); antes enlazaba el código completo.
+- Resultado: unas 4.100 URLs indexables (antes unas 11.200), todas con contenido propio.

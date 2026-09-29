@@ -652,3 +652,8 @@ p.acciones { margin: 14px 0 4px; }
 @media (max-width: 560px) { .panel-main .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .hero-panel h1 { font-size: clamp(1.5rem, 3vw, 2rem); }
 @media (max-width: 900px) { .ficha { grid-template-columns: minmax(0, 1fr); } }
+/* Listado paginado de convocatorias */
+.paginas { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 28px 0 8px; }
+.paginas .muted { flex-basis: 100%; }
+.paginas a, .paginas [aria-current] { min-width: 2.2em; padding: 4px 8px; text-align: center; border: 1px solid var(--line, #d9ddd6); border-radius: 6px; }
+.paginas [aria-current] { background: var(--accent); border-color: var(--accent); color: #fff; }

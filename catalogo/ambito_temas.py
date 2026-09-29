@@ -71,8 +71,9 @@ def construir(opos):
         for i, t in enumerate(o["temario"]):
             for n in t["normas"]:
                 slug = normas.get(n)
-                if not slug or uso[n] < 2 or not os.path.exists(os.path.join(DATOS, f"{slug}-articulos.json")): continue
                 k = f"{o['id']}#{i}#{slug}"
+                # Una ley que solo aparece en un tema se incluye completa, salvo corrección manual de su ámbito
+                if not slug or (uso[n] < 2 and k not in manual) or not os.path.exists(os.path.join(DATOS, f"{slug}-articulos.json")): continue
                 if (previo.get(k) or {}).get("fijado"): out[k] = previo[k]; continue  # corrección manual: se respeta
                 if k in manual:  # corrección manual por rangos contra la estructura oficial (temas_ambito_manual.json)
                     out[k] = {"tema": t["tema"], "titulo": t["titulo"][:160], "ley": slug, "unidades": manual[k]["unidades"], "coincidencias": {},
