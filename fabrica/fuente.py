@@ -13,7 +13,7 @@ SENALES = {
     "plazos": r"\b(d[ií]as?|mes(es)?|años?|horas?|plazo|semanas?)\b",
     "organos": r"\b(Gobierno|Consejo|Ministr|Tribunal|Presidente|Cortes|Congreso|Senado|Delegad|Secretar|Director|Junta|Pleno|Comisi[oó]n|Alcalde|Defensor|Fiscal|[oó]rgano)",
     "competencias": r"\b(corresponde|compete|competencia|atribu|facultad)",
-    "definiciones": r"\b(se entiende|se entender[aá]|a (los )?efectos de|se considera|tendr[aá]n la consideraci[oó]n|son\b|es el|es la)",
+    "definiciones": r"\b(se entiende por|se entender[aá] por|a (los )?efectos de (esta|la presente|este)|se considera(n|r[aá]n)?\b|tendr[aá]n la consideraci[oó]n)",
     "requisitos": r"\b(requisito|deber[aá]|ser[aá] necesario|podr[aá]n|exig|condici[oó]n)",
     "procedimiento": r"\b(procedimiento|solicitud|tr[aá]mite|resoluci[oó]n|notific|recurso|expediente|audiencia)",
     "excepcion": r"\b(salvo|excepto|no obstante|sin perjuicio|excepci[oó]n|en ning[uú]n caso|únicamente|solo podr)",

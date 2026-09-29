@@ -73,7 +73,9 @@ def plan(a, cfg):
     os.makedirs(os.path.join(DIR, lote), exist_ok=True)
     B.escribir(os.path.join(DIR, lote, "plan.json"), {"lote": lote, "fecha": MO.hoy(), "oposiciones": oposiciones,
                "instrucciones": G.SISTEMA_GENERADOR + "\n- Dificultad: 1 = dato explícito; 2 = relación, diferencia, excepción o aplicación; "
-               "3 = varias condiciones, comparación o aplicación práctica.\n- Formato de salida: candidatas.json = lista de "
+               "3 = varias condiciones, comparación o aplicación práctica.\n- Si un tipo pedido no encaja con el contenido del artículo, sustitúyelo por otro "
+               "de la lista de tipos que sí encaje (sin forzar); la dificultad final la fija el tipo. Marca confianza «media» o «baja» solo "
+               "cuando dudes de la respuesta, no por el encaje del tipo.\n- Formato de salida: candidatas.json = lista de "
                "{\"s\", \"tipo\", \"dif\", \"q\", \"o\" (4), \"a\" (0-3), \"cita\", \"apartado\", \"exp\", \"confianza\"}; como máximo k por hueco.",
                "huecos": huecos})
     B.escribir(ABIERTO, {"lote": lote, "fecha": MO.hoy()})
