@@ -18,7 +18,7 @@
       (reg ? '<p class="muted">Guarda tu progreso en la nube, úsalo en el móvil y el ordenador, y compite en el ranking.</p>' : "") +
       '<form id="f" novalidate>' +
       (reg ? '<label>Nombre público (para el ranking)<input name="alias" maxlength="24" autocomplete="nickname" required placeholder="Ej.: Opositora_2027"></label>' : "") +
-      '<label>Email<input name="email" type="email" autocomplete="email" required></label>' +
+      '<label>Email<input name="email" type="email" autocomplete="email" spellcheck="false" autocapitalize="off" required></label>' +
       (rec ? "" : '<label>Contraseña<input name="pass" type="password" minlength="6" autocomplete="' + (reg ? "new-password" : "current-password") + '" required></label>') +
       (reg ? '<label class="check"><input type="checkbox" name="acepto" required> Acepto la <a href="' + TL.root + 'legal/privacidad/" target="_blank">política de privacidad</a> y las <a href="' + TL.root + 'legal/condiciones/" target="_blank">condiciones</a></label>' : "") +
       '<button class="btn primary wide" type="submit">' + (reg ? "Crear cuenta" : rec ? "Enviarme el enlace" : "Entrar") + "</button>" +

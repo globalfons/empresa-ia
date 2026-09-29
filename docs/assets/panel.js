@@ -157,7 +157,8 @@
     fetch(C.supabaseUrl + "/rest/v1/rpc/mi_codigo_referido", { method: "POST", headers: h, body: "{}" }).then(function (r) { return r.json(); }).then(function (cod) {
       return fetch(C.supabaseUrl + "/rest/v1/rpc/mis_referidos", { method: "POST", headers: h, body: "{}" }).then(function (r) { return r.json(); }).then(function (st) {
         var enlace = (C.root && C.root !== "./" ? new URL(C.root, location.href).href : location.origin + "/") + "?ref=" + cod;
-        box.innerHTML = '<p>Comparte tu enlace: <input class="ref-url" readonly value="' + esc(enlace) + '" onclick="this.select()"></p><p class="muted small">' + (st.registrados || 0) + " registrados · " + (st.convertidos || 0) + " con Pase. Las invitaciones a ti mismo o desde tu mismo dispositivo no cuentan.</p>";
+        box.innerHTML = '<p>Comparte tu enlace: <input class="ref-url" readonly aria-label="Tu enlace de invitación" value="' + esc(enlace) + '"></p><p class="muted small">' + (st.registrados || 0) + " registrados · " + (st.convertidos || 0) + " con Pase. Las invitaciones a ti mismo o desde tu mismo dispositivo no cuentan.</p>";
+        var ru = box.querySelector(".ref-url"); if (ru) ru.onfocus = function () { this.select(); };
       });
     }).catch(function () { box.innerHTML = '<p class="muted small">Las invitaciones se activarán muy pronto.</p>'; });
   }

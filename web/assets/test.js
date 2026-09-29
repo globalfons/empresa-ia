@@ -199,8 +199,8 @@
     el.innerHTML =
       '<div class="meta"><span>Pregunta ' + (idx + 1) + " de " + queue.length + "</span>" +
       (esExamen() ? '<span class="timer">' + minutos() + ':00</span>' : "<span>" + nombreLey(q) + " · Art. " + (q.artn || q.art) + "</span>") +
-      '<button class="fav' + (fav ? " on" : "") + '" data-fav title="Guardar en favoritas" aria-pressed="' + fav + '">' + (fav ? "★" : "☆") + "</button></div>" +
-      '<div class="bar"><span style="width:' + pct + '%"></span></div>' +
+      '<button class="fav' + (fav ? " on" : "") + '" data-fav title="Guardar en favoritas" aria-label="Guardar en favoritas" aria-pressed="' + fav + '">' + (fav ? "★" : "☆") + "</button></div>" +
+      '<div class="bar"><span style="transform:scaleX(' + pct / 100 + ')"></span></div>' +
       '<p class="q">' + esc(q.q) + "</p>" +
       order.map(function (i, k) { return '<button class="opt" data-i="' + i + '"><span class="letter">' + "abcd"[k] + "</span>" + esc(q.o[i]) + "</button>"; }).join("") +
       '<div class="fb" aria-live="polite"></div>' +

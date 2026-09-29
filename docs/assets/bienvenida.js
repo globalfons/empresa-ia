@@ -15,7 +15,7 @@
     },
     function () { return '<h1>¿Cuándo quieres presentarte?</h1><label>Fecha aproximada del examen<input type="date" name="fecha" value="' + esc(r.fechaExamen) + '"></label><p class="muted small">Si aún no hay fecha oficial, pon la que te marques como objetivo. Puedes dejarla vacía.</p>'; },
     function () {
-      return '<h1>¿Cuánto tiempo puedes estudiar?</h1><label>Horas a la semana<input type="number" name="horas" min="1" max="60" value="' + esc(r.horasSemana) + '"></label>' +
+      return '<h1>¿Cuánto tiempo puedes estudiar?</h1><label>Horas a la semana<input type="number" inputmode="numeric" name="horas" min="1" max="60" value="' + esc(r.horasSemana) + '"></label>' +
         '<fieldset class="dias"><legend>¿Qué días?</legend>' + [[1, "Lunes"], [2, "Martes"], [3, "Miércoles"], [4, "Jueves"], [5, "Viernes"], [6, "Sábado"], [0, "Domingo"]].map(function (d) { return '<label class="check"><input type="checkbox" name="dia" value="' + d[0] + '"' + (r.dias.indexOf(d[0]) >= 0 ? " checked" : "") + "> " + d[1] + "</label>"; }).join("") + "</fieldset>" +
         '<p class="muted small">Repartiremos tus horas entre esos días; el resto serán de descanso.</p>';
     },
@@ -38,7 +38,7 @@
     return "";
   }
   function pintar(msg) {
-    el.innerHTML = '<form class="card onb-card" novalidate><p class="kicker">Paso ' + (paso + 1) + " de " + PASOS.length + '</p><div class="bar"><span style="width:' + (100 * (paso + 1)) / PASOS.length + '%"></span></div>' +
+    el.innerHTML = '<form class="card onb-card" novalidate><p class="kicker">Paso ' + (paso + 1) + " de " + PASOS.length + '</p><div class="bar"><span style="transform:scaleX(' + (paso + 1) / PASOS.length + ')"></span></div>' +
       PASOS[paso]() + (msg ? '<p class="form-msg err" role="alert">' + msg + "</p>" : "") +
       '<p class="onb-nav">' + (paso ? '<button type="button" class="btn" id="atras">Atrás</button> ' : "") + '<button class="btn primary">' + (paso < PASOS.length - 1 ? "Siguiente" : "Crear mi plan y hacer mi primer test") + "</button></p></form>";
     el.querySelector("form").onsubmit = function (e) {

@@ -26,7 +26,12 @@
   }
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; color-scheme: light dark; }
+h1, h2, h3 { text-wrap: balance; }
+button, .opt, .cta, .btn, a { touch-action: manipulation; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 100; background: var(--accent); color: #fff; padding: 8px 14px; border-radius: 8px; font-weight: 600; }
+.skip:focus-visible { top: 8px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16.5px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 .wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; }
 .wrap.wide { max-width: 1080px; }
@@ -141,7 +146,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .meta { display: flex; justify-content: space-between; font-size: .86rem; color: var(--muted); gap: 8px; }
 .timer { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
 .bar { height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
-.bar span { display: block; height: 100%; background: var(--accent); border-radius: 99px; transition: width .3s; }
+.bar span { display: block; width: 100%; height: 100%; background: var(--accent); border-radius: 99px; transform-origin: left center; transition: transform .3s; }
 .quiz .q { font-weight: 650; font-size: 1.08rem; margin: 12px 0 14px; }
 .opt { display: flex; gap: 10px; align-items: flex-start; width: 100%; text-align: left; font: inherit; color: var(--text); background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 14px; margin: 8px 0; cursor: pointer; }
 .opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
@@ -202,7 +207,7 @@ blockquote .src { display: block; font-size: .75rem; font-weight: 700; text-tran
 .badge small { color: var(--muted); font-size: .78rem; }
 .form-inline { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
 input[type=email], input[type=password], input[type=text], input:not([type]) { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); margin-top: 4px; }
-input:focus, select:focus, button:focus-visible, a:focus-visible { outline: 3px solid rgba(29, 78, 216, .35); outline-offset: 1px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid rgba(29, 78, 216, .35); outline-offset: 1px; }
 label { display: block; font-weight: 600; font-size: .92rem; margin: 12px 0 0; }
 label.check { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; }
 label.check input { margin-top: 5px; }

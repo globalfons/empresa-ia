@@ -61,7 +61,8 @@ function page(route, { title, description, body, schema, noindex, wide, scripts 
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="es_ES">
-<meta name="theme-color" content="#1d4ed8">
+<meta name="theme-color" content="#1d4ed8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%231d4ed8'/><path d='M30 52l14 14 26-30' stroke='white' stroke-width='10' fill='none'/></svg>">
 <link rel="stylesheet" href="${root}assets/style.css">
 <script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id), tutorUrl: C.tutorUrl || "", planes: C.planes || null, flags: FLAGS, experimentos: EXP_ACTIVOS })};</script>
@@ -70,11 +71,12 @@ function page(route, { title, description, body, schema, noindex, wide, scripts 
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : ""}${crumbs ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [["Inicio", ""], ...crumbs].map(([name, r], i) => ({ "@type": "ListItem", position: i + 1, name, item: C.url + r })) })}</script>` : ""}
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="${root}"><span class="logo" aria-hidden="true">✓</span>${C.name}</a>
 <nav class="mainnav"><a href="${root}oposiciones/">Oposiciones</a><a href="${root}convocatorias/">Convocatorias</a><a href="${root}panel/">Mi panel</a><a href="${root}precios/">Precios</a><span id="cuenta-nav"></span></nav>
 </div></header>
-<main class="wrap${wide ? " wide" : ""}">
+<main id="main" tabindex="-1" class="wrap${wide ? " wide" : ""}">
 ${body(root)}
 </main>
 <footer class="foot"><div class="wrap foot-grid">
@@ -225,7 +227,7 @@ page("", {
   <div class="hero-demo" aria-hidden="true">
     <div class="demo-card">
       <div class="demo-top"><span>Pregunta 7 de 20</span><span>Art. 122</span></div>
-      <div class="bar"><span style="width:35%"></span></div>
+      <div class="bar"><span style="transform:scaleX(.35)"></span></div>
       <p class="q">El plazo para interponer el recurso de alzada contra un acto expreso es de:</p>
       <div class="opt ok"><span class="letter">a</span>Un mes</div>
       <div class="opt"><span class="letter">b</span>Dos meses</div>
