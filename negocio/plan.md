@@ -14,16 +14,16 @@ Test de leyes para oposiciones en el que **cada respuesta se justifica con la ci
 
 ## Competencia (y cómo diferenciarnos)
 - **OpositaTest:** líder, con un banco enorme y marca. **Redopositor, Oporuta, Typed AI y PreparaOposiciones:** entrantes, varios ya con IA.
-- **Diferencia:** (1) la cita literal verificada en cada respuesta, frente a preguntas de origen desconocido; (2) una página SEO por artículo con su test; (3) precio de fundador bajo (19 € al año frente a 95,88 € al año); (4) sin registro para empezar.
+- **Diferencia:** (1) la cita literal verificada en cada respuesta, frente a preguntas de origen desconocido; (2) una página SEO por artículo con su test; (3) prueba gratis de 3 días y suscripción de 15,99 € al mes (OpositaTest cuesta 95,88 € al año, unos 8 € al mes); (4) sin registro para empezar.
 - **Riesgo honesto:** es un mercado con competidores serios. Nuestra ventaja es el coste casi nulo de producir y verificar contenido, no el tamaño.
 
 ## Escalera de ingresos (cifras honestas)
-Neto aproximado por Pase de 19 €: unos 17,50 € después de la comisión de Lemon Squeezy (≈5 % + 0,50 $).
+Neto aproximado por mensualidad de 15,99 €: unos 14,70 € después de la comisión de Lemon Squeezy (≈5 % + 0,50 $), IVA aparte según el país del cliente.
 
 | Hito | Qué hace falta | Cuándo, si funciona |
 |---|---|---|
-| **1.000 €** | ~57 Pases. 4 leyes publicadas. ~3.000–5.000 visitas al mes y 1–2 % de conversión | 3–6 meses |
-| **10.000 €/año** | ~570 Pases al año. Temario común completo (8–10 normas) y simulacros | 9–18 meses |
+| **1.000 €** | ~68 mensualidades cobradas. 4 leyes publicadas. ~3.000–5.000 visitas al mes y 1–2 % de conversión | 3–6 meses |
+| **10.000 €/año** | ~57 suscriptores activos de media. Temario común completo (8–10 normas) y simulacros | 9–18 meses |
 | **100.000 €/año** | ~4.000–5.000 clientes al año, precio de 19–29 €, varias oposiciones concretas (Estado, Justicia y CCAA grandes) | 2–3 años |
 | **1.000.000 €/año** | Escala de líder del sector: decenas de oposiciones, B2B (licencias del banco de preguntas a academias) y equipo | Posible pero improbable; exige empresa, equipo y marca |
 

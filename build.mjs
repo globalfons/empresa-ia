@@ -306,13 +306,13 @@ ${o.qs.length ? `<h2>Test de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))}
 // ---------- Pase opositor (preventa) ----------
 page("pase/", {
   title: "Pase Opositor: todas las leyes, simulacros y repaso inteligente",
-  description: "Pase Opositor de TestLey: acceso a todas las leyes del temario común, simulacros cronometrados y repaso de fallos. Precio de fundador.",
+  description: "Pase Opositor de TestLey: acceso a todas las leyes del temario común, simulacros cronometrados y repaso de fallos. 3 días de prueba gratis y después 15,99 € al mes.",
   body: (r) => `
 <nav class="crumbs"><a href="${r}">Inicio</a> › <span>Pase Opositor</span></nav>
 <h1>Pase Opositor</h1>
 <p class="lead">El test de la Ley 39/2015 es y seguirá siendo gratis. El Pase Opositor añade el resto del temario común y las herramientas para llegar al examen con todo repasado.</p>
 <div class="box">
-  <p class="price">19 € <span class="muted" style="font-size:1rem;font-weight:400">/ 12 meses · precio de fundador</span></p>
+  <p class="price">15,99 € <span class="muted" style="font-size:1rem;font-weight:400">/ mes · 3 días de prueba gratis</span></p>
   <ul>
     <li>Tests de <strong>${PUBLICADAS.map((L) => esc(L.corto)).join(", ")}</strong> y de las nuevas leyes del temario a medida que se publican.</li>
     <li><strong>Simulacros</strong> con cronómetro y el formato de tu examen.</li>
@@ -321,11 +321,11 @@ page("pase/", {
   </ul>
   ${
     C.checkoutUrl
-      ? `<p><a class="cta" href="${C.checkoutUrl}" rel="noopener">Conseguir el Pase por 19 €</a></p><p class="muted">Pago seguro. Si no te convence, te devolvemos el dinero en los primeros 14 días.</p>`
-      : `<p><strong>Abrimos las plazas de fundador muy pronto.</strong> Mientras tanto, practica gratis con la <a href="${r}${LEY.slug}/">Ley 39/2015</a>.</p>`
+      ? `<p><a class="cta" href="${C.checkoutUrl}" rel="noopener">Empezar la prueba gratis de 3 días</a></p><p class="muted">Pago seguro con Lemon Squeezy. Si cancelas antes de que acaben los 3 días, no se te cobra nada. Después, 15,99 € al mes; puedes cancelar cuando quieras y conservas el acceso hasta el final del mes pagado.</p>`
+      : `<p><strong>Abrimos las suscripciones muy pronto.</strong> Mientras tanto, practica gratis con la <a href="${r}${LEY.slug}/">Ley 39/2015</a>.</p>`
   }
 </div>
-<p class="muted">El precio de fundador se mantiene mientras renueves. Las funciones marcadas se publican de forma progresiva; lo que ya está disponible se indica en cada ley.</p>`,
+<p class="muted">La suscripción se renueva cada mes hasta que la canceles desde el enlace de tu email de compra. Las funciones marcadas se publican de forma progresiva; lo que ya está disponible se indica en cada ley.</p>`,
 });
 
 // ---------- Legales ----------
