@@ -52,7 +52,7 @@ function page(route, { title, description, body, schema, noindex, wide, scripts 
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%231d4ed8'/><path d='M30 52l14 14 26-30' stroke='white' stroke-width='10' fill='none'/></svg>">
 <link rel="stylesheet" href="${root}assets/style.css">
-<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", leyGratis: LEY.slug, lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id), tutorUrl: C.tutorUrl || "" })};</script>
+<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id), tutorUrl: C.tutorUrl || "", planes: C.planes || null })};</script>
 <script src="${root}assets/store.js"></script>${C.tutorUrl ? `\n<script src="${root}assets/tutor.js" defer></script>` : ""}
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : ""}
 </head>
@@ -118,6 +118,21 @@ fs.writeFileSync(path.join(OUT_TMP, "datos", "catalogo.json"), JSON.stringify(OP
   // Datos oficiales con su cita literal (los usa el tutor IA para no inventar nada sobre la convocatoria)
   oficial: Object.entries(o.oficial).flatMap(([k, v]) => (Array.isArray(v) ? v : [v]).map((d) => ({ campo: k, valor: d.valor, cita: d.cita }))),
 }))));
+
+// Novedades oficiales detectadas en el BOE (catalogo/vigilar_boe.py)
+const NOVEDADES = fs.existsSync("catalogo/novedades.json") ? JSON.parse(fs.readFileSync("catalogo/novedades.json", "utf8")) : [];
+fs.writeFileSync(path.join(OUT_TMP, "datos", "novedades.json"), JSON.stringify(NOVEDADES));
+const TIPO_NOV = { convocatoria: "Convocatoria", listas: "Listas de admitidos", aprobados: "Aprobados", fecha_examen: "Fecha de examen", modificacion: "Modificación", correccion: "Corrección de errores", nombramiento: "Nombramientos", otro: "Otra publicación" };
+const novedadesHtml = (o) => {
+  const L = NOVEDADES.filter((n) => n.oposicion === o.id);
+  if (!L.length) return "";
+  const fila = (n) => `<li><span class="nov-f">${fmtFecha(n.fecha)}</span> <span class="chip${n.relevancia === "convocatoria" ? " ok" : ""}">${TIPO_NOV[n.tipo] || n.tipo}</span> <a href="${esc(n.url)}" rel="noopener">${esc(n.titulo)}</a> <span class="muted small">(${esc(n.id)})</span></li>`;
+  const mia = L.filter((n) => n.relevancia === "convocatoria"), otras = L.filter((n) => n.relevancia !== "convocatoria");
+  return `<section class="card"><div class="of-head"><h2>Novedades oficiales en el BOE</h2><span class="badge-oficial">Fuente oficial</span></div>
+${mia.length ? `<h3>De esta convocatoria</h3><ul class="nov">${mia.map(fila).join("")}</ul>` : ""}
+${otras.length ? `<details><summary>Otras publicaciones del mismo cuerpo (${otras.length})</summary><ul class="nov">${otras.map(fila).join("")}</ul></details>` : ""}
+<p class="muted small">Revisamos el sumario del BOE cada día. El tipo (listas, modificación…) se deduce automáticamente del título oficial; abre el enlace para ver el texto completo.</p></section>`;
+};
 
 // ---------- Portada ----------
 const NART = PUBLICADAS.reduce((t, L) => t + L.arts.length, 0), NQ = PUBLICADAS.reduce((t, L) => t + L.qs.length, 0);
@@ -211,7 +226,7 @@ page("", {
 // ---------- Panel, ranking y cuenta ----------
 page("panel/", {
   title: "Mi panel de progreso", description: "Tu progreso en TestLey: nota orientativa, dominio por título, puntos débiles, racha y logros.", noindex: true, wide: true,
-  scripts: ["plan.js", "panel.js"],
+  scripts: ["plan.js", "avisos.js", "panel.js"],
   body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
 page("ranking/", {
@@ -353,6 +368,7 @@ for (const o of OPOS) {
 <p class="muted small">${CAT[o.categoria].icono} <a href="${r}oposiciones/categoria/${o.categoria}/">${esc(o.categoria_nombre)}</a> · ${esc(o.organismo)} · ${esc(o.territorio)}</p>
 <div id="op-accion" data-op="${o.id}" data-nombre="${esc(o.nombre)}"></div>
 ${oficialHtml(o)}
+${novedadesHtml(o)}
 <div class="card"><h2>Cobertura de TestLey</h2>
 <div class="covbar big"><i style="width:${Math.max(2, pct)}%"></i></div>
 <p>Test disponible en <b>${o.temasCubiertos} de ${o.cobertura.temas_legislativos}</b> temas de legislación (${pct} %). ${o.cobertura.temas_no_legislativos ? `Los ${o.cobertura.temas_no_legislativos} temas de informática y ofimática no forman parte de TestLey.` : ""}</p>
@@ -380,7 +396,10 @@ page("pase/", {
     <li>El test combinado de cada oposición con su temario oficial.</li>
     <li><strong>Simulacros</strong> de 30 preguntas en 30 minutos con penalización por error, como en el examen.</li>
     <li><strong>Repaso inteligente</strong>: primero tus fallos y lo que aún no has visto.</li>
-    <li>Práctica por bloques del temario y estadísticas en tu panel.</li>
+    <li><strong>Test a medida</strong> por tema, número de preguntas, tus fallos o tus favoritas, y <strong>modo examen</strong> con análisis de errores.</li>
+    <li><strong>Plan de estudio adaptativo</strong> según tu fecha de examen, tus horas y tus fallos.</li>
+    <li><strong>Avisos del BOE</strong> de las convocatorias que sigues: listas, modificaciones, fechas.</li>${C.tutorUrl ? `
+    <li><strong>Tutor IA</strong> que explica cada pregunta a partir del texto oficial del artículo.</li>` : ""}
   </ul>
   ${
     C.checkoutUrl

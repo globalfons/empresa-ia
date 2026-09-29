@@ -277,7 +277,9 @@
   // La clave se valida contra la API pública de licencias; no hace falta ninguna clave secreta.
   // Se revalida cada 24 h para que una suscripción cancelada deje de dar acceso.
   var LS_PASE = "testley:pase";
-  var LEY_GRATIS = CFG.leyGratis || "ley-39-2015";
+  // Planes configurables (config.json → planes). Sin pagos configurados, todo está disponible.
+  function plan() { var P = CFG.planes; if (!P || !CFG.pase) return null; return pase() ? P.premium : P.free; }
+  function puede(k) { var p = plan(); return !p || !!p[k]; }
   function validarClave(clave) {
     return fetch("https://api.lemonsqueezy.com/v1/licenses/validate", {
       method: "POST", headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" },
@@ -320,8 +322,20 @@
       ? '<a class="nav-user" href="' + root + 'panel/" title="' + s.user.email + '"><span class="avatar">' + s.user.email.charAt(0).toUpperCase() + "</span>Mi panel</a>"
       : '<a class="btn-nav" href="' + root + (ONLINE ? "cuenta/" : "panel/") + '">' + (ONLINE ? "Entrar" : "Mi progreso") + "</a>";
   }
+  function campana() {
+    var el = document.getElementById("cuenta-nav"), aj = ajustes();
+    if (!el || !aj.sigo.length || !puede("alertas")) return;
+    fetch((CFG.root || "./") + "datos/novedades.json").then(function (r) { return r.json(); }).then(function (nov) {
+      var n = nov.filter(function (x) { return aj.sigo.indexOf(x.oposicion) >= 0 && x.relevancia === "convocatoria" && Date.parse(x.detectado || x.fecha) > (aj.vistoAlertas || 0); }).length;
+      if (!n) return;
+      var a = document.createElement("a");
+      a.className = "campana"; a.href = (CFG.root || "./") + "panel/#avisos-t"; a.title = n + " avisos nuevos de tus convocatorias";
+      a.innerHTML = "🔔<b>" + n + "</b>";
+      el.parentNode.insertBefore(a, el);
+    }).catch(function () {});
+  }
   document.addEventListener("DOMContentLoaded", function () {
-    pintarCabecera();
+    pintarCabecera(); campana();
     if (ONLINE && sesion()) refrescar().then(pintarCabecera);
   });
 
@@ -335,7 +349,8 @@
     cargar: function (l) { return fetch((CFG.root || "./") + "datos/" + l + ".json").then(function (r) { return r.json(); }).then(function (d) { DATOS[l] = d; return d; }); },
     pintarCabecera: pintarCabecera,
     pase: pase, activarPase: activarPase, quitarPase: quitarPase,
-    esGratis: function (l) { return l === LEY_GRATIS; },
+    esGratis: function (l) { var p = plan(); return !p || (p.leyes_completas || []).indexOf(l) >= 0 || !!p.tests_completos; },
+    puede: puede, plan: plan,
     esOposicion: function (id) { return (CFG.opos || []).indexOf(id) >= 0; },
     miOposicion: function () { return ajustes().oposicion; },
     setMiOposicion: function (id) { guardarAjustes({ oposicion: id }); },

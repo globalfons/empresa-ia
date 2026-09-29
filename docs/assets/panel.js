@@ -50,6 +50,7 @@
       '<label>Mi nivel<select name="nivel" class="select">' + [["empiezo", "Empiezo de cero"], ["medio", "Ya he estudiado algo"], ["avanzado", "Repaso final"]].map(function (x) { return '<option value="' + x[0] + '"' + (aj.nivel === x[0] ? " selected" : "") + ">" + x[1] + "</option>"; }).join("") + "</select></label>" +
       '<button class="btn primary">Guardar y recalcular el plan</button></form>';
     if (!ES_OP) return '<section class="card"><h2>Elige tu oposición</h2><p>Tu plan de estudio, tu temario y tus simulacros se adaptan a la oposición que prepares.</p>' + form + "</section>";
+    if (!TL.puede("plan_estudio")) return '<section class="card mi-op"><h2>Mi oposición</h2>' + (info ? "<p><b>" + esc(info.nombre) + "</b></p>" : "") + '<details><summary>Mis ajustes de estudio</summary>' + form + "</details></section>" + bloqueo("Tu plan de estudio adaptativo", "Un plan día a día según tu fecha de examen, tus horas y tus fallos, que se recalcula con cada test.");
     var plan = window.TLPlan ? TLPlan.generar(s, data, aj, info && info.sim, TL.estado) : null;
     var cab = '<section class="card mi-op"><div class="of-head"><h2>Mi oposición</h2>' + (info ? '<span class="badge-oficial">' + esc(ESTADO[info.estado] || info.estado) + "</span>" : "") + "</div>" +
       (info ? '<p><b>' + esc(info.nombre) + "</b>" + (info.plazas ? " · " + info.plazas.toLocaleString("es-ES") + " plazas" : "") + '</p><p class="muted small">Convocatoria oficial: <a href="' + esc(info.fuente) + '" rel="noopener">' + esc(info.ref) + "</a>. <a href=\"" + TL.root + "oposiciones/" + LEY + '/">Ver temario y datos oficiales</a></p>' : "") +
@@ -69,7 +70,11 @@
       '<p class="muted small">El plan se recalcula con cada visita según tus aciertos y fallos: prioriza los temas con menos dominio y más errores, reserva tiempo para repasar fallos y añade simulacros según tu nivel y la cercanía del examen (estimamos ' + plan.minPorPregunta + " min por pregunta, incluida la lectura de la cita).</p></section>";
   }
 
+  function bloqueo(titulo, desc) {
+    return '<section class="card upsell-card"><h2>🔒 ' + titulo + '</h2><p>' + desc + '</p><a class="btn primary" href="' + TL.root + 'pase/">Probar el Pase Opositor 3 días gratis</a></section>';
+  }
   function seccionTutor() {
+    if (window.TLTutor && !TL.puede("tutor")) return bloqueo("Tutor IA", "Explicaciones de cada pregunta y respuestas a tus dudas basadas en el texto oficial del BOE.");
     if (!window.TLTutor) return "";
     return '<section class="card tutor-card"><div class="of-head"><h2>Tutor IA</h2><span class="badge-ia">IA</span></div>' +
       '<p class="muted small">Resuelve dudas sobre la ley y tu convocatoria usando solo textos oficiales, y te dice qué estudiar según tus fallos.</p>' +
@@ -86,6 +91,7 @@
   }
 
   function seccionSimulacros(s) {
+    if (!TL.puede("historial_simulacros")) return bloqueo("Simulacros como el examen real", "Número de preguntas, tiempo, opciones y penalización de tu convocatoria, con análisis de errores e historial.");
     var sims = s.sesiones.filter(function (x) { return x[5] === "simulacro" || x[5] === "examen"; }).slice(-10).reverse();
     return '<section class="card"><h2>Simulacros y exámenes</h2>' + (sims.length
       ? '<table class="tabla"><thead><tr><th>Fecha</th><th>Preguntas</th><th>✔</th><th>✘</th><th>Nota</th></tr></thead><tbody>' + sims.map(function (x) {
@@ -102,7 +108,7 @@
       "<p>☆ <b>" + favs + "</b> preguntas favoritas" + (favs ? ' · <a href="' + LEY_URL + '#test=favoritas">Practicarlas</a>' : ' <span class="muted small">(márcalas con la estrella durante un test)</span>') + "</p>" +
       (sigo.length ? '<ul class="weak">' + sigo.map(function (o) { return '<li><a href="' + TL.root + "oposiciones/" + o.id + '/">' + esc(o.nombre) + '</a><span>' + esc(ESTADO[o.estado] || o.estado) + " · revisado " + o.actualizado.split("-").reverse().join("/") + "</span></li>"; }).join("") + "</ul>"
         : '<p class="muted small">Sigue una oposición desde su ficha para recibir avisos de su convocatoria.</p>') +
-      '<div id="avisos"></div></section>';
+      (TL.puede("alertas") ? '<div id="avisos"></div>' : '<p class="muted small">🔒 Los avisos de publicaciones del BOE sobre tus convocatorias están incluidos en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.</p>') + "</section>";
   }
 
   function pintar(data, perfil) {

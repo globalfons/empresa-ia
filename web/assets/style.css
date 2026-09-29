@@ -306,3 +306,11 @@ label.check input { margin-top: 5px; }
 .tutor-resp { border: 1px solid #fde68a; background: #fffbeb; border-radius: 12px; padding: 10px 12px; margin-top: 10px; color: #1f2937; }
 .ia-aviso { font-size: .8rem; color: #92400e; margin: 0 0 6px; }
 .tutor-card textarea { width: 100%; min-height: 80px; font: inherit; padding: 10px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); }
+/* Novedades y avisos */
+.nov { list-style: none; padding: 0; margin: 6px 0 10px; }
+.nov li { padding: 7px 0; border-bottom: 1px solid var(--line); font-size: .9rem; overflow-wrap: anywhere; }
+.nov li.nuevo { background: #fef9c3; }
+.nov-f { font-variant-numeric: tabular-nums; color: var(--muted); }
+.campana { text-decoration: none; margin-right: 8px; font-size: 1rem; }
+.campana b { background: #dc2626; color: #fff; border-radius: 999px; font-size: .7rem; padding: 1px 6px; margin-left: 2px; vertical-align: top; }
+.upsell-card { border-left: 4px solid var(--accent); }

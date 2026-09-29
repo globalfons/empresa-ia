@@ -7,7 +7,7 @@
   var AVISO = '<p class="ia-aviso"><span class="badge-ia">IA</span> Respuesta generada por IA a partir del texto oficial. Puede contener errores: la fuente que manda es el BOE.</p>';
   function requisitos() {
     if (!TL.sesion()) return 'Para usar el tutor, <a href="' + TL.root + 'cuenta/#entrar">entra en tu cuenta</a>.';
-    if (!TL.pase()) return 'El tutor IA está incluido en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.';
+    if (!TL.puede("tutor")) return 'El tutor IA está incluido en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.';
     return "";
   }
   function llamar(cuerpo) {

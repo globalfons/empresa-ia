@@ -9,5 +9,32 @@
   "updated": "2026-09-29",
   "supabaseUrl": "https://gcqdgicpknkwyvrojytm.supabase.co",
   "supabaseAnonKey": "sb_publishable_noK7P35mDxpVbhfaNVt0vw_kihDxogo",
-  "tutorUrl": ""
+  "tutorUrl": "",
+  "planes": {
+    "free": {
+      "nombre": "Gratis",
+      "leyes_completas": [
+        "ley-39-2015"
+      ],
+      "preguntas_muestra": 10,
+      "tests_completos": false,
+      "plan_estudio": false,
+      "historial_simulacros": false,
+      "tutor": false,
+      "alertas": false
+    },
+    "premium": {
+      "nombre": "Pase Opositor",
+      "precio": "15,99 € al mes",
+      "prueba_dias": 3,
+      "leyes_completas": [],
+      "preguntas_muestra": 0,
+      "tests_completos": true,
+      "plan_estudio": true,
+      "historial_simulacros": true,
+      "tutor": true,
+      "alertas": true
+    },
+    "_ayuda": "leyes_completas: leyes con todos los modos de test sin Pase. preguntas_muestra: preguntas gratis por ley u oposición. El resto de claves activan secciones (plan_estudio, historial_simulacros, tutor, alertas)."
+  }
 }

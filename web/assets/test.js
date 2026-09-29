@@ -23,8 +23,8 @@
   }
 
   // Sin Pase: la ley gratuita y los tests por artículo están completos; en el resto, 10 preguntas de muestra repartidas por la ley.
-  var MUESTRA = 10;
-  function bloqueado() { return (window.TL_CONFIG || {}).pase && !TL.esGratis(LEY) && !TL.pase(); }
+  var MUESTRA = (TL.plan() && TL.plan().preguntas_muestra) || 10;
+  function bloqueado() { return !TL.esGratis(LEY); }
   function muestra() {
     var paso = data.qs.length / MUESTRA, out = [];
     for (var i = 0; i < Math.min(MUESTRA, data.qs.length); i++) out.push(data.qs[Math.floor(i * paso)]);
