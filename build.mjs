@@ -52,7 +52,7 @@ function page(route, { title, description, body, schema, noindex, wide, scripts 
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%231d4ed8'/><path d='M30 52l14 14 26-30' stroke='white' stroke-width='10' fill='none'/></svg>">
 <link rel="stylesheet" href="${root}assets/style.css">
-<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", leyGratis: LEY.slug, lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl })};</script>
+<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", leyGratis: LEY.slug, lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id) })};</script>
 <script src="${root}assets/store.js"></script>
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : ""}
 </head>
@@ -81,7 +81,7 @@ const OPOS = JSON.parse(fs.readFileSync("catalogo/oposiciones.json", "utf8"));
 const NORMAS = Object.fromEntries(JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n) => [n.id, n]));
 // Leyes con test publicado: id BOE -> datos
 const PUB = Object.fromEntries(PUBLICADAS.map((L) => [L.id, L]));
-const AMBITO = { estatal: "Administración del Estado", autonomico: "Comunidades autónomas", local: "Administración local", justicia: "Justicia", otros: "Otras" };
+const AMBITO = { estatal: "Administración del Estado", seguridad: "Policía y seguridad", autonomico: "Comunidades autónomas", local: "Administración local", justicia: "Justicia", otros: "Otras" };
 const fmtN = (n) => Number(n).toLocaleString("es-ES", { useGrouping: "always" });
 for (const o of OPOS) {
   const ids = [...new Set(o.temario.flatMap((t) => t.normas))];

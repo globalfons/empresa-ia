@@ -14,7 +14,7 @@
   function fmt(n) { return (Math.round(n * 10) / 10).toLocaleString("es-ES"); }
 
   if (!TL.online) {
-    el.innerHTML = '<div class="card empty"><p class="big-ico">🏆</p><h2>El ranking se abre muy pronto</h2><p>Cuando se activen las cuentas podrás competir con otros opositores por la mejor nota. Mientras tanto, prepara tu posición: tu progreso ya se está guardando.</p><a class="cta" href="' + TL.root + (/^age-/.test(LEY) ? 'oposiciones/' + LEY : LEY) + '/#quiz">Practicar ahora</a></div>';
+    el.innerHTML = '<div class="card empty"><p class="big-ico">🏆</p><h2>El ranking se abre muy pronto</h2><p>Cuando se activen las cuentas podrás competir con otros opositores por la mejor nota. Mientras tanto, prepara tu posición: tu progreso ya se está guardando.</p><a class="cta" href="' + TL.root + (TL.esOposicion(LEY) ? 'oposiciones/' + LEY : LEY) + '/#quiz">Practicar ahora</a></div>';
     return;
   }
   el.innerHTML = '<p class="muted">Cargando ranking…</p>';

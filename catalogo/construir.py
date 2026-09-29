@@ -112,6 +112,45 @@ for oid, nombre, grupo, an in OPOS:
                  "convocatoria": dict(BASE, anexo=an, plazas=plazas, turno="libre"),
                  "temario": temario(conv, a, b), "fuente_temario": URL, "verificado": "2026-09-28", "notas": ""})
 
+# ---------- Oposiciones con temario "Tema N." y asignación manual tema -> normas ----------
+# Cada tema se asigna a mano leyendo su título; 'G' = legislativo sin norma consolidada en el BOE,
+# 'N' = no legislativo (ciencias sociales, lengua, informática, técnica).
+CE, CC, DP, L40, L50, TREBEP = "BOE-A-1978-31229", "BOE-A-1889-4763", "BOE-A-1981-10325", "BOE-A-2015-10566", "BOE-A-1997-25336", "BOE-A-2015-11719"
+CP, LECRIM, HC, LOPD, LO7, PRL = "BOE-A-1995-25444", "BOE-A-1882-6036", "BOE-A-1984-11620", "BOE-A-2018-16673", "BOE-A-2021-8806", "BOE-A-1995-24292"
+IGUALDAD = ["BOE-A-2007-6115", "BOE-A-2004-21760", "BOE-A-2006-21990", "BOE-A-2023-5366"]
+def temario_tema(texto, bloque_rx, mapa):
+    temas, bloque = [], None
+    for linea in texto.replace("\u2003", " ").replace("\xa0", " ").split("\n"):
+        linea = linea.strip()
+        m = re.match(bloque_rx, linea)
+        if m: bloque = linea; continue
+        m = re.match(r"^Tema (\d+)\. (.+)$", linea)
+        if m and bloque:
+            n = int(m.group(1)); v = mapa[n]
+            tipo = "no_legislativo" if v == "N" else "legislativo_generico" if v == "G" else "legislativo"
+            normas = v if isinstance(v, list) else []
+            temas.append({"bloque": bloque, "tema": n, "titulo": m.group(2), "tipo": tipo, "normas": normas,
+                          "asignacion": {x: ("explicita" if re.search(NORMAS[x]["nombre"].split(",")[0].replace("(", r"\(").replace(")", r"\)"), m.group(2)) else "inferida") for x in normas}})
+    assert temas and [t["tema"] for t in temas] == list(range(1, len(temas) + 1)), "temario incompleto"
+    return temas
+
+pn = open(os.path.join(D, "fuentes", "BOE-A-2026-15055.txt")).read()
+a, b = pn.find("ANEXO I\n"), pn.find("\nANEXO II\n")
+PN_MAPA = {1: [CC], 2: [CE, DP], 3: [CE], 4: "G", 5: [L40, L50], 6: [TREBEP], 7: "G",
+           8: ["BOE-A-2015-8468", "BOE-A-2010-8115"], 9: ["BOE-A-1986-6859"], 10: ["BOE-A-2007-4184", "BOE-A-2000-544"],
+           11: ["BOE-A-2000-544"], 12: ["BOE-A-2009-17242"], 13: ["BOE-A-2014-3649"], 14: ["BOE-A-2015-3442"],
+           15: ["BOE-A-2011-7630"], 16: [CP], 17: [CP], 18: [CP], 19: [CP], 20: [CP, LECRIM], 21: [LECRIM, HC],
+           22: ["BOE-A-2015-4606"], 23: IGUALDAD, 24: [PRL], 25: [PRL], 26: [LOPD, LO7], 27: "G",
+           **{n: "N" for n in range(28, 42)}, 42: ["BOE-A-1993-6202"], 43: ["BOE-A-2003-23514", "BOE-A-2015-11722"], 44: "N", 45: "N"}
+URL_PN = "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15055"
+opos.append({"id": "policia-nacional-escala-basica", "nombre": "Policía Nacional, Escala Básica (categoría de Policía)", "ambito": "seguridad",
+             "administracion": "Ministerio del Interior", "grupo": "C1",
+             "convocatoria": {"referencia": "Resolución de 7 de julio de 2026, de la Dirección General de la Policía (BOE-A-2026-15055)",
+                              "fecha_publicacion": "2026-07-10", "url_oficial": URL_PN, "estado": "convocada", "anexo": "I",
+                              "plazas": int(re.search(r"Se convocan\s+([\d\.]+)\s+plazas", pn).group(1).replace(".", "")), "turno": "libre"},
+             "temario": temario_tema(pn[a:b], r"^[A-C]\) ", PN_MAPA), "fuente_temario": URL_PN, "verificado": "2026-09-29",
+             "notas": "Examen de conocimientos: 100 preguntas con 3 opciones en 50 minutos. Además hay ortografía, psicotécnicos, pruebas físicas y entrevista."})
+
 # Normas: a qué oposiciones y temas afectan + prioridad
 normas = []
 for nid, n in NORMAS.items():

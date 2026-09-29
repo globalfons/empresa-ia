@@ -312,6 +312,7 @@
     pintarCabecera: pintarCabecera,
     pase: pase, activarPase: activarPase, quitarPase: quitarPase,
     esGratis: function (l) { return l === LEY_GRATIS; },
+    esOposicion: function (id) { return (CFG.opos || []).indexOf(id) >= 0; },
     miOposicion: function () { return lsGet("testley:op", null); },
     setMiOposicion: function (id) { lsSet("testley:op", id); },
     _prog: function () { return prog; },
