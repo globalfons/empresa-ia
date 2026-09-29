@@ -13,6 +13,11 @@
 
   // Versión del texto legal contra la que se verificó la cita (datos/sellar_preguntas.py)
   function verif(q) { return q.verificada_contra ? " · texto vigente a " + q.verificada_contra.split("-").reverse().join("/") : ""; }
+  // Pregunta de un examen oficial publicado (procedencia OFFICIAL_EXAM): se identifica siempre con su referencia documental
+  function oficial(q) {
+    var e = q.procedencia === "OFFICIAL_EXAM" && q.examen_oficial;
+    return e ? '<p class="small"><span class="badge-oficial">Pregunta de examen oficial</span> ' + esc(e.organismo + " · " + e.convocatoria + " · " + e.fecha_examen) + ' · <a href="' + esc(e.url_oficial) + '" rel="noopener">' + esc(e.documento) + "</a></p>" : "";
+  }
   function nombreLey(q) { var l = data.leyes || {}; return l[q.ley || LEY] || l[Object.keys(l)[0]] || ""; }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
@@ -101,7 +106,7 @@
       b.onclick = function () {
         var m = b.getAttribute("data-m");
         if (m === "repaso") start(repaso(20), m);
-        else if (m === "simulacro") start(shuffle(data.qs).slice(0, SIM.preguntas), m);
+        else if (m === "simulacro") start(simulacro(), m);
         else if (m === "fallos") start(data.qs.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }), m);
         else start(shuffle(data.qs).slice(0, +m), m);
       };
@@ -135,7 +140,7 @@
     if (h && !lanzado) {
       lanzado = true;
       if (h === "repaso") start(repaso(20), "repaso");
-      else if (h === "simulacro") start(shuffle(data.qs).slice(0, SIM.preguntas), "simulacro");
+      else if (h === "simulacro") start(simulacro(), "simulacro");
       else if (h === "fallos") start(filtrarPool("", "falladas"), "fallos");
       else if (h === "favoritas") start(filtrarPool("", "favoritas"), "favoritas");
       else if (/^tema-\d+$/.test(h)) start(filtrarPool("t" + h.slice(5), "prioridad").slice(0, 20), "tema");
@@ -173,9 +178,14 @@
   function esExamen() { return modo === "simulacro" || modo === "examen"; }
   function minutos() { return modo === "simulacro" ? SIM.minutos : Math.max(1, Math.ceil((queue.length * SIM.minutos) / SIM.preguntas)); }
   var respuestas; // [{q, elegida}] para el análisis de errores
+  // Simulacro: reparto por temas y reserva según la configuración de la oposición (TL.seleccionSimulacro). Las de reserva no puntúan.
+  var reserva = {};
+  function simulacro() { var s = TL.seleccionSimulacro(data.qs, SIM); reserva = {}; s.reserva.forEach(function (q) { reserva[q.id] = 1; }); return s.lista.concat(s.reserva); }
+  function puntuables(k) { return queue.slice(0, k).filter(function (q) { return !reserva[q.id]; }).length; }
 
   function start(list, m) {
     queue = list; idx = 0; ok = 0; ko = 0; blank = 0; modo = m; respuestas = []; t0 = Date.now(); ultimaLista = list;
+    if (m !== "simulacro") reserva = {};
     if (!queue.length) { menu(); return; }
     if (window.TLEventos) TLEventos.emitir(esExamen() ? "SIMULATION_STARTED" : "TEST_STARTED", { contexto: LEY, modo: m, preguntas: queue.length });
     clearInterval(timer);
@@ -185,7 +195,7 @@
         var t = el.querySelector(".timer");
         var r = Math.max(0, fin - Date.now());
         if (t) t.textContent = Math.floor(r / 60000) + ":" + ("0" + Math.floor((r % 60000) / 1000)).slice(-2);
-        if (!r) { blank += queue.length - idx; idx = queue.length; resultado(); }
+        if (!r) { blank += puntuables(queue.length) - puntuables(idx); idx = queue.length; resultado(); }
       }, 500);
     }
     show();
@@ -197,7 +207,7 @@
     var order = esExamen() && SIM.opciones < 4 ? shuffle([q.a].concat(shuffle([0, 1, 2, 3].filter(function (i) { return i !== q.a; })).slice(0, SIM.opciones - 1))) : shuffle([0, 1, 2, 3]);
     var pct = Math.round((idx / queue.length) * 100);
     el.innerHTML =
-      '<div class="meta"><span>Pregunta ' + (idx + 1) + " de " + queue.length + "</span>" +
+      '<div class="meta"><span>' + (reserva[q.id] ? "Pregunta de reserva (no puntúa)" : "Pregunta " + (idx + 1) + " de " + puntuables(queue.length)) + "</span>" +
       (esExamen() ? '<span class="timer">' + minutos() + ':00</span>' : "<span>" + nombreLey(q) + " · Art. " + (q.artn || q.art) + "</span>") +
       '<button class="fav' + (fav ? " on" : "") + '" data-fav title="Guardar en favoritas" aria-label="Guardar en favoritas" aria-pressed="' + fav + '">' + (fav ? "★" : "☆") + "</button></div>" +
       '<div class="bar"><span style="transform:scaleX(' + pct / 100 + ')"></span></div>' +
@@ -207,7 +217,7 @@
       '<div class="actions"><button class="btn" data-skip>Dejar en blanco</button><button class="btn ghost" data-exit>' + (esExamen() ? "Terminar" : "Salir") + "</button></div>";
     el.querySelectorAll(".opt").forEach(function (b) { b.onclick = function () { answer(q, +b.getAttribute("data-i")); }; });
     el.querySelector("[data-fav]").onclick = function () { var on = TL.alternarFavorita(fk); this.classList.toggle("on", on); this.textContent = on ? "★" : "☆"; this.setAttribute("aria-pressed", on); };
-    el.querySelector("[data-skip]").onclick = function () { blank++; respuestas.push({ q: q, elegida: null }); next(); };
+    el.querySelector("[data-skip]").onclick = function () { if (!reserva[q.id]) blank++; respuestas.push({ q: q, elegida: null }); next(); };
     el.querySelector("[data-exit]").onclick = function () { if (idx > 0) resultado(true); else menu(); };
   }
 
@@ -215,7 +225,7 @@
     var right = i === q.a;
     TL.registrarRespuesta(q.ley || LEY, q.id, right, LEY);
     respuestas.push({ q: q, elegida: i });
-    if (right) ok++; else ko++;
+    if (!reserva[q.id]) { if (right) ok++; else ko++; }
     el.querySelectorAll(".opt").forEach(function (b) {
       var bi = +b.getAttribute("data-i");
       b.disabled = true;
@@ -227,6 +237,7 @@
     el.querySelector(".fb").innerHTML =
       '<p class="verdict ' + (right ? "good" : "bad") + '">' + (right ? "✔ Correcto" : "✘ Incorrecto") + "</p>" +
       '<blockquote><span class="src">Artículo ' + (q.artn || q.art) + " · " + nombreLey(q) + " (BOE)" + verif(q) + "</span>«" + esc(q.cita) + "»</blockquote>" +
+      oficial(q) +
       (q.exp ? '<p class="exp"><span class="badge-testley">Explicación de TestLey</span> ' + esc(q.exp) + "</p>" : "") +
       '<a href="' + TL.root + (q.ley || LEY) + "/articulo-" + (q.artn || q.art) + '/">Leer el artículo ' + (q.artn || q.art) + " completo</a>" +
       (window.TLTutor ? ' · <button class="linklike" data-tutor>Explícamelo (IA)</button>' : "");
@@ -263,7 +274,7 @@
 
   function resultado(parcial) {
     clearInterval(timer);
-    var n = parcial ? idx : queue.length;
+    var n = puntuables(parcial ? idx : queue.length);
     var pen = SIM.penalizacion; // la de la oposición (o 1/3 por defecto)
     var segundos = Math.round((Date.now() - t0) / 1000);
     TL.registrarSesion(LEY, n, ok, ko, blank, modo, pen, segundos);
@@ -289,7 +300,7 @@
       "</div>";
     var esteTest = respuestas.filter(function (r) { return r.elegida !== null && r.elegida !== r.q.a; }).map(function (r) { return r.q; });
     var be = el.querySelector("[data-errores]"); if (be) be.onclick = function () { start(esteTest, "fallos"); };
-    var br = el.querySelector("[data-repetir]"); if (br) br.onclick = function () { start(modo === "simulacro" ? shuffle(data.qs).slice(0, SIM.preguntas) : shuffle(ultimaLista), modo); };
+    var br = el.querySelector("[data-repetir]"); if (br) br.onclick = function () { start(modo === "simulacro" ? simulacro() : shuffle(ultimaLista), modo); };
     el.querySelector("[data-again]").onclick = function () {
       el.removeAttribute("data-art");
       var pool = bloqueado() ? muestra() : data.qs;

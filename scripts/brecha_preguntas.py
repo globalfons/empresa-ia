@@ -43,7 +43,10 @@ def reparto(total, pesos):
     return base
 
 
-def main():
+def calcular(objetivo_de=None):
+    """Déficit por tema y por ley. objetivo_de(oposicion, indice, leyes) → objetivo del tema (por defecto OBJETIVO).
+    Cada ley del detalle de un tema lleva en «_arts» la lista de artículos de su ámbito (uso interno: fabrica/)."""
+    objetivo_de = objetivo_de or (lambda oid, i, leyes: OBJETIVO)
     cob = {o["id"]: o for o in J("docs", "datos", "cobertura.json")}
     opos = J("catalogo", "oposiciones.json")
     slug_de = {n["id"]: n["slug"] for n in J("catalogo", "normas_base.json")}
@@ -83,7 +86,6 @@ def main():
             if not c["legislativo"]:
                 continue
             assert c["preguntas"] == nq_tm[i], f"{oid} tema {i}: cobertura {c['preguntas']} != tm {nq_tm[i]}"
-            faltan = max(0, OBJETIVO - c["preguntas"])
             leyes, sin_texto = [], []
             for nid in t["normas"]:
                 sl = slug_de.get(nid)
@@ -98,6 +100,8 @@ def main():
                     leyes.append({"ley": sl, "ambito": tipo, "articulos_ambito": amb})
                 else:
                     sin_texto.append(sl or nid)
+            objetivo = objetivo_de(oid, i, leyes) if leyes else OBJETIVO
+            faltan = max(0, objetivo - c["preguntas"])
             ident = {"oposicion": oid, "indice": i, "tema": t["tema"], "bloque": t.get("bloque"), "titulo": c["titulo"]}
             if not leyes:
                 sin_fuente.append({**ident, "preguntas": c["preguntas"], "faltan": faltan, "normas": t["normas"],
@@ -112,9 +116,9 @@ def main():
             for L in leyes:
                 sin_p = [n for n in L["articulos_ambito"] if not preg_art.get(L["ley"], {}).get(n)]
                 detalle.append({"ley": L["ley"], "ambito": L["ambito"], "articulos_ambito": len(L["articulos_ambito"]),
-                                "faltan_asignadas": rep[L["ley"]], "articulos_sin_preguntas": sin_p})
+                                "faltan_asignadas": rep[L["ley"]], "articulos_sin_preguntas": sin_p, "_arts": L["articulos_ambito"]})
                 temas_ley[L["ley"]].append({**ident, "faltan": rep[L["ley"]], "arts": set(L["articulos_ambito"])})
-            temas_def.append({**ident, "preguntas": c["preguntas"], "faltan": faltan, "leyes_sin_texto": sin_texto, "leyes": detalle})
+            temas_def.append({**ident, "preguntas": c["preguntas"], "objetivo": objetivo, "faltan": faltan, "leyes_sin_texto": sin_texto, "leyes": detalle})
 
     # Por ley
     por_ley = []
@@ -160,7 +164,16 @@ def main():
     total = {"demanda_suma": sum(x["demanda_suma"] for x in por_ley), "demanda_minima": sum(x["demanda_minima"] for x in por_ley),
              "faltan_temas": sum(t["faltan"] for t in temas_def), "temas_con_deficit": len(temas_def),
              "temas_sin_fuente": len(sin_fuente), "faltan_sin_fuente": sum(t["faltan"] for t in sin_fuente)}
-    salida = {"objetivo_por_tema": OBJETIVO, "total": total, "por_ley": por_ley, "temas": temas_def, "temas_sin_fuente": sin_fuente}
+    return {"objetivo_por_tema": OBJETIVO, "total": total, "por_ley": por_ley, "temas": temas_def, "temas_sin_fuente": sin_fuente}
+
+
+def main():
+    salida = calcular()
+    total, por_ley, sin_fuente = salida["total"], salida["por_ley"], salida["temas_sin_fuente"]
+    for t in salida["temas"]:
+        t.pop("objetivo", None)
+        for L in t["leyes"]:
+            L.pop("_arts", None)
     os.makedirs(os.path.join(R, "documentacion"), exist_ok=True)
     with open(os.path.join(R, "documentacion", "brecha-preguntas.json"), "w", encoding="utf-8") as f:
         json.dump(salida, f, ensure_ascii=False, indent=1)

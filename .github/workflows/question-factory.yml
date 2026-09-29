@@ -1,0 +1,111 @@
+# Fábrica de preguntas de TestLey (fabrica/motor.py). Solo manual: nunca se ejecuta en cada push.
+# Secreto necesario (Settings → Secrets and variables → Actions): ANTHROPIC_API_KEY. Nunca se imprime ni se guarda.
+# Cada tramo de lotes: generar → validar el banco → construir la web → commit y push (si se interrumpe, lo ya
+# guardado se conserva y la siguiente ejecución continúa desde el déficit que quede).
+name: Question Factory
+on:
+  workflow_dispatch:
+    inputs:
+      opposition:
+        description: "Oposición (alias o id): auxiliar-administrativo-age, administrativo-age, policia-nacional-basica, policia-nacional-ejecutiva, gestion-age, guardia-civil o todas"
+        required: true
+        default: "auxiliar-administrativo-age"
+      batch_size:
+        description: "Preguntas por lote (10 en el piloto; 25-50 cuando la calidad sea estable)"
+        required: true
+        default: "10"
+      target_questions:
+        description: "Preguntas VALID nuevas en esta ejecución"
+        required: true
+        default: "50"
+      dry_run:
+        description: "Simular la selección sin llamar a la API ni tocar el banco"
+        type: boolean
+        default: true
+      max_cost_usd:
+        description: "Tope de coste estimado de la ejecución (USD)"
+        required: true
+        default: "5"
+      resume:
+        description: "Levantar una pausa GENERATION_PAUSED (solo tras corregir su causa)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: escritura-repo   # la misma cola que la ingesta: nunca dos procesos escribiendo el repositorio a la vez
+  cancel-in-progress: false
+jobs:
+  fabrica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      OPOSICION: ${{ inputs.opposition }}
+      LOTE: ${{ inputs.batch_size }}
+      OBJETIVO: ${{ inputs.target_questions }}
+      DRY_RUN: ${{ inputs.dry_run }}
+      MAX_COSTE: ${{ inputs.max_cost_usd }}
+      REANUDAR: ${{ inputs.resume }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Dependencias
+        run: pip install "anthropic>=0.60"
+      - name: Comprobaciones previas (banco, tests y build deben estar en verde)
+        run: |
+          npm run lint
+          npm run validar
+          npm run test:py
+          npm run build
+      - name: Dry run (selección y coste estimado; sin API)
+        if: ${{ inputs.dry_run }}
+        run: python3 -m fabrica.motor --dry-run --oposicion "$OPOSICION" --lote "$LOTE" --lotes 5 --informe fabrica-informe.json
+      - name: Generar por tramos, validar y guardar
+        if: ${{ !inputs.dry_run }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -u
+          [ -n "${ANTHROPIC_API_KEY:-}" ] || { echo "::error::Falta el secreto ANTHROPIC_API_KEY"; exit 1; }
+          git config user.name "testley-fabrica"
+          git config user.email "testley-fabrica@users.noreply.github.com"
+          hechas=0; flag_reanudar=""
+          [ "$REANUDAR" = "true" ] && flag_reanudar="--reanudar"
+          estado=0
+          while [ "$hechas" -lt "$OBJETIVO" ]; do
+            falta=$((OBJETIVO - hechas))
+            set +e
+            python3 -m fabrica.motor --oposicion "$OPOSICION" --lote "$LOTE" --objetivo "$falta" --lotes 5 \
+              --max-coste "$MAX_COSTE" --informe fabrica-informe.json $flag_reanudar
+            estado=$?
+            set -e
+            flag_reanudar=""
+            nuevas=$(python3 -c "import json;print(json.load(open('fabrica-informe.json')).get('validas',0))")
+            hechas=$((hechas + nuevas))
+            # El banco completo debe seguir válido; si no, no se guarda nada de este tramo
+            npm run validar
+            python3 scripts/brecha_preguntas.py > /dev/null
+            npm run build
+            python3 -W ignore -m unittest tests.test_ids_estables tests.test_fabrica
+            git add datos/preguntas-*.json datos/candidatas datos/ids-congelados.json datos/calidad.json fabrica/estado documentacion/brecha-preguntas.json docs
+            if git diff --cached | grep -qF "$ANTHROPIC_API_KEY"; then echo "::error::Posible filtración del secreto: se detiene"; exit 1; fi
+            git diff --cached --quiet || git commit -q -m "Question Factory: +$nuevas preguntas VALID ($OPOSICION)"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep $((i * 5)); done
+            if [ "$estado" -ne 0 ] || [ "$nuevas" -eq 0 ]; then break; fi
+          done
+          echo "Preguntas VALID nuevas en esta ejecución: $hechas"
+          if [ "$estado" -eq 3 ]; then echo "::error::GENERATION_PAUSED: revisa fabrica/estado/estado.json"; exit 1; fi
+          exit "$estado"
+      - name: Informe y métricas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fabrica-informe
+          path: |
+            fabrica-informe.json
+            fabrica/estado/metricas.json
+            fabrica/estado/estado.json
+          if-no-files-found: ignore

@@ -1,0 +1,74 @@
+{
+ "_ayuda": "Configuración de la fábrica de preguntas (fabrica/motor.py). Precios en USD por millón de tokens [entrada, salida] (tarifa oficial de Anthropic, 25/09/2026); solo se usan para estimar el coste de cada lote.",
+ "modelos": {
+  "generador": "claude-opus-5-5",
+  "juez": "claude-haiku-4-5",
+  "esfuerzo_generador": "medium"
+ },
+ "precios_usd_mtok": {
+  "claude-opus-5-5": [4.0, 20.0],
+  "claude-haiku-4-5": [1.0, 5.0],
+  "claude-opus-5": [5.0, 25.0],
+  "claude-opus-4-8": [5.0, 25.0],
+  "claude-sonnet-5-5": [2.0, 10.0]
+ },
+ "lote": {
+  "tamano_inicial": 10,
+  "tamano_maximo": 50,
+  "max_preguntas_por_llamada": 3,
+  "max_rechazo": 0.30,
+  "max_revision_ventana": 0.45,
+  "max_duplicados_ventana": 0.30,
+  "ventana_lotes": 5,
+  "max_coste_por_valida_usd": 0.25,
+  "max_rechazos_por_articulo": 3
+ },
+ "cobertura": {
+  "objetivo_tema_min": 100,
+  "objetivo_tema_max": 200,
+  "palabras_por_pregunta": 40,
+  "max_preguntas_por_articulo": 10,
+  "min_palabras_articulo": 25
+ },
+ "dificultad_por_defecto": {"1": 0.30, "2": 0.50, "3": 0.20},
+ "dificultad_por_oposicion": {},
+ "tipos": {
+  "literal": {"dif": 1, "flexible": false},
+  "definiciones": {"dif": 1, "flexible": false},
+  "plazos": {"dif": 1, "flexible": true},
+  "organos": {"dif": 1, "flexible": true},
+  "conceptual": {"dif": 2, "flexible": true},
+  "competencias": {"dif": 2, "flexible": true},
+  "requisitos": {"dif": 2, "flexible": true},
+  "procedimiento": {"dif": 2, "flexible": true},
+  "aplicacion": {"dif": 2, "flexible": true},
+  "comparativa": {"dif": 2, "flexible": true},
+  "excepcion": {"dif": 2, "flexible": true},
+  "negativa": {"dif": 2, "flexible": true},
+  "caso_practico": {"dif": 3, "flexible": false},
+  "relacion_articulos": {"dif": 3, "flexible": false},
+  "dificil": {"dif": 3, "flexible": false}
+ },
+ "tipos_revision_obligatoria": ["caso_practico", "relacion_articulos"],
+ "max_proporcion_caso_practico": 0.10,
+ "similitud": {
+  "duplicado_lexico": 0.88,
+  "sospecha_semantica": 0.45
+ },
+ "oposiciones_prioridad": [
+  "age-auxiliar-administrativo-c2",
+  "age-administrativo-c1",
+  "policia-nacional-escala-basica",
+  "policia-nacional-escala-ejecutiva",
+  "age-gestion-a2",
+  "guardia-civil-cabos-guardias"
+ ],
+ "alias_oposicion": {
+  "auxiliar-administrativo-age": "age-auxiliar-administrativo-c2",
+  "administrativo-age": "age-administrativo-c1",
+  "gestion-age": "age-gestion-a2",
+  "policia-nacional-basica": "policia-nacional-escala-basica",
+  "policia-nacional-ejecutiva": "policia-nacional-escala-ejecutiva",
+  "guardia-civil": "guardia-civil-cabos-guardias"
+ }
+}

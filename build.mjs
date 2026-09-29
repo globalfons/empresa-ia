@@ -33,6 +33,8 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
   return L;
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
+// Campos internos de la fábrica (fabrica/): se quedan en datos/, no viajan al navegador
+const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, ...q }) => q;
 // lastmod de las páginas de cada ley: último commit de sus preguntas o de su texto (si hay cambios sin commit, hoy).
 // En un clon superficial (checkout de CI con fetch-depth 1) la historia no es fiable: se usa config.updated.
 const GIT_OK = (() => { try { return execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() === "false"; } catch { return false; } })();
@@ -187,7 +189,7 @@ for (const o of OPOS) {
     const L = PUB[id];
     o.leyes[L.slug] = L.corto;
     for (const a of L.arts) o.arts[`${L.slug}:${a.n}`] = { t: a.titulo, b: L.corto };
-    for (const q of L.qs) o.qs.push({ ...q, ley: L.slug, art: `${L.slug}:${q.art}`, artn: q.art });
+    for (const q of L.qs) o.qs.push({ ...PUBLICO(q), ley: L.slug, art: `${L.slug}:${q.art}`, artn: q.art });
   }
   // Pertenencia de cada pregunta a los temas: su ley + (si la ley se reparte entre varios temas) los títulos/capítulos del tema
   o.temaInfo = o.temario.map((t, i) => {
@@ -924,7 +926,7 @@ ${ARTS.length ? `<ul class="nov">${ARTS.sort((a, b) => (b.published_at || "").lo
   const filaC = (c) => `<tr><td><small>${esc((c.scheduled_for || c.created_at || "").slice(0, 16).replace("T", " "))}</small></td><td>${esc(c.type)}</td><td><details><summary>${esc(c.title.slice(0, 90))}</summary><pre class="pre">${esc(c.body)}</pre><p class="small">Fuentes: ${(c.source_urls || []).map((u) => `<a href="${esc(u)}">${esc(u.slice(0, 60))}</a>`).join(", ")} · generado: ${esc(c.generated_by)}${c.model ? " (" + esc(c.model) + ")" : ""} · confianza ${c.confidence}</p><p class="small muted">Revisar: <code>python3 -m crecimiento.cli aprobar ${esc(c.id)}</code> · <code>rechazar ${esc(c.id)} "motivo"</code> · <code>reprogramar ${esc(c.id)} AAAA-MM-DDTHH:MM:00Z</code></p></details></td><td>${esc(c.opposition_id || (c.facts || {}).id || "")}</td><td><small>${esc(c.event_type || "")}</small></td><td><b>${esc(c.status)}</b>${c.publicacion_manual ? '<br><small class="warn">publicar a mano</small>' : ""}${c.status === "REJECTED" ? `<br><small>${esc(((c.history || []).slice(-1)[0] || {}).nota || "")}</small>` : ""}</td></tr>`;
   const tablaC = (L) => L.length ? `<div class="tabla-scroll"><table class="tabla"><thead><tr><th>Fecha</th><th>Canal</th><th>Contenido</th><th>Oposición</th><th>Evento</th><th>Estado</th></tr></thead><tbody>${L.map(filaC).join("")}</tbody></table></div>` : '<p class="muted">Nada.</p>';
   const kpis = (pares) => `<div class="kpis">${pares.map(([n, l]) => `<div class="kpi"><span class="kpi-n">${n}</span><span class="kpi-l">${l}</span></div>`).join("")}</div>`;
-  const navAdmin = (r) => `<p class="small"><a href="${r}admin/growth/">Growth</a> · <a href="${r}admin/growth/jobs/">Trabajos</a> · <a href="${r}admin/system/">Sistema</a> · <a href="${r}admin/fuentes/">Fuentes</a></p>`;
+  const navAdmin = (r) => `<p class="small"><a href="${r}admin/growth/">Growth</a> · <a href="${r}admin/growth/jobs/">Trabajos</a> · <a href="${r}admin/system/">Sistema</a> · <a href="${r}admin/fuentes/">Fuentes</a> · <a href="${r}admin/preguntas/">Preguntas</a></p>`;
   page("admin/growth/", {
     title: "Admin · Growth", description: "Panel de crecimiento de TestLey.", noindex: true, wide: true, scripts: ["admin-growth.js"],
     body: (r) => `<h1>Admin · Growth</h1>${navAdmin(r)}
@@ -962,6 +964,25 @@ ${desf ? `<section class="card"><h2>Preguntas desfasadas</h2><ul class="nov">${L
 <h2>Growth OS</h2>${kpis([[CICLOS.length ? f2(CICLOS[0].t) : "—", "último ciclo"], [JOBS.filter((j) => j.status === "dead").length, "trabajos en dead-letter"], [JOBS.filter((j) => j.status === "sin_proveedor").length, "esperando credencial"], [COST.reduce((t, c) => t + (c.estimated_cost || 0), 0).toFixed(4) + " €", "coste IA acumulado"]])}
 <section class="card"><h2>Últimos ciclos del orquestador</h2><ul class="nov">${CICLOS.map((c) => `<li><span class="nov-f">${f2(c.t)}</span> eventos ${c.eventos_leidos} · planificados ${c.trabajos_planificados} · <small>${esc(JSON.stringify(c.trabajos))}</small></li>`).join("") || "<li>Sin ciclos todavía.</li>"}</ul></section>
 <section class="card"><h2>Coste por modelo</h2><ul class="nov">${Object.entries(COST.reduce((a, c) => ((a[c.model] = (a[c.model] || 0) + (c.estimated_cost || 0)), a), {})).map(([m, v]) => `<li>${esc(m)}: ${v.toFixed(4)} €</li>`).join("") || "<li>Sin llamadas a LLM.</li>"}</ul></section>`,
+  });
+  // ---------- Fábrica de preguntas: revisión y métricas (fabrica/, datos/candidatas/) ----------
+  const FM = leerJ("fabrica/estado/metricas.json", null), FE = leerJ("fabrica/estado/estado.json", { lotes: [], pausa: null });
+  const COLA = fs.existsSync("datos/candidatas") ? fs.readdirSync("datos/candidatas").filter((f) => f.endsWith(".json")).flatMap((f) => leerJ(`datos/candidatas/${f}`, []).map((q) => ({ ...q, ley: f.slice(0, -5) }))) : [];
+  const corto = (sl) => (LEYES.find((L) => L.slug === sl) || { corto: sl }).corto;
+  const filaQ = (q, ley) => `<tr><td><small>${esc(corto(ley))} · art. ${esc(q.art)}</small></td><td><details><summary>${esc(q.q)}</summary><ol type="a" class="small">${(q.o || []).map((o, k) => `<li${k === q.a ? ' class="good"' : ""}>${esc(o)}</li>`).join("")}</ol><blockquote class="small">«${esc(q.cita || "")}»</blockquote><p class="small">${esc(q.exp || "")}</p></details></td><td><small>${esc(q.tipo || "")}${q.dif ? " · dif. " + q.dif : ""}</small></td><td><small>${esc(q.motivo || "")}</small></td><td><small>${esc(q.lote || q.estado_desde || "")}</small></td></tr>`;
+  const tablaQ = (L) => L.length ? `<div class="tabla-scroll"><table class="tabla"><thead><tr><th>Norma</th><th>Pregunta</th><th>Tipo</th><th>Motivo</th><th>Lote / fecha</th></tr></thead><tbody>${L.map(([q, l]) => filaQ(q, l)).join("")}</tbody></table></div>` : '<p class="muted">Ninguna.</p>';
+  const revLey = LEYES.flatMap((L) => L.revisar.map((q) => [q, L.slug]));
+  page("admin/preguntas/", {
+    title: "Admin · Preguntas que requieren revisión", description: "Cola de revisión y métricas de la fábrica de preguntas.", noindex: true, wide: true,
+    body: (r) => `<h1>Preguntas que requieren revisión</h1>${navAdmin(r)}
+${FE.pausa ? `<p class="warn"><b>GENERATION_PAUSED</b> desde ${esc(FE.pausa.fecha)} (${esc(FE.pausa.lote)}): ${esc(FE.pausa.motivo)}. Corrige la causa y relanza el workflow «Question Factory» con <code>resume</code>.</p>` : ""}
+${FM ? kpis([[FM.questions_valid, "VALID publicadas"], [FM.questions_valid_fabrica, "VALID de la fábrica"], [FM.questions_review, "a revisión"], [FM.questions_rejected, "rechazadas"], [FM.questions_outdated, "desfasadas"], [FM.questions_deprecated, "retiradas"], [(FM.validation_rate * 100).toFixed(1) + " %", "tasa de validación"], [(FM.rejection_rate * 100).toFixed(1) + " %", "tasa de rechazo"], [(FM.duplicate_rate * 100).toFixed(1) + " %", "duplicados"], [FM.generation_cost + " $", "coste de generación"]]) : '<p class="muted">La fábrica aún no ha generado ningún lote.</p>'}
+<section class="card"><h2>Afectadas por cambios en la ley (REVIEW_REQUIRED, publicadas)</h2>${tablaQ(revLey)}</section>
+<section class="card"><h2>Generadas pendientes de revisión humana (no publicadas)</h2>${tablaQ(COLA.filter((q) => q.verification_status === "REVIEW_REQUIRED").map((q) => [q, q.ley]))}<p class="muted small">Para aprobar una: comprobar la cita en el BOE, moverla al final de <code>datos/preguntas-&lt;ley&gt;.json</code> sin <code>verification_status</code> y ejecutar <code>npm run validar</code>.</p></section>
+<section class="card"><h2>Desfasadas (OUTDATED / DEPRECATED)</h2>${tablaQ(LEYES.flatMap((L) => L.desfasadas.map((q) => [q, L.slug])))}</section>
+<section class="card"><h2>Rechazadas por la validación (últimas 60)</h2>${tablaQ(COLA.filter((q) => q.verification_status === "REJECTED").slice(-60).reverse().map((q) => [q, q.ley]))}</section>
+<section class="card"><h2>Lotes de la fábrica</h2>${FE.lotes.length ? `<div class="tabla-scroll"><table class="tabla"><thead><tr><th>Lote</th><th>Fecha</th><th>Modo</th><th>Generadas</th><th>VALID</th><th>Revisión</th><th>Rechazadas</th><th>Duplicadas</th><th>Coste</th><th>Tiempo</th></tr></thead><tbody>${FE.lotes.slice(-40).reverse().map((x) => `<tr><td>${esc(x.id)}</td><td><small>${esc(x.fecha)}</small></td><td>${esc(x.modo)}</td><td>${x.generadas}</td><td>${x.VALID}</td><td>${x.REVIEW_REQUIRED}</td><td>${x.REJECTED}</td><td>${x.duplicadas}</td><td>${x.coste_usd} $</td><td>${x.segundos} s</td></tr>`).join("")}</tbody></table></div>` : '<p class="muted">Sin lotes todavía.</p>'}</section>
+${FM ? `<section class="card"><h2>Cobertura por oposición</h2><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Oposición</th><th>Preguntas</th><th>Temas legislativos</th><th>Con preguntas</th><th>Mínimo por tema</th><th>Mediana por tema</th></tr></thead><tbody>${Object.entries(FM.coverage_by_opposition).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${v.preguntas}</td><td>${v.temas_legislativos}</td><td>${v.temas_con_preguntas}</td><td>${v.minimo_por_tema}</td><td>${v.mediana_por_tema}</td></tr>`).join("")}</tbody></table></div></section>` : ""}`,
   });
 }
 
@@ -1045,7 +1066,7 @@ fs.cpSync(path.join(OUT_TMP, "datos"), path.join(OUT, "datos"), { recursive: tru
 for (const L of PUBLICADAS)
   fs.writeFileSync(
     path.join(OUT, "datos", `${L.slug}.json`),
-    JSON.stringify({ leyes: { [L.slug]: L.corto }, arts: Object.fromEntries(L.arts.map((a) => [a.n, { t: a.titulo || "Artículo " + a.n, b: a.bloque || L.corto }])), qs: L.qs })
+    JSON.stringify({ leyes: { [L.slug]: L.corto }, arts: Object.fromEntries(L.arts.map((a) => [a.n, { t: a.titulo || "Artículo " + a.n, b: a.bloque || L.corto }])), qs: L.qs.map(PUBLICO) })
   );
 // Títulos y descripciones únicos: si varias páginas comparten uno, cada una pasa a su alternativa más específica
 for (const [campo, alt, fmt] of [["title", "tituloAlt", conMarca], ["description", "descAlt", (x) => x]]) {

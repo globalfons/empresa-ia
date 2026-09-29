@@ -13,7 +13,10 @@
     "test:deno": "deno test --allow-env tests/deno/",
     "test:sql": "TL_PG=\"${TL_PG:--h /tmp -p 5499 -U postgres}\" python3 -W ignore -m unittest tests.test_sql",
     "test": "npm run lint && npm run validar && npm run test:py && npm run build && npm run test:js",
-    "crecimiento": "python3 -m crecimiento.orquestador"
+    "crecimiento": "python3 -m crecimiento.orquestador",
+    "fabrica": "python3 -m fabrica.motor"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

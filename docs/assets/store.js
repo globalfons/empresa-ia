@@ -409,11 +409,36 @@
     if (ONLINE && sesion()) refrescar().then(pintarCabecera).then(function () { return planServidor(); });
   });
 
+  // Simulacro desde el banco: reparto por temas (el de la convocatoria en sim.reparto = [{temas:[i…], preguntas:n}] o, si no lo
+  // fija, proporcional a las preguntas de cada tema, con al menos una por tema si caben) y preguntas de reserva solo si la
+  // configuración oficial las prevé (sim.reserva). Cada pregunta cuenta en un único tema (el primero de q.tm).
+  function seleccionSimulacro(qs, sim, azar) {
+    azar = azar || Math.random;
+    var mezcla = function (a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(azar() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
+    var n = Math.min(sim.preguntas, qs.length), usadas = {}, lista = [];
+    var tomar = function (pool, k) { mezcla(pool.filter(function (q) { return !usadas[q.id]; })).slice(0, k).forEach(function (q) { usadas[q.id] = 1; lista.push(q); }); };
+    var grupos = {};
+    qs.forEach(function (q) { var t = q.tm && q.tm.length ? q.tm[0] : "sin"; (grupos[t] = grupos[t] || []).push(q); });
+    if (sim.reparto && sim.reparto.length) {
+      sim.reparto.forEach(function (r) { tomar(qs.filter(function (q) { return (q.tm || []).some(function (i) { return r.temas.indexOf(i) >= 0; }); }), r.preguntas); });
+    } else if (Object.keys(grupos).length > 1) {
+      var temas = Object.keys(grupos), total = qs.length, cuota = {}, asignadas = 0;
+      temas.forEach(function (t) { cuota[t] = Math.floor((n * grupos[t].length) / total); if (!cuota[t] && n >= temas.length) cuota[t] = 1; asignadas += cuota[t]; });
+      temas.slice().sort(function (a, b) { return grupos[b].length - grupos[a].length; }).forEach(function (t) { if (asignadas < n) { cuota[t]++; asignadas++; } });
+      temas.forEach(function (t) { tomar(grupos[t], Math.min(cuota[t], grupos[t].length)); });
+    }
+    if (lista.length > n) lista = mezcla(lista).slice(0, n);
+    if (lista.length < n) tomar(qs, n - lista.length); // si un tema no llega a su cuota, se completa con el resto del banco
+    var reserva = [];
+    if (sim.reserva > 0) mezcla(qs.filter(function (q) { return !usadas[q.id]; })).slice(0, sim.reserva).forEach(function (q) { reserva.push(q); });
+    return { lista: mezcla(lista), reserva: reserva };
+  }
+
   window.TL = {
     online: ONLINE, root: CFG.root || "./",
     registrarRespuesta: registrarRespuesta, registrarSesion: registrarSesion, estado: estado,
     stats: stats, logros: logros, estrellas: estrellas, proximoRepaso: proximoRepaso, vencida: vencida, _INTERVALOS: INTERVALOS,
-    registro: function (l, qid) { return ley(l).q[qid] || null; }, comparaSimulacros: comparaSimulacros, puntos: puntos, objetivoSemanal: objetivoSemanal,
+    registro: function (l, qid) { return ley(l).q[qid] || null; }, comparaSimulacros: comparaSimulacros, seleccionSimulacro: seleccionSimulacro, puntos: puntos, objetivoSemanal: objetivoSemanal,
     sesion: sesion, registrar: registrar, entrar: entrar, salir: salir, recordar: recordar,
     perfil: perfil, actualizarPerfil: actualizarPerfil, ranking: ranking, subir: subir, bajar: bajar,
     setDatos: function (l, d) { DATOS[l] = d; },
