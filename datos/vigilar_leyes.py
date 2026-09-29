@@ -40,9 +40,11 @@ def texto_bloque(boe_id, bloque_id, fetch=http):
     parrafos = ["".join(p.itertext()).strip() for p in v.findall("p") if p.get("class") not in ("articulo", "titulo_num", "titulo_tit")]
     return "\n\n".join(x for x in parrafos if x), v.get("fecha_publicacion")
 
+LATINOS = "bis|ter|quater|quinquies|sexies|septies|octies|nonies|decies"
 def num_articulo(titulo):
-    m = re.match(r"(?i)art[ií]culo\s+(\d+)\s*([a-záéíóú]*)", (titulo or "").replace("\xa0", " "))
-    return (m.group(1) + m.group(2).lower().replace("á", "a")) if m else None
+    """«Artículo 31 bis» → 31bis; «Artículo 588 bis a)» → 588bisa (mismo formato que datos/<slug>-articulos.json)."""
+    m = re.match(rf"(?i)art[ií]culo\s+(\d+)\s*(?:({LATINOS})\s*(\d+)?)?\s*(?:([a-z])(?![a-záéíóúñ]))?", (titulo or "").replace("\xa0", " "))
+    return "".join((g or "").lower() for g in m.groups()) if m else None
 
 def limpio(t): return norm(re.sub(r"[*_#>`]", " ", vigente(t or "")))
 

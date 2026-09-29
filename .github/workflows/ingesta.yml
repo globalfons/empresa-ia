@@ -44,17 +44,24 @@ jobs:
       - name: Novedades de las oposiciones seguidas (BOE)
         run: python3 catalogo/vigilar_boe.py
         continue-on-error: true
+      - name: Cambios en las leyes (BOE consolidado) → preguntas a revisar o retiradas
+        # Artículo modificado: historial en datos/versiones/, preguntas REVIEW_REQUIRED u OUTDATED y evento LAW_UPDATED
+        run: |
+          python3 datos/vigilar_leyes.py
+          python3 datos/sellar_preguntas.py
+        continue-on-error: true
       - name: Validar catálogo y construir la web
         run: |
           python3 catalogo/validar_catalogo.py
           python3 datos/validar_todo.py
+          python3 datos/calidad_preguntas.py
           python3 catalogo/construir.py
           node build.mjs
       - name: Guardar resultados
         run: |
           git config user.name "testley-ingesta"
           git config user.email "testley-ingesta@users.noreply.github.com"
-          git add -A ingesta catalogo docs
+          git add -A ingesta catalogo datos crecimiento/estado docs
           git diff --cached --quiet || git commit -m "Ingesta: $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i * 5)); done
       - name: Notificaciones

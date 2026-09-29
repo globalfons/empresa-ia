@@ -48,6 +48,7 @@ El % mide el trabajo de código terminado, no el uso en producción.
 | Cost Tracking | Completado | 100 | — | — |
 | Admin (fuentes, growth, trabajos, sistema) | Completado | 95 | — | — |
 | Feature flags | Completado | 100 | — | — |
+| Vigilancia de leyes → preguntas (LAW_UPDATED) | Completado | 95 | Depende del cron diario de `ingesta.yml` (aún sin ejecuciones programadas) | Revisar en `/admin/oposiciones/<id>/quality/` las preguntas `REVIEW_REQUIRED` cuando llegue el primer cambio |
 | Seguridad (RLS, admin, secretos, firma) | Completado | 95 | Límite conocido: los bancos de preguntas son públicos (las preguntas son gratis por artículo por diseño) | — |
 
 ## Flujo verificado (`tests/test_flujo_convocatoria.py`)

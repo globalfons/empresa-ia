@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "node scripts/lint.mjs",
     "typecheck": "deno check supabase/functions/*/index.ts",
-    "validar": "python3 datos/validar_todo.py && python3 catalogo/validar_catalogo.py",
+    "validar": "python3 datos/validar_todo.py && python3 datos/calidad_preguntas.py && python3 catalogo/validar_catalogo.py",
     "build": "python3 catalogo/construir.py && node build.mjs",
     "test:py": "python3 -W ignore -m unittest discover -s tests -t . -p 'test_*.py'",
     "test:js": "node --test tests/js/*.test.mjs",

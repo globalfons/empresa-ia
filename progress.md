@@ -1,5 +1,63 @@
 # progress.md — TestLey
 
+## Sesión 29/09/2026 (noche): finalización de las oposiciones actuales
+Informe por oposición: `documentacion/OPOSITIONS-COVERAGE-REPORT.md`, generado con `scripts/informe_cobertura.py` a partir de datos reales.
+
+**Verificación:**
+- Tests: 47 de Python (14 nuevos en `tests/test_calidad.py`), 7 de SQL, 21 de JS (7 nuevos en `tests/js/estudio.test.mjs`) y 9 de Deno.
+- Calidad: lint y `deno check` limpios; build de 11.528 páginas.
+- Preguntas: 2.178 con 0 errores y 0 avisos en validación y control de calidad.
+- E2E por oposición (`scripts/e2e-oposiciones.cjs`), en móvil y escritorio: 14/14 pasos en las 5 oposiciones con temario y 6/6 en Guardia Civil. Sin errores de JavaScript.
+
+### COMPLETED
+- **Páginas de tema** en las 5 oposiciones con temario oficial:
+  - Título oficial literal.
+  - «1. Estudiar»: índice oficial de artículos del BOE, texto vigente.
+  - «2. Practicar»: test del tema.
+  - Navegación entre temas.
+  - Sin preguntas → `noindex`.
+- **Ámbito de cada tema dentro de su ley:**
+  - Automático: `catalogo/ambito_temas.py`, por títulos y capítulos oficiales con IDF.
+  - Correcciones manuales por rangos, contra la estructura oficial: `catalogo/temas_ambito_manual.json` (Código Penal, LECrim, Código Civil, LGP, PRL, Ley 39/2015 registro/archivo, reforma constitucional).
+- **Contenido:**
+  - **292 preguntas nuevas** redactadas con cita literal del artículo vigente, dificultad y explicación.
+  - Leyes: Código Penal, LECrim, Código Civil, Ley de Tráfico, Constitución, Ley 31/1995, Ley 47/2003, Ley 39/2015, TREBEP, RD 207/2024 y LO 4/2000.
+  - Todos los temas legislativos con texto en el BOE tienen ≥ 10 preguntas, salvo PN Ejecutiva T27 (dolo), con 9.
+- **Invalidación y versionado:**
+  - `datos/vigilar_leyes.py` detecta artículos cambiados con el índice por bloque del BOE.
+  - Historial de versiones en `datos/versiones/`.
+  - Estados `REVIEW_REQUIRED` / `OUTDATED` (y `DEPRECATED`, manual) sin borrar nada.
+  - Evento `LAW_UPDATED`.
+  - `datos/sellar_preguntas.py`: cada pregunta guarda la versión del texto contra la que se verificó.
+  - Corregido: los artículos «bis a», «ter»… no se reconocían.
+- **Control de calidad** `datos/calidad_preguntas.py`:
+  - Controles: estructura, contenido, respuesta (incluidas opciones que remiten a otras), fuente y duplicados.
+  - Ahora forma parte de `npm run validar`, CI e ingesta.
+- **Estructura oficial del examen** en las 6 oposiciones:
+  - Cada parte con su cita literal de las bases.
+  - Indica si se simula; si no, el motivo.
+- **Estudio:**
+  - Mis errores (`/errores/`): repasar y crear test con mis errores.
+  - Repetición espaciada: 0, 1, 3, 7, 16 y 35 días.
+  - Resultado con % de acierto, tiempo, temas débiles, «Repasar errores» y «Repetir simulacro».
+  - Test a medida: por bloque y ley, con el recuento real disponible.
+  - Plan con días disponibles y descanso.
+  - Tiempo estudiado y estadísticas por tema.
+- **Panel de calidad** `/admin/oposiciones/<id>/quality/`: cobertura por tema (TOPIC_COVERAGE), cobertura de contenido (no es probabilidad de aprobar), preguntas a revisar y retiradas, y fuentes pendientes.
+- **Ingesta diaria:** ahora ejecuta la vigilancia de leyes y el sellado.
+- **Datos de cobertura** para el informe y los tests: `docs/datos/cobertura.json`.
+
+### PENDING (ver el informe)
+- **Guardia Civil:**
+  - Temario oficial: no está en el BOE y guardiacivil.es no es accesible desde aquí. No se inventa.
+- **Temas sin fuente consolidada en el BOE:** UE, derechos humanos, atención al público y política económica. Siguen como «pendiente de verificación oficial».
+- **Temas no legislativos, sin contenido:** ofimática, psicotécnicos, sociología, criminología, técnicas policiales…
+- **Partes del examen que no se simulan:**
+  - Supuestos prácticos.
+  - Pruebas físicas, médicas y entrevistas.
+  - Ortografía, gramática e inglés de Guardia Civil.
+- **Objetivo de 30 preguntas por tema:** hoy se cumple el 41–81 %, según la oposición.
+
 ## Sesión 29/09/2026 (tarde): continuación del Growth OS
 Estado detallado por componente: `documentacion/GROWTH-STATUS.md`.
 

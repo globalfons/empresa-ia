@@ -35,4 +35,4 @@ jobs:
       - run: deno test --allow-env tests/deno/
       - run: python3 -W ignore -m unittest tests.test_sql
       - run: python3 catalogo/construir.py && node build.mjs   # a /tmp/tl-docs: comprueba que la build no falla sin tocar docs/
-      - run: node --test tests/js/store.test.mjs tests/js/eventos.test.mjs
+      - run: node --test tests/js/store.test.mjs tests/js/eventos.test.mjs tests/js/estudio.test.mjs

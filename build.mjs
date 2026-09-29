@@ -537,6 +537,8 @@ ${faqHtml(faq)}`;
 const LEYPOR = Object.fromEntries(PUBLICADAS.map((L) => [L.slug, L]));
 const OBJ_TEMA = 30; // preguntas por tema consideradas «cobertura completa» en la métrica (no es un límite)
 // TOPIC_COVERAGE: qué hay de cada tema (texto oficial para estudiar, legislación identificada, preguntas, test, verificación)
+// Título del tema para el encabezado: la primera frase del título oficial (el completo se muestra debajo, literal)
+const tituloCorto = (t) => { const f = t.split(/(?<=\.)\s+/)[0]; return f.length <= 110 && f.length < t.length ? f.replace(/\.$/, "") : t.length <= 110 ? t : t.slice(0, 100).replace(/\s+\S*$/, "") + "…"; };
 function coberturaTema(o, i) {
   const t = o.temario[i], ti = o.temaInfo[i], leg = t.tipo !== "no_legislativo";
   return { contenido: ti.leyes.length > 0, legislacion: leg ? t.normas.length > 0 : null, preguntas: ti.nq, test: ti.nq >= 10, test_parcial: ti.nq > 0 && ti.nq < 10,
@@ -562,7 +564,9 @@ function completitud(o) {
 }
 // Cobertura por oposición y tema (lo usan el informe documentacion/OPOSITIONS-COVERAGE-REPORT.md y los tests)
 fs.writeFileSync(path.join(OUT_TMP, "datos", "cobertura.json"), JSON.stringify(OPOS.map((o) => ({
-  id: o.id, nombre: o.nombre, temario_tipo: o.temario_tipo || null, completitud: completitud(o),
+  id: o.id, nombre: o.nombre, temario_tipo: o.temario_tipo || null, completitud: completitud(o), preguntas: o.qs.length,
+  sin_tema: o.qs.filter((q) => !q.tm).length, // de sus leyes, pero fuera del ámbito de todos los temas: solo en tests mixtos
+ 
   estructura: ((o.examen || {}).estructura || []).map((p) => ({ parte: p.parte, en_simulacro: !!p.en_simulacro })),
   temas: o.temario.map((t, i) => ({ tema: t.tema, bloque: t.bloque || null, titulo: t.titulo.slice(0, 120), ...coberturaTema(o, i) })),
 }))));
@@ -591,9 +595,11 @@ ${Object.entries(grupos).map(([g, xs]) => `<details><summary>${esc(g)} (${xs.len
         const sinLey = t.normas.filter((id) => !PUB[id]).map((id) => (NORMAS[id] || { nombre: id }).nombre);
         return `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>${esc(nombre)}</span></nav>
 <p class="kicker">${esc(o.nombre)} · ${esc(t.bloque)}</p>
-<h1>${esc(nombre)}. ${esc(t.titulo)}</h1>
+<h1>${esc(nombre)}. ${esc(tituloCorto(t.titulo))}</h1>
+${tituloCorto(t.titulo) !== t.titulo ? `<p class="tema-oficial"><b>Título oficial completo:</b> ${esc(t.titulo)}</p>` : ""}
 <p class="op-verif small">${o.temario_tipo === "oficial_publicado" ? `<span class="badge-oficial">Título oficial</span> copiado literalmente del anexo ${esc(o.convocatoria.anexo || "")} de la <a href="${esc(conv.url)}" rel="noopener">${esc(conv.id || conv.titulo)}</a>` : `<span class="badge-testley">Estructura derivada de las bases</span>`}</p>
 <div class="kpis"><div class="kpi"><span class="kpi-n">${ti.nq}</span><span class="kpi-l">preguntas del tema</span></div><div class="kpi"><span class="kpi-n">${ti.leyes.length}</span><span class="kpi-l">leyes con texto oficial</span></div><div class="kpi"><span class="kpi-n" id="tema-dom">—</span><span class="kpi-l">tu dominio</span></div></div>
+<p class="small tema-saltos">${ti.leyes.length ? `<a href="#estudiar">1. Estudiar</a>` : ""}${ti.nq ? ` · <a href="#practicar">2. Practicar (${ti.nq} preguntas)</a>` : ""}</p>
 <section id="estudiar"><h2>1. Estudiar</h2>
 ${t.tipo === "no_legislativo" ? `<div class="box"><b>Tema no legislativo</b> (informática, ofimática, lengua…). TestLey aún no tiene contenido verificado para este tema; estúdialo con el material oficial de la convocatoria.</div>` : ""}
 ${estudio || (t.tipo !== "no_legislativo" ? `<div class="box">${badgeVS("OFFICIAL_PENDING_REVIEW")} Información pendiente de verificación oficial: este tema no remite a una norma con texto consolidado en el BOE${sinLey.length ? ` (${sinLey.map(esc).join(", ")})` : ""}. No mostramos contenido que no podamos verificar.</div>` : "")}
