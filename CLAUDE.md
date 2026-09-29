@@ -34,3 +34,13 @@ El propietario (particular, sin empresa) solo gestiona cuentas: GitHub Pages, Le
 - Estados de verificación comunes: `catalogo/estados_verificacion.json` (+ `catalogo/verificacion.py`). Preguntas desfasadas: `python3 datos/revisar_vigencia.py` (las marca DEPRECATED; no borrar).
 - Growth OS en `crecimiento/`: bus de eventos → orquestador (`reglas.json`) → cola de trabajos → Content Factory / SEO / canales. `python3 -m crecimiento.orquestador`; revisión humana con `python3 -m crecimiento.cli`. Nunca autopublicar datos no verificados, publicar en Reddit ni enviar comerciales sin consentimiento. Flags en `config.json → flags`.
 - Tests antes de hacer push: `npm run lint`, `npm run validar`, `npm run test:py`, `npm run build`, `npm run test:js`; además `deno test --allow-env tests/deno/` y `npm run test:sql` (PostgreSQL local) si se tocan las funciones o el esquema.
+
+## Forma de trabajar (norma del propietario)
+- Nunca ejecutes el trabajo por tu cuenta: delega siempre la tarea a un subagente.
+- No uses siempre Fable. Usa Opus 5.5 para tareas más simples.
+- Distribución de modelos:
+  - Fable 5.1: arquitectura, bugs complejos y revisión de código.
+  - Opus 5.5: ediciones, pruebas, documentación y refactorización.
+  - Haiku 4.5: investigaciones y resúmenes.
+- Especifica el modelo en cada llamada al subagente.
+- Delegación: un subagente por tarea; planifica antes de ejecutar; ejecuta en paralelo los subagentes independientes; lee el informe del subagente, nunca los archivos.
