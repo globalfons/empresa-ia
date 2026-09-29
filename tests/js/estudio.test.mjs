@@ -89,7 +89,9 @@ test("build: las preguntas de la oposición llevan sus temas y la cobertura es c
     const porTema = o.temas.map(() => 0);
     for (const q of d.qs) if (q.tm) { assert.ok(q.tm.length && q.tm.every((i) => i >= 0 && i < o.temas.length), q.id); q.tm.forEach((i) => porTema[i]++); }
     assert.equal(d.qs.filter((q) => !q.tm).length, o.sin_tema, `${o.id}: preguntas fuera de todo tema (solo en tests mixtos)`);
-    assert.ok(o.sin_tema < d.qs.length * 0.15, `${o.id}: demasiadas preguntas sin tema`);
+    // Las leyes se comparten entre oposiciones: las preguntas de artículos que solo entran en temas de OTRA oposición (p. ej. el
+    // Código Penal amplio de la Escala Ejecutiva) aparecen aquí sin tema y se usan en tests mixtos. El límite detecta ámbitos rotos.
+    assert.ok(o.sin_tema < d.qs.length * 0.25, `${o.id}: demasiadas preguntas sin tema`);
     o.temas.forEach((t, i) => assert.equal(porTema[i], t.preguntas, `${o.id} tema ${i + 1}`));
     assert.ok(o.completitud.total > 0 && o.completitud.total <= 100);
     assert.ok(o.estructura.some((p) => p.en_simulacro), `${o.id}: al menos una parte del examen se simula`);
