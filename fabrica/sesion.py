@@ -51,7 +51,8 @@ def plan(a, cfg):
     oposiciones = MO.resolver_oposiciones(a.oposicion, cfg)
     fuentes, banco = F.Fuentes(), B.Banco()
     temas, _ = MO.planificar(cfg, fuentes, oposiciones)
-    slots = MO.elegir(temas, fuentes, banco, cfg, max(1, min(a.lote, cfg["lote"]["tamano_maximo"] * 4)), set())
+    agotados = {tuple(k.split("|", 1)) for k, v in estado.get("omitidos", {}).items() if v >= 2}  # artículos que no dan más preguntas
+    slots = MO.elegir(temas, fuentes, banco, cfg, max(1, min(a.lote, cfg["lote"]["tamano_maximo"] * 4)), agotados)
     if not slots:
         raise SystemExit("No quedan artículos con capacidad en los temas con déficit de esas oposiciones.")
     dist = cfg["dificultad_por_oposicion"].get(oposiciones[0], cfg["dificultad_por_defecto"])
@@ -131,6 +132,10 @@ def cerrar(a, cfg):
     por_r = {v.get("r"): v for v in ver if isinstance(v, dict)}
     huecos = {h["s"]: h for h in p["huecos"]}
     cnt = collections.Counter()
+    for h in p["huecos"]:  # huecos sin ninguna candidata: el redactor no encontró preguntas que no fueran forzadas
+        if not any(v["s"] == h["s"] and v["res"] for v in val):
+            clave = f"{h['ley']}|{h['art']}"
+            estado.setdefault("omitidos", {})[clave] = estado.get("omitidos", {}).get(clave, 0) + 1
     for v in val:
         h = huecos[v["s"]]; slot = _slot(h, None); ley = fuentes.ley(h["ley"])
         res = [[q, [tuple(x) for x in probs], dup] for q, probs, dup in v["res"]]
