@@ -1,0 +1,9 @@
+{
+ "_ayuda": "Experiment Engine. Solo se sirven los experimentos con estado 'activo' y el flag 'experiments' encendido. Un experimento de tipo 'precio' o 'plan' exige 'autorizado_por' (nunca se cambian precios automáticamente). Métricas: exposición, registro, activación y premium por variante (admin_metricas).",
+ "experimentos": [
+  {"id": "cta-hero", "tipo": "copy", "estado": "borrador", "objetivo": "registro", "descripcion": "Texto del botón principal de la portada",
+   "variantes": [{"id": "a", "peso": 50, "texto": "Buscar mi oposición"}, {"id": "b", "peso": 50, "texto": "Encontrar mi oposición gratis"}]},
+  {"id": "test-inicial", "tipo": "producto", "estado": "borrador", "objetivo": "activacion", "descripcion": "Test de 10 frente a 20 preguntas en el primer repaso",
+   "variantes": [{"id": "a", "peso": 50}, {"id": "b", "peso": 50}]}
+ ]
+}

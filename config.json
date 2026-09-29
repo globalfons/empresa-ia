@@ -36,5 +36,33 @@
       "alertas": true
     },
     "_ayuda": "leyes_completas: leyes con todos los modos de test sin Pase. preguntas_muestra: preguntas gratis por ley u oposición. El resto de claves activan secciones (plan_estudio, historial_simulacros, tutor, alertas)."
+  },
+  "flags": {
+    "_ayuda": "Feature flags del Growth OS. Activa cada función cuando su requisito esté listo (ver documentacion/GROWTH-ARCHITECTURE.md).",
+    "growth_engine": true,
+    "seo_engine": true,
+    "social_content": true,
+    "telegram": false,
+    "email": false,
+    "analytics": false,
+    "referral": false,
+    "affiliate": false,
+    "ai_growth": false,
+    "ads": false,
+    "experiments": false
+  },
+  "crecimiento": {
+    "ventana_novedad_dias": 3,
+    "max_por_canal_y_dia": 2,
+    "modo_publicacion": {
+      "_ayuda": "AUTO_PUBLISH solo se aplica a datos OFFICIAL_VERIFIED; todo lo demás pasa por revisión humana.",
+      "articulo": "AUTO_PUBLISH",
+      "faq": "AUTO_PUBLISH",
+      "cta": "AUTO_PUBLISH",
+      "telegram": "HUMAN_REVIEW_REQUIRED",
+      "email": "HUMAN_REVIEW_REQUIRED"
+    },
+    "telegram_bot": "",
+    "telegram_canal": ""
   }
 }

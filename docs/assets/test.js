@@ -32,6 +32,7 @@
   }
 
   function menuMuestra() {
+    if (window.TLEventos) TLEventos.emitir("PAYWALL_REACHED", { contexto: LEY, motivo: "muestra" }, { debounce: "paywall:" + LEY });
     var m = muestra();
     var fallos = m.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; });
     var candado = function (t, d) { return '<a class="mode locked" href="' + TL.root + 'pase/"><strong>🔒 ' + t + "</strong><span>" + d + "</span></a>"; };
@@ -49,6 +50,9 @@
     el.querySelectorAll("[data-m]").forEach(function (b) {
       b.onclick = function () { start(b.getAttribute("data-m") === "fallos" ? fallos : shuffle(m), b.getAttribute("data-m")); };
     });
+    // Accesos directos (#test=… desde el onboarding, el plan o un email): sin Pase se empieza el test de muestra gratis
+    var h = (location.hash.match(/^#test=([a-z0-9-]+)/) || [])[1];
+    if (h && !lanzado) { lanzado = true; start(h === "fallos" && fallos.length ? fallos : shuffle(m), h === "fallos" && fallos.length ? "fallos" : "muestra"); el.scrollIntoView({ block: "start" }); }
   }
 
   function menu() {
@@ -142,6 +146,7 @@
   function start(list, m) {
     queue = list; idx = 0; ok = 0; ko = 0; blank = 0; modo = m; respuestas = [];
     if (!queue.length) { menu(); return; }
+    if (window.TLEventos) TLEventos.emitir(esExamen() ? "SIMULATION_STARTED" : "TEST_STARTED", { contexto: LEY, modo: m, preguntas: queue.length });
     clearInterval(timer);
     if (esExamen()) {
       fin = Date.now() + minutos() * 60 * 1000;
@@ -231,12 +236,15 @@
     TL.registrarSesion(LEY, n, ok, ko, blank, modo, pen);
     var nota = n ? Math.max(0, ((ok - ko * pen) / n) * 10) : 0;
     var s = TL.stats(LEY, data);
+    var cmp = esExamen() ? TL.comparaSimulacros(s.sesiones, modo) : null;
+    if (window.TLEventos) TLEventos.emitir(esExamen() ? "SIMULATION_COMPLETED" : "TEST_COMPLETED", { contexto: LEY, modo: modo, preguntas: n, aciertos: ok, errores: ko, nota: Math.round(nota * 10) / 10 });
     var fallos = bloqueado() ? muestra().filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }).length : s.cuenta.fallada;
     el.innerHTML =
       '<div class="result-card"><span class="kicker">' + (modo === "simulacro" ? "Resultado del simulacro" : modo === "examen" ? "Resultado del examen" : "Resultado") + "</span>" +
       '<p class="score">' + fmt(nota) + "<small>/10</small></p>" +
       "<p>" + ok + " aciertos · " + ko + " errores · " + blank + ' en blanco <span class="muted">(cada error resta ' + fraccion(pen) + ")</span></p>" +
       '<p class="muted">Tu nota orientativa global es ahora <b>' + fmt(s.nota) + "</b> y tu dominio del banco es del <b>" + s.dominioPct + " %</b>.</p>" +
+      (cmp && cmp.anterior != null ? '<p class="cmp">' + (cmp.diferencia >= 0 ? '<b class="good">▲ +' : '<b class="bad">▼ ') + fmt(cmp.diferencia) + "</b> respecto a tu simulacro anterior (" + fmt(cmp.anterior) + ") · media de tus " + cmp.n + " simulacros: <b>" + fmt(cmp.media) + "</b></p>" : esExamen() ? '<p class="muted small">Es tu primer simulacro: el próximo lo compararemos con este.</p>' : "") +
       analisis() +
       '<div class="actions"><button class="btn primary" data-again>' + (fallos ? "Repasar mis " + fallos + " fallos" : "Otro test") + "</button>" +
       '<a class="btn ghost" href="' + TL.root + 'panel/">Ver mi panel</a></div>' +

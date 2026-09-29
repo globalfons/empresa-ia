@@ -1,0 +1,19 @@
+{
+  "name": "testley",
+  "private": true,
+  "description": "TestLey: descubrir, seguir y preparar oposiciones en España. Web estática (build.mjs → docs/), datos oficiales versionados, Supabase y GitHub Actions.",
+  "type": "module",
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "deno check supabase/functions/*/index.ts",
+    "validar": "python3 datos/validar_todo.py && python3 catalogo/validar_catalogo.py",
+    "build": "python3 catalogo/construir.py && node build.mjs",
+    "test:py": "python3 -W ignore -m unittest discover -s tests -t . -p 'test_*.py'",
+    "test:js": "node --test tests/js/*.test.mjs",
+    "test:deno": "deno test --allow-env tests/deno/",
+    "test:sql": "TL_PG=\"${TL_PG:--h /tmp -p 5499 -U postgres}\" python3 -W ignore -m unittest tests.test_sql",
+    "test": "npm run lint && npm run validar && npm run test:py && npm run build && npm run test:js",
+    "crecimiento": "python3 -m crecimiento.orquestador"
+  },
+  "engines": { "node": ">=20" }
+}

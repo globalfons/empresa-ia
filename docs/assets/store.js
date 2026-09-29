@@ -105,6 +105,40 @@
     };
   }
 
+  // Simulacros: nota de este frente al anterior y la media (sesión = [ts, n, ok, ko, blank, modo, pen])
+  function notaSesion(x) { var pen = x[6] == null ? 1 / 3 : x[6]; return x[1] ? Math.max(0, ((x[2] - x[3] * pen) / x[1]) * 10) : 0; }
+  function comparaSimulacros(ses, modo) {
+    var sims = ses.filter(function (x) { return x[5] === (modo || "simulacro"); });
+    if (!sims.length) return null;
+    var ult = notaSesion(sims[sims.length - 1]), prev = sims.length > 1 ? notaSesion(sims[sims.length - 2]) : null;
+    var media = sims.reduce(function (t, x) { return t + notaSesion(x); }, 0) / sims.length;
+    return { ultima: ult, anterior: prev, diferencia: prev == null ? null : Math.round((ult - prev) * 10) / 10, media: Math.round(media * 10) / 10, n: sims.length };
+  }
+
+  // Gamificación moderada: puntos por constancia, precisión y progreso (no por volumen bruto).
+  // - constancia: 10 por día estudiado (máx. 7 por semana cuentan) + 5 por día de racha actual
+  // - precisión: aciertos de la semana × (acierto semanal ≥ 70 % ? 2 : 1)
+  // - progreso: 3 por pregunta dominada
+  function puntos(s, ahora) {
+    ahora = ahora || Date.now();
+    var semana = ahora - 7 * 864e5, ses7 = s.sesiones.filter(function (x) { return x[0] >= semana; });
+    var n7 = ses7.reduce(function (t, x) { return t + x[1]; }, 0), ok7 = ses7.reduce(function (t, x) { return t + x[2]; }, 0);
+    var dias7 = {}; ses7.forEach(function (x) { dias7[hoy(x[0])] = 1; });
+    var constancia = Math.min(7, Object.keys(dias7).length) * 10 + s.racha * 5;
+    var precision = ok7 * (n7 && ok7 / n7 >= 0.7 ? 2 : 1);
+    var progreso = s.cuenta.dominada * 3;
+    var total = constancia + precision + progreso;
+    var niveles = [0, 100, 300, 600, 1000, 1600, 2500, 4000];
+    var nivel = niveles.filter(function (u) { return total >= u; }).length;
+    return { total: total, constancia: constancia, precision: precision, progreso: progreso, nivel: nivel, siguiente: niveles[nivel] || null,
+      semana: { dias: Object.keys(dias7).length, preguntas: n7, acierto: n7 ? Math.round((100 * ok7) / n7) : 0 } };
+  }
+  // Objetivo semanal: días de estudio según las horas declaradas (mín. 3) y precisión ≥ 70 %
+  function objetivoSemanal(p, horasSemana) {
+    var diasObj = Math.min(7, Math.max(3, Math.round((+horasSemana || 6) / 1.5)));
+    return { diasObjetivo: diasObj, dias: p.semana.dias, precision: p.semana.acierto, cumplido: p.semana.dias >= diasObj && p.semana.acierto >= 70 };
+  }
+
   function logros(s) {
     var L = [
       ["🎯", "Primer test", "Completa tu primer test", s.sesiones.length >= 1],
@@ -269,7 +303,7 @@
   // Se guardan en el navegador y, con cuenta, en la fila especial "ajustes-usuario" de la tabla progreso
   // (reutiliza la tabla existente con sus políticas RLS; no requiere migración).
   var LS_AJ = "testley:ajustes", FILA_AJ = "ajustes-usuario";
-  var AJ_DEF = { oposicion: null, fechaExamen: "", horasSemana: 6, nivel: "empiezo", favoritas: [], sigo: [], vistoAlertas: 0, t: 0 };
+  var AJ_DEF = { oposicion: null, fechaExamen: "", horasSemana: 6, nivel: "empiezo", favoritas: [], sigo: [], vistoAlertas: 0, onboarding: 0, t: 0 };
   function ajustes() { var a = lsGet(LS_AJ, {}); Object.keys(AJ_DEF).forEach(function (k) { if (a[k] == null) a[k] = AJ_DEF[k] instanceof Array ? [] : AJ_DEF[k]; }); if (!a.oposicion) a.oposicion = lsGet("testley:op", null); return a; }
   function guardarAjustes(cambios) {
     var a = ajustes(); Object.keys(cambios || {}).forEach(function (k) { a[k] = cambios[k]; }); a.t = Date.now();
@@ -304,7 +338,20 @@
       return { ok: true, email: m.customer_email || "" };
     });
   }
-  function pase() { var p = lsGet(LS_PASE, null); return p && p.ok ? p : null; }
+  // Entitlement: clave de licencia validada o suscripción confirmada por el servidor (RPC mi_plan, alimentada por el webhook firmado).
+  var LS_PLAN = "testley:plan-servidor";
+  function pase() {
+    var p = lsGet(LS_PASE, null); if (p && p.ok) return p;
+    var s = lsGet(LS_PLAN, null), ses = sesion();
+    return s && s.plan === "premium" && ses && s.uid === ses.user.id ? { ok: true, fuente: "servidor", email: ses.user.email } : null;
+  }
+  function planServidor(forzar) {
+    var ses = sesion(), s = lsGet(LS_PLAN, null);
+    if (!ONLINE || !ses || (!forzar && s && s.uid === ses.user.id && Date.now() - s.t < 36e5)) return Promise.resolve(s);
+    return refrescar().then(function () { return api("/rest/v1/rpc/mi_plan", { method: "POST", body: {} }); })
+      .then(function (r) { var v = { plan: (r && r.plan) || "free", uid: ses.user.id, t: Date.now() }; lsSet(LS_PLAN, v); return v; })
+      .catch(function () { return s; }); // sin la función desplegada (esquema v4) se mantiene la clave de licencia
+  }
   function activarPase(clave) {
     clave = String(clave || "").trim();
     if (!clave) return Promise.resolve({ ok: false, motivo: "invalida" });
@@ -348,19 +395,19 @@
   }
   document.addEventListener("DOMContentLoaded", function () {
     pintarCabecera(); campana();
-    if (ONLINE && sesion()) refrescar().then(pintarCabecera);
+    if (ONLINE && sesion()) refrescar().then(pintarCabecera).then(function () { return planServidor(); });
   });
 
   window.TL = {
     online: ONLINE, root: CFG.root || "./",
     registrarRespuesta: registrarRespuesta, registrarSesion: registrarSesion, estado: estado,
-    stats: stats, logros: logros, estrellas: estrellas,
+    stats: stats, logros: logros, estrellas: estrellas, comparaSimulacros: comparaSimulacros, puntos: puntos, objetivoSemanal: objetivoSemanal,
     sesion: sesion, registrar: registrar, entrar: entrar, salir: salir, recordar: recordar,
     perfil: perfil, actualizarPerfil: actualizarPerfil, ranking: ranking, subir: subir, bajar: bajar,
     setDatos: function (l, d) { DATOS[l] = d; },
     cargar: function (l) { return fetch((CFG.root || "./") + "datos/" + l + ".json").then(function (r) { return r.json(); }).then(function (d) { DATOS[l] = d; return d; }); },
     pintarCabecera: pintarCabecera,
-    pase: pase, activarPase: activarPase, quitarPase: quitarPase,
+    pase: pase, activarPase: activarPase, quitarPase: quitarPase, planServidor: planServidor,
     esGratis: function (l) { var p = plan(); return !p || (p.leyes_completas || []).indexOf(l) >= 0 || !!p.tests_completos; },
     puede: puede, plan: plan, prefsNotif: prefsNotif, guardarPrefsNotif: guardarPrefsNotif,
     esOposicion: function (id) { return (CFG.opos || []).indexOf(id) >= 0; },

@@ -4,7 +4,7 @@
   "frecuencia_horas": 24, "activo": true,
   "opciones": {"secciones": ["2B"], "dias_primera_vez": 90,
     "incluir": "(?i)convoca|convocatoria|proceso selectivo|pruebas selectivas|oposici[oó]n",
-    "excluir": "(?i)libre designaci[oó]n|concurso de traslados|provisi[oó]n de puestos|concurso espec[ií]fico|concurso general|comisi[oó]n de servicios|correcci[oó]n de errores|se aprueba la relaci[oó]n|lista|admitid|aprobad|nombra|tribunal|se modifica|fecha de celebraci"}},
+    "excluir": "(?i)libre designaci[oó]n|concurso de traslados|provisi[oó]n de puestos|proveer puestos de trabajo|concurso de m[eé]ritos|concurso espec[ií]fico|concurso general|comisi[oó]n de servicios|correcci[oó]n de errores|se aprueba la relaci[oó]n|lista|admitid|aprobad|nombra|tribunal|se modifica|fecha de celebraci"}},
  {"id": "pag-empleo", "nombre": "Punto de Acceso General · Empleo público", "prioridad": 2, "organismo": "Ministerio para la Transformación Digital y de la Función Pública",
   "domain": "administracion.gob.es", "url": "https://administracion.gob.es/pag_Home/empleoPublico/buscadorEmpleo.html", "tipo": "html", "crawler": "playwright", "parser": "html_enlaces",
   "frecuencia_horas": 24, "activo": true, "opciones": {"incluir": "(?i)convocatoria|oposici|proceso selectivo|plazas", "max_documentos": 60}},

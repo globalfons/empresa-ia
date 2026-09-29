@@ -1,0 +1,10 @@
+{
+ "_ayuda": "Campaign Engine. Cada campaña define su canal, objetivo, audiencia, fechas, presupuesto y UTM. Las métricas salen de los eventos con utm_campaign = id (admin_metricas → por_canal) y del gasto importado (crecimiento/privado/ads_gasto.csv). Canales sin API conectada se gestionan a mano.",
+ "canales": ["SEO", "TikTok", "Instagram", "YouTube", "Telegram", "Email", "Google Ads", "Meta Ads", "Reddit Ads", "Affiliate"],
+ "campanas": [
+  {"id": "convocatorias-mensual", "nombre": "Novedades de convocatorias (orgánico)", "canal": "SEO", "objetivo": "trafico", "audiencia": {"todas": true},
+   "inicio": "2026-10-01", "fin": null, "presupuesto_eur": 0, "estado": "activa", "utm": {"utm_source": "varios", "utm_campaign": "convocatorias-AAAA-MM"}, "contenido": "Generado por el orquestador a partir de NEW_CONVOCATION"},
+  {"id": "pregunta-diaria", "nombre": "Pregunta del día en Telegram", "canal": "Telegram", "objetivo": "retencion", "audiencia": {"canal": "telegram"},
+   "inicio": "2026-10-01", "fin": null, "presupuesto_eur": 0, "estado": "pausada", "utm": {"utm_source": "telegram", "utm_campaign": "pregunta-diaria"}, "contenido": "Regla pregunta-diaria (flag telegram)"}
+ ]
+}

@@ -1,9 +1,13 @@
 // TestLey — Servicio de notificaciones (Supabase Edge Function).
 // Ciclo: EVENTOS (datos/novedades.json de la web) → ABANICO (usuarios que siguen la oposición y lo quieren) → COLA → ENVÍO → LOG.
+// Es también el Email Engine del Growth OS (crecimiento/canales.py → Email):
+//   {"accion":"ciclo"}                                  avisos oficiales a quien sigue la oposición (solo email_activo)
+//   {"accion":"difusion","clave","asunto","texto","segmento":{oposicion?,categoria?}}  contenido aprobado; a no seguidores solo con consentimiento comercial (marketing)
+//   {"accion":"reactivacion","dias":5}                  usuarios sin actividad hace N días, no premium y con consentimiento comercial
 // El proveedor de email es un adaptador: EMAIL_PROVIDER = none | resend | brevo | postmark. Con "none" los avisos quedan
 // en la cola como 'sin_proveedor' y se envían en cuanto se configure uno, sin cambiar nada más.
 // Secretos: NOTIF_CRON_SECRET (obligatorio), SITE_URL, EMAIL_PROVIDER, EMAIL_FROM, RESEND_API_KEY | BREVO_API_KEY | POSTMARK_TOKEN.
-import { aviso, resumen, type Evento } from "./plantillas.ts";
+import { aviso, difusion, reactivacion, resumen, type Evento } from "./plantillas.ts";
 
 const env = (k: string, d = "") => Deno.env.get(k) ?? d;
 const SB = env("SUPABASE_URL"), KEY = env("SUPABASE_SERVICE_ROLE_KEY");
@@ -64,6 +68,35 @@ async function abanico(eventos: Array<Evento & { id: number }>) {
   return n;
 }
 
+// DIFUSIÓN: un contenido aprobado del Growth OS → usuarios del segmento con email activo (y consentimiento comercial si no siguen la oposición)
+async function difundir(b: { clave: string; asunto: string; texto: string; segmento?: { oposicion?: string } }) {
+  if (!b.clave || !b.asunto || !b.texto) throw new Error("difusion: faltan clave, asunto o texto");
+  const op = b.segmento?.oposicion || "*";
+  const ev = (await rest("notif_eventos?on_conflict=clave", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates,return=representation" },
+    body: JSON.stringify([{ clave: `contenido:${b.clave}`, tipo: "difusion", oposicion: op, titulo: b.asunto.slice(0, 150), url: SITE, datos: { texto: b.texto.slice(0, 4000) } }]) }))?.[0];
+  if (!ev) return 0; // ya difundido (idempotente)
+  const seguidores = op === "*" ? [] : (await rest(`progreso?ley=eq.ajustes-usuario&datos->sigo=cs.${encodeURIComponent(JSON.stringify([op]))}&select=user_id`)).map((x: { user_id: string }) => x.user_id);
+  const prefs = await rest(`notif_preferencias?email_activo=eq.true&select=user_id,marketing`);
+  const dest = prefs.filter((p: { user_id: string; marketing: boolean }) => seguidores.includes(p.user_id) || p.marketing);
+  if (dest.length) await rest("notif_cola?on_conflict=user_id,evento_id,canal", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" },
+    body: JSON.stringify(dest.map((p: { user_id: string }) => ({ user_id: p.user_id, evento_id: ev.id, canal: "email", plantilla: "difusion" }))) });
+  return dest.length;
+}
+
+// REACTIVACIÓN: sin actividad hace exactamente N días, sin suscripción activa y con consentimiento comercial. Un email por umbral.
+async function reactivar(dias: number) {
+  if (![3, 5, 7, 14, 30].includes(dias)) throw new Error("reactivacion: dias no admitido");
+  const inactivos = await rest("rpc/detectar_inactivos", { method: "POST", body: JSON.stringify({ p_dias: dias }) }) || [];
+  const dest = inactivos.filter((u: { premium: boolean; marketing: boolean }) => !u.premium && u.marketing);
+  if (!dest.length) return 0;
+  const hoy = new Date().toISOString().slice(0, 10);
+  const ev = (await rest("notif_eventos?on_conflict=clave", { method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=representation" },
+    body: JSON.stringify([{ clave: `reactivacion:${dias}:${hoy}`, tipo: "reactivacion", oposicion: "*", titulo: `Reactivación ${dias} días`, url: `${SITE}panel/`, datos: { dias } }]) }))?.[0];
+  await rest("notif_cola?on_conflict=user_id,evento_id,canal", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" },
+    body: JSON.stringify(dest.map((u: { user_id: string }) => ({ user_id: u.user_id, evento_id: ev.id, canal: "email", plantilla: "reactivacion" }))) });
+  return dest.length;
+}
+
 // 3) ENVÍO: procesa la cola; agrupa en resúmenes diarios/semanales; sin proveedor, deja 'sin_proveedor'
 async function enviar() {
   const prov = env("EMAIL_PROVIDER", "none");
@@ -74,11 +107,12 @@ async function enviar() {
   for (const c of cola) (porUsuario[c.user_id] ||= []).push(c);
   const res = { enviados: 0, sin_proveedor: 0, fallidos: 0 };
   for (const [uid, items] of Object.entries(porUsuario)) {
-    const inmediatos = items.filter((c: { plantilla: string }) => c.plantilla === "aviso");
+    const inmediatos = items.filter((c: { plantilla: string }) => ["aviso", "difusion", "reactivacion"].includes(c.plantilla));
     const diarios = items.filter((c: { plantilla: string }) => c.plantilla === "resumen_diaria");
     const semanales = items.filter((c: { plantilla: string }) => c.plantilla === "resumen_semanal" && new Date().getUTCDay() === 1);
     const lotes: Array<{ filas: typeof items; correo: (email: string) => Correo }> = [
-      ...inmediatos.map((c: { notif_eventos: Evento }) => ({ filas: [c], correo: (email: string) => ({ para: email, ...aviso(c.notif_eventos, nombre(c.notif_eventos.oposicion), SITE) }) })),
+      ...inmediatos.map((c: { plantilla: string; notif_eventos: Evento }) => ({ filas: [c], correo: (email: string) => ({ para: email,
+        ...(c.plantilla === "difusion" ? difusion(c.notif_eventos, SITE) : c.plantilla === "reactivacion" ? reactivacion(c.notif_eventos, SITE) : aviso(c.notif_eventos, nombre(c.notif_eventos.oposicion), SITE)) }) })),
       ...[["diario", diarios], ["semanal", semanales]].filter(([, f]) => (f as typeof items).length).map(([p, f]) => ({ filas: f as typeof items,
         correo: (email: string) => ({ para: email, ...resumen((f as typeof items).map((c: { notif_eventos: Evento }) => ({ e: c.notif_eventos, nombreOp: nombre(c.notif_eventos.oposicion) })), SITE, p as string) }) })),
     ];
@@ -101,6 +135,14 @@ Deno.serve(async (req) => {
   if (req.method !== "POST") return new Response("Método no permitido", { status: 405 });
   if (!env("NOTIF_CRON_SECRET") || req.headers.get("x-cron-secret") !== env("NOTIF_CRON_SECRET")) return new Response("No autorizado", { status: 401 });
   try {
+    const b = await req.json().catch(() => ({}));
+    if (b.accion === "difusion" || b.accion === "reactivacion") {
+      const encolados = b.accion === "difusion" ? await difundir(b) : await reactivar(+b.dias);
+      const envio = await enviar();
+      const r = { accion: b.accion, encolados, ...envio, proveedor: env("EMAIL_PROVIDER", "none") };
+      await log(b.accion, r);
+      return new Response(JSON.stringify(r), { headers: { "Content-Type": "application/json" } });
+    }
     const eventos = await ingerirEventos();
     const encolados = await abanico(eventos);
     const envio = await enviar();

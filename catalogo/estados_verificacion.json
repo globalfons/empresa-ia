@@ -1,0 +1,39 @@
+{
+ "_ayuda": "Vocabulario único de estados de verificación. Lo usan ingesta/extraer.py, catalogo/*.py, datos/*.py, build.mjs y el tutor. No mezclar visualmente contenido oficial con contenido generado: cada estado tiene su etiqueta y su clase.",
+ "OFFICIAL_VERIFIED": {
+  "etiqueta": "Oficial · verificado",
+  "clase": "badge-oficial",
+  "oficial": true,
+  "descripcion": "Dato de una fuente oficial cuyo texto literal está comprobado contra el documento oficial guardado, y revisado por TestLey."
+ },
+ "OFFICIAL_PENDING_REVIEW": {
+  "etiqueta": "Oficial · pendiente de revisión",
+  "clase": "badge-pendiente",
+  "oficial": true,
+  "descripcion": "Dato extraído automáticamente de una fuente oficial. Su frase aparece literalmente en el documento oficial, pero aún no lo ha revisado una persona."
+ },
+ "SOURCE_TEMPORARILY_UNAVAILABLE": {
+  "etiqueta": "Fuente no disponible temporalmente",
+  "clase": "badge-aviso",
+  "oficial": true,
+  "descripcion": "La fuente oficial no responde. Mostramos el último dato válido que obtuvimos y lo volveremos a comprobar automáticamente."
+ },
+ "AI_GENERATED": {
+  "etiqueta": "Generado por IA",
+  "clase": "badge-ia",
+  "oficial": false,
+  "descripcion": "Texto redactado por inteligencia artificial (por ejemplo, las explicaciones del tutor). No es información oficial."
+ },
+ "AI_GENERATED_REVIEW_REQUIRED": {
+  "etiqueta": "Interpretado por IA · requiere revisión",
+  "clase": "badge-ia",
+  "oficial": false,
+  "descripcion": "Dato que una IA ha interpretado a partir del documento oficial. La frase citada es literal, pero la interpretación debe revisarse antes de darla por buena."
+ },
+ "DEPRECATED": {
+  "etiqueta": "Desfasado",
+  "clase": "badge-gris",
+  "oficial": false,
+  "descripcion": "Dato o pregunta que ya no coincide con el texto oficial vigente (la ley o la convocatoria cambió). No se muestra ni se usa en los tests."
+ }
+}

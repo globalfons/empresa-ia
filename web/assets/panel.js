@@ -111,9 +111,58 @@
       (TL.puede("alertas") ? '<div id="avisos"></div><div id="notif-email"></div>' : '<p class="muted small">🔒 Los avisos de publicaciones del BOE sobre tus convocatorias están incluidos en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.</p>') + "</section>";
   }
 
+  // «¿Qué tengo que hacer HOY?»: la primera respuesta del panel. Con Pase sale del plan adaptativo; sin Pase, una sesión básica.
+  function seccionHoy(s, data) {
+    var aj = TL.ajustes(), info = ES_OP ? opInfo(LEY) : null, MINPQ = 1.5;
+    var tareas = [];
+    var plan = ES_OP && TL.puede("plan_estudio") && window.TLPlan ? TLPlan.generar(s, data, aj, info && info.sim, TL.estado) : null;
+    if (plan && plan.semana.length) tareas = plan.semana[0].tareas.map(function (t) {
+      var n = +((t.txt.match(/(\d+) (preguntas|fallos)/) || [])[1] || 0);
+      return { txt: t.txt, det: t.det, min: t.tipo === "simulacro" ? (info && info.sim ? info.sim.minutos : 30) : Math.max(5, Math.round(n * MINPQ)), ancla: t.ancla };
+    });
+    else {
+      if (s.cuenta.fallada) tareas.push({ txt: "Repasar " + Math.min(10, s.cuenta.fallada) + " fallos", min: Math.round(Math.min(10, s.cuenta.fallada) * MINPQ), ancla: "fallos" });
+      tareas.push({ txt: "Repaso inteligente: 20 preguntas", det: "primero lo que fallas y lo que aún no has visto", min: 30, ancla: "repaso" });
+    }
+    if (!tareas.length) return "";
+    var total = tareas.reduce(function (t, x) { return t + x.min; }, 0);
+    var hecho = TL.stats(LEY, data).sesiones.some(function (x) { return new Date(x[0]).toDateString() === new Date().toDateString(); });
+    return '<section class="card hoy"><div class="of-head"><h2>Tu sesión de hoy</h2><span class="muted">' + total + " min</span></div>" +
+      (hecho ? '<p class="ok-msg">✔ Hoy ya has estudiado. Si te quedan ganas, sigue con la siguiente tarea.</p>' : "") +
+      '<ol class="hoy-lista">' + tareas.map(function (t) {
+        return '<li><a href="' + LEY_URL + "#test=" + t.ancla + '"><b>' + esc(t.txt) + "</b>" + (t.det ? '<span class="muted small">' + esc(t.det.length > 70 ? t.det.slice(0, 68) + "…" : t.det) + "</span>" : "") + '</a><span class="min">' + t.min + " min</span></li>";
+      }).join("") + '</ol><a class="cta" href="' + LEY_URL + "#test=" + tareas[0].ancla + '">Empezar sesión</a>' +
+      (plan ? "" : TL.puede("plan_estudio") ? "" : ' <a class="small" href="' + TL.root + 'precios/">Con el Pase, tu sesión sale de un plan adaptado a tu fecha de examen</a>') + "</section>";
+  }
+  function seccionProgresoSemanal(s) {
+    var p = TL.puntos(s), o = TL.objetivoSemanal(p, TL.ajustes().horasSemana);
+    return '<section class="card"><div class="of-head"><h2>Tu semana</h2><span class="pill">Nivel ' + p.nivel + " · " + p.total + " puntos</span></div>" +
+      '<p>Objetivo: estudiar <b>' + o.diasObjetivo + " días</b> con al menos un <b>70 %</b> de acierto. Llevas <b>" + o.dias + " días</b> y un <b>" + o.precision + " %</b>." + (o.cumplido ? ' <b class="good">✔ Objetivo cumplido</b>' : "") + "</p>" +
+      '<div class="tbar-track"><span class="' + (o.cumplido ? "good" : "mid") + '" style="width:' + Math.min(100, Math.round((100 * o.dias) / o.diasObjetivo)) + '%"></span></div>' +
+      '<p class="muted small">Los puntos premian la constancia (' + p.constancia + "), la precisión (" + p.precision + ") y lo que dominas (" + p.progreso + "), no el número de preguntas." + (p.siguiente ? " Siguiente nivel: " + p.siguiente + " puntos." : "") + "</p></section>";
+  }
+
+  // Invita a otros opositores (flag referral + cuenta). La recompensa se decide al convertirse en premium (con antifraude en el servidor).
+  function seccionReferidos() {
+    var F = (window.TL_CONFIG || {}).flags || {};
+    if (!F.referral || !TL.online || !TL.sesion()) return "";
+    return '<section class="card" id="referidos"><h2>Invita a otros opositores</h2><div id="ref-box"><p class="muted small">Cargando tu enlace…</p></div></section>';
+  }
+  function cargarReferidos() {
+    var box = el.querySelector("#ref-box"); if (!box) return;
+    var C = window.TL_CONFIG, h = { apikey: C.supabaseAnonKey, Authorization: "Bearer " + TL.sesion().access_token, "Content-Type": "application/json" };
+    fetch(C.supabaseUrl + "/rest/v1/rpc/mi_codigo_referido", { method: "POST", headers: h, body: "{}" }).then(function (r) { return r.json(); }).then(function (cod) {
+      return fetch(C.supabaseUrl + "/rest/v1/rpc/mis_referidos", { method: "POST", headers: h, body: "{}" }).then(function (r) { return r.json(); }).then(function (st) {
+        var enlace = (C.root && C.root !== "./" ? new URL(C.root, location.href).href : location.origin + "/") + "?ref=" + cod;
+        box.innerHTML = '<p>Comparte tu enlace: <input class="ref-url" readonly value="' + esc(enlace) + '" onclick="this.select()"></p><p class="muted small">' + (st.registrados || 0) + " registrados · " + (st.convertidos || 0) + " con Pase. Las invitaciones a ti mismo o desde tu mismo dispositivo no cuentan.</p>";
+      });
+    }).catch(function () { box.innerHTML = '<p class="muted small">Las invitaciones se activarán muy pronto.</p>'; });
+  }
+
   function pintar(data, perfil) {
     var s = TL.stats(LEY, data);
     var log = TL.logros(s);
+    if (window.TLEventos) TLEventos.activacion(s, ES_OP);
     var ses = TL.sesion();
     var tot = s.total || 1;
     var seg = ["dominada", "aprendida", "fallada", "nueva"];
@@ -128,6 +177,7 @@
     var ult = s.sesiones.slice(-12);
 
     el.innerHTML =
+      seccionHoy(s, data) +
       // Cabecera
       '<section class="hero-panel">' +
       '<div class="hp-main"><span class="kicker">' + (ses ? "Hola, " + esc((perfil && perfil.alias) || ses.user.email.split("@")[0]) : "Tu progreso en este dispositivo") + "</span>" +
@@ -144,6 +194,7 @@
       '<div class="kpi"><span class="kpi-n">🔥 ' + s.racha + '</span><span class="kpi-l">días de racha</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.cuenta.dominada + "/" + s.total + '</span><span class="kpi-l">dominadas</span></div></div>' +
 
+      seccionProgresoSemanal(s) +
       seccionOposicion(s, data) +
       // Estado del banco
       '<section class="card"><h2>Estado de las ' + s.total + " preguntas disponibles</h2>" +
@@ -187,7 +238,7 @@
           }).join("") + '</div><p class="muted small">Nota de cada test con penalización (cada error resta 1/3). La línea del 5 es el aprobado orientativo.</p>'
         : '<p class="muted">Cuando completes tests verás aquí tu evolución.</p>') + "</section>" +
 
-      seccionTutor() + seccionSimulacros(s) + seccionSeguimiento() +
+      seccionTutor() + seccionSimulacros(s) + seccionSeguimiento() + seccionReferidos() +
       // Logros
       '<section class="card"><h2>Logros</h2><div class="badges">' +
       log.map(function (l) { return '<div class="badge ' + (l.ok ? "on" : "") + '"><span class="b-ico">' + l.icono + "</span><b>" + l.nombre + "</b><small>" + l.desc + "</small></div>"; }).join("") +
@@ -245,6 +296,7 @@
       tf.onsubmit = function (e) { e.preventDefault(); TLTutor.duda(el.querySelector("#tutor-q").value, { oposicion: ES_OP ? LEY : null }, el.querySelector("#tutor-out")); };
       el.querySelector("#tutor-rec").onclick = function () { TLTutor.recomendar(resumenTutor(s, data), el.querySelector("#tutor-out")); };
     }
+    cargarReferidos();
     var sb = el.querySelector("#salir");
     if (sb) sb.onclick = function () { TL.salir().then(function () { location.href = TL.root; }); };
   }

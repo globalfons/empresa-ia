@@ -8,7 +8,7 @@ Uso:
 Política de fallos: una fuente que falla NO borra nada. Se conservan los documentos y datos anteriores,
 la fuente se marca como "error" o "inaccesible" con el motivo, y se reintenta con espera creciente (1 h, 2 h, 4 h… hasta su frecuencia).
 """
-import sys, os, re, json, datetime, argparse, time, urllib.parse
+import sys, os, re, json, datetime, argparse, time, urllib.parse, difflib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nucleo as N
 import parsers as P
@@ -16,8 +16,19 @@ import parsers as P
 def estado_fuentes(): return N.leer("fuentes-estado.json", {})
 def documentos(): return N.leer("documentos.json", {})
 
+def resumen_diff(antes, despues, max_lineas=6):
+    """Qué cambió entre dos versiones del texto: líneas añadidas/quitadas y una muestra de ellas."""
+    a, b = antes.splitlines(), despues.splitlines()
+    add, rem = [], []
+    for l in difflib.unified_diff(a, b, lineterm="", n=0):
+        if l.startswith("+") and not l.startswith("+++"): add.append(l[1:].strip())
+        elif l.startswith("-") and not l.startswith("---"): rem.append(l[1:].strip())
+    return {"lineas_anadidas": len(add), "lineas_quitadas": len(rem),
+            "muestra_anadida": [x[:200] for x in add if x][:max_lineas], "muestra_quitada": [x[:200] for x in rem if x][:max_lineas]}
+
 def guardar_documento(docs, fuente, url, contenido, ctype, meta):
-    """Guarda el texto parseado; detecta si es nuevo, ha cambiado o sigue igual (por hash del contenido)."""
+    """Guarda el texto parseado; detecta si es nuevo, ha cambiado o sigue igual (por hash del contenido).
+    Si cambia, conserva la versión anterior (<id>.v<N>.txt), sube document_version, enlaza previous_version_id y registra el diff."""
     did = N.doc_id(url); h = N.sha256(contenido); t = N.iso(N.ahora())
     prev = docs.get(did)
     if prev and prev["sha256"] == h:
@@ -25,18 +36,27 @@ def guardar_documento(docs, fuente, url, contenido, ctype, meta):
     tipo, res = P.parsear(contenido, ctype, url)
     carpeta = os.path.join(N.DOCS, fuente["id"]); os.makedirs(carpeta, exist_ok=True)
     ruta = os.path.join(carpeta, did + ".txt")
+    version = (prev or {}).get("document_version", 1) + (1 if prev else 0)
+    diff, versiones = None, list((prev or {}).get("versiones", []))
+    if prev and os.path.exists(ruta):
+        anterior = open(ruta).read()
+        ruta_v = os.path.join(carpeta, f"{did}.v{version - 1}.txt")
+        os.replace(ruta, ruta_v)  # la versión anterior nunca se borra
+        diff = resumen_diff(anterior, res["texto"])
+        versiones.append({"version": version - 1, "sha256": prev["sha256"], "retrieved_at": prev.get("retrieved_at"), "texto": os.path.relpath(ruta_v, N.RAIZ)})
     open(ruta, "w").write(res["texto"])
     cambio = "modificado" if prev else "nuevo"
     d = dict(prev or {}, **{
-        "doc_id": did, "fuente": fuente["id"], "url": url, "domain": urllib.parse.urlparse(url).netloc, "tipo": tipo,
+        "doc_id": did, "fuente": fuente["id"], "url": url, "domain": urllib.parse.urlparse(url).netloc, "tipo": tipo, "content_type": ctype,
         "titulo": meta.get("titulo") or res.get("titulo", ""), "published_at": meta.get("published_at") or (prev or {}).get("published_at"),
         "retrieved_at": t, "updated_at": t, "sha256": h, "bytes": len(contenido), "texto": os.path.relpath(ruta, N.RAIZ),
+        "document_version": version, "previous_version_id": f"{did}@v{version - 1}" if prev else None, "versiones": versiones[-10:],
         "estado": cambio, "extraccion": "pendiente", "meta": {**(prev or {}).get("meta", {}), **meta.get("meta", {})},
     })
     docs[did] = d
     with open(os.path.join(N.EST, "cambios.jsonl"), "a") as f:
-        f.write(json.dumps({"t": t, "fuente": fuente["id"], "doc_id": did, "url": url, "cambio": cambio,
-                            "sha_anterior": (prev or {}).get("sha256"), "sha_nuevo": h, "titulo": d["titulo"][:200]}, ensure_ascii=False) + "\n")
+        f.write(json.dumps({"t": t, "fuente": fuente["id"], "doc_id": did, "url": url, "cambio": cambio, "version": version,
+                            "sha_anterior": (prev or {}).get("sha256"), "sha_nuevo": h, "titulo": d["titulo"][:200], "diff": diff}, ensure_ascii=False) + "\n")
     return d, cambio
 
 def lista(x):
@@ -116,21 +136,24 @@ def toca(f, e, forzar):
 
 def ejecutar(args):
     est_all, docs = estado_fuentes(), documentos()
+    t_run = time.time(); m = {"fuentes_ejecutadas": 0, "fuentes_ok": 0, "fuentes_fallidas": 0, "nuevo": 0, "modificado": 0, "sin_cambios": 0}
     for f in sorted(N.fuentes(), key=lambda x: x["prioridad"]):
         if args.fuente and f["id"] != args.fuente: continue
         if not f.get("activo") or f["crawler"] not in CRAWLERS: continue
         e = est_all.setdefault(f["id"], {"estado": "pendiente", "errores_consecutivos": 0})
         if not toca(f, e, args.forzar or bool(args.fuente)): continue
-        t0 = time.time(); e["ultimo_escaneo"] = N.iso(N.ahora())
+        t0 = time.time(); e["ultimo_escaneo"] = N.iso(N.ahora()); m["fuentes_ejecutadas"] += 1
         try:
             n, h = CRAWLERS[f["crawler"]](f, e, docs, args)
             e.update({"estado": "ok", "ultimo_exito": e["ultimo_escaneo"], "errores_consecutivos": 0, "ultimo_error": None,
                       "ultimo_resultado": n, "proximo_escaneo": N.iso(N.ahora() + datetime.timedelta(hours=f["frecuencia_horas"]))})
             if h: e["hash"] = h
+            m["fuentes_ok"] += 1
+            for k in ("nuevo", "modificado", "sin_cambios"): m[k] += n.get(k, 0)
             N.log("fuente_ok", fuente=f["id"], **n, segundos=round(time.time() - t0, 1))
             print(f"✔ {f['id']}: {n}")
         except Exception as ex:
-            tipo = getattr(ex, "tipo", "error"); e["errores_consecutivos"] = e.get("errores_consecutivos", 0) + 1
+            tipo = getattr(ex, "tipo", "error"); e["errores_consecutivos"] = e.get("errores_consecutivos", 0) + 1; m["fuentes_fallidas"] += 1
             espera = min(f["frecuencia_horas"], 2 ** (e["errores_consecutivos"] - 1))
             e.update({"estado": "inaccesible" if tipo in ("inaccesible", "robots") else "error", "ultimo_error": str(ex)[:300],
                       "proximo_escaneo": N.iso(N.ahora() + datetime.timedelta(hours=espera))})
@@ -139,6 +162,12 @@ def ejecutar(args):
         e["documentos"] = sum(1 for d in docs.values() if d["fuente"] == f["id"])
         e["ultima_duracion_s"] = round(time.time() - t0, 1)
         N.guardar("fuentes-estado.json", est_all); N.guardar("documentos.json", docs)
+    activas = [f for f in N.fuentes() if f.get("activo")]
+    m.update({"t": N.iso(N.ahora()), "fase": "rastreo", "duracion_s": round(time.time() - t_run, 1), "fuentes_activas": len(activas),
+              "fuentes_con_fallo": sum(1 for f in activas if est_all.get(f["id"], {}).get("estado") in ("error", "inaccesible")),
+              "documentos_procesados": m["nuevo"] + m["modificado"] + m["sin_cambios"], "documentos_cambiados": m["modificado"], "documentos_total": len(docs)})
+    with open(os.path.join(N.EST, "metricas.jsonl"), "a") as fm: fm.write(json.dumps(m, ensure_ascii=False) + "\n")
+    return m
 
 if __name__ == "__main__":
     a = argparse.ArgumentParser(); a.add_argument("--fuente"); a.add_argument("--forzar", action="store_true")

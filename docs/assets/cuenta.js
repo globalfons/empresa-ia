@@ -42,10 +42,10 @@
         if (!f.acepto.checked) { btn.disabled = false; return pintar("Debes aceptar la política de privacidad.", "err"); }
         p = TL.registrar(email, f.pass.value, alias).then(function (r) {
           if (r.confirmar) { modo = "entrar"; pintar("Te hemos enviado un email para confirmar tu cuenta. Ábrelo y después entra aquí.", "ok"); }
-          else location.href = TL.root + "panel/";
+          else { if (window.TLEventos) TLEventos.alta(); location.href = TL.root + (TL.ajustes().onboarding ? "panel/" : "bienvenida/"); }
         });
       } else if (modo === "entrar") {
-        p = TL.entrar(email, f.pass.value).then(function () { location.href = TL.root + "panel/"; });
+        p = TL.entrar(email, f.pass.value).then(function () { if (window.TLEventos) TLEventos.alta(true); location.href = TL.root + (TL.ajustes().onboarding ? "panel/" : "bienvenida/"); });
       } else {
         p = TL.recordar(email).then(function () { pintar("Si existe una cuenta con ese email, te hemos enviado un enlace para cambiar la contraseña.", "ok"); });
       }

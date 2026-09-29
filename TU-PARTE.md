@@ -58,3 +58,14 @@ Estado de las fuentes: https://globalfons.github.io/empresa-ia/admin/fuentes/
 3. Secrets de Supabase: `NOTIF_CRON_SECRET` (una contraseña larga inventada), `SITE_URL`, y cuando tengas proveedor: `EMAIL_PROVIDER` (`resend`, `brevo` o `postmark`), `EMAIL_FROM` y su clave (`RESEND_API_KEY`, `BREVO_API_KEY` o `POSTMARK_TOKEN`).
 4. GitHub → Secrets de Actions: `NOTIF_URL` (la URL de la función) y `NOTIF_CRON_SECRET` (la misma contraseña).
 Hasta que haya proveedor, los avisos se guardan en cola y se envían en cuanto lo configures.
+
+## 9. Growth OS: pagos en servidor, analítica, Telegram y afiliados (activar por partes)
+Todo funciona ya sin esto (el orquestador corre en GitHub Actions y deja el contenido en revisión). Cada paso desbloquea una función:
+1. **Esquema v4** (5 min): Supabase → SQL Editor → pega `supabase/esquema.sql` entero → Run (se puede repetir sin problema).
+2. **Hazte administrador** (1 min): en el SQL Editor, `insert into public.admins select id from auth.users where email = 'TU_EMAIL';` → verás las métricas en `/admin/growth/`.
+3. **Webhook de Lemon Squeezy** (10 min): despliega `supabase functions deploy lemon-webhook --no-verify-jwt`; en Lemon Squeezy → Settings → Webhooks → añade la URL de la función, marca los eventos `subscription_*` y `order_created`, copia el «Signing secret» y guárdalo en Supabase → Edge Functions → Secrets como `LEMONSQUEEZY_WEBHOOK_SECRET` (y `LS_STORE_ID=485627`). Así Premium lo decide el servidor.
+4. **Secreto del worker** (2 min): en GitHub → Settings → Secrets → Actions añade `SUPABASE_SERVICE_ROLE_KEY` (cópiala tú de Supabase; no me la pases). Activa retención, avisos por Telegram a seguidores e informe con métricas.
+5. **Analítica** (cuando revises la política de privacidad): pon `"analytics": true` en `config.json → flags`. Sale un banner de consentimiento.
+6. **Telegram** (15 min): sigue `documentacion/TELEGRAM.md` y pon `"telegram": true`.
+7. **Invitaciones y afiliados**: `"referral": true` / `"affiliate": true`. Para dar de alta una academia: ver `documentacion/AFFILIATES.md`.
+8. **Revisar contenido**: cuando el orquestador genere borradores, los verás en `/admin/growth/`. Para aprobar: GitHub → Actions → «Growth OS» → Run workflow → campo `cli`: `aprobar <ID>` (o pídemelo a mí).

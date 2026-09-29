@@ -1,0 +1,63 @@
+# Growth OS: productores de eventos → orquestador de reglas → trabajos (contenido, SEO, Telegram, email, informes).
+# Cada hora: eventos urgentes. Cada día (06:40 UTC, tras la ingesta): pregunta del día, publicación programada y retención.
+# Cada lunes: informe de crecimiento. Sin credenciales, los canales quedan en «sin_proveedor» (nada se simula).
+# Secretos opcionales (Settings → Secrets and variables → Actions): ver .env.example
+name: Growth OS
+on:
+  schedule:
+    - cron: "12 * * * *"     # cada hora
+    - cron: "40 6 * * *"     # diario
+    - cron: "25 7 * * 1"     # semanal (lunes)
+  workflow_dispatch:
+    inputs:
+      tick:
+        description: "Tick a lanzar (DAILY_TICK, RETENTION_SCAN, WEEKLY_TICK) o vacío"
+        required: false
+      cli:
+        description: "Orden de revisión (p. ej.: aprobar ID · rechazar ID motivo · reintentar CLAVE · cancelar CLAVE)"
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: escritura-repo
+  cancel-in-progress: false
+jobs:
+  orquestador:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+      NOTIF_URL: ${{ secrets.NOTIF_URL }}
+      NOTIF_CRON_SECRET: ${{ secrets.NOTIF_CRON_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Orden manual de revisión
+        if: ${{ github.event.inputs.cli != '' }}
+        run: python3 -m crecimiento.cli ${{ github.event.inputs.cli }}
+      - name: Ciclo del orquestador
+        run: |
+          TICKS=""
+          if [ "${{ github.event.schedule }}" = "40 6 * * *" ]; then TICKS="--tick DAILY_TICK --tick RETENTION_SCAN"; fi
+          if [ "${{ github.event.schedule }}" = "25 7 * * 1" ]; then TICKS="--tick WEEKLY_TICK"; fi
+          if [ -n "${{ github.event.inputs.tick }}" ]; then TICKS="--tick ${{ github.event.inputs.tick }}"; fi
+          python3 -m crecimiento.orquestador $TICKS
+      - name: Reconstruir la web si hay contenido publicado nuevo
+        run: |
+          if [ -n "$(git status --porcelain crecimiento/estado/contenidos)" ]; then
+            python3 catalogo/construir.py && node build.mjs
+          fi
+      - name: Guardar estado (sin datos personales; crecimiento/privado no se sube)
+        run: |
+          git config user.name "testley-crecimiento"
+          git config user.email "testley-crecimiento@users.noreply.github.com"
+          git add -A crecimiento/estado docs
+          git diff --cached --quiet && exit 0
+          git commit -m "Growth OS: $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i * 5)); done

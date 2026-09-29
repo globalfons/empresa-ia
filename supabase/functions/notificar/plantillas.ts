@@ -22,3 +22,20 @@ export function resumen(items: { e: Evento; nombreOp: string }[], site: string, 
   const html = `<p>Novedades oficiales de las oposiciones que sigues:</p><ul>${items.map(({ e, nombreOp }) => `<li><b>${esc(TIPO[e.tipo] || TIPO.otro)}</b> · ${esc(nombreOp)} (${esc(e.fecha ?? "")}): <a href="${esc(e.url)}">${esc(e.titulo.slice(0, 160))}</a></li>`).join("")}</ul><p style="color:#666;font-size:12px"><a href="${site}panel/">Gestionar avisos</a></p>`;
   return { asunto, texto, html };
 }
+
+const pieComercial = (site: string) => `\n\nRecibes este email porque aceptaste recibir novedades de TestLey. Puedes darte de baja en cualquier momento desde ${site}panel/ (Avisos por email).`;
+
+// Contenido aprobado del Growth OS (su texto ya pasó la verificación de datos en crecimiento/contenido.py)
+export function difusion(e: Evento, site: string) {
+  const texto = String(e.datos?.texto || "") + pieComercial(site);
+  const html = texto.split(/\n{2,}/).map((p) => `<p>${esc(p).replace(/\n/g, "<br>").replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1">$1</a>')}</p>`).join("");
+  return { asunto: e.titulo, texto, html };
+}
+
+export function reactivacion(e: Evento, site: string) {
+  const dias = Number(e.datos?.dias || 0);
+  const asunto = "Tu sesión de repaso te espera";
+  const texto = `Hace ${dias} días que no estudias en TestLey. Tu panel te ha preparado una sesión corta con los temas donde más fallaste: ${site}panel/?utm_source=email&utm_medium=email&utm_campaign=reactivacion-${dias}` + pieComercial(site);
+  const html = `<p>Hace ${dias} días que no estudias en TestLey.</p><p>Tu panel te ha preparado una sesión corta con los temas donde más fallaste.</p><p><a href="${site}panel/?utm_source=email&utm_medium=email&utm_campaign=reactivacion-${dias}">Empezar mi sesión</a></p><p style="color:#666;font-size:12px">Recibes este email porque aceptaste recibir novedades de TestLey. <a href="${site}panel/">Darte de baja</a>.</p>`;
+  return { asunto, texto, html };
+}

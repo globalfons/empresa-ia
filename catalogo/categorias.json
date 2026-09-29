@@ -3,102 +3,133 @@
   "id": "administracion-estado",
   "nombre": "Administración del Estado",
   "icono": "🏛️",
-  "descripcion": "Cuerpos generales y especiales de la Administración General del Estado."
+  "descripcion": "Cuerpos generales y especiales de la Administración General del Estado.",
+  "administracion": "estatal"
  },
  {
   "id": "policia",
   "nombre": "Policía",
   "icono": "🚓",
-  "descripcion": "Policía Nacional, policías autonómicas y policías locales."
+  "descripcion": "Policía Nacional, policías autonómicas (Mossos, Ertzaintza, Policía Foral, Policía Canaria) y policías locales.",
+  "administracion": "varias"
  },
  {
   "id": "guardia-civil",
   "nombre": "Guardia Civil",
   "icono": "🛡️",
-  "descripcion": "Escala de Cabos y Guardias y otras escalas de la Guardia Civil."
+  "descripcion": "Escala de Cabos y Guardias y otras escalas de la Guardia Civil.",
+  "administracion": "estatal"
  },
  {
   "id": "bomberos",
   "nombre": "Bomberos",
   "icono": "🚒",
-  "descripcion": "Bomberos de ayuntamientos, diputaciones y comunidades autónomas."
+  "descripcion": "Bomberos de ayuntamientos, diputaciones y comunidades autónomas.",
+  "administracion": "varias"
  },
  {
   "id": "justicia",
   "nombre": "Justicia",
   "icono": "⚖️",
-  "descripcion": "Tramitación Procesal, Auxilio Judicial, Gestión Procesal y otros cuerpos de Justicia."
+  "descripcion": "Tramitación Procesal, Auxilio Judicial, Gestión Procesal y otros cuerpos de Justicia.",
+  "administracion": "estatal"
  },
  {
   "id": "ccaa",
-  "nombre": "Comunidades autónomas",
+  "nombre": "Administración autonómica",
   "icono": "🗺️",
-  "descripcion": "Cuerpos de administración general de las comunidades autónomas."
+  "descripcion": "Cuerpos de administración general y especial de las comunidades autónomas.",
+  "administracion": "autonomica"
+ },
+ {
+  "id": "diputaciones",
+  "nombre": "Diputaciones, cabildos y consells",
+  "icono": "🏢",
+  "descripcion": "Plazas de diputaciones provinciales y forales, cabildos insulares y consells insulares y comarcales.",
+  "administracion": "local"
  },
  {
   "id": "ayuntamientos",
-  "nombre": "Ayuntamientos",
+  "nombre": "Ayuntamientos y administración local",
   "icono": "🏙️",
-  "descripcion": "Plazas de administración local: auxiliares, administrativos y técnicos."
+  "descripcion": "Plazas de ayuntamientos, mancomunidades, comarcas y consorcios locales: auxiliares, administrativos, técnicos, policía local y más.",
+  "administracion": "local"
  },
  {
   "id": "sanidad",
   "nombre": "Sanidad",
   "icono": "🩺",
-  "descripcion": "Plazas de los servicios de salud: enfermería, TCAE, celadores y personal administrativo."
+  "descripcion": "Plazas de los servicios de salud: enfermería, TCAE, celadores y personal administrativo.",
+  "administracion": "autonomica"
  },
  {
   "id": "educacion",
   "nombre": "Educación",
   "icono": "🎓",
-  "descripcion": "Maestros, profesores de secundaria y personal de centros educativos."
+  "descripcion": "Maestros, profesores de secundaria y personal de centros educativos.",
+  "administracion": "autonomica"
  },
  {
   "id": "informatica",
   "nombre": "Informática",
   "icono": "💻",
-  "descripcion": "Cuerpos TIC de las administraciones públicas."
+  "descripcion": "Cuerpos TIC de las administraciones públicas.",
+  "administracion": "varias"
  },
  {
   "id": "fuerzas-armadas",
   "nombre": "Fuerzas Armadas",
   "icono": "🎖️",
-  "descripcion": "Tropa y marinería, suboficiales y oficiales."
+  "descripcion": "Tropa y marinería, suboficiales y oficiales.",
+  "administracion": "estatal"
  },
  {
   "id": "prisiones",
   "nombre": "Instituciones Penitenciarias",
   "icono": "🔐",
-  "descripcion": "Cuerpo de Ayudantes de Instituciones Penitenciarias."
+  "descripcion": "Cuerpo de Ayudantes de Instituciones Penitenciarias.",
+  "administracion": "estatal"
  },
  {
   "id": "correos",
   "nombre": "Correos y empresas públicas",
   "icono": "📮",
-  "descripcion": "Procesos de empleo de Correos y otras entidades públicas."
+  "descripcion": "Procesos de empleo de Correos y otras entidades públicas.",
+  "administracion": "estatal"
  },
  {
   "id": "hacienda",
   "nombre": "Hacienda",
   "icono": "💶",
-  "descripcion": "Agencia Tributaria y cuerpos de Hacienda: agentes, técnicos e inspectores."
+  "descripcion": "Agencia Tributaria y cuerpos de Hacienda: agentes, técnicos e inspectores.",
+  "administracion": "estatal"
  },
  {
   "id": "seguridad-social",
   "nombre": "Seguridad Social",
   "icono": "🧾",
-  "descripcion": "Cuerpos de la Administración de la Seguridad Social."
+  "descripcion": "Cuerpos de la Administración de la Seguridad Social.",
+  "administracion": "estatal"
  },
  {
   "id": "personal-laboral",
   "nombre": "Personal laboral",
   "icono": "👷",
-  "descripcion": "Plazas de personal laboral fijo en administraciones y organismos públicos."
+  "descripcion": "Plazas de personal laboral fijo en administraciones y organismos públicos.",
+  "administracion": "varias"
  },
  {
   "id": "universidades",
   "nombre": "Universidades",
   "icono": "🏫",
-  "descripcion": "Personal de administración y servicios y profesorado de universidades públicas."
+  "descripcion": "Personal de administración y servicios y profesorado de universidades públicas.",
+  "administracion": "universidades"
+ },
+ {
+  "id": "otros-organismos",
+  "nombre": "Otros cuerpos y organismos públicos",
+  "icono": "🏦",
+  "descripcion": "Cortes Generales, órganos constitucionales, Banco de España, organismos reguladores y otros cuerpos del sector público.",
+  "administracion": "estatal"
  }
 ]

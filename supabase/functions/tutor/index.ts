@@ -41,6 +41,12 @@ async function premium(clave: string) {
   const st = d?.license_key?.status;
   return !!d.valid && st !== "expired" && st !== "disabled" && (!env("LS_STORE_ID") || String(d?.meta?.store_id) === env("LS_STORE_ID"));
 }
+// Entitlement centralizado (esquema v4): suscripción registrada por el webhook firmado de Lemon Squeezy.
+async function premiumServidor(req: Request) {
+  const r = await fetch(`${SB}/rest/v1/rpc/mi_plan`, { method: "POST", headers: { apikey: env("SUPABASE_ANON_KEY"), Authorization: req.headers.get("authorization") || "", "Content-Type": "application/json" }, body: "{}" });
+  if (!r.ok) return false; // sin esquema v4: se usa la clave de licencia
+  return (await r.json().catch(() => ({})))?.plan === "premium";
+}
 // Límite diario por usuario en la tabla tutor_uso (solo accesible con la clave de servicio: el usuario no puede reiniciarlo).
 async function consumir(uid: string) {
   const h = { apikey: env("SUPABASE_SERVICE_ROLE_KEY"), Authorization: `Bearer ${env("SUPABASE_SERVICE_ROLE_KEY")}`, "Content-Type": "application/json" };
@@ -94,7 +100,7 @@ Deno.serve(async (req) => {
     const b = await req.json();
     const u = await usuario(req);
     if (!u?.id) return json({ error: "Inicia sesión para usar el tutor." }, 401);
-    if (!(await premium(String(b.licencia || "")))) return json({ error: "El tutor IA está incluido en el Pase Opositor." }, 402);
+    if (!(await premiumServidor(req)) && !(await premium(String(b.licencia || "")))) return json({ error: "El tutor IA está incluido en el Pase Opositor." }, 402);
     if (!(await consumir(u.id))) return json({ error: `Has alcanzado el límite de ${LIMITE} consultas de hoy.` }, 429);
 
     if (b.modo === "explicar") {
