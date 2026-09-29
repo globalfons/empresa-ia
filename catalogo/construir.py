@@ -21,6 +21,8 @@ for p in sorted(glob.glob(os.path.join(D, "oposiciones", "*.json"))):
     fu = o["fuentes"][o["temario"]["fuente"]]
     plazas = (o["oficial"].get("plazas") or {}).get("valor")
     temas = [dict(t, asignacion={n: "revisada" for n in t["normas"]}) for t in o["temario"]["temas"]]
+    o["temario_tipo"] = o["temario"]["tipo"]
+    o["verificacion"] = "pendiente" if o["temario"]["tipo"] == "pendiente" else "parcial" if o.get("pendientes") else "verificada"
     leg = [t for t in temas if t["tipo"] != "no_legislativo"]
     cub = sum(len([n for n in t["normas"] if n in PUBLICADAS]) / len(t["normas"]) for t in leg if t["normas"])
     o.update({
@@ -40,7 +42,7 @@ normas = []
 for nid, n in NORMAS.items():
     usos = [(o, t) for o in opos for t in o["temario"] if nid in t["normas"]]
     ops = sorted({o["id"] for o, _ in usos})
-    peso = sum((o["convocatoria"]["plazas"] or 0) * (1.5 if o["estado"] in ("convocada", "plazo_abierto") else 1) for o in opos if o["id"] in ops)
+    peso = sum((o["convocatoria"]["plazas"] or 0) * (1.5 if o["estado"] == "activa" else 1) for o in opos if o["id"] in ops)
     normas.append(dict(n, fuente=f"https://raw.githubusercontent.com/legalize-dev/legalize-es/main/es/{nid}.md",
                        estado_testley="publicada" if nid in PUBLICADAS else "pendiente",
                        oposiciones=ops, temas=len(usos), prioridad=round(peso * len(usos) / max(1, len(ops)))))
