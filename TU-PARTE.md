@@ -36,3 +36,11 @@ Publica los textos de `negocio/difusion.md` en 2–3 grupos de Telegram o foros 
 
 ## 5. Google Search Console (5 minutos)
 https://search.google.com/search-console → añade la URL de la web → envía `sitemap.xml`.
+
+## 6. Activar el tutor IA (opcional, 15 minutos)
+El código ya está hecho (`supabase/functions/tutor/index.ts`). Mientras no lo actives, el tutor no aparece en la web.
+1. Crea una clave de API en https://console.anthropic.com (tiene coste por uso; el tutor usa por defecto un modelo económico y un límite de 40 consultas al día por usuario). **No me la pases**: va directamente a Supabase.
+2. Supabase → **SQL Editor → New query**: pega el bloque «v2 (tutor IA)» del final de `supabase/esquema.sql` y pulsa **Run**.
+3. Supabase → **Edge Functions → Deploy a new function → Via editor**: nombre `tutor`, pega el contenido de `supabase/functions/tutor/index.ts` y despliega.
+4. Supabase → **Edge Functions → Secrets**: añade `ANTHROPIC_API_KEY` (tu clave), `SITE_URL` = `https://globalfons.github.io/empresa-ia/` y `LS_STORE_ID` = `485627`.
+5. Dime «tutor desplegado» y yo pongo su dirección en `config.json` y lo pruebo.
