@@ -3,6 +3,14 @@
   var box = document.getElementById("op-accion");
   if (!box || !window.TL) return;
   var op = box.getAttribute("data-op");
+  if (box.getAttribute("data-tipo") === "convocatoria") {
+    var pintarC = function () {
+      var sig = TL.sigo(op);
+      box.innerHTML = '<div class="op-cta"><button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "🔔 Siguiendo esta convocatoria" : "🔔 Seguir esta convocatoria") + "</button></div>";
+      document.getElementById("seguir").onclick = function () { TL.alternarSeguir(op); pintarC(); };
+    };
+    pintarC(); return;
+  }
   function pintar() {
     var mia = TL.miOposicion() === op, sig = TL.sigo(op);
     var seguir = '<button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "🔔 Siguiendo la convocatoria" : "🔔 Seguir convocatoria") + "</button>";

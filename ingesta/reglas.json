@@ -1,0 +1,23 @@
+{
+ "_ayuda": "Reglas de clasificación (la primera que encaja gana) sobre título + denominación de la plaza + departamento. Añadir reglas aquí, no en el código.",
+ "categorias": [
+  ["guardia-civil", "(?i)guardia civil"],
+  ["policia", "(?i)polic[ií]a|agente de movilidad|mossos|ertzaintza|polic[ií]a foral|polic[ií]a canaria"],
+  ["bomberos", "(?i)bomber|extinci[oó]n de incendios|salvamento|bombers"],
+  ["prisiones", "(?i)instituciones penitenciarias"],
+  ["justicia", "(?i)tramitaci[oó]n procesal|auxilio judicial|gesti[oó]n procesal|letrad[oa]s? de la administraci[oó]n de justicia|carrera judicial|carrera fiscal|m[eé]dicos? forenses|administraci[oó]n de justicia"],
+  ["fuerzas-armadas", "(?i)fuerzas armadas|militar|tropa y marinería|ej[eé]rcito|armada|guardia real"],
+  ["hacienda", "(?i)agencia estatal de administraci[oó]n tributaria|hacienda|inspector(es)? de hacienda|t[eé]cnicos? de hacienda|aduanas"],
+  ["seguridad-social", "(?i)seguridad social"],
+  ["informatica", "(?i)inform[aá]tic|sistemas e inform|tecnolog[ií]as de la informaci|\\bTIC\\b|ciberseguridad"],
+  ["sanidad", "(?i)enfermer|m[eé]dic|facultativ|sanitari|servicio de salud|hospital|farmac|fisioterap|t[eé]cnicos? en cuidados|celador|salud"],
+  ["educacion", "(?i)maestr|profesor(es)? de ense[nñ]anza|educaci[oó]n infantil|educaci[oó]n secundaria|cuerpos? docentes? no universitari"],
+  ["universidades", "(?i)universidad|cuerpos docentes universitarios|profesor(a)? titular|catedr[aá]tic"],
+  ["correos", "(?i)correos"],
+  ["personal-laboral", "(?i)personal laboral|laboral fijo|convenio colectivo"],
+  ["ayuntamientos", "(?i)ayuntamiento|diputaci[oó]n|cabildo|consell insular|mancomunidad|comarca|consorcio"],
+  ["ccaa", "(?i)comunidad aut[oó]noma|junta de|generalitat|gobierno de|xunta|principado|regi[oó]n de murcia|comunidad de madrid|comunidad foral|govern"],
+  ["administracion-estado", "(?i)ministerio|secretar[ií]a de estado|subsecretar[ií]a|agencia estatal|administraci[oó]n (general|civil) del estado|instituto nacional|organismo aut[oó]nomo"]
+ ],
+ "numeros": {"una": 1, "un": 1, "dos": 2, "tres": 3, "cuatro": 4, "cinco": 5, "seis": 6, "siete": 7, "ocho": 8, "nueve": 9, "diez": 10, "once": 11, "doce": 12, "trece": 13, "catorce": 14, "quince": 15, "dieciséis": 16, "diecisiete": 17, "dieciocho": 18, "diecinueve": 19, "veinte": 20, "treinta": 30, "cuarenta": 40, "cincuenta": 50}
+}

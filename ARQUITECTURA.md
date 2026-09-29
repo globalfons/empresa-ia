@@ -29,3 +29,13 @@ Flujo: `validar_catalogo.py` → `construir.py` (agrega y calcula cobertura → 
 
 ## Preguntas
 `datos/preguntas-<slug>.json`: `{art, q, o[4], a, cita}`. `datos/validar.py` exige que la cita sea literal del artículo vigente y no esté cortada. Los simulacros adaptan el número de opciones (quitando distractores) y la penalización a la configuración de cada oposición.
+
+## Motor de ingesta de fuentes oficiales
+Ver `ingesta/README.md`. Decisiones:
+- **Ejecución programada en GitHub Actions** (no en Claude): corre cada día, tiene red abierta a las webs oficiales y guarda los resultados como commits (auditoría completa). Claude interpreta documentos (API) y revisa, no rastrea.
+- **Almacén en ficheros JSON versionados** (catálogo, estado, documentos, cambios, logs): cada cambio queda en el historial de git. El esquema está normalizado para migrar a Postgres (Supabase) cuando el volumen lo pida.
+- **Dos niveles de catálogo**: `catalogo/convocatorias/` (fichas automáticas de cada convocatoria oficial, con procedencia y confianza por dato) y `catalogo/oposiciones/` (oposiciones revisadas con temario, simulacro y tests).
+- **Nada se borra por un fallo**: estado `inaccesible` + reintentos; los últimos datos válidos se conservan.
+
+## Notificaciones
+Tablas `notif_preferencias`, `notif_eventos`, `notif_cola`, `notif_log` (esquema v3) y la función `supabase/functions/notificar/` (eventos → abanico a seguidores → cola → envío → log). El proveedor es un adaptador (`EMAIL_PROVIDER`); sin proveedor los avisos esperan en cola como `sin_proveedor`. Plantillas en `plantillas.ts`.

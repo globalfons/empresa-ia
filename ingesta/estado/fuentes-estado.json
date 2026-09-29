@@ -1,0 +1,35 @@
+{
+ "policia-nacional": {
+  "estado": "inaccesible",
+  "errores_consecutivos": 1,
+  "ultimo_escaneo": "2026-09-29T02:24:00Z",
+  "ultimo_error": "No accesible tras 3 intentos: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+  "proximo_escaneo": "2026-09-29T03:24:15Z",
+  "documentos": 0,
+  "ultima_duracion_s": 15.2
+ },
+ "guardia-civil": {
+  "estado": "inaccesible",
+  "errores_consecutivos": 1,
+  "ultimo_escaneo": "2026-09-29T02:24:15Z",
+  "ultimo_error": "Navegador: Error: page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://web.guardiacivil.es/es/tramites/ingresos/ingresocuerpo/",
+  "proximo_escaneo": "2026-09-29T03:24:16Z",
+  "documentos": 0,
+  "ultima_duracion_s": 1.4
+ },
+ "boe-sumario": {
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T02:24:16Z",
+  "ultimo_exito": "2026-09-29T02:24:16Z",
+  "ultimo_error": null,
+  "ultimo_resultado": {
+   "nuevo": 5,
+   "modificado": 0,
+   "sin_cambios": 0
+  },
+  "proximo_escaneo": "2026-09-30T02:24:23Z",
+  "documentos": 5,
+  "ultima_duracion_s": 6.2
+ }
+}

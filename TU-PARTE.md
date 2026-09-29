@@ -44,3 +44,17 @@ El código ya está hecho (`supabase/functions/tutor/index.ts`). Mientras no lo 
 3. Supabase → **Edge Functions → Deploy a new function → Via editor**: nombre `tutor`, pega el contenido de `supabase/functions/tutor/index.ts` y despliega.
 4. Supabase → **Edge Functions → Secrets**: añade `ANTHROPIC_API_KEY` (tu clave), `SITE_URL` = `https://globalfons.github.io/empresa-ia/` y `LS_STORE_ID` = `485627`.
 5. Dime «tutor desplegado» y yo pongo su dirección en `config.json` y lo pruebo.
+
+## 7. Motor de ingesta automático (5 minutos)
+El motor ya está en el repositorio (`ingesta/`) y un flujo de GitHub Actions lo ejecuta cada día sin intervención de nadie.
+1. GitHub → repo empresa-ia → pestaña **Actions** → si pide activarlas, pulsa **Enable**.
+2. (Opcional, mejora la extracción) **Settings → Secrets and variables → Actions → New repository secret**: `ANTHROPIC_API_KEY`.
+3. Para lanzarlo a mano: Actions → «Ingesta de fuentes oficiales» → **Run workflow**.
+Estado de las fuentes: https://globalfons.github.io/empresa-ia/admin/fuentes/
+
+## 8. Avisos por email (cuando elijas proveedor)
+1. Supabase → SQL Editor: pega el bloque «v3 (notificaciones)» del final de `supabase/esquema.sql` y pulsa Run.
+2. Supabase → Edge Functions → nueva función `notificar` con los ficheros de `supabase/functions/notificar/` (index.ts y plantillas.ts).
+3. Secrets de Supabase: `NOTIF_CRON_SECRET` (una contraseña larga inventada), `SITE_URL`, y cuando tengas proveedor: `EMAIL_PROVIDER` (`resend`, `brevo` o `postmark`), `EMAIL_FROM` y su clave (`RESEND_API_KEY`, `BREVO_API_KEY` o `POSTMARK_TOKEN`).
+4. GitHub → Secrets de Actions: `NOTIF_URL` (la URL de la función) y `NOTIF_CRON_SECRET` (la misma contraseña).
+Hasta que haya proveedor, los avisos se guardan en cola y se envían en cuanto lo configures.

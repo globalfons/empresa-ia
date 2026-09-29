@@ -249,6 +249,18 @@
     }).catch(function () {});
   }
   function subirTodo() { return Promise.all(Object.keys(prog).map(subir)); }
+  // Preferencias de avisos por email (tabla notif_preferencias; ver supabase/esquema.sql v3)
+  function prefsNotif() {
+    var s = sesion(); if (!ONLINE || !s) return Promise.resolve(null);
+    return refrescar().then(function () { return api("/rest/v1/notif_preferencias?user_id=eq." + s.user.id + "&select=email_activo,tipos,frecuencia"); })
+      .then(function (r) { return (r && r[0]) || { email_activo: false, tipos: ["convocatoria", "listas", "fecha_examen", "modificacion", "aprobados"], frecuencia: "inmediata" }; });
+  }
+  function guardarPrefsNotif(p) {
+    var s = sesion();
+    return refrescar().then(function () {
+      return api("/rest/v1/notif_preferencias?on_conflict=user_id", { method: "POST", headers: { Prefer: "resolution=merge-duplicates" }, body: { user_id: s.user.id, email_activo: p.email_activo, tipos: p.tipos, frecuencia: p.frecuencia, actualizado: new Date().toISOString() } });
+    });
+  }
   function ranking(l) {
     return api("/rest/v1/rpc/ranking", { method: "POST", anon: !sesion(), body: { p_ley: l } });
   }
@@ -350,7 +362,7 @@
     pintarCabecera: pintarCabecera,
     pase: pase, activarPase: activarPase, quitarPase: quitarPase,
     esGratis: function (l) { var p = plan(); return !p || (p.leyes_completas || []).indexOf(l) >= 0 || !!p.tests_completos; },
-    puede: puede, plan: plan,
+    puede: puede, plan: plan, prefsNotif: prefsNotif, guardarPrefsNotif: guardarPrefsNotif,
     esOposicion: function (id) { return (CFG.opos || []).indexOf(id) >= 0; },
     miOposicion: function () { return ajustes().oposicion; },
     setMiOposicion: function (id) { guardarAjustes({ oposicion: id }); },

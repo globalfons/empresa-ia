@@ -136,6 +136,17 @@ ${otras.length ? `<details><summary>Otras publicaciones del mismo cuerpo (${otra
 <p class="muted small">Revisamos el sumario del BOE cada día. El tipo (listas, modificación…) se deduce automáticamente del título oficial; abre el enlace para ver el texto completo.</p></section>`;
 };
 
+// ---------- Catálogo nacional de convocatorias (motor de ingesta: ingesta/ → catalogo/convocatorias/) ----------
+const CONVS = fs.existsSync("catalogo/convocatorias") ? fs.readdirSync("catalogo/convocatorias").filter((f) => f.endsWith(".json")).map((f) => JSON.parse(fs.readFileSync(path.join("catalogo/convocatorias", f), "utf8"))) : [];
+CONVS.sort((a, b) => (b.fuente.published_at || "").localeCompare(a.fuente.published_at || ""));
+const convNombre = (v) => {
+  const d = v.datos.denominacion && v.datos.denominacion.valor;
+  return d ? `${d.charAt(0).toUpperCase()}${d.slice(1)}${v.organismo ? " · " + v.organismo : ""}` : v.titulo.replace(/^Resolución de [^,]+, /, "").slice(0, 140);
+};
+const tarjetaConv = (v, r) => `<a class="card op-card conv-card" href="${r}convocatorias/${v.id}/" data-cat="${v.categoria}" data-q="${esc(sinAcentos([v.titulo, v.organismo, v.territorio, (v.datos.denominacion || {}).valor || "", CAT[v.categoria] ? CAT[v.categoria].nombre : ""].join(" ")))}"><span class="tag">${CAT[v.categoria] ? CAT[v.categoria].icono + " " + esc(CAT[v.categoria].nombre) : ""} · ${fmtFecha(v.fuente.published_at)}${v.datos.plazas ? ` · ${fmtN(v.datos.plazas.valor)} plaza${v.datos.plazas.valor > 1 ? "s" : ""}` : ""}</span><strong>${esc(convNombre(v))}</strong><span>${esc(v.territorio || "")}</span></a>`;
+const catCountConv = (id) => CONVS.filter((v) => v.categoria === id).length;
+const ETIQ_CONV = { denominacion: "Plaza", plazas: "Plazas", grupo: "Grupo/subgrupo", sistema_selectivo: "Sistema selectivo", plazo_solicitudes: "Plazo de solicitudes", titulacion: "Titulación", pruebas: "Pruebas", temario: "Temario", boletin_bases: "Bases", organismo: "Organismo", territorio: "Territorio" };
+
 // ---------- Portada ----------
 const NART = PUBLICADAS.reduce((t, L) => t + L.arts.length, 0), NQ = PUBLICADAS.reduce((t, L) => t + L.qs.length, 0);
 page("", {
@@ -389,6 +400,67 @@ ${o.temario.length ? `<h2>${tLbl} <span class="${tCls}">${o.temario_tipo === "of
 <div id="op-temario">${bloques.map((b) => `<h3>${esc(b)}</h3><ol class="temario">${o.temario.filter((t) => t.bloque === b).map((t) => `<li value="${t.tema}"><p>${esc(t.titulo)}</p><div class="chips">${chip(t)}</div></li>`).join("")}</ol>`).join("")}</div>
 <p class="muted small">Las leyes de cada tema las asigna TestLey a partir del título del tema: son orientativas. Comprueba siempre las bases de tu convocatoria.</p>` : ""}`;
     },
+  });
+}
+
+page("convocatorias/", {
+  title: "Convocatorias de oposiciones y empleo público en España",
+  description: `${CONVS.length} convocatorias oficiales de oposiciones y empleo público (Estado, comunidades, ayuntamientos, universidades…) con plazas, plazos y enlace a la fuente oficial.`,
+  wide: true, scripts: ["buscador.js"],
+  body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <span>Convocatorias</span></nav>
+<h1>Convocatorias oficiales</h1>
+<p class="lead">Convocatorias detectadas automáticamente en fuentes oficiales. Cada dato muestra la frase literal de la que sale y su procedencia. <span class="badge-oficial">Fuente oficial</span> <span class="badge-ia">Extracción automática</span></p>
+<form class="buscador" action="${r}convocatorias/" role="search"><label class="sr" for="q">Buscar convocatoria</label><input id="q" name="q" type="search" placeholder="Policía local, auxiliar administrativo, Valencia, bombero…" autocomplete="off"><button class="cta" type="submit">Buscar</button></form>
+<div class="cat-chips">${CATEGORIAS.filter((c) => catCountConv(c.id)).map((c) => `<a class="cat-chip" href="#" data-cat="${c.id}">${c.icono} ${esc(c.nombre)} <b>${catCountConv(c.id)}</b></a>`).join("")}</div>
+<p id="res-count" class="muted" aria-live="polite">${CONVS.length} convocatorias</p>
+<div class="cards" id="res">${CONVS.map((v) => tarjetaConv(v, r)).join("")}</div>
+<p id="res-vacio" class="box" hidden>No hay convocatorias con esa búsqueda.</p>
+<p class="muted small">Estado calculado automáticamente; comprueba siempre las bases oficiales enlazadas antes de presentar tu solicitud.</p>`,
+});
+const CONF = (c) => (c >= 0.8 ? "alta" : c >= 0.6 ? "media" : "baja");
+for (const v of CONVS) {
+  page(`convocatorias/${v.id}/`, {
+    title: `${convNombre(v)}${v.datos.plazas ? ` (${v.datos.plazas.valor} plaza${v.datos.plazas.valor > 1 ? "s" : ""})` : ""}: convocatoria`,
+    description: `${v.titulo.slice(0, 150)}. Plazas, plazos y enlace a la fuente oficial.`,
+    scripts: ["oposicion.js"],
+    body: (r) => {
+      const filas = Object.entries(v.datos).filter(([k]) => ETIQ_CONV[k]).map(([k, d]) => `<div class="of-row"><h3>${ETIQ_CONV[k]}</h3><ul class="of-list"><li><span>${esc(typeof d.valor === "number" ? fmtN(d.valor) : d.valor)}</span><details><summary>Texto oficial y procedencia</summary><blockquote>«${esc(d.cita)}»<span class="src"><a href="${esc(d.source_url)}" rel="noopener">${esc(d.source_domain)}</a> · publicado ${fmtFecha(d.published_at)} · descargado ${fmtFecha((d.retrieved_at || "").slice(0, 10))} · confianza ${CONF(d.confidence)} (${esc(d.metodo)}) · ${esc(d.verification_status.replace(/_/g, " "))}</span></blockquote></details></li></ul></div>`).join("");
+      const relacion = OPOS.filter((o) => o.categoria === v.categoria && o.qs.length).slice(0, 3);
+      return `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}convocatorias/">Convocatorias</a> › <span>${esc(v.id)}</span></nav>
+<h1>${esc(convNombre(v))}</h1>
+<p class="op-meta"><span class="pill">${esc(opEstado(v))}</span>${v.datos.plazas ? ` <span class="pill">${fmtN(v.datos.plazas.valor)} plaza${v.datos.plazas.valor > 1 ? "s" : ""}</span>` : ""} ${CAT[v.categoria] ? `<a class="pill" href="${r}oposiciones/categoria/${v.categoria}/">${CAT[v.categoria].icono} ${esc(CAT[v.categoria].nombre)}</a>` : ""}</p>
+<p class="muted small">${esc(v.titulo)}</p>
+<div id="op-accion" data-op="conv-${esc(v.id)}" data-nombre="${esc(convNombre(v))}" data-tipo="convocatoria"></div>
+<section class="card oficial"><div class="of-head"><h2>Datos de la convocatoria</h2><span class="badge-oficial">Fuente oficial</span> <span class="badge-ia">Extracción automática</span></div>
+${filas || '<p class="muted">No se han podido extraer datos estructurados; consulta el documento oficial.</p>'}
+<p class="small">Documento oficial: <a href="${esc(v.fuente.source_url)}" rel="noopener">${esc(v.fuente.boe_id || v.fuente.source_url)}</a> · ${esc(v.fuente.departamento || v.fuente.source_domain)}${v.fuente.epigrafe ? " · " + esc(v.fuente.epigrafe) : ""}</p>
+<p class="muted small">Los datos se extraen automáticamente y solo se publican si su frase aparece literalmente en el documento oficial. ${esc(v.estado_nota)}</p></section>
+${relacion.length ? `<section class="card"><h2>Prepárate con TestLey</h2><p class="muted small">Contenido de preparación de oposiciones de la misma categoría (no es el temario de esta convocatoria).</p><div class="cards">${relacion.map((o) => tarjetaOp(o, r)).join("")}</div></section>` : ""}`;
+    },
+  });
+}
+
+// ---------- ADMIN → Fuentes (estado del motor de ingesta) ----------
+{
+  const leerJ = (p, d) => (fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : d);
+  const leerL = (p) => (fs.existsSync(p) ? fs.readFileSync(p, "utf8").trim().split("\n").filter(Boolean).map((l) => JSON.parse(l)) : []);
+  const FU = leerJ("ingesta/fuentes.json", []), EST = leerJ("ingesta/estado/fuentes-estado.json", {}), DOCS = Object.values(leerJ("ingesta/estado/documentos.json", {}));
+  const LOGS = fs.existsSync("ingesta/logs") ? fs.readdirSync("ingesta/logs").sort().slice(-2).flatMap((f) => leerL(path.join("ingesta/logs", f))) : [];
+  const CAMBIOS = leerL("ingesta/estado/cambios.jsonl").slice(-40).reverse();
+  const f2 = (t) => (t ? t.replace("T", " ").replace("Z", " UTC").slice(0, 20) : "—");
+  const cls = { ok: "good", error: "bad", inaccesible: "bad", pendiente: "" };
+  page("admin/fuentes/", {
+    title: "Admin · Fuentes oficiales", description: "Estado del motor de ingesta de fuentes oficiales.", noindex: true, wide: true, scripts: ["admin.js"],
+    body: () => `<h1>Admin · Fuentes oficiales</h1>
+<p class="muted">Motor de ingesta: fuente → rastreo → descarga → detección de cambios → parseo → extracción → validación → catálogo. Generado el ${f2(new Date().toISOString())}.</p>
+<div class="kpis"><div class="kpi"><span class="kpi-n">${FU.length}</span><span class="kpi-l">fuentes</span></div><div class="kpi"><span class="kpi-n">${DOCS.length}</span><span class="kpi-l">documentos</span></div><div class="kpi"><span class="kpi-n">${CONVS.length}</span><span class="kpi-l">convocatorias extraídas</span></div><div class="kpi"><span class="kpi-n">${DOCS.filter((d) => d.extraccion === "pendiente").length}</span><span class="kpi-l">pendientes de extraer</span></div></div>
+<section class="card"><h2>Fuentes</h2><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Prioridad</th><th>Fuente</th><th>Tipo · crawler · parser</th><th>Estado</th><th>Último escaneo</th><th>Último éxito</th><th>Próxima ejecución</th><th>Docs</th><th>Último error</th></tr></thead><tbody>
+${FU.sort((a, b) => a.prioridad - b.prioridad).map((f) => { const e = EST[f.id] || {}; return `<tr><td>${f.prioridad}</td><td><a href="${esc(f.url.replace("{fecha}", ""))}">${esc(f.nombre)}</a><br><small class="muted">${esc(f.domain)} · cada ${f.frecuencia_horas} h${f.activo ? "" : " · inactiva"}</small></td><td><small>${f.tipo} · ${f.crawler} · ${f.parser}</small></td><td><b class="${cls[e.estado] || ""}">${esc(e.estado || "sin ejecutar")}</b>${e.errores_consecutivos ? `<br><small>${e.errores_consecutivos} fallos seguidos</small>` : ""}</td><td><small>${f2(e.ultimo_escaneo)}</small></td><td><small>${f2(e.ultimo_exito)}</small></td><td><small>${f2(e.proximo_escaneo)}</small></td><td>${e.documentos || 0}</td><td><small>${esc((e.ultimo_error || "").slice(0, 140))}</small></td></tr>`; }).join("")}
+</tbody></table></div></section>
+<section class="card"><h2>Cambios detectados (últimos ${CAMBIOS.length})</h2><ul class="nov">${CAMBIOS.map((c) => `<li><span class="nov-f">${f2(c.t)}</span> <span class="chip">${esc(c.cambio)}</span> <small>${esc(c.fuente)}</small> <a href="${esc(c.url)}">${esc((c.titulo || c.url).slice(0, 140))}</a></li>`).join("") || "<li>Sin cambios todavía.</li>"}</ul></section>
+<section class="card"><h2>Errores recientes</h2><ul class="nov">${LOGS.filter((l) => /error/.test(l.evento)).slice(-30).reverse().map((l) => `<li><span class="nov-f">${f2(l.t)}</span> <span class="chip">${esc(l.evento)}</span> <small>${esc(l.fuente || l.doc || "")}</small> ${esc((l.error || "").slice(0, 200))}</li>`).join("") || "<li>Sin errores.</li>"}</ul></section>
+<section class="card"><h2>Últimas ejecuciones</h2><ul class="nov">${LOGS.filter((l) => /fuente_ok|extraccion$/.test(l.evento)).slice(-20).reverse().map((l) => `<li><span class="nov-f">${f2(l.t)}</span> ${esc(l.evento)} <small>${esc(l.fuente || "")}</small> <small class="muted">${esc(JSON.stringify(Object.fromEntries(Object.entries(l).filter(([k]) => !["t", "evento", "fuente"].includes(k)))))}</small></li>`).join("") || "<li>Sin ejecuciones.</li>"}</ul></section>
+<section class="card"><h2>Documentos descargados (últimos 40)</h2><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Publicado</th><th>Fuente</th><th>Tipo</th><th>Documento</th><th>Extracción</th></tr></thead><tbody>${DOCS.sort((a, b) => (b.retrieved_at || "").localeCompare(a.retrieved_at || "")).slice(0, 40).map((d) => `<tr><td><small>${esc(d.published_at || "")}</small></td><td><small>${esc(d.fuente)}</small></td><td>${esc(d.tipo)}</td><td><a href="${esc(d.url)}">${esc((d.titulo || d.url).slice(0, 120))}</a></td><td><small>${esc(d.extraccion)}</small></td></tr>`).join("")}</tbody></table></div></section>`,
   });
 }
 

@@ -108,7 +108,7 @@
       "<p>☆ <b>" + favs + "</b> preguntas favoritas" + (favs ? ' · <a href="' + LEY_URL + '#test=favoritas">Practicarlas</a>' : ' <span class="muted small">(márcalas con la estrella durante un test)</span>') + "</p>" +
       (sigo.length ? '<ul class="weak">' + sigo.map(function (o) { return '<li><a href="' + TL.root + "oposiciones/" + o.id + '/">' + esc(o.nombre) + '</a><span>' + esc(ESTADO[o.estado] || o.estado) + " · revisado " + o.actualizado.split("-").reverse().join("/") + "</span></li>"; }).join("") + "</ul>"
         : '<p class="muted small">Sigue una oposición desde su ficha para recibir avisos de su convocatoria.</p>') +
-      (TL.puede("alertas") ? '<div id="avisos"></div>' : '<p class="muted small">🔒 Los avisos de publicaciones del BOE sobre tus convocatorias están incluidos en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.</p>') + "</section>";
+      (TL.puede("alertas") ? '<div id="avisos"></div><div id="notif-email"></div>' : '<p class="muted small">🔒 Los avisos de publicaciones del BOE sobre tus convocatorias están incluidos en el <a href="' + TL.root + 'pase/">Pase Opositor</a>.</p>') + "</section>";
   }
 
   function pintar(data, perfil) {
@@ -221,6 +221,25 @@
       location.href = TL.root + "panel/?c=" + af.oposicion.value;
     };
     if (window.TLAvisos) TLAvisos.pintar(el.querySelector("#avisos"));
+    var ne = el.querySelector("#notif-email");
+    if (ne) {
+      if (!TL.online || !TL.sesion()) ne.innerHTML = '<p class="muted small">Para recibir avisos por email, <a href="' + TL.root + 'cuenta/">crea tu cuenta o entra</a>.</p>';
+      else TL.prefsNotif().then(function (p) {
+        var TIPOS = [["convocatoria", "Nueva convocatoria"], ["listas", "Listas de admitidos"], ["fecha_examen", "Fechas de examen"], ["modificacion", "Modificaciones"], ["aprobados", "Aprobados"], ["correccion", "Correcciones de errores"]];
+        ne.innerHTML = '<form id="nf" class="aj-form"><h3>Avisos por email</h3><label class="check"><input type="checkbox" name="email_activo"' + (p.email_activo ? " checked" : "") + "> Enviarme un email cuando haya novedades oficiales de las oposiciones que sigo</label>" +
+          '<fieldset class="tipos"><legend class="small muted">Qué avisos</legend>' + TIPOS.map(function (t) { return '<label class="check"><input type="checkbox" name="tipo" value="' + t[0] + '"' + (p.tipos.indexOf(t[0]) >= 0 ? " checked" : "") + "> " + t[1] + "</label>"; }).join("") + "</fieldset>" +
+          '<label>Frecuencia<select name="frecuencia" class="select"><option value="inmediata">En cuanto se publique</option><option value="diaria">Resumen diario</option><option value="semanal">Resumen semanal (lunes)</option></select></label>' +
+          '<button class="btn">Guardar avisos</button><span class="muted small" id="nf-msg"></span></form>';
+        var f = ne.querySelector("#nf"); f.frecuencia.value = p.frecuencia;
+        f.onsubmit = function (e) {
+          e.preventDefault();
+          var tipos = [].slice.call(f.querySelectorAll("input[name=tipo]:checked")).map(function (x) { return x.value; });
+          TL.guardarPrefsNotif({ email_activo: f.email_activo.checked, tipos: tipos, frecuencia: f.frecuencia.value })
+            .then(function () { ne.querySelector("#nf-msg").textContent = "Guardado ✓"; })
+            .catch(function (err) { ne.querySelector("#nf-msg").textContent = /notif_preferencias|404|PGRST/.test(err.message) ? "Los avisos por email se activarán muy pronto." : err.message; });
+        };
+      }).catch(function () { ne.innerHTML = '<p class="muted small">Los avisos por email se activarán muy pronto.</p>'; });
+    }
     var tf = el.querySelector("#tutor-f");
     if (tf) {
       tf.onsubmit = function (e) { e.preventDefault(); TLTutor.duda(el.querySelector("#tutor-q").value, { oposicion: ES_OP ? LEY : null }, el.querySelector("#tutor-out")); };
