@@ -109,7 +109,7 @@ class TestCircuito(unittest.TestCase):
 
     def test_dry_run_no_toca_nada(self):
         antes = self.huellas()
-        r = self.run_motor("--dry-run", "--lotes", "2", "--informe", os.path.join(self.t, "plan.json"))
+        r = self.run_motor("--dry-run", "--lotes", "2", "--informe", "plan.json")  # ruta relativa, como en el workflow
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertEqual(antes, self.huellas())
         plan = json.load(open(os.path.join(self.t, "plan.json")))

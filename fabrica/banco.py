@@ -15,8 +15,9 @@ def escribir(ruta, obj, indent=1):
     clave = os.environ.get("ANTHROPIC_API_KEY")
     if clave and len(clave) > 8 and clave in texto:
         raise SystemExit("Posible filtración de la clave de la API en un fichero de datos: se detiene la fábrica sin escribir.")
-    os.makedirs(os.path.dirname(ruta), exist_ok=True)
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(ruta), suffix=".tmp")
+    carpeta = os.path.dirname(os.path.abspath(ruta))  # también para rutas relativas sin carpeta («informe.json»)
+    os.makedirs(carpeta, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=carpeta, suffix=".tmp")
     with os.fdopen(fd, "w", encoding="utf-8") as f:
         f.write(texto)
     os.replace(tmp, ruta)
