@@ -10,6 +10,7 @@
   var params = new URLSearchParams(location.search), cat = params.get("cat") || "";
   q.value = params.get("q") || "";
   filtros.forEach(function (s) { s.value = params.get(s.getAttribute("data-f")) || ""; });
+  if (filtros.some(function (s) { return s.getAttribute("data-f") === "cat"; })) cat = ""; // la categoría la lleva su desplegable
   function filtrar() {
     var palabras = norm(q.value).split(/\s+/).filter(Boolean), n = 0;
     cards.forEach(function (c) {

@@ -181,7 +181,7 @@
     var ult = s.sesiones.slice(-12);
 
     el.innerHTML =
-      seccionHoy(s, data) +
+      '<div class="panel-grid"><div class="panel-main">' + seccionHoy(s, data) +
       // Cabecera
       '<section class="hero-panel">' +
       '<div class="hp-main"><span class="kicker">' + (ses ? "Hola, " + esc((perfil && perfil.alias) || ses.user.email.split("@")[0]) : "Tu progreso en este dispositivo") + "</span>" +
@@ -200,8 +200,6 @@
       '<div class="kpi"><a class="kpi-n" href="' + TL.root + "errores/?c=" + LEY + '">' + s.vencidas + '</a><span class="kpi-l">repasos pendientes hoy</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.cuenta.dominada + "/" + s.total + '</span><span class="kpi-l">dominadas</span></div></div>' +
 
-      seccionProgresoSemanal(s) +
-      seccionOposicion(s, data) +
       // Estado del banco
       '<section class="card"><h2>Estado de las ' + s.total + " preguntas disponibles</h2>" +
       '<div class="stack">' + seg.map(function (k) { return s.cuenta[k] ? '<span class="st-' + k + '" style="width:' + (100 * s.cuenta[k]) / tot + '%"></span>' : ""; }).join("") + "</div>" +
@@ -244,7 +242,7 @@
           }).join("") + '</div><p class="muted small">Nota de cada test con penalización (cada error resta 1/3). La línea del 5 es el aprobado orientativo.</p>'
         : '<p class="muted">Cuando completes tests verás aquí tu evolución.</p>') + "</section>" +
 
-      seccionTutor() + seccionSimulacros(s) + seccionSeguimiento() + seccionReferidos() +
+      "</div><aside class=\"panel-lado\">" + seccionProgresoSemanal(s) + seccionSimulacros(s) + seccionOposicion(s, data) + seccionTutor() + seccionSeguimiento() + seccionReferidos() +
       // Logros
       '<section class="card"><h2>Logros</h2><div class="badges">' +
       log.map(function (l) { return '<div class="badge ' + (l.ok ? "on" : "") + '"><span class="b-ico">' + l.icono + "</span><b>" + l.nombre + "</b><small>" + l.desc + "</small></div>"; }).join("") +
@@ -261,7 +259,7 @@
         : TL.online
           ? '<p>Estás usando TestLey sin cuenta: tu progreso solo se guarda en este navegador.</p><a class="btn primary" href="' + TL.root + 'cuenta/">Crear cuenta gratis y guardar mi progreso</a>'
           : '<p>Tu progreso se guarda automáticamente en este navegador. Pronto podrás crear una cuenta para sincronizarlo entre dispositivos y entrar en el ranking.</p>') +
-      "</section>";
+      "</section></aside></div>";
 
     var f = el.querySelector("#perfil-form");
     if (f) f.onsubmit = function (e) {

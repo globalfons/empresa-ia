@@ -19,7 +19,7 @@ test("páginas de admin con noindex", { skip: !existe }, () => {
 test("ficha de oposición: migas, FAQ y fuente oficial", { skip: !existe }, () => {
   const h = leer("oposiciones/policia-nacional-escala-basica/index.html");
   assert.match(h, /"@type":"BreadcrumbList"/); assert.match(h, /"@type":"FAQPage"/);
-  assert.match(h, /Última verificación/); assert.match(h, /Empezar a preparar/); assert.match(h, /boe\.es/);
+  assert.match(h, /Última verificación/); assert.match(h, /id="op-accion"/); assert.match(h, /class="ficha-nav"/); assert.match(h, /boe\.es/);
 });
 
 test("ningún secreto en la web publicada", { skip: !existe }, () => {
