@@ -42,8 +42,11 @@ def texto_bloque(boe_id, bloque_id, fetch=http):
 
 LATINOS = "bis|ter|quater|quinquies|sexies|septies|octies|nonies|decies"
 def num_articulo(titulo):
-    """«Artículo 31 bis» → 31bis; «Artículo 588 bis a)» → 588bisa (mismo formato que datos/<slug>-articulos.json)."""
-    m = re.match(rf"(?i)art[ií]culo\s+(\d+)\s*(?:({LATINOS})\s*(\d+)?)?\s*(?:([a-z])(?![a-záéíóúñ]))?", (titulo or "").replace("\xa0", " "))
+    """«Artículo 31 bis» → 31bis; «Artículo 588 bis a)» → 588bisa; «Art 239 bis» → 239bis; «Artículo 570 quáter» → 570quater."""
+    # El índice del BOE usa «Artículo 1» o «Art 1» / «Art. 1» (Código Civil) y a veces «quáter» con tilde.
+    t = (titulo or "").replace("\xa0", " ").translate(str.maketrans("áéíóú", "aeiou"))
+    if re.match(r"(?i)arts?\.?\s+\d+\w*(?:\s+(?:bis|ter|quater))?\s+al?\s+\d+", t): return None  # rango («Art. 1231 A 1253»): no es un artículo
+    m = re.match(rf"(?i)art(?:iculo|\.)?\s+(\d+)\s*(?:({LATINOS})\s*(\d+)?)?\s*(?:((?-i:[a-z]))(?![a-zñ]))?", t)
     return "".join((g or "").lower() for g in m.groups()) if m else None
 
 def limpio(t): return norm(re.sub(r"[*_#>`]", " ", vigente(t or "")))

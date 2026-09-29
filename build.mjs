@@ -505,13 +505,14 @@ for (const a of L.arts) {
     descAlt: [descripcion(`${L.corto}, artículo ${a.n}${a.titulo ? ` (${a.titulo})` : ""}${ubic ? `, ${ubic}` : ""}: texto consolidado del BOE${qs.length ? ` y ${qs.length} preguntas tipo test` : ""}.`, `Artículo ${iA + 1} de ${L.arts.length} de la norma.`)],
     scripts: qs.length ? ["test.js"] : [], lastmod: L.lastmod,
     // Solo se indexan los artículos con test propio: sin él la página es una copia del BOE. Los derogados o sin contenido nunca.
-    noindex: !qs.length || /\((derogad|suprimid)[oa]s?\)|sin contenido/i.test(texto.slice(0, 200)),
+    noindex: !qs.length || a.vigencia === "SIN_VIGENCIA" || /\((derogad|suprimid)[oa]s?\)|sin contenido/i.test(texto.slice(0, 200)),
     schema: qs.length ? { "@context": "https://schema.org", "@type": "LearningResource", name: `Artículo ${a.n} ${L.corto}`, inLanguage: "es", isBasedOn: L.fuente } : undefined,
     body: (r) => `
 <nav class="crumbs"><a href="${r}">Inicio</a> › <a href="../">${esc(L.corto)}</a> › <span>Art. ${a.n}</span></nav>
 <h1>Artículo ${a.n} · ${esc(L.corto)}${a.titulo ? ". " + esc(a.titulo) : ""}</h1>
 <p class="muted">${esc(a.bloque)}${a.capitulo ? " · " + esc(a.capitulo) : ""}</p>
 <div class="art-text">${esc(texto)}</div>
+${a.vigencia === "SIN_VIGENCIA" ? `<p class="warn small">Sin vigencia desde el ${fmtFecha(a.sin_vigencia_desde)}. ${esc(a.nota_fuente)} <a href="https://www.boe.es/buscar/act.php?id=${esc(a.sin_vigencia_por)}" rel="noopener">${esc(a.sin_vigencia_por)}</a>${a.verificacion === "PENDING_VERIFICATION" ? " · Pendiente de verificación." : ""}</p>` : ""}
 ${
   qs.length
     ? `<h2>Test del artículo ${a.n}</h2><div id="quiz" class="quiz" data-ley="${L.slug}" data-base="../" data-art="${a.n}">Cargando…</div>`

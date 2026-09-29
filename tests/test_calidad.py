@@ -57,6 +57,12 @@ class TestVigilarLeyes(unittest.TestCase):
         self.assertEqual(VL.num_articulo("Artículo 216 bis 2"), "216bis2")
         self.assertEqual(VL.num_articulo("Artículo 1. Objeto"), "1")
         self.assertIsNone(VL.num_articulo("Disposición adicional primera"))
+        # Formatos reales del índice del BOE: Código Civil («Art 239 bis») y tilde en «quáter»
+        self.assertEqual(VL.num_articulo("Art 239 bis"), "239bis")
+        self.assertEqual(VL.num_articulo("Art. 1863 bis"), "1863bis")
+        self.assertEqual(VL.num_articulo("Artículo 570 quáter"), "570quater")
+        self.assertIsNone(VL.num_articulo("Arts. 1863 bis a 1873 bis."))
+        self.assertIsNone(VL.num_articulo("Art. 1231 A 1253"))  # rango de artículos derogados, no un artículo
 
 class TestSellado(unittest.TestCase):
     def test_sella_con_la_version_del_texto_y_respeta_las_retiradas(self):
