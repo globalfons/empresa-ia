@@ -24,7 +24,7 @@ t=open(src).read()
 t=t.split('\n---\n',1)[1] if t.startswith('---') else t
 arts=[];cur=None;ctx={'titulo':'','capitulo':''}
 for line in t.split('\n'):
-    m=re.match(r'^#{2,6}\s+(Artículo\s+(\d+(?:\s?(?:bis|ter|qu[aá]ter|quinquies|sexies|septies|octies|nonies|decies)\b)?)\.?\s*(.*))$',line)
+    m=re.match(r'^#{2,6}\s+(Artículo\s+(\d+(?:\s?(?:bis|ter|qu[aá]ter|quinquies|sexies|septies|octies|nonies|decies)\b(?:\s[a-z](?=\.))?)?)\.?\s*(.*))$',line)
     if m:
         n=m.group(2).replace(' ','').replace('á','a')
         k=int(re.match(r'\d+',n).group())
@@ -34,7 +34,7 @@ for line in t.split('\n'):
     m=re.match(r'^#{2,6}\s+Artículo\s+([a-záéíóúñ ]+?)\.?\s*$',line,re.I)
     if m and palabra(m.group(1)):
         cur={'n':str(palabra(m.group(1))),'titulo':'','bloque':ctx['titulo'],'capitulo':ctx['capitulo'],'texto':''};arts.append(cur);continue
-    h=re.match(r'^(#{2,5})\s+(.*)$',line)
+    h=re.match(r'^(#{2,6})\s+(.*)$',line)
     if h:
         s=h.group(2)
         if s.upper().startswith('TÍTULO') or s.upper().startswith('TITULO'): ctx['titulo']=s;ctx['capitulo']='';cur=None
