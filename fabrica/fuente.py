@@ -63,7 +63,7 @@ class Ley:
     def relacionados(self, n):
         """Artículos de la misma ley citados expresamente en el texto («artículo 23»): contexto para preguntas de relación."""
         # solo referencias a la MISMA norma: se descarta «artículo 96 de la Constitución», «artículo 11.6 de la Ley 9/2017», etc.
-        otra = r"(?:\.\d+)?(?:\s*,\s*\d+)*\s+(?:y\s+\d+\s+)?(?:de\s+la|del)\s+(?:Constituci|Ley|Real|Reglamento|C[oó]digo|Estatuto|Directiva|Texto|Decreto|Orden|Tratado|Convenio)"
+        otra = r"(?:(?!\.\s)[^;]){0,40}?\b(?:de\s+la|del)\s+(?:Constituci|Ley\b|Ley\s+\d|Ley\s+Org|Real|Reglamento|C[oó]digo|Estatuto|Directiva|Texto|Decreto|Orden|Tratado|Convenio)"
         refs = [m.group(1) for m in re.finditer(r"art[ií]culos?\s+(\d+(?:\s?(?:bis|ter|quater))?)", self.texto.get(n, ""), re.I)
                 if not re.match(otra, self.texto.get(n, "")[m.end():m.end() + 80], re.I)]
         return [r.replace(" ", "") for r in dict.fromkeys(refs) if r.replace(" ", "") != n and self.vigente(r.replace(" ", ""))][:2]
