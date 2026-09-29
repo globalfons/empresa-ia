@@ -1,21 +1,28 @@
 {
  "policia-nacional": {
-  "estado": "inaccesible",
-  "errores_consecutivos": 1,
-  "ultimo_escaneo": "2026-09-29T02:24:00Z",
-  "ultimo_error": "No accesible tras 3 intentos: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
-  "proximo_escaneo": "2026-09-29T03:24:15Z",
+  "estado": "error",
+  "errores_consecutivos": 2,
+  "ultimo_escaneo": "2026-09-29T11:23:47Z",
+  "ultimo_error": "HTTP 404 https://www.policia.es/_es/oposiciones.php",
+  "proximo_escaneo": "2026-09-29T13:23:48Z",
   "documentos": 0,
-  "ultima_duracion_s": 15.2
+  "ultima_duracion_s": 1.5
  },
  "guardia-civil": {
-  "estado": "inaccesible",
-  "errores_consecutivos": 1,
-  "ultimo_escaneo": "2026-09-29T02:24:15Z",
-  "ultimo_error": "Navegador: Error: page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://web.guardiacivil.es/es/tramites/ingresos/ingresocuerpo/",
-  "proximo_escaneo": "2026-09-29T03:24:16Z",
-  "documentos": 0,
-  "ultima_duracion_s": 1.4
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T11:23:48Z",
+  "ultimo_error": null,
+  "proximo_escaneo": "2026-09-30T11:30:38Z",
+  "documentos": 11,
+  "ultima_duracion_s": 409.7,
+  "ultimo_exito": "2026-09-29T11:23:48Z",
+  "ultimo_resultado": {
+   "nuevo": 11,
+   "modificado": 0,
+   "sin_cambios": 0
+  },
+  "hash": "11b738990fbec93ed0f25641cc897b0b0555b220a328054eeea37db0f567b293"
  },
  "boe-sumario": {
   "estado": "ok",
@@ -32,5 +39,94 @@
   "documentos": 1835,
   "ultima_duracion_s": 1128.1,
   "cursor": "2026-09-28"
+ },
+ "pag-empleo": {
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T11:23:41Z",
+  "ultimo_exito": "2026-09-29T11:23:41Z",
+  "ultimo_error": null,
+  "ultimo_resultado": {
+   "nuevo": 1,
+   "modificado": 0,
+   "sin_cambios": 0
+  },
+  "proximo_escaneo": "2026-09-30T11:23:47Z",
+  "hash": "28da931edbda256ab14024de3f0f2ab4400d6887fc05a52c638b32b152961f7c",
+  "documentos": 1,
+  "ultima_duracion_s": 6.2
+ },
+ "defensa-reclutamiento": {
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T11:30:38Z",
+  "ultimo_exito": "2026-09-29T11:30:38Z",
+  "ultimo_error": null,
+  "ultimo_resultado": {
+   "nuevo": 10,
+   "modificado": 0,
+   "sin_cambios": 0
+  },
+  "proximo_escaneo": "2026-10-02T11:31:19Z",
+  "hash": "7dd812b20500730be43a8c3522c3a42619b42081f102dcd6a4a9b3f2538b91f6",
+  "documentos": 10,
+  "ultima_duracion_s": 41.0
+ },
+ "justicia-empleo": {
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T11:31:19Z",
+  "ultimo_exito": "2026-09-29T11:31:19Z",
+  "ultimo_error": null,
+  "ultimo_resultado": {
+   "nuevo": 0,
+   "modificado": 0,
+   "sin_cambios": 0
+  },
+  "proximo_escaneo": "2026-10-02T11:31:22Z",
+  "hash": "27f4a7f567652a10b89fd3331be439a8bbf968d45adbdef6eadcf11f3ad7f885",
+  "documentos": 0,
+  "ultima_duracion_s": 2.8
+ },
+ "ccaa-bocm": {
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T11:31:22Z",
+  "ultimo_exito": "2026-09-29T11:31:22Z",
+  "ultimo_error": null,
+  "ultimo_resultado": {
+   "nuevo": 2,
+   "modificado": 0,
+   "sin_cambios": 0
+  },
+  "proximo_escaneo": "2026-10-02T11:31:27Z",
+  "hash": "8ee3ec6d9ad768c3c0df8b4dd78dbd4ed6a1086520fa964a688ca2a9ef5beb86",
+  "documentos": 2,
+  "ultima_duracion_s": 4.7
+ },
+ "ccaa-dogc": {
+  "estado": "inaccesible",
+  "errores_consecutivos": 1,
+  "ultimo_escaneo": "2026-09-29T11:31:27Z",
+  "ultimo_error": "robots.txt no permite https://administraciopublica.gencat.cat/ca/funcio-publica/",
+  "proximo_escaneo": "2026-09-29T12:31:27Z",
+  "documentos": 0,
+  "ultima_duracion_s": 0.8
+ },
+ "ccaa-boja": {
+  "estado": "ok",
+  "errores_consecutivos": 0,
+  "ultimo_escaneo": "2026-09-29T11:31:27Z",
+  "ultimo_exito": "2026-09-29T11:31:27Z",
+  "ultimo_error": null,
+  "ultimo_resultado": {
+   "nuevo": 1,
+   "modificado": 0,
+   "sin_cambios": 1
+  },
+  "proximo_escaneo": "2026-10-02T11:31:38Z",
+  "hash": "0744b40d30cbadaa35b715f14203ca3d30b4c6215ac987db28e44d4b211e04b5",
+  "documentos": 1,
+  "ultima_duracion_s": 10.2
  }
 }
