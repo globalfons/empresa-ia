@@ -69,6 +69,22 @@
       '<p class="muted small">El plan se recalcula con cada visita según tus aciertos y fallos: prioriza los temas con menos dominio y más errores, reserva tiempo para repasar fallos y añade simulacros según tu nivel y la cercanía del examen (estimamos ' + plan.minPorPregunta + " min por pregunta, incluida la lectura de la cita).</p></section>";
   }
 
+  function seccionTutor() {
+    if (!window.TLTutor) return "";
+    return '<section class="card tutor-card"><div class="of-head"><h2>Tutor IA</h2><span class="badge-ia">IA</span></div>' +
+      '<p class="muted small">Resuelve dudas sobre la ley y tu convocatoria usando solo textos oficiales, y te dice qué estudiar según tus fallos.</p>' +
+      '<form id="tutor-f"><label class="sr" for="tutor-q">Tu duda</label><textarea id="tutor-q" maxlength="800" placeholder="Ej.: ¿Qué diferencia hay entre recurso de alzada y de reposición?"></textarea>' +
+      '<p><button class="btn primary">Preguntar</button> <button class="btn" type="button" id="tutor-rec">¿Qué estudio ahora?</button></p></form><div id="tutor-out"></div></section>';
+  }
+  function resumenTutor(s, data) {
+    var aj = TL.ajustes();
+    return { nota: s.nota, dias: window.TLPlan ? TLPlan.diasHasta(aj.fechaExamen) : null, horas: aj.horasSemana,
+      temas: (s.porTema || []).filter(function (x) { return x.cubierto; }).map(function (x) {
+        var f = 0; data.qs.forEach(function (q) { if (x.t.leyes.indexOf(q.ley) >= 0 && TL.estado(q.ley, q.id) === "fallada") f++; });
+        return { t: x.t.t, pct: x.pct, fallos: f };
+      }).sort(function (a, b) { return a.pct - b.pct || b.fallos - a.fallos; }) };
+  }
+
   function seccionSimulacros(s) {
     var sims = s.sesiones.filter(function (x) { return x[5] === "simulacro" || x[5] === "examen"; }).slice(-10).reverse();
     return '<section class="card"><h2>Simulacros y exámenes</h2>' + (sims.length
@@ -165,7 +181,7 @@
           }).join("") + '</div><p class="muted small">Nota de cada test con penalización (cada error resta 1/3). La línea del 5 es el aprobado orientativo.</p>'
         : '<p class="muted">Cuando completes tests verás aquí tu evolución.</p>') + "</section>" +
 
-      seccionSimulacros(s) + seccionSeguimiento() +
+      seccionTutor() + seccionSimulacros(s) + seccionSeguimiento() +
       // Logros
       '<section class="card"><h2>Logros</h2><div class="badges">' +
       log.map(function (l) { return '<div class="badge ' + (l.ok ? "on" : "") + '"><span class="b-ico">' + l.icono + "</span><b>" + l.nombre + "</b><small>" + l.desc + "</small></div>"; }).join("") +
@@ -199,6 +215,11 @@
       location.href = TL.root + "panel/?c=" + af.oposicion.value;
     };
     if (window.TLAvisos) TLAvisos.pintar(el.querySelector("#avisos"));
+    var tf = el.querySelector("#tutor-f");
+    if (tf) {
+      tf.onsubmit = function (e) { e.preventDefault(); TLTutor.duda(el.querySelector("#tutor-q").value, { oposicion: ES_OP ? LEY : null }, el.querySelector("#tutor-out")); };
+      el.querySelector("#tutor-rec").onclick = function () { TLTutor.recomendar(resumenTutor(s, data), el.querySelector("#tutor-out")); };
+    }
     var sb = el.querySelector("#salir");
     if (sb) sb.onclick = function () { TL.salir().then(function () { location.href = TL.root; }); };
   }

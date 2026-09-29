@@ -52,8 +52,8 @@ function page(route, { title, description, body, schema, noindex, wide, scripts 
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%231d4ed8'/><path d='M30 52l14 14 26-30' stroke='white' stroke-width='10' fill='none'/></svg>">
 <link rel="stylesheet" href="${root}assets/style.css">
-<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", leyGratis: LEY.slug, lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id) })};</script>
-<script src="${root}assets/store.js"></script>
+<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", leyGratis: LEY.slug, lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id), tutorUrl: C.tutorUrl || "" })};</script>
+<script src="${root}assets/store.js"></script>${C.tutorUrl ? `\n<script src="${root}assets/tutor.js" defer></script>` : ""}
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : ""}
 </head>
 <body>
@@ -115,6 +115,8 @@ fs.writeFileSync(path.join(OUT_TMP, "datos", "catalogo.json"), JSON.stringify(OP
   id: o.id, nombre: o.nombre, cat: o.categoria_nombre, grupo: o.grupo, estado: o.estado, plazas: o.convocatoria.plazas,
   fuente: o.convocatoria.url_oficial, ref: o.convocatoria.referencia, publicada: o.convocatoria.fecha_publicacion, actualizado: o.actualizado,
   sim: (o.examen || {}).simulacro || null, preguntas: o.qs.length,
+  // Datos oficiales con su cita literal (los usa el tutor IA para no inventar nada sobre la convocatoria)
+  oficial: Object.entries(o.oficial).flatMap(([k, v]) => (Array.isArray(v) ? v : [v]).map((d) => ({ campo: k, valor: d.valor, cita: d.cita }))),
 }))));
 
 // ---------- Portada ----------

@@ -66,3 +66,15 @@ grant execute on function public.ranking(text) to anon, authenticated;
 -- Permisos de acceso desde la web (las políticas RLS de arriba limitan cada fila a su dueño)
 grant usage on schema public to anon, authenticated;
 grant select, insert, update on public.perfiles, public.progreso to authenticated;
+
+-- ============ v2 (tutor IA) — se puede ejecutar varias veces sin problema ============
+-- Contador diario de consultas al tutor. Sin políticas RLS para usuarios: solo la función del servidor
+-- (clave de servicio) puede leerlo y escribirlo, así nadie puede reiniciar su propio límite.
+create table if not exists public.tutor_uso (
+  user_id uuid not null references auth.users(id) on delete cascade,
+  dia date not null,
+  n int not null default 0,
+  primary key (user_id, dia)
+);
+alter table public.tutor_uso enable row level security;
+revoke all on public.tutor_uso from anon, authenticated;

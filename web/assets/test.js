@@ -192,7 +192,7 @@
       '<a href="' + TL.root + (q.ley || LEY) + "/articulo-" + (q.artn || q.art) + '/">Leer el artículo ' + (q.artn || q.art) + " completo</a>" +
       (window.TLTutor ? ' · <button class="linklike" data-tutor>Explícamelo (IA)</button>' : "");
     var tb = el.querySelector("[data-tutor]");
-    if (tb) tb.onclick = function () { window.TLTutor.explicar(q, i, nombreLey(q), el.querySelector(".fb")); };
+    if (tb) tb.onclick = function () { tb.disabled = true; window.TLTutor.explicar({ ley: q.ley || LEY, art: String(q.artn || q.art), pregunta: q.q, opciones: q.o, correcta: q.a, elegida: i, cita: q.cita }, el.querySelector(".fb")); };
     var a = el.querySelector(".actions");
     a.innerHTML = '<button class="btn primary" data-next>' + (idx + 1 < queue.length ? "Siguiente →" : "Ver resultado") + "</button>";
     a.querySelector("[data-next]").onclick = next;
