@@ -40,9 +40,10 @@
     guardar(l);
     if (ctx && ctx !== l) { marcarDia(ley(ctx)); guardar(ctx); }
   }
-  function registrarSesion(l, n, ok, ko, blank) {
+  // Sesión: [ts, preguntas, aciertos, errores, en blanco, modo, penalización]
+  function registrarSesion(l, n, ok, ko, blank, modo, pen) {
     var p = ley(l);
-    p.ses.push([Date.now(), n, ok, ko, blank]);
+    p.ses.push([Date.now(), n, ok, ko, blank, modo || "", pen == null ? 1 / 3 : pen]);
     if (p.ses.length > 200) p.ses.shift();
     guardar(l);
   }
@@ -226,7 +227,10 @@
   function bajar() {
     var s = sesion();
     return api("/rest/v1/progreso?user_id=eq." + s.user.id + "&select=ley,datos").then(function (filas) {
-      (filas || []).forEach(function (f) { prog[f.ley] = fusionar(prog[f.ley], f.datos); });
+      (filas || []).forEach(function (f) {
+        if (f.ley === FILA_AJ) { var loc = lsGet(LS_AJ, null); if (!loc || (f.datos && f.datos.t > (loc.t || 0))) lsSet(LS_AJ, f.datos); return; }
+        prog[f.ley] = fusionar(prog[f.ley], f.datos);
+      });
       lsSet(LS_PROG, prog);
     });
   }
@@ -248,6 +252,26 @@
   function ranking(l) {
     return api("/rest/v1/rpc/ranking", { method: "POST", anon: !sesion(), body: { p_ley: l } });
   }
+
+  // ---------------- Ajustes de estudio, favoritos y oposiciones seguidas ----------------
+  // Se guardan en el navegador y, con cuenta, en la fila especial "ajustes-usuario" de la tabla progreso
+  // (reutiliza la tabla existente con sus políticas RLS; no requiere migración).
+  var LS_AJ = "testley:ajustes", FILA_AJ = "ajustes-usuario";
+  var AJ_DEF = { oposicion: null, fechaExamen: "", horasSemana: 6, nivel: "empiezo", favoritas: [], sigo: [], vistoAlertas: 0, t: 0 };
+  function ajustes() { var a = lsGet(LS_AJ, {}); Object.keys(AJ_DEF).forEach(function (k) { if (a[k] == null) a[k] = AJ_DEF[k] instanceof Array ? [] : AJ_DEF[k]; }); if (!a.oposicion) a.oposicion = lsGet("testley:op", null); return a; }
+  function guardarAjustes(cambios) {
+    var a = ajustes(); Object.keys(cambios || {}).forEach(function (k) { a[k] = cambios[k]; }); a.t = Date.now();
+    lsSet(LS_AJ, a); if (a.oposicion) lsSet("testley:op", a.oposicion);
+    var s = sesion();
+    if (ONLINE && s) refrescar().then(function () {
+      return api("/rest/v1/progreso?on_conflict=user_id,ley", { method: "POST", headers: { Prefer: "resolution=merge-duplicates" }, body: { user_id: s.user.id, ley: FILA_AJ, datos: a } });
+    }).catch(function () {});
+    return a;
+  }
+  function esFavorita(k) { return ajustes().favoritas.indexOf(k) >= 0; }
+  function alternarFavorita(k) { var f = ajustes().favoritas, i = f.indexOf(k); if (i >= 0) f.splice(i, 1); else f.push(k); guardarAjustes({ favoritas: f }); return i < 0; }
+  function sigo(id) { return ajustes().sigo.indexOf(id) >= 0; }
+  function alternarSeguir(id) { var f = ajustes().sigo, i = f.indexOf(id); if (i >= 0) f.splice(i, 1); else f.push(id); guardarAjustes({ sigo: f }); return i < 0; }
 
   // ---------------- Pase Opositor (clave de licencia de Lemon Squeezy) ----------------
   // La clave se valida contra la API pública de licencias; no hace falta ninguna clave secreta.
@@ -313,8 +337,10 @@
     pase: pase, activarPase: activarPase, quitarPase: quitarPase,
     esGratis: function (l) { return l === LEY_GRATIS; },
     esOposicion: function (id) { return (CFG.opos || []).indexOf(id) >= 0; },
-    miOposicion: function () { return lsGet("testley:op", null); },
-    setMiOposicion: function (id) { lsSet("testley:op", id); },
+    miOposicion: function () { return ajustes().oposicion; },
+    setMiOposicion: function (id) { guardarAjustes({ oposicion: id }); },
+    ajustes: ajustes, guardarAjustes: guardarAjustes, esFavorita: esFavorita, alternarFavorita: alternarFavorita,
+    sigo: sigo, alternarSeguir: alternarSeguir,
     _prog: function () { return prog; },
   };
 })();

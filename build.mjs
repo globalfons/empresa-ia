@@ -109,6 +109,14 @@ const tarjetaOp = (o, r) => `<a class="card op-card" href="${r}oposiciones/${o.i
 const catCount = (id) => OPOS.filter((o) => o.categoria === id).length;
 const chipsCat = (r, activa) => `<div class="cat-chips">${CATEGORIAS.map((c) => `<a class="cat-chip${activa === c.id ? " on" : ""}${catCount(c.id) ? "" : " empty"}" href="${r}oposiciones/categoria/${c.id}/" data-cat="${c.id}">${c.icono} ${esc(c.nombre)} <b>${catCount(c.id)}</b></a>`).join("")}</div>`;
 const buscador = (r) => `<form class="buscador" action="${r}oposiciones/" role="search"><label class="sr" for="q">Buscar oposición</label><input id="q" name="q" type="search" placeholder="Busca por nombre, cuerpo u organismo: policía, auxiliar, gestión…" autocomplete="off"><button class="cta" type="submit">Buscar</button></form>`;
+// Índice del catálogo para el navegador (panel, seguimiento, alertas)
+fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
+fs.writeFileSync(path.join(OUT_TMP, "datos", "catalogo.json"), JSON.stringify(OPOS.map((o) => ({
+  id: o.id, nombre: o.nombre, cat: o.categoria_nombre, grupo: o.grupo, estado: o.estado, plazas: o.convocatoria.plazas,
+  fuente: o.convocatoria.url_oficial, ref: o.convocatoria.referencia, publicada: o.convocatoria.fecha_publicacion, actualizado: o.actualizado,
+  sim: (o.examen || {}).simulacro || null, preguntas: o.qs.length,
+}))));
+
 // ---------- Portada ----------
 const NART = PUBLICADAS.reduce((t, L) => t + L.arts.length, 0), NQ = PUBLICADAS.reduce((t, L) => t + L.qs.length, 0);
 page("", {
@@ -201,7 +209,7 @@ page("", {
 // ---------- Panel, ranking y cuenta ----------
 page("panel/", {
   title: "Mi panel de progreso", description: "Tu progreso en TestLey: nota orientativa, dominio por título, puntos débiles, racha y logros.", noindex: true, wide: true,
-  scripts: ["panel.js"],
+  scripts: ["plan.js", "panel.js"],
   body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
 page("ranking/", {
@@ -328,7 +336,7 @@ for (const o of OPOS) {
       return PUB[id] ? `<a class="chip ok" href="../../${PUB[id].slug}/">✔ ${esc(n.nombre)}</a>` : `<span class="chip">${esc(n.nombre)} · en preparación</span>`;
     }).join(" ");
   };
-  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t) => ({ b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) };
+  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) };
   fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
   fs.writeFileSync(path.join(OUT_TMP, "datos", `${o.id}.json`), JSON.stringify(datosOp));
   page(`oposiciones/${o.id}/`, {

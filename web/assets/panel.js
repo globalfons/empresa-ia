@@ -34,6 +34,61 @@
     return "Buen comienzo. Repasa tus fallos: es la forma más rápida de subir la nota.";
   }
 
+  function notaSes(x) { var pen = x[6] == null ? 1 / 3 : x[6]; return x[1] ? Math.max(0, ((x[2] - x[3] * pen) / x[1]) * 10) : 0; }
+  function fecha(d) { return d.toLocaleDateString("es-ES", { weekday: "short", day: "numeric", month: "short" }); }
+  var CATALOGO = [];
+  function opInfo(id) { return CATALOGO.filter(function (o) { return o.id === id; })[0]; }
+  var ESTADO = { prevista: "Prevista", convocada: "Convocada", plazo_abierto: "Plazo abierto", examen_realizado: "Examen realizado", cerrada: "Cerrada" };
+
+  // Mi oposición + ajustes de estudio + plan adaptativo
+  function seccionOposicion(s, data) {
+    var aj = TL.ajustes(), info = ES_OP ? opInfo(LEY) : null;
+    var form = '<form id="aj-form" class="aj-form">' +
+      '<label>Mi oposición<select name="oposicion" class="select">' + CATALOGO.map(function (o) { return '<option value="' + o.id + '"' + (o.id === (ES_OP ? LEY : aj.oposicion) ? " selected" : "") + ">" + esc(o.nombre) + "</option>"; }).join("") + "</select></label>" +
+      '<label>Fecha de examen <small class="muted">(la tuya; la oficial se publica en el BOE)</small><input type="date" name="fechaExamen" value="' + esc(aj.fechaExamen || "") + '"></label>' +
+      '<label>Horas de estudio a la semana<input type="number" name="horasSemana" min="1" max="60" value="' + esc(aj.horasSemana) + '"></label>' +
+      '<label>Mi nivel<select name="nivel" class="select">' + [["empiezo", "Empiezo de cero"], ["medio", "Ya he estudiado algo"], ["avanzado", "Repaso final"]].map(function (x) { return '<option value="' + x[0] + '"' + (aj.nivel === x[0] ? " selected" : "") + ">" + x[1] + "</option>"; }).join("") + "</select></label>" +
+      '<button class="btn primary">Guardar y recalcular el plan</button></form>';
+    if (!ES_OP) return '<section class="card"><h2>Elige tu oposición</h2><p>Tu plan de estudio, tu temario y tus simulacros se adaptan a la oposición que prepares.</p>' + form + "</section>";
+    var plan = window.TLPlan ? TLPlan.generar(s, data, aj, info && info.sim, TL.estado) : null;
+    var cab = '<section class="card mi-op"><div class="of-head"><h2>Mi oposición</h2>' + (info ? '<span class="badge-oficial">' + esc(ESTADO[info.estado] || info.estado) + "</span>" : "") + "</div>" +
+      (info ? '<p><b>' + esc(info.nombre) + "</b>" + (info.plazas ? " · " + info.plazas.toLocaleString("es-ES") + " plazas" : "") + '</p><p class="muted small">Convocatoria oficial: <a href="' + esc(info.fuente) + '" rel="noopener">' + esc(info.ref) + "</a>. <a href=\"" + TL.root + "oposiciones/" + LEY + '/">Ver temario y datos oficiales</a></p>' : "") +
+      '<details' + (aj.fechaExamen ? "" : " open") + '><summary>Mis ajustes de estudio</summary>' + form + "</details></section>";
+    if (!plan) return cab;
+    var aviso = plan.ritmo === "corto" ? '<p class="warn">A este ritmo necesitas unos ' + plan.diasNecesarios + " días para dominar lo pendiente y quedan " + plan.dias + ". Para llegar, sube a unas <b>" + plan.horasNecesarias + " h/semana</b> o céntrate en los temas prioritarios.</p>"
+      : plan.ritmo === "ok" ? '<p class="ok-msg">Vas a buen ritmo: con ' + aj.horasSemana + " h/semana dominarías lo pendiente en unos " + plan.diasNecesarios + " días (quedan " + plan.dias + ").</p>"
+      : plan.ritmo === "pasado" ? '<p class="warn">La fecha de examen que indicaste ya ha pasado. Actualízala en tus ajustes.</p>'
+      : '<p class="muted">Indica tu fecha de examen para ajustar el ritmo. Con ' + aj.horasSemana + " h/semana harías unas " + plan.pregDia + " preguntas al día.</p>";
+    var tareaUrl = function (t) { return TL.root + "oposiciones/" + LEY + "/#test=" + t.ancla; };
+    return cab + '<section class="card plan"><div class="of-head"><h2>Tu plan de estudio</h2><span class="badge-testley">Calculado por TestLey</span></div>' + aviso +
+      '<ol class="plan-dias">' + plan.semana.map(function (d, i) {
+        return '<li><b>' + (i === 0 ? "Hoy" : i === 1 ? "Mañana" : fecha(d.fecha)) + "</b><ul>" + d.tareas.map(function (t) {
+          return '<li><a href="' + tareaUrl(t) + '">' + esc(t.txt) + "</a>" + (t.det ? '<span class="muted small"> · ' + esc(t.det.length > 60 ? t.det.slice(0, 58) + "…" : t.det) + (t.pct != null ? " · dominio " + t.pct + " %" : "") + "</span>" : "") + "</li>";
+        }).join("") + "</ul></li>";
+      }).join("") + "</ol>" +
+      '<p class="muted small">El plan se recalcula con cada visita según tus aciertos y fallos: prioriza los temas con menos dominio y más errores, reserva tiempo para repasar fallos y añade simulacros según tu nivel y la cercanía del examen (estimamos ' + plan.minPorPregunta + " min por pregunta, incluida la lectura de la cita).</p></section>";
+  }
+
+  function seccionSimulacros(s) {
+    var sims = s.sesiones.filter(function (x) { return x[5] === "simulacro" || x[5] === "examen"; }).slice(-10).reverse();
+    return '<section class="card"><h2>Simulacros y exámenes</h2>' + (sims.length
+      ? '<table class="tabla"><thead><tr><th>Fecha</th><th>Preguntas</th><th>✔</th><th>✘</th><th>Nota</th></tr></thead><tbody>' + sims.map(function (x) {
+          return "<tr><td>" + new Date(x[0]).toLocaleDateString("es-ES") + "</td><td>" + x[1] + "</td><td>" + x[2] + "</td><td>" + x[3] + '</td><td><b class="' + (notaSes(x) >= 5 ? "good" : "bad") + '">' + fmt(notaSes(x)) + "</b></td></tr>";
+        }).join("") + "</tbody></table>"
+      : '<p class="muted">Aún no has hecho ningún simulacro. Reproducen el formato de tu examen (preguntas, tiempo, opciones y penalización).</p>') +
+      '<a class="btn" href="' + LEY_URL + '#test=simulacro">Hacer un simulacro</a></section>';
+  }
+
+  function seccionSeguimiento() {
+    var aj = TL.ajustes(), favs = aj.favoritas.length;
+    var sigo = aj.sigo.map(opInfo).filter(Boolean);
+    return '<section class="card"><h2>Favoritas y oposiciones que sigo</h2>' +
+      "<p>☆ <b>" + favs + "</b> preguntas favoritas" + (favs ? ' · <a href="' + LEY_URL + '#test=favoritas">Practicarlas</a>' : ' <span class="muted small">(márcalas con la estrella durante un test)</span>') + "</p>" +
+      (sigo.length ? '<ul class="weak">' + sigo.map(function (o) { return '<li><a href="' + TL.root + "oposiciones/" + o.id + '/">' + esc(o.nombre) + '</a><span>' + esc(ESTADO[o.estado] || o.estado) + " · revisado " + o.actualizado.split("-").reverse().join("/") + "</span></li>"; }).join("") + "</ul>"
+        : '<p class="muted small">Sigue una oposición desde su ficha para recibir avisos de su convocatoria.</p>') +
+      '<div id="avisos"></div></section>';
+  }
+
   function pintar(data, perfil) {
     var s = TL.stats(LEY, data);
     var log = TL.logros(s);
@@ -67,6 +122,7 @@
       '<div class="kpi"><span class="kpi-n">🔥 ' + s.racha + '</span><span class="kpi-l">días de racha</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.cuenta.dominada + "/" + s.total + '</span><span class="kpi-l">dominadas</span></div></div>' +
 
+      seccionOposicion(s, data) +
       // Estado del banco
       '<section class="card"><h2>Estado de las ' + s.total + " preguntas disponibles</h2>" +
       '<div class="stack">' + seg.map(function (k) { return s.cuenta[k] ? '<span class="st-' + k + '" style="width:' + (100 * s.cuenta[k]) / tot + '%"></span>' : ""; }).join("") + "</div>" +
@@ -103,12 +159,13 @@
       '<section class="card"><h2>Tus últimos tests</h2>' +
       (ult.length
         ? '<div class="spark">' + ult.map(function (x) {
-            var n = x[1] ? Math.max(0, ((x[2] - x[3] / 3) / x[1]) * 10) : 0;
+            var n = notaSes(x);
             var d = new Date(x[0]);
             return '<div class="sp-col" title="' + d.toLocaleDateString("es-ES") + ": " + fmt(n) + '"><span style="height:' + Math.max(4, n * 10) + '%" class="' + (n >= 5 ? "good" : "low") + '"></span><small>' + fmt(n) + "</small></div>";
           }).join("") + '</div><p class="muted small">Nota de cada test con penalización (cada error resta 1/3). La línea del 5 es el aprobado orientativo.</p>'
         : '<p class="muted">Cuando completes tests verás aquí tu evolución.</p>') + "</section>" +
 
+      seccionSimulacros(s) + seccionSeguimiento() +
       // Logros
       '<section class="card"><h2>Logros</h2><div class="badges">' +
       log.map(function (l) { return '<div class="badge ' + (l.ok ? "on" : "") + '"><span class="b-ico">' + l.icono + "</span><b>" + l.nombre + "</b><small>" + l.desc + "</small></div>"; }).join("") +
@@ -135,11 +192,18 @@
         .then(function () { m.textContent = "Guardado ✓"; })
         .catch(function (err) { m.textContent = /duplicate|unique/i.test(err.message) ? "Ese nombre ya está cogido." : err.message; });
     };
+    var af = el.querySelector("#aj-form");
+    if (af) af.onsubmit = function (e) {
+      e.preventDefault();
+      TL.guardarAjustes({ oposicion: af.oposicion.value, fechaExamen: af.fechaExamen.value, horasSemana: Math.max(1, +af.horasSemana.value || 6), nivel: af.nivel.value });
+      location.href = TL.root + "panel/?c=" + af.oposicion.value;
+    };
+    if (window.TLAvisos) TLAvisos.pintar(el.querySelector("#avisos"));
     var sb = el.querySelector("#salir");
     if (sb) sb.onclick = function () { TL.salir().then(function () { location.href = TL.root; }); };
   }
 
-  TL.cargar(LEY).then(function (data) {
+  fetch(TL.root + "datos/catalogo.json").then(function (r) { return r.json(); }).catch(function () { return []; }).then(function (c) { CATALOGO = c; return TL.cargar(LEY); }).then(function (data) {
     pintar(data, null);
     if (TL.online && TL.sesion()) {
       TL.bajar().then(function () { TL.subir(LEY); return TL.perfil(); }).then(function (p) { pintar(data, p); }).catch(function () {});
