@@ -377,3 +377,8 @@ ol.steps.big li { margin: 6px 0; }
 
 /* Los elementos ocultos por el buscador (atributo hidden) no deben mostrarse aunque su clase fije display */
 [hidden] { display: none !important; }
+
+.qbar { display: grid; grid-template-columns: minmax(0, 14em) 1fr 4em; gap: 10px; align-items: center; margin: 6px 0; }
+.qbar .tbar-track { display: block; }
+fieldset.dias { border: 0; padding: 0; margin: 6px 0; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+@media (max-width: 520px) { .qbar { grid-template-columns: 1fr 3.5em; } .qbar > span:first-child { grid-column: 1 / -1; } }

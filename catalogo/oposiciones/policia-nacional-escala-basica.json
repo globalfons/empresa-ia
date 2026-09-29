@@ -123,7 +123,45 @@
    "penalizacion": 0.5,
    "origen": "oficial",
    "nota": "Como la primera prueba oficial: 100 preguntas, 3 opciones, 50 minutos y cada error resta medio acierto (E/(n−1) con n=3)."
-  }
+  },
+  "estructura": [
+   {
+    "parte": "Primera prueba · conocimientos",
+    "preguntas": 100,
+    "minutos": 50,
+    "en_simulacro": true,
+    "cita": "La prueba consistirá en la contestación por escrito en cincuenta minutos a un cuestionario de cien preguntas, con un enunciado y tres alternativas de respuestas de las que solo una es verdadera",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Segunda prueba · aptitud física",
+    "en_simulacro": false,
+    "motivo": "Prueba física.",
+    "cita": "6.1.2 Segunda prueba (aptitud física).",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Tercera prueba · reconocimiento médico",
+    "en_simulacro": false,
+    "motivo": "Prueba médica.",
+    "cita": "6.1.3.a) Reconocimiento médico.",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Tercera prueba · entrevista profesional y personal",
+    "en_simulacro": false,
+    "motivo": "Entrevista personal.",
+    "cita": "6.1.3.b) Entrevista profesional y personal.",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Tercera prueba · test psicotécnicos",
+    "en_simulacro": false,
+    "motivo": "TestLey todavía no tiene psicotécnicos verificados.",
+    "cita": "6.1.3.c) Test psicotécnicos.",
+    "fuente": "convocatoria"
+   }
+  ]
  },
  "temario": {
   "fuente": "convocatoria",

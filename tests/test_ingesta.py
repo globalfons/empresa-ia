@@ -103,7 +103,7 @@ class TestVigencia(unittest.TestCase):
             self.assertEqual(RV.revisar("ley-x")["desfasadas"], 0)
             json.dump([{"n": "1", "texto": "El plazo será de dos meses."}], open(os.path.join(tmp, "ley-x-articulos.json"), "w"))
             self.assertEqual(RV.revisar("ley-x", "2026-10-01")["desfasadas"], 1)
-            self.assertEqual(json.load(open(os.path.join(tmp, "preguntas-ley-x.json")))[0]["verification_status"], "DEPRECATED")
+            self.assertEqual(json.load(open(os.path.join(tmp, "preguntas-ley-x.json")))[0]["verification_status"], "OUTDATED")
             json.dump([{"n": "1", "texto": "El plazo será de un mes."}], open(os.path.join(tmp, "ley-x-articulos.json"), "w"))
             self.assertEqual(RV.revisar("ley-x")["reactivadas"], 1)
         finally: RV.D = prev; shutil.rmtree(tmp)

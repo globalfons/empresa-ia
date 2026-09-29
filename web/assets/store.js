@@ -11,7 +11,7 @@
   function hoy(ts) { var d = new Date(ts || Date.now()); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); }
 
   // ---------------- Progreso local ----------------
-  // prog[ley] = { q: {qid: [aciertos, fallos, rachaPregunta, ultimoTs]}, ses: [[ts, n, ok, ko, blank]], dias: ["2026-9-27", ...] }
+  // prog[ley] = { q: {qid: [aciertos, fallos, rachaPregunta, ultimoTs, ultimoFalloTs]}, ses: [[ts, n, ok, ko, blank]], dias: ["2026-9-27", ...] }
   function migrarAntiguo(p) {
     var viejo = lsGet("testley:l39", null);
     if (!viejo || p["ley-39-2015"]) return p;
@@ -33,20 +33,24 @@
   function marcarDia(p) { var d = hoy(); if (p.dias.indexOf(d) < 0) { p.dias.push(d); if (p.dias.length > 400) p.dias.shift(); } }
   function registrarRespuesta(l, qid, correcta, ctx) {
     var p = ley(l), r = p.q[qid] || [0, 0, 0, 0];
-    if (correcta) { r[0]++; r[2] = Math.max(1, r[2] + 1); } else { r[1]++; r[2] = 0; }
+    if (correcta) { r[0]++; r[2] = Math.max(1, r[2] + 1); } else { r[1]++; r[2] = 0; r[4] = Date.now(); } // r[4]: última vez fallada
     r[3] = Date.now();
     p.q[qid] = r;
     marcarDia(p);
     guardar(l);
     if (ctx && ctx !== l) { marcarDia(ley(ctx)); guardar(ctx); }
   }
-  // Sesión: [ts, preguntas, aciertos, errores, en blanco, modo, penalización]
-  function registrarSesion(l, n, ok, ko, blank, modo, pen) {
+  // Sesión: [ts, preguntas, aciertos, errores, en blanco, modo, penalización, segundos]
+  function registrarSesion(l, n, ok, ko, blank, modo, pen, segundos) {
     var p = ley(l);
-    p.ses.push([Date.now(), n, ok, ko, blank, modo || "", pen == null ? 1 / 3 : pen]);
+    p.ses.push([Date.now(), n, ok, ko, blank, modo || "", pen == null ? 1 / 3 : pen, Math.max(0, Math.round(segundos || 0))]);
     if (p.ses.length > 200) p.ses.shift();
     guardar(l);
   }
+  // Repetición espaciada (sencilla): tras fallar, repasar ya; con aciertos seguidos el intervalo crece (días).
+  var INTERVALOS = [0, 1, 3, 7, 16, 35];
+  function proximoRepaso(r) { return r ? r[3] + INTERVALOS[Math.min(r[2], INTERVALOS.length - 1)] * 864e5 : null; }
+  function vencida(l, qid, ahora) { var r = ley(l).q[qid]; return !!r && proximoRepaso(r) <= (ahora || Date.now()); }
   function estado(l, qid) {
     var r = ley(l).q[qid];
     if (!r) return "nueva";
@@ -90,17 +94,24 @@
     });
     Object.keys(porLey).forEach(function (k) { if (k !== l) ley(k).dias.forEach(function (d) { if (dias.indexOf(d) < 0) dias.push(d); }); });
     var porTema = null;
-    if (data.temario) porTema = data.temario.map(function (t) {
-      var n = 0, dom = 0;
-      (t.leyes || []).forEach(function (s) { if (porLey[s]) { n += porLey[s].n; dom += porLey[s].dom; } });
-      return { t: t, cubierto: n > 0, pct: n ? Math.round((100 * dom) / n) : 0 };
-    });
+    if (data.temario) {
+      var porTemaQ = data.temario.map(function () { return { n: 0, dom: 0 }; }), conTm = data.qs.some(function (q) { return q.tm; });
+      if (conTm) data.qs.forEach(function (q) { (q.tm || []).forEach(function (i) { if (porTemaQ[i]) { porTemaQ[i].n++; porTemaQ[i].dom += PESO[estado(q.ley || l, q.id)]; } }); });
+      porTema = data.temario.map(function (t, i) {
+        var n = 0, dom = 0;
+        if (conTm) { n = porTemaQ[i].n; dom = porTemaQ[i].dom; }
+        else (t.leyes || []).forEach(function (s) { if (porLey[s]) { n += porLey[s].n; dom += porLey[s].dom; } });
+        return { t: t, cubierto: n > 0, n: n, pct: n ? Math.round((100 * dom) / n) : 0 };
+      });
+    }
     var N = data.qs.length || 1;
     var nota = Math.round((neto / N) * 100) / 10;
     return {
       total: data.qs.length, cuenta: cuenta, nota: nota, estrellas: estrellas(nota),
       dominioPct: Math.round((dominio / N) * 100), respuestas: resp, acierto: resp ? Math.round((100 * ac) / resp) : 0,
       racha: racha(dias), diasEstudio: dias.length, sesiones: p.ses.slice(),
+      tiempo: p.ses.reduce(function (t, x) { return t + (x[7] || 0); }, 0),
+      vencidas: data.qs.filter(function (q) { return vencida(q.ley || l, q.id); }).length,
       porBloque: porBloque, porArt: porArt, porTema: porTema,
     };
   }
@@ -303,7 +314,7 @@
   // Se guardan en el navegador y, con cuenta, en la fila especial "ajustes-usuario" de la tabla progreso
   // (reutiliza la tabla existente con sus políticas RLS; no requiere migración).
   var LS_AJ = "testley:ajustes", FILA_AJ = "ajustes-usuario";
-  var AJ_DEF = { oposicion: null, fechaExamen: "", horasSemana: 6, nivel: "empiezo", favoritas: [], sigo: [], vistoAlertas: 0, onboarding: 0, t: 0 };
+  var AJ_DEF = { oposicion: null, fechaExamen: "", horasSemana: 6, dias: [0, 1, 2, 3, 4, 5, 6], nivel: "empiezo", favoritas: [], sigo: [], vistoAlertas: 0, onboarding: 0, t: 0 };
   function ajustes() { var a = lsGet(LS_AJ, {}); Object.keys(AJ_DEF).forEach(function (k) { if (a[k] == null) a[k] = AJ_DEF[k] instanceof Array ? [] : AJ_DEF[k]; }); if (!a.oposicion) a.oposicion = lsGet("testley:op", null); return a; }
   function guardarAjustes(cambios) {
     var a = ajustes(); Object.keys(cambios || {}).forEach(function (k) { a[k] = cambios[k]; }); a.t = Date.now();
@@ -401,7 +412,8 @@
   window.TL = {
     online: ONLINE, root: CFG.root || "./",
     registrarRespuesta: registrarRespuesta, registrarSesion: registrarSesion, estado: estado,
-    stats: stats, logros: logros, estrellas: estrellas, comparaSimulacros: comparaSimulacros, puntos: puntos, objetivoSemanal: objetivoSemanal,
+    stats: stats, logros: logros, estrellas: estrellas, proximoRepaso: proximoRepaso, vencida: vencida, _INTERVALOS: INTERVALOS,
+    registro: function (l, qid) { return ley(l).q[qid] || null; }, comparaSimulacros: comparaSimulacros, puntos: puntos, objetivoSemanal: objetivoSemanal,
     sesion: sesion, registrar: registrar, entrar: entrar, salir: salir, recordar: recordar,
     perfil: perfil, actualizarPerfil: actualizarPerfil, ranking: ranking, subir: subir, bajar: bajar,
     setDatos: function (l, d) { DATOS[l] = d; },

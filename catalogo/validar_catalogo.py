@@ -70,6 +70,12 @@ for p in sorted(glob.glob(os.path.join(D, "oposiciones", "*.json"))):
         if t["tipo"] == "legislativo" and not t["normas"]: err.append(f"{o['id']} tema {t['tema']}: legislativo sin normas")
         for n in t["normas"]:
             if n not in NORMAS: err.append(f"{o['id']} tema {t['tema']}: norma {n} no está en normas_base.json")
+    # Estructura oficial del examen: cada parte con su cita literal de las bases y si el simulacro de TestLey la reproduce
+    for j, x in enumerate((o.get("examen") or {}).get("estructura", [])):
+        tx = T.get(x.get("fuente"))
+        if not x.get("parte") or not x.get("cita") or "en_simulacro" not in x: err.append(f"{o['id']}: examen.estructura[{j}] incompleta")
+        elif tx is not None and norm(x["cita"]) not in tx: err.append(f"{o['id']}: examen.estructura[{j}]: la cita no aparece en la fuente")
+        if x.get("en_simulacro") is False and not x.get("motivo"): err.append(f"{o['id']}: examen.estructura[{j}]: falta el motivo de no simularla")
     ex = (o.get("examen") or {}).get("simulacro")
     if ex:
         for c in ("preguntas", "minutos", "opciones", "penalizacion", "origen", "nota"):

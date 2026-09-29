@@ -47,11 +47,12 @@
       '<label>Mi oposición<select name="oposicion" class="select">' + CATALOGO.map(function (o) { return '<option value="' + o.id + '"' + (o.id === (ES_OP ? LEY : aj.oposicion) ? " selected" : "") + ">" + esc(o.nombre) + "</option>"; }).join("") + "</select></label>" +
       '<label>Fecha de examen <small class="muted">(la tuya; la oficial se publica en el BOE)</small><input type="date" name="fechaExamen" value="' + esc(aj.fechaExamen || "") + '"></label>' +
       '<label>Horas de estudio a la semana<input type="number" name="horasSemana" min="1" max="60" value="' + esc(aj.horasSemana) + '"></label>' +
+      '<fieldset class="dias"><legend class="small muted">Días que puedes estudiar</legend>' + [[1, "L"], [2, "M"], [3, "X"], [4, "J"], [5, "V"], [6, "S"], [0, "D"]].map(function (d) { return '<label class="check"><input type="checkbox" name="dia" value="' + d[0] + '"' + ((aj.dias || [0, 1, 2, 3, 4, 5, 6]).indexOf(d[0]) >= 0 ? " checked" : "") + "> " + d[1] + "</label>"; }).join("") + "</fieldset>" +
       '<label>Mi nivel<select name="nivel" class="select">' + [["empiezo", "Empiezo de cero"], ["medio", "Ya he estudiado algo"], ["avanzado", "Repaso final"]].map(function (x) { return '<option value="' + x[0] + '"' + (aj.nivel === x[0] ? " selected" : "") + ">" + x[1] + "</option>"; }).join("") + "</select></label>" +
       '<button class="btn primary">Guardar y recalcular el plan</button></form>';
     if (!ES_OP) return '<section class="card"><h2>Elige tu oposición</h2><p>Tu plan de estudio, tu temario y tus simulacros se adaptan a la oposición que prepares.</p>' + form + "</section>";
     if (!TL.puede("plan_estudio")) return '<section class="card mi-op"><h2>Mi oposición</h2>' + (info ? "<p><b>" + esc(info.nombre) + "</b></p>" : "") + '<details><summary>Mis ajustes de estudio</summary>' + form + "</details></section>" + bloqueo("Tu plan de estudio adaptativo", "Un plan día a día según tu fecha de examen, tus horas y tus fallos, que se recalcula con cada test.");
-    var plan = window.TLPlan ? TLPlan.generar(s, data, aj, info && info.sim, TL.estado) : null;
+    var plan = window.TLPlan ? TLPlan.generar(s, data, Object.assign({ _rutaOp: TL.root + "oposiciones/" + LEY + "/" }, aj), info && info.sim, TL.estado) : null;
     var cab = '<section class="card mi-op"><div class="of-head"><h2>Mi oposición</h2>' + (info ? '<span class="badge-oficial">' + esc(ESTADO[info.estado] || info.estado) + "</span>" : "") + "</div>" +
       (info ? '<p><b>' + esc(info.nombre) + "</b>" + (info.plazas ? " · " + info.plazas.toLocaleString("es-ES") + " plazas" : "") + '</p><p class="muted small">Convocatoria oficial: <a href="' + esc(info.fuente) + '" rel="noopener">' + esc(info.ref) + "</a>. <a href=\"" + TL.root + "oposiciones/" + LEY + '/">Ver temario y datos oficiales</a></p>' : "") +
       '<details' + (aj.fechaExamen ? "" : " open") + '><summary>Mis ajustes de estudio</summary>' + form + "</details></section>";
@@ -60,9 +61,10 @@
       : plan.ritmo === "ok" ? '<p class="ok-msg">Vas a buen ritmo: con ' + aj.horasSemana + " h/semana dominarías lo pendiente en unos " + plan.diasNecesarios + " días (quedan " + plan.dias + ").</p>"
       : plan.ritmo === "pasado" ? '<p class="warn">La fecha de examen que indicaste ya ha pasado. Actualízala en tus ajustes.</p>'
       : '<p class="muted">Indica tu fecha de examen para ajustar el ritmo. Con ' + aj.horasSemana + " h/semana harías unas " + plan.pregDia + " preguntas al día.</p>";
-    var tareaUrl = function (t) { return TL.root + "oposiciones/" + LEY + "/#test=" + t.ancla; };
+    var tareaUrl = function (t) { return t.url || TL.root + "oposiciones/" + LEY + "/#test=" + t.ancla; };
     return cab + '<section class="card plan"><div class="of-head"><h2>Tu plan de estudio</h2><span class="badge-testley">Calculado por TestLey</span></div>' + aviso +
       '<ol class="plan-dias">' + plan.semana.map(function (d, i) {
+        if (d.descanso) return '<li><b>' + (i === 0 ? "Hoy" : i === 1 ? "Mañana" : fecha(d.fecha)) + '</b> <span class="muted">Descanso (no es uno de tus días de estudio)</span></li>';
         return '<li><b>' + (i === 0 ? "Hoy" : i === 1 ? "Mañana" : fecha(d.fecha)) + "</b><ul>" + d.tareas.map(function (t) {
           return '<li><a href="' + tareaUrl(t) + '">' + esc(t.txt) + "</a>" + (t.det ? '<span class="muted small"> · ' + esc(t.det.length > 60 ? t.det.slice(0, 58) + "…" : t.det) + (t.pct != null ? " · dominio " + t.pct + " %" : "") + "</span>" : "") + "</li>";
         }).join("") + "</ul></li>";
@@ -85,7 +87,7 @@
     var aj = TL.ajustes();
     return { nota: s.nota, dias: window.TLPlan ? TLPlan.diasHasta(aj.fechaExamen) : null, horas: aj.horasSemana,
       temas: (s.porTema || []).filter(function (x) { return x.cubierto; }).map(function (x) {
-        var f = 0; data.qs.forEach(function (q) { if (x.t.leyes.indexOf(q.ley) >= 0 && TL.estado(q.ley, q.id) === "fallada") f++; });
+        var f = 0; data.qs.forEach(function (q) { if ((q.tm ? q.tm.indexOf(x.t.i) >= 0 : x.t.leyes.indexOf(q.ley) >= 0) && TL.estado(q.ley, q.id) === "fallada") f++; });
         return { t: x.t.t, pct: x.pct, fallos: f };
       }).sort(function (a, b) { return a.pct - b.pct || b.fallos - a.fallos; }) };
   }
@@ -118,8 +120,9 @@
     var plan = ES_OP && TL.puede("plan_estudio") && window.TLPlan ? TLPlan.generar(s, data, aj, info && info.sim, TL.estado) : null;
     if (plan && plan.semana.length) tareas = plan.semana[0].tareas.map(function (t) {
       var n = +((t.txt.match(/(\d+) (preguntas|fallos)/) || [])[1] || 0);
-      return { txt: t.txt, det: t.det, min: t.tipo === "simulacro" ? (info && info.sim ? info.sim.minutos : 30) : Math.max(5, Math.round(n * MINPQ)), ancla: t.ancla };
+      return { txt: t.txt, det: t.det, min: t.min || (t.tipo === "simulacro" ? (info && info.sim ? info.sim.minutos : 30) : Math.max(5, Math.round(n * MINPQ))), ancla: t.ancla, url: t.url };
     });
+    if (plan && plan.semana[0] && plan.semana[0].descanso) return '<section class="card hoy"><h2>Tu sesión de hoy</h2><p>Hoy es día de descanso según tus días de estudio. Si te apetece, haz un <a href="' + LEY_URL + '#test=repaso">repaso corto</a>.</p></section>';
     else {
       if (s.cuenta.fallada) tareas.push({ txt: "Repasar " + Math.min(10, s.cuenta.fallada) + " fallos", min: Math.round(Math.min(10, s.cuenta.fallada) * MINPQ), ancla: "fallos" });
       tareas.push({ txt: "Repaso inteligente: 20 preguntas", det: "primero lo que fallas y lo que aún no has visto", min: 30, ancla: "repaso" });
@@ -130,8 +133,8 @@
     return '<section class="card hoy"><div class="of-head"><h2>Tu sesión de hoy</h2><span class="muted">' + total + " min</span></div>" +
       (hecho ? '<p class="ok-msg">✔ Hoy ya has estudiado. Si te quedan ganas, sigue con la siguiente tarea.</p>' : "") +
       '<ol class="hoy-lista">' + tareas.map(function (t) {
-        return '<li><a href="' + LEY_URL + "#test=" + t.ancla + '"><b>' + esc(t.txt) + "</b>" + (t.det ? '<span class="muted small">' + esc(t.det.length > 70 ? t.det.slice(0, 68) + "…" : t.det) + "</span>" : "") + '</a><span class="min">' + t.min + " min</span></li>";
-      }).join("") + '</ol><a class="cta" href="' + LEY_URL + "#test=" + tareas[0].ancla + '">Empezar sesión</a>' +
+        return '<li><a href="' + (t.url || LEY_URL + "#test=" + t.ancla) + '"><b>' + esc(t.txt) + "</b>" + (t.det ? '<span class="muted small">' + esc(t.det.length > 70 ? t.det.slice(0, 68) + "…" : t.det) + "</span>" : "") + '</a><span class="min">' + t.min + " min</span></li>";
+      }).join("") + '</ol><a class="cta" href="' + (tareas[0].url || LEY_URL + "#test=" + tareas[0].ancla) + '">Empezar sesión</a> <a class="small" href="' + TL.root + "errores/?c=" + LEY + '">Mis errores</a>' +
       (plan ? "" : TL.puede("plan_estudio") ? "" : ' <a class="small" href="' + TL.root + 'precios/">Con el Pase, tu sesión sale de un plan adaptado a tu fecha de examen</a>') + "</section>";
   }
   function seccionProgresoSemanal(s) {
@@ -192,6 +195,8 @@
       '<div class="kpi"><span class="kpi-n">' + s.respuestas + '</span><span class="kpi-l">respuestas</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.acierto + ' %</span><span class="kpi-l">de acierto</span></div>' +
       '<div class="kpi"><span class="kpi-n">🔥 ' + s.racha + '</span><span class="kpi-l">días de racha</span></div>' +
+      '<div class="kpi"><span class="kpi-n">' + (s.tiempo >= 3600 ? Math.floor(s.tiempo / 3600) + " h " : "") + Math.round((s.tiempo % 3600) / 60) + ' min</span><span class="kpi-l">tiempo en tests</span></div>' +
+      '<div class="kpi"><a class="kpi-n" href="' + TL.root + "errores/?c=" + LEY + '">' + s.vencidas + '</a><span class="kpi-l">repasos pendientes hoy</span></div>' +
       '<div class="kpi"><span class="kpi-n">' + s.cuenta.dominada + "/" + s.total + '</span><span class="kpi-l">dominadas</span></div></div>' +
 
       seccionProgresoSemanal(s) +
@@ -268,7 +273,8 @@
     var af = el.querySelector("#aj-form");
     if (af) af.onsubmit = function (e) {
       e.preventDefault();
-      TL.guardarAjustes({ oposicion: af.oposicion.value, fechaExamen: af.fechaExamen.value, horasSemana: Math.max(1, +af.horasSemana.value || 6), nivel: af.nivel.value });
+      var dias = [].slice.call(af.querySelectorAll("input[name=dia]:checked")).map(function (x) { return +x.value; });
+      TL.guardarAjustes({ oposicion: af.oposicion.value, fechaExamen: af.fechaExamen.value, horasSemana: Math.max(1, +af.horasSemana.value || 6), dias: dias.length ? dias : [0, 1, 2, 3, 4, 5, 6], nivel: af.nivel.value });
       location.href = TL.root + "panel/?c=" + af.oposicion.value;
     };
     if (window.TLAvisos) TLAvisos.pintar(el.querySelector("#avisos"));

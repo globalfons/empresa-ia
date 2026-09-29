@@ -1,5 +1,5 @@
 """Revisa las preguntas contra el texto vigente de cada ley (tras actualizar datos/<ley>-articulos.json).
-Si la cita de una pregunta ya no aparece literalmente en su artículo, la pregunta se marca DEPRECATED
+Si la cita de una pregunta ya no aparece literalmente en su artículo, la pregunta se marca OUTDATED
 (no se borra: se conserva con el motivo y la fecha, deja de publicarse y queda en la cola de revisión del admin).
 Si una pregunta desfasada vuelve a coincidir (p. ej. se corrigió la cita), se reactiva.
 Uso: python3 datos/revisar_vigencia.py [slug ...]
@@ -16,10 +16,10 @@ def revisar(slug, hoy=None):
     qs = json.load(open(fq)); n = {"desfasadas": 0, "reactivadas": 0}
     for q in qs:
         ok = q["art"] in arts and norm(q["cita"]) in arts[q["art"]]
-        if not ok and q.get("verification_status") != "DEPRECATED":
-            q.update({"verification_status": "DEPRECATED", "desfasada_el": hoy,
+        if not ok and q.get("verification_status") not in ("DEPRECATED", "OUTDATED"):
+            q.update({"verification_status": "OUTDATED", "desfasada_el": hoy,
                       "motivo": "artículo derogado o renumerado" if q["art"] not in arts else "la cita ya no aparece en el texto vigente"}); n["desfasadas"] += 1
-        elif ok and q.get("verification_status") == "DEPRECATED":
+        elif ok and q.get("verification_status") == "OUTDATED":
             for k in ("verification_status", "desfasada_el", "motivo"): q.pop(k, None)
             n["reactivadas"] += 1
     if n["desfasadas"] or n["reactivadas"]:

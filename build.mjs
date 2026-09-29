@@ -24,8 +24,10 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
     actualizada: META[n.id] || "",
   };
   L.qs.forEach((q, i) => (q.id = (PREFIJO[n.slug] || n.slug) + "-" + i)); // id por posición: estable aunque se retiren preguntas
-  L.desfasadas = L.qs.filter((q) => q.verification_status === "DEPRECATED"); // la ley cambió: no se publican (datos/revisar_vigencia.py)
-  L.qs = L.qs.filter((q) => q.verification_status !== "DEPRECATED");
+  // Estados de la pregunta: VALID (sin campo) · REVIEW_REQUIRED (su artículo cambió; se publica y se revisa) · OUTDATED (la cita ya no está en la ley vigente) · DEPRECATED (retirada a mano)
+  L.desfasadas = L.qs.filter((q) => ["DEPRECATED", "OUTDATED"].includes(q.verification_status)); // no se publican (datos/vigilar_leyes.py, revisar_vigencia.py)
+  L.revisar = L.qs.filter((q) => q.verification_status === "REVIEW_REQUIRED");
+  L.qs = L.qs.filter((q) => !["DEPRECATED", "OUTDATED"].includes(q.verification_status));
   return L;
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
@@ -89,6 +91,8 @@ ${scripts.map((s) => `<script src="${root}assets/${s}" defer></script>`).join("\
 
 // ---------- Catálogo de oposiciones ----------
 const OPOS = JSON.parse(fs.readFileSync("catalogo/oposiciones.json", "utf8"));
+const rutaTema = (o, i) => `oposiciones/${o.id}/tema-${i + 1}/`;
+const AMB = fs.existsSync("catalogo/temas_ambito.json") ? JSON.parse(fs.readFileSync("catalogo/temas_ambito.json", "utf8")) : {};
 const NORMAS = Object.fromEntries(JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n) => [n.id, n]));
 // Leyes con test publicado: id BOE -> datos
 const PUB = Object.fromEntries(PUBLICADAS.map((L) => [L.id, L]));
@@ -106,7 +110,19 @@ for (const o of OPOS) {
     for (const a of L.arts) o.arts[`${L.slug}:${a.n}`] = { t: a.titulo, b: L.corto };
     for (const q of L.qs) o.qs.push({ ...q, ley: L.slug, art: `${L.slug}:${q.art}`, artn: q.art });
   }
-  o.temasCubiertos = o.temario.filter((t) => t.normas.some((id) => PUB[id])).length;
+  // Pertenencia de cada pregunta a los temas: su ley + (si la ley se reparte entre varios temas) los títulos/capítulos del tema
+  o.temaInfo = o.temario.map((t, i) => {
+    const leyes = t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug);
+    const ambito = {};
+    for (const sl of leyes) { const a = AMB[`${o.id}#${i}#${sl}`]; ambito[sl] = a ? { estado: a.estado, unidades: a.unidades, arts: a.estado === "precisado" ? new Set(a.articulos) : null } : { estado: "ley_completa", unidades: [], arts: null }; }
+    return { leyes, ambito, nq: 0 };
+  });
+  for (const q of o.qs) {
+    const tm = [];
+    o.temaInfo.forEach((ti, i) => { if (ti.leyes.includes(q.ley) && (!ti.ambito[q.ley].arts || ti.ambito[q.ley].arts.has(q.artn))) tm.push(i); });
+    if (tm.length) { q.tm = tm; tm.forEach((i) => o.temaInfo[i].nq++); }
+  }
+  o.temasCubiertos = o.temario.filter((t, i) => t.tipo !== "no_legislativo" && o.temaInfo[i].nq > 0).length;
   o.pctCob = o.temario.length ? Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos)) : null;
 }
 const fraccionTxt = (p) => (Math.abs(p - 1 / 3) < 1e-6 ? "1/3" : Math.abs(p - 0.5) < 1e-6 ? "1/2" : Math.abs(p - 0.25) < 1e-6 ? "1/4" : String(Math.round(p * 100) / 100).replace(".", ","));
@@ -311,6 +327,12 @@ page("panel/", {
   scripts: ["plan.js", "avisos.js", "panel.js"],
   body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
+page("errores/", {
+  title: "Mis errores", description: "Las preguntas que has fallado, para repasarlas.", noindex: true, wide: true, scripts: ["errores.js"],
+  body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}panel/">Mi panel</a> › <span>Mis errores</span></nav><h1>Mis errores</h1>
+<div class="ctx-bar"><label class="muted" for="ctx">Oposición o ley</label><select id="ctx" class="select">${OPOS.filter((o) => o.qs.length).map((o) => `<option value="${o.id}">${esc(o.nombre)}</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div>
+<div id="errores"><p class="muted">Cargando tus errores…</p></div>`,
+});
 page("ranking/", {
   title: "Ranking de opositores · Ley 39/2015", description: "Ranking de TestLey: los opositores con mejor nota orientativa en la Ley 39/2015.",
   scripts: ["ranking.js"],
@@ -444,7 +466,7 @@ for (const o of OPOS) {
       return PUB[id] ? `<a class="chip ok" href="../../${PUB[id].slug}/">✔ ${esc(n.nombre)}</a>` : `<span class="chip">${esc(n.nombre)} · en preparación</span>`;
     }).join(" ");
   };
-  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) };
+  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, nq: o.temaInfo[i].nq, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) };
   fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
   fs.writeFileSync(path.join(OUT_TMP, "datos", `${o.id}.json`), JSON.stringify(datosOp));
   const convsOp = CONVS.filter((v) => (v.oposiciones_relacionadas || []).includes(o.id));
@@ -499,15 +521,104 @@ ${novedadesHtml(o)}
 ${cobertura}
 ${prep}
 <section id="tests">${o.qs.length ? `<h2>Tests de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))} <span class="badge-testley">Contenido de TestLey</span></h2><p class="muted small">Preguntas redactadas por TestLey; cada respuesta cita el artículo del BOE que la justifica y se comprueba automáticamente contra el texto vigente.${o.temario_tipo === "pendiente" ? " Mientras el temario oficial está pendiente de verificación, el test usa las leyes de preparación indicadas arriba." : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="./" data-sim="${esc(JSON.stringify(sim || null))}">Cargando preguntas…</div>` : ""}</section>
-<section class="card" id="simulacros"><h2>Simulacros</h2>${sim ? `<p>Formato: <b>${sim.preguntas} preguntas</b> en <b>${sim.minutos} minutos</b>, ${sim.opciones} opciones${sim.penalizacion ? `, cada error resta ${fraccionTxt(sim.penalizacion)}` : ", sin penalización"}. ${sim.origen === "oficial" ? `<span class="badge-oficial">Formato oficial</span>` : `<span class="badge-testley">Adaptado por TestLey</span>`}</p><p class="muted small">${esc(sim.nota || "")}</p><p><a class="btn primary" href="#test=simulacro">Hacer un simulacro</a></p>` : `<p class="muted">El formato oficial del examen aún no está verificado; puedes hacer tests por temas.</p>`}</section>
+<section class="card" id="simulacros"><h2>Simulacros</h2>${((o.examen || {}).estructura || []).length ? `<h3>Estructura oficial del proceso</h3><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Parte</th><th>Preguntas</th><th>En el simulacro de TestLey</th></tr></thead><tbody>${o.examen.estructura.map((x) => `<tr><td>${esc(x.parte)}<details><summary class="small">Texto oficial</summary><blockquote>«${esc(x.cita)}»</blockquote></details></td><td>${x.preguntas || "—"}</td><td>${x.en_simulacro ? "✓ Sí" : `No · <span class="muted small">${esc(x.motivo)}</span>`}</td></tr>`).join("")}</tbody></table></div>` : ""}${sim ? `<p>Formato: <b>${sim.preguntas} preguntas</b> en <b>${sim.minutos} minutos</b>, ${sim.opciones} opciones${sim.penalizacion ? `, cada error resta ${fraccionTxt(sim.penalizacion)}` : ", sin penalización"}. ${sim.origen === "oficial" ? `<span class="badge-oficial">Formato oficial</span>` : `<span class="badge-testley">Adaptado por TestLey</span>`}</p><p class="muted small">${esc(sim.nota || "")}</p><p><a class="btn primary" href="#test=simulacro">Hacer un simulacro</a></p>` : `<p class="muted">El formato oficial del examen aún no está verificado; puedes hacer tests por temas.</p>`}</section>
 <section id="temario">${o.temario.length ? `<h2>${tLbl} <span class="${tCls}">${o.temario_tipo === "oficial_publicado" ? "Fuente oficial" : "Ver nota"}</span></h2>
 <p class="muted small">${o.temario_tipo === "oficial_publicado" ? `Copiado literalmente del anexo ${esc(c.anexo || "")} de la convocatoria oficial.` : "Estructura deducida de las bases oficiales; cada tema cita el texto de las bases del que sale."}</p>
-<div id="op-temario">${bloques.map((b) => `<h3>${esc(b)}</h3><ol class="temario">${o.temario.filter((t) => t.bloque === b).map((t) => `<li value="${t.tema}"><p>${esc(t.titulo)}</p><div class="chips">${chip(t)}</div></li>`).join("")}</ol>`).join("")}</div>
+<div id="op-temario">${bloques.map((b) => `<h3>${esc(b)}</h3><ol class="temario">${o.temario.map((t, i) => [t, i]).filter(([t]) => t.bloque === b).map(([t, i]) => `<li value="${t.tema}"><p><a href="${r}${rutaTema(o, i)}">${esc(t.titulo)}</a></p><div class="chips">${chip(t)}${o.temaInfo[i].nq ? ` <a class="chip ok" href="${r}${rutaTema(o, i)}#practicar">${o.temaInfo[i].nq} preguntas</a>` : ""}</div></li>`).join("")}</ol>`).join("")}</div>
 <p class="muted small">Las leyes de cada tema las asigna TestLey a partir del título del tema: son orientativas. Comprueba siempre las bases de tu convocatoria.</p>` : `<h2>Temario</h2><p class="muted">${badgeVS("OFFICIAL_PENDING_REVIEW")} Temario pendiente de verificación oficial.</p>`}</section>
 <section class="card" id="legislacion"><h2>Legislación</h2><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a> <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="https://www.boe.es/buscar/act.php?id=${esc(n.id)}" rel="noopener">${esc(n.id)}</a></li>`).join("")}</ul><p class="muted small">Textos consolidados del BOE. La asignación de leyes a temas es orientativa (Contenido de TestLey).</p></section>
 <section class="card" id="documentacion"><h2>Documentación oficial</h2><ul class="of-list">${Object.values(o.fuentes).map((f) => `<li><span><a href="${esc(f.url)}" rel="noopener">${esc(f.titulo)}</a></span> <span class="muted small">${esc(f.tipo)} · ${esc(f.id || "")} · publicado el ${fmtFecha(f.fecha_publicacion)}</span></li>`).join("")}</ul></section>
 ${faqHtml(faq)}`;
     },
+  });
+}
+
+// ---------- Temas: estudiar (texto oficial) → test del tema; cobertura por tema; completitud de cada oposición ----------
+const LEYPOR = Object.fromEntries(PUBLICADAS.map((L) => [L.slug, L]));
+const OBJ_TEMA = 30; // preguntas por tema consideradas «cobertura completa» en la métrica (no es un límite)
+// TOPIC_COVERAGE: qué hay de cada tema (texto oficial para estudiar, legislación identificada, preguntas, test, verificación)
+function coberturaTema(o, i) {
+  const t = o.temario[i], ti = o.temaInfo[i], leg = t.tipo !== "no_legislativo";
+  return { contenido: ti.leyes.length > 0, legislacion: leg ? t.normas.length > 0 : null, preguntas: ti.nq, test: ti.nq >= 10, test_parcial: ti.nq > 0 && ti.nq < 10,
+    ambito: Object.values(ti.ambito).some((a) => a.estado === "sin_precisar") ? "sin_precisar" : Object.values(ti.ambito).some((a) => a.estado === "precisado") ? "precisado" : "ley_completa",
+    verificacion: o.temario_tipo === "oficial_publicado" ? "OFFICIAL_VERIFIED" : "OFFICIAL_PENDING_REVIEW", legislativo: leg };
+}
+// Completitud del CONTENIDO de TestLey (no es probabilidad de aprobar)
+function completitud(o) {
+  const n = o.temario.length, sim = (o.examen || {}).simulacro;
+  if (!n) return { temario: 0, temas: 0, legislacion: 0, contenido: 0, preguntas: 0, tests: 0, simulacros: sim ? (sim.origen === "oficial" ? 100 : 60) : 0, total: 0 };
+  const c = o.temario.map((_, i) => coberturaTema(o, i)), legs = c.filter((x) => x.legislativo);
+  const r = {
+    temario: o.temario_tipo === "oficial_publicado" ? 100 : o.temario_tipo === "derivado_bases" ? 75 : 0,
+    temas: 100,
+    legislacion: Math.round((100 * legs.filter((x) => x.legislacion).length) / Math.max(1, legs.length)),
+    contenido: Math.round((100 * c.filter((x) => x.contenido).length) / n),
+    preguntas: Math.round((100 * c.reduce((a, x) => a + Math.min(x.preguntas, OBJ_TEMA), 0)) / (n * OBJ_TEMA)),
+    tests: Math.round((100 * c.filter((x) => x.test).length) / n),
+    simulacros: sim ? (sim.origen === "oficial" ? 100 : 60) : 0,
+  };
+  r.total = Math.round((r.temario + r.temas + r.legislacion + r.contenido + r.preguntas + r.tests + r.simulacros) / 7);
+  return r;
+}
+for (const o of OPOS) {
+  o.completitud = completitud(o);
+  const conv = o.fuentes.convocatoria || Object.values(o.fuentes)[0];
+  o.temario.forEach((t, i) => {
+    const ti = o.temaInfo[i], cob = coberturaTema(o, i), etq = `Tema ${t.tema}`;
+    const dup = o.temario.filter((x) => x.tema === t.tema).length > 1;
+    const nombre = (dup ? `${t.bloque.split(/[.)]/)[0]} · ` : "") + etq;
+    const prev = i > 0 ? o.temario[i - 1] : null, next = o.temario[i + 1];
+    page(rutaTema(o, i), {
+      title: `${nombre}: ${t.titulo.slice(0, 70)} · ${o.nombre}`, lastmod: o.actualizado,
+      description: `${o.nombre}, ${nombre}: ${t.titulo.slice(0, 120)}. Legislación con su texto oficial del BOE${ti.nq ? ` y ${ti.nq} preguntas tipo test` : ""}.`,
+      noindex: !ti.nq, scripts: ti.nq ? ["test.js"] : [],
+      crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], [nombre, rutaTema(o, i)]],
+      body: (r) => {
+        const estudio = ti.leyes.map((sl) => {
+          const L = LEYPOR[sl], a = ti.ambito[sl], arts = L.arts.filter((x) => !a.arts || a.arts.has(x.n));
+          const grupos = {}; arts.forEach((x) => (grupos[x.capitulo ? `${x.bloque} · ${x.capitulo}` : x.bloque || L.corto] ||= []).push(x));
+          const nq = o.qs.filter((q) => q.ley === sl && q.tm && q.tm.includes(i)).length;
+          return `<div class="card"><h3><a href="${r}${sl}/">${esc(L.corto)}</a> <span class="badge-oficial">Texto oficial (BOE)</span></h3>
+<p class="muted small">${a.estado === "precisado" ? `Parte que corresponde a este tema: ${a.unidades.map((u) => esc(u.split("|").pop())).join(" · ")} <span class="badge-testley">Asignación de TestLey</span>` : a.estado === "sin_precisar" ? "Esta ley se reparte entre varios temas y aún no hemos precisado qué parte corresponde a este: se incluye completa." : "Ley completa."} · ${arts.length} artículos · ${nq} preguntas · <a href="https://www.boe.es/buscar/act.php?id=${esc(L.id)}" rel="noopener">${esc(L.id)}</a>${L.actualizada ? ` · texto vigente a ${fmtFecha(L.actualizada)}` : ""}</p>
+${Object.entries(grupos).map(([g, xs]) => `<details><summary>${esc(g)} (${xs.length})</summary><ul class="art-list">${xs.map((x) => `<li><a href="${r}${sl}/articulo-${x.n}/">Art. ${x.n}${x.titulo ? ". " + esc(x.titulo) : ""}</a></li>`).join("")}</ul></details>`).join("")}</div>`;
+        }).join("");
+        const sinLey = t.normas.filter((id) => !PUB[id]).map((id) => (NORMAS[id] || { nombre: id }).nombre);
+        return `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>${esc(nombre)}</span></nav>
+<p class="kicker">${esc(o.nombre)} · ${esc(t.bloque)}</p>
+<h1>${esc(nombre)}. ${esc(t.titulo)}</h1>
+<p class="op-verif small">${o.temario_tipo === "oficial_publicado" ? `<span class="badge-oficial">Título oficial</span> copiado literalmente del anexo ${esc(o.convocatoria.anexo || "")} de la <a href="${esc(conv.url)}" rel="noopener">${esc(conv.id || conv.titulo)}</a>` : `<span class="badge-testley">Estructura derivada de las bases</span>`}</p>
+<div class="kpis"><div class="kpi"><span class="kpi-n">${ti.nq}</span><span class="kpi-l">preguntas del tema</span></div><div class="kpi"><span class="kpi-n">${ti.leyes.length}</span><span class="kpi-l">leyes con texto oficial</span></div><div class="kpi"><span class="kpi-n" id="tema-dom">—</span><span class="kpi-l">tu dominio</span></div></div>
+<section id="estudiar"><h2>1. Estudiar</h2>
+${t.tipo === "no_legislativo" ? `<div class="box"><b>Tema no legislativo</b> (informática, ofimática, lengua…). TestLey aún no tiene contenido verificado para este tema; estúdialo con el material oficial de la convocatoria.</div>` : ""}
+${estudio || (t.tipo !== "no_legislativo" ? `<div class="box">${badgeVS("OFFICIAL_PENDING_REVIEW")} Información pendiente de verificación oficial: este tema no remite a una norma con texto consolidado en el BOE${sinLey.length ? ` (${sinLey.map(esc).join(", ")})` : ""}. No mostramos contenido que no podamos verificar.</div>` : "")}
+${sinLey.length && estudio ? `<p class="muted small">También relacionadas con este tema (sin test todavía): ${sinLey.map(esc).join(", ")}.</p>` : ""}
+<p class="muted small">El texto de los artículos es la versión consolidada oficial del BOE. La asignación de leyes y artículos a cada tema la hace TestLey y es orientativa: comprueba siempre el programa oficial.</p></section>
+<section id="practicar"><h2>2. Practicar: test del tema</h2>
+${ti.nq ? `<p class="muted small">${ti.nq} preguntas de este tema. Cada respuesta cita el artículo del BOE que la justifica.${ti.nq < 10 ? " Este tema tiene todavía pocas preguntas: estamos ampliándolas." : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="../" data-tema="${i}" data-sim="${esc(JSON.stringify((o.examen || {}).simulacro || null))}">Cargando preguntas…</div>` : `<p class="muted">Todavía no hay preguntas verificadas para este tema.</p>`}</section>
+<p>${prev ? `<a href="${r}${rutaTema(o, i - 1)}">← Tema anterior</a>` : ""}${prev && next ? " · " : ""}${next ? `<a href="${r}${rutaTema(o, i + 1)}">Tema siguiente →</a>` : ""} · <a href="${r}oposiciones/${o.id}/#temario">Temario completo</a> · <a href="${r}panel/?c=${o.id}">Mi progreso</a></p>`;
+      },
+    });
+  });
+  // Control de calidad de la oposición (admin, sin datos personales)
+  const cal = fs.existsSync("datos/calidad.json") ? JSON.parse(fs.readFileSync("datos/calidad.json", "utf8")) : {};
+  const leyesOp = Object.keys(o.leyes), slugsOp = new Set(leyesOp);
+  const errores = leyesOp.flatMap((sl) => (cal[sl] || { errores: [] }).errores.map((e) => ({ ...e, ley: sl })));
+  const avisos = leyesOp.flatMap((sl) => (cal[sl] || { avisos: [] }).avisos.map((e) => ({ ...e, ley: sl })));
+  const revisar = LEYES.filter((L) => slugsOp.has(L.slug)).flatMap((L) => L.revisar.map((q) => ({ ley: L.corto, art: q.art, q: q.q, motivo: q.motivo })));
+  const retiradas = LEYES.filter((L) => slugsOp.has(L.slug)).flatMap((L) => L.desfasadas.map((q) => ({ ley: L.corto, art: q.art, q: q.q, motivo: q.motivo })));
+  const barra = (lbl, v) => `<div class="qbar"><span>${lbl}</span><span class="tbar-track"><span class="${v >= 90 ? "good" : v >= 60 ? "mid" : "low"}" style="width:${v}%"></span></span><b>${v} %</b></div>`;
+  const C2 = o.completitud;
+  page(`admin/oposiciones/${o.id}/quality/`, {
+    title: `Calidad · ${o.nombre}`, description: "Control de calidad del contenido.", noindex: true, wide: true,
+    body: (r) => `<p class="small"><a href="${r}admin/system/">Sistema</a> · <a href="${r}admin/growth/">Growth</a></p><h1>Calidad del contenido · ${esc(o.nombre)}</h1>
+<p class="muted">Mide la cobertura del contenido de TestLey (no es la probabilidad de aprobar).</p>
+<section class="card">${barra("Temario oficial", C2.temario)}${barra("Temas estructurados", C2.temas)}${barra("Legislación identificada", C2.legislacion)}${barra("Contenido de estudio (texto oficial)", C2.contenido)}${barra(`Preguntas (objetivo ${OBJ_TEMA}/tema)`, C2.preguntas)}${barra("Tests por tema (≥ 10 preguntas)", C2.tests)}${barra("Simulacro", C2.simulacros)}<p><b>COBERTURA DE CONTENIDO: ${C2.total} %</b></p></section>
+<div class="kpis"><div class="kpi"><span class="kpi-n">${o.qs.length}</span><span class="kpi-l">preguntas publicadas</span></div><div class="kpi"><span class="kpi-n">${revisar.length}</span><span class="kpi-l">pendientes de revisión</span></div><div class="kpi"><span class="kpi-n">${errores.length}</span><span class="kpi-l">con error</span></div><div class="kpi"><span class="kpi-n">${avisos.filter((a) => a.control === "DUPLICATE").length}</span><span class="kpi-l">casi-duplicados</span></div><div class="kpi"><span class="kpi-n">${(o.pendientes || []).length}</span><span class="kpi-l">fuentes pendientes</span></div></div>
+<section class="card"><h2>Cobertura por tema (TOPIC_COVERAGE)</h2><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Tema</th><th>Contenido</th><th>Legislación</th><th>Preguntas</th><th>Test</th><th>Ámbito</th></tr></thead><tbody>${o.temario.map((t, i) => { const c = coberturaTema(o, i); return `<tr><td><a href="${r}${rutaTema(o, i)}">${esc(t.tema)}</a> <small>${esc(t.titulo.slice(0, 70))}</small></td><td>${c.contenido ? "✓" : "✗"}</td><td>${c.legislacion === null ? "no legislativo" : c.legislacion ? "✓" : "✗"}</td><td><b class="${c.preguntas >= OBJ_TEMA ? "good" : c.preguntas >= 10 ? "" : "bad"}">${c.preguntas}</b></td><td>${c.test ? "✓" : c.test_parcial ? "parcial" : "✗"}</td><td><small>${c.ambito.replace("_", " ")}</small></td></tr>`; }).join("")}</tbody></table></div></section>
+<section class="card"><h2>Preguntas pendientes de revisión (la ley cambió)</h2>${revisar.length ? `<ul class="nov">${revisar.map((q) => `<li>${esc(q.ley)} · art. ${esc(q.art)} · ${esc(q.q.slice(0, 120))} <small class="muted">${esc(q.motivo || "")}</small></li>`).join("")}</ul><p class="muted small">Tras revisarlas: <code>python3 datos/sellar_preguntas.py --revisadas ley:art</code></p>` : "<p class='muted'>Ninguna.</p>"}</section>
+<section class="card"><h2>Preguntas retiradas (OUTDATED / DEPRECATED)</h2>${retiradas.length ? `<ul class="nov">${retiradas.map((q) => `<li>${esc(q.ley)} · art. ${esc(q.art)} · ${esc(q.q.slice(0, 120))} <small class="muted">${esc(q.motivo || "")}</small></li>`).join("")}</ul>` : "<p class='muted'>Ninguna.</p>"}</section>
+<section class="card"><h2>Errores y duplicados (datos/calidad_preguntas.py)</h2>${errores.length || avisos.length ? `<ul class="nov">${[...errores, ...avisos].map((e) => `<li><span class="chip">${esc(e.control)}</span> ${esc(e.ley)} #${e.i} · ${esc(e.mensaje)} · <small>${esc(e.q)}</small></li>`).join("")}</ul>` : "<p class='muted'>Sin errores ni duplicados.</p>"}</section>
+<section class="card"><h2>Fuentes pendientes</h2>${(o.pendientes || []).length ? `<ul class="nov">${o.pendientes.map((x) => `<li><b>${esc(x.campo)}</b>: ${esc(x.motivo)}</li>`).join("")}</ul>` : "<p class='muted'>Ninguna.</p>"}</section>`,
   });
 }
 

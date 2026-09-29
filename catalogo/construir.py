@@ -49,6 +49,9 @@ for nid, n in NORMAS.items():
 normas.sort(key=lambda x: (x["estado_testley"] != "pendiente", -x["prioridad"]))
 
 json.dump(opos, open(os.path.join(D, "oposiciones.json"), "w"), ensure_ascii=False, indent=1)
+# Ámbito de cada tema dentro de las leyes que comparte con otros temas (títulos/capítulos oficiales): catalogo/temas_ambito.json
+import ambito_temas
+ambito_temas.construir(opos)
 json.dump(normas, open(os.path.join(D, "normas.json"), "w"), ensure_ascii=False, indent=1)
 for o in opos: print(o["id"], o["convocatoria"]["plazas"], "plazas,", o["cobertura"])
 print("\nCola de normas (prioridad):")

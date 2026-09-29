@@ -4,7 +4,7 @@
   var el = document.getElementById("bienvenida");
   if (!el || !window.TL) return;
   var aj = TL.ajustes(), paso = 0, CAT = [];
-  var r = { oposicion: aj.oposicion || (location.search.match(/[?&]op=([a-z0-9-]+)/) || [])[1] || "", fechaExamen: aj.fechaExamen || "", horasSemana: aj.horasSemana || 6, nivel: aj.nivel || "empiezo" };
+  var r = { oposicion: aj.oposicion || (location.search.match(/[?&]op=([a-z0-9-]+)/) || [])[1] || "", fechaExamen: aj.fechaExamen || "", horasSemana: aj.horasSemana || 6, dias: aj.dias || [1, 2, 3, 4, 5], nivel: aj.nivel || "empiezo" };
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   var PASOS = [
     function () {
@@ -14,7 +14,11 @@
         }).join("") + '</div><p class="muted small">¿No está la tuya? <a href="' + TL.root + 'convocatorias/">Búscala entre las convocatorias oficiales</a> y síguela; mientras tanto puedes preparar las leyes comunes.</p>';
     },
     function () { return '<h1>¿Cuándo quieres presentarte?</h1><label>Fecha aproximada del examen<input type="date" name="fecha" value="' + esc(r.fechaExamen) + '"></label><p class="muted small">Si aún no hay fecha oficial, pon la que te marques como objetivo. Puedes dejarla vacía.</p>'; },
-    function () { return '<h1>¿Cuánto tiempo puedes estudiar?</h1><label>Horas a la semana<input type="number" name="horas" min="1" max="60" value="' + esc(r.horasSemana) + '"></label><p class="muted small">Con 6 h/semana son unos 50 minutos al día.</p>'; },
+    function () {
+      return '<h1>¿Cuánto tiempo puedes estudiar?</h1><label>Horas a la semana<input type="number" name="horas" min="1" max="60" value="' + esc(r.horasSemana) + '"></label>' +
+        '<fieldset class="dias"><legend>¿Qué días?</legend>' + [[1, "Lunes"], [2, "Martes"], [3, "Miércoles"], [4, "Jueves"], [5, "Viernes"], [6, "Sábado"], [0, "Domingo"]].map(function (d) { return '<label class="check"><input type="checkbox" name="dia" value="' + d[0] + '"' + (r.dias.indexOf(d[0]) >= 0 ? " checked" : "") + "> " + d[1] + "</label>"; }).join("") + "</fieldset>" +
+        '<p class="muted small">Repartiremos tus horas entre esos días; el resto serán de descanso.</p>';
+    },
     function () {
       return "<h1>¿Cuál es tu nivel?</h1>" + [["empiezo", "Empiezo de cero"], ["medio", "Ya he estudiado algo"], ["avanzado", "Estoy en el repaso final"]].map(function (x) {
         return '<label class="onb-op"><input type="radio" name="nivel" value="' + x[0] + '"' + (r.nivel === x[0] ? " checked" : "") + "><span><b>" + x[1] + "</b></span></label>";
@@ -25,7 +29,11 @@
     var f = el.querySelector("form");
     if (paso === 0) { var c = f.querySelector("input[name=op]:checked"); if (!c) return "Elige una oposición."; r.oposicion = c.value; }
     if (paso === 1) r.fechaExamen = f.fecha.value;
-    if (paso === 2) r.horasSemana = Math.max(1, Math.min(60, +f.horas.value || 6));
+    if (paso === 2) {
+      r.horasSemana = Math.max(1, Math.min(60, +f.horas.value || 6));
+      r.dias = [].slice.call(f.querySelectorAll("input[name=dia]:checked")).map(function (x) { return +x.value; });
+      if (!r.dias.length) return "Elige al menos un día.";
+    }
     if (paso === 3) { var n = f.querySelector("input[name=nivel]:checked"); if (n) r.nivel = n.value; }
     return "";
   }
@@ -37,7 +45,7 @@
       e.preventDefault();
       var err = leer(); if (err) return pintar(err);
       if (paso < PASOS.length - 1) { paso++; return pintar(); }
-      TL.guardarAjustes({ oposicion: r.oposicion, fechaExamen: r.fechaExamen, horasSemana: r.horasSemana, nivel: r.nivel, onboarding: Date.now() });
+      TL.guardarAjustes({ oposicion: r.oposicion, fechaExamen: r.fechaExamen, horasSemana: r.horasSemana, dias: r.dias, nivel: r.nivel, onboarding: Date.now() });
       if (!TL.sigo(r.oposicion)) TL.alternarSeguir(r.oposicion);
       if (window.TLEventos) TLEventos.emitir("ONBOARDING_COMPLETED", { oposicion: r.oposicion, nivel: r.nivel, horas: r.horasSemana, con_fecha: !!r.fechaExamen }, { unaVez: "onboarding" });
       location.href = TL.root + "oposiciones/" + r.oposicion + "/#test=repaso";

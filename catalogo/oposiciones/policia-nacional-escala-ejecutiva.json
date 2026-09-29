@@ -110,7 +110,45 @@
    "penalizacion": 0.5,
    "origen": "oficial",
    "nota": "Como el cuestionario oficial: 100 preguntas, 3 opciones, 50 minutos y cada error resta medio acierto."
-  }
+  },
+  "estructura": [
+   {
+    "parte": "Primera prueba · aptitud física",
+    "en_simulacro": false,
+    "motivo": "Prueba física.",
+    "cita": "6.1.1 Primera prueba (aptitud física).",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Segunda prueba · cuestionario de conocimientos",
+    "preguntas": 100,
+    "minutos": 50,
+    "en_simulacro": true,
+    "cita": "Consistirá en la contestación por escrito en cincuenta minutos a un cuestionario de cien preguntas, con un enunciado y tres alternativas de respuestas de las que solo una es verdadera",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Segunda prueba · supuestos prácticos",
+    "en_simulacro": false,
+    "motivo": "Ejercicio de desarrollo ante el tribunal, no tipo test.",
+    "cita": "6.1.2.b) Resolución de uno o varios supuestos prácticos.",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Tercera prueba · reconocimiento médico",
+    "en_simulacro": false,
+    "motivo": "Prueba médica.",
+    "cita": "6.1.3.a) Reconocimiento médico.",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Tercera prueba · entrevista profesional y personal",
+    "en_simulacro": false,
+    "motivo": "Entrevista personal.",
+    "cita": "6.1.3.b) Entrevista profesional y personal.",
+    "fuente": "convocatoria"
+   }
+  ]
  },
  "temario": {
   "tipo": "oficial_publicado",

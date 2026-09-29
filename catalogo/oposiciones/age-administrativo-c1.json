@@ -88,7 +88,32 @@
    "penalizacion": 0.3333333333333333,
    "origen": "adaptado",
    "nota": "Simula las 40 preguntas de los bloques I a V. El examen real incluye 30 preguntas de ofimática y un supuesto práctico; el tiempo es proporcional y lo calcula TestLey."
-  }
+  },
+  "estructura": [
+   {
+    "parte": "Primera parte · bloques I a V",
+    "preguntas": 40,
+    "en_simulacro": true,
+    "cita": "De éstas, 40 versarán sobre las materias previstas en los bloques I, II, III, IV y V del programa recogido en el punto 6 del presente anexo",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Primera parte · bloque VI (ofimática)",
+    "preguntas": 30,
+    "en_simulacro": false,
+    "motivo": "Contenido de ofimática pendiente: no hay fuente oficial consolidada.",
+    "cita": "y 30 serán del bloque VI",
+    "fuente": "convocatoria"
+   },
+   {
+    "parte": "Segunda parte · supuesto práctico (bloques II a V)",
+    "preguntas": 20,
+    "en_simulacro": false,
+    "motivo": "TestLey todavía no tiene supuestos prácticos verificados.",
+    "cita": "Cada supuesto práctico se desglosará en 20 preguntas",
+    "fuente": "convocatoria"
+   }
+  ]
  },
  "temario": {
   "fuente": "convocatoria",

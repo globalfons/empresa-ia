@@ -7,7 +7,7 @@ arts = {a["n"]: norm(vigente(a["texto"])) for a in json.load(open(sys.argv[1]))}
 qs = json.load(open(sys.argv[2]))
 bad = desf = 0
 for i, q in enumerate(qs):
-    if q.get("verification_status") == "DEPRECATED":  # desfasada por un cambio de la ley: no se publica ni cuenta como error
+    if q.get("verification_status") in ("DEPRECATED", "OUTDATED"):  # desfasada por un cambio de la ley: no se publica ni cuenta como error
         desf += 1; continue
     errs = []
     if q["art"] not in arts: errs.append("artículo inexistente")
