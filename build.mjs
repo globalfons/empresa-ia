@@ -52,7 +52,7 @@ function page(route, { title, description, body, schema, noindex, wide, scripts 
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%231d4ed8'/><path d='M30 52l14 14 26-30' stroke='white' stroke-width='10' fill='none'/></svg>">
 <link rel="stylesheet" href="${root}assets/style.css">
-<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "" })};</script>
+<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", leyGratis: LEY.slug, lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl })};</script>
 <script src="${root}assets/store.js"></script>
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : ""}
 </head>
@@ -204,7 +204,7 @@ page("cuenta/", {
 for (const L of PUBLICADAS) {
 const bloques = [...new Set(L.arts.map((a) => a.bloque))];
 page(`${L.slug}/`, {
-  title: `Test ${L.corto} online gratis (${L.qs.length} preguntas con solución)`,
+  title: `Test ${L.corto} online${L.slug === LEY.slug ? " gratis" : ""} (${L.qs.length} preguntas con solución)`,
   description: `Test de ${L.nombre} con ${L.qs.length} preguntas para oposiciones y la cita literal del BOE en cada respuesta. Texto consolidado artículo por artículo.`,
   scripts: ["test.js"],
   schema: { "@context": "https://schema.org", "@type": "Quiz", name: `Test ${esc(L.corto)}`, about: L.nombre, inLanguage: "es", educationalLevel: "Oposiciones", url: C.url + L.slug + "/" },
@@ -307,17 +307,19 @@ ${o.qs.length ? `<h2>Test de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))}
 page("pase/", {
   title: "Pase Opositor: todas las leyes, simulacros y repaso inteligente",
   description: "Pase Opositor de TestLey: acceso a todas las leyes del temario común, simulacros cronometrados y repaso de fallos. 3 días de prueba gratis y después 15,99 € al mes.",
+  scripts: ["pase.js"],
   body: (r) => `
 <nav class="crumbs"><a href="${r}">Inicio</a> › <span>Pase Opositor</span></nav>
 <h1>Pase Opositor</h1>
-<p class="lead">El test de la Ley 39/2015 es y seguirá siendo gratis. El Pase Opositor añade el resto del temario común y las herramientas para llegar al examen con todo repasado.</p>
+<p class="lead">El test completo de la Ley 39/2015 y los tests de cada artículo son y seguirán siendo gratis. El Pase Opositor desbloquea todas las preguntas del resto del temario y las herramientas para llegar al examen con todo repasado.</p>
 <div class="box">
   <p class="price">15,99 € <span class="muted" style="font-size:1rem;font-weight:400">/ mes · 3 días de prueba gratis</span></p>
   <ul>
-    <li>Tests de <strong>${PUBLICADAS.map((L) => esc(L.corto)).join(", ")}</strong> y de las nuevas leyes del temario a medida que se publican.</li>
-    <li><strong>Simulacros</strong> con cronómetro y el formato de tu examen.</li>
-    <li><strong>Repaso espaciado</strong>: tus fallos vuelven justo cuando estás a punto de olvidarlos.</li>
-    <li>Estadísticas por título y por artículo.</li>
+    <li>Todas las preguntas de <strong>${PUBLICADAS.map((L) => esc(L.corto)).join(", ")}</strong> y de las nuevas leyes del temario a medida que se publican.</li>
+    <li>El test combinado de cada oposición con su temario oficial.</li>
+    <li><strong>Simulacros</strong> de 30 preguntas en 30 minutos con penalización por error, como en el examen.</li>
+    <li><strong>Repaso inteligente</strong>: primero tus fallos y lo que aún no has visto.</li>
+    <li>Práctica por bloques del temario y estadísticas en tu panel.</li>
   </ul>
   ${
     C.checkoutUrl
@@ -325,7 +327,10 @@ page("pase/", {
       : `<p><strong>Abrimos las suscripciones muy pronto.</strong> Mientras tanto, practica gratis con la <a href="${r}${LEY.slug}/">Ley 39/2015</a>.</p>`
   }
 </div>
-<p class="muted">La suscripción se renueva cada mes hasta que la canceles desde el enlace de tu email de compra. Las funciones marcadas se publican de forma progresiva; lo que ya está disponible se indica en cada ley.</p>`,
+<h2 id="como">Cómo se activa</h2>
+<ol><li>Empieza la prueba en Lemon Squeezy.</li><li>Recibirás por email una <strong>clave de licencia</strong>.</li><li>Pégala abajo. Puedes usar la misma clave en el móvil y en el ordenador.</li></ol>
+<div id="activar"></div>
+<p class="muted">La suscripción se renueva cada mes hasta que la canceles desde el enlace de tu email de compra. Si la cancelas, el Pase deja de estar activo al terminar el periodo pagado.</p>`,
 });
 
 // ---------- Legales ----------
@@ -333,7 +338,7 @@ for (const f of fs.readdirSync("web/paginas")) {
   const raw = fs.readFileSync(path.join("web/paginas", f), "utf8");
   const [, meta, body] = raw.match(/^<!--meta\s*([\s\S]*?)-->\s*([\s\S]*)$/);
   const m = JSON.parse(meta);
-  page(m.route, { title: m.title, description: m.description, noindex: m.noindex, body: () => body });
+  page(m.route, { title: m.title, description: m.description, noindex: m.noindex, scripts: m.scripts, body: () => body });
 }
 
 // ---------- Escritura ----------

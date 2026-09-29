@@ -18,10 +18,40 @@
     return qs.slice(0, n);
   }
 
+  // Sin Pase: la ley gratuita y los tests por artículo están completos; en el resto, 10 preguntas de muestra repartidas por la ley.
+  var MUESTRA = 10;
+  function bloqueado() { return (window.TL_CONFIG || {}).pase && !TL.esGratis(LEY) && !TL.pase(); }
+  function muestra() {
+    var paso = data.qs.length / MUESTRA, out = [];
+    for (var i = 0; i < Math.min(MUESTRA, data.qs.length); i++) out.push(data.qs[Math.floor(i * paso)]);
+    return out;
+  }
+
+  function menuMuestra() {
+    var m = muestra();
+    var fallos = m.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; });
+    var candado = function (t, d) { return '<a class="mode locked" href="' + TL.root + 'pase/"><strong>🔒 ' + t + "</strong><span>" + d + "</span></a>"; };
+    el.innerHTML =
+      '<div class="mode-grid">' +
+      '<button class="mode primary" data-m="muestra"><strong>Test de muestra gratis</strong><span>' + m.length + " preguntas con la cita del BOE</span></button>" +
+      (fallos.length ? '<button class="mode" data-m="fallos"><strong>Mis fallos</strong><span>' + fallos.length + " preguntas pendientes</span></button>" : "") +
+      candado("Repaso inteligente", "Tus fallos vuelven cuando estás a punto de olvidarlos") +
+      candado("Simulacro", "30 preguntas, 30 minutos, corrección como en el examen") +
+      candado("Todas las preguntas", data.qs.length + " preguntas y práctica por bloques") +
+      "</div>" +
+      '<div class="box upsell"><p><strong>Desbloquea las ' + data.qs.length + " preguntas, los simulacros y el repaso inteligente</strong> de todas las leyes con el Pase Opositor. 3 días de prueba gratis.</p>" +
+      '<p><a class="cta" href="' + TL.root + 'pase/">Ver el Pase Opositor</a> <a class="small" href="' + TL.root + 'pase/#activar">Ya tengo una clave</a></p></div>' +
+      '<p class="muted small">Los tests de cada artículo y el test completo de la Ley 39/2015 son gratis.</p>';
+    el.querySelectorAll("[data-m]").forEach(function (b) {
+      b.onclick = function () { start(b.getAttribute("data-m") === "fallos" ? fallos : shuffle(m), b.getAttribute("data-m")); };
+    });
+  }
+
   function menu() {
     clearInterval(timer);
     var soloArt = el.getAttribute("data-art");
     if (soloArt) { start(data.qs.filter(function (q) { return q.art === soloArt; }), "art"); return; }
+    if (bloqueado()) { menuMuestra(); return; }
     var s = TL.stats(LEY, data);
     var bloques = [];
     data.qs.forEach(function (q) { var b = data.arts[q.art].b; if (bloques.indexOf(b) < 0) bloques.push(b); });
@@ -119,7 +149,7 @@
     TL.registrarSesion(LEY, n, ok, ko, blank);
     var nota = n ? Math.max(0, ((ok - ko / 3) / n) * 10) : 0;
     var s = TL.stats(LEY, data);
-    var fallos = s.cuenta.fallada;
+    var fallos = bloqueado() ? muestra().filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }).length : s.cuenta.fallada;
     el.innerHTML =
       '<div class="result-card"><span class="kicker">' + (modo === "simulacro" ? "Resultado del simulacro" : "Resultado") + "</span>" +
       '<p class="score">' + fmt(nota) + "<small>/10</small></p>" +
@@ -131,7 +161,8 @@
       "</div>";
     el.querySelector("[data-again]").onclick = function () {
       el.removeAttribute("data-art");
-      if (fallos) start(data.qs.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }), "fallos");
+      var pool = bloqueado() ? muestra() : data.qs;
+      if (fallos) start(pool.filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }), "fallos");
       else menu();
     };
   }

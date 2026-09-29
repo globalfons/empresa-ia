@@ -249,6 +249,43 @@
     return api("/rest/v1/rpc/ranking", { method: "POST", anon: !sesion(), body: { p_ley: l } });
   }
 
+  // ---------------- Pase Opositor (clave de licencia de Lemon Squeezy) ----------------
+  // La clave se valida contra la API pública de licencias; no hace falta ninguna clave secreta.
+  // Se revalida cada 24 h para que una suscripción cancelada deje de dar acceso.
+  var LS_PASE = "testley:pase";
+  var LEY_GRATIS = CFG.leyGratis || "ley-39-2015";
+  function validarClave(clave) {
+    return fetch("https://api.lemonsqueezy.com/v1/licenses/validate", {
+      method: "POST", headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" },
+      body: "license_key=" + encodeURIComponent(clave),
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      var st = d.license_key && d.license_key.status, m = d.meta || {};
+      if (!d.valid || st === "expired" || st === "disabled") return { ok: false, motivo: st === "expired" || st === "disabled" ? "caducada" : "invalida" };
+      if (CFG.lsStoreId && String(m.store_id) !== String(CFG.lsStoreId)) return { ok: false, motivo: "invalida" };
+      if (CFG.lsProductId && String(m.product_id) !== String(CFG.lsProductId)) return { ok: false, motivo: "invalida" };
+      return { ok: true, email: m.customer_email || "" };
+    });
+  }
+  function pase() { var p = lsGet(LS_PASE, null); return p && p.ok ? p : null; }
+  function activarPase(clave) {
+    clave = String(clave || "").trim();
+    if (!clave) return Promise.resolve({ ok: false, motivo: "invalida" });
+    return validarClave(clave).then(function (r) {
+      if (r.ok) lsSet(LS_PASE, { clave: clave, ok: true, email: r.email, t: Date.now() });
+      return r;
+    });
+  }
+  function quitarPase() { try { localStorage.removeItem(LS_PASE); } catch (e) {} }
+  function revalidarPase() {
+    var p = pase();
+    if (!p || Date.now() - p.t < 864e5) return;
+    validarClave(p.clave).then(function (r) {
+      if (r.ok) lsSet(LS_PASE, { clave: p.clave, ok: true, email: r.email, t: Date.now() });
+      else if (r.motivo === "caducada" || r.motivo === "invalida") quitarPase();
+    }).catch(function () {}); // Sin conexión: se mantiene el acceso y se reintenta más tarde.
+  }
+  revalidarPase();
+
   // ---------------- Cabecera: estado de la cuenta ----------------
   function pintarCabecera() {
     var el = document.getElementById("cuenta-nav");
@@ -273,6 +310,8 @@
     setDatos: function (l, d) { DATOS[l] = d; },
     cargar: function (l) { return fetch((CFG.root || "./") + "datos/" + l + ".json").then(function (r) { return r.json(); }).then(function (d) { DATOS[l] = d; return d; }); },
     pintarCabecera: pintarCabecera,
+    pase: pase, activarPase: activarPase, quitarPase: quitarPase,
+    esGratis: function (l) { return l === LEY_GRATIS; },
     miOposicion: function () { return lsGet("testley:op", null); },
     setMiOposicion: function (id) { lsSet("testley:op", id); },
     _prog: function () { return prog; },

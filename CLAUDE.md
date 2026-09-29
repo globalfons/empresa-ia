@@ -22,3 +22,4 @@ El propietario (particular, sin empresa) solo gestiona cuentas: GitHub Pages, Le
 - Nunca inventar preguntas sin cita verificable. Preguntas de dificultad real de examen, con distractores plausibles.
 - No prometer en la web funciones que no existan. Las funciones de pago se marcan como progresivas hasta que existan.
 - Antes de hacer push: validar, `node build.mjs`, crawler de enlaces sin roturas, test jugable en 375 px sin errores de JS.
+- Pase Opositor: suscripción de Lemon Squeezy (`checkoutUrl` en `config.json`). Sin Pase, la Ley 39/2015 y los tests por artículo son completos y el resto de leyes y oposiciones solo ofrecen 10 preguntas de muestra (`web/assets/test.js`). La clave de licencia se valida en el navegador contra `api.lemonsqueezy.com/v1/licenses/validate` (`store.js`, `pase.js`) y se revalida cada 24 h; `lsStoreId`/`lsProductId` en `config.json` restringen las claves a nuestra tienda.
