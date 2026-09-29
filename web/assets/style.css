@@ -225,6 +225,7 @@ label.check input { margin-top: 5px; }
 
 /* Oposiciones */
 .op-card .covbar { margin-top: 10px; }
+.op-card, .conv-card { min-width: 0; overflow-wrap: anywhere; }
 .covbar { display: block; height: 8px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
 .covbar i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
 .covbar.big { height: 12px; margin: 6px 0 10px; }
