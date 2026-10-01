@@ -15,10 +15,18 @@ def _publicada(slug):
     return os.path.exists(f) and len(json.load(open(f))) > 0
 PUBLICADAS = {nid: n["slug"] for nid, n in NORMAS.items() if _publicada(n["slug"])}
 
+# Fuentes oficiales no versionadas (guía de Mossos): se descargan de su origen oficial si no están en datos/cache/
+import sys as _sys
+_sys.path.insert(0, _DATOS)
+from validar_lib import ruta_articulos  # noqa: E402
+for _n in NORMAS.values():
+    if _n.get("tipo") == "guia_oficial":
+        ruta_articulos(_n["slug"])
+
 opos = []
 for p in sorted(glob.glob(os.path.join(D, "oposiciones", "*.json"))):
     o = json.load(open(p))
-    fu = o["fuentes"][o["temario"]["fuente"]]
+    fu = o["fuentes"].get("convocatoria") or o["fuentes"][o["temario"]["fuente"]]  # la convocatoria; si no hay, la fuente del temario
     plazas = (o["oficial"].get("plazas") or {}).get("valor")
     temas = [dict(t, asignacion={n: "revisada" for n in t["normas"]}) for t in o["temario"]["temas"]]
     o["temario_tipo"] = o["temario"]["tipo"]

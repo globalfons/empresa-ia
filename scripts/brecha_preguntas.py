@@ -13,8 +13,10 @@ Cálculo por ley:
     Los temas de la ley se agrupan en componentes conexas por solapamiento de ámbito; en cada componente basta con el máximo
     de los faltantes (no la suma) y las componentes disjuntas se suman. Es una cota inferior realista.
 """
-import json, os
+import json, os, sys
 from collections import defaultdict
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "datos"))
+from validar_lib import ruta_articulos  # noqa: E402
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OBJETIVO = 30
@@ -66,7 +68,8 @@ def calcular(objetivo_de=None):
 
     def articulos(sl):
         if sl not in arts:
-            arts[sl] = [str(a["n"]) for a in J("datos", f"{sl}-articulos.json")] if existe("datos", f"{sl}-articulos.json") else None
+            ruta = ruta_articulos(sl)  # BOE: datos/<slug>-articulos.json; guía oficial de Mossos: datos/cache/ (fuente oficial)
+            arts[sl] = [str(a["n"]) for a in json.load(open(ruta, encoding="utf-8"))] if os.path.exists(ruta) else None
         return arts[sl]
 
     temas_def, sin_fuente, temas_ley = [], [], defaultdict(list)

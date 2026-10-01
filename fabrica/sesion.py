@@ -29,7 +29,7 @@ DIR = os.path.join(R, "fabrica", "sesion")
 ABIERTO = os.path.join(DIR, "abierto.json")
 ARCHIVO = os.path.join(R, "fabrica", "estado", "archivo")
 MODELOS = {"generador": "claude-opus-5-5 (sesión de Claude Code)", "juez": "claude-haiku-4-5 (revisor en la sesión)"}
-REDACTOR = {"version": "redactor-sesion-v1", "fichero": os.path.join(R, "fabrica", "prompts", "redactor-sesion-v1.txt")}
+REDACTOR = {"version": "redactor-sesion-v2", "fichero": os.path.join(R, "fabrica", "prompts", "redactor-sesion-v2.txt")}
 VEREDICTO_CAMPOS = {"r", "respaldada", "unica", "clara", "duplicada_de", "motivo"}
 
 
@@ -97,7 +97,7 @@ def plan(a, cfg):
         pedidas = MO.pedir_tipos(ley, s["n"], s["k"], ct, cd, cfg, dist)
         rel = ley.relacionados(s["n"]) if any(p["tipo"] == "relacion_articulos" for p in pedidas) else []
         art = ley.arts[s["n"]]
-        huecos.append({"s": k, "ley": s["slug"], "norma": f"{ley.nombre} ({ley.id})", "version": ley.version, "art": s["n"],
+        huecos.append({"s": k, "ley": s["slug"], "norma": f"{ley.nombre} ({ley.id})", "version": ley.version, "art": s["n"], "idioma": ley.idioma,
                        "ubicacion": " · ".join(x for x in (art.get("bloque"), art.get("capitulo")) if x),
                        "tema": {"oposicion": s["tema"]["oposicion"], "indice": s["tema"]["indice"], "tema": s["tema"]["tema"], "titulo": s["tema"]["titulo"]},
                        "tema_arts": s["tema"]["arts"].get(s["slug"], []), "k": s["k"],

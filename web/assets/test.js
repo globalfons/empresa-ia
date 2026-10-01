@@ -4,6 +4,7 @@
   if (!el || !window.TL) return;
   var LEY = el.getAttribute("data-ley");
   var TEMA = el.hasAttribute("data-tema"); // página de un tema: el banco se limita a sus preguntas
+  var EXAMEN = el.hasAttribute("data-examen"); // examen oficial anterior (OFFICIAL_EXAM): orden y formato oficiales, acceso libre
   var base = el.getAttribute("data-base") || "./";
   var data, queue, idx, ok, ko, blank, modo, timer, fin, t0, ultimaLista;
   // Configuración del simulacro: la de la oposición (catalogo/oposiciones/<id>.json) o una genérica para las leyes.
@@ -17,6 +18,21 @@
   function oficial(q) {
     var e = q.procedencia === "OFFICIAL_EXAM" && q.examen_oficial;
     return e ? '<p class="small"><span class="badge-oficial">Pregunta de examen oficial</span> ' + esc(e.organismo + " · " + e.convocatoria + " · " + e.fecha_examen) + ' · <a href="' + esc(e.url_oficial) + '" rel="noopener">' + esc(e.documento) + "</a></p>" : "";
+  }
+  // Fuente que justifica la respuesta: artículo del BOE (por defecto), apartado de la guía oficial (fuente sin página propia,
+  // data.privadas[ley] = URL del PDF oficial) o plantilla oficial de un examen anterior (procedencia OFFICIAL_EXAM)
+  function privada(q) { return (data.privadas || {})[q.ley || LEY]; }
+  function fuenteHtml(q) {
+    if (q.procedencia === "OFFICIAL_EXAM")
+      return '<blockquote><span class="src">Resposta de la plantilla oficial (' + esc(q.lletra_oficial || "ABCD"[q.a]) + ")" + (q.cita_guia ? " · Guia d'estudi, apartat " + esc(q.apartat_guia) : "") + "</span>" + (q.cita_guia ? "«" + esc(q.cita_guia) + "»" : "") + "</blockquote>" +
+        (q.vigencia_guia === "CONTRADIU_GUIA" ? '<p class="box small">Atenció: la guia d\'estudi vigent ja no coincideix amb aquesta resposta oficial. ' + esc(q.nota_vigencia || "") + "</p>" : q.vigencia_guia === "ACTUALITAT" ? '<p class="muted small">Pregunta d\'actualitat de la data de l\'examen.</p>' : "");
+    if (privada(q)) return '<blockquote><span class="src">Apartat ' + esc(q.artn || q.art) + " · " + esc(nombreLey(q)) + verif(q) + "</span>«" + esc(q.cita) + "»</blockquote>";
+    return '<blockquote><span class="src">Artículo ' + (q.artn || q.art) + " · " + esc(nombreLey(q)) + " (BOE)" + verif(q) + "</span>«" + esc(q.cita) + "»</blockquote>";
+  }
+  function enlaceFuente(q) {
+    if (q.procedencia === "OFFICIAL_EXAM") return '<a href="' + esc(q.examen_oficial.url_oficial) + '" rel="noopener">Veure l\'examen oficial (PDF)</a>';
+    if (privada(q)) return '<a href="' + esc(privada(q)) + '" rel="noopener">Guia d\'estudi oficial (PDF)</a>';
+    return '<a href="' + TL.root + (q.ley || LEY) + "/articulo-" + (q.artn || q.art) + '/">Leer el artículo ' + (q.artn || q.art) + " completo</a>";
   }
   function nombreLey(q) { var l = data.leyes || {}; return l[q.ley || LEY] || l[Object.keys(l)[0]] || ""; }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
@@ -55,7 +71,7 @@
       '<button class="mode primary" data-m="muestra"><strong>Test de muestra gratis</strong><span>' + m.length + " preguntas con la cita del BOE</span></button>" +
       (fallos.length ? '<button class="mode" data-m="fallos"><strong>Mis fallos</strong><span>' + fallos.length + " preguntas pendientes</span></button>" : "") +
       candado("Repaso inteligente", "Tus fallos vuelven cuando estás a punto de olvidarlos") +
-      candado("Simulacro", "30 preguntas, 30 minutos, corrección como en el examen") +
+      candado("Simulacro", SIM.preguntas + " preguntas, " + SIM.minutos + " minutos, corrección como en el examen") +
       candado("Todas las preguntas", data.qs.length + " preguntas y práctica por bloques") +
       "</div>" +
       '<div class="box upsell"><p><strong>Desbloquea las ' + data.qs.length + " preguntas, los simulacros y el repaso inteligente</strong> de todas las leyes con el Pase Opositor. 3 días de prueba gratis.</p>" +
@@ -69,8 +85,19 @@
     if (h && !lanzado) { lanzado = true; start(h === "fallos" && fallos.length ? fallos : shuffle(m), h === "fallos" && fallos.length ? "fallos" : "muestra"); el.scrollIntoView({ block: "start" }); }
   }
 
+  // Examen oficial anterior: se hace tal cual se publicó (mismo orden), con el tiempo oficial si el documento lo indica
+  function menuExamen() {
+    var n = data.qs.length;
+    el.innerHTML = '<div class="mode-grid">' +
+      '<button class="mode primary" data-m="oficial"><strong>Fer l\'examen oficial</strong><span>' + n + " preguntes en l'ordre oficial · " + (SIM.minutos ? SIM.minutos + " minuts" : "sense límit de temps (el document no l'indica)") + " · cada error resta " + fraccion(SIM.penalizacion) + "</span></button>" +
+      '<button class="mode" data-m="estudi"><strong>Mode estudi</strong><span>Correcció i font oficial a cada pregunta</span></button></div>' +
+      '<p class="muted small">Preguntes i respostes de la plantilla oficial publicada per la Generalitat.</p>';
+    el.querySelectorAll("[data-m]").forEach(function (b) { b.onclick = function () { start(data.qs.slice(), b.getAttribute("data-m")); }; });
+  }
+
   function menu() {
     clearInterval(timer);
+    if (EXAMEN) { menuExamen(); return; }
     var soloArt = el.getAttribute("data-art");
     if (soloArt) { start(data.qs.filter(function (q) { return q.art === soloArt; }), "art"); return; }
     if (bloqueado()) { menuMuestra(); return; }
@@ -175,8 +202,8 @@
     return pool;
   }
 
-  function esExamen() { return modo === "simulacro" || modo === "examen"; }
-  function minutos() { return modo === "simulacro" ? SIM.minutos : Math.max(1, Math.ceil((queue.length * SIM.minutos) / SIM.preguntas)); }
+  function esExamen() { return modo === "simulacro" || modo === "examen" || modo === "oficial"; }
+  function minutos() { return modo === "oficial" ? SIM.minutos || 0 : modo === "simulacro" ? SIM.minutos : Math.max(1, Math.ceil((queue.length * SIM.minutos) / SIM.preguntas)); }
   var respuestas; // [{q, elegida}] para el análisis de errores
   // Simulacro: reparto por temas y reserva según la configuración de la oposición (TL.seleccionSimulacro). Las de reserva no puntúan.
   var reserva = {};
@@ -189,7 +216,7 @@
     if (!queue.length) { menu(); return; }
     if (window.TLEventos) TLEventos.emitir(esExamen() ? "SIMULATION_STARTED" : "TEST_STARTED", { contexto: LEY, modo: m, preguntas: queue.length });
     clearInterval(timer);
-    if (esExamen()) {
+    if (esExamen() && minutos()) {
       fin = Date.now() + minutos() * 60 * 1000;
       timer = setInterval(function () {
         var t = el.querySelector(".timer");
@@ -204,11 +231,11 @@
   function show() {
     var q = queue[idx], fk = (q.ley || LEY) + ":" + q.id, fav = TL.esFavorita(fk);
     // En exámenes con menos opciones que la pregunta (p. ej. 3 en Policía Nacional) se quitan distractores al azar.
-    var order = esExamen() && SIM.opciones < 4 ? shuffle([q.a].concat(shuffle([0, 1, 2, 3].filter(function (i) { return i !== q.a; })).slice(0, SIM.opciones - 1))) : shuffle([0, 1, 2, 3]);
+    var order = EXAMEN ? [0, 1, 2, 3] : esExamen() && SIM.opciones < 4 ? shuffle([q.a].concat(shuffle([0, 1, 2, 3].filter(function (i) { return i !== q.a; })).slice(0, SIM.opciones - 1))) : shuffle([0, 1, 2, 3]);
     var pct = Math.round((idx / queue.length) * 100);
     el.innerHTML =
       '<div class="meta"><span>' + (reserva[q.id] ? "Pregunta de reserva (no puntúa)" : "Pregunta " + (idx + 1) + " de " + puntuables(queue.length)) + "</span>" +
-      (esExamen() ? '<span class="timer">' + minutos() + ':00</span>' : "<span>" + nombreLey(q) + " · Art. " + (q.artn || q.art) + "</span>") +
+      (esExamen() ? '<span class="timer">' + (minutos() ? minutos() + ":00" : "sense límit") + "</span>" : "<span>" + (q.procedencia === "OFFICIAL_EXAM" ? esc(q.examen_oficial.convocatoria) + " · pregunta " + q.n : esc(nombreLey(q)) + (privada(q) ? " · Apartat " : " · Art. ") + (q.artn || q.art)) + "</span>") +
       '<button class="fav' + (fav ? " on" : "") + '" data-fav title="Guardar en favoritas" aria-label="Guardar en favoritas" aria-pressed="' + fav + '">' + (fav ? "★" : "☆") + "</button></div>" +
       '<div class="bar"><span style="transform:scaleX(' + pct / 100 + ')"></span></div>' +
       '<p class="q">' + esc(q.q) + "</p>" +
@@ -236,10 +263,10 @@
     if (esExamen()) { setTimeout(next, 300); return; }
     el.querySelector(".fb").innerHTML =
       '<p class="verdict ' + (right ? "good" : "bad") + '">' + (right ? "✔ Correcto" : "✘ Incorrecto") + "</p>" +
-      '<blockquote><span class="src">Artículo ' + (q.artn || q.art) + " · " + nombreLey(q) + " (BOE)" + verif(q) + "</span>«" + esc(q.cita) + "»</blockquote>" +
+      fuenteHtml(q) +
       oficial(q) +
       (q.exp ? '<p class="exp"><span class="badge-testley">Explicación de TestLey</span> ' + esc(q.exp) + "</p>" : "") +
-      '<a href="' + TL.root + (q.ley || LEY) + "/articulo-" + (q.artn || q.art) + '/">Leer el artículo ' + (q.artn || q.art) + " completo</a>" +
+      enlaceFuente(q) +
       (window.TLTutor ? ' · <button class="linklike" data-tutor>Explícamelo (IA)</button>' : "");
     var tb = el.querySelector("[data-tutor]");
     if (tb) tb.onclick = function () { tb.disabled = true; window.TLTutor.explicar({ ley: q.ley || LEY, art: String(q.artn || q.art), pregunta: q.q, opciones: q.o, correcta: q.a, elegida: i, cita: q.cita }, el.querySelector(".fb")); };
@@ -268,7 +295,7 @@
       mal.map(function (r) {
         var q = r.q;
         return '<div class="rev"><p class="q small">' + esc(q.q) + '</p><p class="small"><span class="bad">✘ ' + esc(q.o[r.elegida]) + '</span><br><span class="good">✔ ' + esc(q.o[q.a]) + "</span></p>" +
-          '<blockquote><span class="src">Artículo ' + (q.artn || q.art) + " · " + esc(nombreLey(q)) + " (BOE)" + verif(q) + "</span>«" + esc(q.cita) + "»</blockquote></div>";
+          fuenteHtml(q) + "</div>";
       }).join("") + "</details></div>";
   }
 
@@ -284,10 +311,10 @@
     if (window.TLEventos) TLEventos.emitir(esExamen() ? "SIMULATION_COMPLETED" : "TEST_COMPLETED", { contexto: LEY, modo: modo, preguntas: n, aciertos: ok, errores: ko, nota: Math.round(nota * 10) / 10 });
     var fallos = bloqueado() ? muestra().filter(function (q) { return TL.estado(q.ley || LEY, q.id) === "fallada"; }).length : s.cuenta.fallada;
     el.innerHTML =
-      '<div class="result-card"><span class="kicker">' + (modo === "simulacro" ? "Resultado del simulacro" : modo === "examen" ? "Resultado del examen" : "Resultado") + "</span>" +
+      '<div class="result-card"><span class="kicker">' + (modo === "simulacro" ? "Resultado del simulacro" : modo === "examen" ? "Resultado del examen" : modo === "oficial" ? "Resultat de l'examen oficial" : "Resultado") + "</span>" +
       '<p class="score">' + fmt(nota) + "<small>/10</small></p>" +
       "<p>" + ok + " aciertos · " + ko + " errores · " + blank + ' sin contestar <span class="muted">(cada error resta ' + fraccion(pen) + ")</span></p>" +
-      '<p class="muted">' + (n ? Math.round((100 * ok) / n) : 0) + " % de acierto · tiempo " + Math.floor(segundos / 60) + " min " + (segundos % 60) + " s" + (esExamen() ? " de " + minutos() + " min" : "") + "</p>" +
+      '<p class="muted">' + (n ? Math.round((100 * ok) / n) : 0) + " % de acierto · tiempo " + Math.floor(segundos / 60) + " min " + (segundos % 60) + " s" + (esExamen() && minutos() ? " de " + minutos() + " min" : "") + "</p>" +
       '<p class="muted">Tu nota orientativa global es ahora <b>' + fmt(s.nota) + "</b> y tu dominio del banco es del <b>" + s.dominioPct + " %</b>.</p>" +
       (cmp && cmp.anterior != null ? '<p class="cmp">' + (cmp.diferencia >= 0 ? '<b class="good">▲ +' : '<b class="bad">▼ ') + fmt(cmp.diferencia) + "</b> respecto a tu simulacro anterior (" + fmt(cmp.anterior) + ") · media de tus " + cmp.n + " simulacros: <b>" + fmt(cmp.media) + "</b></p>" : esExamen() ? '<p class="muted small">Es tu primer simulacro: el próximo lo compararemos con este.</p>' : "") +
       analisis() +
@@ -300,7 +327,7 @@
       "</div>";
     var esteTest = respuestas.filter(function (r) { return r.elegida !== null && r.elegida !== r.q.a; }).map(function (r) { return r.q; });
     var be = el.querySelector("[data-errores]"); if (be) be.onclick = function () { start(esteTest, "fallos"); };
-    var br = el.querySelector("[data-repetir]"); if (br) br.onclick = function () { start(modo === "simulacro" ? simulacro() : shuffle(ultimaLista), modo); };
+    var br = el.querySelector("[data-repetir]"); if (br) br.onclick = function () { start(modo === "simulacro" ? simulacro() : modo === "oficial" ? ultimaLista.slice() : shuffle(ultimaLista), modo); };
     el.querySelector("[data-again]").onclick = function () {
       el.removeAttribute("data-art");
       var pool = bloqueado() ? muestra() : data.qs;

@@ -19,9 +19,12 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
   const L = {
     id: n.id, slug: n.slug, nombre: n.nombre,
     corto: CORTO[n.slug] || n.nombre.split(",")[0],
-    arts: fs.existsSync(`datos/${n.slug}-articulos.json`) ? JSON.parse(fs.readFileSync(`datos/${n.slug}-articulos.json`, "utf8")) : [],
+    arts: (() => { const fa = n.articulos || `datos/${n.slug}-articulos.json`; return fs.existsSync(fa) ? JSON.parse(fs.readFileSync(fa, "utf8")) : []; })(),
     qs: fs.existsSync(fq) ? JSON.parse(fs.readFileSync(fq, "utf8")) : [],
-    fuente: `https://www.boe.es/buscar/act.php?id=${n.id}`,
+    fuente: n.url || `https://www.boe.es/buscar/act.php?id=${n.id}`,
+    // Fuente oficial no versionada (guía de estudio de Mossos, © Generalitat): sus preguntas sí se publican en la oposición,
+    // pero nunca su texto (sin páginas de la norma ni de sus apartados); en cada pregunta solo la cita que la justifica
+    privada: n.publicar_texto === false,
     actualizada: META[n.id] || "",
   };
   // id guardado en cada pregunta (datos/ids-congelados.json, fabrica/congelar_ids.py); el posicional solo como respaldo
@@ -33,6 +36,7 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
   return L;
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
+const PUBLICADAS_WEB = PUBLICADAS.filter((L) => !L.privada); // con página propia de la norma y de sus artículos
 // Campos internos de la fábrica (fabrica/): se quedan en datos/, no viajan al navegador
 const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, traza, aprobacion_humana, revision_humana, ...q }) => q;
 // lastmod de las páginas de cada ley: último commit de sus preguntas o de su texto (si hay cambios sin commit, hoy).
@@ -45,7 +49,7 @@ const fechaGit = (f) => {
     return execFileSync("git", ["log", "-1", "--format=%cs", "--", f], { encoding: "utf8" }).trim();
   } catch { return ""; }
 };
-for (const L of PUBLICADAS) L.lastmod = [fechaGit(`datos/preguntas-${L.slug}.json`), fechaGit(`datos/${L.slug}-articulos.json`)].filter(Boolean).sort().pop() || "";
+for (const L of PUBLICADAS) L.lastmod = [fechaGit(`datos/preguntas-${L.slug}.json`), L.privada ? "" : fechaGit(`datos/${L.slug}-articulos.json`)].filter(Boolean).sort().pop() || "";
 const LEY = LEYES.find((L) => L.slug === "ley-39-2015");
 
 // Vocabulario único de estados de verificación (catalogo/estados_verificacion.json)
@@ -170,6 +174,11 @@ ${scripts.map((s) => `<script src="${root}assets/${s}" defer></script>`).join("\
 
 // ---------- Catálogo de oposiciones ----------
 const OPOS = JSON.parse(fs.readFileSync("catalogo/oposiciones.json", "utf8"));
+// Exámenes oficiales anteriores (procedencia OFFICIAL_EXAM; datos/examens-oficials/<oposición>.json): se practican tal cual se publicaron
+for (const o of OPOS) {
+  const f = `datos/examens-oficials/${o.id}.json`;
+  o.examenes = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")).examenes.map((e) => ({ ...e, preguntes: e.preguntes.filter((q) => q.verification_status !== "DEPRECATED") })) : [];
+}
 const rutaTema = (o, i) => `oposiciones/${o.id}/tema-${i + 1}/`;
 // «Tema N» (con la letra del bloque delante si el número se repite en varios bloques)
 const nombreTema = (o, i) => { const t = o.temario[i]; return (o.temario.filter((x) => x.tema === t.tema).length > 1 ? `${t.bloque.split(/[.)]/)[0]} · ` : "") + `Tema ${t.tema}`; };
@@ -203,6 +212,9 @@ for (const o of OPOS) {
     o.temaInfo.forEach((ti, i) => { if (ti.leyes.includes(q.ley) && (!ti.ambito[q.ley].arts || ti.ambito[q.ley].arts.has(q.artn))) tm.push(i); });
     if (tm.length) { q.tm = tm; tm.forEach((i) => o.temaInfo[i].nq++); }
   }
+  // solo_ambito (catálogo): las preguntas de una ley fuera del ámbito de todos los temas no entran en los tests de la oposición
+  // (Mossos: de la Constitución solo lo que corresponde a B.3; de la LO 2/1986 solo el art. 5)
+  if (o.solo_ambito) o.qs = o.qs.filter((q) => q.tm);
   o.temasCubiertos = o.temario.filter((t, i) => t.tipo !== "no_legislativo" && o.temaInfo[i].nq > 0).length;
   o.pctCob = o.temario.length ? Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos)) : null;
 }
@@ -215,7 +227,7 @@ const fmtFecha = (f) => (f ? f.split("-").reverse().join("/") : "");
 const sinAcentos = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const pctOp = (o) => Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertura.temas_legislativos));
 // Nombres cortos para títulos (como se buscan); el nombre oficial completo sigue en el h1 y en el cuerpo
-const OP_CORTO = { "guardia-civil-cabos-guardias": "Guardia Civil Cabos y Guardias", "policia-nacional-escala-basica": "Policía Nacional Escala Básica", "policia-nacional-escala-ejecutiva": "Policía Nacional Escala Ejecutiva", "age-administrativo-c1": "Administrativo del Estado", "age-auxiliar-administrativo-c2": "Auxiliar Administrativo del Estado", "age-gestion-a2": "Gestión Civil del Estado" };
+const OP_CORTO = { "mossos-esquadra": "Mossos d'Esquadra", "guardia-civil-cabos-guardias": "Guardia Civil Cabos y Guardias", "policia-nacional-escala-basica": "Policía Nacional Escala Básica", "policia-nacional-escala-ejecutiva": "Policía Nacional Escala Ejecutiva", "age-administrativo-c1": "Administrativo del Estado", "age-auxiliar-administrativo-c2": "Auxiliar Administrativo del Estado", "age-gestion-a2": "Gestión Civil del Estado" };
 const opCorto = (o) => OP_CORTO[o.id] || o.nombre.replace(/\s*\([^)]*\)/g, "").replace(/^Cuerpo (General )?/, "").replace(/,/g, "");
 // Año de la convocatoria: el de su fecha oficial de publicación (si no consta, no se pone)
 const anioOp = (o) => ((o.convocatoria || {}).fecha_publicacion || "").slice(0, 4);
@@ -255,6 +267,9 @@ fs.writeFileSync(path.join(OUT_TMP, "datos", "catalogo.json"), JSON.stringify(OP
 
 // Novedades oficiales detectadas en el BOE (catalogo/vigilar_boe.py)
 // + cambios detectados en convocatorias automáticas seguidas por usuarios (ingesta/extraer.py → catalogo/novedades-convocatorias.json)
+// Boletín de la convocatoria y descripción de la fuente que cita cada respuesta (BOE por defecto; DOGC y guía oficial en Mossos)
+const boletin = (o) => ((o.fuentes.convocatoria || {}).tipo === "DOGC" ? "DOGC" : "BOE");
+const citaOficial = (o) => (boletin(o) === "BOE" ? "el artículo del BOE" : "el texto oficial (DOGC, guia d'estudi o llei)");
 const NOVEDADES = ["catalogo/novedades.json", "catalogo/novedades-convocatorias.json"].flatMap((f) => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : []));
 fs.writeFileSync(path.join(OUT_TMP, "datos", "novedades.json"), JSON.stringify(NOVEDADES));
 const TIPO_NOV = { convocatoria: "Convocatoria", listas: "Listas de admitidos", aprobados: "Aprobados", fecha_examen: "Fecha de examen", modificacion: "Modificación", correccion: "Corrección de errores", nombramiento: "Nombramientos", otro: "Otra publicación" };
@@ -263,10 +278,10 @@ const novedadesHtml = (o) => {
   if (!L.length) return "";
   const fila = (n) => `<li><span class="nov-f">${fmtFecha(n.fecha)}</span> <span class="chip${n.relevancia === "convocatoria" ? " ok" : ""}">${TIPO_NOV[n.tipo] || n.tipo}</span> <a href="${esc(n.url)}" rel="noopener">${esc(n.titulo)}</a> <span class="muted small">(${esc(n.id)})</span></li>`;
   const mia = L.filter((n) => n.relevancia === "convocatoria"), otras = L.filter((n) => n.relevancia !== "convocatoria");
-  return `<section class="card"><div class="of-head"><h2>Novedades oficiales en el BOE</h2><span class="badge-oficial">Fuente oficial</span></div>
+  return `<section class="card"><div class="of-head"><h2>Novedades oficiales${o.vigilancia && o.vigilancia.web ? "" : " en el BOE"}</h2><span class="badge-oficial">Fuente oficial</span></div>
 ${mia.length ? `<h3>De esta convocatoria</h3><ul class="nov">${mia.map(fila).join("")}</ul>` : ""}
 ${otras.length ? `<details><summary>Otras publicaciones del mismo cuerpo (${otras.length})</summary><ul class="nov">${otras.map(fila).join("")}</ul></details>` : ""}
-<p class="muted small">Revisamos el sumario del BOE cada día. El tipo (listas, modificación…) se deduce automáticamente del título oficial; abre el enlace para ver el texto completo.</p></section>`;
+<p class="muted small">${o.vigilancia && o.vigilancia.web ? `Revisamos cada día la web oficial (<a href="${esc(o.vigilancia.web.convocatoria)}" rel="noopener">mossos.gencat.cat</a>), que enlaza las resoluciones del DOGC.` : "Revisamos el sumario del BOE cada día."} El tipo (listas, modificación…) se deduce automáticamente del título oficial; abre el enlace para ver el texto completo.${L.some((n) => n.verification_status === "OFFICIAL_PENDING_REVIEW") ? " Las marcadas como pendientes de revisión aún no se han contrastado." : ""}</p></section>`;
 };
 
 // ---------- Catálogo nacional de convocatorias (motor de ingesta: ingesta/ → catalogo/convocatorias/) ----------
@@ -421,18 +436,18 @@ ${faqHtml(FAQ_GENERAL)}
 <section class="final-cta">
   <h2>Busca tu oposición</h2>
   ${buscador(r)}
-  <p class="muted small">También puedes consultar las <a href="${r}leyes/">${PUBLICADAS.length} leyes con test</a> o empezar con el <a href="${r}${LEY.slug}/">test gratis de la Ley 39/2015</a>.</p>
+  <p class="muted small">También puedes consultar las <a href="${r}leyes/">${PUBLICADAS_WEB.length} leyes con test</a> o empezar con el <a href="${r}${LEY.slug}/">test gratis de la Ley 39/2015</a>.</p>
 </section>`,
 });
 
 // Índice de leyes (antes listado en la portada)
 page("leyes/", {
-  title: "Leyes con test para oposiciones (texto oficial del BOE)", wide: true, lastmod: PUBLICADAS.map((L) => L.lastmod).filter(Boolean).sort().pop(),
-  description: `${PUBLICADAS.length} leyes con test y su texto consolidado del BOE artículo por artículo: ${fmtN(NQ)} preguntas con la respuesta citada.`,
+  title: "Leyes con test para oposiciones (texto oficial del BOE)", wide: true, lastmod: PUBLICADAS_WEB.map((L) => L.lastmod).filter(Boolean).sort().pop(),
+  description: `${PUBLICADAS_WEB.length} leyes con test y su texto consolidado del BOE artículo por artículo: ${fmtN(NQ)} preguntas con la respuesta citada.`,
   body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <span>Leyes</span></nav>
 <h1>Leyes con test para oposiciones</h1>
 <p class="lead">Cada ley con su texto consolidado del BOE, una página por artículo y preguntas cuya respuesta cita el artículo.</p>
-<div class="cards">${PUBLICADAS.map((L) => `<a class="card" href="${r}${L.slug}/"><span class="tag">${fmtN(L.qs.length)} preguntas</span><strong>${esc(L.corto)}</strong><span>${fmtN(L.arts.length)} artículos · ${esc(L.id)}</span></a>`).join("")}</div>
+<div class="cards">${PUBLICADAS_WEB.map((L) => `<a class="card" href="${r}${L.slug}/"><span class="tag">${fmtN(L.qs.length)} preguntas</span><strong>${esc(L.corto)}</strong><span>${fmtN(L.arts.length)} artículos · ${esc(L.id)}</span></a>`).join("")}</div>
 ${LEYES.filter((L) => !L.qs.length).length ? `<h2>En preparación</h2><ul>${LEYES.filter((L) => !L.qs.length).map((L) => `<li>${esc(L.nombre)}</li>`).join("")}</ul>` : ""}`,
 });
 
@@ -460,7 +475,7 @@ page("cuenta/", {
 });
 
 // ---------- Hub de la ley ----------
-for (const L of PUBLICADAS) {
+for (const L of PUBLICADAS_WEB) {
 const bloques = [...new Set(L.arts.map((a) => a.bloque))];
 page(`${L.slug}/`, {
   // «Test Constitución Española 2026: 223 preguntas con solución»; sin año si el nombre ya lleva el de la norma («Ley 39/2015»)
@@ -565,7 +580,7 @@ ${lista.length
 ${convs.length ? `<h2>Convocatorias oficiales recientes (${convs.length})</h2><div class="cards">${convs.slice(0, 30).map((v) => tarjetaConv(v, r)).join("")}</div>${convs.length > 30 ? `<p><a class="cta alt" href="${r}convocatorias/?cat=${c.id}">Ver las ${convs.length} convocatorias</a></p>` : ""}` : ""}`,
   });
 }
-const ETIQ = { grupo: "Grupo y subgrupo", plazas: "Plazas", plazas_libres: "Plazas de acceso libre", sistema_selectivo: "Sistema selectivo", temario_referencia: "Norma que fija el temario", plazas_reservadas: "Plazas reservadas", titulacion: "Titulación", requisitos: "Requisitos", plazo_solicitudes: "Plazo de solicitudes", pruebas: "Pruebas y examen" };
+const ETIQ = { grupo: "Grupo y subgrupo", plazas: "Plazas", plazas_libres: "Plazas de acceso libre", sistema_selectivo: "Sistema selectivo", temario_referencia: "Norma que fija el temario", plazas_reservadas: "Plazas reservadas", titulacion: "Titulación", requisitos: "Requisitos", plazo_solicitudes: "Plazo de solicitudes", fecha_examen: "Fecha del examen", pruebas: "Pruebas y examen" };
 function oficialHtml(o) {
   const dato = (d) => {
     const f = o.fuentes[d.fuente];
@@ -576,7 +591,7 @@ function oficialHtml(o) {
   const filas = Object.keys(o.oficial).map((k) => `<div class="of-row"${anc[k] ? ` id="${anc[k]}"` : ""}><h3>${ETIQ[k] || esc(k)}</h3><ul class="of-list">${(Array.isArray(o.oficial[k]) ? o.oficial[k] : [o.oficial[k]]).map(dato).join("")}</ul></div>`).join("");
   return `<section class="card oficial"><div class="of-head"><h2>Datos oficiales de la convocatoria</h2><span class="badge-oficial">Fuente oficial</span></div>
 ${filas}
-<p class="muted small">Datos revisados el ${fmtFecha(o.actualizado)}. Cada dato incluye el texto literal de la fuente; si hubiera discrepancia, prevalece siempre el BOE.</p></section>`;
+<p class="muted small">Datos revisados el ${fmtFecha(o.actualizado)}. Cada dato incluye el texto literal de la fuente; si hubiera discrepancia, prevalece siempre el ${boletin(o)}.</p></section>`;
 }
 for (const o of OPOS) {
   const c = o.convocatoria;
@@ -607,14 +622,14 @@ for (const o of OPOS) {
     V1("titulacion") && [`¿Qué titulación se exige?`, `${V1("titulacion").valor}. Fuente: ${refConv}.`],
     V1("plazo_solicitudes") && [`¿Cuál es el plazo para presentar la solicitud?`, `${V1("plazo_solicitudes").valor}. Fuente: ${refConv}.`],
     V1("sistema_selectivo") && [`¿Cuál es el sistema selectivo?`, `${V1("sistema_selectivo").valor}. Fuente: ${refConv}.`],
-    [`¿Cuándo es el examen?`, fechasExamen.length ? `La última publicación oficial sobre fechas es «${fechasExamen[fechasExamen.length - 1].titulo}» (${fmtFecha(fechasExamen[fechasExamen.length - 1].fecha)}).` : "Todavía no hay una fecha de examen publicada oficialmente. La mostraremos en esta página en cuanto aparezca en el boletín oficial; si sigues la convocatoria, te avisaremos."],
+    [`¿Cuándo es el examen?`, V1("fecha_examen") ? `${V1("fecha_examen").valor}. Fuente: ${o.fuentes[V1("fecha_examen").fuente].titulo}.` : fechasExamen.length ? `La última publicación oficial sobre fechas es «${fechasExamen[fechasExamen.length - 1].titulo}» (${fmtFecha(fechasExamen[fechasExamen.length - 1].fecha)}).` : "Todavía no hay una fecha de examen publicada oficialmente. La mostraremos en esta página en cuanto aparezca en el boletín oficial; si sigues la convocatoria, te avisaremos."],
     o.temario.length ? [`¿Cuántos temas tiene el temario?`, `${o.temario.length} temas (${(TEMARIO_TIPO[o.temario_tipo] || ["Temario"])[0].toLowerCase()}). Fuente: ${refConv}.`] : [`¿Cuál es el temario?`, "El temario oficial está pendiente de verificación: todavía no lo hemos contrastado con la fuente oficial, así que no lo mostramos."],
-    o.qs.length && [`¿Cómo puedo preparar ${o.nombre} con TestLey?`, `Con ${fmtN(o.qs.length)} preguntas de las leyes del temario, cada una con la cita literal del BOE que la justifica${sim ? `, y simulacros de ${sim.preguntas} preguntas en ${sim.minutos} minutos` : ""}. Tu panel te propone cada día qué estudiar según tu fecha de examen y tus fallos.`],
+    o.qs.length && [`¿Cómo puedo preparar ${o.nombre} con TestLey?`, `Con ${fmtN(o.qs.length)} preguntas de las leyes del temario, cada una con la cita literal de ${citaOficial(o)} que la justifica${sim ? `, y simulacros de ${sim.preguntas} preguntas en ${sim.minutos} minutos` : ""}. Tu panel te propone cada día qué estudiar según tu fecha de examen y tus fallos.`],
   ].filter(Boolean);
   const leyesOp = [...new Set(o.temario.flatMap((t) => t.normas).concat((o.preparacion || {}).normas || []))].map((id) => NORMAS[id] || { id, nombre: id });
   page(`oposiciones/${o.id}/`, {
     title: titulo("", `${opCorto(o)}${anioOp(o) ? " " + anioOp(o) : ""}`, `: ${c.plazas ? "plazas" : "convocatoria"}, temario y test`),
-    description: descripcion(`${opCorto(o)}${anioOp(o) ? " " + anioOp(o) : ""}: ${c.plazas ? `${fmtN(c.plazas)} plazas` : "convocatoria oficial"}${o.grupo ? ` (grupo ${o.grupo})` : ""}, requisitos, pruebas${o.temario.length ? ` y temario de ${o.temario.length} temas` : ""}.`, o.qs.length ? `${fmtN(o.qs.length)} preguntas tipo test con la respuesta citada del BOE.` : "", o.fuentes.convocatoria && o.fuentes.convocatoria.id ? `Convocatoria: ${o.fuentes.convocatoria.id}.` : ""),
+    description: descripcion(`${opCorto(o)}${anioOp(o) ? " " + anioOp(o) : ""}: ${c.plazas ? `${fmtN(c.plazas)} plazas` : "convocatoria oficial"}${o.grupo ? ` (grupo ${o.grupo})` : ""}, requisitos, pruebas${o.temario.length ? ` y temario de ${o.temario.length} temas` : ""}.`, o.qs.length ? `${fmtN(o.qs.length)} preguntas tipo test con la respuesta citada ${boletin(o) === "BOE" ? "del BOE" : "de la fuente oficial"}.` : "", o.fuentes.convocatoria && o.fuentes.convocatoria.id ? `Convocatoria: ${o.fuentes.convocatoria.id}.` : ""),
     scripts: ["test.js", "oposicion.js"], lastmod: ultimaVerif, wide: true, crumbs: [["Oposiciones", "oposiciones/"], [o.categoria_nombre, `oposiciones/categoria/${o.categoria}/`], [o.nombre, `oposiciones/${o.id}/`]],
     // Sin «Course»: la ficha es información de una convocatoria con tests, no un curso
     schema: faqSchema(faq),
@@ -623,7 +638,7 @@ for (const o of OPOS) {
       const pend = (o.pendientes || []).length ? `<section class="card pendiente"><h2>Información pendiente de verificación oficial</h2><ul>${o.pendientes.map((x) => `<li><b>${esc(x.campo.replace(/_/g, " "))}:</b> ${esc(x.motivo)}${x.fuente_prevista ? ` <a href="${esc(x.fuente_prevista)}" rel="noopener">Fuente oficial prevista</a>` : ""}</li>`).join("")}</ul><p class="muted small">${badgeVS("OFFICIAL_PENDING_REVIEW")} No mostramos datos sin verificar como oficiales. Los actualizaremos en cuanto los contrastemos con la fuente oficial.</p></section>` : "";
       const prep = o.preparacion ? `<section class="card"><div class="of-head"><h2>Contenido de preparación</h2><span class="badge-testley">No oficial</span></div><p>${esc(o.preparacion.descripcion)}</p><div class="chips">${o.preparacion.normas.map((id) => PUB[id] ? `<a class="chip ok" href="${r}${PUB[id].slug}/">${esc(PUB[id].corto)}</a>` : "").join(" ")}</div></section>` : "";
       const temasOk = o.temario.filter((_, i) => o.temaInfo[i].nq).length;
-      const navFicha = [["convocatoria", "Convocatoria"], ["fechas", "Fechas"], o.qs.length && ["tests", "Tests"], ["simulacros", "Simulacros"], ["temario", "Temario"], ["legislacion", "Legislación"], ["documentacion", "Documentación"], ["faq", "Preguntas frecuentes"]].filter(Boolean);
+      const navFicha = [["convocatoria", "Convocatoria"], ["fechas", "Fechas"], o.qs.length && ["tests", "Tests"], ["simulacros", "Simulacros"], o.examenes.length && ["examenes", "Exámenes oficiales"], ["temario", "Temario"], ["legislacion", "Legislación"], ["documentacion", "Documentación"], ["faq", "Preguntas frecuentes"]].filter(Boolean);
       return `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/categoria/${o.categoria}/">${esc(o.categoria_nombre)}</a> › <span>${esc(o.nombre)}</span></nav>
 <header class="op-header">
 <h1>${esc(o.nombre)}</h1>
@@ -645,18 +660,19 @@ ${o.qs.length ? `<div><dt>Preguntas</dt><dd>${fmtN(o.qs.length)}</dd></div>` : "
 <section class="card" id="fechas"><div class="of-head"><h2>Fechas</h2><span class="badge-oficial">Fuente oficial</span></div>
 <ul class="of-list"><li><span>Publicación de la convocatoria: <b>${fmtFecha(c.fecha_publicacion)}</b></span></li>
 ${V1("plazo_solicitudes") ? `<li><span>Plazo de solicitudes: <b>${esc(V1("plazo_solicitudes").valor)}</b></span></li>` : ""}
-<li><span>Fecha del examen: ${fechasExamen.length ? `<b>${esc(fechasExamen[fechasExamen.length - 1].titulo)}</b>` : "<b>pendiente de publicación oficial</b>. Sigue la convocatoria y te avisaremos."}</span></li></ul>
+<li><span>Fecha del examen: ${V1("fecha_examen") ? `<b>${esc(V1("fecha_examen").valor)}</b>` : fechasExamen.length ? `<b>${esc(fechasExamen[fechasExamen.length - 1].titulo)}</b>` : "<b>pendiente de publicación oficial</b>. Sigue la convocatoria y te avisaremos."}</span></li></ul>
 ${convsOp.length ? `<p class="small muted">En el catálogo nacional: ${convsOp.map((v) => `<a href="${r}convocatorias/${v.id}/">${esc(convNombre(v))}</a>`).join(", ")}.</p>` : ""}</section>
 ${novedadesHtml(o)}
 ${prep}
-<section id="tests">${o.qs.length ? `<h2>Tests de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))} <span class="badge-testley">Contenido de TestLey</span></h2><p class="muted small">Preguntas redactadas por TestLey; cada respuesta cita el artículo del BOE que la justifica y se comprueba automáticamente contra el texto vigente.${o.temario_tipo === "pendiente" ? " Mientras el temario oficial está pendiente de verificación, el test usa las leyes de preparación indicadas arriba." : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="./" data-sim="${esc(JSON.stringify(sim || null))}">Cargando preguntas…</div>` : ""}</section>
+<section id="tests">${o.qs.length ? `<h2>Tests de ${esc(o.nombre.replace(/^Cuerpo (General )?/, ""))} <span class="badge-testley">Contenido de TestLey</span></h2><p class="muted small">Preguntas redactadas por TestLey; cada respuesta cita ${citaOficial(o)} que la justifica y se comprueba automáticamente contra el texto vigente.${o.temario_tipo === "pendiente" ? " Mientras el temario oficial está pendiente de verificación, el test usa las leyes de preparación indicadas arriba." : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="./" data-sim="${esc(JSON.stringify(sim || null))}">Cargando preguntas…</div>` : ""}</section>
 <section class="card" id="simulacros"><h2>Simulacros</h2>${((o.examen || {}).estructura || []).length ? `<h3>Estructura oficial del proceso</h3><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Parte</th><th>Preguntas</th><th>En el simulacro de TestLey</th></tr></thead><tbody>${o.examen.estructura.map((x) => `<tr><td>${esc(x.parte)}<details><summary class="small">Texto oficial</summary><blockquote>«${esc(x.cita)}»</blockquote></details></td><td>${x.preguntas || "—"}</td><td>${x.en_simulacro ? "✓ Sí" : `No · <span class="muted small">${esc(x.motivo)}</span>`}</td></tr>`).join("")}</tbody></table></div>` : ""}${sim ? `<p>Formato: <b>${sim.preguntas} preguntas</b> en <b>${sim.minutos} minutos</b>, ${sim.opciones} opciones${sim.penalizacion ? `, cada error resta ${fraccionTxt(sim.penalizacion)}` : ", sin penalización"}. ${sim.origen === "oficial" ? `<span class="badge-oficial">Formato oficial</span>` : `<span class="badge-testley">Adaptado por TestLey</span>`}</p><p class="muted small">${esc(sim.nota || "")}</p><p><a class="btn primary" href="#test=simulacro">Hacer un simulacro</a></p>` : `<p class="muted">El formato oficial del examen aún no está verificado; puedes hacer tests por temas.</p>`}</section>
 <section id="temario">${o.temario.length ? `<div class="sec-head"><h2>${tLbl}</h2><span class="${tCls}">${o.temario_tipo === "oficial_publicado" ? "Fuente oficial" : "Ver nota"}</span></div>
 <p class="muted small">${o.temario_tipo === "oficial_publicado" ? `Copiado literalmente del anexo ${esc(c.anexo || "")} de la convocatoria. ` : "Estructura deducida de las bases oficiales. "}${temasOk} de ${o.temario.length} temas tienen test. Entra en un tema para estudiar su legislación y practicar.</p>
 <div id="op-temario">${bloques.map((b, bi) => { const ts = o.temario.map((t, i) => [t, i]).filter(([t]) => t.bloque === b); return `<details class="bloque"${bi === 0 || bloques.length === 1 ? " open" : ""}><summary><span>${esc(b)}</span><small>${ts.length} temas</small></summary><ol class="temario-lista">${ts.map(([t, i]) => `<li><a href="${r}${rutaTema(o, i)}" title="${esc(t.titulo)}"><span class="tl-n">${t.tema}</span><span class="tl-t">${esc(t.titulo)}</span></a><span class="chips">${o.temaInfo[i].nq ? `<span class="tl-q">${o.temaInfo[i].nq} preguntas</span>` : `<span class="tl-q vacia">${t.tipo === "no_legislativo" ? "Sin test" : "En preparación"}</span>`}</span></li>`).join("")}</ol></details>`; }).join("")}</div>
 <p class="muted small">Las leyes de cada tema las asigna TestLey a partir del título oficial: son orientativas. Comprueba siempre las bases de tu convocatoria.</p>` : `<h2>Temario</h2><p class="muted">${badgeVS("OFFICIAL_PENDING_REVIEW")} Temario pendiente de verificación oficial.</p>`}</section>
 ${pend}
-<section class="card" id="legislacion"><h2>Legislación</h2><p class="muted small">${leyesOp.filter((n) => PUB[n.id]).length} de ${leyesOp.length} normas con test. Textos consolidados del BOE.</p><details class="leyes-det"${leyesOp.length <= 8 ? " open" : ""}><summary>Ver las ${leyesOp.length} normas</summary><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a> <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="https://www.boe.es/buscar/act.php?id=${esc(n.id)}" rel="noopener">${esc(n.id)}</a></li>`).join("")}</ul></details></section>
+${o.examenes.length ? `<section class="card" id="examenes"><div class="of-head"><h2>Exámenes oficiales anteriores</h2><span class="badge-oficial">Fuente oficial</span></div><p>Preguntas y plantilla de respuestas publicadas por la administración. Hazlos tal cual se publicaron, con la respuesta oficial.</p><ul class="of-list">${o.examenes.map((e) => `<li><span><a href="${r}oposiciones/${o.id}/examenes-oficiales/${e.id}/">Examen oficial ${esc(e.convocatoria)}</a> · ${e.preguntes.length} preguntas${e.minuts ? ` · ${e.minuts} min` : ""}</span></li>`).join("")}</ul><p><a class="btn" href="${r}oposiciones/${o.id}/examenes-oficiales/">Ver todos los exámenes oficiales</a></p></section>` : ""}
+<section class="card" id="legislacion"><h2>Legislación</h2><p class="muted small">${leyesOp.filter((n) => PUB[n.id]).length} de ${leyesOp.length} normas con test. ${boletin(o) === "BOE" ? "Textos consolidados del BOE." : "Fuentes oficiales: guia d'estudi de la Generalitat y textos consolidados del BOE."}</p><details class="leyes-det"${leyesOp.length <= 8 ? " open" : ""}><summary>Ver las ${leyesOp.length} normas</summary><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a> <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="${esc(n.url || `https://www.boe.es/buscar/act.php?id=${n.id}`)}" rel="noopener">${esc(n.tipo === "guia_oficial" ? "PDF oficial" : n.id)}</a></li>`).join("")}</ul></details></section>
 <section class="card" id="documentacion"><h2>Documentación oficial</h2><ul class="of-list">${Object.values(o.fuentes).map((f) => `<li><span><a href="${esc(f.url)}" rel="noopener">${esc(f.titulo)}</a></span> <span class="muted small">${esc(f.tipo)}, publicado el ${fmtFecha(f.fecha_publicacion)}</span></li>`).join("")}</ul></section>
 ${faqHtml(faq)}
 </div></div>`;
@@ -701,6 +717,40 @@ fs.writeFileSync(path.join(OUT_TMP, "datos", "cobertura.json"), JSON.stringify(O
   estructura: ((o.examen || {}).estructura || []).map((p) => ({ parte: p.parte, en_simulacro: !!p.en_simulacro })),
   temas: o.temario.map((t, i) => ({ tema: t.tema, bloque: t.bloque || null, titulo: t.titulo.slice(0, 120), ...coberturaTema(o, i) })),
 }))));
+// Páginas de exámenes oficiales: índice y una página por examen (los datos van a docs/datos/examen-<oposición>-<id>.json)
+for (const o of OPOS.filter((x) => x.examenes.length)) {
+  const pen = ((o.examen || {}).oficial || {}).penalizacion || 0;
+  const sim = (e) => ({ preguntas: e.preguntes.length, minutos: e.minuts || null, opciones: 4, penalizacion: pen, origen: "oficial" });
+  const estados = (e) => { const c = {}; e.preguntes.forEach((q) => (c[q.vigencia_guia] = (c[q.vigencia_guia] || 0) + 1)); return c; };
+  for (const e of o.examenes) {
+    const ley = `examen-${o.id}-${e.id}`;
+    fs.writeFileSync(path.join(OUT_TMP, "datos", `${ley}.json`), JSON.stringify({ leyes: { [ley]: `Examen oficial ${e.convocatoria}` }, arts: { [e.id]: { t: `Convocatòria ${e.convocatoria}`, b: `Examen oficial ${e.convocatoria}` } },
+      qs: e.preguntes.map((q) => ({ ...q, ley, art: e.id })) }));
+  }
+  page(`oposiciones/${o.id}/examenes-oficiales/`, {
+    title: titulo("", `Exámenes oficiales de ${opCorto(o)}`, " con respuestas"), lastmod: o.actualizado, wide: true,
+    description: descripcion(`${o.examenes.length} exámenes oficiales anteriores de ${opCorto(o)} (${o.examenes.map((e) => e.convocatoria).join(", ")}) con la plantilla oficial de respuestas.`, "Hazlos online con el tiempo y la penalización oficiales."),
+    crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Exámenes oficiales", `oposiciones/${o.id}/examenes-oficiales/`]],
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Exámenes oficiales</span></nav>
+<h1>Exámenes oficiales de ${esc(opCorto(o))}</h1>
+<p class="lead">Preguntas y plantilla de respuestas de la subprueba de conocimientos de convocatorias anteriores, publicadas por la Generalitat de Catalunya. Practícalos tal cual se publicaron: ${o.examenes[0].preguntes.length} preguntas, 4 opciones${pen ? `, cada error resta ${fraccionTxt(pen)}` : ""}.</p>
+<div class="tabla-scroll"><table class="tabla"><thead><tr><th>Examen</th><th>Preguntas</th><th>Tiempo oficial</th><th>Respuesta respaldada por la guía vigente</th><th>Documento oficial</th></tr></thead><tbody>${o.examenes.map((e) => { const c = estados(e); return `<tr><td><a href="${r}oposiciones/${o.id}/examenes-oficiales/${e.id}/">Examen oficial ${esc(e.convocatoria)}</a>${e.data_document ? `<br><span class="muted small">Plantilla del ${fmtFecha(e.data_document)}</span>` : ""}</td><td>${e.preguntes.length}</td><td>${e.minuts ? `${e.minuts} min` : "No indicado en el documento"}</td><td>${c.CONFORME_GUIA || 0} con cita de la guía · ${c.ACTUALITAT || 0} de actualidad${c.NO_CONSTA_GUIA ? ` · ${c.NO_CONSTA_GUIA} sin desarrollar en la guía` : ""}${c.CONTRADIU_GUIA ? ` · <b>${c.CONTRADIU_GUIA} desfasadas</b>` : ""}${c.PENDENT_AUDITORIA ? ` · ${c.PENDENT_AUDITORIA} por contrastar` : ""}</td><td><a href="${esc(e.font)}" rel="noopener">PDF</a></td></tr>`; }).join("")}</tbody></table></div>
+<p class="muted small">La respuesta correcta es siempre la de la plantilla oficial. TestLey contrasta cada pregunta con la Guia d'estudi vigente (edición de junio de 2026 con las esmenes de septiembre de 2026) y lo indica tras responder. Fuente: <a href="${esc(o.examenes[0].pagina)}" rel="noopener">mossos.gencat.cat</a>.</p>`,
+  });
+  for (const e of o.examenes) {
+    const ley = `examen-${o.id}-${e.id}`;
+    page(`oposiciones/${o.id}/examenes-oficiales/${e.id}/`, {
+      title: titulo("", `Examen oficial ${opCorto(o)} ${e.convocatoria}`, " con respuestas"), lastmod: o.actualizado, wide: true, scripts: ["test.js"],
+      description: descripcion(`Examen oficial de ${opCorto(o)}, convocatoria ${e.convocatoria}: ${e.preguntes.length} preguntas con la plantilla oficial de respuestas.`, `Hazlo online${e.minuts ? ` en ${e.minuts} minutos` : ""} y revisa cada respuesta con su fuente.`),
+      crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Exámenes oficiales", `oposiciones/${o.id}/examenes-oficiales/`], [e.convocatoria, `oposiciones/${o.id}/examenes-oficiales/${e.id}/`]],
+      body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <a href="${r}oposiciones/${o.id}/examenes-oficiales/">Exámenes oficiales</a> › <span>${esc(e.convocatoria)}</span></nav>
+<h1>Examen oficial ${esc(e.convocatoria)} · ${esc(opCorto(o))}</h1>
+<p class="lead">Subprueba de conocimientos de la convocatoria ${esc(e.convocatoria)} (modelo ${esc(e.model)}): ${e.preguntes.length} preguntas${e.minuts ? ` en ${e.minuts} minutos` : ""}, con la respuesta de la plantilla oficial. <span class="badge-oficial">Examen oficial</span></p>
+<div id="quiz" class="quiz" data-ley="${ley}" data-base="../../../../" data-examen="1" data-sim="${esc(JSON.stringify(sim(e)))}">Cargando el examen…</div>
+<p class="muted small">Documento oficial: <a href="${esc(e.font)}" rel="noopener">preguntas y plantilla de respuestas (PDF)</a>${e.escanejat ? " · PDF escaneado: transcrito y revisado contra la imagen de cada página" : ""}. ${e.minuts ? "" : "El documento no indica el tiempo de la prueba: se practica sin límite. "}La vigencia de cada respuesta se contrasta con la Guia d'estudi actual.</p>`,
+    });
+  }
+}
 for (const o of OPOS) {
   o.completitud = completitud(o);
   const conv = o.fuentes.convocatoria || Object.values(o.fuentes)[0];
@@ -719,6 +769,8 @@ for (const o of OPOS) {
       body: (r) => {
         const estudio = ti.leyes.map((sl) => {
           const L = LEYPOR[sl], a = ti.ambito[sl], arts = L.arts.filter((x) => !a.arts || a.arts.has(x.n));
+          if (L.privada) // guía oficial (© Generalitat): índice de apartados y enlace al PDF oficial; su texto no se reproduce
+            return `<div class="card"><h3>${esc(L.nombre)} <span class="badge-oficial">Font oficial</span></h3><p class="muted small">Apartats oficials d'aquest tema. El text és de la Generalitat de Catalunya: estudia'l al <a href="${esc(L.fuente)}" rel="noopener">PDF oficial de la guia</a>; a cada pregunta et mostrem el fragment que justifica la resposta.</p><ul class="art-list">${arts.map((x) => `<li>${esc(x.n.replace(/\.IF$/, " · Idees força"))}${x.titulo && !x.n.endsWith(".IF") ? ". " + esc(x.titulo) : ""}</li>`).join("")}</ul></div>`;
           const grupos = {}; arts.forEach((x) => (grupos[x.capitulo ? `${x.bloque} · ${x.capitulo}` : x.bloque || L.corto] ||= []).push(x));
           const nq = o.qs.filter((q) => q.ley === sl && q.tm && q.tm.includes(i)).length;
           return `<div class="card"><h3><a href="${r}${sl}/">${esc(L.corto)}</a> <span class="badge-oficial">Texto oficial (BOE)</span></h3>
@@ -743,9 +795,9 @@ ${tituloCorto(t.titulo) !== t.titulo ? `<p class="tema-oficial"><b>Título ofici
 ${t.tipo === "no_legislativo" ? `<div class="box"><b>Tema no legislativo</b> (informática, ofimática, lengua…). TestLey aún no tiene contenido verificado para este tema; estúdialo con el material oficial de la convocatoria.</div>` : ""}
 ${estudio || (t.tipo !== "no_legislativo" ? `<div class="box">${badgeVS("OFFICIAL_PENDING_REVIEW")} Información pendiente de verificación oficial: este tema no remite a una norma con texto consolidado en el BOE${sinLey.length ? ` (${sinLey.map(esc).join(", ")})` : ""}. No mostramos contenido que no podamos verificar.</div>` : "")}
 ${sinLey.length && estudio ? `<p class="muted small">También relacionadas con este tema (sin test todavía): ${sinLey.map(esc).join(", ")}.</p>` : ""}
-<p class="muted small">El texto de los artículos es la versión consolidada oficial del BOE. La asignación de leyes y artículos a cada tema la hace TestLey y es orientativa: comprueba siempre el programa oficial.</p></section>
+<p class="muted small">${ti.leyes.some((sl) => LEYPOR[sl].privada) ? "Les preguntes d'aquest tema citen la Guia d'estudi oficial de la Generalitat (edició juny 2026 amb les esmenes de setembre 2026)." : "El texto de los artículos es la versión consolidada oficial del BOE."} La asignación de leyes y artículos a cada tema la hace TestLey y es orientativa: comprueba siempre el programa oficial.</p></section>
 <section id="practicar"><h2>2. Practicar: test del tema</h2>
-${ti.nq ? `<p class="muted small">${ti.nq} preguntas de este tema. Cada respuesta cita el artículo del BOE que la justifica.${ti.nq < 10 ? " Este tema tiene todavía pocas preguntas: estamos ampliándolas." : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="../" data-tema="${i}" data-sim="${esc(JSON.stringify((o.examen || {}).simulacro || null))}">Cargando preguntas…</div>` : `<p class="muted">Todavía no hay preguntas verificadas para este tema.</p>`}</section>
+${ti.nq ? `<p class="muted small">${ti.nq} preguntas de este tema. Cada respuesta cita ${citaOficial(o)} que la justifica.${ti.nq < 10 ? " Este tema tiene todavía pocas preguntas: estamos ampliándolas." : ""}</p><div id="quiz" class="quiz" data-ley="${o.id}" data-base="../" data-tema="${i}" data-sim="${esc(JSON.stringify((o.examen || {}).simulacro || null))}">Cargando preguntas…</div>` : `<p class="muted">Todavía no hay preguntas verificadas para este tema.</p>`}</section>
 <nav class="paginacion" aria-label="Otros temas">${prev ? tarjeta(i - 1, "Anterior") : "<span></span>"}${next ? tarjeta(i + 1, "Siguiente") : ""}</nav>
 <p class="small"><a href="${r}oposiciones/${o.id}/#temario">Temario completo</a> · <a href="${r}panel/?c=${o.id}">Mi progreso</a></p>
 </div></div>`;
@@ -1089,7 +1141,7 @@ fs.writeFileSync(
 );
 // Sitemaps: solo páginas indexables (sin noindex), repartidas por tipo y enlazadas desde un índice (sitemap.xml)
 const idx = pages.filter((p) => !p.noindex);
-const SLUGS_LEY = new Set(PUBLICADAS.map((L) => L.slug));
+const SLUGS_LEY = new Set(PUBLICADAS_WEB.map((L) => L.slug));
 const tipoSitemap = (r) => (r.startsWith("oposiciones/") ? "oposiciones" : r.startsWith("convocatorias/") ? "convocatorias" : r === "leyes/" || SLUGS_LEY.has(r.split("/")[0]) ? "leyes" : "general");
 const SITEMAPS = ["oposiciones", "leyes", "convocatorias", "general"].map((t) => ({ t, ps: idx.filter((p) => tipoSitemap(p.route) === t) })).filter((s) => s.ps.length);
 for (const s of SITEMAPS) {
@@ -1103,7 +1155,7 @@ fs.writeFileSync(
 fs.writeFileSync(path.join(OUT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${C.url}sitemap.xml\n`);
 fs.writeFileSync(
   path.join(OUT, "llms.txt"),
-  `# ${C.name}\n\n> ${C.tagline} Preguntas tipo test de oposiciones cuya respuesta se justifica con la cita literal del texto consolidado del BOE.\n\n## Leyes\n${PUBLICADAS.map((L) => `- [Test ${L.corto}](${C.url}${L.slug}/): ${L.qs.length} preguntas y los ${L.arts.length} artículos de ${L.nombre}, cada uno en su página.`).join("\n")}\n\n## Oposiciones\n${OPOS.map((o) => `- [${o.nombre}](${C.url}oposiciones/${o.id}/): temario oficial y test.`).join("\n")}\n`
+  `# ${C.name}\n\n> ${C.tagline} Preguntas tipo test de oposiciones cuya respuesta se justifica con la cita literal del texto consolidado del BOE.\n\n## Leyes\n${PUBLICADAS_WEB.map((L) => `- [Test ${L.corto}](${C.url}${L.slug}/): ${L.qs.length} preguntas y los ${L.arts.length} artículos de ${L.nombre}, cada uno en su página.`).join("\n")}\n\n## Oposiciones\n${OPOS.map((o) => `- [${o.nombre}](${C.url}oposiciones/${o.id}/): temario oficial y test.`).join("\n")}\n`
 );
 fs.writeFileSync(path.join(OUT, ".nojekyll"), "");
 if (C.customDomain) fs.writeFileSync(path.join(OUT, "CNAME"), C.customDomain + "\n");

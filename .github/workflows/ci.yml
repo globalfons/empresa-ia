@@ -28,6 +28,8 @@ jobs:
         with: { node-version: "22" }
       - uses: denoland/setup-deno@v2
         with: { deno-version: v2.x }
+      - name: Guia d'estudi oficial de Mossos (es descarrega de la font oficial; no es versiona)
+        run: sudo apt-get install -y -q poppler-utils >/dev/null && python3 -m ingesta.gencat guia
       - run: npm run lint
       - run: npm run validar
       - run: npm run test:py

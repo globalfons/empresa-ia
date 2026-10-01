@@ -6,10 +6,10 @@ Uso: python3 datos/calidad_preguntas.py
 import json, os, re, glob, sys, unicodedata, itertools
 D = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, D)
-from validar_lib import norm, vigente
+from validar_lib import norm, vigente, ruta_articulos
 
 # Referencias a otras opciones: con las opciones barajadas dejan de tener sentido (la app baraja siempre)
-REF_OPCIONES = re.compile(r"(?i)\b(todas las anteriores|ninguna de las anteriores|las dos anteriores|ambas (respuestas|opciones) (anteriores|son)|"
+REF_OPCIONES = re.compile(r"(?i)\b(todas las anteriores|ninguna de las anteriores|totes les anteriors|cap de les anteriors|les dues anteriors|las dos anteriores|ambas (respuestas|opciones) (anteriores|son)|"
                           r"(las )?opciones? [a-d] y [a-d]|\b[a-d]\) y [a-d]\)|respuestas? [a-d] y [a-d]|la (primera|segunda|tercera) (opción|respuesta))\b")
 
 def simple(t):
@@ -57,7 +57,7 @@ def auditar():
     informe, todas = {}, []
     for f in sorted(glob.glob(os.path.join(D, "preguntas-*.json"))):
         slug = os.path.basename(f)[10:-5]
-        arts = {a["n"]: norm(vigente(a["texto"])) for a in json.load(open(os.path.join(D, f"{slug}-articulos.json")))}
+        arts = {a["n"]: norm(vigente(a["texto"])) for a in json.load(open(ruta_articulos(slug)))}
         qs = json.load(open(f)); r = {"total": len(qs), "estados": {}, "errores": [], "avisos": [], "sin_dificultad": 0, "sin_explicacion": 0}
         for i, q in enumerate(qs):
             est = q.get("verification_status", "VALID"); r["estados"][est] = r["estados"].get(est, 0) + 1

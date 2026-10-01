@@ -24,7 +24,7 @@ class Copia(unittest.TestCase):
             shutil.copy(os.path.join(R, "catalogo", f), os.path.join(self.t, "catalogo", f))
         os.makedirs(os.path.join(self.t, "docs", "datos"))
         for f in glob.glob(os.path.join(R, "docs", "datos", "*.json")):
-            if os.path.basename(f) == "cobertura.json" or os.path.basename(f).startswith(("age-", "policia-", "guardia-")):
+            if os.path.basename(f) == "cobertura.json" or os.path.basename(f).startswith(("age-", "policia-", "guardia-", "mossos-")):
                 shutil.copy(f, os.path.join(self.t, "docs", "datos"))
 
     def tearDown(self):

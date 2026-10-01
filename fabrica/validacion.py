@@ -16,7 +16,8 @@ CONFIANZA_OK = "alta"
 RESERVADOS = {"verification_status", "estado", "veredicto", "respaldada", "unica", "clara", "duplicada_de", "judge_verdict",
               "judge_policy_version", "judge_reason", "validation_status", "aprobacion_humana", "revision_humana", "traza",
               "juez", "motivo", "published_at", "reviewed_at"}
-ABSOLUTAS = re.compile(r"(?i)\b(solo|sólo|solamente|exclusivamente|únicamente|siempre|nunca|en ningún caso|en todo caso|todos?|ninguno)\b")
+ABSOLUTAS = re.compile(r"(?i)\b(solo|sólo|solamente|exclusivamente|únicamente|siempre|nunca|en ningún caso|en todo caso|todos?|ninguno"
+                       r"|només|solament|exclusivament|únicament|sempre|mai|en cap cas|en tot cas|tots|totes|cap)\b")  # castellano y catalán
 
 
 def simple(t):
@@ -109,6 +110,9 @@ def comprobar(q, ley, n, tema_arts, cfg):
     # Explicación: justifica con la fuente y cita el artículo
     if len(q["exp"].strip()) < 40:
         p.append(("REJECTED", "explicación demasiado corta"))
+    elif getattr(ley, "tipo", "ley") == "guia_oficial":  # guía oficial de Mossos: cita el apartado («apartat A.1.3») o la guia
+        if not re.search(r"(apartat|tema)\s*" + re.escape(n.rsplit(".", 1)[0] if n.endswith(".IF") else n) + r"|Guia d['’]estudi", q["exp"], re.I):
+            p.append(("REJECTED", "l'explicació no cita l'apartat de la Guia d'estudi"))
     elif not re.search(r"art(\.|[ií]culo)\s*" + re.escape(numero(n)), q["exp"], re.I):
         p.append(("REJECTED", "la explicación no cita el artículo"))
     if OFICIAL.search(q["q"] + " " + q["exp"]):

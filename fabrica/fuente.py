@@ -27,12 +27,25 @@ def J(*p):
         return json.load(f)
 
 
+def ruta_articulos(slug, norma):
+    """Texto por artículo/apartado: datos/<slug>-articulos.json (BOE) o la ruta de la norma (fuentes no versionadas, p. ej.
+    la guía oficial de Mossos en datos/cache/, que se descarga de su fuente oficial si falta)."""
+    if norma.get("articulos"):
+        ruta = os.path.join(R, norma["articulos"])
+        if not os.path.exists(ruta) and norma.get("tipo") == "guia_oficial":
+            from ingesta import gencat
+            gencat.assegurar_guia()
+        return ruta
+    return os.path.join(R, "datos", f"{slug}-articulos.json")
+
+
 class Ley:
     def __init__(self, slug, norma, meta):
         self.slug, self.id, self.nombre = slug, norma["id"], norma.get("nombre", slug)
+        self.tipo, self.idioma = norma.get("tipo", "ley"), norma.get("idioma", "es")
         self.version = meta.get(norma["id"], "")
-        self.url = f"https://www.boe.es/buscar/act.php?id={norma['id']}"
-        arts = J("datos", f"{slug}-articulos.json")
+        self.url = norma.get("url") or f"https://www.boe.es/buscar/act.php?id={norma['id']}"
+        arts = json.load(open(ruta_articulos(slug, norma), encoding="utf-8"))
         self.orden = [a["n"] for a in arts]
         self.arts = {a["n"]: a for a in arts}
         self.texto = {a["n"]: norm(vigente(a["texto"])) for a in arts}
@@ -77,7 +90,7 @@ class Fuentes:
 
     def ley(self, slug):
         if slug not in self._leyes:
-            if slug not in self.normas or not os.path.exists(os.path.join(R, "datos", f"{slug}-articulos.json")):
+            if slug not in self.normas or not os.path.exists(ruta_articulos(slug, self.normas[slug])):
                 return None
             self._leyes[slug] = Ley(slug, self.normas[slug], self.meta)
         return self._leyes[slug]

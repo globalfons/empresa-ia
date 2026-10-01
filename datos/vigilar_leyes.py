@@ -91,7 +91,7 @@ if __name__ == "__main__":
     slugs = sys.argv[1:] or sorted(os.path.basename(f)[10:-5] for f in glob.glob(os.path.join(D, "preguntas-*.json")))
     total = []
     for s in slugs:
-        if s not in normas: continue
+        if s not in normas or not normas[s].startswith("BOE-"): continue  # solo textos consolidados del BOE (la guía de Mossos: ingesta/gencat.py)
         try: r = revisar(s, normas[s], meta)
         except Exception as e:
             print(f"✘ {s}: {str(e)[:120]} (se conserva el texto actual)"); continue

@@ -54,6 +54,8 @@ jobs:
         with: { node-version: "22" }
       - name: Dependencias
         run: pip install "anthropic>=0.60"
+      - name: Guia d'estudi oficial de Mossos (font oficial, no versionada)
+        run: sudo apt-get install -y -q poppler-utils >/dev/null && python3 -m ingesta.gencat guia
       - name: Comprobaciones previas (banco, tests y build deben estar en verde)
         run: |
           npm run lint

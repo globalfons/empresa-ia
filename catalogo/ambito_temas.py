@@ -64,7 +64,8 @@ def por_rangos(slug, rangos):
 def construir(opos):
     manual = json.load(open(os.path.join(D, "temas_ambito_manual.json")))
     previo = json.load(open(os.path.join(D, "temas_ambito.json"))) if os.path.exists(os.path.join(D, "temas_ambito.json")) else {}
-    normas = {n["id"]: n["slug"] for n in json.load(open(os.path.join(D, "normas_base.json")))}
+    base = {n["id"]: n for n in json.load(open(os.path.join(D, "normas_base.json")))}
+    normas = {i: n["slug"] for i, n in base.items()}
     out = {}
     for o in opos:
         uso = collections.Counter(n for t in o["temario"] for n in t["normas"])
@@ -72,6 +73,14 @@ def construir(opos):
             for n in t["normas"]:
                 slug = normas.get(n)
                 k = f"{o['id']}#{i}#{slug}"
+                # Guía oficial estructurada como el temario (Mossos: «A.1.3»): el tema abarca sus apartados oficiales
+                if slug and (base[n].get("tipo") == "guia_oficial") and t.get("codigo"):
+                    ruta = os.path.join(os.path.dirname(D), base[n]["articulos"])
+                    if os.path.exists(ruta):
+                        arts = [a["n"] for a in json.load(open(ruta)) if a["n"].startswith(t["codigo"] + ".")]
+                        out[k] = {"tema": t["tema"], "titulo": t["titulo"][:160], "ley": slug, "unidades": [t["codigo"]], "coincidencias": {},
+                                  "articulos": arts, "estado": "precisado" if arts else "sin_precisar", "metodo": "apartats oficials de la guia per al codi del tema"}
+                    continue
                 # Una ley que solo aparece en un tema se incluye completa, salvo corrección manual de su ámbito
                 if not slug or (uso[n] < 2 and k not in manual) or not os.path.exists(os.path.join(DATOS, f"{slug}-articulos.json")): continue
                 if (previo.get(k) or {}).get("fijado"): out[k] = previo[k]; continue  # corrección manual: se respeta

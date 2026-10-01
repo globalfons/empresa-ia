@@ -44,6 +44,12 @@ jobs:
       - name: Novedades de las oposiciones seguidas (BOE)
         run: python3 catalogo/vigilar_boe.py
         continue-on-error: true
+      - name: Novedades de Mossos d'Esquadra (web oficial mossos.gencat.cat) y guía de estudio
+        run: |
+          sudo apt-get install -y -q poppler-utils >/dev/null
+          python3 catalogo/vigilar_gencat.py
+          python3 -m ingesta.gencat guia
+        continue-on-error: true
       - name: Cambios en las leyes (BOE consolidado) → preguntas a revisar o retiradas
         # Artículo modificado: historial en datos/versiones/, preguntas REVIEW_REQUIRED u OUTDATED y evento LAW_UPDATED
         run: |

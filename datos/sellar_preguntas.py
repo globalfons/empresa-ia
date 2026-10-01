@@ -7,11 +7,13 @@ Uso: python3 datos/sellar_preguntas.py [--revisadas slug:art ...]
 import json, os, glob, sys, datetime
 D = os.path.dirname(os.path.abspath(__file__)); RAIZ = os.path.dirname(D)
 sys.path.insert(0, D)
-from validar_lib import norm, vigente
+from validar_lib import norm, vigente, ruta_articulos
 
 def sellar(slug, boe_id, meta, hoy=None):
     hoy = hoy or datetime.date.today().isoformat()
     fq, fa = os.path.join(D, f"preguntas-{slug}.json"), os.path.join(D, f"{slug}-articulos.json")
+    if not os.path.exists(fa):  # fuentes no versionadas (guía oficial de Mossos): ruta de normas_base.json
+        fa = ruta_articulos(slug)
     qs = json.load(open(fq)); arts = {a["n"]: norm(vigente(a["texto"])) for a in json.load(open(fa))}
     n = 0
     for q in qs:
