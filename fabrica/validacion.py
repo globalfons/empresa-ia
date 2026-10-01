@@ -12,6 +12,10 @@ from validar_lib import norm  # noqa: E402
 
 OFICIAL = re.compile(r"(?i)\b(examen oficial|pregunta oficial|convocatoria de 20\d\d, pregunta)")
 CONFIANZA_OK = "alta"
+# Campos que solo fijan el juez, la revisión humana o el banco: si el generador los trae, intenta aprobarse a sí mismo
+RESERVADOS = {"verification_status", "estado", "veredicto", "respaldada", "unica", "clara", "duplicada_de", "judge_verdict",
+              "judge_policy_version", "judge_reason", "validation_status", "aprobacion_humana", "revision_humana", "traza",
+              "juez", "motivo", "published_at", "reviewed_at"}
 ABSOLUTAS = re.compile(r"(?i)\b(solo|sólo|solamente|exclusivamente|únicamente|siempre|nunca|en ningún caso|en todo caso|todos?|ninguno)\b")
 
 
@@ -59,6 +63,9 @@ def dificultad(q, cfg):
 def comprobar(q, ley, n, tema_arts, cfg):
     """Controles deterministas. Devuelve lista de (estado, motivo); vacía = sin problemas."""
     p = []
+    propios = sorted(RESERVADOS & set(q))
+    if propios:
+        return [("REJECTED", f"separación de funciones: el generador no puede fijar estado ni veredicto ({', '.join(propios)})")]
     req = {"tipo": str, "q": str, "o": list, "a": int, "cita": str, "exp": str, "dif": int}
     for k, tipo in req.items():
         if not isinstance(q.get(k), tipo):

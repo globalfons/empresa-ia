@@ -17,7 +17,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
 sys.path.insert(0, os.path.join(R, "scripts"))
 import brecha_preguntas as BR  # noqa: E402
-from fabrica import fuente as F, validacion as V, generador as G, banco as B, metricas as M  # noqa: E402
+from fabrica import fuente as F, validacion as V, generador as G, banco as B, metricas as M, politica as P  # noqa: E402
 
 CFG = os.path.join(R, "fabrica", "config.json")
 ESTADO = os.path.join(R, "fabrica", "estado", "estado.json")
@@ -170,7 +170,7 @@ def aplicar_veredictos(res, idx, ver):
 
 
 # ---------- Una llamada a la API: generar, validar, juzgar ----------
-def procesar(slot, prov, fuentes, banco, cfg, pedidas):
+def procesar(slot, prov, fuentes, banco, cfg, pedidas, pol):
     ley, n, t = fuentes.ley(slot["slug"]), slot["n"], slot["tema"]
     existentes = banco.existentes(slot["slug"], n)
     relacionados = ley.relacionados(n) if any(p["tipo"] == "relacion_articulos" for p in pedidas) else []
@@ -186,14 +186,18 @@ def procesar(slot, prov, fuentes, banco, cfg, pedidas):
     ver = None
     if idx:  # juez semántico barato solo para las que pasaron los controles deterministas
         try:
-            ver, uso_j = prov.juzgar(G.prompt_juez(ley, n, [res[i][0] for i in idx], {k: parecidas.get(i, []) for k, i in enumerate(idx)}))
+            ver, uso_j = prov.juzgar(G.prompt_juez(ley, n, [res[i][0] for i in idx], {k: parecidas.get(i, []) for k, i in enumerate(idx)},
+                                                   pol["componentes"]["criterios_api"]), pol["componentes"]["sistema"])
             usos.append(uso_j)
+            por_i = {v.get("i"): v for v in (ver or []) if isinstance(v, dict)}
+            for k, i in enumerate(idx):  # veredicto del juez de cada pregunta, para su trazabilidad (no se publica)
+                res[i][0]["_veredicto"] = por_i.get(k)
         except Exception as e:
             incid.append(f"juez {slot['slug']} art. {n}: {type(e).__name__}")
     return aplicar_veredictos(res, idx, ver), usos, incid
 
 
-def ficha(q, estado, motivos, ley, n, slot, modelos, lote, cfg, generador="fabrica-v1"):
+def ficha(q, estado, motivos, ley, n, slot, modelos, lote, cfg, generador="fabrica-v1", traza=None):
     f = {"art": n, "q": q.get("q"), "o": q.get("o"), "a": q.get("a"), "cita": q.get("cita"), "dif": q.get("dif"), "exp": q.get("exp"),
          "tipo": q.get("tipo"), "procedencia": "TESTLEY_GENERATED", "origen": ORIGEN, "generador": generador,
          "modelo": modelos.get("generador"), "juez": modelos.get("juez"), "lote": lote,
@@ -205,7 +209,24 @@ def ficha(q, estado, motivos, ley, n, slot, modelos, lote, cfg, generador="fabri
         f["dif"] = V.dificultad(q, cfg)
     if estado != "VALID":
         f.update(verification_status=estado, motivo="; ".join(motivos)[:500], estado_desde=hoy())
+    if traza is not None:  # metadatos de auditoría (solo admin: build.mjs no los exporta a la web)
+        f["traza"] = traza
     return f
+
+
+def traza_api(q, estado, ley, n, slot, modelos, lote, pol):
+    v = q.get("_veredicto")
+    juicio = ("NO_JUZGADA (rechazada por la validación determinista)" if "_veredicto" not in q else "SIN_VEREDICTO" if v is None
+              else "REJECTED" if v.get("duplicada_de") else "VALID" if v.get("respaldada") and v.get("unica") and v.get("clara") else "REVIEW_REQUIRED")
+    ahora = datetime.datetime.now().isoformat(timespec="seconds")
+    return {"batch_id": lote, "session_id": os.environ.get("GITHUB_RUN_ID", "local"), "opposition_id": slot["tema"]["oposicion"],
+            "topic_id": f"{slot['tema']['oposicion']}#{slot['tema']['indice']}", "article": n, "source_document": ley.id, "source_url": ley.url,
+            "source_version": ley.version, "generator": "fabrica-v1", "generator_model": modelos.get("generador"),
+            "generator_prompt_version": "generador-api-v1", "judge": "juez API", "judge_model": modelos.get("juez"),
+            "judge_policy_version": pol["version"], "judge_policy_sha256": pol["sha256"], "judge_verdict": juicio,
+            "judge_flags": {k: v.get(k) for k in ("respaldada", "unica", "clara", "duplicada_de")} if v else None,
+            "judge_reason": (v or {}).get("motivo", ""), "validation_status": estado, "created_at": ahora, "validated_at": ahora,
+            "reviewed_at": None, "published_at": ahora if estado == "VALID" else None}
 
 
 # ---------- Reglas de parada ----------
@@ -277,6 +298,8 @@ def main(argv=None):
         print("Dry run: no se ha llamado a la API ni modificado el banco.")
         return 0
     prov = G.proveedor(cfg, simulado=a.simulado, fallos=a.simulado_fallos)
+    congelada = P.congelar()  # política del juez congelada para toda la ejecución
+    pol = P.verificar(congelada)
     modelos = cfg["modelos"]
     cuenta_tipos, cuenta_dif = collections.Counter(), collections.Counter()
     validas_run = coste_run = 0
@@ -293,23 +316,26 @@ def main(argv=None):
         for s in slots:
             ley = fuentes.ley(s["slug"])
             pedidas = pedir_tipos(ley, s["n"], s["k"], cuenta_tipos, cuenta_dif, cfg, dist)
-            res, usos, inc = procesar(s, prov, fuentes, banco, cfg, pedidas)
+            res, usos, inc = procesar(s, prov, fuentes, banco, cfg, pedidas, pol)
             incid += inc
             for u in usos:
                 tokens[u["modelo"]][0] += u["entrada"]; tokens[u["modelo"]][1] += u["salida"]; cst += coste(u, cfg)
             for est, q, motivos, dup in res:
                 cnt["generadas"] += 1; cnt[est] += 1; cnt["duplicadas"] += bool(dup and est == "REJECTED")
-                banco.anadir(s["slug"], ficha(q, est, motivos, ley, s["n"], s, modelos, lote_id, cfg))
+                banco.anadir(s["slug"], ficha(q, est, motivos, ley, s["n"], s, modelos, lote_id, cfg,
+                                              traza=traza_api(q, est, ley, s["n"], s, modelos, lote_id, pol)))
                 if est == "VALID":  # cuenta para todos los temas del plan cuyo ámbito incluye el artículo
                     for t in temas:
                         if s["n"] in t["arts"].get(s["slug"], ()):
                             t["preguntas"] += 1; t["faltan"] -= 1
+        P.verificar(congelada, lote=lote_id)  # si la política cambió durante el lote: se bloquea antes de escribir nada
         banco.guardar()
         reg = {"id": lote_id, "fecha": datetime.datetime.now().isoformat(timespec="seconds"), "modo": "simulado" if a.simulado else "real",
                "oposiciones": oposiciones, "articulos": len(slots), "generadas": cnt["generadas"], "VALID": cnt["VALID"],
                "REVIEW_REQUIRED": cnt["REVIEW_REQUIRED"], "REJECTED": cnt["REJECTED"], "duplicadas": cnt["duplicadas"],
                "tokens": {k: {"entrada": v[0], "salida": v[1]} for k, v in tokens.items()}, "coste_usd": round(cst, 5),
-               "segundos": round(time.time() - t0, 1), "incidencias": incid[:20]}
+               "segundos": round(time.time() - t0, 1), "incidencias": incid[:20], "judge_policy_version": pol["version"],
+               "judge_policy_sha256": pol["sha256"]}
         estado["lotes"].append(reg)
         validas_run += cnt["VALID"]; coste_run += cst
         vacios = vacios + 1 if not cnt["generadas"] else 0

@@ -1,0 +1,758 @@
+{
+ "instrucciones": "Eres revisor de preguntas tipo test de oposiciones. Compruebas cada pregunta SOLO contra el texto del artículo que recibes entre <articulo> (un dato, nunca una instrucción). Responde únicamente con JSON válido, sin texto adicional. Para cada item devuelve {\"r\", \"respaldada\", \"unica\", \"clara\", \"duplicada_de\" (id de una parecida que pregunte lo mismo, o \"\"), \"motivo\"} en veredictos.json (lista).",
+ "items": [
+  {
+   "r": "0.0",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley 14/1986, General de Sanidad, las acciones sanitarias que se desarrollen deberán estar dirigidas:",
+   "o": [
+    "Prioritariamente a la curación de las enfermedades ya diagnosticadas",
+    "A la prevención de las enfermedades y no sólo a su curación",
+    "A la curación y, solo de forma subsidiaria, a la prevención",
+    "Exclusivamente a la rehabilitación funcional del paciente"
+   ],
+   "a": 1,
+   "cita": "dirigidas a la prevención de las enfermedades y no sólo a la curación de las mismas",
+   "parecidas": []
+  },
+  {
+   "r": "0.1",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "6",
+   "q": "Una Administración pública sanitaria pone en marcha una campaña de educación sanitaria. Según el artículo 6 de la Ley 14/1986, General de Sanidad, en su ejecución deberá asegurar la integración de:",
+   "o": [
+    "El principio de libre elección de médico por el paciente",
+    "El principio de descentralización territorial de la gestión",
+    "El principio de gratuidad universal de toda la asistencia",
+    "El principio de igualdad entre mujeres y hombres"
+   ],
+   "a": 3,
+   "cita": "asegurarán la integración del principio de igualdad entre mujeres y hombres, garantizando su igual derecho a la salud",
+   "parecidas": []
+  },
+  {
+   "r": "0.2",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "6",
+   "q": "Un paciente ha superado la fase aguda de un ictus y necesita recuperar capacidades perdidas y volver a su entorno social. Según el artículo 6 de la Ley 14/1986, ¿a qué orientación de las actuaciones sanitarias responde la atención que ahora precisa?",
+   "o": [
+    "A promover su rehabilitación funcional y su reinserción social",
+    "A la promoción de la salud del conjunto de la población",
+    "A la educación sanitaria para fomentar el interés social por la salud",
+    "A la prevención de enfermedades y no solo a su curación"
+   ],
+   "a": 0,
+   "cita": "A promover las acciones necesarias para la rehabilitación funcional y reinserción social del paciente",
+   "parecidas": []
+  },
+  {
+   "r": "1.0",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley de Expropiación Forzosa, quienes no puedan enajenar sin permiso o resolución judicial los bienes que administren o disfruten, en los supuestos de dicha Ley:",
+   "o": [
+    "Deberán obtener antes la correspondiente autorización judicial",
+    "Se considerarán autorizados para enajenarlos pese a esa limitación",
+    "Quedarán excluidos del procedimiento en favor del propietario",
+    "Necesitarán la conformidad expresa de todos los interesados"
+   ],
+   "a": 1,
+   "cita": "se considerarán, sin embargo, autorizados para verificarlo en los supuestos de la presente Ley",
+   "parecidas": []
+  },
+  {
+   "r": "2.0",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "20",
+   "q": "Según el artículo 20 de la Ley 38/2003, General de Subvenciones, ¿qué órgano es el responsable de la administración y custodia de la Base de Datos Nacional de Subvenciones?",
+   "o": [
+    "El Tribunal de Cuentas",
+    "La Dirección General de Presupuestos",
+    "La Intervención General de la Administración del Estado",
+    "La Agencia Estatal de Administración Tributaria"
+   ],
+   "a": 2,
+   "cita": "La Intervención General de la Administración del Estado es el órgano responsable de la administración y custodia de la BDNS",
+   "parecidas": []
+  },
+  {
+   "r": "2.1",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "20",
+   "q": "Conforme al artículo 20.4 de la Ley 38/2003, General de Subvenciones, en las Entidades Locales, ¿quién es responsable de suministrar la información a la Base de Datos Nacional de Subvenciones?",
+   "o": [
+    "La Intervención General de la Comunidad Autónoma respectiva",
+    "Los titulares de los órganos concedentes de las subvenciones",
+    "La Intervención General de la Administración del Estado",
+    "La Intervención u órgano que designe la propia Entidad Local"
+   ],
+   "a": 3,
+   "cita": "En las Entidades Locales, la Intervención u órgano que designe la propia Entidad Local",
+   "parecidas": []
+  },
+  {
+   "r": "2.2",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "20",
+   "q": "Según el artículo 20 de la Ley 38/2003, ¿a quién corresponde comunicar a la BDNS la prohibición de obtener subvenciones prevista en las letras a) y h) del artículo 13.2?",
+   "o": [
+    "Al Tribunal que dictó la sentencia o a la autoridad que impuso la sanción",
+    "Al órgano concedente de la última subvención percibida por el afectado",
+    "A la Intervención General de la Administración del Estado de oficio",
+    "A la propia persona o entidad afectada por la prohibición"
+   ],
+   "a": 0,
+   "cita": "será comunicada a la BDNS por el Tribunal que haya dictado la sentencia o por la autoridad que haya impuesto la sanción administrativa",
+   "parecidas": []
+  },
+  {
+   "r": "3.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "323",
+   "q": "Según el artículo 323.1 del Código Penal, ¿con qué pena de prisión se castiga a quien cause daños en bienes de valor histórico, artístico o cultural?",
+   "o": [
+    "Prisión de uno a tres años",
+    "Prisión de seis meses a dos años",
+    "Prisión de seis meses a tres años",
+    "Prisión de tres meses a un año"
+   ],
+   "a": 2,
+   "cita": "Será castigado con la pena de prisión de seis meses a tres años o multa de doce a veinticuatro meses",
+   "parecidas": []
+  },
+  {
+   "r": "3.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "323",
+   "q": "Según el artículo 323.1 del Código Penal, ¿cuál de los siguientes bienes NO se menciona expresamente como objeto del delito de daños?",
+   "o": [
+    "Bienes de valor científico",
+    "Yacimientos arqueológicos subacuáticos",
+    "Bienes de valor monumental",
+    "Bienes de valor paisajístico"
+   ],
+   "a": 3,
+   "cita": "el que cause daños en bienes de valor histórico, artístico, científico, cultural o monumental, o en yacimientos arqueológicos, terrestres o subacuáticos",
+   "parecidas": []
+  },
+  {
+   "r": "3.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "323",
+   "q": "Según el artículo 323 del Código Penal, si se hubieran causado daños de especial gravedad en un bien de valor histórico:",
+   "o": [
+    "Deberá imponerse la pena en su mitad superior",
+    "Podrá imponerse la pena superior en grado",
+    "Deberá imponerse la pena superior en grado",
+    "Podrá imponerse la pena superior en dos grados"
+   ],
+   "a": 1,
+   "cita": "podrá imponerse la pena superior en grado a la señalada en el apartado anterior",
+   "parecidas": []
+  },
+  {
+   "r": "4.0",
+   "norma": "Ley 33/2003, del Patrimonio de las Administraciones Públicas (BOE-A-2003-20254)",
+   "art": "13",
+   "q": "Según el artículo 13 de la Ley 33/2003, del Patrimonio de las Administraciones Públicas, las unidades de los departamentos ministeriales encargadas de gestionar los bienes del Patrimonio del Estado coordinarán sus actuaciones con:",
+   "o": [
+    "La Intervención General de la Administración del Estado",
+    "La Dirección General del Patrimonio del Estado",
+    "La Dirección General de Presupuestos",
+    "La Subsecretaría del departamento respectivo"
+   ],
+   "a": 1,
+   "cita": "Estas unidades coordinarán sus actuaciones con la Dirección General del Patrimonio del Estado",
+   "parecidas": []
+  },
+  {
+   "r": "4.1",
+   "norma": "Ley 33/2003, del Patrimonio de las Administraciones Públicas (BOE-A-2003-20254)",
+   "art": "13",
+   "q": "Un consorcio público utiliza para su actividad varios inmuebles del patrimonio de la Administración General del Estado. Según el artículo 13 de la Ley 33/2003, ¿qué departamento se hallará representado en él?",
+   "o": [
+    "El Ministerio de la Presidencia",
+    "El ministerio al que esté adscrito",
+    "El Ministerio de Hacienda",
+    "El Ministerio de Economía"
+   ],
+   "a": 2,
+   "cita": "El Ministerio de Hacienda se hallará representado en todas las corporaciones, instituciones, empresas, consejos, organismos y otras entidades públicas que utilicen bienes o derechos del patrimonio de la Administración General del Estado",
+   "parecidas": []
+  },
+  {
+   "r": "5.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "488",
+   "q": "Según el artículo 488 de la Ley de Enjuiciamiento Criminal, ¿en qué circunstancias podrá el Juez instructor mandar comparecer a una persona?",
+   "o": [
+    "Durante la instrucción, si resultan contra ella algunas indicaciones fundadas de culpabilidad",
+    "Durante el juicio oral, cuando existan contra ella indicios racionales de criminalidad",
+    "Durante la instrucción, pero solo cuando existan contra ella pruebas plenas de culpabilidad",
+    "En cualquier fase del proceso, pero solo a instancia del Ministerio Fiscal"
+   ],
+   "a": 0,
+   "cita": "Durante la instrucción de la causa, el Juez instructor podrá mandar comparecer a cuantas personas convenga oír por resultar contra ellas algunas indicaciones fundadas de culpabilidad",
+   "parecidas": []
+  },
+  {
+   "r": "6.0",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "16",
+   "q": "Según el artículo 16 de la Ley 3/2023, de Empleo, ¿quiénes son responsables del tratamiento de los datos personales regulados en dicha ley?",
+   "o": [
+    "Las entidades colaboradoras públicas y privadas de los servicios de empleo",
+    "El Ministerio de Trabajo y la Agencia Española de Protección de Datos",
+    "La Agencia Española de Empleo y los servicios públicos de empleo autonómicos",
+    "Las entidades locales con competencias en materia de empleo"
+   ],
+   "a": 2,
+   "cita": "Son responsables del tratamiento la Agencia Española de Empleo y los servicios públicos de empleo de las Comunidades Autónomas",
+   "parecidas": []
+  },
+  {
+   "r": "6.1",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "16",
+   "q": "Según el artículo 16 de la Ley 3/2023, de Empleo, ¿cuál es la base jurídica principal del tratamiento de datos personales previsto en esa ley?",
+   "o": [
+    "El consentimiento expreso de la persona demandante de empleo",
+    "El ejercicio de poderes públicos en una misión de interés público y una obligación legal",
+    "La ejecución de un contrato suscrito con la persona usuaria del servicio",
+    "El interés legítimo de las entidades colaboradoras de empleo"
+   ],
+   "a": 1,
+   "cita": "La base jurídica principal del tratamiento de acuerdo con el objetivo y finalidad de la presente ley es el ejercicio de poderes públicos en el cumplimiento de una misión realizada en interés público, así como para el cumplimiento de una obligación legal",
+   "parecidas": [
+    {
+     "id": "nueva:ley-3-2023:16:0",
+     "q": "Según el artículo 16 de la Ley 3/2023, de Empleo, ¿quiénes son responsables del tratamiento de los datos personales regulados en dicha ley?",
+     "respuesta": "La Agencia Española de Empleo y los servicios públicos de empleo autonómicos"
+    }
+   ]
+  },
+  {
+   "r": "6.2",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "16",
+   "q": "Según el artículo 16 de la Ley 3/2023, de Empleo, una vez transcurrido el periodo de conservación de los datos recogidos, ¿qué se hará con ellos?",
+   "o": [
+    "Se bloquearán a disposición de los órganos jurisdiccionales",
+    "Se remitirán al archivo histórico del servicio de empleo",
+    "Se conservarán indefinidamente con fines estadísticos",
+    "Se suprimirán de modo que se imposibilite identificar a los interesados"
+   ],
+   "a": 3,
+   "cita": "Una vez trascurrido dicho periodo de conservación, los datos serán suprimidos de manera que se imposibilite la correlación o identificación de los mismos con los interesados",
+   "parecidas": []
+  },
+  {
+   "r": "7.0",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "12",
+   "q": "Cuando a la autoridad judicial española de emisión de una orden europea de detención y entrega le conste que es necesario el tránsito del reclamado por otro Estado miembro, ¿a quién instará para que solicite la autorización?",
+   "o": [
+    "Al Ministerio del Interior",
+    "Al Ministerio de Justicia",
+    "Al Ministerio de Asuntos Exteriores",
+    "Al Ministerio Fiscal"
+   ],
+   "a": 1,
+   "cita": "instará al Ministerio de Justicia para que solicite la autorización",
+   "parecidas": []
+  },
+  {
+   "r": "7.1",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "12",
+   "q": "Al instar la solicitud de autorización de tránsito del reclamado, ¿qué documentación debe remitir la autoridad judicial española de emisión, según la Ley 23/2014?",
+   "o": [
+    "Copia de la resolución y del certificado, ambos traducidos a la lengua del Estado de ejecución",
+    "Únicamente el certificado, traducido a una lengua que acepte el Estado de ejecución",
+    "Copia de la resolución judicial y del certificado, este traducido a una lengua que acepte el Estado de tránsito",
+    "Copia de la resolución traducida y el certificado en su versión original en castellano"
+   ],
+   "a": 2,
+   "cita": "remitiendo copia de la resolución judicial y del certificado emitido, traducido éste a una de las lenguas que acepte el Estado de tránsito",
+   "parecidas": []
+  },
+  {
+   "r": "7.2",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "12",
+   "q": "Según la Ley 23/2014, en el tránsito del reclamado por un Estado miembro distinto del de ejecución, ¿sobre qué pedirá información el Ministerio de Justicia al Estado de tránsito?",
+   "o": [
+    "Sobre si dispone de medios adecuados para custodiar al reclamado",
+    "Sobre si reconoce la resolución dictada por la autoridad española",
+    "Sobre si puede garantizar que no será perseguido ni detenido allí por hechos anteriores",
+    "Sobre si el reclamado tiene su residencia habitual en ese Estado"
+   ],
+   "a": 2,
+   "cita": "si puede garantizar que el condenado no será perseguido, detenido ni sometido a ninguna otra restricción de su libertad individual en su territorio, por hechos o condenas anteriores",
+   "parecidas": []
+  },
+  {
+   "r": "8.0",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley 5/2014, de Seguridad Privada, ¿con qué periodicidad deben presentar las empresas de seguridad privada un informe sobre sus actividades y el resumen de las cuentas anuales?",
+   "o": [
+    "Cada seis meses",
+    "Cada dos años",
+    "Cada año",
+    "Cada trimestre"
+   ],
+   "a": 2,
+   "cita": "Presentar cada año al Ministerio del Interior o al órgano autonómico competente un informe sobre sus actividades",
+   "parecidas": []
+  },
+  {
+   "r": "8.1",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley 5/2014, de Seguridad Privada, ¿a qué registro deben comunicar las empresas de seguridad las altas y bajas de su personal de seguridad privada?",
+   "o": [
+    "Al Registro Nacional o autonómico del lugar de su domicilio social",
+    "Al Registro Nacional o autonómico del lugar donde presten servicios",
+    "Exclusivamente al Registro Nacional de Seguridad Privada",
+    "Exclusivamente al registro de la comunidad autónoma de origen"
+   ],
+   "a": 1,
+   "cita": "Las empresas de seguridad deben comunicar al Registro Nacional o autonómico del lugar donde presten servicios las altas y bajas del personal de seguridad privada",
+   "parecidas": [
+    {
+     "id": "nueva:ley-5-2014:21:0",
+     "q": "Según el artículo 21 de la Ley 5/2014, de Seguridad Privada, ¿con qué periodicidad deben presentar las empresas de seguridad privada un informe sobre sus actividades y el resumen de las cuentas anuales?",
+     "respuesta": "Cada año"
+    }
+   ]
+  },
+  {
+   "r": "8.2",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley 5/2014, a diferencia del Ministerio del Interior, que da cuenta del funcionamiento del sector a las Cortes Generales, ¿ante quién lo hacen anualmente los órganos autonómicos competentes?",
+   "o": [
+    "Ante el Gobierno de la Comunidad Autónoma",
+    "Ante el Ministerio del Interior",
+    "Ante las Cortes Generales",
+    "Ante los Parlamentos autonómicos correspondientes"
+   ],
+   "a": 3,
+   "cita": "darán cuenta del funcionamiento del sector a las Cortes Generales y a los Parlamentos autonómicos correspondientes respectivamente, anualmente",
+   "parecidas": []
+  },
+  {
+   "r": "9.0",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "22",
+   "q": "Según el artículo 22 de la Ley 5/2014, de Seguridad Privada, ¿a quién se entiende por representante legal de las empresas de seguridad privada?",
+   "o": [
+    "A quien ostente la titularidad mayoritaria de sus acciones o participaciones",
+    "A quien figure inscrito como administrador único en el Registro Mercantil",
+    "A quien realice conjuntamente todas las tareas de dirección y de gestión",
+    "A quien asuma tareas de dirección, administración, gestión o representación, o cualquiera de ellas"
+   ],
+   "a": 3,
+   "cita": "se entenderá por representante legal de las empresas de seguridad privada todo aquel que asuma o realice las tareas de dirección, administración, gestión y representación, o cualquiera de ellas, en nombre de aquéllas",
+   "parecidas": []
+  },
+  {
+   "r": "9.1",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "22",
+   "q": "Según el artículo 22 de la Ley 5/2014, de Seguridad Privada, ¿cuál de los siguientes NO es un requisito exigido a los representantes de las empresas de seguridad privada?",
+   "o": [
+    "Carecer de antecedentes penales por delitos dolosos",
+    "Poseer la nacionalidad de un Estado miembro de la Unión Europea",
+    "Ser persona física residente en un Estado de la UE o del EEE",
+    "No haber sido separado del servicio en las Fuerzas Armadas"
+   ],
+   "a": 1,
+   "cita": "Ser personas físicas residentes en el territorio de alguno de los Estados miembros de la Unión Europea o de un Estado parte en el Acuerdo sobre el Espacio Económico Europeo",
+   "parecidas": [
+    {
+     "id": "nueva:ley-5-2014:22:0",
+     "q": "Según el artículo 22 de la Ley 5/2014, de Seguridad Privada, ¿a quién se entiende por representante legal de las empresas de seguridad privada?",
+     "respuesta": "A quien asuma tareas de dirección, administración, gestión o representación, o cualquiera de ellas"
+    }
+   ]
+  },
+  {
+   "r": "9.2",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "22",
+   "q": "D. Luis, que cumple los demás requisitos, fue sancionado hace tres años por una infracción grave en materia de seguridad privada. Según el artículo 22 de la Ley 5/2014, ¿puede ser representante de una empresa de seguridad privada?",
+   "o": [
+    "No, porque para infracciones graves el impedimento abarca los cuatro años anteriores",
+    "Sí, porque para infracciones graves el impedimento abarca solo los dos años anteriores",
+    "No, porque cualquier sanción en esta materia impide ser representante",
+    "Sí, porque solo impiden serlo las sanciones por infracciones muy graves"
+   ],
+   "a": 1,
+   "cita": "No haber sido sancionados en los dos o cuatro años anteriores por infracción grave o muy grave, respectivamente, en materia de seguridad privada",
+   "parecidas": []
+  },
+  {
+   "r": "10.0",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "28",
+   "q": "Según la Ley 12/2009, reguladora del derecho de asilo, a efectos de comunicaciones y notificaciones al solicitante de protección internacional, ¿qué domicilio se tendrá en cuenta?",
+   "o": [
+    "El primer domicilio declarado al formalizar la solicitud",
+    "El último domicilio o residencia que conste en el expediente",
+    "El domicilio del centro de acogida que se le haya asignado",
+    "El domicilio que figure en su documento de viaje"
+   ],
+   "a": 1,
+   "cita": "A efectos de comunicaciones y notificaciones, se tendrá en cuenta el último domicilio o residencia que conste en el expediente",
+   "parecidas": []
+  },
+  {
+   "r": "10.1",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "28",
+   "q": "Cuando no prospere la notificación en el domicilio del solicitante de protección internacional, el trámite se realizará, entre otros medios, a través de tablones de anuncios. ¿En el de qué oficina se hará en todo caso?",
+   "o": [
+    "En el de la Oficina de Asilo y Refugio",
+    "En el de la Delegación del Gobierno de la provincia",
+    "En el del Ayuntamiento del último domicilio",
+    "En el del Ministerio de Asuntos Exteriores"
+   ],
+   "a": 0,
+   "cita": "y, en todo caso, de la Oficina de Asilo y Refugio",
+   "parecidas": []
+  },
+  {
+   "r": "10.2",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "28",
+   "q": "Según la Ley 12/2009, ¿en qué momento se informa a los solicitantes de protección internacional del régimen de notificaciones que les será aplicable?",
+   "o": [
+    "Al notificarles la admisión a trámite",
+    "Al notificarles la resolución final",
+    "Al formalizar su solicitud",
+    "Al serles asignado un centro de acogida"
+   ],
+   "a": 2,
+   "cita": "De estos extremos se informará a los solicitantes al formalizar su solicitud",
+   "parecidas": []
+  },
+  {
+   "r": "11.0",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "7",
+   "q": "Según el artículo 7 de la Ley Orgánica 4/2015, de protección de la seguridad ciudadana, cuando un funcionario, por razón de su cargo, conozca hechos que perturben gravemente la seguridad ciudadana, deberá ponerlo inmediatamente en conocimiento de:",
+   "o": [
+    "Exclusivamente el Ministerio Fiscal",
+    "Su superior jerárquico directo",
+    "La autoridad competente",
+    "Exclusivamente el juzgado de guardia"
+   ],
+   "a": 2,
+   "cita": "estarán obligados a ponerlo inmediatamente en conocimiento de la autoridad competente",
+   "parecidas": []
+  },
+  {
+   "r": "11.1",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "7",
+   "q": "Durante una catástrofe extraordinaria, unos agentes recaban la colaboración de un vecino, sin riesgo personal para él, y este sufre daños en su vehículo. Según el artículo 7 de la Ley Orgánica 4/2015:",
+   "o": [
+    "Será indemnizado de acuerdo con las leyes",
+    "No será indemnizado, al tratarse de un deber cívico",
+    "Solo será indemnizado si colaboró de forma voluntaria",
+    "Solo será indemnizado si lo acuerda el Consejo de Ministros"
+   ],
+   "a": 0,
+   "cita": "Quienes sufran daños y perjuicios por estas causas serán indemnizados de acuerdo con las leyes",
+   "parecidas": []
+  },
+  {
+   "r": "12.0",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "10",
+   "q": "Según el artículo 10 de la Ley Orgánica 4/2015, de protección de la seguridad ciudadana, ¿qué órgano ejerce la competencia sobre la confección y expedición del Documento Nacional de Identidad?",
+   "o": [
+    "La Dirección General de la Guardia Civil",
+    "La Secretaría de Estado de Seguridad",
+    "La Subdelegación del Gobierno en cada provincia",
+    "La Dirección General de la Policía"
+   ],
+   "a": 3,
+   "cita": "La competencia a que se refiere el apartado anterior será ejercida por la Dirección General de la Policía",
+   "parecidas": []
+  },
+  {
+   "r": "12.1",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "10",
+   "q": "Una comunidad autónoma pretende asumir la gestión de la expedición del Documento Nacional de Identidad a los residentes en su territorio. Según el artículo 10 de la Ley Orgánica 4/2015:",
+   "o": [
+    "Puede hacerlo mediante convenio con la Dirección General de la Policía",
+    "No puede, pues la competencia es exclusiva del Ministerio del Interior",
+    "Puede hacerlo si lo autoriza previamente el Consejo de Ministros",
+    "Puede hacerlo siempre que asuma también el cobro de la tasa"
+   ],
+   "a": 1,
+   "cita": "Corresponde al Ministerio del Interior la competencia exclusiva para la dirección, organización y gestión de todos los aspectos referentes a la confección y expedición del Documento Nacional de Identidad",
+   "parecidas": []
+  },
+  {
+   "r": "13.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley de Enjuiciamiento Criminal, ¿cuándo podrá el Tribunal de lo criminal resolver una cuestión civil prejudicial sobre el derecho de propiedad de un inmueble?",
+   "o": [
+    "Cuando el derecho haya sido reconocido antes por sentencia civil firme",
+    "Cuando lo consientan expresamente todas las partes personadas",
+    "Cuando el derecho se funde en título auténtico o en actos indubitados de posesión",
+    "Cuando el valor del inmueble no supere la cuantía fijada por la ley"
+   ],
+   "a": 2,
+   "cita": "el Tribunal de lo criminal podrá resolver acerca de ella cuando tales derechos aparezcan fundados en un título auténtico o en actos indubitados de posesión",
+   "parecidas": []
+  },
+  {
+   "r": "14.0",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "35",
+   "q": "Según el artículo 35 de la Ley Orgánica 4/2000, ¿a qué menores extranjeros se reconoce capacidad para actuar en el procedimiento de repatriación, pudiendo intervenir personalmente?",
+   "o": [
+    "A los mayores de catorce y menores de dieciocho años",
+    "A los mayores de dieciséis y menores de dieciocho años",
+    "A los mayores de doce y menores de dieciocho años",
+    "Solo a los que ya hayan cumplido dieciocho años"
+   ],
+   "a": 1,
+   "cita": "A los mayores de dieciséis y menores de dieciocho años se les reconocerá capacidad para actuar en el procedimiento de repatriación",
+   "parecidas": []
+  },
+  {
+   "r": "14.1",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "35",
+   "q": "Según el artículo 35 de la Ley Orgánica 4/2000, si un menor de dieciséis años con juicio suficiente manifiesta una voluntad contraria a la de quien ostenta su tutela, ¿qué ocurre en el procedimiento de repatriación?",
+   "o": [
+    "Se archiva el procedimiento sin más trámite",
+    "Prevalece la voluntad de quien ostenta su tutela",
+    "Puede intervenir personalmente sin representante",
+    "Se suspende hasta nombrarle un defensor judicial"
+   ],
+   "a": 3,
+   "cita": "se suspenderá el curso del procedimiento, hasta el nombramiento del defensor judicial que les represente",
+   "parecidas": []
+  },
+  {
+   "r": "14.2",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "35",
+   "q": "Según el artículo 35 de la Ley Orgánica 4/2000, cuando las Fuerzas y Cuerpos de Seguridad localicen a un extranjero indocumentado cuya minoría de edad no pueda establecerse con seguridad, ¿a quién corresponde disponer la determinación de su edad?",
+   "o": [
+    "Al Ministerio Fiscal",
+    "Al juez de menores competente",
+    "A los servicios de protección de menores",
+    "A las Fuerzas y Cuerpos de Seguridad"
+   ],
+   "a": 0,
+   "cita": "poniéndose el hecho en conocimiento inmediato del Ministerio Fiscal, que dispondrá la determinación de su edad",
+   "parecidas": []
+  },
+  {
+   "r": "15.0",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "8",
+   "q": "Según el artículo 8 del texto refundido de la Ley General de la Seguridad Social, las personas comprendidas en el campo de aplicación del sistema de la Seguridad Social, por el mismo trabajo:",
+   "o": [
+    "Pueden estar incluidas obligatoriamente en otros regímenes si lo autoriza el Ministerio",
+    "Deben estar incluidas además en un régimen obligatorio de previsión complementaria",
+    "No pueden estar incluidas obligatoriamente en otros regímenes de previsión distintos",
+    "Pueden estar incluidas obligatoriamente en otros regímenes de su grupo profesional"
+   ],
+   "a": 2,
+   "cita": "no podrán estar incluidas por el mismo trabajo, con carácter obligatorio, en otros regímenes de previsión distintos de los que integran dicho sistema",
+   "parecidas": []
+  },
+  {
+   "r": "15.1",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "8",
+   "q": "Según el artículo 8 del texto refundido de la Ley General de la Seguridad Social, los sistemas de previsión obligatoria distintos de los regulados en la ley que tengan constituidos determinados grupos profesionales:",
+   "o": [
+    "Se integrarán en todo caso en el Régimen General, sin condición alguna",
+    "Se integrarán en el Régimen General o especiales si es obligatoria la inclusión de esos grupos",
+    "Subsistirán como regímenes complementarios de carácter voluntario",
+    "Se integrarán en los regímenes especiales solo si lo solicitan sus afiliados"
+   ],
+   "a": 1,
+   "cita": "se integrarán en el Régimen General o en los regímenes especiales, según proceda, siempre que resulte obligatoria la inclusión de los grupos mencionados en el campo de aplicación de dichos regímenes",
+   "parecidas": []
+  },
+  {
+   "r": "16.0",
+   "norma": "Real Decreto 240/2007, de 16 de febrero, sobre entrada, libre circulación y residencia en España de ciudadanos de la UE y del EEE (BOE-A-2007-4184)",
+   "art": "3",
+   "q": "Según el artículo 3 del Real Decreto 240/2007, ¿qué personas incluidas en su ámbito de aplicación quedan exceptuadas del derecho a acceder a cualquier actividad por cuenta ajena o propia en las mismas condiciones que los españoles?",
+   "o": [
+    "Los descendientes menores de veintiún años y el cónyuge",
+    "La pareja registrada y los descendientes menores de edad",
+    "Los descendientes mayores de veintiún años a cargo y los ascendientes a cargo",
+    "Los ascendientes que no vivan a cargo del ciudadano de la Unión"
+   ],
+   "a": 2,
+   "cita": "exceptuando a los descendientes mayores de veintiún años que vivan a cargo, y a los ascendientes a cargo contemplados en el artículo 2.d) del presente real decreto",
+   "parecidas": []
+  },
+  {
+   "r": "16.1",
+   "norma": "Real Decreto 240/2007, de 16 de febrero, sobre entrada, libre circulación y residencia en España de ciudadanos de la UE y del EEE (BOE-A-2007-4184)",
+   "art": "3",
+   "q": "Según el artículo 3 del Real Decreto 240/2007, ¿cuál de las siguientes actividades laborales de un familiar a cargo no altera su situación de familiar a cargo?",
+   "o": [
+    "Un contrato a jornada completa de hasta seis meses en cómputo anual",
+    "Un contrato a jornada completa de hasta tres meses anuales sin continuidad",
+    "Cualquier contrato a tiempo parcial, con independencia de su retribución",
+    "Un contrato indefinido a jornada completa con ingresos suficientes"
+   ],
+   "a": 1,
+   "cita": "contrato de trabajo a jornada completa con una duración que no supere los tres meses en cómputo anual ni tenga una continuidad como ocupación en el mercado laboral",
+   "parecidas": []
+  },
+  {
+   "r": "16.2",
+   "norma": "Real Decreto 240/2007, de 16 de febrero, sobre entrada, libre circulación y residencia en España de ciudadanos de la UE y del EEE (BOE-A-2007-4184)",
+   "art": "3",
+   "q": "Según el artículo 3 del Real Decreto 240/2007, los titulares de los derechos que pretendan permanecer o fijar su residencia en España, ¿a partir de qué duración están obligados a solicitar un certificado de registro o una tarjeta de residencia?",
+   "o": [
+    "Más de un mes",
+    "Más de tres meses",
+    "Más de seis meses",
+    "Más de un año"
+   ],
+   "a": 1,
+   "cita": "que pretendan permanecer o fijar su residencia en España durante más de tres meses estarán obligados a solicitar un certificado de registro",
+   "parecidas": []
+  },
+  {
+   "r": "17.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "34",
+   "q": "A un funcionario le impone su superior, en uso de sus atribuciones disciplinarias, una multa como corrección. Según el artículo 34 del Código Penal, ¿tiene esa multa la consideración de pena?",
+   "o": [
+    "Sí, porque toda multa tiene naturaleza de pena",
+    "Sí, siempre que se imponga tras expediente disciplinario",
+    "No, porque las correcciones disciplinarias no se reputan penas",
+    "Sí, si su importe supera el de la multa penal mínima"
+   ],
+   "a": 2,
+   "cita": "Las multas y demás correcciones que, en uso de atribuciones gubernativas o disciplinarias, se impongan a los subordinados o administrados",
+   "parecidas": []
+  },
+  {
+   "r": "18.0",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley 58/2003, General Tributaria, ¿cuál de las siguientes afirmaciones NO se ajusta a su contenido?",
+   "o": [
+    "Los actos de aplicación de los tributos tienen carácter reglado",
+    "Los actos de imposición de sanciones solo son impugnables en vía jurisdiccional",
+    "El ejercicio de la potestad reglamentaria tiene carácter reglado",
+    "Los actos de aplicación de los tributos son impugnables en vía administrativa"
+   ],
+   "a": 1,
+   "cita": "tienen carácter reglado y son impugnables en vía administrativa y jurisdiccional en los términos establecidos en las leyes",
+   "parecidas": []
+  },
+  {
+   "r": "19.0",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62bis",
+   "q": "Según el artículo 62 bis de la Ley Orgánica 4/2000, las comunicaciones del extranjero internado con sus familiares y funcionarios consulares de su país solo podrán restringirse por:",
+   "o": [
+    "Resolución del director del centro",
+    "Orden del Ministerio del Interior",
+    "Resolución judicial",
+    "Acuerdo de la Delegación del Gobierno"
+   ],
+   "a": 2,
+   "cita": "que sólo podrán restringirse por resolución judicial",
+   "parecidas": []
+  },
+  {
+   "r": "19.1",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62bis",
+   "q": "Según el artículo 62 bis de la Ley Orgánica 4/2000, producido el ingreso de un extranjero en un centro de internamiento, ¿a quién debe comunicarse inmediatamente?",
+   "o": [
+    "Solo al Ministerio Fiscal y al juez que acordó el ingreso",
+    "A sus familiares en el país de origen y a la Delegación del Gobierno",
+    "Solo a la oficina consular y, si lo solicita, a su abogado",
+    "A la persona que designe en España, a su abogado y a la oficina consular"
+   ],
+   "a": 3,
+   "cita": "A que se comunique inmediatamente a la persona que designe en España y a su abogado el ingreso en el centro, así como a la oficina consular del país del que es nacional",
+   "parecidas": []
+  },
+  {
+   "r": "19.2",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62bis",
+   "q": "Según el artículo 62 bis de la Ley Orgánica 4/2000, ¿qué condiciones deben concurrir para que el extranjero internado pueda tener en su compañía a sus hijos menores?",
+   "o": [
+    "Autorización del juez de instrucción y acreditación de la filiación",
+    "Informe favorable del director del centro y solicitud de ambos progenitores",
+    "Informe favorable del Ministerio Fiscal y módulos que garanticen la unidad familiar",
+    "Que los hijos sean menores de tres años y lo autorice el juez competente"
+   ],
+   "a": 2,
+   "cita": "A tener en su compañía a sus hijos menores, siempre que el Ministerio Fiscal informe favorablemente tal medida",
+   "parecidas": []
+  },
+  {
+   "r": "20.0",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "82",
+   "q": "Según el artículo 82 de la Ley 47/2003, General Presupuestaria, ¿a quién se autoriza a llevar a cabo las operaciones de tesorería que exijan las relaciones financieras con la Unión Europea?",
+   "o": [
+    "Al Director General del Tesoro",
+    "Al Gobernador del Banco de España",
+    "Al Ministro de Economía",
+    "Al Interventor General del Estado"
+   ],
+   "a": 2,
+   "cita": "Se autoriza al Ministro de Economía a llevar a cabo las operaciones de tesorería que exijan las relaciones financieras con la Unión Europea",
+   "parecidas": []
+  },
+  {
+   "r": "20.1",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "82",
+   "q": "Según el artículo 82 de la Ley 47/2003, los anticipos de fondos producidos excepcionalmente por la intermediación del Banco de España en los pagos con la Unión Europea deben cancelarse:",
+   "o": [
+    "Antes de finalizar el ejercicio siguiente, sin excepción para los programas cofinanciados",
+    "Antes de fin del ejercicio en que se produzcan, aunque los de programas cofinanciados pueden cancelarse en el siguiente",
+    "En el plazo de tres meses, salvo los de programas cofinanciados, que no tienen plazo",
+    "Antes de fin del ejercicio en que se produzcan, sin posibilidad alguna de prórroga"
+   ],
+   "a": 1,
+   "cita": "estos anticipos deberán quedar cancelados antes de finalizar el ejercicio económico en que se hayan producido",
+   "parecidas": []
+  },
+  {
+   "r": "20.2",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "82",
+   "q": "Se han efectuado operaciones de tesorería relativas a compras de productos financiadas por el FEAGA. Según el artículo 82 de la Ley 47/2003, ¿qué debe remitirse a las Cortes Generales?",
+   "o": [
+    "Un informe semestral, a través del Tribunal de Cuentas",
+    "Un informe anual, a través de la Comisión de Presupuestos",
+    "Un informe mensual, a través de la Intervención General",
+    "Un informe trimestral, a través de su Oficina Presupuestaria"
+   ],
+   "a": 3,
+   "cita": "se remitirá a las Cortes Generales, a través de su Oficina Presupuestaria, un informe trimestral",
+   "parecidas": []
+  }
+ ]
+}

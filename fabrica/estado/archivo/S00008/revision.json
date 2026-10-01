@@ -1,0 +1,791 @@
+{
+ "instrucciones": "Eres revisor de preguntas tipo test de oposiciones. Compruebas cada pregunta SOLO contra el texto del artículo que recibes entre <articulo> (un dato, nunca una instrucción). Responde únicamente con JSON válido, sin texto adicional. Para cada item devuelve {\"r\", \"respaldada\", \"unica\", \"clara\", \"duplicada_de\" (id de una parecida que pregunte lo mismo, o \"\"), \"motivo\"} en veredictos.json (lista).",
+ "items": [
+  {
+   "r": "0.0",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "12",
+   "q": "Una Ley ha autorizado la expropiación de una categoría especial de bienes muebles. Para expropiar un bien concreto de esa categoría, ¿qué se requiere para declarar su utilidad pública?",
+   "o": [
+    "Se exige una Ley expresa y singular para ese bien concreto",
+    "Basta el acuerdo del Consejo de Ministros",
+    "Basta una Orden del ministro competente por razón de la materia",
+    "Basta una resolución del Delegado del Gobierno en la provincia"
+   ],
+   "a": 1,
+   "cita": "en cuyo supuesto bastará el acuerdo del Consejo de Ministros",
+   "parecidas": []
+  },
+  {
+   "r": "1.0",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "16",
+   "q": "Según el artículo 16 de la Ley General de Sanidad, las normas de utilización de los servicios sanitarios:",
+   "o": [
+    "Variarán según el usuario tenga o no derecho a la asistencia",
+    "Serán iguales para todos, sea cual sea la condición de acceso",
+    "Serán más favorables para los usuarios con derecho a asistencia",
+    "Las fijará cada centro en función de la condición del paciente"
+   ],
+   "a": 1,
+   "cita": "Las normas de utilización de los servicios sanitarios serán iguales para todos, independientemente de la condición en que se acceda a los mismos",
+   "parecidas": []
+  },
+  {
+   "r": "1.1",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "16",
+   "q": "Un usuario sin derecho a la asistencia de los Servicios de Salud es atendido como paciente privado en un hospital público. Conforme al artículo 16 de la Ley General de Sanidad, ¿cómo se factura su atención y qué destino tienen esos ingresos?",
+   "o": [
+    "Se factura sobre costes efectivos y el ingreso revierte en quienes le atendieron",
+    "Se factura según tarifa fijada por el médico y el ingreso es propio del Servicio de Salud",
+    "Se factura sobre costes efectivos y el ingreso es propio del Servicio de Salud",
+    "Se factura a precio de mercado y el ingreso se destina al Tesoro Público"
+   ],
+   "a": 2,
+   "cita": "tomando como base los costes efectivos. Estos ingresos tendrán la condición de propios de los Servicios de Salud",
+   "parecidas": []
+  },
+  {
+   "r": "1.2",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "16",
+   "q": "Respecto de los usuarios que acceden a los servicios sanitarios como pacientes privados, ¿qué establece el artículo 16 de la Ley General de Sanidad para la atención primaria y para el ingreso hospitalario?",
+   "o": [
+    "Primaria: libre elección sin normas de asignación; hospital: lista de espera diferenciada",
+    "Primaria: mismas normas de asignación y libre elección; hospital: lista de espera única",
+    "Primaria: equipo específico para privados; hospital: lista de espera única",
+    "Primaria: mismas normas que el resto; hospital: acceso diferenciado según su condición"
+   ],
+   "a": 1,
+   "cita": "Por lo que se refiere a la atención primaria, se les aplicarán las mismas normas sobre asignación de equipos y libre elección que al resto de los usuarios. 2. El ingreso en centros hospitalarios se efectuará a través de la unidad de admisión del hospital, por medio de una lista de espera única",
+   "parecidas": []
+  },
+  {
+   "r": "2.0",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "33",
+   "q": "Según el artículo 33 de la Ley General de Subvenciones, ¿dentro de qué plazo puede el beneficiario promover la tasación pericial contradictoria?",
+   "o": [
+    "Dentro del mes siguiente a la notificación del valor comprobado",
+    "Dentro de los quince días siguientes a la liquidación de la subvención",
+    "Dentro del plazo del primer recurso que proceda contra la resolución",
+    "Dentro del plazo concedido para justificar la subvención recibida"
+   ],
+   "a": 2,
+   "cita": "dentro del plazo del primer recurso que proceda contra la resolución del procedimiento",
+   "parecidas": []
+  },
+  {
+   "r": "2.1",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "33",
+   "q": "Según el artículo 33 de la Ley General de Subvenciones, ¿qué efecto produce la presentación de la solicitud de tasación pericial contradictoria?",
+   "o": [
+    "Suspende la ejecución de lo resuelto, pero no el plazo para recurrir",
+    "Suspende el plazo para recurrir, pero no la ejecución de lo resuelto",
+    "No produce efecto suspensivo alguno sobre el procedimiento resuelto",
+    "Suspende la ejecución de lo resuelto y el plazo para interponer recurso"
+   ],
+   "a": 3,
+   "cita": "La presentación de la solicitud de tasación pericial contradictoria determinará la suspensión de la ejecución del procedimiento resuelto y del plazo para interponer recurso contra éste",
+   "parecidas": [
+    {
+     "id": "nueva:ley-38-2003:33:0",
+     "q": "Según el artículo 33 de la Ley General de Subvenciones, ¿dentro de qué plazo puede el beneficiario promover la tasación pericial contradictoria?",
+     "respuesta": "Dentro del plazo del primer recurso que proceda contra la resolución"
+    }
+   ]
+  },
+  {
+   "r": "2.2",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "33",
+   "q": "En una comprobación de valores de gastos subvencionados, la diferencia entre el valor comprobado por la Administración y el resultante de la pericia aportada por el beneficiario es inferior a 120.000 euros y al 10 por ciento del valor comprobado. Según el artículo 33 de la Ley General de Subvenciones, ¿qué servirá de base para calcular la subvención?",
+   "o": [
+    "El valor comprobado por la Administración",
+    "La tasación del perito del beneficiario",
+    "La valoración de un perito tercero",
+    "La media de ambas valoraciones"
+   ],
+   "a": 1,
+   "cita": "la tasación del perito del beneficiario servirá de base para el cálculo de la subvención",
+   "parecidas": []
+  },
+  {
+   "r": "3.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "494",
+   "q": "Según el artículo 494 de la Ley de Enjuiciamiento Criminal, el Juez o Tribunal acordará también la detención de los comprendidos en el artículo 492:",
+   "o": [
+    "Previa solicitud motivada del Ministerio Fiscal",
+    "A prevención con las Autoridades y agentes de Policía judicial",
+    "Previo informe de la Autoridad gubernativa del lugar",
+    "Con exclusión de la actuación de la Policía judicial"
+   ],
+   "a": 1,
+   "cita": "acordará también la detención de los comprendidos en el artículo 492, a prevención con las Autoridades y agentes de Policía judicial",
+   "parecidas": []
+  },
+  {
+   "r": "4.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "326bis",
+   "q": "¿Con qué penas castiga el artículo 326 bis del Código Penal la explotación ilegal de instalaciones en las que se realice una actividad peligrosa?",
+   "o": [
+    "Con las previstas en el artículo 327, agravadas en un grado",
+    "Con las previstas en el artículo 325, en sus respectivos supuestos",
+    "Con las previstas en el artículo 325, rebajadas en un grado",
+    "Con las previstas en el artículo 330, en sus respectivos supuestos"
+   ],
+   "a": 1,
+   "cita": "Serán castigados con las penas previstas en el artículo 325, en sus respectivos supuestos",
+   "parecidas": []
+  },
+  {
+   "r": "4.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "326bis",
+   "q": "¿Cuál de los siguientes resultados NO se menciona en el artículo 326 bis del Código Penal como daño que la explotación puede causar?",
+   "o": [
+    "Daños sustanciales a la calidad del aire, del suelo o de las aguas",
+    "Muerte o lesiones graves a las personas",
+    "Grave perjuicio al equilibrio de los sistemas naturales",
+    "Daños sustanciales a bienes del patrimonio histórico"
+   ],
+   "a": 3,
+   "cita": "de modo que causen o puedan causar daños sustanciales a la calidad del aire, del suelo o de las aguas, a animales o plantas, muerte o lesiones graves a las personas, o puedan perjudicar gravemente el equilibrio de los sistemas naturales",
+   "parecidas": []
+  },
+  {
+   "r": "5.0",
+   "norma": "Ley 33/2003, del Patrimonio de las Administraciones Públicas (BOE-A-2003-20254)",
+   "art": "19",
+   "q": "Una Administración pública adquiere un inmueble a título oneroso y de carácter voluntario. Según el artículo 19 de la Ley del Patrimonio de las Administraciones Públicas, ¿qué normas rigen esa adquisición?",
+   "o": [
+    "El derecho privado, civil o mercantil y, supletoriamente, la propia ley patrimonial",
+    "La legislación de expropiación forzosa y, supletoriamente, la propia ley patrimonial",
+    "La propia ley patrimonial y, supletoriamente, el derecho privado, civil o mercantil",
+    "La propia ley patrimonial y, supletoriamente, la ley de procedimiento administrativo"
+   ],
+   "a": 2,
+   "cita": "se regirán por las disposiciones de esta ley y supletoriamente por las normas del derecho privado, civil o mercantil",
+   "parecidas": []
+  },
+  {
+   "r": "6.0",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley 23/2014, de reconocimiento mutuo de resoluciones penales en la Unión Europea, la ejecución en España de una orden transmitida por otro Estado miembro se regirá por:",
+   "o": [
+    "El Derecho del Estado de emisión de la orden",
+    "El Derecho que indique la autoridad de emisión",
+    "El Derecho español, como si la hubiera dictado un juez español",
+    "El Derecho de la Unión, con preferencia sobre el español"
+   ],
+   "a": 2,
+   "cita": "se regirá por el Derecho español y se llevará a cabo del mismo modo que si hubiera sido dictada por una autoridad judicial española",
+   "parecidas": []
+  },
+  {
+   "r": "6.1",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley 23/2014, de reconocimiento mutuo de resoluciones penales en la Unión Europea, ¿cuándo observará la autoridad judicial española las formalidades y procedimientos expresamente indicados por la autoridad de emisión?",
+   "o": [
+    "Cuando lo consienta la persona afectada por la medida",
+    "Cuando no sean contrarios a los principios fundamentales del ordenamiento español",
+    "Cuando estén previstos de forma expresa en la legislación procesal española",
+    "Cuando lo autorice previamente el Ministerio de Justicia"
+   ],
+   "a": 1,
+   "cita": "siempre que esas formalidades y procedimientos no sean contrarios a los principios fundamentales del ordenamiento jurídico español",
+   "parecidas": []
+  },
+  {
+   "r": "6.2",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "21",
+   "q": "Según el artículo 21.2 de la Ley 23/2014, de reconocimiento mutuo de resoluciones penales en la Unión Europea, ¿puede la ejecución de la orden o resolución extenderse a personas, bienes o documentos no comprendidos en ella?",
+   "o": [
+    "Sí, si lo acuerda de forma motivada la autoridad judicial española",
+    "No, sin perjuicio de lo dispuesto para la orden europea de investigación",
+    "No, y sin salvedad alguna para ningún instrumento de reconocimiento mutuo",
+    "Sí, si lo solicita después la autoridad judicial del Estado de emisión"
+   ],
+   "a": 1,
+   "cita": "no pudiendo hacerse extensiva a personas, bienes o documentos no comprendidos en ella, sin perjuicio de lo dispuesto para la orden europea de investigación",
+   "parecidas": [
+    {
+     "id": "nueva:ley-23-2014:21:0",
+     "q": "Según el artículo 21 de la Ley 23/2014, de reconocimiento mutuo de resoluciones penales en la Unión Europea, la ejecución en España de una orden transmitida por otro Estado miembro se regirá por:",
+     "respuesta": "El Derecho español, como si la hubiera dictado un juez español"
+    }
+   ]
+  },
+  {
+   "r": "7.0",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "24",
+   "q": "Según el artículo 24 de la Ley 3/2023, de Empleo, ¿qué órganos comprenderá la estructura organizativa de los servicios públicos de empleo de las Comunidades Autónomas?",
+   "o": [
+    "Órganos de carácter bipartito y consultivo",
+    "Órganos de carácter tripartito y paritario",
+    "Órganos de carácter técnico y unipersonal",
+    "Órganos de carácter asesor y no vinculante"
+   ],
+   "a": 1,
+   "cita": "comprenderá órganos de carácter tripartito y paritario",
+   "parecidas": []
+  },
+  {
+   "r": "7.1",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "24",
+   "q": "Según el artículo 24 de la Ley 3/2023, de Empleo, ¿quiénes participarán en los órganos de la estructura organizativa de los servicios públicos de empleo autonómicos?",
+   "o": [
+    "Las asociaciones de personas desempleadas inscritas",
+    "Las entidades locales de la Comunidad Autónoma",
+    "Las organizaciones sindicales y empresariales más representativas",
+    "Las agencias de colocación autorizadas en la Comunidad"
+   ],
+   "a": 2,
+   "cita": "en que participarán las organizaciones sindicales y empresariales más representativas",
+   "parecidas": [
+    {
+     "id": "nueva:ley-3-2023:24:0",
+     "q": "Según el artículo 24 de la Ley 3/2023, de Empleo, ¿qué órganos comprenderá la estructura organizativa de los servicios públicos de empleo de las Comunidades Autónomas?",
+     "respuesta": "Órganos de carácter tripartito y paritario"
+    }
+   ]
+  },
+  {
+   "r": "8.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "39",
+   "q": "¿Cuál de las siguientes NO figura en el artículo 39 del Código Penal como pena privativa de derechos?",
+   "o": [
+    "Los trabajos en beneficio de la comunidad",
+    "La localización permanente",
+    "La suspensión de empleo o cargo público",
+    "La privación de la patria potestad"
+   ],
+   "a": 1,
+   "cita": "Son penas privativas de derechos",
+   "parecidas": []
+  },
+  {
+   "r": "8.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "39",
+   "q": "Según el artículo 39 del Código Penal, la prohibición de aproximarse a la víctima puede extenderse a sus familiares u otras personas que determine:",
+   "o": [
+    "El Ministerio Fiscal",
+    "El juez o el tribunal",
+    "La Administración penitenciaria",
+    "La propia víctima"
+   ],
+   "a": 1,
+   "cita": "La prohibición de aproximarse a la víctima o a aquellos de sus familiares u otras personas que determine el juez o el tribunal",
+   "parecidas": []
+  },
+  {
+   "r": "8.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "39",
+   "q": "Según el artículo 39 del Código Penal, la inhabilitación especial para profesión, oficio, industria o comercio u otras actividades se refiere a actividades:",
+   "o": [
+    "Que sean retribuidas",
+    "Sean o no retribuidas",
+    "Que se ejerzan por cuenta ajena",
+    "Que se ejerzan de forma habitual"
+   ],
+   "a": 1,
+   "cita": "industria o comercio, u otras actividades, sean o no retribuidas",
+   "parecidas": []
+  },
+  {
+   "r": "9.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "9",
+   "q": "Según el artículo 9 de la Ley de Enjuiciamiento Criminal, los Jueces y Tribunales que tengan competencia para conocer de una causa determinada la tendrán también para:",
+   "o": [
+    "Sus incidencias, pero no para ejecutar las sentencias",
+    "Ejecutar las sentencias, pero no para sus incidencias",
+    "Sus incidencias, la tramitación y la ejecución de sentencias",
+    "Las providencias de tramitación, pero no para las incidencias"
+   ],
+   "a": 2,
+   "cita": "la tendrán también para todas sus incidencias, para llevar a efecto las providencias de tramitación y para la ejecución de las sentencias",
+   "parecidas": []
+  },
+  {
+   "r": "10.0",
+   "norma": "Real Decreto 1428/2003, de 21 de noviembre, Reglamento General de Circulación (BOE-A-2003-23514)",
+   "art": "3",
+   "q": "Según el artículo 3 del Reglamento General de Circulación, ¿cómo se califican las infracciones de conducción negligente y de conducción temeraria?",
+   "o": [
+    "Negligente, leve; temeraria, grave",
+    "Negligente, grave; temeraria, grave",
+    "Negligente, grave; temeraria, muy grave",
+    "Negligente, muy grave; temeraria, muy grave"
+   ],
+   "a": 2,
+   "cita": "Las conductas referidas a la conducción negligente tendrán la consideración de infracciones graves y las referidas a la conducción temeraria tendrán la consideración de infracciones muy graves",
+   "parecidas": []
+  },
+  {
+   "r": "10.1",
+   "norma": "Real Decreto 1428/2003, de 21 de noviembre, Reglamento General de Circulación (BOE-A-2003-23514)",
+   "art": "3",
+   "q": "Según el artículo 3.1 del Reglamento General de Circulación, se deberá conducir con la diligencia y precaución necesarias para evitar:",
+   "o": [
+    "Los daños a terceros usuarios de la vía",
+    "Los daños graves a las personas",
+    "Todo daño, propio o ajeno",
+    "Los daños materiales a la vía pública"
+   ],
+   "a": 2,
+   "cita": "Se deberá conducir con la diligencia y precaución necesarias para evitar todo daño, propio o ajeno",
+   "parecidas": []
+  },
+  {
+   "r": "11.0",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "84",
+   "q": "En el ámbito de la Política Agraria Común, varias Administraciones públicas anticiparon un importe que después la Comunidad Europea no asume. Según el artículo 84 de la Ley General Presupuestaria, ¿a quién afecta el importe no reembolsado?",
+   "o": [
+    "A la Administración General del Estado, que lo asume en su totalidad",
+    "A las diferentes Administraciones, según sus respectivas actuaciones",
+    "A todas las Administraciones implicadas, a partes iguales entre ellas",
+    "A las Administraciones implicadas, en proporción a su población"
+   ],
+   "a": 1,
+   "cita": "el importe no reembolsado por la Comunidad afectará a las diferentes Administraciones públicas en relación con sus respectivas actuaciones",
+   "parecidas": []
+  },
+  {
+   "r": "11.1",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "84",
+   "q": "Según el artículo 84 de la Ley General Presupuestaria, el reintegro de ayudas y la responsabilidad financiera derivados de la gestión de fondos procedentes de la Unión Europea se someterán a:",
+   "o": [
+    "La Ley General Tributaria y la normativa comunitaria",
+    "La Ley General de Subvenciones y la normativa comunitaria",
+    "La Ley General Presupuestaria y la Ley General Tributaria",
+    "La normativa comunitaria y la ley de procedimiento común"
+   ],
+   "a": 1,
+   "cita": "se someterá a lo previsto en la Ley General de Subvenciones y en la normativa comunitaria",
+   "parecidas": []
+  },
+  {
+   "r": "12.0",
+   "norma": "Real Decreto 240/2007, de 16 de febrero, sobre entrada, libre circulación y residencia en España de ciudadanos de la UE y del EEE (BOE-A-2007-4184)",
+   "art": "9",
+   "q": "Según el artículo 9.4 del Real Decreto 240/2007, para conservar el derecho de residencia tras el divorcio de un ciudadano de la Unión, el ex cónyuge no comunitario puede acreditar una duración del matrimonio hasta el inicio del procedimiento judicial de al menos:",
+   "o": [
+    "Dos años, de los cuales al menos uno en España",
+    "Tres años, de los cuales al menos uno en España",
+    "Tres años, todos ellos transcurridos en España",
+    "Cinco años, de los cuales al menos dos en España"
+   ],
+   "a": 1,
+   "cita": "Duración de al menos tres años del matrimonio o situación de pareja registrada",
+   "parecidas": []
+  },
+  {
+   "r": "12.1",
+   "norma": "Real Decreto 240/2007, de 16 de febrero, sobre entrada, libre circulación y residencia en España de ciudadanos de la UE y del EEE (BOE-A-2007-4184)",
+   "art": "9",
+   "q": "Según el artículo 9.2 del Real Decreto 240/2007, el fallecimiento del ciudadano de la Unión no afecta al derecho de residencia de sus familiares que no sean ciudadanos de la Unión ni del Espacio Económico Europeo siempre que:",
+   "o": [
+    "Hayan residido en España al menos un año antes del fallecimiento",
+    "Acrediten medios económicos suficientes tras el fallecimiento",
+    "Hayan residido en España como familiares antes del fallecimiento",
+    "Soliciten la conservación del derecho en los tres meses siguientes"
+   ],
+   "a": 2,
+   "cita": "siempre que éstos hayan residido en España, en calidad de miembros de la familia, antes del fallecimiento del titular del derecho",
+   "parecidas": []
+  },
+  {
+   "r": "12.2",
+   "norma": "Real Decreto 240/2007, de 16 de febrero, sobre entrada, libre circulación y residencia en España de ciudadanos de la UE y del EEE (BOE-A-2007-4184)",
+   "art": "9",
+   "q": "En caso de divorcio de un ciudadano de la Unión con un nacional de un tercer Estado, ¿cuál de los siguientes NO es un supuesto que permita a este conservar el derecho de residencia según el artículo 9.4 del Real Decreto 240/2007?",
+   "o": [
+    "Que se le haya otorgado la custodia de los hijos del ciudadano comunitario",
+    "Haber sido víctima de violencia de género durante el matrimonio",
+    "Tener derecho de visita al hijo menor que reside en España",
+    "Haber obtenido un contrato de trabajo en España tras el divorcio"
+   ],
+   "a": 3,
+   "cita": "Para conservar el derecho de residencia, deberá acreditarse uno de los siguientes supuestos",
+   "parecidas": []
+  },
+  {
+   "r": "13.0",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "10",
+   "q": "Según el artículo 10 de la Ley General Tributaria, si en ellas no se dispone otra cosa, las normas tributarias entrarán en vigor:",
+   "o": [
+    "A los veinte días hábiles de su publicación",
+    "Al día siguiente de su completa publicación",
+    "A los veinte días naturales de su completa publicación",
+    "A los tres meses de su completa publicación"
+   ],
+   "a": 2,
+   "cita": "Las normas tributarias entrarán en vigor a los veinte días naturales de su completa publicación en el boletín oficial que corresponda",
+   "parecidas": []
+  },
+  {
+   "r": "13.1",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "10",
+   "q": "Una norma tributaria que nada dispone sobre su aplicación temporal entra en vigor cuando ya está en curso el período impositivo de un tributo periódico. Según el artículo 10 de la Ley General Tributaria:",
+   "o": [
+    "Se aplica a todo el período en curso, al no haber concluido aún",
+    "Se aplica a los períodos impositivos iniciados desde su entrada en vigor",
+    "Se aplica desde su entrada en vigor hasta el final del período en curso",
+    "Se aplica al período en curso si resulta más favorable al obligado"
+   ],
+   "a": 1,
+   "cita": "se aplicarán a los tributos sin período impositivo devengados a partir de su entrada en vigor y a los demás tributos cuyo período impositivo se inicie desde ese momento",
+   "parecidas": []
+  },
+  {
+   "r": "13.2",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "10",
+   "q": "Según el artículo 10 de la Ley General Tributaria, las normas que regulan el régimen de infracciones y sanciones tributarias y el de los recargos:",
+   "o": [
+    "Tienen efectos retroactivos respecto de todos los actos, firmes o no, si son más favorables",
+    "Tienen efectos retroactivos respecto de los actos no firmes, sean o no más favorables",
+    "Tienen efectos retroactivos respecto de los actos no firmes si son más favorables",
+    "Carecen de efectos retroactivos, igual que el resto de normas tributarias"
+   ],
+   "a": 2,
+   "cita": "tendrán efectos retroactivos respecto de los actos que no sean firmes cuando su aplicación resulte más favorable para el interesado",
+   "parecidas": []
+  },
+  {
+   "r": "14.0",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "4",
+   "q": "Según el artículo 4 del Real Decreto 207/2024, además de su presidente, ¿quiénes integran el Consejo Superior de la Guardia Civil?",
+   "o": [
+    "Los Tenientes Generales en servicio activo o en reserva",
+    "Los Tenientes Generales y Generales de División en servicio activo",
+    "Los Generales de Brigada y Coroneles en servicio activo",
+    "Los Jefes de Zona y de Comandancia en servicio activo"
+   ],
+   "a": 1,
+   "cita": "integrado, asimismo, por los Tenientes Generales y Generales de División de la Guardia Civil en servicio activo",
+   "parecidas": []
+  },
+  {
+   "r": "14.1",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "4",
+   "q": "La persona titular de la Dirección General de la Guardia Civil no asiste a una reunión del Consejo Superior de la Guardia Civil. Según el artículo 4 del Real Decreto 207/2024, ¿quién lo presidirá?",
+   "o": [
+    "El Teniente General más antiguo del Consejo",
+    "El titular del Mando de Operaciones",
+    "El titular de la Dirección Adjunta Operativa",
+    "El Oficial General que actúa como Secretario"
+   ],
+   "a": 2,
+   "cita": "Presidir el Consejo Superior de la Guardia Civil cuando no asista la persona titular de la Dirección General",
+   "parecidas": [
+    {
+     "id": "nueva:rd-207-2024:4:0",
+     "q": "Según el artículo 4 del Real Decreto 207/2024, además de su presidente, ¿quiénes integran el Consejo Superior de la Guardia Civil?",
+     "respuesta": "Los Tenientes Generales y Generales de División en servicio activo"
+    }
+   ]
+  },
+  {
+   "r": "14.2",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "4",
+   "q": "Según el artículo 4 del Real Decreto 207/2024, ¿cuál de los siguientes órganos depende directamente de la persona titular de la Dirección General de la Guardia Civil?",
+   "o": [
+    "El Mando de Operaciones",
+    "El Mando de Apoyo",
+    "La Jefatura de Información",
+    "El Mando de Fronteras y Policía Marítima"
+   ],
+   "a": 1,
+   "cita": "De la persona titular de la Dirección General dependen directamente los siguientes órganos",
+   "parecidas": [
+    {
+     "id": "nueva:rd-207-2024:4:1",
+     "q": "La persona titular de la Dirección General de la Guardia Civil no asiste a una reunión del Consejo Superior de la Guardia Civil. Según el artículo 4 del Real Decreto 207/2024, ¿quién lo presidirá?",
+     "respuesta": "El titular de la Dirección Adjunta Operativa"
+    }
+   ]
+  },
+  {
+   "r": "15.0",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "6",
+   "q": "Según el artículo 6 del Real Decreto 207/2024, ¿a través de qué órgano impulsa, coordina y supervisa la Dirección General de Coordinación y Estudios las actividades de protección de las infraestructuras críticas?",
+   "o": [
+    "La Oficina de Coordinación de Ciberseguridad",
+    "El Centro Permanente de Información y Coordinación",
+    "El Centro Nacional de Protección de Infraestructuras Críticas",
+    "La Inspección de Personal y Servicios de Seguridad"
+   ],
+   "a": 2,
+   "cita": "a través del Centro Nacional de Protección de Infraestructuras Críticas (CNPIC)",
+   "parecidas": []
+  },
+  {
+   "r": "15.1",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "6",
+   "q": "Según el artículo 6 del Real Decreto 207/2024, ¿a qué órgano corresponde dirigir la Oficina Nacional de Garantías de los Derechos Humanos?",
+   "o": [
+    "A la Oficina de Coordinación de Ciberseguridad",
+    "A la Inspección de Personal y Servicios de Seguridad",
+    "Al Centro Permanente de Información y Coordinación",
+    "Al Centro Nacional de Protección de Infraestructuras Críticas"
+   ],
+   "a": 1,
+   "cita": "Dirigir la Oficina Nacional de Garantías de los Derechos Humanos (ONGADH)",
+   "parecidas": []
+  },
+  {
+   "r": "15.2",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "6",
+   "q": "Según el artículo 6 del Real Decreto 207/2024, ¿cuál de las siguientes atribuciones es correcta?",
+   "o": [
+    "El Centro Permanente de Información y Coordinación actúa como Observatorio de la Cibercriminalidad",
+    "La Oficina de Coordinación de Ciberseguridad actúa como Observatorio de la Cibercriminalidad",
+    "La Oficina de Coordinación de Ciberseguridad actúa como Servicio Central de Violencia de Género",
+    "El Centro Nacional de Protección de Infraestructuras Críticas actúa como Observatorio de la Cibercriminalidad"
+   ],
+   "a": 1,
+   "cita": "Constituirse, a través de la OCC, como Observatorio de la Cibercriminalidad del Ministerio del Interior",
+   "parecidas": []
+  },
+  {
+   "r": "16.0",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62quinquies",
+   "q": "Según el artículo 62 quinquies de la Ley Orgánica 4/2000, ¿cuál de los siguientes es un requisito para el uso de medios de contención en los centros de internamiento de extranjeros?",
+   "o": [
+    "Que lo solicite previamente el propio extranjero internado",
+    "Que lo autorice previamente la autoridad judicial competente",
+    "Que no exista otra manera menos gravosa de lograr la finalidad",
+    "Que se hayan agotado antes las sanciones disciplinarias previstas"
+   ],
+   "a": 2,
+   "cita": "sólo se usarán cuando no exista otra manera menos gravosa para conseguir la finalidad perseguida",
+   "parecidas": []
+  },
+  {
+   "r": "16.1",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62quinquies",
+   "q": "Según el artículo 62 quinquies de la Ley Orgánica 4/2000, ¿cómo se autoriza y comunica la utilización de medios de contención en un centro de internamiento de extranjeros?",
+   "o": [
+    "El juez lo autoriza previamente, salvo urgencia, y lo comunica de inmediato al director del centro",
+    "El director lo autoriza previamente, salvo urgencia, y lo comunica lo antes posible al juez que autorizó el internamiento",
+    "El director lo autoriza previamente, sin excepción, y lo comunica en veinticuatro horas al Ministerio Fiscal",
+    "El director lo autoriza a posteriori y lo comunica lo antes posible al juez de guardia del lugar del centro"
+   ],
+   "a": 1,
+   "cita": "La utilización de medios de contención será previamente autorizada por el director del centro, salvo que razones de urgencia no lo permitan",
+   "parecidas": [
+    {
+     "id": "nueva:lo-4-2000:62quinquies:0",
+     "q": "Según el artículo 62 quinquies de la Ley Orgánica 4/2000, ¿cuál de los siguientes es un requisito para el uso de medios de contención en los centros de internamiento de extranjeros?",
+     "respuesta": "Que no exista otra manera menos gravosa de lograr la finalidad"
+    }
+   ]
+  },
+  {
+   "r": "16.2",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62quinquies",
+   "q": "Según el artículo 62 quinquies de la Ley Orgánica 4/2000, cuando la medida acordada sea la separación preventiva del agresor, ¿en qué plazo debe el juez acordar su mantenimiento o revocación?",
+   "o": [
+    "En el plazo de veinticuatro horas",
+    "En el plazo más breve posible",
+    "En el plazo de setenta y dos horas",
+    "En el plazo de cinco días hábiles"
+   ],
+   "a": 1,
+   "cita": "El juez, en el plazo más breve posible y siempre que la medida acordada fuere separación preventiva del agresor",
+   "parecidas": []
+  },
+  {
+   "r": "17.0",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "33",
+   "q": "Según el artículo 33 de la Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria, el sistema de faltas y sanciones a aplicar en los centros de acogida será el que establezca:",
+   "o": [
+    "Cada centro de acogida en sus normas internas",
+    "De forma reglamentaria el Ministerio competente",
+    "La Comisión Interministerial de Asilo y Refugio",
+    "Cada Comunidad Autónoma en su propia normativa"
+   ],
+   "a": 1,
+   "cita": "el sistema de faltas y sanciones a aplicar en los centros de acogida será el que de forma reglamentaria establezca el Ministerio competente",
+   "parecidas": []
+  },
+  {
+   "r": "17.1",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "33",
+   "q": "Un solicitante de protección internacional alojado en un centro de acogida pasa a disponer de recursos económicos con los que puede costear parte de las condiciones de acogida. Según el artículo 33 de la Ley 12/2009, ¿qué puede ocurrir?",
+   "o": [
+    "Mantendrá íntegros los servicios hasta que se resuelva su solicitud",
+    "Perderá de forma automática la condición de solicitante de protección",
+    "El Ministerio competente podrá reducir o retirar los servicios de acogida",
+    "Deberá abandonar el centro de acogida en el plazo de diez días"
+   ],
+   "a": 2,
+   "cita": "cuando la persona solicitante accediese a recursos económicos y pudiese hacer frente a la totalidad o parte de los costes de las condiciones de acogida",
+   "parecidas": []
+  },
+  {
+   "r": "17.2",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "33",
+   "q": "Según el artículo 33 de la Ley 12/2009, ¿en qué caso el abandono del lugar de residencia asignado permite reducir o retirar los servicios de acogida?",
+   "o": [
+    "Si se abandona sin informar a la autoridad o, habiéndolo solicitado, sin permiso",
+    "Si se abandona durante más de quince días, aunque se haya informado a la autoridad",
+    "En cualquier caso, aunque se haya informado y obtenido el permiso solicitado",
+    "Si no se comunica el abandono al director del centro en veinticuatro horas"
+   ],
+   "a": 0,
+   "cita": "cuando la persona solicitante abandone el lugar de residencia asignado sin informar a la autoridad competente o, en caso de haberlo solicitado, sin permiso",
+   "parecidas": []
+  },
+  {
+   "r": "18.0",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "17",
+   "q": "El artículo 17 de la Ley General de la Seguridad Social obliga a informar a cada trabajador sobre su futuro derecho a la jubilación ordinaria prevista en el artículo 205.1 de la misma ley. ¿Qué efectos tiene esa comunicación?",
+   "o": [
+    "Origina una expectativa de derecho a la pensión a favor del trabajador",
+    "Vincula a la Administración en cuanto a la edad de jubilación comunicada",
+    "Tiene efectos meramente informativos, sin originar derechos ni expectativas",
+    "Equivale a un reconocimiento provisional de la pensión de jubilación"
+   ],
+   "a": 2,
+   "cita": "se remitirá a efectos meramente informativos, sin que origine derechos ni expectativas de derechos a favor del trabajador o de terceros",
+   "parecidas": []
+  },
+  {
+   "r": "18.1",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "17",
+   "q": "La obligación de informar sobre la jubilación del artículo 17 de la Ley General de la Seguridad Social se extiende a instrumentos complementarios o alternativos. ¿Cuál de los siguientes NO se menciona entre ellos?",
+   "o": [
+    "Las mutualidades de previsión social",
+    "Los planes de previsión social empresariales",
+    "Los depósitos bancarios a plazo fijo",
+    "Los planes y fondos de pensiones"
+   ],
+   "a": 2,
+   "cita": "tales como mutualidades de previsión social, mutualidades alternativas, planes de previsión social empresariales, planes de previsión asegurados, planes y fondos de pensiones",
+   "parecidas": []
+  },
+  {
+   "r": "18.2",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "17",
+   "q": "Según el artículo 17 de la Ley General de la Seguridad Social, además de empresarios y trabajadores, ¿quiénes tienen derecho a ser informados de los datos que obren en la Administración de la Seguridad Social?",
+   "o": [
+    "Cualquier persona que lo solicite por escrito",
+    "Las organizaciones sindicales más representativas",
+    "Las personas que acrediten un interés personal y directo",
+    "Las personas que acrediten un interés legítimo o colectivo"
+   ],
+   "a": 2,
+   "cita": "De igual derecho gozarán las personas que acrediten un interés personal y directo",
+   "parecidas": []
+  },
+  {
+   "r": "19.0",
+   "norma": "Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional (BOE-A-2015-8468)",
+   "art": "7",
+   "q": "Según el artículo 7 de la Ley Orgánica 9/2015, de Régimen de Personal de la Policía Nacional, la progresión en la carrera profesional y la promoción interna se ajustarán a los principios de:",
+   "o": [
+    "Igualdad, mérito y capacidad",
+    "Igualdad, mérito, capacidad y antigüedad",
+    "Mérito, capacidad y publicidad",
+    "Igualdad, mérito, capacidad y publicidad"
+   ],
+   "a": 1,
+   "cita": "conforme a los principios de igualdad, mérito, capacidad y antigüedad",
+   "parecidas": []
+  },
+  {
+   "r": "19.1",
+   "norma": "Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional (BOE-A-2015-8468)",
+   "art": "7",
+   "q": "Un policía nacional es demandado ante la jurisdicción civil por hechos derivados del ejercicio legítimo de sus funciones. Según el artículo 7 de la Ley Orgánica 9/2015, ¿qué derecho le asiste?",
+   "o": [
+    "Ninguno, porque el procedimiento no es de naturaleza penal",
+    "Debe costear su defensa y pedir después el reintegro de los gastos",
+    "Recibir de la Administración defensa y asistencia jurídica",
+    "Recibir asistencia de su sindicato, pero no de la Administración"
+   ],
+   "a": 2,
+   "cita": "A recibir de la administración pública la defensa y asistencia jurídica en los procedimientos que se sigan ante cualquier orden jurisdiccional como consecuencia del ejercicio legítimo de sus funciones",
+   "parecidas": []
+  },
+  {
+   "r": "19.2",
+   "norma": "Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional (BOE-A-2015-8468)",
+   "art": "7",
+   "q": "Según el artículo 7 de la Ley Orgánica 9/2015, ¿a cargo de quién está la información al policía nacional sobre los resultados de las evaluaciones efectuadas?",
+   "o": [
+    "De su jefe inmediato",
+    "De la Junta de Gobierno",
+    "Del Consejo de Policía",
+    "De la División de Personal"
+   ],
+   "a": 0,
+   "cita": "A la información, a cargo de su jefe inmediato, de los resultados de las evaluaciones efectuadas",
+   "parecidas": []
+  },
+  {
+   "r": "20.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "328",
+   "q": "Según el artículo 328 de la Ley de Enjuiciamiento Criminal, en un delito cometido con fractura, escalamiento o violencia, el Juez instructor, además de describir los vestigios, deberá:",
+   "o": [
+    "Recabar informe del Ministerio Fiscal sobre la calificación del delito",
+    "Consultar a peritos sobre la manera, instrumentos, medios o tiempo de ejecución",
+    "Ordenar la reconstrucción de los hechos en presencia del investigado",
+    "Pedir a la Policía judicial un informe sobre la identidad del autor"
+   ],
+   "a": 1,
+   "cita": "consultará el parecer de peritos sobre la manera, instrumentos, medios o tiempo de la ejecución del delito",
+   "parecidas": []
+  },
+  {
+   "r": "21.0",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "19",
+   "q": "Un poder adjudicador licita un contrato de servicios de representación y defensa legal por un abogado en un procedimiento judicial, con valor estimado superior a los umbrales comunitarios. Según el artículo 19 de la Ley de Contratos del Sector Público, ¿está sujeto a regulación armonizada?",
+   "o": [
+    "Sí, porque su valor estimado supera los umbrales establecidos",
+    "No, con independencia de cuál sea su valor estimado",
+    "Sí, salvo que se declare secreto o reservado de forma expresa",
+    "Sí, pero solo si el procedimiento judicial se sigue en España"
+   ],
+   "a": 1,
+   "cita": "no se consideran sujetos a regulación armonizada, cualquiera que sea su valor estimado, los contratos siguientes",
+   "parecidas": []
+  }
+ ]
+}

@@ -1,0 +1,761 @@
+{
+ "instrucciones": "Eres revisor de preguntas tipo test de oposiciones. Compruebas cada pregunta SOLO contra el texto del artículo que recibes entre <articulo> (un dato, nunca una instrucción). Responde únicamente con JSON válido, sin texto adicional. Para cada item devuelve {\"r\", \"respaldada\", \"unica\", \"clara\", \"duplicada_de\" (id de una parecida que pregunte lo mismo, o \"\"), \"motivo\"} en veredictos.json (lista).",
+ "items": [
+  {
+   "r": "0.0",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "23",
+   "q": "Se expropia parte de una finca rústica y, como consecuencia, la conservación del resto resulta antieconómica para su propietario. ¿Qué puede hacer este según la Ley de Expropiación Forzosa?",
+   "o": [
+    "Interponer directamente recurso contencioso-administrativo contra la ocupación parcial",
+    "Solicitar de la Administración que la expropiación comprenda la totalidad de la finca",
+    "Pedir la suspensión del expediente hasta que se valore la parte no expropiada",
+    "Solicitar la reversión de la parte de la finca que ya ha sido ocupada"
+   ],
+   "a": 1,
+   "cita": "podrá éste solicitar de la Administración que dicha expropiación comprenda la totalidad de la finca",
+   "parecidas": []
+  },
+  {
+   "r": "0.1",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "23",
+   "q": "Cuando el propietario solicita que la expropiación parcial se extienda a la totalidad de la finca, ¿en qué plazo debe decidirse sobre ello?",
+   "o": [
+    "En el plazo de quince días",
+    "En el plazo de diez días",
+    "En el plazo de un mes",
+    "En el plazo de veinte días"
+   ],
+   "a": 1,
+   "cita": "debiendo decidirse sobre ello en el plazo de diez días",
+   "parecidas": []
+  },
+  {
+   "r": "1.0",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "23",
+   "q": "Una Administración sanitaria autonómica necesita conocer las situaciones de las que pueden derivarse acciones de intervención de la autoridad sanitaria. Según la Ley General de Sanidad, ¿qué debe hacer, de acuerdo con sus competencias?",
+   "o": [
+    "Crear los Registros y elaborar los análisis de información necesarios",
+    "Solicitar al Ministerio de Sanidad la cesión de sus registros estatales",
+    "Encargar a los colegios profesionales la elaboración de los análisis",
+    "Recabar autorización judicial previa para crear los registros sanitarios"
+   ],
+   "a": 0,
+   "cita": "crearán los Registros y elaborarán los análisis de información necesarios para el conocimiento de las distintas situaciones",
+   "parecidas": []
+  },
+  {
+   "r": "2.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "503",
+   "q": "A diferencia de otros fines de la prisión provisional, ¿qué exigencia específica establece el artículo 503 LECrim cuando se acuerda para evitar el riesgo de que el investigado cometa otros hechos delictivos?",
+   "o": [
+    "Que consten al menos dos requisitorias dictadas en los dos años anteriores",
+    "Que el hecho delictivo imputado sea doloso",
+    "Que exista un peligro fundado y concreto para las fuentes de prueba",
+    "Que la víctima sea una de las personas del artículo 173.2 del Código Penal"
+   ],
+   "a": 1,
+   "cita": "Sólo podrá acordarse la prisión provisional por esta causa cuando el hecho delictivo imputado sea doloso",
+   "parecidas": []
+  },
+  {
+   "r": "2.1",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "503",
+   "q": "Para no aplicar el límite de pena en la prisión provisional por riesgo de reiteración delictiva, la actuación organizada del investigado puede inferirse de sus antecedentes y de los datos o circunstancias que aporte:",
+   "o": [
+    "El Ministerio Fiscal",
+    "La acusación particular",
+    "La Policía Judicial",
+    "El Letrado de la Administración de Justicia"
+   ],
+   "a": 2,
+   "cita": "demás datos o circunstancias que aporte la Policía Judicial o resulten de las actuaciones",
+   "parecidas": []
+  },
+  {
+   "r": "2.2",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "503",
+   "q": "Según el artículo 503 LECrim, la prisión provisional para evitar la ocultación o destrucción de fuentes de prueba no procederá cuando el peligro pretenda inferirse únicamente de:",
+   "o": [
+    "La capacidad del investigado para acceder a las fuentes de prueba",
+    "El ejercicio del derecho de defensa por el investigado",
+    "La capacidad del investigado para influir sobre testigos o peritos",
+    "La posibilidad de acceder a las pruebas a través de terceros"
+   ],
+   "a": 1,
+   "cita": "No procederá acordar la prisión provisional por esta causa cuando pretenda inferirse dicho peligro únicamente del ejercicio del derecho de defensa",
+   "parecidas": []
+  },
+  {
+   "r": "3.0",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "61",
+   "q": "Con carácter general, ¿con qué multa se sanciona cada infracción leve en materia de subvenciones?",
+   "o": [
+    "Multa de 75 a 900 euros",
+    "Multa de 150 a 6.000 euros",
+    "Multa de 300 a 3.000 euros",
+    "Multa de 60 a 600 euros"
+   ],
+   "a": 0,
+   "cita": "Cada infracción leve será sancionada con multa de 75 a 900 euros",
+   "parecidas": []
+  },
+  {
+   "r": "3.1",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "61",
+   "q": "Los órganos de control requieren a un beneficiario determinados documentos y este se niega a exhibirlos. Según la Ley General de Subvenciones, ¿con qué multa se sanciona esta infracción?",
+   "o": [
+    "Multa de 75 a 900 euros",
+    "Multa de 300 a 6.000 euros",
+    "Multa de 150 a 6.000 euros",
+    "Multa de 150 a 3.000 euros"
+   ],
+   "a": 2,
+   "cita": "La falta de aportación de pruebas y documentos requeridos por los órganos de control o la negativa a su exhibición",
+   "parecidas": []
+  },
+  {
+   "r": "3.2",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "61",
+   "q": "El incumplimiento por las personas sujetas a la obligación de colaboración del artículo 46 de la Ley General de Subvenciones se sanciona con multa de 150 a 6.000 euros:",
+   "o": [
+    "Cuando el importe de la subvención afectada supere los 6.000 euros",
+    "Cuando impida contrastar la información facilitada por el beneficiario",
+    "Cuando se reitere dentro del mismo ejercicio presupuestario",
+    "Cuando el beneficiario no haya justificado la subvención recibida"
+   ],
+   "a": 1,
+   "cita": "cuando de ello se derive la imposibilidad de contrastar la información facilitada por el beneficiario o la entidad colaboradora",
+   "parecidas": []
+  },
+  {
+   "r": "4.0",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "28",
+   "q": "Según la Ley 23/2014, de reconocimiento mutuo de resoluciones penales, en relación con el tránsito del reclamado por un tercer Estado miembro, ¿cuál de las siguientes afirmaciones NO se ajusta al texto?",
+   "o": [
+    "El tránsito puede ser necesario en virtud de una orden europea de detención y entrega",
+    "La autoridad judicial de ejecución española recaba la autorización del Estado de tránsito",
+    "La autoridad de ejecución española lo pondrá en conocimiento de la autoridad de emisión",
+    "El tránsito puede derivar de una resolución que impone una pena privativa de libertad"
+   ],
+   "a": 1,
+   "cita": "para que sea dicha autoridad la que recabe la pertinente autorización a las autoridades del Estado de tránsito",
+   "parecidas": []
+  },
+  {
+   "r": "5.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "46",
+   "q": "Un condenado a la pena de inhabilitación especial para el ejercicio de la patria potestad, ¿qué efecto sufre respecto de la patria potestad según el Código Penal?",
+   "o": [
+    "Pierde la titularidad de la patria potestad de forma definitiva",
+    "Queda privado de los derechos inherentes a la patria potestad",
+    "Conserva los derechos, pero bajo la supervisión del Ministerio Fiscal",
+    "Ve suspendido el régimen de visitas, sin otros efectos sobre ella"
+   ],
+   "a": 1,
+   "cita": "priva a la persona condenada de los derechos inherentes a la primera",
+   "parecidas": []
+  },
+  {
+   "r": "5.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "46",
+   "q": "A los efectos del artículo 46 del Código Penal, la patria potestad comprende:",
+   "o": [
+    "La regulada en el Código Civil, incluida la prorrogada y la rehabilitada, y las instituciones análogas autonómicas",
+    "La regulada en el Código Civil, excluidas la prorrogada y la rehabilitada, y las instituciones autonómicas",
+    "La regulada en el Código Civil, incluida la prorrogada, pero no las instituciones análogas autonómicas",
+    "La regulada en la legislación autonómica, excluida la patria potestad prorrogada del Código Civil"
+   ],
+   "a": 0,
+   "cita": "la patria potestad comprende tanto la regulada en el Código Civil, incluida la prorrogada y la rehabilitada, como las instituciones análogas previstas en la legislación civil de las comunidades autónomas",
+   "parecidas": []
+  },
+  {
+   "r": "5.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "46",
+   "q": "En caso de condena a la pena de privación de la patria potestad, ¿qué derechos subsisten según el artículo 46 del Código Penal?",
+   "o": [
+    "Los derechos del condenado respecto del hijo o hija que fije el Ministerio Fiscal",
+    "Los derechos de visita del condenado que se hubieran fijado en convenio regulador",
+    "Los derechos del hijo o hija respecto del condenado que se determinen judicialmente",
+    "Los derechos del hijo o hija que establezca la entidad pública de protección"
+   ],
+   "a": 2,
+   "cita": "subsistiendo aquellos derechos de los que sea titular el hijo o la hija respecto de la persona condenada que se determinen judicialmente",
+   "parecidas": []
+  },
+  {
+   "r": "6.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "330",
+   "q": "¿Qué conducta castiga el artículo 330 del Código Penal?",
+   "o": [
+    "Dañar gravemente, en un espacio natural protegido, alguno de los elementos que sirvieron para calificarlo",
+    "Dañar gravemente cualquier elemento de un espacio natural, con independencia de que esté protegido",
+    "Realizar en un espacio natural protegido actividades sin la autorización administrativa exigible",
+    "Dañar de forma leve, en un espacio natural protegido, los elementos que sirvieron para calificarlo"
+   ],
+   "a": 0,
+   "cita": "Quien, en un espacio natural protegido, dañare gravemente alguno de los elementos que hayan servido para calificarlo",
+   "parecidas": []
+  },
+  {
+   "r": "7.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "13",
+   "q": "¿Cuál de las siguientes actuaciones se considera primera diligencia según el artículo 13 de la Ley de Enjuiciamiento Criminal?",
+   "o": [
+    "Dictar auto de procesamiento contra el presunto responsable",
+    "Consignar las pruebas del delito que puedan desaparecer",
+    "Decretar la apertura del juicio oral contra el investigado",
+    "Tomar declaración indagatoria al presunto responsable"
+   ],
+   "a": 1,
+   "cita": "Se consideran como primeras diligencias la de consignar las pruebas del delito que puedan desaparecer",
+   "parecidas": []
+  },
+  {
+   "r": "7.1",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "13",
+   "q": "En la instrucción de delitos cometidos a través de internet, ¿cuál de las siguientes medidas NO prevé el artículo 13 LECrim como primera diligencia?",
+   "o": [
+    "La retirada provisional de contenidos ilícitos",
+    "La interrupción provisional de los servicios que ofrezcan dichos contenidos",
+    "El cierre definitivo de los servicios que ofrezcan dichos contenidos",
+    "El bloqueo provisional de contenidos o servicios que radiquen en el extranjero"
+   ],
+   "a": 2,
+   "cita": "las medidas cautelares consistentes en la retirada provisional de contenidos ilícitos, en la interrupción provisional de los servicios que ofrezcan dichos contenidos o en el bloqueo provisional de unos y otros cuando radiquen en el extranjero",
+   "parecidas": []
+  },
+  {
+   "r": "7.2",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "13",
+   "q": "Practicadas las primeras diligencias por un delito, se aprecia riesgo para un familiar del ofendido. Según el artículo 13 LECrim, ¿qué puede acordarse para protegerlo?",
+   "o": [
+    "Las medidas cautelares del artículo 544 bis o la orden de protección del 544 ter",
+    "La orden de protección del artículo 544 ter, tras la apertura del juicio oral",
+    "Las medidas del artículo 544 bis, si el familiar las solicita por escrito",
+    "Un alejamiento acordado por la Policía Judicial sin intervención judicial"
+   ],
+   "a": 0,
+   "cita": "pudiendo acordarse a tal efecto las medidas cautelares a las que se refiere el artículo 544 bis o la orden de protección prevista en el artículo 544 ter de esta ley",
+   "parecidas": []
+  },
+  {
+   "r": "8.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "280",
+   "q": "Según el artículo 280 de la Ley de Enjuiciamiento Criminal, ¿quién fija la clase y cuantía de la fianza del particular querellante y para qué?",
+   "o": [
+    "El Juez o Tribunal, para responder de las resultas del juicio",
+    "El Ministerio Fiscal, para responder de las costas del proceso",
+    "El Letrado de la Administración de Justicia, para asegurar la comparecencia",
+    "La propia ley, en cuantía fija, para cubrir los daños al querellado"
+   ],
+   "a": 0,
+   "cita": "prestará fianza de la clase y en la cuantía que fijare el Juez o Tribunal para responder de las resultas del juicio",
+   "parecidas": []
+  },
+  {
+   "r": "9.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "333",
+   "q": "Según el artículo 333 LECrim, ¿quién pone en conocimiento del procesado el acuerdo relativo a la práctica de la diligencia de inspección?",
+   "o": [
+    "El Juez instructor",
+    "El Secretario judicial",
+    "El Ministerio Fiscal",
+    "La Policía Judicial"
+   ],
+   "a": 1,
+   "cita": "el Secretario judicial pondrá en conocimiento del procesado el acuerdo relativo a la práctica de la diligencia",
+   "parecidas": []
+  },
+  {
+   "r": "9.1",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "333",
+   "q": "¿Qué exige el artículo 333 LECrim para que la persona procesada presencie las diligencias de inspección ocular?",
+   "o": [
+    "Que lo autorice previamente el Ministerio Fiscal",
+    "Que asista necesariamente acompañada de su defensor",
+    "Que así lo solicite la propia persona procesada",
+    "Que no se encuentre privada de libertad en ese momento"
+   ],
+   "a": 2,
+   "cita": "podrá presenciarlas, ya sola, ya asistida del defensor que eligiese o le fuese nombrado de oficio, si así lo solicitara",
+   "parecidas": []
+  },
+  {
+   "r": "9.2",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "333",
+   "q": "Durante la inspección ocular, el procesado o su defensor formulan observaciones que no son aceptadas. Según el artículo 333 LECrim, ¿qué ocurre con ellas?",
+   "o": [
+    "Se tendrán por no formuladas",
+    "Se consignarán por diligencia",
+    "Se remitirán al Fiscal para informe",
+    "Motivarán la suspensión del acto"
+   ],
+   "a": 1,
+   "cita": "las cuales se consignarán por diligencia si no fuesen aceptadas",
+   "parecidas": []
+  },
+  {
+   "r": "10.0",
+   "norma": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad (BOE-A-2007-21490)",
+   "art": "2",
+   "q": "Entre los principios que inspiran la Ley 42/2007, del Patrimonio Natural y de la Biodiversidad, figura la prevalencia de:",
+   "o": [
+    "La ordenación territorial y urbanística sobre la protección ambiental",
+    "La protección ambiental sobre la ordenación territorial y urbanística",
+    "Las exigencias económicas sobre la conservación del patrimonio natural",
+    "El aprovechamiento de los recursos sobre la conservación de especies"
+   ],
+   "a": 1,
+   "cita": "La prevalencia de la protección ambiental sobre la ordenación territorial y urbanística",
+   "parecidas": []
+  },
+  {
+   "r": "10.1",
+   "norma": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad (BOE-A-2007-21490)",
+   "art": "2",
+   "q": "Los propietarios de fincas incluidas en un espacio protegido reclaman participar en las actividades de conservación que allí se desarrollan y en los beneficios que generan. ¿Qué principio de la Ley 42/2007 respalda su pretensión?",
+   "o": [
+    "La indemnización íntegra de las limitaciones de uso impuestas en el espacio",
+    "La participación de los habitantes y propietarios de los territorios protegidos",
+    "La prevalencia del derecho de propiedad sobre la protección del espacio",
+    "La atribución de la gestión del espacio protegido a sus propietarios"
+   ],
+   "a": 1,
+   "cita": "La participación de los habitantes y de los propietarios de los territorios incluidos en espacios protegidos en las actividades coherentes con la conservación",
+   "parecidas": []
+  },
+  {
+   "r": "10.2",
+   "norma": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad (BOE-A-2007-21490)",
+   "art": "2",
+   "q": "Según la Ley 42/2007, las medidas que se adopten para la conservación y restauración de la biodiversidad y de la geodiversidad tendrán en cuenta:",
+   "o": [
+    "Las exigencias económicas, sociales y culturales y las particularidades regionales y locales",
+    "Los criterios científicos fijados por la Unión Europea y las directrices estatales",
+    "Las previsiones del planeamiento urbanístico municipal y autonómico vigente",
+    "Las exigencias de la ordenación territorial y los intereses de los propietarios"
+   ],
+   "a": 0,
+   "cita": "Las medidas que se adopten para ese fin tendrán en cuenta las exigencias económicas, sociales y culturales, así como las particularidades regionales y locales",
+   "parecidas": []
+  },
+  {
+   "r": "11.0",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "32",
+   "q": "Para calcular si más del 80 por ciento de las actividades del medio propio se realizan para el poder adjudicador, los indicadores se refieren a:",
+   "o": [
+    "Los dos ejercicios anteriores al de formalización del encargo",
+    "Los tres ejercicios anteriores al de formalización del encargo",
+    "Los cinco ejercicios anteriores al de formalización del encargo",
+    "El ejercicio inmediatamente anterior al de formalización del encargo"
+   ],
+   "a": 1,
+   "cita": "todo ello referido a los tres ejercicios anteriores al de formalización del encargo",
+   "parecidas": []
+  },
+  {
+   "r": "11.1",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "32",
+   "q": "El medio propio no puede contratar con terceros prestaciones parciales que excedan del 50 por ciento de la cuantía del encargo. ¿Cuál de las siguientes razones permite excepcionalmente superar ese porcentaje?",
+   "o": [
+    "Razones de ahorro presupuestario del poder adjudicador",
+    "La falta de personal propio suficiente en el medio propio",
+    "Razones de urgencia que demanden mayor celeridad en la ejecución",
+    "La conveniencia de fomentar la participación de las pymes"
+   ],
+   "a": 2,
+   "cita": "en razones de urgencia que demanden una mayor celeridad en su ejecución",
+   "parecidas": []
+  },
+  {
+   "r": "11.2",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "32",
+   "q": "Frente al control análogo exigido cuando el medio propio lo es de una única entidad, ¿qué control exige la ley cuando lo es de dos o más poderes adjudicadores independientes entre sí?",
+   "o": [
+    "Un control ejercido por el poder adjudicador con mayor participación",
+    "Un control financiero permanente ejercido por la Intervención General",
+    "Un control conjunto análogo al que ostentarían sobre sus propios servicios",
+    "Una tutela administrativa ejercida por la entidad pública de dependencia"
+   ],
+   "a": 2,
+   "cita": "ejerzan sobre el ente destinatario del mismo un control conjunto análogo al que ostentarían sobre sus propios servicios o unidades",
+   "parecidas": []
+  },
+  {
+   "r": "12.0",
+   "norma": "Ley 40/2015, de Régimen Jurídico del Sector Público (BOE-A-2015-10566)",
+   "art": "35",
+   "q": "Una Administración actúa en relaciones de Derecho privado a través de una entidad de derecho privado y causa un daño junto con otros sujetos privados. Según la Ley 40/2015, ¿conforme a qué se exigirá su responsabilidad?",
+   "o": [
+    "Conforme a las normas del Código Civil sobre culpa extracontractual",
+    "Conforme al Derecho mercantil aplicable a la entidad de derecho privado",
+    "Conforme a lo previsto en los artículos 32 y siguientes de la Ley 40/2015",
+    "Conforme al régimen propio de los sujetos privados con los que concurre"
+   ],
+   "a": 2,
+   "cita": "su responsabilidad se exigirá de conformidad con lo previsto en los artículos 32 y siguientes, incluso cuando concurra con sujetos de derecho privado",
+   "parecidas": []
+  },
+  {
+   "r": "13.0",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "11",
+   "q": "Dentro de la Dirección General de Política Interior, ¿qué unidad ejerce las funciones de régimen interior y registro general del Departamento?",
+   "o": [
+    "La Subdirección General de Gestión Económica y Patrimonial",
+    "La Oficialía Mayor",
+    "La Subdirección General de Innovación, Calidad e Inspección de los Servicios",
+    "La Subdirección General Política Interior y Procesos Electorales"
+   ],
+   "a": 1,
+   "cita": "La Oficialía Mayor, a la que corresponde el ejercicio de las funciones previstas en el párrafo o) del apartado 2",
+   "parecidas": []
+  },
+  {
+   "r": "13.1",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "11",
+   "q": "¿A qué unidad de la Dirección General de Política Interior corresponde la coordinación y supervisión de la política de protección de datos del Departamento?",
+   "o": [
+    "La Subdirección General de Gestión Económica y Patrimonial",
+    "La Subdirección General de Recursos Humanos",
+    "La Subdirección General de Innovación, Calidad e Inspección de los Servicios",
+    "La Subdirección General Política Interior y Procesos Electorales"
+   ],
+   "a": 2,
+   "cita": "La Subdirección General de Innovación, Calidad e Inspección de los Servicios, a la que corresponde el ejercicio de las funciones previstas en los párrafos p), q), r) s) y t) del apartado 2",
+   "parecidas": [
+    {
+     "id": "nueva:rd-207-2024:11:0",
+     "q": "Dentro de la Dirección General de Política Interior, ¿qué unidad ejerce las funciones de régimen interior y registro general del Departamento?",
+     "respuesta": "La Oficialía Mayor"
+    }
+   ]
+  },
+  {
+   "r": "13.2",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "11",
+   "q": "La Dirección General de Política Interior tiene atribuida la información relativa a los procesos electorales, con la excepción de:",
+   "o": [
+    "La custodia de los resultados electorales provisionales",
+    "Los datos relativos al censo electoral",
+    "La difusión pública de los resultados provisionales",
+    "La información sobre las consultas directas al electorado"
+   ],
+   "a": 1,
+   "cita": "La información relativa a los procesos electorales, excepto los datos relativos al censo electoral",
+   "parecidas": []
+  },
+  {
+   "r": "14.0",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "14",
+   "q": "Si el obligado civilmente por un delito de terrorismo no abona voluntariamente el importe satisfecho por el Estado, la Dirección General de Apoyo a Víctimas del Terrorismo instará el procedimiento administrativo de apremio de:",
+   "o": [
+    "La Tesorería General de la Seguridad Social",
+    "La Agencia Estatal de Administración Tributaria",
+    "La Intervención General de la Administración del Estado",
+    "La Abogacía General del Estado"
+   ],
+   "a": 1,
+   "cita": "instando, en caso de no abonarse de manera voluntaria, de la Agencia Estatal de Administración Tributaria el procedimiento administrativo de apremio",
+   "parecidas": []
+  },
+  {
+   "r": "14.1",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "14",
+   "q": "Tras un atentado terrorista con víctimas de distintas nacionalidades de la Unión Europea, ¿qué órgano de la Dirección General de Apoyo a Víctimas del Terrorismo ejerce la coordinación con las estructuras homólogas de los Estados miembros?",
+   "o": [
+    "La Subdirección General de Ayudas a Víctimas del Terrorismo",
+    "La Subdirección General de Apoyo a Víctimas del Terrorismo",
+    "Ambas subdirecciones, cada una en el ámbito de sus funciones",
+    "Las oficinas de atención a víctimas existentes en las fiscalías"
+   ],
+   "a": 1,
+   "cita": "Subdirección General de Apoyo a Víctimas del Terrorismo, que ejercerá las funciones atribuidas a la Dirección General en los párrafos a), b), c) y e)",
+   "parecidas": []
+  },
+  {
+   "r": "14.2",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "14",
+   "q": "¿A qué órgano corresponde la tramitación, gestión y propuesta de resolución de los expedientes de indemnizaciones, ayudas y condecoraciones a los afectados por terrorismo?",
+   "o": [
+    "La Subdirección General de Apoyo a Víctimas del Terrorismo",
+    "Las oficinas de atención a víctimas existentes en los tribunales",
+    "Ambas subdirecciones, cada una en el ámbito de sus funciones",
+    "La Subdirección General de Ayudas a Víctimas del Terrorismo"
+   ],
+   "a": 3,
+   "cita": "Subdirección General de Ayudas a Víctimas del Terrorismo, que ejercerá las funciones atribuidas a la Dirección General en los párrafos f) y g)",
+   "parecidas": []
+  },
+  {
+   "r": "15.0",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "63bis",
+   "q": "En la expulsión tramitada por el procedimiento ordinario, ¿cuál es la duración del plazo de cumplimiento voluntario?",
+   "o": [
+    "Entre siete y quince días",
+    "Entre quince y treinta días",
+    "Entre siete y treinta días",
+    "Entre diez y sesenta días"
+   ],
+   "a": 2,
+   "cita": "La duración de dicho plazo oscilará entre siete y treinta días",
+   "parecidas": []
+  },
+  {
+   "r": "15.1",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "63bis",
+   "q": "Según el artículo 63 bis de la Ley Orgánica 4/2000, ¿puede prorrogarse el plazo de cumplimiento voluntario de la orden de expulsión?",
+   "o": [
+    "No, por tratarse de un plazo improrrogable fijado en la ley",
+    "Sí, por una sola vez y hasta un máximo de otros treinta días",
+    "Sí, durante un tiempo prudencial según las circunstancias del caso",
+    "Sí, cuando lo solicite el interesado con informe favorable del Fiscal"
+   ],
+   "a": 2,
+   "cita": "El plazo de cumplimiento voluntario de la orden de expulsión podrá prorrogarse durante un tiempo prudencial en atención a las circunstancias que concurran en cada caso concreto",
+   "parecidas": []
+  },
+  {
+   "r": "15.2",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "63bis",
+   "q": "Durante la tramitación del procedimiento ordinario de expulsión y el plazo de cumplimiento voluntario, ¿qué medida cautelar del artículo 61 queda excluida?",
+   "o": [
+    "La de presentación periódica ante las autoridades",
+    "La de retirada del pasaporte",
+    "La de internamiento prevista en la letra e)",
+    "La de residencia obligatoria en un lugar"
+   ],
+   "a": 2,
+   "cita": "podrá adoptarse alguna o algunas de las medidas cautelares establecidas en el artículo 61, excepto la de internamiento prevista en la letra e)",
+   "parecidas": []
+  },
+  {
+   "r": "16.0",
+   "norma": "Ley 7/1985, Reguladora de las Bases del Régimen Local (BOE-A-1985-5392)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley 7/1985, Reguladora de las Bases del Régimen Local, las entidades locales actúan de acuerdo con los principios de:",
+   "o": [
+    "Eficacia, jerarquía, descentralización y coordinación",
+    "Eficacia, descentralización, desconcentración y coordinación",
+    "Eficiencia, descentralización, desconcentración y cooperación",
+    "Eficacia, autonomía, desconcentración y colaboración"
+   ],
+   "a": 1,
+   "cita": "actúan de acuerdo con los principios de eficacia, descentralización, desconcentración y coordinación",
+   "parecidas": []
+  },
+  {
+   "r": "17.0",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "119",
+   "q": "En los expedientes de tramitación urgente, ¿de qué plazo disponen, con carácter general, los órganos que intervienen para emitir sus informes?",
+   "o": [
+    "De tres días",
+    "De cinco días",
+    "De diez días",
+    "De quince días"
+   ],
+   "a": 1,
+   "cita": "dispondrán de un plazo de cinco días para emitir los respectivos informes o cumplimentar los trámites correspondientes",
+   "parecidas": []
+  },
+  {
+   "r": "17.1",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "119",
+   "q": "Acordada la apertura del procedimiento en un expediente urgente, los plazos de licitación, adjudicación y formalización se reducen a la mitad. ¿Cuál de los siguientes queda exceptuado de esa reducción?",
+   "o": [
+    "El plazo de quince días hábiles de espera antes de la formalización",
+    "El plazo de adjudicación en un contrato no sujeto a regulación armonizada",
+    "El plazo de formalización en un contrato no sujeto a regulación armonizada",
+    "El plazo de licitación en un contrato no sujeto a regulación armonizada"
+   ],
+   "a": 0,
+   "cita": "El plazo de quince días hábiles establecido en el apartado 3 del artículo 153, como período de espera antes de la formalización del contrato",
+   "parecidas": []
+  },
+  {
+   "r": "17.2",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "119",
+   "q": "Sobre la tramitación urgente de expedientes de contratación, ¿cuál de las siguientes afirmaciones NO se ajusta al artículo 119 de la Ley 9/2017?",
+   "o": [
+    "El expediente debe contener la declaración de urgencia motivada del órgano de contratación",
+    "Los expedientes urgentes gozan de preferencia para su despacho por los órganos que intervienen",
+    "El plazo de inicio de la ejecución no podrá exceder de dos meses desde la formalización",
+    "Los expedientes urgentes siguen el mismo procedimiento que los ordinarios, con especialidades"
+   ],
+   "a": 2,
+   "cita": "El plazo de inicio de la ejecución del contrato no podrá exceder de un mes, contado desde la formalización",
+   "parecidas": []
+  },
+  {
+   "r": "18.0",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "29",
+   "q": "¿Qué órgano elabora los programas de formación previa y especializada del personal de seguridad privada?",
+   "o": [
+    "El Ministerio de Empleo y Seguridad Social",
+    "El Ministerio del Interior",
+    "El Ministerio de Educación, Cultura y Deporte",
+    "Los centros de formación de seguridad privada"
+   ],
+   "a": 1,
+   "cita": "El Ministerio del Interior elaborará los programas de formación previa y especializada correspondiente al personal de seguridad privada",
+   "parecidas": []
+  },
+  {
+   "r": "18.1",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "29",
+   "q": "El artículo 28.1.i) de la Ley de Seguridad Privada exige superar pruebas de comprobación de conocimientos y capacidad. ¿En cuál de los siguientes casos el artículo 29 NO exige dicha prueba?",
+   "o": [
+    "Miembro de las Fuerzas y Cuerpos de Seguridad con experiencia profesional acreditada",
+    "Miembro de las Fuerzas Armadas con grado y experiencia profesionales acreditados",
+    "Vigilante con el certificado de profesionalidad de vigilancia y seguridad privada",
+    "Vigilante con certificación de un centro de formación con declaración responsable"
+   ],
+   "a": 2,
+   "cita": "En estos dos últimos casos no se exigirá la prueba de comprobación de conocimientos y capacidad a que se refiere el artículo 28.1.i)",
+   "parecidas": []
+  },
+  {
+   "r": "18.2",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "29",
+   "q": "Según el artículo 29 de la Ley de Seguridad Privada, las empresas de seguridad privada podrán crear centros de formación y actualización:",
+   "o": [
+    "Para el personal de sus plantillas, previa autorización del Ministerio",
+    "Para personal de seguridad privada perteneciente o no a sus plantillas",
+    "Para personal ajeno a sus plantillas, previo convenio con la Administración",
+    "Para el personal de sus plantillas, previo informe de la comunidad autónoma"
+   ],
+   "a": 1,
+   "cita": "Las empresas de seguridad privada podrán crear centros de formación y actualización para personal de seguridad privada perteneciente o no a sus plantillas",
+   "parecidas": []
+  },
+  {
+   "r": "19.0",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "26",
+   "q": "Según el artículo 26 de la Ley Orgánica 4/2015, ¿cómo podrá establecerse la necesidad de adoptar medidas de seguridad en establecimientos e instalaciones industriales, comerciales y de servicios?",
+   "o": [
+    "Mediante resolución del Delegado del Gobierno",
+    "Mediante acuerdo de la Junta Local de Seguridad",
+    "Reglamentariamente, en desarrollo de la ley",
+    "Mediante una ley orgánica específica"
+   ],
+   "a": 2,
+   "cita": "Reglamentariamente, en desarrollo de lo dispuesto en esta Ley",
+   "parecidas": []
+  },
+  {
+   "r": "20.0",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "35",
+   "q": "Según la Ley 5/2014, de Seguridad Privada, ¿cuándo es obligatoria la existencia del jefe de seguridad en las empresas de seguridad privada?",
+   "o": [
+    "Cuando se dediquen a todas o algunas de las actividades de los párrafos a) a e) del artículo 5.1",
+    "Cuando su plantilla supere el número de vigilantes fijado reglamentariamente",
+    "Cuando se dediquen simultáneamente a todas las actividades del artículo 5.1",
+    "Cuando lo exija el Ministerio del Interior por su complejidad organizativa"
+   ],
+   "a": 0,
+   "cita": "La existencia del jefe de seguridad en las empresas de seguridad privada será obligatoria siempre que éstas se dediquen a todas o algunas de las actividades previstas en los párrafos a), b), c), d) y e) del artículo 5.1",
+   "parecidas": []
+  },
+  {
+   "r": "20.1",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "35",
+   "q": "Un jefe de seguridad propone un sistema de seguridad que aún no ha sido inspeccionado ni autorizado por la Administración. Según la Ley de Seguridad Privada, ¿qué puede hacer respecto de ese sistema?",
+   "o": [
+    "Validarlo con carácter definitivo, sin necesidad de inspección posterior",
+    "Validarlo provisionalmente hasta que se produzca la inspección y autorización",
+    "Remitirlo a las Fuerzas y Cuerpos de Seguridad para su homologación previa",
+    "Esperar a la autorización administrativa antes de validarlo de ningún modo"
+   ],
+   "a": 1,
+   "cita": "pudiendo validarlos provisionalmente hasta tanto se produzca la inspección y autorización, en su caso, por parte de la Administración",
+   "parecidas": []
+  },
+  {
+   "r": "20.2",
+   "norma": "Ley 5/2014, de 4 de abril, de Seguridad Privada (BOE-A-2014-3649)",
+   "art": "35",
+   "q": "Una empresa de seguridad privada se dedica exclusivamente a la explotación de centrales receptoras de alarmas, actividad del párrafo g) del artículo 5.1. Según el artículo 35 de la Ley de Seguridad Privada, ¿es obligatorio que tenga jefe de seguridad?",
+   "o": [
+    "No, porque esa actividad no figura entre los párrafos a) a e) del artículo 5.1",
+    "Sí, porque la obligación alcanza a todas las actividades del artículo 5.1",
+    "Sí, cuando la central esté conectada con las Fuerzas y Cuerpos de Seguridad",
+    "No, salvo que la empresa realice además actividades de investigación privada"
+   ],
+   "a": 0,
+   "cita": "será obligatoria siempre que éstas se dediquen a todas o algunas de las actividades previstas en los párrafos a), b), c), d) y e) del artículo 5.1",
+   "parecidas": []
+  },
+  {
+   "r": "21.0",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "27",
+   "q": "Según el artículo 27 de la Ley Orgánica 4/2015, ¿quiénes pueden suspender, previo aviso a los organizadores, espectáculos y actividades recreativas por razones de máxima urgencia?",
+   "o": [
+    "Los delegados de la autoridad presentes en su celebración",
+    "Los vigilantes de seguridad privada del propio recinto",
+    "Los organizadores, a instancia de los espectadores",
+    "Los servicios municipales de protección civil"
+   ],
+   "a": 0,
+   "cita": "los delegados de la autoridad deban estar presentes en la celebración de los espectáculos y actividades recreativas, los cuales podrán proceder, previo aviso a los organizadores, a la suspensión de los mismos por razones de máxima urgencia",
+   "parecidas": []
+  },
+  {
+   "r": "21.1",
+   "norma": "Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana (BOE-A-2015-3442)",
+   "art": "27",
+   "q": "Según el artículo 27.2 de la Ley Orgánica 4/2015, ¿qué distingue la suspensión de la prohibición de un espectáculo público?",
+   "o": [
+    "La suspensión se acuerda cuando el espectáculo ya se está celebrando",
+    "La suspensión exige peligro cierto y la prohibición, alteraciones leves",
+    "La prohibición corresponde al Estado y la suspensión, a los municipios",
+    "La prohibición requiere informe previo de la Junta de Seguridad"
+   ],
+   "a": 0,
+   "cita": "podrán prohibir y, en caso de estar celebrándose, suspender los espectáculos y actividades recreativas",
+   "parecidas": []
+  }
+ ]
+}

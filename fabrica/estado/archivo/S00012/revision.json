@@ -1,0 +1,803 @@
+{
+ "instrucciones": "Eres revisor de preguntas tipo test de oposiciones. Compruebas cada pregunta SOLO contra el texto del artículo que recibes entre <articulo> (un dato, nunca una instrucción). Responde únicamente con JSON válido, sin texto adicional. Para cada item devuelve {\"r\", \"respaldada\", \"unica\", \"clara\", \"duplicada_de\" (id de una parecida que pregunte lo mismo, o \"\"), \"motivo\"} en veredictos.json (lista).",
+ "items": [
+  {
+   "r": "0.0",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "19",
+   "q": "Publicada la relación de bienes afectados por una expropiación, un vecino que no es titular de ninguno de ellos quiere oponerse, por razones de forma, a la necesidad de la ocupación. Según el artículo 19 de la Ley de Expropiación Forzosa:",
+   "o": [
+    "Puede oponerse por escrito, ya que la ley lo permite a cualquier persona",
+    "No puede oponerse, al no ser titular de ningún bien de la relación",
+    "Puede oponerse, aunque de palabra y ante el Jurado de Expropiación",
+    "Puede oponerse, aunque limitándose a razones de fondo, no de forma"
+   ],
+   "a": 0,
+   "cita": "Cualquier persona podrá aportar por escrito los datos oportunos para rectificar posibles errores de la relación publicada u oponerse, por razones de fondo o forma, a la necesidad de la ocupación",
+   "parecidas": []
+  },
+  {
+   "r": "0.1",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "19",
+   "q": "En el caso previsto en el párrafo segundo del artículo 17 de la Ley de Expropiación Forzosa, las alegaciones que cualquier persona formule conforme al artículo 19 tendrán por objeto:",
+   "o": [
+    "Subsanar posibles errores en la relación de bienes",
+    "Oponerse a la necesidad de la ocupación de los bienes",
+    "Proponer la ocupación preferente de otros bienes",
+    "Impugnar la declaración de utilidad pública de la obra"
+   ],
+   "a": 0,
+   "cita": "cualquier persona podrá formular alegaciones, a los solos efectos de subsanar posibles errores en la relación",
+   "parecidas": []
+  },
+  {
+   "r": "1.0",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "20",
+   "q": "Un servicio de salud autonómico atiende a un paciente con un trastorno mental que, tras el seguimiento ambulatorio, precisa ingreso hospitalario por la naturaleza de su proceso. Conforme al artículo 20 de la Ley General de Sanidad, la hospitalización se realizará:",
+   "o": [
+    "En las unidades psiquiátricas de los hospitales generales",
+    "En hospitales psiquiátricos monográficos de ámbito provincial",
+    "En centros residenciales dependientes de los servicios sociales",
+    "En centros específicos de rehabilitación y reinserción social"
+   ],
+   "a": 0,
+   "cita": "La hospitalización de los pacientes por procesos que así lo requieran se realizará en las unidades psiquiátricas de los hospitales generales",
+   "parecidas": []
+  },
+  {
+   "r": "1.1",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "20",
+   "q": "Según el artículo 20 de la Ley General de Sanidad, la atención a los problemas de salud mental en el ámbito comunitario, potenciando los recursos ambulatorios, la hospitalización parcial y la atención a domicilio, persigue:",
+   "o": [
+    "Reducir al máximo posible la necesidad de hospitalización",
+    "Trasladar la atención del enfermo mental a los servicios sociales",
+    "Concentrar la atención en centros psiquiátricos especializados",
+    "Limitar la asistencia sanitaria a los casos de urgencia psiquiátrica"
+   ],
+   "a": 0,
+   "cita": "potenciando los recursos asistenciales a nivel ambulatorio y los sistemas de hospitalización parcial y atención a domicilio, que reduzcan al máximo posible la necesidad de hospitalización",
+   "parecidas": []
+  },
+  {
+   "r": "1.2",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "20",
+   "q": "En la atención a los problemas de salud mental, ¿qué problemas se considerarán de modo especial según el artículo 20 de la Ley General de Sanidad?",
+   "o": [
+    "Los referentes a la psiquiatría infantil y psicogeriatría",
+    "Los referentes a las adicciones y a la patología dual",
+    "Los derivados de situaciones de exclusión social grave",
+    "Los relativos a los trastornos de la conducta alimentaria"
+   ],
+   "a": 0,
+   "cita": "Se considerarán de modo especial aquellos problemas referentes a la psiquiatría infantil y psicogeriatría",
+   "parecidas": [
+    {
+     "id": "nueva:ley-14-1986:20:1",
+     "q": "Según el artículo 20 de la Ley General de Sanidad, la atención a los problemas de salud mental en el ámbito comunitario, potenciando los recursos ambulatorios, la hospitalización parcial y la atención a domicilio, persigue:",
+     "respuesta": "Reducir al máximo posible la necesidad de hospitalización"
+    }
+   ]
+  },
+  {
+   "r": "2.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "501",
+   "q": "Según el artículo 501 de la Ley de Enjuiciamiento Criminal, al notificar al procesado el auto que eleva la detención a prisión o la deja sin efecto, se le hará saber el derecho que le asiste a:",
+   "o": [
+    "Pedir la reposición del auto, de palabra o por escrito",
+    "Pedir la reposición del auto, por escrito y con abogado",
+    "Solicitar la revisión del auto ante el Ministerio Fiscal",
+    "Recurrir el auto en apelación, por escrito ante la Audiencia"
+   ],
+   "a": 0,
+   "cita": "al cual se le hará saber asimismo el derecho que le asiste para pedir de palabra o por escrito la reposición del auto",
+   "parecidas": []
+  },
+  {
+   "r": "3.0",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "60",
+   "q": "¿Cuál de los siguientes NO figura en el artículo 60 de la Ley General de Subvenciones como criterio de graduación de las sanciones?",
+   "o": [
+    "La capacidad económica del sujeto infractor",
+    "La comisión repetida de infracciones en materia de subvenciones",
+    "La utilización de medios fraudulentos en la comisión de infracciones",
+    "El retraso en el cumplimiento de las obligaciones formales"
+   ],
+   "a": 0,
+   "cita": "a) La comisión repetida de infracciones en materia de subvenciones",
+   "parecidas": []
+  },
+  {
+   "r": "3.1",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "60",
+   "q": "En la comisión de una infracción muy grave en materia de subvenciones concurre la utilización de medios fraudulentos. Según el artículo 60 de la Ley General de Subvenciones, el porcentaje de la sanción mínima se incrementará entre:",
+   "o": [
+    "20 y 100 puntos",
+    "10 y 75 puntos",
+    "10 y 50 puntos",
+    "25 y 100 puntos"
+   ],
+   "a": 0,
+   "cita": "Cuando concurra esta circunstancia en la comisión de una infracción grave o muy grave, el porcentaje de la sanción mínima se incrementará entre 20 y 100 puntos",
+   "parecidas": []
+  },
+  {
+   "r": "3.2",
+   "norma": "Ley 38/2003, General de Subvenciones (BOE-A-2003-20977)",
+   "art": "60",
+   "q": "A efectos del artículo 60 de la Ley General de Subvenciones, hay comisión repetida cuando el infractor haya sido sancionado por una infracción de la misma naturaleza, grave o muy grave, por resolución firme en vía administrativa dentro de:",
+   "o": [
+    "Los cuatro años anteriores a la comisión de la infracción",
+    "Los dos años anteriores a la comisión de la infracción",
+    "Los cinco años anteriores a la comisión de la infracción",
+    "Los tres años anteriores a la comisión de la infracción"
+   ],
+   "a": 0,
+   "cita": "en virtud de resolución firme en vía administrativa dentro de los cuatro años anteriores a la comisión de la infracción",
+   "parecidas": []
+  },
+  {
+   "r": "4.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "12",
+   "q": "Según el artículo 12 de la Ley de Enjuiciamiento Criminal, los autos de inhibición que pronuncien los Jueces instructores de la jurisdicción ordinaria en causas por delitos de aforados son apelables ante:",
+   "o": [
+    "La respectiva Audiencia",
+    "El Tribunal Supremo",
+    "El Tribunal Superior de Justicia",
+    "El propio Juez instructor"
+   ],
+   "a": 0,
+   "cita": "Los autos de inhibición de esta clase que pronuncien los Jueces instructores de la jurisdicción ordinaria son apelables ante la respectiva Audiencia",
+   "parecidas": []
+  },
+  {
+   "r": "4.1",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "12",
+   "q": "Según el artículo 12 de la Ley de Enjuiciamiento Criminal, una vez concluidas las primeras diligencias por delitos cometidos por aforados, la jurisdicción ordinaria:",
+   "o": [
+    "Remitirá las actuaciones al Juez o Tribunal competente con los detenidos y efectos",
+    "Dictará sentencia y remitirá testimonio de ella al tribunal especial competente",
+    "Continuará la instrucción hasta dictar el auto de conclusión del sumario",
+    "Archivará las actuaciones y pondrá en libertad a los detenidos aforados"
+   ],
+   "a": 0,
+   "cita": "concluidas las cuales la jurisdicción ordinaria remitirá las actuaciones al Juez o Tribunal que deba conocer de la causa con arreglo a las Leyes, y pondrá a su disposición a los detenidos y los efectos ocupados",
+   "parecidas": []
+  },
+  {
+   "r": "4.2",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "12",
+   "q": "Conforme al artículo 12 de la Ley de Enjuiciamiento Criminal, la jurisdicción ordinaria cesará en las primeras diligencias por delitos de aforados:",
+   "o": [
+    "Tan luego como conste que la especial competente instruye causa sobre el mismo delito",
+    "Cuando el aforado solicite la remisión de la causa a su jurisdicción especial",
+    "Transcurridos diez días desde la detención del aforado sin recibir requerimiento",
+    "Cuando el Ministerio Fiscal lo interese expresamente del Juez instructor"
+   ],
+   "a": 0,
+   "cita": "La jurisdicción ordinaria cesará en las primeras diligencias tan luego como conste que la especial competente instruye causa sobre el mismo delito",
+   "parecidas": [
+    {
+     "id": "nueva:lecrim:12:1",
+     "q": "Según el artículo 12 de la Ley de Enjuiciamiento Criminal, una vez concluidas las primeras diligencias por delitos cometidos por aforados, la jurisdicción ordinaria:",
+     "respuesta": "Remitirá las actuaciones al Juez o Tribunal competente con los detenidos y efectos"
+    }
+   ]
+  },
+  {
+   "r": "5.0",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62ter",
+   "q": "Según el artículo 62 ter de la Ley Orgánica 4/2000, el extranjero sometido a internamiento está obligado a permanecer en el centro a disposición de:",
+   "o": [
+    "El Juez de Instrucción que hubiere autorizado su ingreso",
+    "El Delegado del Gobierno que hubiere acordado la expulsión",
+    "El director del centro en que se hubiere producido el ingreso",
+    "El Ministerio Fiscal que hubiere solicitado el internamiento"
+   ],
+   "a": 0,
+   "cita": "A permanecer en el centro a disposición del Juez de Instrucción que hubiere autorizado su ingreso",
+   "parecidas": []
+  },
+  {
+   "r": "5.1",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62ter",
+   "q": "En un centro de internamiento de extranjeros, el servicio médico aprecia razones de salud colectiva que aconsejan someter a los internos a reconocimiento médico. Según el artículo 62 ter de la Ley Orgánica 4/2000, ¿quién lo dispone?",
+   "o": [
+    "El director del centro, a petición del servicio médico",
+    "El Juez de Instrucción, a propuesta del servicio médico",
+    "El propio servicio médico, sin intervención de la dirección",
+    "El Delegado del Gobierno, a petición del director del centro"
+   ],
+   "a": 0,
+   "cita": "por razones de salud colectiva, apreciadas por el servicio médico, y a petición de éste, lo disponga el director del centro",
+   "parecidas": []
+  },
+  {
+   "r": "5.2",
+   "norma": "Ley Orgánica 4/2000, sobre derechos y libertades de los extranjeros en España (BOE-A-2000-544)",
+   "art": "62ter",
+   "q": "Según el artículo 62 ter de la Ley Orgánica 4/2000, en relación con las instrucciones que recibe en el centro, el extranjero internado está obligado a cumplir:",
+   "o": [
+    "Las generales de la dirección y las particulares de los funcionarios en el ejercicio legítimo de sus funciones",
+    "Las generales del Juez de Instrucción y las particulares de la dirección del centro de internamiento",
+    "Las generales de la dirección, sin que le obliguen las particulares que reciba de los funcionarios",
+    "Las particulares de los funcionarios, siempre que hayan sido ratificadas por escrito por la dirección"
+   ],
+   "a": 0,
+   "cita": "cumplir las instrucciones generales impartidas por la dirección y las particulares que reciban de los funcionarios en el ejercicio legítimo de sus funciones",
+   "parecidas": [
+    {
+     "id": "nueva:lo-4-2000:62ter:0",
+     "q": "Según el artículo 62 ter de la Ley Orgánica 4/2000, el extranjero sometido a internamiento está obligado a permanecer en el centro a disposición de:",
+     "respuesta": "El Juez de Instrucción que hubiere autorizado su ingreso"
+    }
+   ]
+  },
+  {
+   "r": "6.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "45",
+   "q": "Según el artículo 45 del Código Penal, ¿a quién corresponde restringir la inhabilitación especial a determinadas actividades o funciones de la profesión u oficio?",
+   "o": [
+    "A la autoridad judicial",
+    "Al colegio profesional competente",
+    "A la Administración penitenciaria",
+    "Al Ministerio Fiscal"
+   ],
+   "a": 0,
+   "cita": "La autoridad judicial podrá restringir la inhabilitación a determinadas actividades o funciones de la profesión u oficio",
+   "parecidas": []
+  },
+  {
+   "r": "6.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "45",
+   "q": "Según el artículo 45 del Código Penal, la inhabilitación especial para profesión, oficio, industria o comercio priva a la persona penada de la facultad de ejercerlos:",
+   "o": [
+    "Durante el tiempo de la condena",
+    "Durante la mitad del tiempo de la condena",
+    "De forma definitiva tras la condena",
+    "Hasta obtener la rehabilitación colegial"
+   ],
+   "a": 0,
+   "cita": "priva a la persona penada de la facultad de ejercerlos durante el tiempo de la condena",
+   "parecidas": [
+    {
+     "id": "nueva:codigo-penal:45:0",
+     "q": "Según el artículo 45 del Código Penal, ¿a quién corresponde restringir la inhabilitación especial a determinadas actividades o funciones de la profesión u oficio?",
+     "respuesta": "A la autoridad judicial"
+    }
+   ]
+  },
+  {
+   "r": "7.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "332",
+   "q": "Según el artículo 332 de la Ley de Enjuiciamiento Criminal, las diligencias de la inspección ocular se extenderán por escrito en el acto mismo de la inspección y serán firmadas por:",
+   "o": [
+    "El Juez instructor, el Fiscal si asistiere, el Secretario y las personas presentes",
+    "El Juez instructor y el Secretario, sin firma de las personas que estén presentes",
+    "El Juez instructor, el Fiscal en todo caso y el Secretario, sin otras personas",
+    "El Secretario y las personas presentes, con visto bueno posterior del Juez"
+   ],
+   "a": 0,
+   "cita": "serán firmadas por el Juez instructor, el Fiscal, si asistiere al acto, el Secretario y las personas que se hallaren presentes",
+   "parecidas": []
+  },
+  {
+   "r": "8.0",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "29",
+   "q": "Según el artículo 29 de la Ley 3/2023, de Empleo, la Agencia Española de Empleo y los servicios de empleo de las Comunidades Autónomas tendrán los recursos humanos necesarios a través de:",
+   "o": [
+    "Sus instrumentos de ordenación de puestos de trabajo",
+    "Sus planes anuales de política de empleo",
+    "Convenios con agencias privadas de colocación",
+    "La cartera común de servicios del Sistema Nacional"
+   ],
+   "a": 0,
+   "cita": "a través de sus instrumentos de ordenación de puestos de trabajo, tendrán los recursos humanos necesarios",
+   "parecidas": []
+  },
+  {
+   "r": "8.1",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "29",
+   "q": "¿Cuál de las siguientes NO figura en el artículo 29 de la Ley 3/2023, de Empleo, entre las finalidades de los recursos humanos de los servicios públicos de empleo?",
+   "o": [
+    "La inspección del cumplimiento de la normativa laboral en las empresas",
+    "La prestación eficaz y eficiente de los servicios",
+    "La adecuada atención personalizada de las personas usuarias",
+    "La satisfacción de sus servicios garantizados"
+   ],
+   "a": 0,
+   "cita": "para una prestación eficaz y eficiente de los servicios",
+   "parecidas": []
+  },
+  {
+   "r": "8.2",
+   "norma": "Ley 3/2023, de Empleo (BOE-A-2023-5365)",
+   "art": "29",
+   "q": "Según el artículo 29 de la Ley 3/2023, de Empleo, la dotación de los recursos humanos necesarios para la prestación de los servicios queda sujeta, en particular, a los términos permitidos por las sucesivas Leyes de Presupuestos Generales del Estado en el caso de:",
+   "o": [
+    "La Agencia Española de Empleo",
+    "Los servicios de empleo autonómicos",
+    "Las agencias de colocación autorizadas",
+    "Los servicios de empleo municipales"
+   ],
+   "a": 0,
+   "cita": "siempre dentro de los términos permitidos por las sucesivas Leyes de Presupuestos Generales del Estado en el caso de la Agencia Española de Empleo",
+   "parecidas": []
+  },
+  {
+   "r": "9.0",
+   "norma": "Ley 33/2003, del Patrimonio de las Administraciones Públicas (BOE-A-2003-20254)",
+   "art": "24",
+   "q": "Según el artículo 24 de la Ley 33/2003, del Patrimonio de las Administraciones Públicas, en las adquisiciones por expropiación, la afectación del bien o derecho al uso general, al servicio público o a fines públicos:",
+   "o": [
+    "Se entenderá implícita en la expropiación",
+    "Requerirá un acuerdo expreso de afectación",
+    "Se producirá con su inscripción registral",
+    "Deberá acordarse en el plazo de un año"
+   ],
+   "a": 0,
+   "cita": "la afectación del bien o derecho al uso general, al servicio público, o a fines y funciones de carácter público se entenderá implícita en la expropiación",
+   "parecidas": []
+  },
+  {
+   "r": "9.1",
+   "norma": "Ley 33/2003, del Patrimonio de las Administraciones Públicas (BOE-A-2003-20254)",
+   "art": "24",
+   "q": "El artículo 69 de la Ley 33/2003 exige que la desafectación se realice de forma expresa, salvo en los supuestos previstos en esa ley. Conforme a su artículo 24, cuando se reconoce el derecho de reversión sobre un bien expropiado:",
+   "o": [
+    "El reconocimiento lleva implícita la desafectación del bien o derecho",
+    "La desafectación debe acordarse expresamente antes del reconocimiento",
+    "La desafectación se produce al ejecutarse el acuerdo de reversión",
+    "La desafectación la acuerda de forma expresa el ministerio expropiante"
+   ],
+   "a": 0,
+   "cita": "El reconocimiento del derecho de reversión llevará implícita la desafectación del bien o derecho a que se refiera",
+   "parecidas": []
+  },
+  {
+   "r": "9.2",
+   "norma": "Ley 33/2003, del Patrimonio de las Administraciones Públicas (BOE-A-2003-20254)",
+   "art": "24",
+   "q": "Según el artículo 24 de la Ley 33/2003, aunque la tramitación de la reversión corresponde al ministerio u organismo que instó la expropiación, hasta que se ejecute el acuerdo, proveer lo necesario para la defensa y conservación del bien corresponde:",
+   "o": [
+    "Al departamento u organismo al que esté afectado o adscrito el bien",
+    "Al ministerio u organismo que hubiera instado la expropiación",
+    "A la Dirección General del Patrimonio del Estado en todo caso",
+    "Al titular del derecho de reversión que haya sido reconocido"
+   ],
+   "a": 0,
+   "cita": "hasta tanto se proceda a la ejecución del acuerdo, corresponderá al departamento ministerial u organismo a que estuviese afectado o adscrito el bien o derecho objeto de la reversión proveer lo necesario para su defensa y conservación",
+   "parecidas": []
+  },
+  {
+   "r": "10.0",
+   "norma": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa (BOE-A-1998-16718)",
+   "art": "7",
+   "q": "Según el artículo 7 de la Ley 29/1998, reguladora de la Jurisdicción Contencioso-administrativa, para apreciar su competencia, incluso de oficio, los Juzgados y Salas darán audiencia a las partes y al Ministerio Fiscal por plazo común de:",
+   "o": [
+    "Diez días",
+    "Cinco días",
+    "Quince días",
+    "Veinte días"
+   ],
+   "a": 0,
+   "cita": "previa audiencia de las partes y del Ministerio Fiscal por plazo común de diez días",
+   "parecidas": []
+  },
+  {
+   "r": "10.1",
+   "norma": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa (BOE-A-1998-16718)",
+   "art": "7",
+   "q": "Según el artículo 7 de la Ley 29/1998, reguladora de la Jurisdicción Contencioso-administrativa, la declaración de incompetencia:",
+   "o": [
+    "Adoptará la forma de auto y deberá efectuarse antes de la sentencia",
+    "Adoptará la forma de providencia en cualquier momento del proceso",
+    "Adoptará la forma de sentencia, que pondrá fin al proceso iniciado",
+    "Adoptará la forma de auto y podrá efectuarse en la propia sentencia"
+   ],
+   "a": 0,
+   "cita": "La declaración de incompetencia adoptará la forma de auto y deberá efectuarse antes de la sentencia",
+   "parecidas": []
+  },
+  {
+   "r": "10.2",
+   "norma": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa (BOE-A-1998-16718)",
+   "art": "7",
+   "q": "Según el artículo 7 de la Ley 29/1998, cuando un órgano contencioso-administrativo se declara incompetente y la competencia pudiera corresponder a un tribunal superior en grado, además de remitir las actuaciones:",
+   "o": [
+    "Acompañará una exposición razonada, estándose a lo que resuelva éste",
+    "Planteará cuestión de competencia ante la Sala de Conflictos",
+    "Archivará el recurso para que las partes lo interpongan de nuevo",
+    "Emplazará a las partes para comparecer en el plazo de veinte días"
+   ],
+   "a": 0,
+   "cita": "Si la competencia pudiera corresponder a un tribunal superior en grado, se acompañará una exposición razonada, estándose a lo que resuelva éste",
+   "parecidas": []
+  },
+  {
+   "r": "11.0",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "15",
+   "q": "Según el artículo 15 de la Ley 58/2003, General Tributaria, para que la Administración tributaria pueda declarar el conflicto en la aplicación de la norma tributaria será necesario el previo informe favorable de:",
+   "o": [
+    "La Comisión consultiva a que se refiere el artículo 159",
+    "La Dirección General de Tributos del Ministerio de Hacienda",
+    "El Tribunal Económico-Administrativo Central",
+    "El Consejo para la Defensa del Contribuyente"
+   ],
+   "a": 0,
+   "cita": "será necesario el previo informe favorable de la Comisión consultiva a que se refiere el artículo 159 de esta ley",
+   "parecidas": []
+  },
+  {
+   "r": "11.1",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "15",
+   "q": "Según el artículo 15 de la Ley General Tributaria, para apreciar conflicto en la aplicación de la norma tributaria, en los actos o negocios deben concurrir las siguientes circunstancias:",
+   "o": [
+    "Ser notoriamente artificiosos o impropios y no producir efectos relevantes distintos del ahorro fiscal",
+    "Ser notoriamente artificiosos o impropios, aunque produzcan efectos económicos relevantes propios",
+    "No producir efectos relevantes distintos del ahorro fiscal, aunque sean los usuales o propios",
+    "Ser simulados y encubrir un negocio distinto del realizado aparentemente entre las partes"
+   ],
+   "a": 0,
+   "cita": "Que, individualmente considerados o en su conjunto, sean notoriamente artificiosos o impropios para la consecución del resultado obtenido",
+   "parecidas": []
+  },
+  {
+   "r": "11.2",
+   "norma": "Ley 58/2003, General Tributaria (BOE-A-2003-23186)",
+   "art": "15",
+   "q": "Tras el informe favorable preceptivo, la Administración tributaria declara el conflicto en la aplicación de la norma respecto de una operación societaria que minoró la base imponible. Según el artículo 15 de la Ley General Tributaria, en la liquidación resultante:",
+   "o": [
+    "Se aplicará la norma de los actos usuales o se eliminarán las ventajas, con intereses de demora",
+    "Se aplicará la norma de los actos usuales o propios, sin liquidar intereses de demora",
+    "Se anularán los negocios realizados y se restituirán las prestaciones entre las partes",
+    "Se aplicará la norma de los actos realizados, más un recargo del veinte por ciento"
+   ],
+   "a": 0,
+   "cita": "se exigirá el tributo aplicando la norma que hubiera correspondido a los actos o negocios usuales o propios o eliminando las ventajas fiscales obtenidas, y se liquidarán intereses de demora",
+   "parecidas": [
+    {
+     "id": "nueva:ley-58-2003:15:0",
+     "q": "Según el artículo 15 de la Ley 58/2003, General Tributaria, para que la Administración tributaria pueda declarar el conflicto en la aplicación de la norma tributaria será necesario el previo informe favorable de:",
+     "respuesta": "La Comisión consultiva a que se refiere el artículo 159"
+    }
+   ]
+  },
+  {
+   "r": "12.0",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "43",
+   "q": "Una persona beneficiaria de protección subsidiaria abandona el territorio español y fija su residencia en Portugal. Según el artículo 43 de la Ley 12/2009, reguladora del derecho de asilo:",
+   "o": [
+    "Cesará la protección subsidiaria",
+    "Se revocará la protección con sanción",
+    "Mantendrá la protección hasta su renovación",
+    "La protección quedará en suspenso"
+   ],
+   "a": 0,
+   "cita": "la persona beneficiaria haya abandonado el territorio español y fijado su residencia en otro país",
+   "parecidas": []
+  },
+  {
+   "r": "12.1",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "43",
+   "q": "Según el artículo 43 de la Ley 12/2009, reguladora del derecho de asilo, el cese en la protección subsidiaria:",
+   "o": [
+    "No impedirá la continuación de la residencia en España conforme a la normativa de extranjería",
+    "Conllevará la obligación de salir del territorio español en el plazo de un mes",
+    "Impedirá obtener una autorización de residencia durante los dos años siguientes",
+    "Implicará que no se compute el período de residencia legal anterior en España"
+   ],
+   "a": 0,
+   "cita": "El cese en la protección subsidiaria no impedirá la continuación de la residencia en España conforme a la normativa vigente en materia de extranjería e inmigración",
+   "parecidas": [
+    {
+     "id": "nueva:ley-12-2009:43:0",
+     "q": "Una persona beneficiaria de protección subsidiaria abandona el territorio español y fija su residencia en Portugal. Según el artículo 43 de la Ley 12/2009, reguladora del derecho de asilo:",
+     "respuesta": "Cesará la protección subsidiaria"
+    }
+   ]
+  },
+  {
+   "r": "12.2",
+   "norma": "Ley 12/2009, reguladora del derecho de asilo y de la protección subsidiaria (BOE-A-2009-17242)",
+   "art": "43",
+   "q": "La situación en el país de origen de un beneficiario de protección subsidiaria mejora durante unos meses de tregua. Para acordar el cese porque las circunstancias que motivaron la concesión han cambiado, según el artículo 43 de la Ley 12/2009, el Estado español tendrá en cuenta:",
+   "o": [
+    "Si el cambio es significativo y no temporal, de modo que ya no corra un riesgo real de daños graves",
+    "Si la mejora se ha mantenido al menos durante seis meses consecutivos en el país",
+    "Si el beneficiario ha solicitado expresamente la renovación de su protección",
+    "Si el beneficiario ha viajado a su país de origen durante el período de tregua"
+   ],
+   "a": 0,
+   "cita": "El Estado español tendrá en cuenta si el cambio de circunstancias es lo suficientemente significativo, sin ser de carácter temporal, como para que la persona con derecho a protección subsidiaria ya no corra un riesgo real de sufrir daños graves",
+   "parecidas": []
+  },
+  {
+   "r": "13.0",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "171",
+   "q": "Según el artículo 171 de la Ley 47/2003, General Presupuestaria, cuando las aportaciones del Estado previstas en contratos-programa estén condicionadas al cumplimiento de objetivos, efectuará la correspondiente auditoría:",
+   "o": [
+    "La Intervención General de la Administración del Estado",
+    "El Tribunal de Cuentas",
+    "La Dirección General de Presupuestos",
+    "La Autoridad Independiente de Responsabilidad Fiscal"
+   ],
+   "a": 0,
+   "cita": "la Intervención General de la Administración del Estado efectuará una auditoría",
+   "parecidas": []
+  },
+  {
+   "r": "13.1",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "171",
+   "q": "Según el artículo 171 de la Ley 47/2003, General Presupuestaria, la auditoría sobre contratos-programa con aportaciones estatales condicionadas tiene como finalidad:",
+   "o": [
+    "Verificar la adecuación de la propuesta de liquidación al cumplimiento de las condiciones",
+    "Evaluar la eficacia del gasto realizado por la entidad durante el ejercicio corriente",
+    "Fiscalizar con carácter previo el compromiso de gasto de la aportación del Estado",
+    "Revisar las cuentas anuales de la entidad para su rendición al Tribunal de Cuentas"
+   ],
+   "a": 0,
+   "cita": "cuya finalidad será verificar la adecuación de la propuesta de liquidación formulada por el órgano previsto en el convenio al cumplimiento de las referidas condiciones",
+   "parecidas": [
+    {
+     "id": "nueva:ley-47-2003:171:0",
+     "q": "Según el artículo 171 de la Ley 47/2003, General Presupuestaria, cuando las aportaciones del Estado previstas en contratos-programa estén condicionadas al cumplimiento de objetivos, efectuará la correspondiente auditoría:",
+     "respuesta": "La Intervención General de la Administración del Estado"
+    }
+   ]
+  },
+  {
+   "r": "13.2",
+   "norma": "Ley 47/2003, General Presupuestaria (BOE-A-2003-21614)",
+   "art": "171",
+   "q": "Según el artículo 171 de la Ley General Presupuestaria, ¿cuál de las siguientes condiciones NO se menciona como aquella a la que puede estar condicionado el importe de las aportaciones del Estado en los contratos-programa?",
+   "o": [
+    "El número de trabajadores de la plantilla de la entidad",
+    "El cumplimiento de determinados objetivos",
+    "El importe o evolución de determinadas magnitudes financieras",
+    "El cumplimiento de determinadas hipótesis macroeconómicas"
+   ],
+   "a": 0,
+   "cita": "al cumplimiento de determinados objetivos, al importe o evolución de determinadas magnitudes financieras, o al cumplimiento de determinadas hipótesis macroeconómicas",
+   "parecidas": []
+  },
+  {
+   "r": "14.0",
+   "norma": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD) (BOE-A-2018-16673)",
+   "art": "20",
+   "q": "Según el artículo 20 de la Ley Orgánica 3/2018, los datos de incumplimiento de obligaciones dinerarias se mantendrán en los sistemas comunes de información crediticia mientras persista el incumplimiento, con el límite máximo de:",
+   "o": [
+    "Cinco años desde la fecha de vencimiento de la obligación",
+    "Seis años desde la fecha de vencimiento de la obligación",
+    "Cinco años desde la inclusión de la deuda en el sistema",
+    "Tres años desde la fecha de vencimiento de la obligación"
+   ],
+   "a": 0,
+   "cita": "con el límite máximo de cinco años desde la fecha de vencimiento de la obligación dineraria, financiera o de crédito",
+   "parecidas": []
+  },
+  {
+   "r": "14.1",
+   "norma": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD) (BOE-A-2018-16673)",
+   "art": "20",
+   "q": "Según el artículo 20 de la Ley Orgánica 3/2018, la presunción de licitud del tratamiento de datos por sistemas comunes de información crediticia no ampara el supuesto en que:",
+   "o": [
+    "El sistema asocie la información a datos de otras fuentes para perfilar al deudor",
+    "Los datos hayan sido facilitados por quien actúe por cuenta del acreedor",
+    "La deuda sea cierta, vencida y exigible y no haya sido objeto de reclamación",
+    "El acreedor haya informado de la posible inclusión al requerir el pago"
+   ],
+   "a": 0,
+   "cita": "La presunción a la que se refiere el apartado 1 de este artículo no ampara los supuestos en que la información crediticia fuese asociada por la entidad que mantuviera el sistema a informaciones adicionales",
+   "parecidas": []
+  },
+  {
+   "r": "14.2",
+   "norma": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD) (BOE-A-2018-16673)",
+   "art": "20",
+   "q": "Un afectado impugna la exactitud de una deuda ejercitando ante un sistema de información crediticia el derecho a la limitación del tratamiento. Mientras se resuelve, una entidad a la que ha pedido financiación consulta el sistema. Según el artículo 20 de la Ley Orgánica 3/2018, el sistema le informará:",
+   "o": [
+    "De la mera existencia de esa circunstancia, sin facilitar los datos concretos",
+    "De los datos concretos de la deuda, advirtiendo que están impugnados",
+    "De la identidad del acreedor, sin facilitar el importe de la deuda",
+    "De la deuda completa, tras oír al acreedor en un plazo de diez días"
+   ],
+   "a": 0,
+   "cita": "el sistema informará a quienes pudieran consultarlo con arreglo al párrafo anterior acerca de la mera existencia de dicha circunstancia, sin facilitar los datos concretos respecto de los que se hubiera ejercitado el derecho",
+   "parecidas": []
+  },
+  {
+   "r": "15.0",
+   "norma": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD) (BOE-A-2018-16673)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley Orgánica 3/2018, si la operación de modificación estructural de sociedades no llegara a concluirse, la entidad cesionaria deberá:",
+   "o": [
+    "Suprimir los datos de inmediato, sin que se aplique la obligación de bloqueo",
+    "Bloquear los datos durante el plazo de prescripción de posibles acciones",
+    "Devolver los datos a la entidad cedente y bloquear las copias que conserve",
+    "Suprimir los datos en el plazo de un mes, tras mantenerlos bloqueados"
+   ],
+   "a": 0,
+   "cita": "la entidad cesionaria deberá proceder con carácter inmediato a la supresión de los datos, sin que sea de aplicación la obligación de bloqueo prevista en esta ley orgánica",
+   "parecidas": []
+  },
+  {
+   "r": "15.1",
+   "norma": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD) (BOE-A-2018-16673)",
+   "art": "21",
+   "q": "Según el artículo 21 de la Ley Orgánica 3/2018, se presumen lícitos, salvo prueba en contrario, los tratamientos derivados de operaciones de modificación estructural de sociedades siempre que:",
+   "o": [
+    "Sean necesarios para el buen fin de la operación y garanticen, cuando proceda, la continuidad de los servicios",
+    "Cuenten con el consentimiento expreso de los afectados y se comuniquen a la autoridad de control",
+    "Se hayan notificado previamente a los afectados y a la Agencia Española de Protección de Datos",
+    "Sean necesarios para la operación y se limiten a los datos de clientes con contrato en vigor"
+   ],
+   "a": 0,
+   "cita": "siempre que los tratamientos fueran necesarios para el buen fin de la operación y garanticen, cuando proceda, la continuidad en la prestación de los servicios",
+   "parecidas": []
+  },
+  {
+   "r": "16.0",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "20",
+   "q": "Según el artículo 20 del texto refundido de la Ley General de la Seguridad Social, cuando por causa no imputable a la Administración no se hayan deducido los beneficios en la cotización, podrá solicitarse el reintegro de su importe dentro del plazo de:",
+   "o": [
+    "Tres meses desde la presentación de la liquidación",
+    "Un mes desde la presentación de la liquidación",
+    "Seis meses desde la presentación de la liquidación",
+    "Dos meses desde la presentación de la liquidación"
+   ],
+   "a": 0,
+   "cita": "podrá solicitarse el reintegro de su importe dentro del plazo de tres meses, a contar desde la fecha de presentación de la liquidación en que el respectivo beneficio debió descontarse",
+   "parecidas": []
+  },
+  {
+   "r": "16.1",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "20",
+   "q": "Una empresa solicita en plazo el reintegro de un beneficio en la cotización no deducido y la Administración no lo efectúa en los tres meses siguientes a la solicitud. Según el artículo 20 del texto refundido de la Ley General de la Seguridad Social, en relación con su artículo 31.3:",
+   "o": [
+    "Se aplicará el interés de demora del artículo 31.3 desde la solicitud hasta la propuesta de pago",
+    "Se aplicará el interés de demora del artículo 31.3 desde la liquidación hasta el pago efectivo",
+    "Se incrementará el importe con un recargo del veinte por ciento sobre el beneficio",
+    "Se extinguirá el derecho al reintegro por no haberse efectuado en el plazo previsto"
+   ],
+   "a": 0,
+   "cita": "el importe a reintegrar se incrementará con el interés de demora previsto en el artículo 31.3, que se aplicará al del beneficio correspondiente por el tiempo transcurrido desde la fecha en que se presente la solicitud hasta la de la propuesta de pago",
+   "parecidas": [
+    {
+     "id": "nueva:rdl-8-2015:20:0",
+     "q": "Según el artículo 20 del texto refundido de la Ley General de la Seguridad Social, cuando por causa no imputable a la Administración no se hayan deducido los beneficios en la cotización, podrá solicitarse el reintegro de su importe dentro del plazo de:",
+     "respuesta": "Tres meses desde la presentación de la liquidación"
+    }
+   ]
+  },
+  {
+   "r": "16.2",
+   "norma": "Texto refundido de la Ley General de la Seguridad Social (BOE-A-2015-11724)",
+   "art": "20",
+   "q": "Una empresa que disfruta de bonificaciones en la cotización no ingresa en plazo reglamentario, por causa propia, las cuotas de marzo, e ingresa en plazo las de los demás meses. Según el artículo 20 del texto refundido de la Ley General de la Seguridad Social:",
+   "o": [
+    "Pierde automáticamente la bonificación respecto de las cuotas de marzo",
+    "Pierde la bonificación de marzo y de los meses siguientes del ejercicio",
+    "Pierde la bonificación durante el período completo de su concesión",
+    "Conserva la bonificación si ingresa las cuotas antes de fin de año"
+   ],
+   "a": 0,
+   "cita": "dará lugar únicamente a su pérdida automática respecto de las cuotas correspondientes a períodos no ingresados en dicho plazo",
+   "parecidas": []
+  },
+  {
+   "r": "17.0",
+   "norma": "Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad (BOE-A-1986-6859)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley Orgánica 2/1986, de Fuerzas y Cuerpos de Seguridad, los estudios cursados en centros de enseñanza dependientes de las diferentes Administraciones públicas podrán ser objeto de convalidación por:",
+   "o": [
+    "El Ministerio de Educación y Ciencia",
+    "El Ministerio del Interior",
+    "El Consejo de Universidades",
+    "La Dirección General de la Policía"
+   ],
+   "a": 0,
+   "cita": "podrán ser objeto de convalidación por el Ministerio de Educación y Ciencia",
+   "parecidas": []
+  },
+  {
+   "r": "17.1",
+   "norma": "Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad (BOE-A-1986-6859)",
+   "art": "6",
+   "q": "Según el artículo 6 de la Ley Orgánica 2/1986, para impartir las enseñanzas y cursos de formación de los miembros de las Fuerzas y Cuerpos de Seguridad se promoverá la colaboración institucional, entre otros, de:",
+   "o": [
+    "El Poder Judicial",
+    "Los sindicatos policiales",
+    "Las empresas de seguridad privada",
+    "Los colegios de abogados"
+   ],
+   "a": 0,
+   "cita": "se promoverá la colaboración institucional de la Universidad, el Poder Judicial, el Ministerio Fiscal, las Fuerzas Armadas y de otras Instituciones",
+   "parecidas": []
+  },
+  {
+   "r": "17.2",
+   "norma": "Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad (BOE-A-1986-6859)",
+   "art": "6",
+   "q": "Varios miembros de un Cuerpo de Seguridad acuerdan realizar, sin declararla formalmente como huelga, una acción concertada para alterar el normal funcionamiento del servicio. Según el artículo 6 de la Ley Orgánica 2/1986:",
+   "o": [
+    "No pueden hacerlo, pues les están vedadas las acciones sustitutivas o concertadas",
+    "Pueden hacerlo si lo comunican con diez días de antelación a sus superiores",
+    "Pueden hacerlo siempre que se garanticen unos servicios mínimos esenciales",
+    "Pueden hacerlo porque la prohibición legal se limita a la huelga declarada"
+   ],
+   "a": 0,
+   "cita": "no podrán ejercer en ningún caso el derecho de huelga, ni acciones sustitutivas del mismo o concertadas con el fin de alterar el normal funcionamiento de los servicios",
+   "parecidas": []
+  },
+  {
+   "r": "18.0",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "26",
+   "q": "En la ejecución en España de un instrumento de reconocimiento mutuo emitido por otro Estado miembro, España abona una indemnización a un tercero por daños y perjuicios que no son responsabilidad exclusiva de España. Según el artículo 26 de la Ley 23/2014:",
+   "o": [
+    "El Ministerio de Justicia reclamará al Estado de emisión el reembolso de lo abonado",
+    "El Ministerio de Justicia reclamará el reembolso a la autoridad judicial de ejecución",
+    "El Ministerio de Hacienda reclamará el reembolso a las instituciones de la Unión",
+    "El Ministerio de Asuntos Exteriores reclamará al Estado de emisión el reembolso"
+   ],
+   "a": 0,
+   "cita": "El Ministerio de Justicia reclamará al Estado de emisión el reembolso de las cantidades que, de acuerdo con la legislación española, haya tenido que abonar en concepto de indemnización de daños y perjuicios causados a terceros",
+   "parecidas": []
+  },
+  {
+   "r": "19.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "257",
+   "q": "Según el artículo 257.1 del Código Penal, el que se alce con sus bienes en perjuicio de sus acreedores será castigado con las penas de:",
+   "o": [
+    "Prisión de uno a cuatro años y multa de doce a veinticuatro meses",
+    "Prisión de uno a seis años y multa de doce a veinticuatro meses",
+    "Prisión de seis meses a tres años y multa de seis a doce meses",
+    "Prisión de dos a cinco años y multa de doce a veinticuatro meses"
+   ],
+   "a": 0,
+   "cita": "Será castigado con las penas de prisión de uno a cuatro años y multa de doce a veinticuatro meses",
+   "parecidas": []
+  },
+  {
+   "r": "19.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "257",
+   "q": "Un deudor oculta elementos de su patrimonio para dificultar un embargo y, tras la comisión del hecho, se inicia un procedimiento concursal. Según el artículo 257 del Código Penal:",
+   "o": [
+    "El delito será perseguido aun cuando se haya iniciado el concurso",
+    "La persecución quedará suspendida hasta que concluya el concurso",
+    "La acción penal se extinguirá si el deudor paga dentro del concurso",
+    "El juez del concurso decidirá si continúa la persecución del delito"
+   ],
+   "a": 0,
+   "cita": "Este delito será perseguido aun cuando tras su comisión se iniciara un procedimiento concursal",
+   "parecidas": []
+  }
+ ]
+}

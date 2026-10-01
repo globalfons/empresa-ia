@@ -34,7 +34,7 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
 // Campos internos de la fábrica (fabrica/): se quedan en datos/, no viajan al navegador
-const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, ...q }) => q;
+const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, traza, aprobacion_humana, revision_humana, ...q }) => q;
 // lastmod de las páginas de cada ley: último commit de sus preguntas o de su texto (si hay cambios sin commit, hoy).
 // En un clon superficial (checkout de CI con fetch-depth 1) la historia no es fiable: se usa config.updated.
 const GIT_OK = (() => { try { return execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() === "false"; } catch { return false; } })();

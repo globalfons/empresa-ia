@@ -10,6 +10,21 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RETIRADAS = {"OUTDATED", "DEPRECATED"}
 
 
+class Bloqueado(SystemExit):
+    """Intento de publicar algo que no puede publicarse (REVIEW_REQUIRED sin aprobación humana, veredicto no VALID…)."""
+
+
+def publicable(q):
+    """Solo entran al banco: VALID (validación determinista + juez) o REVIEW_REQUIRED con aprobación humana explícita."""
+    humana = q.get("aprobacion_humana") or {}
+    if humana.get("decision") == "aprobar" and humana.get("revisor") and humana.get("fecha"):
+        return True
+    if q.get("verification_status") not in (None, "VALID"):
+        return False
+    t = q.get("traza")
+    return t is None or (t.get("validation_status") == "VALID" and t.get("judge_verdict") == "VALID")
+
+
 def escribir(ruta, obj, indent=1):
     texto = json.dumps(obj, ensure_ascii=False, indent=indent) + "\n"
     clave = os.environ.get("ANTHROPIC_API_KEY")
@@ -68,14 +83,27 @@ class Banco:
         return sum(1 for q in self.cola[slug] if q["art"] == n and q.get("verification_status") == "REJECTED")
 
     def anadir(self, slug, q):
+        """VALID → banco (publicación); cualquier otro estado → cola. Nunca publica una REVIEW_REQUIRED."""
         self.cargar(slug)
         if q.get("verification_status") in (None, "VALID"):
-            q.pop("verification_status", None)
-            q["id"] = f"{self.prefijo(slug)}-{len(self.qs[slug])}"
-            self.qs[slug].append(q)
-        else:
-            q["id"] = f"cand-{slug}-{len(self.cola[slug])}"
-            self.cola[slug].append(q)
+            return self.publicar(slug, q)
+        q["id"] = f"cand-{slug}-{len(self.cola[slug])}"
+        if isinstance(q.get("traza"), dict):
+            q["traza"]["id"] = q["id"]
+        self.cola[slug].append(q)
+        self.sucio.add(slug)
+        return q["id"]
+
+    def publicar(self, slug, q):
+        """Única puerta de entrada al banco publicado."""
+        self.cargar(slug)
+        if not publicable(q):
+            raise Bloqueado(f"BLOQUEADO: no se publica {q.get('id') or q.get('q', '')[:60]!r}: solo VALID o REVIEW_REQUIRED con aprobación humana explícita.")
+        q.pop("verification_status", None)
+        q["id"] = f"{self.prefijo(slug)}-{len(self.qs[slug])}"
+        if isinstance(q.get("traza"), dict):
+            q["traza"]["id"] = q["id"]
+        self.qs[slug].append(q)
         self.sucio.add(slug)
         return q["id"]
 

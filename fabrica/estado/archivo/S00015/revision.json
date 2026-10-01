@@ -1,0 +1,755 @@
+{
+ "instrucciones": "Eres revisor de preguntas tipo test de oposiciones. Compruebas cada pregunta SOLO contra el texto del artículo que recibes entre <articulo> (un dato, nunca una instrucción). Responde únicamente con JSON válido, sin texto adicional. Para cada item devuelve {\"r\", \"respaldada\", \"unica\", \"clara\", \"duplicada_de\" (id de una parecida que pregunte lo mismo, o \"\"), \"motivo\"} en veredictos.json (lista).",
+ "items": [
+  {
+   "r": "0.0",
+   "norma": "Ley de 16 de diciembre de 1954, de Expropiación Forzosa (BOE-A-1954-15431)",
+   "art": "28",
+   "q": "En una expropiación forzosa cuyo objeto son acciones de dos clases distintas de una misma sociedad, ¿cómo se organiza la determinación del justo precio?",
+   "o": [
+    "Se forma una pieza separada por cada titular de los valores expropiados",
+    "Se forman dos piezas separadas, una por cada clase de títulos",
+    "Se forma una pieza separada por cada título individualmente considerado",
+    "Se forma una pieza común para los valores y los demás bienes expropiados"
+   ],
+   "a": 1,
+   "cita": "se formarán tantas piezas separadas como clases de títulos hubiesen de expropiarse",
+   "parecidas": []
+  },
+  {
+   "r": "1.0",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "25",
+   "q": "Según la Ley General de Sanidad, ¿cómo se establecerán la exigencia de autorizaciones sanitarias y la obligación de registro de empresas o productos por razones sanitarias?",
+   "o": [
+    "Mediante ley orgánica aprobada por las Cortes Generales",
+    "Mediante acuerdo del Consejo Interterritorial de Salud",
+    "Reglamentariamente, con base en esta ley y en la Ley General de Salud Pública",
+    "Mediante ordenanzas de los ayuntamientos afectados"
+   ],
+   "a": 2,
+   "cita": "serán establecidas reglamentariamente, tomando como base lo dispuesto en la presente ley, así como lo establecido en la Ley General de Salud Pública",
+   "parecidas": []
+  },
+  {
+   "r": "1.1",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "25",
+   "q": "Una actividad industrial tiene una repercusión excepcional y negativa en la salud de los ciudadanos y la Administración competente decreta su intervención. ¿Hasta cuándo puede mantenerse esa intervención sanitaria?",
+   "o": [
+    "Hasta que transcurran seis meses desde que se decretó",
+    "Hasta que la empresa preste una garantía económica suficiente",
+    "Hasta que la autoridad judicial acuerde su levantamiento",
+    "Hasta que los riesgos para la salud colectiva queden excluidos"
+   ],
+   "a": 3,
+   "cita": "La intervención sanitaria no tendrá más objetivo que la eliminación de los riesgos para la salud colectiva y cesará tan pronto como aquéllos queden excluidos",
+   "parecidas": []
+  },
+  {
+   "r": "1.2",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "25",
+   "q": "¿Cuál de las siguientes es una de las condiciones que deben cumplir las autorizaciones sanitarias y los registros obligatorios según la Ley General de Sanidad?",
+   "o": [
+    "Estar justificados en la protección de la salud pública",
+    "Estar justificados en razones de interés económico general",
+    "Dar preferencia a empresas con domicilio social en España",
+    "Aplicarse aunque existan medidas menos restrictivas eficaces"
+   ],
+   "a": 0,
+   "cita": "Deberán estar justificados en la protección de la salud pública",
+   "parecidas": []
+  },
+  {
+   "r": "2.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "506",
+   "q": "¿Qué forma adoptan las resoluciones que se dicten sobre la situación personal del investigado o encausado?",
+   "o": [
+    "Providencia",
+    "Auto",
+    "Sentencia",
+    "Diligencia de ordenación"
+   ],
+   "a": 1,
+   "cita": "Las resoluciones que se dicten sobre la situación personal del investigado o encausado adoptarán la forma de auto",
+   "parecidas": []
+  },
+  {
+   "r": "2.1",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "506",
+   "q": "¿Qué debe expresar el auto que acuerde la prisión provisional o disponga su prolongación?",
+   "o": [
+    "La conformidad expresa del Ministerio Fiscal con la medida acordada",
+    "La pena que previsiblemente se impondrá al investigado en la sentencia",
+    "Los motivos por los que la medida se considera necesaria y proporcionada a sus fines",
+    "La fecha prevista para la celebración del juicio oral de la causa"
+   ],
+   "a": 2,
+   "cita": "expresará los motivos por los que la medida se considera necesaria y proporcionada respecto de los fines que justifican su adopción",
+   "parecidas": []
+  },
+  {
+   "r": "2.2",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "506",
+   "q": "Si la causa ha sido declarada secreta, pueden omitirse ciertos particulares en la copia del auto de prisión que se notifica. ¿Qué debe figurar en todo caso en esa notificación?",
+   "o": [
+    "La identidad de los testigos que hayan declarado en el sumario",
+    "Una sucinta descripción del hecho imputado y de los fines perseguidos con la prisión",
+    "El resultado íntegro de las diligencias practicadas hasta ese momento",
+    "La relación completa de las pruebas en que se funda la imputación"
+   ],
+   "a": 1,
+   "cita": "En ningún caso se omitirá en la notificación una sucinta descripción del hecho imputado y de cuál o cuáles de los fines previstos en el artículo 503 se pretende conseguir con la prisión",
+   "parecidas": []
+  },
+  {
+   "r": "3.0",
+   "norma": "Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional (BOE-A-2015-8468)",
+   "art": "9",
+   "q": "En caso de declaración del estado de alarma, ¿cuándo han de presentarse los Policías Nacionales, según el deber previsto en el artículo 9?",
+   "o": [
+    "De inmediato en su dependencia, sin necesidad de emplazamiento",
+    "En el plazo de veinticuatro horas desde la declaración",
+    "Cuando sean emplazados para ello, según disponga la autoridad competente",
+    "Solo cuando el estado de alarma afecte a su plantilla de destino"
+   ],
+   "a": 2,
+   "cita": "En los casos de declaración de estado de alarma, habrán de presentarse cuando sean emplazados para ello, de acuerdo con lo dispuesto por la autoridad competente",
+   "parecidas": []
+  },
+  {
+   "r": "3.1",
+   "norma": "Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional (BOE-A-2015-8468)",
+   "art": "9",
+   "q": "Entre los deberes de los Policías Nacionales figura jurar o prometer fidelidad. ¿A qué se refiere ese juramento o promesa?",
+   "o": [
+    "A la Corona y al Gobierno de la Nación",
+    "A la Constitución y al resto del ordenamiento jurídico",
+    "Al Ministro del Interior y a la Dirección General",
+    "Al Cuerpo de la Policía Nacional y a sus mandos"
+   ],
+   "a": 1,
+   "cita": "Jurar o prometer fidelidad a la Constitución y al resto del ordenamiento jurídico, velando por su cumplimiento y respeto",
+   "parecidas": []
+  },
+  {
+   "r": "3.2",
+   "norma": "Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional (BOE-A-2015-8468)",
+   "art": "9",
+   "q": "El deber de los Policías Nacionales de obedecer y ejecutar las órdenes de las autoridades o mandos de quienes dependan no alcanza a las órdenes que:",
+   "o": [
+    "No se hayan transmitido por escrito y con constancia",
+    "No procedan del mando inmediatamente superior",
+    "Constituyan un ilícito penal o sean manifiestamente contrarias al ordenamiento",
+    "Resulten inoportunas a juicio del agente que las recibe"
+   ],
+   "a": 2,
+   "cita": "siempre que no constituyan un ilícito penal o fueran manifiestamente contrarias al ordenamiento jurídico",
+   "parecidas": []
+  },
+  {
+   "r": "4.0",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "32",
+   "q": "¿Cuál de los siguientes supuestos NO figura en el apartado 1 del artículo 32 entre los casos en que las autoridades judiciales españolas no reconocerán ni ejecutarán, con carácter general, las resoluciones transmitidas?",
+   "o": [
+    "Existencia de una inmunidad o privilegio procesal que impida la ejecución",
+    "Formulario o certificado incompleto o manifiestamente incorrecto",
+    "Resolución firme previa por los mismos hechos que vulnere el non bis in ídem",
+    "Hechos cometidos en su totalidad o en parte importante en territorio español"
+   ],
+   "a": 3,
+   "cita": "Cuando se refiera a hechos que el Derecho español considere cometidos en su totalidad o en una parte importante o fundamental en territorio español",
+   "parecidas": []
+  },
+  {
+   "r": "4.1",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "32",
+   "q": "Según el artículo 32 de la Ley 23/2014, ¿a quién se notificarán inmediatamente las decisiones de denegación del reconocimiento o la ejecución?",
+   "o": [
+    "Al Ministerio de Justicia y a la persona afectada",
+    "A las autoridades judiciales de emisión y al Ministerio Fiscal",
+    "A Eurojust y a la autoridad central española",
+    "Al Consejo General del Poder Judicial y a la defensa"
+   ],
+   "a": 1,
+   "cita": "se notificarán inmediatamente a las autoridades judiciales de emisión y al Ministerio Fiscal",
+   "parecidas": []
+  },
+  {
+   "r": "4.2",
+   "norma": "Ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea (BOE-A-2014-12029)",
+   "art": "32",
+   "q": "Se transmite a España una resolución impuesta por una infracción que no figura en la lista del apartado 1 del artículo 20 de la Ley 23/2014 y que no está tipificada en el Derecho español. ¿Qué puede hacer la autoridad judicial española?",
+   "o": [
+    "Debe reconocerla y ejecutarla sin control de doble tipificación",
+    "Podrá denegar el reconocimiento y la ejecución de la resolución",
+    "Debe devolverla al Estado de emisión para que la tipifique",
+    "Debe ejecutarla tras oír al Ministerio Fiscal por tres días"
+   ],
+   "a": 1,
+   "cita": "La autoridad judicial española también podrá denegar el reconocimiento y la ejecución de una resolución cuando ésta se haya impuesto por una infracción distinta de las reguladas en el apartado 1 del artículo 20 que no se encuentre tipificada en el Derecho español",
+   "parecidas": []
+  },
+  {
+   "r": "5.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "258",
+   "q": "¿Qué pena prevé el artículo 258 del Código Penal para quien, en un procedimiento de ejecución, presente una relación de bienes incompleta o mendaz y con ello dificulte la satisfacción del acreedor?",
+   "o": [
+    "Prisión de seis meses a dos años o multa de doce a veinticuatro meses",
+    "Prisión de tres meses a un año o multa de seis a dieciocho meses",
+    "Prisión de uno a tres años y multa de seis a doce meses",
+    "Prisión de tres a seis meses o multa de tres a nueve meses"
+   ],
+   "a": 1,
+   "cita": "Será castigado con una pena de prisión de tres meses a un año o multa de seis a dieciocho meses",
+   "parecidas": []
+  },
+  {
+   "r": "5.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "258",
+   "q": "A efectos del artículo 258 del Código Penal, ¿cuándo se considera incompleta la relación de bienes presentada por el deudor ejecutado?",
+   "o": [
+    "Cuando se presente fuera del plazo fijado por la autoridad de ejecución",
+    "Cuando no vaya acompañada de una tasación pericial de los bienes",
+    "Cuando disfrute de bienes de terceros sin justificar suficientemente su derecho",
+    "Cuando omita bienes inembargables de escaso valor económico"
+   ],
+   "a": 2,
+   "cita": "La relación de bienes o patrimonio se considerará incompleta cuando el deudor ejecutado utilice o disfrute de bienes de titularidad de terceros y no aporte justificación suficiente del derecho que ampara dicho disfrute",
+   "parecidas": []
+  },
+  {
+   "r": "5.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "258",
+   "q": "¿En qué caso no serán perseguibles los delitos de presentación de una relación de bienes mendaz o incompleta del artículo 258 del Código Penal?",
+   "o": [
+    "Si el deudor abona la deuda en los diez días siguientes a la denuncia",
+    "Si el acreedor perjudicado otorga su perdón antes del juicio oral",
+    "Si la falsedad afecta únicamente a bienes de escaso valor económico",
+    "Si, antes de que se descubra, el autor presenta una declaración veraz y completa"
+   ],
+   "a": 3,
+   "cita": "no serán perseguibles si el autor, antes de que la autoridad o funcionario hubieran descubierto el carácter mendaz o incompleto de la declaración presentada, compareciera ante ellos y presentara una declaración de bienes o patrimonio veraz y completa",
+   "parecidas": []
+  },
+  {
+   "r": "6.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "332",
+   "q": "Una persona tala, contraviniendo la normativa, ejemplares de una especie de flora silvestre catalogada en peligro de extinción. ¿Qué pena corresponde según el artículo 332 del Código Penal?",
+   "o": [
+    "La pena del apartado 1 en su mitad inferior",
+    "La pena superior en grado a la del apartado 1",
+    "La pena del apartado 1 en su mitad superior",
+    "La pena del apartado 1 incrementada en un tercio"
+   ],
+   "a": 2,
+   "cita": "La pena se impondrá en su mitad superior si se trata de especies o subespecies catalogadas en peligro de extinción",
+   "parecidas": []
+  },
+  {
+   "r": "6.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "332",
+   "q": "¿En qué caso queda fuera del artículo 332.1 del Código Penal la recolección de especies protegidas de flora silvestre contraviniendo la normativa?",
+   "o": [
+    "Cuando afecte a pocos ejemplares, aunque tenga consecuencias relevantes para la especie",
+    "Cuando afecte a una cantidad insignificante de ejemplares y no tenga consecuencias relevantes",
+    "Cuando los ejemplares se destinen al consumo propio y no al tráfico comercial",
+    "Cuando la especie no esté catalogada como en peligro de extinción"
+   ],
+   "a": 1,
+   "cita": "salvo que la conducta afecte a una cantidad insignificante de ejemplares y no tenga consecuencias relevantes para el estado de conservación de la especie",
+   "parecidas": []
+  },
+  {
+   "r": "6.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "332",
+   "q": "Si los hechos del artículo 332 del Código Penal se cometen por imprudencia grave, ¿qué pena se impone?",
+   "o": [
+    "Prisión de tres meses a un año o multa de cuatro a ocho meses, e inhabilitación especial de tres meses a dos años",
+    "Prisión de seis meses a dos años o multa de ocho a veinticuatro meses, e inhabilitación especial de seis meses a dos años",
+    "Prisión de tres a seis meses o multa de dos a cuatro meses, e inhabilitación especial de seis meses a un año",
+    "Prisión de seis meses a un año o multa de seis a doce meses, e inhabilitación especial de uno a tres años"
+   ],
+   "a": 0,
+   "cita": "Si los hechos se hubieran cometido por imprudencia grave, se impondrá una pena de prisión de tres meses a un año o multa de cuatro a ocho meses, e inhabilitación especial para profesión u oficio por tiempo de tres meses a dos años",
+   "parecidas": []
+  },
+  {
+   "r": "7.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "473",
+   "q": "En el delito de rebelión, ¿qué pena corresponde a quienes ejerzan un mando subalterno, en el supuesto básico del artículo 473.1 del Código Penal?",
+   "o": [
+    "Prisión de diez a quince años e inhabilitación absoluta de diez a quince años",
+    "Prisión de quince a veinticinco años e inhabilitación absoluta por el mismo tiempo",
+    "Prisión de cinco a diez años e inhabilitación especial de seis a diez años",
+    "Prisión de ocho a doce años e inhabilitación absoluta de ocho a doce años"
+   ],
+   "a": 0,
+   "cita": "los que ejerzan un mando subalterno, con la de prisión de diez a quince años e inhabilitación absoluta de diez a quince años",
+   "parecidas": []
+  },
+  {
+   "r": "7.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "473",
+   "q": "En una rebelión en la que se han esgrimido armas, ¿qué pena de prisión corresponde a los meros participantes?",
+   "o": [
+    "De cinco a diez años",
+    "De diez a quince años",
+    "De quince a veinticinco años",
+    "De veinticinco a treinta años"
+   ],
+   "a": 1,
+   "cita": "las penas de prisión serán, respectivamente, de veinticinco a treinta años para los primeros, de quince a veinticinco años para los segundos y de diez a quince años para los últimos",
+   "parecidas": []
+  },
+  {
+   "r": "7.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "473",
+   "q": "¿Cuál de las siguientes circunstancias NO figura en el artículo 473.2 del Código Penal como determinante de las penas agravadas de la rebelión?",
+   "o": [
+    "Que se hayan cortado las comunicaciones telefónicas o ferroviarias",
+    "Que se hayan exigido contribuciones o distraído caudales públicos",
+    "Que la rebelión se haya prolongado durante más de setenta y dos horas",
+    "Que haya habido combate con los sectores leales a la autoridad legítima"
+   ],
+   "a": 2,
+   "cita": "o si ha habido combate entre la fuerza de su mando y los sectores leales a la autoridad legítima, o la rebelión hubiese causado estragos en propiedades de titularidad pública o privada, cortado las comunicaciones telegráficas, telefónicas, por ondas, ferroviarias o de otra clase",
+   "parecidas": []
+  },
+  {
+   "r": "8.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "290",
+   "q": "Un funcionario requerido para auxiliar en una actuación de policía judicial se excusa alegando una causa que no resulta legítima. ¿Qué debe hacer quien dio la orden o hizo el requerimiento, si no hay mayor responsabilidad?",
+   "o": [
+    "Imponerle directamente una multa por falta de colaboración",
+    "Acordar por sí mismo su suspensión provisional de funciones",
+    "Comunicarlo a su superior jerárquico para que le corrija disciplinariamente",
+    "Sustituirlo por otro funcionario sin adoptar ninguna otra medida"
+   ],
+   "a": 2,
+   "cita": "el que hubiese dado la orden o hecho el requerimiento lo pondrá en conocimiento del superior jerárquico del que se excuse para que le corrija disciplinariamente",
+   "parecidas": []
+  },
+  {
+   "r": "9.0",
+   "norma": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad (BOE-A-2007-21490)",
+   "art": "3",
+   "q": "Según la Ley del Patrimonio Natural y de la Biodiversidad, ¿qué caracteriza a la conservación ex situ frente a la conservación in situ?",
+   "o": [
+    "Que se realiza en los entornos donde las especies cultivadas desarrollaron sus propiedades",
+    "Que conserva componentes de la diversidad biológica fuera de sus hábitats naturales",
+    "Que mantiene poblaciones viables de especies silvestres en sus entornos naturales",
+    "Que conserva los ecosistemas y hábitats naturales y seminaturales en su lugar"
+   ],
+   "a": 1,
+   "cita": "Conservación ex situ: conservación de componentes de la diversidad biológica fuera de sus hábitats naturales",
+   "parecidas": []
+  },
+  {
+   "r": "9.1",
+   "norma": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad (BOE-A-2007-21490)",
+   "art": "3",
+   "q": "¿Cómo define la Ley 42/2007 la «externalidad»?",
+   "o": [
+    "Todo coste ambiental de una acción que debe ser compensado",
+    "Todo efecto producido por una acción, que no era buscado en sus objetivos",
+    "Todo efecto de una acción sobre territorios ajenos a su ámbito",
+    "Todo beneficio ambiental obtenido accidentalmente por terceros"
+   ],
+   "a": 1,
+   "cita": "Externalidad: todo efecto producido por una acción, que no era buscado en los objetivos de la misma",
+   "parecidas": []
+  },
+  {
+   "r": "9.2",
+   "norma": "Ley 42/2007, del Patrimonio Natural y de la Biodiversidad (BOE-A-2007-21490)",
+   "art": "3",
+   "q": "Según la Ley 42/2007, ¿qué debe reunir una técnica de gestión de un espacio natural y de sus usos para considerarse «instrumento de gestión»?",
+   "o": [
+    "Haber sido sometida a información pública, aprobada formalmente y publicada",
+    "Haber sido informada por la Comisión Europea y aprobada por el Gobierno",
+    "Haber sido evaluada ambientalmente y ratificada por las Cortes Generales",
+    "Haber sido acordada con los propietarios e inscrita en un registro"
+   ],
+   "a": 0,
+   "cita": "Instrumentos de gestión: bajo esta denominación se incluye cualquier técnica de gestión de un espacio natural y de sus usos, que haya sido sometido a un proceso de información pública, haya sido objeto de una aprobación formal y haya sido publicado",
+   "parecidas": []
+  },
+  {
+   "r": "10.0",
+   "norma": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa (BOE-A-1998-16718)",
+   "art": "9",
+   "q": "¿Qué órgano conoce del recurso contra una resolución de un Secretario de Estado en materia de responsabilidad patrimonial en la que se reclaman 20.000 euros?",
+   "o": [
+    "La Sala de lo Contencioso-administrativo de la Audiencia Nacional",
+    "Los Juzgados Centrales de lo Contencioso-administrativo",
+    "La Sala de lo Contencioso-administrativo del Tribunal Supremo",
+    "El Tribunal Superior de Justicia de la sede del Ministerio"
+   ],
+   "a": 1,
+   "cita": "de los recursos contra las resoluciones dictadas por los Ministros y Secretarios de Estado en materia de responsabilidad patrimonial cuando lo reclamado no exceda de 30.050 euros",
+   "parecidas": []
+  },
+  {
+   "r": "10.1",
+   "norma": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa (BOE-A-1998-16718)",
+   "art": "9",
+   "q": "Un funcionario de carrera recurre la orden de un Ministro que declara la extinción de su relación de servicio. ¿Corresponde conocer del recurso a los Juzgados Centrales de lo Contencioso-administrativo según el artículo 9.1.a)?",
+   "o": [
+    "Sí, en única instancia, por ser un acto de personal dictado por un Ministro",
+    "Sí, en primera instancia, al no tratarse de personal militar",
+    "No, porque se exceptúan los actos sobre extinción de la relación de servicio de funcionarios de carrera",
+    "Solo si el acto confirma en vía de recurso otro dictado por un órgano inferior"
+   ],
+   "a": 2,
+   "cita": "o se refieran al nacimiento o extinción de la relación de servicio de funcionarios de carrera",
+   "parecidas": []
+  },
+  {
+   "r": "10.2",
+   "norma": "Ley 29/1998, de la Jurisdicción Contencioso-administrativa (BOE-A-1998-16718)",
+   "art": "9",
+   "q": "Los Juzgados Centrales de lo Contencioso-administrativo autorizan la ejecución de los actos que ordenan interrumpir servicios de la sociedad de la información o retirar contenidos que vulneren la propiedad intelectual. ¿Qué órgano adopta esos actos?",
+   "o": [
+    "La Sección Primera de la Comisión de Propiedad Intelectual",
+    "La Agencia Española de Protección de Datos",
+    "La Sección Segunda de la Comisión de Propiedad Intelectual",
+    "La Comisión Nacional de los Mercados y la Competencia"
+   ],
+   "a": 2,
+   "cita": "autorizar la ejecución de los actos adoptados por la Sección Segunda de la Comisión de Propiedad Intelectual",
+   "parecidas": []
+  },
+  {
+   "r": "11.0",
+   "norma": "Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito (BOE-A-2015-4606)",
+   "art": "29",
+   "q": "Una víctima decide participar en un proceso de justicia restaurativa con el autor del delito. ¿Qué función atribuye la ley a las Oficinas de Asistencia a las Víctimas en ese ámbito?",
+   "o": [
+    "Dirigir y resolver el proceso de mediación entre víctima e infractor",
+    "Prestar apoyo a los servicios de justicia restaurativa, en los términos reglamentarios",
+    "Autorizar previamente la participación de la víctima en el proceso",
+    "Homologar el acuerdo alcanzado para que surta efectos procesales"
+   ],
+   "a": 1,
+   "cita": "prestarán, en los términos que reglamentariamente se determine, apoyo a los servicios de justicia restaurativa",
+   "parecidas": []
+  },
+  {
+   "r": "12.0",
+   "norma": "Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito (BOE-A-2015-4606)",
+   "art": "31",
+   "q": "Según el Estatuto de la víctima del delito, ¿quién aprobará los Protocolos que resulten necesarios para la protección de las víctimas?",
+   "o": [
+    "El Consejo General del Poder Judicial y la Fiscalía General",
+    "El Ministerio del Interior y los ayuntamientos",
+    "Las Oficinas de Asistencia a las Víctimas",
+    "El Gobierno y las Comunidades Autónomas, en el marco de sus competencias"
+   ],
+   "a": 3,
+   "cita": "El Gobierno y las Comunidades Autónomas en el marco de sus competencias",
+   "parecidas": []
+  },
+  {
+   "r": "12.1",
+   "norma": "Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito (BOE-A-2015-4606)",
+   "art": "31",
+   "q": "¿Qué papel asigna el artículo 31 del Estatuto de la víctima del delito a los Colegios profesionales cuyos miembros prestan servicios a las víctimas?",
+   "o": [
+    "Aprobar con carácter vinculante los Protocolos de protección",
+    "Promover la elaboración de Protocolos de actuación orientados a proteger a las víctimas",
+    "Sancionar a los colegiados que incumplan los derechos de las víctimas",
+    "Acreditar a las Oficinas de Asistencia a las Víctimas de su territorio"
+   ],
+   "a": 1,
+   "cita": "promoverán igualmente la elaboración de Protocolos de actuación que orienten su actividad hacia la protección de las víctimas",
+   "parecidas": []
+  },
+  {
+   "r": "13.0",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "29",
+   "q": "Un alto cargo, sancionado a lo largo del año anterior por dos infracciones graves contra las que no cabe recurso en vía administrativa, comete una nueva infracción grave. ¿Cómo se califica esta última?",
+   "o": [
+    "Como infracción grave",
+    "Como infracción muy grave",
+    "Como infracción leve",
+    "Como infracción grave agravada"
+   ],
+   "a": 1,
+   "cita": "La comisión de una infracción grave cuando el autor hubiera sido sancionado por dos infracciones graves a lo largo del año anterior contra las que no quepa recurso en la vía administrativa",
+   "parecidas": []
+  },
+  {
+   "r": "13.1",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "29",
+   "q": "Según el artículo 29 de la Ley 19/2013, ¿cuándo constituye infracción grave no guardar el debido sigilo respecto a los asuntos conocidos por razón del cargo?",
+   "o": [
+    "Cuando cause perjuicio a la Administración o se utilice en provecho propio",
+    "Cuando se refiera a secretos oficiales declarados así por ley",
+    "Cuando se repita al menos tres veces a lo largo del mismo año",
+    "Cuando afecte a datos personales de ciudadanos identificados"
+   ],
+   "a": 0,
+   "cita": "No guardar el debido sigilo respecto a los asuntos que se conozcan por razón del cargo, cuando causen perjuicio a la Administración o se utilice en provecho propio",
+   "parecidas": []
+  },
+  {
+   "r": "13.2",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "29",
+   "q": "La adopción de acuerdos manifiestamente ilegales puede ser infracción muy grave o grave. ¿Qué la convierte en muy grave según el artículo 29 de la Ley 19/2013?",
+   "o": [
+    "Que el acuerdo lo adopte un órgano colegiado de gobierno",
+    "Que cause perjuicio grave a la Administración o a los ciudadanos",
+    "Que el autor haya sido sancionado antes por una infracción leve",
+    "Que el acuerdo afecte a un procedimiento de contratación"
+   ],
+   "a": 1,
+   "cita": "La adopción de acuerdos manifiestamente ilegales que causen perjuicio grave a la Administración o a los ciudadanos",
+   "parecidas": []
+  },
+  {
+   "r": "14.0",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "31",
+   "q": "En el procedimiento sancionador del título II de la Ley 19/2013, ¿quién ordena la incoación cuando el presunto responsable está al servicio de la Administración General del Estado pero no es miembro del Gobierno ni Secretario de Estado?",
+   "o": [
+    "El Consejo de Ministros, a propuesta del Ministro de Hacienda",
+    "La Oficina de Conflictos de Intereses",
+    "El Ministro de Hacienda y Administraciones Públicas",
+    "El Ministro del departamento del que dependa"
+   ],
+   "a": 2,
+   "cita": "Cuando los presuntos responsables sean personas al servicio de la Administración General del Estado distintas de los anteriores, el Ministro de Hacienda y Administraciones Públicas",
+   "parecidas": []
+  },
+  {
+   "r": "14.1",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "31",
+   "q": "En un procedimiento sancionador de buen gobierno dirigido contra un Secretario de Estado, ¿a quién corresponden, respectivamente, la instrucción y la imposición de la sanción?",
+   "o": [
+    "Al Ministro de Hacienda y al Consejo de Ministros",
+    "A la Oficina de Conflictos de Intereses y al Ministro de Hacienda",
+    "A la Oficina de Conflictos de Intereses y al Consejo de Ministros",
+    "Al Consejo de Ministros, que instruye y sanciona"
+   ],
+   "a": 2,
+   "cita": "Al Consejo de Ministros cuando el alto cargo tenga la condición de miembro del Gobierno o Secretario de Estado",
+   "parecidas": []
+  },
+  {
+   "r": "14.2",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "31",
+   "q": "¿Cómo se inicia el procedimiento sancionador previsto en el título II de la Ley 19/2013?",
+   "o": [
+    "A instancia de parte, mediante denuncia de cualquier ciudadano",
+    "De oficio, también cuando medie denuncia de los ciudadanos",
+    "A instancia del Tribunal de Cuentas, previo informe fiscal",
+    "A solicitud del propio alto cargo para depurar su conducta"
+   ],
+   "a": 1,
+   "cita": "El procedimiento sancionador se iniciará de oficio, por acuerdo del órgano competente, bien por propia iniciativa o como consecuencia de orden superior, petición razonada de otros órganos o denuncia de los ciudadanos",
+   "parecidas": []
+  },
+  {
+   "r": "15.0",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "120",
+   "q": "En la tramitación de emergencia de un contrato celebrado por la Administración General del Estado, ¿en qué plazo máximo se dará cuenta de los acuerdos al Consejo de Ministros?",
+   "o": [
+    "Diez días",
+    "Quince días",
+    "Treinta días",
+    "Dos meses"
+   ],
+   "a": 2,
+   "cita": "se dará cuenta de dichos acuerdos al Consejo de Ministros en el plazo máximo de treinta días",
+   "parecidas": []
+  },
+  {
+   "r": "15.1",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "120",
+   "q": "En la tramitación de emergencia, ¿qué ocurre si no existe crédito adecuado y suficiente para la actuación?",
+   "o": [
+    "No puede acudirse a este régimen hasta disponer del crédito necesario",
+    "Puede ordenarse la ejecución y, adoptado el acuerdo, se procede a dotar el crédito",
+    "Debe tramitarse antes un expediente de modificación presupuestaria",
+    "La contratación requiere autorización previa del Consejo de Ministros"
+   ],
+   "a": 1,
+   "cita": "En caso de que no exista crédito adecuado y suficiente, una vez adoptado el acuerdo, se procederá a su dotación de conformidad con lo establecido en la Ley General Presupuestaria",
+   "parecidas": []
+  },
+  {
+   "r": "15.2",
+   "norma": "Ley 9/2017, de Contratos del Sector Público (BOE-A-2017-12902)",
+   "art": "120",
+   "q": "En la tramitación de emergencia, ¿qué sucede si el inicio de la ejecución de las prestaciones supera el plazo de un mes desde la adopción del acuerdo?",
+   "o": [
+    "El contrato queda resuelto con indemnización al contratista",
+    "Se prorroga automáticamente el régimen de emergencia",
+    "Su contratación requerirá un procedimiento ordinario",
+    "Debe darse cuenta de nuevo al Consejo de Ministros"
+   ],
+   "a": 2,
+   "cita": "Si se excediese este plazo, la contratación de dichas prestaciones requerirá la tramitación de un procedimiento ordinario",
+   "parecidas": []
+  },
+  {
+   "r": "16.0",
+   "norma": "Real Decreto 137/1993, de 29 de enero, por el que se aprueba el Reglamento de Armas (BOE-A-1993-6202)",
+   "art": "19",
+   "q": "Según el Reglamento de Armas, ¿cuándo se reputan terminadas las armas de fuego?",
+   "o": [
+    "Cuando hayan superado las pruebas oficiales del banco de pruebas",
+    "Cuando estén puestas a tiro o tomadas en diente, aunque les falten acabados",
+    "Cuando tengan completas todas sus operaciones de pulimento y pavón",
+    "Cuando hayan sido marcadas y numeradas por el fabricante"
+   ],
+   "a": 1,
+   "cita": "Se reputan armas de fuego terminadas las que estén puestas a tiro o tomadas en diente, aunque les falten operaciones de pulimento, pavón, cargador, cachas y reservas de calibrador",
+   "parecidas": []
+  },
+  {
+   "r": "16.1",
+   "norma": "Real Decreto 137/1993, de 29 de enero, por el que se aprueba el Reglamento de Armas (BOE-A-1993-6202)",
+   "art": "19",
+   "q": "Un fabricante prepara para su expedición, en piezas sueltas, conjuntos que permiten formar armas de fuego completas. ¿Qué régimen se aplica a esos conjuntos?",
+   "o": [
+    "Se consideran piezas sueltas no sujetas a marcaje hasta su montaje",
+    "Se consideran armas en fabricación con un régimen atenuado",
+    "Se consideran armas terminadas, con las mismas normas que si estuvieran ensambladas",
+    "Solo se consideran armas cuando el destinatario las ensambla"
+   ],
+   "a": 2,
+   "cita": "Se considerarán también armas de fuego terminadas aquellas que se preparen para su expedición en piezas sueltas que integren conjuntos susceptibles de formar armas completas",
+   "parecidas": []
+  },
+  {
+   "r": "17.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "47",
+   "q": "Según el artículo 47 del Código Penal, ¿a partir de qué duración la pena de privación del derecho a conducir o a la tenencia y porte de armas comporta la pérdida de vigencia del permiso o licencia?",
+   "o": [
+    "Superior a un año",
+    "Superior a dos años",
+    "Superior a tres años",
+    "Superior a cinco años"
+   ],
+   "a": 1,
+   "cita": "Cuando la pena impuesta lo fuere por un tiempo superior a dos años comportará la pérdida de vigencia del permiso o licencia",
+   "parecidas": []
+  },
+  {
+   "r": "17.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "47",
+   "q": "¿Cuál de las siguientes afirmaciones NO se ajusta al artículo 47 del Código Penal?",
+   "o": [
+    "La privación del derecho a conducir vehículos a motor permite seguir conduciendo ciclomotores",
+    "La privación del derecho a la tenencia y porte de armas inhabilita por el tiempo fijado en la sentencia",
+    "La inhabilitación derivada de la privación del derecho a conducir dura el tiempo fijado en la sentencia",
+    "La privación del derecho a conducir inhabilita tanto para vehículos a motor como para ciclomotores"
+   ],
+   "a": 0,
+   "cita": "La imposición de la pena de privación del derecho a conducir vehículos a motor y ciclomotores inhabilitará al penado para el ejercicio de ambos derechos durante el tiempo fijado en la sentencia",
+   "parecidas": []
+  },
+  {
+   "r": "18.0",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "575",
+   "q": "Una persona, con la finalidad de capacitarse para cometer delitos de terrorismo, accede habitualmente desde territorio español a contenidos en línea alojados en el extranjero e idóneos para incitar a incorporarse a un grupo terrorista. ¿Dónde se entienden cometidos los hechos?",
+   "o": [
+    "En el Estado donde estén alojados los contenidos",
+    "En España, al accederse desde territorio español",
+    "En el Estado de nacionalidad del responsable del sitio",
+    "En el lugar donde tenga su sede la organización"
+   ],
+   "a": 1,
+   "cita": "Los hechos se entenderán cometidos en España cuando se acceda a los contenidos desde el territorio español",
+   "parecidas": []
+  },
+  {
+   "r": "18.1",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "575",
+   "q": "¿Cómo se castiga a quien, con la finalidad de capacitarse para cometer delitos de terrorismo, se adiestra por sí mismo en la elaboración de explosivos, frente a quien recibe ese adiestramiento?",
+   "o": [
+    "Con pena inferior, por no intervenir un tercero",
+    "Con pena superior, por su mayor autonomía operativa",
+    "Con la misma pena que quien recibe el adiestramiento",
+    "Queda impune si no se integra en una organización"
+   ],
+   "a": 2,
+   "cita": "Con la misma pena se castigará a quien, con la misma finalidad de capacitarse para cometer alguno de los delitos tipificados en este Capítulo, lleve a cabo por sí mismo cualquiera de las actividades previstas en el apartado anterior",
+   "parecidas": []
+  },
+  {
+   "r": "18.2",
+   "norma": "Ley Orgánica 10/1995, de 23 de noviembre, del Código Penal (BOE-A-1995-25444)",
+   "art": "575",
+   "q": "Según el artículo 575.3 del Código Penal, ¿cuál de las siguientes conductas se castiga con la misma pena de prisión de dos a cinco años?",
+   "o": [
+    "Trasladarse a territorio extranjero tras cumplir condena por terrorismo",
+    "Viajar a una zona de conflicto armado sin comunicarlo a las autoridades",
+    "Trasladarse a territorio extranjero para colaborar con un grupo terrorista",
+    "Residir en el extranjero y consultar ocasionalmente propaganda terrorista"
+   ],
+   "a": 2,
+   "cita": "La misma pena se impondrá a quien, para ese mismo fin, o para colaborar con una organización o grupo terrorista, o para cometer cualquiera de los delitos comprendidos en este Capítulo, se traslade o establezca en un territorio extranjero",
+   "parecidas": []
+  },
+  {
+   "r": "19.0",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "14",
+   "q": "Con carácter general, y salvo que corresponda a las secciones de violencia sobre la mujer o contra la infancia y la adolescencia, ¿quién es competente para el conocimiento y fallo de los juicios por delito leve?",
+   "o": [
+    "La Sección de lo Penal del Tribunal de Instancia",
+    "La Sección de Instrucción de los Tribunales de Instancia",
+    "La Audiencia Provincial de la circunscripción",
+    "El Juez Central de lo Penal"
+   ],
+   "a": 1,
+   "cita": "Para el conocimiento y fallo de los juicios por delito leve, la Sección de Instrucción de los Tribunales de Instancia",
+   "parecidas": []
+  },
+  {
+   "r": "19.1",
+   "norma": "Ley de Enjuiciamiento Criminal (BOE-A-1882-6036)",
+   "art": "14",
+   "q": "Si los hechos que instruye la Sección de Violencia contra la Infancia y la Adolescencia pudieran ser conocidos también por la Sección de Violencia sobre la Mujer, ¿a quién corresponde la competencia?",
+   "o": [
+    "A la Sección de Violencia contra la Infancia y la Adolescencia",
+    "A la sección que hubiera iniciado antes las actuaciones",
+    "A la sección que designe la Audiencia Provincial",
+    "A la Sección de Violencia sobre la Mujer, en todo caso"
+   ],
+   "a": 3,
+   "cita": "la competencia le corresponderá en todo caso a la segunda",
+   "parecidas": []
+  }
+ ]
+}

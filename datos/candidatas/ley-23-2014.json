@@ -27,7 +27,39 @@
   "verification_status": "REVIEW_REQUIRED",
   "motivo": "el generador declara confianza media",
   "estado_desde": "2026-09-29",
-  "id": "cand-ley-23-2014-0"
+  "id": "cand-ley-23-2014-0",
+  "traza": {
+   "id": "cand-ley-23-2014-0",
+   "batch_id": "S00003",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "opposition_id": "policia-nacional-escala-ejecutiva",
+   "topic_id": "policia-nacional-escala-ejecutiva#23",
+   "article": "9",
+   "source_document": "BOE-A-2014-12029",
+   "source_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-12029",
+   "source_version": "2025-01-03",
+   "generator": "fabrica-v1-sesion",
+   "generator_model": "claude-opus-5-5",
+   "generator_prompt_version": "redactor-sesion-v0.2",
+   "judge": "revisor independiente (subagente de la sesión)",
+   "judge_model": "claude-haiku-4-5",
+   "judge_policy_version": "juez-sesion-v0.3",
+   "judge_policy_sha256": "0c69f303b1921de59a9a1ead36f9d26ac113b99da13389b1d90536a400ce690e",
+   "judge_verdict": "VALID",
+   "judge_flags": {
+    "respaldada": true,
+    "unica": true,
+    "clara": true,
+    "duplicada_de": ""
+   },
+   "judge_reason": "Respuesta clara según artículo 9",
+   "validation_status": "REVIEW_REQUIRED",
+   "created_at": "2026-09-29",
+   "validated_at": "2026-09-29T19:49:51",
+   "reviewed_at": null,
+   "published_at": null,
+   "reconstruida": true
+  }
  },
  {
   "art": "22",
@@ -58,7 +90,39 @@
   "verification_status": "REVIEW_REQUIRED",
   "motivo": "juez: El artículo enumera dos excepciones distintas unidas por 'o'; la pregunta formula como si hubiera una única",
   "estado_desde": "2026-09-29",
-  "id": "cand-ley-23-2014-1"
+  "id": "cand-ley-23-2014-1",
+  "traza": {
+   "id": "cand-ley-23-2014-1",
+   "batch_id": "S00009",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "opposition_id": "policia-nacional-escala-ejecutiva",
+   "topic_id": "policia-nacional-escala-ejecutiva#23",
+   "article": "22",
+   "source_document": "BOE-A-2014-12029",
+   "source_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-12029",
+   "source_version": "2025-01-03",
+   "generator": "fabrica-v1-sesion",
+   "generator_model": "claude-opus-5-5",
+   "generator_prompt_version": "redactor-sesion-v0.8",
+   "judge": "revisor independiente (subagente de la sesión)",
+   "judge_model": "claude-haiku-4-5",
+   "judge_policy_version": "juez-sesion-v0.8",
+   "judge_policy_sha256": "c106f133b33887682fba3c25d15b08d016392767b04a3e6415e31693e2332891",
+   "judge_verdict": "REVIEW_REQUIRED",
+   "judge_flags": {
+    "respaldada": true,
+    "unica": false,
+    "clara": false,
+    "duplicada_de": ""
+   },
+   "judge_reason": "El artículo enumera dos excepciones distintas unidas por 'o'; la pregunta formula como si hubiera una única",
+   "validation_status": "REVIEW_REQUIRED",
+   "created_at": "2026-09-29",
+   "validated_at": "2026-09-29T20:46:34",
+   "reviewed_at": null,
+   "published_at": null,
+   "reconstruida": true
+  }
  },
  {
   "art": "26",
@@ -88,7 +152,39 @@
   "verification_status": "REVIEW_REQUIRED",
   "motivo": "tipo caso_practico: revisión humana obligatoria en esta fase",
   "estado_desde": "2026-09-29",
-  "id": "cand-ley-23-2014-2"
+  "id": "cand-ley-23-2014-2",
+  "traza": {
+   "id": "cand-ley-23-2014-2",
+   "batch_id": "S00012",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "opposition_id": "policia-nacional-escala-ejecutiva",
+   "topic_id": "policia-nacional-escala-ejecutiva#23",
+   "article": "26",
+   "source_document": "BOE-A-2014-12029",
+   "source_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-12029",
+   "source_version": "2025-01-03",
+   "generator": "fabrica-v1-sesion",
+   "generator_model": "claude-opus-5-5",
+   "generator_prompt_version": "redactor-sesion-v0.11",
+   "judge": "revisor independiente (subagente de la sesión)",
+   "judge_model": "claude-haiku-4-5",
+   "judge_policy_version": "juez-sesion-v0.9",
+   "judge_policy_sha256": "de64cac27fa954cd702332f66a5ba46ad689c83dc54371f8712f403fe809c54a",
+   "judge_verdict": "VALID",
+   "judge_flags": {
+    "respaldada": true,
+    "unica": true,
+    "clara": true,
+    "duplicada_de": ""
+   },
+   "judge_reason": "",
+   "validation_status": "REVIEW_REQUIRED",
+   "created_at": "2026-09-29",
+   "validated_at": "2026-09-29T21:15:48",
+   "reviewed_at": null,
+   "published_at": null,
+   "reconstruida": true
+  }
  },
  {
   "art": "32",
@@ -119,6 +215,38 @@
   "verification_status": "REVIEW_REQUIRED",
   "motivo": "tipo relacion_articulos: revisión humana obligatoria en esta fase",
   "estado_desde": "2026-09-29",
-  "id": "cand-ley-23-2014-3"
+  "id": "cand-ley-23-2014-3",
+  "traza": {
+   "id": "cand-ley-23-2014-3",
+   "batch_id": "S00015",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "opposition_id": "policia-nacional-escala-ejecutiva",
+   "topic_id": "policia-nacional-escala-ejecutiva#23",
+   "article": "32",
+   "source_document": "BOE-A-2014-12029",
+   "source_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-12029",
+   "source_version": "2025-01-03",
+   "generator": "fabrica-v1-sesion",
+   "generator_model": "claude-opus-5-5",
+   "generator_prompt_version": "redactor-sesion-v1",
+   "judge": "revisor independiente (subagente de la sesión)",
+   "judge_model": "claude-haiku-4-5",
+   "judge_policy_version": "juez-sesion-v1",
+   "judge_policy_sha256": "08b4a8f4b3773f81bb6f4f045c5540e1a0dd553ec3a84c27929d5e3d00bca8aa",
+   "judge_verdict": "VALID",
+   "judge_flags": {
+    "respaldada": true,
+    "unica": true,
+    "clara": true,
+    "duplicada_de": ""
+   },
+   "judge_reason": "",
+   "validation_status": "REVIEW_REQUIRED",
+   "created_at": "2026-09-29",
+   "validated_at": "2026-09-29T21:43:55",
+   "reviewed_at": null,
+   "published_at": null,
+   "reconstruida": true
+  }
  }
 ]
