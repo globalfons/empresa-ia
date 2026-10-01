@@ -426,7 +426,12 @@
    "trazabilidad": "reconstruida a partir del archivo del lote (2026-10-01)"
   }
  ],
- "pausa": null,
+ "pausa": {
+  "estado": "GENERATION_PAUSED",
+  "motivo": "Auditoría de independencia del juez: política juez-sesion-v1 restaurada y congelada. S00016 reevaluado y pendiente de decisión de publicación (lote abierto; siguiente paso: python3 -m fabrica.sesion cerrar). Reanudar con --reanudar tras revisar documentacion/QUESTION-FACTORY-AUDIT.md.",
+  "lote": "S00016",
+  "fecha": "2026-10-01"
+ },
  "omitidos": {
   "lo-4-2015|24": 2
  }

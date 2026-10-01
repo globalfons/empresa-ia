@@ -1,0 +1,1214 @@
+{
+ "fecha": "2026-10-01T18:26:51",
+ "politica_activa": "juez-sesion-v1",
+ "lotes": [
+  {
+   "id": "S00001",
+   "generadas": 10,
+   "VALID": 9,
+   "REVIEW_REQUIRED": 1,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.1"
+  },
+  {
+   "id": "S00002",
+   "generadas": 77,
+   "VALID": 65,
+   "REVIEW_REQUIRED": 12,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.2"
+  },
+  {
+   "id": "S00003",
+   "generadas": 50,
+   "VALID": 38,
+   "REVIEW_REQUIRED": 12,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.3"
+  },
+  {
+   "id": "S00004",
+   "generadas": 50,
+   "VALID": 43,
+   "REVIEW_REQUIRED": 7,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.4"
+  },
+  {
+   "id": "S00005",
+   "generadas": 50,
+   "VALID": 45,
+   "REVIEW_REQUIRED": 4,
+   "REJECTED": 1,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.5"
+  },
+  {
+   "id": "S00006",
+   "generadas": 50,
+   "VALID": 46,
+   "REVIEW_REQUIRED": 4,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.6"
+  },
+  {
+   "id": "S00007",
+   "generadas": 50,
+   "VALID": 44,
+   "REVIEW_REQUIRED": 6,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.6"
+  },
+  {
+   "id": "S00008",
+   "generadas": 50,
+   "VALID": 43,
+   "REVIEW_REQUIRED": 7,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.7"
+  },
+  {
+   "id": "S00009",
+   "generadas": 50,
+   "VALID": 38,
+   "REVIEW_REQUIRED": 12,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.8"
+  },
+  {
+   "id": "S00010",
+   "generadas": 49,
+   "VALID": 43,
+   "REVIEW_REQUIRED": 6,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.9"
+  },
+  {
+   "id": "S00011",
+   "generadas": 49,
+   "VALID": 41,
+   "REVIEW_REQUIRED": 8,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.9"
+  },
+  {
+   "id": "S00012",
+   "generadas": 50,
+   "VALID": 41,
+   "REVIEW_REQUIRED": 9,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v0.9"
+  },
+  {
+   "id": "S00013",
+   "generadas": 50,
+   "VALID": 43,
+   "REVIEW_REQUIRED": 6,
+   "REJECTED": 1,
+   "duplicadas": 1,
+   "judge_policy_version": "juez-sesion-v0.9"
+  },
+  {
+   "id": "S00014",
+   "generadas": 49,
+   "VALID": 43,
+   "REVIEW_REQUIRED": 5,
+   "REJECTED": 1,
+   "duplicadas": 1,
+   "judge_policy_version": "juez-sesion-v0.9"
+  },
+  {
+   "id": "S00015",
+   "generadas": 50,
+   "VALID": 34,
+   "REVIEW_REQUIRED": 16,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "judge_policy_version": "juez-sesion-v1"
+  }
+ ],
+ "totales": {
+  "generadas": 734,
+  "VALID": 616,
+  "REVIEW_REQUIRED": 115,
+  "REJECTED": 3,
+  "APROBADA_REVISION_HUMANA": 0,
+  "revisiones_humanas": 0
+ },
+ "FACTORY_VALID_RATE": 83.9,
+ "FACTORY_REVIEW_RATE": 15.7,
+ "FACTORY_REJECTION_RATE": 0.4,
+ "DUPLICATE_RATE": 0.3,
+ "duplicados_exactos": [],
+ "casi_duplicados": [
+  {
+   "par": [
+    "lecrim-199",
+    "lecrim-200"
+   ],
+   "jaccard": 0.6,
+   "misma_respuesta": false
+  },
+  {
+   "par": [
+    "ley-12-2009-48",
+    "ley-12-2009-49"
+   ],
+   "jaccard": 0.65,
+   "misma_respuesta": false
+  },
+  {
+   "par": [
+    "ley-3-2023-46",
+    "ley-3-2023-47"
+   ],
+   "jaccard": 0.64,
+   "misma_respuesta": false
+  },
+  {
+   "par": [
+    "ley-47-2003-149",
+    "ley-47-2003-150"
+   ],
+   "jaccard": 0.62,
+   "misma_respuesta": false
+  },
+  {
+   "par": [
+    "lo-4-2015-40",
+    "lo-4-2015-41"
+   ],
+   "jaccard": 0.62,
+   "misma_respuesta": false
+  }
+ ],
+ "mismo_dato_sospecha": [],
+ "ARTICLE_CONCENTRATION": {
+  "articulos_distintos": 315,
+  "max_por_articulo": 3,
+  "media_por_articulo": 1.96,
+  "top10_pct": 4.9,
+  "hhi": 0.0037,
+  "sobreexplotados": []
+ },
+ "TOPIC_COVERAGE": {
+  "temas": 163,
+  "temas_sin_fuente": 15,
+  "temas_con_fabrica": 63,
+  "temas_bajo_objetivo": 131,
+  "articulos_ambito": 6720,
+  "articulos_ambito_con_preguntas": 2438,
+  "pct_articulos_cubiertos": 36.3,
+  "insuficientes": [
+   {
+    "tema": "age-gestion-a2#34",
+    "titulo": "La expropiación forzosa: concepto, naturaleza y elementos. Procedimientos de exp",
+    "preguntas": 47,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#26",
+    "titulo": "Otras políticas públicas. El sistema sanitario: distribución de competencias, ge",
+    "preguntas": 49,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#47",
+    "titulo": "Medidas cautelares personales: la detención y la prisión provisional. La incomun",
+    "preguntas": 51,
+    "objetivo": 187
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#45",
+    "titulo": "El proceso penal: principios que lo informan. Fases del proceso. El sumario: con",
+    "preguntas": 56,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#19",
+    "titulo": "Política ambiental. Distribución de competencias. Conservación de la biodiversid",
+    "preguntas": 57,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#21",
+    "titulo": "La evolución del empleo en España. Los servicios públicos de empleo: régimen de ",
+    "preguntas": 57,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#32",
+    "titulo": "Los contratos regulados por la Ley de Contratos del Sector Público (II). Tipos. ",
+    "preguntas": 57,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#48",
+    "titulo": "La prueba en el proceso penal. Concepto, objeto y medios de prueba. La prueba an",
+    "preguntas": 57,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#15",
+    "titulo": "Documentación de los extranjeros. La potestad sancionadora. Tipos de infraccione",
+    "preguntas": 51,
+    "objetivo": 178
+   },
+   {
+    "tema": "age-gestion-a2#18",
+    "titulo": "Política económica actual. Política presupuestaria. Evolución y distribución act",
+    "preguntas": 49,
+    "objetivo": 171
+   },
+   {
+    "tema": "age-gestion-a2#17",
+    "titulo": "Políticas de modernización de la Administración General del Estado. La Administr",
+    "preguntas": 52,
+    "objetivo": 181
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#16",
+    "titulo": "La protección internacional. Reglas procedimentales para el reconocimiento de la",
+    "preguntas": 52,
+    "objetivo": 181
+   },
+   {
+    "tema": "policia-nacional-escala-basica#8",
+    "titulo": "La Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad: dispo",
+    "preguntas": 40,
+    "objetivo": 139
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#42",
+    "titulo": "Delitos contra la Constitución: rebelión; delitos contra la Corona; de los delit",
+    "preguntas": 36,
+    "objetivo": 125
+   },
+   {
+    "tema": "policia-nacional-escala-basica#10",
+    "titulo": "De las infracciones en materia de extranjería y su régimen sancionador. Tipos de",
+    "preguntas": 55,
+    "objetivo": 190
+   },
+   {
+    "tema": "policia-nacional-escala-basica#9",
+    "titulo": "Entrada, libre circulación y residencia en España de ciudadanos de los Estados m",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-basica#13",
+    "titulo": "La Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana.",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-basica#41",
+    "titulo": "Origen de las armas de fuego. Definición, clasificación, categorías y funcionami",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#9",
+    "titulo": "La Administración local: entidades que la integran. La provincia, el municipio y",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#14",
+    "titulo": "La protección de datos personales y su régimen Jurídico: principios, derechos, r",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#11",
+    "titulo": "La protección de datos personales y su régimen jurídico: principios, derechos y ",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#7",
+    "titulo": "La Administración General del Estado. Principios de organización y funcionamient",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#10",
+    "titulo": "Organización territorial (II): la Administración local: entidades que la integra",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#24",
+    "titulo": "La protección de datos personales y su régimen jurídico: principios, derechos, r",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#33",
+    "titulo": "Procedimientos y formas de la actividad administrativa. La actividad de interven",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#35",
+    "titulo": "El régimen patrimonial de las Administraciones públicas. El dominio público. Los",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#39",
+    "titulo": "La jurisdicción contencioso-administrativa: funciones, órganos y competencias. E",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#56",
+    "titulo": "Los ingresos públicos: concepto y clasificación. El sistema tributario español: ",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#13",
+    "titulo": "La Ley Orgánica de Fuerzas y Cuerpos de Seguridad: disposiciones generales. Prin",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#18",
+    "titulo": "La Ley Orgánica 4/2015, de 30 de marzo, de protección de la seguridad ciudadana.",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#23",
+    "titulo": "El reconocimiento mutuo de resoluciones penales en la Unión Europea: régimen gen",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#32",
+    "titulo": "Las consecuencias jurídicas de la infracción penal: la pena, concepto, clases y ",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#37",
+    "titulo": "Delitos contra el patrimonio y contra el orden socioeconómico. De los delitos co",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#79",
+    "titulo": "El vehículo prioritario. Definición de vehículo prioritario. Facultades de los c",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#80",
+    "titulo": "Origen de las armas de fuego. Definición, clasificación, categorías y funcionami",
+    "preguntas": 58,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#32",
+    "titulo": "El presupuesto del Estado en España: concepto y estructura. Los créditos presupu",
+    "preguntas": 46,
+    "objetivo": 158
+   },
+   {
+    "tema": "age-gestion-a2#15",
+    "titulo": "El presupuesto comunitario. Los fondos europeos. La cohesión económica y social.",
+    "preguntas": 58,
+    "objetivo": 197
+   },
+   {
+    "tema": "age-administrativo-c1#7",
+    "titulo": "La Administración General del Estado. Órganos centrales. Órganos superiores y di",
+    "preguntas": 43,
+    "objetivo": 146
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#7",
+    "titulo": "La Administración General del Estado. Órganos centrales. Órganos superiores y ór",
+    "preguntas": 43,
+    "objetivo": 146
+   },
+   {
+    "tema": "policia-nacional-escala-basica#11",
+    "titulo": "La protección internacional. Reglas procedimentales para el reconocimiento de la",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-basica#12",
+    "titulo": "Disposiciones generales en materia de seguridad privada en España. Coordinación.",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#19",
+    "titulo": "Procedimientos y formas de la actividad administrativa. La actividad de limitaci",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#30",
+    "titulo": "El régimen de la Seguridad Social del personal laboral. La acción protectora. Ti",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#2",
+    "titulo": "El Tribunal Constitucional. Organización, composición y atribuciones.",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#51",
+    "titulo": "Las leyes anuales de presupuestos. Su contenido. El presupuesto del Estado. Prin",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#17",
+    "titulo": "Disposiciones generales en materia de Seguridad Privada en España. Coordinación.",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#38",
+    "titulo": "Delitos relativos a la ordenación del territorio y el urbanismo, la protección d",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#44",
+    "titulo": "La potestad jurisdiccional: concepto y ámbito. Los principios de la jurisdicción",
+    "preguntas": 59,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-basica#6",
+    "titulo": "El Ministerio del Interior: estructura orgánica básica. La Secretaría de Estado ",
+    "preguntas": 47,
+    "objetivo": 158
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#12",
+    "titulo": "El Ministerio del Interior: estructura orgánica básica. La Secretaría de Estado ",
+    "preguntas": 47,
+    "objetivo": 158
+   },
+   {
+    "tema": "age-administrativo-c1#18",
+    "titulo": "Los contratos del sector público: concepto y clases. Preparación, adjudicación, ",
+    "preguntas": 60,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#20",
+    "titulo": "La Seguridad Social: estructura y financiación. Problemas actuales y líneas de a",
+    "preguntas": 60,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#31",
+    "titulo": "Los contratos del sector público (I): concepto, clases y elementos. Preparación,",
+    "preguntas": 60,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#43",
+    "titulo": "Delitos contra el orden público: de los atentados contra la autoridad, sus agent",
+    "preguntas": 60,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#52",
+    "titulo": "Gastos plurianuales. Modificaciones de los créditos iniciales. Transferencias de",
+    "preguntas": 37,
+    "objetivo": 122
+   },
+   {
+    "tema": "policia-nacional-escala-basica#21",
+    "titulo": "La Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito. Ámbito. Co",
+    "preguntas": 43,
+    "objetivo": 141
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#50",
+    "titulo": "La Ley 4/2015, de 27 de abril, del Estatuto de la víctima del delito. Ámbito. Co",
+    "preguntas": 43,
+    "objetivo": 141
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#46",
+    "titulo": "Las partes en el proceso penal: concepto y clases. Partes acusadoras y partes ac",
+    "preguntas": 48,
+    "objetivo": 157
+   },
+   {
+    "tema": "age-gestion-a2#38",
+    "titulo": "Los derechos de los ciudadanos en el procedimiento administrativo. Las garantías",
+    "preguntas": 45,
+    "objetivo": 147
+   },
+   {
+    "tema": "age-administrativo-c1#33",
+    "titulo": "El procedimiento administrativo de ejecución del presupuesto de gasto. Órganos c",
+    "preguntas": 62,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#6",
+    "titulo": "La Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información púb",
+    "preguntas": 58,
+    "objetivo": 186
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#6",
+    "titulo": "La Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información púb",
+    "preguntas": 58,
+    "objetivo": 186
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#40",
+    "titulo": "Delitos contra la Administración Pública: de la prevaricación de los funcionario",
+    "preguntas": 34,
+    "objetivo": 109
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#78",
+    "titulo": "El procedimiento sancionador en materia de tráfico: potestad sancionadora y tipo",
+    "preguntas": 44,
+    "objetivo": 141
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#10",
+    "titulo": "El Gobierno: composición, organización y funciones. La organización y funcionami",
+    "preguntas": 63,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#5",
+    "titulo": "El Gobierno Abierto: concepto y principios informadores. La Agenda 2030 y los Ob",
+    "preguntas": 59,
+    "objetivo": 187
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#5",
+    "titulo": "El Gobierno Abierto: concepto y principios informadores. La Agenda 2030 y los Ob",
+    "preguntas": 59,
+    "objetivo": 187
+   },
+   {
+    "tema": "age-gestion-a2#23",
+    "titulo": "El Gobierno Abierto: concepto, principios informadores y planes de acción de Esp",
+    "preguntas": 59,
+    "objetivo": 187
+   },
+   {
+    "tema": "age-administrativo-c1#16",
+    "titulo": "El acto administrativo: concepto, clases y elementos. Eficacia y validez de los ",
+    "preguntas": 45,
+    "objetivo": 137
+   },
+   {
+    "tema": "age-gestion-a2#30",
+    "titulo": "El acto administrativo: concepto, clases y elementos. Eficacia y validez de los ",
+    "preguntas": 45,
+    "objetivo": 137
+   },
+   {
+    "tema": "policia-nacional-escala-basica#25",
+    "titulo": "La protección de datos de carácter personal: la Ley Orgánica 3/2018, de 5 de dic",
+    "preguntas": 67,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#19",
+    "titulo": "La protección de datos de carácter personal. El Reglamento (UE) 2016/679 del Par",
+    "preguntas": 67,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#49",
+    "titulo": "Acceso al empleo público y provisión de puestos de trabajo de las personas con d",
+    "preguntas": 68,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#53",
+    "titulo": "Control del gasto público en España. La Intervención General de la Administració",
+    "preguntas": 69,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#47",
+    "titulo": "Negociación colectiva, representación y participación institucional de los emple",
+    "preguntas": 68,
+    "objetivo": 197
+   },
+   {
+    "tema": "age-gestion-a2#57",
+    "titulo": "Retribuciones de los funcionarios públicos. Nóminas: estructura y normas de conf",
+    "preguntas": 68,
+    "objetivo": 197
+   },
+   {
+    "tema": "age-administrativo-c1#23",
+    "titulo": "Selección de personal. Los procesos selectivos en la Administración pública y su",
+    "preguntas": 70,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#43",
+    "titulo": "Formas de provisión de puestos de trabajo y movilidad en la Administración del E",
+    "preguntas": 40,
+    "objetivo": 109
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#52",
+    "titulo": "Introducción a la Prevención de Riesgos Laborales. Concepto general de trabajo. ",
+    "preguntas": 75,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#12",
+    "titulo": "El personal funcionario al servicio de las Administraciones públicas: concepto y",
+    "preguntas": 71,
+    "objetivo": 189
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#33",
+    "titulo": "Del homicidio y sus formas. Del aborto. De las lesiones. De las lesiones al feto",
+    "preguntas": 37,
+    "objetivo": 98
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#14",
+    "titulo": "Entrada, libre circulación y residencia en España de ciudadanos de los Estados m",
+    "preguntas": 77,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#35",
+    "titulo": "Delitos contra la libertad sexual. De las agresiones sexuales a menores de dieci",
+    "preguntas": 35,
+    "objetivo": 90
+   },
+   {
+    "tema": "policia-nacional-escala-basica#7",
+    "titulo": "La Dirección General de la Policía. Estructura orgánica y funciones de los servi",
+    "preguntas": 78,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#24",
+    "titulo": "El personal funcionario al servicio de las Administraciones públicas: funcionari",
+    "preguntas": 34,
+    "objetivo": 87
+   },
+   {
+    "tema": "age-gestion-a2#44",
+    "titulo": "Situaciones administrativas del personal al servicio de las administraciones púb",
+    "preguntas": 78,
+    "objetivo": 192
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#36",
+    "titulo": "De la omisión del deber de socorro. Delitos contra la intimidad, el derecho a la",
+    "preguntas": 35,
+    "objetivo": 86
+   },
+   {
+    "tema": "age-gestion-a2#46",
+    "titulo": "El personal laboral al servicio de las Administraciones públicas: su régimen jur",
+    "preguntas": 36,
+    "objetivo": 86
+   },
+   {
+    "tema": "age-gestion-a2#6",
+    "titulo": "El Poder Judicial. El principio de unidad jurisdiccional. El Consejo General del",
+    "preguntas": 85,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#27",
+    "titulo": "Las incompatibilidades. Régimen disciplinario: faltas, sanciones y procedimiento",
+    "preguntas": 35,
+    "objetivo": 82
+   },
+   {
+    "tema": "age-administrativo-c1#25",
+    "titulo": "Adquisición y pérdida de la condición de funcionario. Situaciones administrativa",
+    "preguntas": 39,
+    "objetivo": 90
+   },
+   {
+    "tema": "age-gestion-a2#40",
+    "titulo": "El personal al servicio de las Administraciones públicas: concepto y clases. Adq",
+    "preguntas": 36,
+    "objetivo": 82
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#34",
+    "titulo": "Delitos contra la libertad: de las detenciones ilegales y secuestros; de las ame",
+    "preguntas": 42,
+    "objetivo": 95
+   },
+   {
+    "tema": "age-administrativo-c1#26",
+    "titulo": "Provisión de puestos de trabajo en la función pública. Los deberes y derechos de",
+    "preguntas": 90,
+    "objetivo": 200
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#77",
+    "titulo": "Documentación del vehículo y del conductor: requisitos y trámites legales. Permi",
+    "preguntas": 30,
+    "objetivo": 66
+   },
+   {
+    "tema": "age-administrativo-c1#3",
+    "titulo": "El Poder Judicial. El Consejo General del Poder Judicial. El Tribunal Supremo. L",
+    "preguntas": 92,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#3",
+    "titulo": "El Poder Judicial. El Consejo General del Poder Judicial. El Tribunal Supremo. L",
+    "preguntas": 92,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-administrativo-c1#36",
+    "titulo": "Gestión económica y financiera de los contratos del sector público. Gestión econ",
+    "preguntas": 93,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#0",
+    "titulo": "La Constitución Española de 1978. Características. Los principios constitucional",
+    "preguntas": 37,
+    "objetivo": 78
+   },
+   {
+    "tema": "age-administrativo-c1#34",
+    "titulo": "Las retribuciones e indemnizaciones de los funcionarios públicos y del personal ",
+    "preguntas": 96,
+    "objetivo": 200
+   },
+   {
+    "tema": "age-gestion-a2#1",
+    "titulo": "Derechos y deberes fundamentales. Su garantía y suspensión. El Defensor del Pueb",
+    "preguntas": 74,
+    "objetivo": 152
+   },
+   {
+    "tema": "policia-nacional-escala-basica#19",
+    "titulo": "Delitos informáticos. Especial consideración al derecho a la intimidad. La prueb",
+    "preguntas": 78,
+    "objetivo": 160
+   },
+   {
+    "tema": "age-gestion-a2#42",
+    "titulo": "Planificación de recursos humanos. Ofertas de empleo público. Selección de perso",
+    "preguntas": 40,
+    "objetivo": 80
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#4",
+    "titulo": "Los derechos fundamentales y las libertades públicas en la Constitución: concept",
+    "preguntas": 51,
+    "objetivo": 101
+   },
+   {
+    "tema": "age-gestion-a2#29",
+    "titulo": "El reglamento: concepto, clases y límites. Los principios generales del Derecho.",
+    "preguntas": 37,
+    "objetivo": 72
+   },
+   {
+    "tema": "policia-nacional-escala-basica#14",
+    "titulo": "Medidas para la Protección de Infraestructuras Críticas. El Catálogo Nacional de",
+    "preguntas": 34,
+    "objetivo": 66
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#20",
+    "titulo": "Medidas para la Protección de Infraestructuras Críticas. El Catálogo Nacional de",
+    "preguntas": 34,
+    "objetivo": 66
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#2",
+    "titulo": "La nacionalidad: concepto, adquisición y pérdida. La doble nacionalidad. Refugia",
+    "preguntas": 46,
+    "objetivo": 88
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#4",
+    "titulo": "El Gobierno y la Administración. El Presidente del Gobierno. El Consejo de Minis",
+    "preguntas": 83,
+    "objetivo": 154
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#41",
+    "titulo": "Delitos contra la Administración de Justicia: de la prevaricación; de la omisión",
+    "preguntas": 35,
+    "objetivo": 64
+   },
+   {
+    "tema": "age-administrativo-c1#15",
+    "titulo": "Las fuentes del derecho administrativo. La jerarquía de las fuentes. La ley. Las",
+    "preguntas": 49,
+    "objetivo": 88
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#2",
+    "titulo": "Las Cortes Generales: composición, atribuciones y funcionamiento del Congreso de",
+    "preguntas": 83,
+    "objetivo": 145
+   },
+   {
+    "tema": "age-administrativo-c1#31",
+    "titulo": "El presupuesto: concepto. Los principios presupuestarios. El ciclo presupuestari",
+    "preguntas": 39,
+    "objetivo": 67
+   },
+   {
+    "tema": "age-gestion-a2#28",
+    "titulo": "La ley. Tipos de leyes. Reserva de ley. Disposiciones del Gobierno con fuerza de",
+    "preguntas": 59,
+    "objetivo": 100
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#0",
+    "titulo": "El ordenamiento jurídico. Concepto y estructura de la norma jurídica. Los difere",
+    "preguntas": 39,
+    "objetivo": 63
+   },
+   {
+    "tema": "age-gestion-a2#9",
+    "titulo": "Organización territorial (I): las Comunidades Autónomas. Los Estatutos de Autono",
+    "preguntas": 63,
+    "objetivo": 101
+   },
+   {
+    "tema": "policia-nacional-escala-basica#24",
+    "titulo": "Marco normativo básico en prevención de riesgos laborales. La Ley 31/1995, de Pr",
+    "preguntas": 40,
+    "objetivo": 62
+   },
+   {
+    "tema": "age-administrativo-c1#2",
+    "titulo": "Las Cortes Generales: composición, atribuciones y funcionamiento del Congreso de",
+    "preguntas": 46,
+    "objetivo": 71
+   },
+   {
+    "tema": "age-administrativo-c1#8",
+    "titulo": "La Organización territorial del Estado: las Comunidades Autónomas. Constitución ",
+    "preguntas": 43,
+    "objetivo": 66
+   },
+   {
+    "tema": "age-gestion-a2#4",
+    "titulo": "El poder legislativo. Las Cortes Generales. Composición y atribuciones del Congr",
+    "preguntas": 58,
+    "objetivo": 89
+   },
+   {
+    "tema": "policia-nacional-escala-basica#17",
+    "titulo": "Delitos contra el patrimonio y contra el orden socioeconómico. El hurto. El robo",
+    "preguntas": 43,
+    "objetivo": 65
+   },
+   {
+    "tema": "policia-nacional-escala-basica#0",
+    "titulo": "El Derecho: concepto y acepciones. Las normas jurídicas positivas: concepto, est",
+    "preguntas": 75,
+    "objetivo": 110
+   },
+   {
+    "tema": "age-gestion-a2#50",
+    "titulo": "El presupuesto. Concepto y clases. La Ley General Presupuestaria: principios gen",
+    "preguntas": 34,
+    "objetivo": 49
+   },
+   {
+    "tema": "age-gestion-a2#5",
+    "titulo": "El poder ejecutivo. El Presidente del Gobierno y el Consejo de Ministros. Relaci",
+    "preguntas": 76,
+    "objetivo": 109
+   },
+   {
+    "tema": "age-administrativo-c1#4",
+    "titulo": "El Gobierno y la Administración. El Presidente del Gobierno. El Consejo de Minis",
+    "preguntas": 67,
+    "objetivo": 95
+   },
+   {
+    "tema": "policia-nacional-escala-basica#18",
+    "titulo": "Delitos contra el orden público: de los atentados contra la autoridad, sus agent",
+    "preguntas": 40,
+    "objetivo": 50
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#39",
+    "titulo": "De las falsedades: de la falsificación de moneda y efectos timbrados; de las fal",
+    "preguntas": 33,
+    "objetivo": 41
+   },
+   {
+    "tema": "policia-nacional-escala-basica#23",
+    "titulo": "Introducción a la Prevención de Riesgos Laborales. Concepto general de trabajo. ",
+    "preguntas": 33,
+    "objetivo": 38
+   },
+   {
+    "tema": "age-administrativo-c1#12",
+    "titulo": "Concepto de documento, registro y archivo. Funciones del registro y del archivo.",
+    "preguntas": 40,
+    "objetivo": 44
+   },
+   {
+    "tema": "age-auxiliar-administrativo-c2#18",
+    "titulo": "Concepto de documento, registro y archivo. Funciones del registro y del archivo.",
+    "preguntas": 40,
+    "objetivo": 44
+   },
+   {
+    "tema": "policia-nacional-escala-ejecutiva#31",
+    "titulo": "Unidad y pluralidad de delitos. El delito continuado y el delito masa. El concur",
+    "preguntas": 34,
+    "objetivo": 35
+   }
+  ]
+ },
+ "DIFFICULTY_DISTRIBUTION": {
+  "1": 34.9,
+  "2": 56.2,
+  "3": 8.9
+ },
+ "QUESTION_TYPE_DISTRIBUTION": {
+  "literal": 93,
+  "aplicacion": 65,
+  "organos": 64,
+  "dificil": 55,
+  "conceptual": 54,
+  "negativa": 43,
+  "comparativa": 43,
+  "requisitos": 39,
+  "excepcion": 38,
+  "plazos": 37,
+  "competencias": 35,
+  "procedimiento": 29,
+  "definiciones": 21
+ },
+ "por_oposicion": {
+  "policia-nacional-escala-ejecutiva": 242,
+  "age-gestion-a2": 169,
+  "policia-nacional-escala-basica": 81,
+  "age-auxiliar-administrativo-c2": 79,
+  "age-administrativo-c1": 45
+ },
+ "por_ley": {
+  "codigo-penal": 68,
+  "lecrim": 43,
+  "lo-4-2000": 35,
+  "ley-47-2003": 28,
+  "ley-38-2003": 27,
+  "ley-5-2014": 25,
+  "lo-4-2015": 25,
+  "ley-3-2023": 24,
+  "ley-33-2003": 24,
+  "rdl-8-2015": 23,
+  "reglamento-armas": 21,
+  "ley-23-2014": 20,
+  "ley-58-2003": 20,
+  "ley-19-2013": 19,
+  "rd-240-2007": 19,
+  "ley-12-2009": 17,
+  "ley-14-1986": 17,
+  "ley-40-2015": 17,
+  "lef-1954": 16,
+  "ley-9-2017": 15,
+  "lo-3-2018": 15,
+  "ley-39-2015": 11,
+  "rgc": 11,
+  "lo-6-1985": 10,
+  "lo-9-2015": 9,
+  "rd-207-2024": 9,
+  "ley-trafico": 8,
+  "ley-4-2015": 7,
+  "ley-7-1985": 6,
+  "ley-29-1998": 5,
+  "trebep": 4,
+  "constitucion": 3,
+  "ley-4-2023": 3,
+  "ley-42-2007": 3,
+  "ley-50-1997": 3,
+  "lo-2-1979": 3,
+  "lo-2-1986": 2,
+  "rdl-1-2013": 1
+ },
+ "por_tema_top": [
+  [
+   "policia-nacional-escala-ejecutiva#38",
+   27
+  ],
+  [
+   "age-gestion-a2#33",
+   27
+  ],
+  [
+   "age-gestion-a2#21",
+   24
+  ],
+  [
+   "age-gestion-a2#35",
+   24
+  ],
+  [
+   "policia-nacional-escala-basica#9",
+   21
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#23",
+   20
+  ],
+  [
+   "age-gestion-a2#56",
+   20
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#43",
+   19
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#79",
+   19
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#47",
+   18
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#44",
+   17
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#16",
+   17
+  ],
+  [
+   "age-gestion-a2#26",
+   17
+  ],
+  [
+   "policia-nacional-escala-ejecutiva#15",
+   17
+  ],
+  [
+   "age-administrativo-c1#30",
+   17
+  ]
+ ],
+ "por_articulo_top": [
+  [
+   "codigo-penal:320",
+   3
+  ],
+  [
+   "codigo-penal:566",
+   3
+  ],
+  [
+   "codigo-penal:323",
+   3
+  ],
+  [
+   "codigo-penal:37",
+   3
+  ],
+  [
+   "codigo-penal:570ter",
+   3
+  ],
+  [
+   "codigo-penal:326",
+   3
+  ],
+  [
+   "codigo-penal:570quater",
+   3
+  ],
+  [
+   "codigo-penal:39",
+   3
+  ],
+  [
+   "codigo-penal:327",
+   3
+  ],
+  [
+   "codigo-penal:329",
+   3
+  ],
+  [
+   "codigo-penal:46",
+   3
+  ],
+  [
+   "codigo-penal:332",
+   3
+  ],
+  [
+   "codigo-penal:575",
+   3
+  ],
+  [
+   "lecrim:12",
+   3
+  ],
+  [
+   "lecrim:503",
+   3
+  ]
+ ],
+ "cambios_normativos": [],
+ "citas_insuficientes": [],
+ "citas_no_encontradas": [],
+ "explicaciones_debiles": [],
+ "motivos_revision": {
+  "revisión obligatoria por tipo": 82,
+  "juez: enunciado poco claro o trivial": 17,
+  "el generador declaró confianza media/baja": 12,
+  "otros": 2,
+  "juez: más de una opción defendible": 1,
+  "juez: no respaldada por el texto": 1
+ },
+ "interpretativas": {
+  "total": 120,
+  "por_tipo": {
+   "caso_practico": 0,
+   "relacion_articulos": 0,
+   "dificil": 55,
+   "aplicacion": 65
+  }
+ }
+}
