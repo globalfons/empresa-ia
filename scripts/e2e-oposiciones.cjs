@@ -40,7 +40,7 @@ const COB = JSON.parse(fs.readFileSync(path.join(RAIZ, 'docs/datos/cobertura.jso
         const i = o.temas.findIndex((t) => t.test);
         await ir(`oposiciones/${o.id}/tema-${i + 1}/`);
         const txt = await p.innerText('main');
-        ok('TEMA · estudiar', /Estudiar/.test(txt) && /boe\.es|BOE/.test(await p.innerHTML('main')));
+        ok('TEMA · estudiar', /Estudiar/.test(txt) && /boe\.es|BOE|gencat\.cat/.test(await p.innerHTML('main')));
         await p.waitForSelector('[data-m="10"]', { timeout: 8000 }).catch(() => {});
         ok('TEMA · test del tema', await p.locator('[data-tema]').count() && await p.locator('[data-m="10"]').count());
         // 4. Test del tema → 5. Resultado
@@ -62,6 +62,24 @@ const COB = JSON.parse(fs.readFileSync(path.join(RAIZ, 'docs/datos/cobertura.jso
         if (await p.locator('[data-exit]').count()) await p.click('[data-exit]');
         await p.waitForSelector('.result-card', { timeout: 6000 }).catch(() => {});
         ok('SIMULACRO + repetir', (await p.locator('.result-card').count()) && (await p.locator('[data-repetir]').count()));
+      }
+      // 7b. Exámenes oficiales anteriores (OFFICIAL_EXAM): orden y formato oficiales, corrección con la plantilla oficial
+      if (fs.existsSync(path.join(RAIZ, `docs/oposiciones/${o.id}/examenes-oficiales/index.html`))) {
+        await ir(`oposiciones/${o.id}/examenes-oficiales/`);
+        const ex = await p.locator(`a[href*="examenes-oficiales/"]`).first().getAttribute('href').catch(() => null);
+        ok('EXÁMENES OFICIALES · índice', ex);
+        if (ex) {
+          await ir(`oposiciones/${o.id}/examenes-oficiales/${ex.replace(/\/$/, '').split('/').pop()}/`);
+          await p.waitForSelector('[data-m="oficial"]', { timeout: 8000 }).catch(() => {});
+          ok('EXAMEN OFICIAL · menú', await p.locator('[data-m="oficial"]').count());
+          if (await p.locator('[data-m="oficial"]').count()) {
+            await p.click('[data-m="oficial"]');
+            for (let k = 0; k < 3; k++) { if (!(await p.locator('.opt:not([disabled])').count())) break; await p.locator('.opt:not([disabled])').first().click(); await p.waitForTimeout(950); }
+            if (await p.locator('[data-exit]').count()) await p.click('[data-exit]');
+            await p.waitForSelector('.result-card', { timeout: 6000 }).catch(() => {});
+            ok('EXAMEN OFICIAL · resultado', await p.locator('.result-card').count());
+          }
+        }
       }
       // 8. Panel
       await p.evaluate((id) => { const a = JSON.parse(localStorage.getItem('testley:ajustes') || '{}'); a.oposicion = id; a.dias = [1, 2, 3, 4, 5]; a.horasSemana = 6; localStorage.setItem('testley:ajustes', JSON.stringify(a)); }, o.id);

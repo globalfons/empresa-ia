@@ -296,6 +296,12 @@ const masDias = (f, n) => new Date(Date.parse(f) + n * 864e5).toISOString().slic
 function estadoPlazo(v) {
   const pub = (v.fuente.published_at || "").slice(0, 10), d = v.datos.plazo_solicitudes;
   if (pub && diasDesde(pub, HOY) > 540) return ["historica", "Publicada hace más de 18 meses.", masDias(pub, 541)];
+  // fechas de plazo citadas literalmente en la fuente oficial (DOGC/web de la Generalitat): estado exacto, sin estimar festivos
+  if (v.application_start && v.application_end && d && d.verification_status === "OFFICIAL_VERIFIED") {
+    if (HOY < v.application_start) return ["proxima", `Plazo de solicitudes del ${fmtFecha(v.application_start)} al ${fmtFecha(v.application_end)} (fuente oficial).`, pub];
+    if (HOY <= v.application_end) return ["activa", `Plazo de solicitudes abierto hasta el ${fmtFecha(v.application_end)} (fuente oficial).`, v.application_start];
+    return ["cerrada", `Plazo de solicitudes cerrado el ${fmtFecha(v.application_end)} (fuente oficial)${v.exam_date && HOY <= v.exam_date ? `; examen el ${fmtFecha(v.exam_date)}` : ""}.`, masDias(v.application_end, 1)];
+  }
   const m = d && /(\d+|[a-zúñ]+)\s+d[ií]as\s+(h[aá]biles|naturales)/i.exec(d.valor);
   const n = m && (/^\d+$/.test(m[1]) ? +m[1] : NUM_ES[m[1].toLowerCase()]);
   const desdeBoe = d && /bolet[ií]n oficial del estado|\bBOE\b/i.test(d.cita);
@@ -335,7 +341,7 @@ const descConv = (v) => {
     "Plazos y enlace a la fuente oficial.");
 };
 const catCountConv = (id) => CONVS.filter((v) => v.categoria === id).length;
-const ETIQ_CONV = { denominacion: "Plaza", plazas: "Plazas", grupo: "Grupo/subgrupo", sistema_selectivo: "Sistema selectivo", plazo_solicitudes: "Plazo de solicitudes", titulacion: "Titulación", pruebas: "Pruebas", temario: "Temario", boletin_bases: "Bases", organismo: "Organismo", territorio: "Territorio" };
+const ETIQ_CONV = { denominacion: "Plaza", plazas: "Plazas", grupo: "Grupo/subgrupo", sistema_selectivo: "Sistema selectivo", plazo_solicitudes: "Plazo de solicitudes", fecha_examen: "Fecha del examen", titulacion: "Titulación", pruebas: "Pruebas", temario: "Temario", boletin_bases: "Bases", organismo: "Organismo", territorio: "Territorio" };
 
 // ---------- Portada ----------
 const NART = PUBLICADAS.reduce((t, L) => t + L.arts.length, 0), NQ = PUBLICADAS.reduce((t, L) => t + L.qs.length, 0);
@@ -919,8 +925,8 @@ ${estadoConv(v) === "SOURCE_TEMPORARILY_UNAVAILABLE" ? `<p class="warn small">La
 <p class="muted small">Última verificación automática: ${fmtFecha((v.last_verified_at || v.extraido || "").slice(0, 10))}.</p>
 ${filas || '<p class="muted">No se han podido extraer datos estructurados; consulta el documento oficial.</p>'}
 ${(v.fuentes_adicionales || []).length ? `<p class="small">También publicada en: ${v.fuentes_adicionales.map((x) => `<a href="${esc(x.source_url)}" rel="noopener">${esc(x.source_domain)}</a>`).join(" · ")}</p>` : ""}
-<p class="small">Documento oficial: <a href="${esc(v.fuente.source_url)}" rel="noopener">${esc(v.fuente.boe_id || v.fuente.source_url)}</a> · ${esc(v.fuente.departamento || v.fuente.source_domain)}${v.fuente.epigrafe ? " · " + esc(v.fuente.epigrafe) : ""}</p>
-<p class="muted small">Los datos se extraen automáticamente y solo se publican si su frase aparece literalmente en el documento oficial. ${esc(v.estado_nota)}</p></section>
+<p class="small">Documento oficial: <a href="${esc(v.fuente.source_url)}" rel="noopener">${esc(v.fuente.boe_id || (v.fuente.dogc_id ? `DOGC · ${v.fuente.dogc_id}` : v.fuente.source_url))}</a> · ${esc(v.fuente.departamento || v.fuente.source_domain)}${v.fuente.epigrafe ? " · " + esc(v.fuente.epigrafe) : ""}</p>
+<p class="muted small">${v.revision === "manual" ? "Datos revisados contra el documento oficial" : "Los datos se extraen automáticamente"} y solo se publican si su frase aparece literalmente en el documento oficial. ${esc(v.estado_nota)}</p></section>
 ${relacion.length ? `<section class="card"><h2>Prepárate con TestLey</h2><p class="muted small">Contenido de preparación de oposiciones de la misma categoría (no es el temario de esta convocatoria).</p><div class="cards">${relacion.map((o) => tarjetaOp(o, r)).join("")}</div></section>` : ""}`;
     },
   });

@@ -295,6 +295,65 @@ def assegurar_guia():
     return GUIA_JSON
 
 
+CONV_DIR = os.path.join(R, "catalogo", "convocatorias")
+CAMPOS_CONV = ["plazas", "grupo", "sistema_selectivo", "titulacion", "plazo_solicitudes", "fecha_examen", "pruebas"]
+
+
+def convocatoria_catalogo(op_id="mossos-esquadra", escribir=True):
+    """La convocatoria vigente de una oposición de la Generalitat → catalogo/convocatorias/<DOGC-id>.json (mismo formato que la
+    ingesta del BOE), para que aparezca en /convocatorias/ enlazada a su oposición. Solo usa los datos oficiales ya verificados de
+    la ficha (catalogo/oposiciones/<id>.json) y vuelve a comprobar que cada cita es literal en su documento oficial guardado;
+    un dato cuya cita no aparece se descarta (no se inventa nada)."""
+    o = json.load(open(os.path.join(R, "catalogo", "oposiciones", f"{op_id}.json"), encoding="utf-8"))
+    fc = o["fuentes"]["convocatoria"]
+    textos = {k: norm(open(os.path.join(R, f["texto"]), encoding="utf-8").read()) for k, f in o["fuentes"].items() if f.get("texto")}
+    datos, descartados = {}, []
+
+    def dato(valor, d):
+        f = o["fuentes"][d["fuente"]]
+        if norm(d["cita"]) not in textos.get(d["fuente"], ""):
+            descartados.append(d["cita"][:120]); return None
+        return {"valor": valor, "cita": d["cita"], "confidence": 1.0, "metodo": "revision_manual", "source_url": f["url"],
+                "source_domain": f["url"].split("/")[2], "source_document": f["texto"], "published_at": f.get("fecha_publicacion"),
+                "retrieved_at": f.get("retrieved_at"), "verification_status": "OFFICIAL_VERIFIED", "last_verified_at": f.get("retrieved_at")}
+    for k in CAMPOS_CONV:
+        d = o["oficial"].get(k)
+        if isinstance(d, list):  # varias pruebas: una sola fila con todos los valores y la cita de la primera
+            d = d and dict(d[0], valor="; ".join(x["valor"] for x in d))
+        if d and (x := dato(d["valor"], d)):
+            datos[k] = x
+    datos["denominacion"] = dato("mosso/a de l'escala bàsica del Cos de Mossos d'Esquadra",
+                                 {"fuente": "convocatoria", "cita": "places de la categoria de mosso/a de l'escala bàsica del Cos de Mossos d'Esquadra"})
+    datos["organismo"] = dato(fc["organismo"], {"fuente": "convocatoria", "cita": fc["organismo"]})
+    datos = {k: v for k, v in datos.items() if v}
+    plazo = re.search(r"del (\d+) al (\d+) de (\w+) de (\d{4})", (o["oficial"].get("plazo_solicitudes") or {}).get("cita", ""))
+    MES = {"gener": 1, "febrer": 2, "març": 3, "abril": 4, "maig": 5, "juny": 6, "juliol": 7, "agost": 8, "setembre": 9, "octubre": 10, "novembre": 11, "desembre": 12}
+    ini = fin = None
+    if plazo and plazo.group(3) in MES and "plazo_solicitudes" in datos:
+        ini = f"{plazo.group(4)}-{MES[plazo.group(3)]:02d}-{int(plazo.group(1)):02d}"; fin = f"{plazo.group(4)}-{MES[plazo.group(3)]:02d}-{int(plazo.group(2)):02d}"
+    ex = re.search(r"(\d{1,2}) d'(\w+) de (\d{4})|(\d{1,2}) de (\w+) de (\d{4})", (o["oficial"].get("fecha_examen") or {}).get("cita", ""))
+    examen = None
+    if ex and "fecha_examen" in datos:
+        g = [x for x in ex.groups() if x]
+        examen = f"{g[2]}-{MES.get(g[1], 0):02d}-{int(g[0]):02d}" if g[1] in MES else None
+    v = {"id": fc["id"], "call_number": o.get("convocatoria_registro") or fc["id"], "titulo": fc["titulo"], "oposicion_id": op_id,
+         "oposiciones_relacionadas": [op_id], "vinculos_oposicion": [{"oposicion": op_id, "relacion": "misma_convocatoria"}],
+         "categoria": o["categoria"], "administracion": o.get("administracion") or "autonomica", "organismo": fc["organismo"],
+         "territorio": o.get("territorio") or "Cataluña", "estado": "activa", "estado_nota": "", "publication_date": fc["fecha_publicacion"],
+         "application_start": ini, "application_end": fin, "exam_date": examen, "verification_status": "OFFICIAL_VERIFIED",
+         "last_verified_at": fc.get("retrieved_at"),
+         "fuente": {"tipo": "DOGC", "source_url": fc["url"], "source_domain": fc["url"].split("/")[2], "source_document": fc["texto"],
+                    "published_at": fc["fecha_publicacion"], "retrieved_at": fc.get("retrieved_at"), "updated_at": fc.get("retrieved_at"),
+                    "document_version": 1, "fuente_registro": "dogc-gencat", "dogc_id": fc["id"], "sha256": fc.get("sha256"),
+                    "departamento": fc["organismo"], "epigrafe": "Cos de Mossos d'Esquadra"},
+         "fuentes_adicionales": [{"source_url": f["url"], "source_domain": f["url"].split("/")[2]} for k, f in o["fuentes"].items() if k not in ("convocatoria", "temario")],
+         "datos": datos, "descartados_por_no_literales": descartados, "extraido": fc.get("retrieved_at"), "revision": "manual"}
+    if escribir:
+        with open(os.path.join(CONV_DIR, f"{fc['id']}.json"), "w", encoding="utf-8") as fh:
+            fh.write(json.dumps(v, ensure_ascii=False, indent=1) + "\n")
+    return v
+
+
 def main(argv=None):
     a = (argv or sys.argv[1:]) or ["estado"]
     if a[0] == "dogc":
@@ -302,6 +361,9 @@ def main(argv=None):
             d = dogc(i); print(f"DOGC {i}: {d['source_document'][:110]} ({d['published_at']})")
     elif a[0] == "pagina":
         d = pagina(a[1], a[2], *(a[3:4] or ["WEB_MOSSOS"])); print(f"{d['source_type']}: {d['texto']}")
+    elif a[0] == "convocatoria":
+        v = convocatoria_catalogo(*(a[1:2] or ["mossos-esquadra"]))
+        print(f"{v['id']}: {len(v['datos'])} dades verificades · descartades {len(v['descartados_por_no_literales'])}")
     elif a[0] == "guia":
         arts, log = guia()
         print(f"Guia: {len(arts)} apartats · esmenes: " + "; ".join(f"{x['tema']} {x['estado']} {x['aplicada_a']}" for x in log))

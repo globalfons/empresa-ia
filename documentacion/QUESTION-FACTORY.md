@@ -67,6 +67,13 @@ Mismos controles que el modo API, con la redacción y el juicio hechos por subag
   reviewed_at, published_at. En S00001–S00015 está reconstruida desde el archivo de cada lote (`reconstruida: true`).
 - Auditoría: `python3 -m fabrica.auditoria` → `documentacion/QUESTION-FACTORY-AUDIT.md`.
 
+## Fuentes no BOE: Guia d'estudi de Mossos
+- La guía oficial es una norma más (`guia-mossos`, apartados como artículos); `fabrica/fuente.py` y `datos/validar_lib.ruta_articulos()` la leen de `datos/cache/`.
+- Redactor `redactor-sesion-v2` (reglas en catalán; v1 + idioma). El juez y su política (`juez-sesion-v1`) no cambian.
+- Validación extra para `guia_oficial`: la explicación cita «apartat X» o «Guia d'estudi»; términos absolutos catalanes en ABSOLUTAS.
+- `origen` de cada pregunta: «a partir de la Guia d'estudi oficial de la Generalitat».
+- Piloto S00017 (2026-10-01): 49 generadas · 43 VALID · 6 REVIEW_REQUIRED (4 casos prácticos, revisión humana obligatoria; 2 rechazadas por el juez: la cita no cubría toda la respuesta) · 0 rechazadas · 0 duplicadas. Escalado 100 → 250 → 500 → 1.000 → 2.000+ solo con autorización explícita; la fábrica queda en GENERATION_PAUSED.
+
 ## Paradas automáticas (GENERATION_PAUSED)
 Rechazo del lote > 30 %; en los últimos 5 lotes, revisión > 45 %, duplicados > 30 % o coste por VALID > 0,25 USD; dos lotes
 sin generar nada. La pausa persiste hasta relanzar con `resume` (workflow) o `--reanudar` (CLI) tras corregir la causa.

@@ -40,6 +40,15 @@ Ver `ingesta/README.md`. Decisiones:
 - **Dos niveles de catálogo**: `catalogo/convocatorias/` (fichas automáticas de cada convocatoria oficial, con procedencia y confianza por dato) y `catalogo/oposiciones/` (oposiciones revisadas con temario, simulacro y tests).
 - **Nada se borra por un fallo**: estado `inaccesible` + reintentos; los últimos datos válidos se conservan.
 
+## Generalitat de Catalunya (Mossos d'Esquadra)
+Misma arquitectura que el BOE, con su propia fuente oficial (sin sistema paralelo):
+- **`ingesta/gencat.py`**: descarga de documentos del DOGC (API del portal, consulta puntual; su robots.txt no permite rastreo) y de mossos.gencat.cat (con curl: los servidores rechazan el TLS de Python). Registro con sha256 en `datos/fuentes-gencat.json` (source_url, source_document, source_type, published_at, retrieved_at, verified_at, verification_status). `python3 -m ingesta.gencat convocatoria` publica la convocatoria 46/26 en `catalogo/convocatorias/DOGC-1046460.json` reverificando cada cita.
+- **Guía de estudio oficial (© Generalitat)**: no se versiona en el repo ni se republica; se cachea en `datos/cache/` y se trocea en 125 apartados (`A.1.1` … `X.IF` = idees força) con hash por apartado. Las esmenes oficiales (setembre 2026) se aplican literalmente y guardan el texto anterior; un apartado que cambia manda sus preguntas a `REVIEW_REQUIRED` (cita aún presente) u `OUTDATED` (cita desaparecida). Es la pseudo-norma `GUIA-MOSSOS-2026` (`tipo: guia_oficial`, `publicar_texto: false`): sus preguntas se publican; su texto, solo como cita.
+- **Exámenes oficiales** (`ingesta/examens_mossos.py` → `datos/examens-oficials/mossos-esquadra.json`): 9 convocatorias (46/25 … 46/17), 290 preguntas `OFFICIAL_EXAM`, respuesta de la plantilla oficial, vigencia contrastada con la guía actual (VALID / REVIEW_REQUIRED / OUTDATED). Nunca se mezclan con el banco generado; se practican en `/oposiciones/mossos-esquadra/examenes-oficiales/<id>/`.
+- **Vigilancia** (`catalogo/vigilar_gencat.py`, en `ingesta.yml`): bloques fechados de la página de la convocatoria → `catalogo/novedades.json`; enlaces nuevos de convocatoria en el índice oficial → `OFFICIAL_PENDING_REVIEW`; cambios en los PDF de la guía o sus esmenes → aviso. Sin falsos positivos: patrón estricto, idempotente, una caída no borra nada.
+- **Admin**: `/admin/oposiciones/mossos-esquadra/quality/` muestra fuentes, estado de la vigilancia y errores, alertas, preguntas oficiales/generadas/en revisión y esmenes.
+- Pendiente de fuente oficial: texto consolidado de las leyes catalanas (Llei 10/1994, 4/2003, 16/1991), que el BOE marca desactualizado o no tiene → `OFFICIAL_PENDING_REVIEW`, sin preguntas.
+
 ## Notificaciones
 Tablas `notif_preferencias`, `notif_eventos`, `notif_cola`, `notif_log` (esquema v3) y la función `supabase/functions/notificar/` (eventos → abanico a seguidores → cola → envío → log). El proveedor es un adaptador (`EMAIL_PROVIDER`); sin proveedor los avisos esperan en cola como `sin_proveedor`. Plantillas en `plantillas.ts`.
 

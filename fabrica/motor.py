@@ -22,6 +22,7 @@ from fabrica import fuente as F, validacion as V, generador as G, banco as B, me
 CFG = os.path.join(R, "fabrica", "config.json")
 ESTADO = os.path.join(R, "fabrica", "estado", "estado.json")
 ORIGEN = "Generada por la fábrica de TestLey (IA) a partir del texto consolidado del BOE y validada automáticamente"
+ORIGEN_GUIA = "Generada por la fábrica de TestLey (IA) a partir de la Guia d'estudi oficial de la Generalitat y validada automáticamente"
 
 
 def hoy():
@@ -199,7 +200,7 @@ def procesar(slot, prov, fuentes, banco, cfg, pedidas, pol):
 
 def ficha(q, estado, motivos, ley, n, slot, modelos, lote, cfg, generador="fabrica-v1", traza=None):
     f = {"art": n, "q": q.get("q"), "o": q.get("o"), "a": q.get("a"), "cita": q.get("cita"), "dif": q.get("dif"), "exp": q.get("exp"),
-         "tipo": q.get("tipo"), "procedencia": "TESTLEY_GENERATED", "origen": ORIGEN, "generador": generador,
+         "tipo": q.get("tipo"), "procedencia": "TESTLEY_GENERATED", "origen": ORIGEN_GUIA if getattr(ley, "tipo", "") == "guia_oficial" else ORIGEN, "generador": generador,
          "modelo": modelos.get("generador"), "juez": modelos.get("juez"), "lote": lote,
          "tema_objetivo": f"{slot['tema']['oposicion']}#{slot['tema']['indice']}", "fuente_url": ley.url,
          "creada_el": hoy(), "verificada_contra": ley.version, "verificada_el": hoy()}

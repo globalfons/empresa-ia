@@ -23,7 +23,7 @@ TIPOS = [  # (tipo, regex sobre el título catalán). El primero que encaja gana
     ("correccion", r"(?i)correcci[óo] d'errades|correcci[óo] d’errades|esmen"),
     ("modificacion", r"(?i)modificaci[óo]|\bes modifica"),
     ("aprobados", r"(?i)aprovad|resultats|qualificacions|puntuacions|aptes"),
-    ("listas", r"(?i)admeses|excloses|admesos|exclosos"),
+    ("listas", r"(?i)admeses|excloses|admesos|exclosos|llista (provisional|definitiva)"),
     ("fecha_examen", r"(?i)indicacions per a la|convocades? a (la|realitzar)|calendari|data de (realitzaci|la prova)|\bprova\b"),
     ("nombramiento", r"(?i)nomenament"),
     ("convocatoria", r"(?i)bases de la convocat|sol·licitud de participaci|nova convocat|convocat[òo]ria"),
