@@ -458,9 +458,43 @@
     "veredictos": "79c929cf452dea00faa9d7c69606c9e641a848dda6da6c0b2acfeb59523f36d5",
     "prompt_juez": "75ec495e313dd39a8d916f6c636c8cd3ac8844c9d43ed14be08f461a346a4bbf"
    }
+  },
+  {
+   "id": "S00017",
+   "fecha": "2026-10-01T23:12:55",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 17,
+   "generadas": 49,
+   "VALID": 43,
+   "REVIEW_REQUIRED": 6,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v1",
+   "judge_policy_sha256": "08b4a8f4b3773f81bb6f4f045c5540e1a0dd553ec3a84c27929d5e3d00bca8aa",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v2",
+   "huellas": {
+    "candidatas": "25e5b064e270d4dac9030ec80784507abb28efac83b96aa26e9a85bb5cd75881",
+    "revision": "670eaa0f22da62947762bb668556ad06d401c715803fa530d6bca33e186cf013",
+    "veredictos": "5d442a95875a4f057d33cd9ac0cc12b2a20f12616e3eb7f2b889e2ca2df14566",
+    "prompt_juez": "d51ac613fac7876379432ee93a9e528035dc88c12a5d62689f59d8eadd80df4d"
+   }
   }
  ],
- "pausa": null,
+ "pausa": {
+  "estado": "GENERATION_PAUSED",
+  "motivo": "Piloto Mossos S00017 completado (49 generadas · 43 VALID · 6 REVIEW_REQUIRED · 0 rechazadas). El escalado (100 → 250 → 500 → 1.000 → 2.000+) requiere autorización explícita. Reanudar con --reanudar.",
+  "lote": "S00017",
+  "fecha": "2026-10-01"
+ },
  "omitidos": {
   "lo-4-2015|24": 2
  },

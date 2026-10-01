@@ -37,6 +37,7 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
 const PUBLICADAS_WEB = PUBLICADAS.filter((L) => !L.privada); // con página propia de la norma y de sus artículos
+const LEYPOR = Object.fromEntries(PUBLICADAS.map((L) => [L.slug, L]));
 // Campos internos de la fábrica (fabrica/): se quedan en datos/, no viajan al navegador
 const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, traza, aprobacion_humana, revision_humana, ...q }) => q;
 // lastmod de las páginas de cada ley: último commit de sus preguntas o de su texto (si hay cambios sin commit, hoy).
@@ -181,7 +182,7 @@ for (const o of OPOS) {
 }
 const rutaTema = (o, i) => `oposiciones/${o.id}/tema-${i + 1}/`;
 // «Tema N» (con la letra del bloque delante si el número se repite en varios bloques)
-const nombreTema = (o, i) => { const t = o.temario[i]; return (o.temario.filter((x) => x.tema === t.tema).length > 1 ? `${t.bloque.split(/[.)]/)[0]} · ` : "") + `Tema ${t.tema}`; };
+const nombreTema = (o, i) => { const t = o.temario[i]; if (t.codigo) return `Tema ${t.codigo}`; return (o.temario.filter((x) => x.tema === t.tema).length > 1 ? `${t.bloque.split(/[.)]/)[0]} · ` : "") + `Tema ${t.tema}`; };
 const AMB = fs.existsSync("catalogo/temas_ambito.json") ? JSON.parse(fs.readFileSync("catalogo/temas_ambito.json", "utf8")) : {};
 const NORMAS = Object.fromEntries(JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n) => [n.id, n]));
 // Leyes con test publicado: id BOE -> datos
@@ -606,7 +607,9 @@ for (const o of OPOS) {
       return PUB[id] ? `<a class="chip ok" href="../../${PUB[id].slug}/">✔ ${esc(n.nombre)}</a>` : `<span class="chip">${esc(n.nombre)} · en preparación</span>`;
     }).join(" ");
   };
-  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, nq: o.temaInfo[i].nq, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) };
+  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, nq: o.temaInfo[i].nq, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) ,
+    // guía oficial no publicada: el test enlaza al PDF oficial en vez de a la página del artículo
+    privadas: Object.fromEntries(Object.keys(o.leyes).filter((sl) => (LEYPOR[sl] || {}).privada).map((sl) => [sl, LEYPOR[sl].fuente])) };
   fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
   fs.writeFileSync(path.join(OUT_TMP, "datos", `${o.id}.json`), JSON.stringify(datosOp));
   const convsOp = CONVS.filter((v) => (v.oposiciones_relacionadas || []).includes(o.id));
@@ -681,7 +684,6 @@ ${faqHtml(faq)}
 }
 
 // ---------- Temas: estudiar (texto oficial) → test del tema; cobertura por tema; completitud de cada oposición ----------
-const LEYPOR = Object.fromEntries(PUBLICADAS.map((L) => [L.slug, L]));
 const OBJ_TEMA = 30; // preguntas por tema consideradas «cobertura completa» en la métrica (no es un límite)
 // TOPIC_COVERAGE: qué hay de cada tema (texto oficial para estudiar, legislación identificada, preguntas, test, verificación)
 // Título del tema para el encabezado: la primera frase del título oficial (el completo se muestra debajo, literal)
@@ -823,8 +825,26 @@ ${ti.nq ? `<p class="muted small">${ti.nq} preguntas de este tema. Cada respuest
 <section class="card"><h2>Preguntas pendientes de revisión (la ley cambió)</h2>${revisar.length ? `<ul class="nov">${revisar.map((q) => `<li>${esc(q.ley)} · art. ${esc(q.art)} · ${esc(q.q.slice(0, 120))} <small class="muted">${esc(q.motivo || "")}</small></li>`).join("")}</ul><p class="muted small">Tras revisarlas: <code>python3 datos/sellar_preguntas.py --revisadas ley:art</code></p>` : "<p class='muted'>Ninguna.</p>"}</section>
 <section class="card"><h2>Preguntas retiradas (OUTDATED / DEPRECATED)</h2>${retiradas.length ? `<ul class="nov">${retiradas.map((q) => `<li>${esc(q.ley)} · art. ${esc(q.art)} · ${esc(q.q.slice(0, 120))} <small class="muted">${esc(q.motivo || "")}</small></li>`).join("")}</ul>` : "<p class='muted'>Ninguna.</p>"}</section>
 <section class="card"><h2>Errores y duplicados (datos/calidad_preguntas.py)</h2>${errores.length || avisos.length ? `<ul class="nov">${[...errores, ...avisos].map((e) => `<li><span class="chip">${esc(e.control)}</span> ${esc(e.ley)} #${e.i} · ${esc(e.mensaje)} · <small>${esc(e.q)}</small></li>`).join("")}</ul>` : "<p class='muted'>Sin errores ni duplicados.</p>"}</section>
+${adminGencat(o)}
 <section class="card"><h2>Fuentes pendientes</h2>${(o.pendientes || []).length ? `<ul class="nov">${o.pendientes.map((x) => `<li><b>${esc(x.campo)}</b>: ${esc(x.motivo)}</li>`).join("")}</ul>` : "<p class='muted'>Ninguna.</p>"}</section>`,
   });
+}
+
+// Admin de oposiciones de la Generalitat (Mossos): fuentes oficiales con su estado, vigilancia, alertas, exámenes y esmenes de la guía
+function adminGencat(o) {
+  if (!(o.vigilancia && o.vigilancia.web)) return "";
+  const reg = fs.existsSync("datos/fuentes-gencat.json") ? JSON.parse(fs.readFileSync("datos/fuentes-gencat.json", "utf8")).documentos : [];
+  const est = (fs.existsSync("catalogo/vigilancia-gencat-estado.json") ? JSON.parse(fs.readFileSync("catalogo/vigilancia-gencat-estado.json", "utf8")) : {})[o.id] || {};
+  const nov = NOVEDADES.filter((n) => n.oposicion === o.id);
+  const guia = reg.find((d) => d.source_type === "GUIA_ESTUDI");
+  const ex = o.examenes || [], cuenta = (k) => ex.reduce((t, e) => t + e.preguntes.filter((q) => q.verification_status === k).length, 0);
+  const qGuia = o.qs.filter((q) => (LEYPOR[q.ley] || {}).privada);
+  return `<section class="card"><h2>Fuentes oficiales (Generalitat)</h2><div class="tabla-scroll"><table class="tabla"><thead><tr><th>Tipo</th><th>Documento</th><th>Publicado</th><th>Descargado</th><th>Estado</th><th>sha256</th></tr></thead><tbody>${reg.map((d) => `<tr><td>${esc(d.source_type)}</td><td><a href="${esc(d.source_url)}" rel="noopener">${esc(d.source_document.slice(0, 110))}</a></td><td>${esc(d.published_at || "—")}</td><td>${esc((d.retrieved_at || "").slice(0, 16))}</td><td>${badgeVS(d.verification_status)}</td><td><code>${esc((d.sha256 || "").slice(0, 10))}</code></td></tr>`).join("")}</tbody></table></div></section>
+<section class="card"><h2>Vigilancia y alertas</h2><p>Última comprobación correcta: <b>${esc(est.ultimo_ok || "—")}</b>${est.error ? ` · <span class="bad">Error de ingestión: ${esc(est.error)} (${esc(est.ultimo_error || "")})</span>` : " · sin errores de ingestión"}. Fuente vigilada: <a href="${esc(o.vigilancia.web.convocatoria)}" rel="noopener">página oficial de la convocatoria</a> e <a href="${esc(o.vigilancia.web.indice)}" rel="noopener">índice de acceso</a>.</p>
+<ul class="nov">${nov.map((n) => `<li><span class="nov-f">${fmtFecha(n.fecha)}</span> <span class="chip">${esc(TIPO_NOV[n.tipo] || n.tipo)}</span> <a href="${esc(n.url)}" rel="noopener">${esc(n.titulo)}</a> ${badgeVS(n.verification_status || "OFFICIAL_VERIFIED")}</li>`).join("") || "<li class='muted'>Sin publicaciones registradas.</li>"}</ul></section>
+<section class="card"><h2>Preguntas oficiales y generadas</h2><div class="kpis"><div class="kpi"><span class="kpi-n">${ex.reduce((t, e) => t + e.preguntes.length, 0)}</span><span class="kpi-l">preguntas OFFICIAL_EXAM (${ex.length} exámenes)</span></div><div class="kpi"><span class="kpi-n">${cuenta("VALID")}</span><span class="kpi-l">oficiales VALID (respaldadas por la guía vigente o actualidad)</span></div><div class="kpi"><span class="kpi-n">${cuenta("REVIEW_REQUIRED")}</span><span class="kpi-l">oficiales a revisar</span></div><div class="kpi"><span class="kpi-n">${cuenta("OUTDATED")}</span><span class="kpi-l">oficiales desfasadas</span></div><div class="kpi"><span class="kpi-n">${qGuia.length}</span><span class="kpi-l">FACTORY_GENERATED publicadas (guía)</span></div></div>
+<p class="small">Desfasadas: ${ex.flatMap((e) => e.preguntes.filter((q) => q.verification_status === "OUTDATED").map((q) => `${esc(e.convocatoria)} #${q.n} (${esc(q.nota_vigencia || "")})`)).join(" · ") || "ninguna"}</p></section>
+<section class="card"><h2>Guía de estudio: esmenes y cambios</h2>${guia ? `<p>${esc(guia.source_document)} · ${guia.apartats} apartados · sha256 <code>${esc(guia.sha256.slice(0, 12))}</code></p><ul class="nov">${(guia.esmenes || []).map((e) => `<li>${esc(e.tema)} · ${esc(e.lloc)} → ${e.aplicada_a.length ? `aplicada en ${esc(e.aplicada_a.join(", "))}` : badgeVS("OFFICIAL_PENDING_REVIEW")}</li>`).join("")}</ul>${guia.canvis_darrera_revisio ? `<p class="bad">Cambios en la última revisión: ${esc(JSON.stringify(guia.canvis_darrera_revisio))}</p>` : ""}` : "<p class='muted'>Guía no descargada.</p>"}</section>`;
 }
 
 // /convocatorias/ solo pinta las más recientes; el resto se carga de datos/convocatorias.json al buscar o filtrar
