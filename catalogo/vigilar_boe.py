@@ -8,6 +8,7 @@ import json, os, re, sys, glob, datetime, urllib.request, time
 D = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, D)
 import vinculos as V
+from perfil import evento_de  # tipo de evento de convocatoria (CALL_UPDATED, NEW_CORRECTION…)
 NOV = os.path.join(D, "novedades.json")
 EST = os.path.join(D, "vigilancia-estado.json")
 TIPOS = [  # (tipo, regex sobre el título). El primero que encaja gana.
@@ -86,6 +87,7 @@ for n in nov:
     refs = o["vigilancia"].get("convocatoria_ref", [])
     cuerpo_titulo = n["titulo"].split(",", 1)[-1].lower()  # sin la fecha de la propia resolución
     n["relevancia"] = "convocatoria" if n["id"] == conv or any(r.lower() in cuerpo_titulo for r in refs) else "cuerpo"
+    n["evento"] = evento_de(dict(n, evento=None))
 nov.sort(key=lambda n: (n["fecha"], n["id"]), reverse=True)
 json.dump(nov, open(NOV, "w"), ensure_ascii=False, indent=1)
 json.dump({"ultimo_dia": hoy.isoformat(), "revisado": datetime.datetime.now().isoformat(timespec="minutes")}, open(EST, "w"), ensure_ascii=False, indent=1)

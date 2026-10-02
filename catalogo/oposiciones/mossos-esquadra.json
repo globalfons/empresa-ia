@@ -222,7 +222,124 @@
     "fuente": "convocatoria",
     "cita": "Les pràctiques són selectives i obligatòries, tenen una durada mínima de dotze mesos"
    }
-  ]
+  ],
+  "calendario": [
+   {
+    "valor": "2026-06-08 · Publicació al DOGC de les bases",
+    "fuente": "calendari",
+    "cita": "Publicació al DOGC de les bases de la convocatòria.",
+    "fecha": "2026-06-08",
+    "hito": "Publicació al DOGC de les bases",
+    "caracter": "OFICIAL",
+    "tipo": "convocatoria_publicada"
+   },
+   {
+    "valor": "2026-06-09 · Inici del termini de sol·licituds",
+    "fuente": "calendari",
+    "cita": "Inici del termini de presentació de sol·licituds de participació.",
+    "fecha": "2026-06-09",
+    "hito": "Inici del termini de sol·licituds",
+    "caracter": "OFICIAL",
+    "tipo": "plazo_inicio"
+   },
+   {
+    "valor": "2026-06-22 · Fi del termini de sol·licituds",
+    "fuente": "calendari",
+    "cita": "Fi del termini de presentació de sol·licituds de participació.",
+    "fecha": "2026-06-22",
+    "hito": "Fi del termini de sol·licituds",
+    "caracter": "OFICIAL",
+    "tipo": "plazo_fin"
+   },
+   {
+    "valor": "2026-07-16 · Llista provisional d'admesos i exclosos (DOGC)",
+    "fuente": "calendari",
+    "cita": "Publicació al DOGC de la resolució de la llista provisional de persones",
+    "fecha": "2026-07-16",
+    "hito": "Llista provisional d'admesos i exclosos (DOGC)",
+    "caracter": "OFICIAL",
+    "tipo": "lista_provisional"
+   },
+   {
+    "valor": "2026-07-30 · Fi del termini per esmenar la llista provisional",
+    "fuente": "calendari",
+    "cita": "Fi del termini per esmenar defectes a la llista provisional de persones admeses i",
+    "fecha": "2026-07-30",
+    "hito": "Fi del termini per esmenar la llista provisional",
+    "caracter": "OFICIAL",
+    "tipo": "subsanacion_fin"
+   },
+   {
+    "valor": "2026-09-21 · Llista definitiva i convocatòria a la 1a prova (DOGC)",
+    "fuente": "calendari",
+    "cita": "Publicació al DOGC de la resolució de la llista definitiva de persones",
+    "fecha": "2026-09-21",
+    "hito": "Llista definitiva i convocatòria a la 1a prova (DOGC)",
+    "caracter": "OFICIAL",
+    "tipo": "lista_definitiva"
+   },
+   {
+    "valor": "2026-10-17 · 1a prova: coneixements, aptitudinal i idiomes",
+    "fuente": "calendari",
+    "cita": "Realització de la 1a prova: coneixements, aptitudinal i coneixements d’idiomes.",
+    "fecha": "2026-10-17",
+    "hito": "1a prova: coneixements, aptitudinal i idiomes",
+    "caracter": "OFICIAL",
+    "tipo": "examen"
+   },
+   {
+    "valor": "2026-11-17 · Resultats de la 1a prova i convocatòria a la prova física",
+    "fuente": "calendari",
+    "cita": "Data prevista de publicació de la llista de resultats de la 1a prova",
+    "fecha": "2026-11-17",
+    "hito": "Resultats de la 1a prova i convocatòria a la prova física",
+    "caracter": "PREVISIO",
+    "tipo": "resultados"
+   },
+   {
+    "valor": "2026-11-23 · Inici de la 2a prova (física)",
+    "fuente": "calendari",
+    "cita": "Data prevista d’inici de la 2a prova (física).",
+    "fecha": "2026-11-23",
+    "hito": "Inici de la 2a prova (física)",
+    "caracter": "PREVISIO",
+    "tipo": "prueba_fisica_inicio"
+   },
+   {
+    "valor": "2026-12-21 · Fi de la 2a prova (física)",
+    "fuente": "calendari",
+    "cita": "Data prevista de finalització de la 2a prova (física).",
+    "fecha": "2026-12-21",
+    "hito": "Fi de la 2a prova (física)",
+    "caracter": "PREVISIO",
+    "tipo": "prueba_fisica_fin"
+   }
+  ],
+  "calendario_aviso": {
+   "valor": "La previsió de calendari és informativa: només són vàlides les dates que publica el tribunal.",
+   "fuente": "calendari",
+   "cita": "Aquesta previsió de calendari és merament informativa. Les úniques dates vàlides són les acordades pel tribunal"
+  },
+  "prova_fisica": {
+   "valor": "Circuit d'agilitat, pressió sobre banc i cursa de llançadora; objectiu, normes i barems a l'annex 2 de les bases",
+   "fuente": "convocatoria",
+   "cita": "A l'annex 2 s'especifiquen l'objectiu, la descripció, les normes, la valoració i els barems de cada exercici físic."
+  },
+  "adequacio_psicoprofessional": {
+   "valor": "Test de competències i entrevista",
+   "fuente": "convocatoria",
+   "cita": "La prova d'adequació psicoprofessional consisteix en la realització d'un test de competències i d'una entrevista per avaluar el grau d'adequació a les competències corresponents a la categoria de mosso/a."
+  },
+  "catala": {
+   "valor": "Nivell de suficiència de català (C1) o equivalent; si no s'acredita, prova de coneixements de llengua catalana",
+   "fuente": "convocatoria",
+   "cita": "Els participants han de posseir els coneixements de nivell de suficiència de català (C1), equivalent o superior"
+  },
+  "exclusions_mediques": {
+   "valor": "Quadre d'exclusions per manca d'aptitud psicofísica (annex 3 de les bases)",
+   "fuente": "convocatoria",
+   "cita": "Tenir l'aptitud psicofísica adequada per exercir la funció policial i no trobar-se en cap causa d'exclusió per manca d'aptitud psicofísica de les que consten a l'annex 3."
+  }
  },
  "examen": {
   "oficial": {
@@ -509,6 +626,29 @@
     "normas": [],
     "nota": "Actualitat de Catalunya, l'Estat espanyol i l'àmbit internacional (a), b), c)). La guia no el desenvolupa i el tribunal hi pot fer preguntes."
    }
+  ],
+  "leyes_pendientes": [
+   {
+    "tema": "C.3",
+    "ley": "Llei 4/2003, de 7 d'abril, d'ordenació del sistema de seguretat pública de Catalunya",
+    "fuente": "temario",
+    "cita": "Els òrgans de coordinació establerts per la Llei 4/2003, de 7 d'abril, d'ordenació del sistema de seguretat pública de Catalunya.",
+    "verification_status": "OFFICIAL_PENDING_REVIEW"
+   },
+   {
+    "tema": "C.4",
+    "ley": "Llei 10/1994, d'11 de juliol, de la Policia de la Generalitat – Mossos d'Esquadra",
+    "fuente": "temario",
+    "cita": "La Llei 10/1994, d'11 de juliol, de la Policia de la Generalitat – Mossos d'Esquadra. Funcions, àmbit territorial d'actuació i estructura.",
+    "verification_status": "OFFICIAL_PENDING_REVIEW"
+   },
+   {
+    "tema": "C.4",
+    "ley": "Llei 16/1991, de 10 de juliol, de les policies locals de Catalunya",
+    "fuente": "temario",
+    "cita": "La Llei 16/1991, de 10 de juliol, de les policies locals de Catalunya. Funcions.",
+    "verification_status": "OFFICIAL_PENDING_REVIEW"
+   }
   ]
  },
  "notas": "Subprova de coneixements: 30 preguntes de 4 alternatives en 35 minuts; cada error descompta 1/4. La guia d'estudi oficial (juny 2026, amb esmenes de setembre 2026) desenvolupa els àmbits A, B i C.",
@@ -563,6 +703,66 @@
     "C.4.IF"
    ],
    "motivo": "Apartats de la guia que citen o desenvolupen la Llei 10/1994, la Llei 4/2003 o la Llei 16/1991, sense text consolidat oficial verificat al repositori (OFFICIAL_PENDING_REVIEW). B.8.IF conté a més text de l'índex del bloc C (defecte d'extracció del PDF). No s'hi generen preguntes fins que s'incorpori la font oficial."
+  }
+ ],
+ "preparacion_modulos": [
+  {
+   "modulo": "conocimientos",
+   "estructura": "1a prova · subprova de coneixements"
+  },
+  {
+   "modulo": "examenes_oficiales"
+  },
+  {
+   "modulo": "psicotecnicos",
+   "estructura": "1a prova · subprova aptitudinal"
+  },
+  {
+   "modulo": "prueba_fisica",
+   "estructura": "2a prova · física",
+   "oficial": [
+    "prova_fisica"
+   ]
+  },
+  {
+   "modulo": "adecuacion_psicoprofesional",
+   "estructura": "3a prova · adequació psicoprofessional",
+   "oficial": [
+    "adequacio_psicoprofessional"
+   ]
+  },
+  {
+   "modulo": "idiomas",
+   "estructura": "4a prova · llengua catalana",
+   "oficial": [
+    "catala"
+   ]
+  },
+  {
+   "modulo": "requisitos",
+   "oficial": [
+    "requisitos",
+    "titulacion"
+   ]
+  },
+  {
+   "modulo": "reconocimiento_medico",
+   "oficial": [
+    "exclusions_mediques"
+   ]
+  },
+  {
+   "modulo": "documentacion",
+   "oficial": [
+    "requisitos"
+   ]
+  },
+  {
+   "modulo": "calendario",
+   "oficial": [
+    "calendario",
+    "calendario_aviso"
+   ]
   }
  ]
 }

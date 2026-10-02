@@ -64,3 +64,10 @@ json.dump(normas, open(os.path.join(D, "normas.json"), "w"), ensure_ascii=False,
 for o in opos: print(o["id"], o["convocatoria"]["plazas"], "plazas,", o["cobertura"])
 print("\nCola de normas (prioridad):")
 for n in [x for x in normas if x["estado_testley"] == "pendiente"][:12]: print(f'  {n["prioridad"]:>7}  {n["nombre"]}  ({n["temas"]} temas)')
+
+# Perfil declarativo de cada oposición (OppositionProfile) que leen los motores: catalogo/perfiles/<id>.json
+import perfil as _perfil
+_banco, _reg = _perfil.cargar_banco(), _perfil.registro_fuentes()
+for o in opos:
+    _f, _ev = _perfil.escribir(_perfil.construir(o["id"], _banco, _reg))
+    if _ev: print(f"  eventos {o['id']}: {[e['evento'] for e in _ev]}")

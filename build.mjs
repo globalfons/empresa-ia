@@ -727,6 +727,25 @@ fs.writeFileSync(path.join(OUT_TMP, "datos", "cobertura.json"), JSON.stringify(O
   estructura: ((o.examen || {}).estructura || []).map((p) => ({ parte: p.parte, en_simulacro: !!p.en_simulacro })),
   temas: o.temario.map((t, i) => ({ tema: t.tema, bloque: t.bloque || null, titulo: t.titulo.slice(0, 120), ...coberturaTema(o, i) })),
 }))));
+// Perfil de cada oposición para los motores del navegador (entrenamiento, simulacro, módulos, calendario, alertas):
+// versión reducida de catalogo/perfiles/<id>.json (datos oficiales públicos y recuentos; ninguna pregunta ni respuesta)
+for (const o of OPOS) {
+  const f = `catalogo/perfiles/${o.id}.json`;
+  if (!fs.existsSync(f)) continue;
+  const p = JSON.parse(fs.readFileSync(f, "utf8"));
+  const a = p.convocatoria.actual;
+  fs.writeFileSync(path.join(OUT_TMP, "datos", `perfil-${o.id}.json`), JSON.stringify({
+    schema: p.schema, id: p.id, nombre: p.nombre, generado: p.generado,
+    convocatoria: { actual: { estado: a.estado, codigo: a.codigo, seguir: a.seguir }, historicas: p.convocatoria.historicas.map((h) => ({ estado: h.estado, codigo: h.codigo })) },
+    contenido: p.contenido,
+    temario: p.temario.map((t, i) => ({ i, id: t.id, titulo: t.titulo, cobertura: t.cobertura, preguntas: t.preguntas, leyes_pendientes: t.leyes_pendientes.map((l) => l.nombre) })),
+    simulacro: p.examen.simulacro, estructura: (p.examen.estructura || []).map((e) => ({ parte: e.parte, en_simulacro: !!e.en_simulacro })),
+    modulos: p.modulos.map((m) => ({ id: m.id, nombre: m.nombre, tipo: m.tipo, descripcion: m.descripcion, acciones: m.acciones, parte_oficial: m.parte_oficial || null,
+      datos_oficiales: Object.fromEntries(Object.entries(m.datos_oficiales || {}).map(([k, d]) => [k, { valor: d.valor, cita: d.cita || null, fuente: d.fuente ? { url: d.fuente.source_url, documento: d.fuente.source_document } : null }])) })),
+    calendario: p.calendario.map((c) => ({ fecha: c.fecha, hito: c.hito, tipo: c.tipo, caracter: c.caracter, fuente: c.fuente && c.fuente.source_url })),
+    alertas: { fuentes: p.alertas.fuentes, eventos: p.alertas.eventos, recientes: p.alertas.recientes },
+  }));
+}
 // Páginas de exámenes oficiales: índice y una página por examen (los datos van a docs/datos/examen-<oposición>-<id>.json)
 for (const o of OPOS.filter((x) => x.examenes.length)) {
   const pen = ((o.examen || {}).oficial || {}).penalizacion || 0;

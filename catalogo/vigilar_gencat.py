@@ -16,6 +16,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 R = os.path.dirname(D)
 sys.path.insert(0, R)
 from ingesta import gencat as G  # noqa: E402
+from catalogo.perfil import evento_de  # noqa: E402
 
 NOV = os.path.join(D, "novedades.json")
 EST = os.path.join(D, "vigilancia-gencat-estado.json")
@@ -127,6 +128,8 @@ def vigilar(opos, fetch=lambda u: G.http(u).decode("utf-8", "ignore"), hoy=None)
             e.update(ultimo_ok=hoy, error=None)
         except Exception as ex:  # una caída de la web no borra nada: se registra y se reintenta en la próxima ejecución
             e.update(error=f"{type(ex).__name__}: {str(ex)[:160]}", ultimo_error=hoy)
+    for n in nuevas:
+        n["evento"] = evento_de(n)
     nov += nuevas
     nov.sort(key=lambda n: (n["fecha"], n["id"]), reverse=True)
     with open(NOV, "w", encoding="utf-8") as f:

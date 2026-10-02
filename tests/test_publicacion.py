@@ -98,8 +98,9 @@ class JuezSinInfluencias(unittest.TestCase):
             shutil.rmtree(d)
 
     def test_politica_congelada_invalida_si_cambia(self):
-        with self.assertRaises(P.PoliticaBloqueada):
+        with mock.patch.object(P, "incidencia") as inc, self.assertRaises(P.PoliticaBloqueada):
             P.verificar({"judge_policy_version": "juez-sesion-v2", "sha256": "0" * 64}, R, "prueba")
+        self.assertTrue(inc.called)  # queda registrado como incidencia (aquí sin escribir en el registro real)
 
 
 if __name__ == "__main__":
