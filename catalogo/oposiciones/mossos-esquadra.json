@@ -633,21 +633,27 @@
     "ley": "Llei 4/2003, de 7 d'abril, d'ordenació del sistema de seguretat pública de Catalunya",
     "fuente": "temario",
     "cita": "Els òrgans de coordinació establerts per la Llei 4/2003, de 7 d'abril, d'ordenació del sistema de seguretat pública de Catalunya.",
-    "verification_status": "OFFICIAL_PENDING_REVIEW"
+    "verification_status": "OFFICIAL_PENDING_REVIEW",
+    "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+    "registro_fuente": "datos/fuentes-leyes-catalanas.json"
    },
    {
     "tema": "C.4",
     "ley": "Llei 10/1994, d'11 de juliol, de la Policia de la Generalitat – Mossos d'Esquadra",
     "fuente": "temario",
     "cita": "La Llei 10/1994, d'11 de juliol, de la Policia de la Generalitat – Mossos d'Esquadra. Funcions, àmbit territorial d'actuació i estructura.",
-    "verification_status": "OFFICIAL_PENDING_REVIEW"
+    "verification_status": "OFFICIAL_PENDING_REVIEW",
+    "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+    "registro_fuente": "datos/fuentes-leyes-catalanas.json"
    },
    {
     "tema": "C.4",
     "ley": "Llei 16/1991, de 10 de juliol, de les policies locals de Catalunya",
     "fuente": "temario",
     "cita": "La Llei 16/1991, de 10 de juliol, de les policies locals de Catalunya. Funcions.",
-    "verification_status": "OFFICIAL_PENDING_REVIEW"
+    "verification_status": "OFFICIAL_PENDING_REVIEW",
+    "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+    "registro_fuente": "datos/fuentes-leyes-catalanas.json"
    }
   ]
  },
@@ -673,11 +679,13 @@
  "pendientes": [
   {
    "campo": "temario_area_D",
-   "motivo": "L'àmbit D (actualitat política, econòmica i social) no té text oficial de referència: no s'hi generen preguntes."
+   "motivo": "L'àmbit D (coneixement de l'entorn polític, econòmic i social: a) Catalunya, b) Estat espanyol) no té text oficial de referència: ni la guia d'estudi ni el temari del DOGC en fixen el contingut. Fonts oficials alternatives possibles (Idescat, INE, webs institucionals del Parlament i del Govern) són dades d'actualitat que canvien: no es pot estructurar sense afirmar fets no verificats a data de l'examen. OFFICIAL_PENDING_REVIEW: és un buit de FONT, no de generació; no s'hi generen preguntes.",
+   "estado_fuente": "OFFICIAL_PENDING_REVIEW",
+   "tipo_gap": "FUENTE"
   },
   {
    "campo": "legislacion_catalana",
-   "motivo": "Llei 10/1994 (Policia de la Generalitat – Mossos d'Esquadra), Llei 16/1991 (policies locals) i Llei 4/2003 (sistema de seguretat pública): el text consolidat del BOE consta com a desactualitzat o no hi és; la font de referència és el Portal Jurídic de Catalunya. OFFICIAL_PENDING_REVIEW fins que s'incorpori el text consolidat oficial. Els temes C.3 i C.4 s'estudien amb la guia oficial.",
+   "motivo": "Llei 10/1994, Llei 16/1991 i Llei 4/2003: FOUND_OFFICIAL_NON_CONSOLIDATED (2026-10-02). El text consolidat del BOE consta com a «Desactualizado» i el Portal Jurídic de Catalunya declara que els seus textos consolidats «no tenen caràcter oficial». Sense text consolidat oficial i vigent no s'incorpora cap text ni es generen preguntes que en depenguin (OFFICIAL_PENDING_REVIEW). Els temes C.3 i C.4 s'estudien amb la guia oficial. Comprovació reproduïble: python3 ingesta/leyes_catalanas.py",
    "fuente_prevista": "https://portaljuridic.gencat.cat/"
   },
   {

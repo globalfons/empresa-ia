@@ -98,7 +98,9 @@ def analizar(oid, perfil=None, fuentes=None, conf=None):
                                     "texto": f"{k} pregunta{'s' if k > 1 else ''} de tipo {NOMBRE_TIPO.get(tp, tp)} (dificultad {d}) del tema {t['id']} "
                                              f"sobre {'los apartados' if len(cand) > 1 else 'el apartado'} {', '.join(a['art'] for a in cand)}",
                                     "prioridad": prioridad(t, actuales, objetivo)})
-        temas.append({"tema": t["id"], "titulo": t["titulo"], "objetivo": objetivo, "capacidad": capacidad, "actuales": actuales,
+        sin_fuente = not t["documentos"] or (not arts and bool(pend or sin_texto))
+        temas.append({"tema": t["id"], "titulo": t["titulo"], "tipo_gap": "FUENTE" if sin_fuente else ("GENERACION" if falta else None),
+                      "apartados_sin_fuente": len(sin_texto), "objetivo": objetivo, "capacidad": capacidad, "actuales": actuales,
                       "falta": falta, "OFFICIAL_EXAM": t["preguntas"]["OFFICIAL_EXAM"], "REVIEW_REQUIRED": t["preguntas"]["REVIEW_REQUIRED"],
                       "dificultad": {str(d): dif_act[d] for d in (1, 2, 3)}, "tipos": dict(tipos_act),
                       "tipos_minimos_ausentes": [tp for tp in F.SIEMPRE if not tipos_act[tp] and posibles[tp]],
@@ -107,7 +109,9 @@ def analizar(oid, perfil=None, fuentes=None, conf=None):
     necesidades.sort(key=lambda x: (-x["prioridad"], x["tema"], x["dificultad"], x["tipo"]))
     return {"oposicion": oid, "generado": perfil.get("generado"), "objetivo_tema": PF.OBJETIVO_TEMA, "distribucion_dificultad": dist,
             "estado_fabrica": estado_fabrica(), "temas": temas, "necesidades": necesidades, "bloqueados": bloqueos,
-            "total_necesario": sum(x["n"] for x in necesidades)}
+            "total_necesario": sum(x["n"] for x in necesidades),
+            "gaps_fuente": [t["tema"] for t in temas if t["tipo_gap"] == "FUENTE"] + [f"{t['tema']} ({t['apartados_sin_fuente']} apartados)" for t in temas
+                                                                                       if t["tipo_gap"] != "FUENTE" and t["apartados_sin_fuente"]]}
 
 
 def deficit_dificultad(objetivo, actual, dist, falta):

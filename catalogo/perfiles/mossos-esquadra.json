@@ -3027,6 +3027,8 @@
       "texto": "catalogo/fuentes/DOGC-788502.txt",
       "clave": "temario"
      },
+     "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+     "registro_fuente": "datos/fuentes-leyes-catalanas.json",
      "id": null,
      "slug": null,
      "texto_en_testley": false
@@ -3049,6 +3051,8 @@
       "texto": "catalogo/fuentes/DOGC-788502.txt",
       "clave": "temario"
      },
+     "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+     "registro_fuente": "datos/fuentes-leyes-catalanas.json",
      "id": null,
      "slug": null,
      "texto_en_testley": false
@@ -3187,6 +3191,8 @@
       "texto": "catalogo/fuentes/DOGC-788502.txt",
       "clave": "temario"
      },
+     "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+     "registro_fuente": "datos/fuentes-leyes-catalanas.json",
      "id": null,
      "slug": null,
      "texto_en_testley": false
@@ -3207,6 +3213,8 @@
       "texto": "catalogo/fuentes/DOGC-788502.txt",
       "clave": "temario"
      },
+     "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+     "registro_fuente": "datos/fuentes-leyes-catalanas.json",
      "id": null,
      "slug": null,
      "texto_en_testley": false
@@ -3229,6 +3237,8 @@
       "texto": "catalogo/fuentes/DOGC-788502.txt",
       "clave": "temario"
      },
+     "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+     "registro_fuente": "datos/fuentes-leyes-catalanas.json",
      "id": null,
      "slug": null,
      "texto_en_testley": false
@@ -3249,6 +3259,8 @@
       "texto": "catalogo/fuentes/DOGC-788502.txt",
       "clave": "temario"
      },
+     "estado_fuente": "FOUND_OFFICIAL_NON_CONSOLIDATED",
+     "registro_fuente": "datos/fuentes-leyes-catalanas.json",
      "id": null,
      "slug": null,
      "texto_en_testley": false
@@ -3613,7 +3625,44 @@
     "Registrar una sesión de práctica"
    ],
    "parte_oficial": "1a prova · subprova aptitudinal",
-   "datos_oficiales": {}
+   "datos_oficiales": {},
+   "psicotecnico": {
+    "categorias": [
+     "abstracto",
+     "espacial",
+     "verbal",
+     "numerico",
+     "percepcion"
+    ],
+    "preguntas": 80,
+    "minutos": 35,
+    "opciones": 4,
+    "penalizacion": 0,
+    "citas": [
+     "Consisteix a respondre un qüestionari tipus test de 80 preguntes adreçat a avaluar els processos de raonament i les aptituds intel·lectuals de la persona participant. S'hi avalua el raonament abstracte, el raonament espacial, l'aptitud verbal, l'aptitud numèrica i l'aptitud perceptiva.",
+     "Cada pregunta té quatre alternatives de resposta de les quals només una és correcta. Totes les respostes correctes tenen el mateix valor i les preguntes que es deixin en blanc i les incorrectes no descompten.",
+     "La puntuació d'aquesta subprova es de 0 a 10 punts. Per obtenir la qualificació d'apte s'ha d'obtenir una puntuació mínima de 5 punts."
+    ],
+    "formula_verificable": false,
+    "nota_formula": "Les bases fixen l'escala (0 a 10) i el mínim (5), però no la conversió d'encerts a punts: TestLey no calcula cap puntuació oficial.",
+    "estado": "SIN_BANCO_VERIFICADO",
+    "fuente": {
+     "source_url": "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1046460",
+     "source_document": "Resolució ISP/1763/2026, de 3 de juny, de convocatòria mitjançant concurs oposició lliure per cobrir places de la categoria de mosso/a de l'escala bàsica del Cos de Mossos d'Esquadra (convocatòria 46/26) (DOGC núm. 9681)",
+     "source_type": "DOGC",
+     "published_at": "2026-06-08",
+     "retrieved_at": "2026-10-01T19:25:34+00:00",
+     "verified_at": "2026-10-01",
+     "verification_status": "OFFICIAL_VERIFIED",
+     "sha256": "271a752a66165a88d79f20e705c9812a3de41a2874469d74c390c84dbc81cec0",
+     "texto": "catalogo/fuentes/DOGC-1046460.txt",
+     "clave": "convocatoria"
+    },
+    "banco": {
+     "OFFICIAL_EXAM": 0,
+     "TESTLEY_GENERATED": 0
+    }
+   }
   },
   {
    "id": "prueba_fisica",
@@ -4623,11 +4672,13 @@
  "pendientes": [
   {
    "campo": "temario_area_D",
-   "motivo": "L'àmbit D (actualitat política, econòmica i social) no té text oficial de referència: no s'hi generen preguntes."
+   "motivo": "L'àmbit D (coneixement de l'entorn polític, econòmic i social: a) Catalunya, b) Estat espanyol) no té text oficial de referència: ni la guia d'estudi ni el temari del DOGC en fixen el contingut. Fonts oficials alternatives possibles (Idescat, INE, webs institucionals del Parlament i del Govern) són dades d'actualitat que canvien: no es pot estructurar sense afirmar fets no verificats a data de l'examen. OFFICIAL_PENDING_REVIEW: és un buit de FONT, no de generació; no s'hi generen preguntes.",
+   "estado_fuente": "OFFICIAL_PENDING_REVIEW",
+   "tipo_gap": "FUENTE"
   },
   {
    "campo": "legislacion_catalana",
-   "motivo": "Llei 10/1994 (Policia de la Generalitat – Mossos d'Esquadra), Llei 16/1991 (policies locals) i Llei 4/2003 (sistema de seguretat pública): el text consolidat del BOE consta com a desactualitzat o no hi és; la font de referència és el Portal Jurídic de Catalunya. OFFICIAL_PENDING_REVIEW fins que s'incorpori el text consolidat oficial. Els temes C.3 i C.4 s'estudien amb la guia oficial.",
+   "motivo": "Llei 10/1994, Llei 16/1991 i Llei 4/2003: FOUND_OFFICIAL_NON_CONSOLIDATED (2026-10-02). El text consolidat del BOE consta com a «Desactualizado» i el Portal Jurídic de Catalunya declara que els seus textos consolidats «no tenen caràcter oficial». Sense text consolidat oficial i vigent no s'incorpora cap text ni es generen preguntes que en depenguin (OFFICIAL_PENDING_REVIEW). Els temes C.3 i C.4 s'estudien amb la guia oficial. Comprovació reproduïble: python3 ingesta/leyes_catalanas.py",
    "fuente_prevista": "https://portaljuridic.gencat.cat/"
   },
   {

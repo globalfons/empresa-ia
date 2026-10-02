@@ -162,7 +162,8 @@ def construir(oid, banco=None, reg=None, hoy=None):
     pendientes_ley = collections.defaultdict(list)
     for lp in o["temario"].get("leyes_pendientes", []):
         pendientes_ley[lp["tema"]].append({"nombre": lp["ley"], "verification_status": lp["verification_status"], "cita": lp["cita"],
-                                           "fuente": fuentes.get(lp["fuente"])})
+                                           "fuente": fuentes.get(lp["fuente"]), "estado_fuente": lp.get("estado_fuente", "PENDING_REVIEW"),
+                                           "registro_fuente": lp.get("registro_fuente")})
     texto_temario = None
     ft = fuentes.get(o["temario"].get("fuente"))
     if ft and ft.get("texto") and os.path.exists(os.path.join(R, ft["texto"])):
@@ -230,8 +231,14 @@ def construir(oid, banco=None, reg=None, hoy=None):
             continue
         claves = m.get("oficial") or []
         claves = [claves] if isinstance(claves, str) else claves
+        extra = {}
+        if m["modulo"] == "psicotecnicos":  # PsychotechnicalEngine: estructura oficial citada y bancos separados (catalogo/psicotecnicos.json)
+            pr = (leer("catalogo/psicotecnicos.json", {}).get("pruebas") or {}).get(oid)
+            if pr:
+                extra["psicotecnico"] = {k: pr[k] for k in ("categorias", "preguntas", "minutos", "opciones", "penalizacion", "citas", "formula_verificable", "nota_formula", "estado")} | {
+                    "fuente": fuentes.get(pr["fuente"]), "banco": {k: len(v) for k, v in pr["bancos"].items()}}
         mods.append(dict(base, parte_oficial=m.get("estructura"),
-                         datos_oficiales={k: datos[k] for k in claves if k in datos}))
+                         datos_oficiales={k: datos[k] for k in claves if k in datos}, **extra))
 
     perfil = {
         "schema": ESQUEMA, "id": oid, "nombre": o["nombre"], "organismo": o["organismo"], "administracion": o["administracion"],
