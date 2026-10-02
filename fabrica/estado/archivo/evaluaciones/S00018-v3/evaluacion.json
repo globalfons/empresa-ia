@@ -1,0 +1,1219 @@
+{
+ "evaluacion": "S00018-v3",
+ "creada_el": "2026-10-02T22:43:06",
+ "judge_policy_version": "juez-sesion-v3",
+ "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+ "judge_model": "claude-haiku-4-5 (subagente de la sesión, igual que v1 y v2)",
+ "session_id": "99d978c0-2dae-5759-b0b5-c9d96487a509",
+ "preguntas": 59,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "S00018-0.0",
+    "S00018-0.1",
+    "S00018-0.2",
+    "S00018-1.0",
+    "S00018-2.0",
+    "S00018-2.1",
+    "S00018-2.2",
+    "S00018-3.0",
+    "S00018-3.1",
+    "S00018-3.2"
+   ],
+   "prompt_sha256": "3e0b732695d97c7de53ef22b7fa4701b1859fc1ec065d334a51334dfc217b962",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "S00018-0.0": "8bd44e208da6b23db3ccd66bf2242fe12ef8aa0ab52c545779756365c0865fd6",
+    "S00018-0.1": "7d8785d52936e9a5af32ce22087d7adf28a6c9abf95d83eaeb720b9e76be1d7c",
+    "S00018-0.2": "7fb3031a95c70c674bed65bacf069884a30f47d756b4f44910f4d394f4406bdc",
+    "S00018-1.0": "06d1c2282deb767cc68c44769e54427c95ed0954dab9e9f96cadbcda33f02905",
+    "S00018-2.0": "cf2df67d133ec7cc6a7703163943dbf32b201ac84beb0cc59dfd5367c79dfa47",
+    "S00018-2.1": "bd7b8f6ca9a34d6689bc2c2237c6396d1421587cd1d42aa775245a1dd507f931",
+    "S00018-2.2": "0b77616b3588308868834a482cd09fc950cd52d93213c435b91b1e1a879b47ab",
+    "S00018-3.0": "77edbdd307dab5d2d48191254cf271c25e99e2734f6ba52bb13a35b4a2ccb72e",
+    "S00018-3.1": "3e53683f0eede0ea17ff84adcc6bc9220e93d0022aa6bf2b76f155aebfbd74f3",
+    "S00018-3.2": "ae1e93e9fc7bff6c242a000a3975554be03122ce17fa712e626764e135b16db7"
+   },
+   "veredictos": [
+    {
+     "question_id": "S00018-0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma clarament que les normes deontològiques 'solen sorgir del mateix col·lectiu professional'. La cita és completa, única i la pregunta és clara, útil i ben formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text conté la frase exacta que el Codi és garantia tant per al ciutadà com per a l'agent de policia. La cita és completa i suficient, les altres opcions són clarament rebutjades pel text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix explícitament que la policia 'no solament ha de complir i fer complir la llei, sinó que, a més, ha de mostrar respecte cap als drets de les persones'. La cita justifica completament que l'afirmació de l'agent és incompleta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text reprodueix quasi verbatim la definició d'autogobierno de Cataluña. Altres opcions (nació soberana, regió integrada, mancomunitat) són clarament contradites pel text. Les normes constitucionals són material d'examen vàlid.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text confirma explícitament que 'la seva responsabilitat penal només pot ser exigida pel Tribunal Suprem'. La cita és completa i única; es tracta d'un aforament específic que diferencia aquest òrgan dels altres.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera explícitament tres casos de cessació conjunta (eleccions, pèrdua de confiança parlamentària, dimissió/mort del president). La dimissió d'un minister NO figura en aquesta llista, per la qual cosa l'opció 0 és correcta. La cita és suficient per eliminar les altres opcions.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix que els membres no poden exercir 'altres funcions representatives que les pròpies del mandat parlamentari, ni cap altra funció pública que no es derivi del seu càrrec, ni cap activitat professional o mercantil'. Això permet ser parlamentari però prohibeix activitats mercantils. Les altres opcions són directament contradites pel text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-3.0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Tot que el text justifica clarament que Tarraco fou la ciutat més important de la Catalunya romana, aquesta pregunta és duplicada de mx46-002-19-6, que planteja la mateixa pregunta ('La ciutat més important de la Catalunya romana fou:') amb la mateixa resposta ('Tarraco'). El duplicat impedeix aprovar-la.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "mx46-002-19-6"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text descriu clarament la cadena causal: la paralització de l'expansió militar va fer que no augmentés el nombre d'esclaus, per la qual cosa 'n'augmentés el preu'. La cita captura completament aquesta relació causal. Les altres opcions no apareixen en el text com a causes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-3.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La cita proporcionada ('Tot plegat comportà una ruralització de la societat, una transformació dels esclaus en colons') descriu les característiques del procés però OMIT l'element temporal crucial 'a partir del segle III dC'. Sense aquest element en la cita, no es pot distingir completament l'opció 2 (transformació de l'Imperi, s. III) de l'opció 3 (ocupació sarraïna, 711). La cita sola és insuficient per justificar la resposta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a790599135c2b45e6.jsonl",
+    "respuesta_sha256": "b54a73180f17283f94fafc8dc71d4688c2543c3124296c48aea3ecdcbecd591b"
+   },
+   "registrada_el": "2026-10-02T22:49:19",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:49:19",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a790599135c2b45e6.jsonl",
+      "respuesta_sha256": "b54a73180f17283f94fafc8dc71d4688c2543c3124296c48aea3ecdcbecd591b"
+     },
+     "respuesta": "[\n  {\"question_id\": \"S00018-0.0\", \"verdict\": \"VALID\", \"reason\": \"El text afirma clarament que les normes deontològiques 'solen sorgir del mateix col·lectiu professional'. La cita és completa, única i la pregunta és clara, útil i ben formulada.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-0.1\", \"verdict\": \"VALID\", \"reason\": \"El text conté la frase exacta que el Codi és garantia tant per al ciutadà com per a l'agent de policia. La cita és completa i suficient, les altres opcions són clarament rebutjades pel text.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-0.2\", \"verdict\": \"VALID\", \"reason\": \"El text estableix explícitament que la policia 'no solament ha de complir i fer complir la llei, sinó que, a més, ha de mostrar respecte cap als drets de les persones'. La cita justifica completament que l'afirmació de l'agent és incompleta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-1.0\", \"verdict\": \"VALID\", \"reason\": \"El text reprodueix quasi verbatim la definició d'autogobierno de Cataluña. Altres opcions (nació soberana, regió integrada, mancomunitat) són clarament contradites pel text. Les normes constitucionals són material d'examen vàlid.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-2.0\", \"verdict\": \"VALID\", \"reason\": \"El text confirma explícitament que 'la seva responsabilitat penal només pot ser exigida pel Tribunal Suprem'. La cita és completa i única; es tracta d'un aforament específic que diferencia aquest òrgan dels altres.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-2.1\", \"verdict\": \"VALID\", \"reason\": \"El text enumera explícitament tres casos de cessació conjunta (eleccions, pèrdua de confiança parlamentària, dimissió/mort del president). La dimissió d'un minister NO figura en aquesta llista, per la qual cosa l'opció 0 és correcta. La cita és suficient per eliminar les altres opcions.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-2.2\", \"verdict\": \"VALID\", \"reason\": \"El text estableix que els membres no poden exercir 'altres funcions representatives que les pròpies del mandat parlamentari, ni cap altra funció pública que no es derivi del seu càrrec, ni cap activitat professional o mercantil'. Això permet ser parlamentari però prohibeix activitats mercantils. Les altres opcions són directament contradites pel text.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-3.0\", \"verdict\": \"REJECTED\", \"reason\": \"Tot que el text justifica clarament que Tarraco fou la ciutat més important de la Catalunya romana, aquesta pregunta és duplicada de mx46-002-19-6, que planteja la mateixa pregunta ('La ciutat més important de la Catalunya romana fou:') amb la mateixa resposta ('Tarraco'). El duplicat impedeix aprovar-la.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"mx46-002-19-6\"}},\n  {\"question_id\": \"S00018-3.1\", \"verdict\": \"VALID\", \"reason\": \"El text descriu clarament la cadena causal: la paralització de l'expansió militar va fer que no augmentés el nombre d'esclaus, per la qual cosa 'n'augmentés el preu'. La cita captura completament aquesta relació causal. Les altres opcions no apareixen en el text com a causes.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"S00018-3.2\", \"verdict\": \"REVIEW_REQUIRED\", \"reason\": \"La cita proporcionada ('Tot plegat comportà una ruralització de la societat, una transformació dels esclaus en colons') descriu les característiques del procés però OMIT l'element temporal crucial 'a partir del segle III dC'. Sense aquest element en la cita, no es pot distingir completament l'opció 2 (transformació de l'Imperi, s. III) de l'opció 3 (ocupació sarraïna, 711). La cita sola és insuficient per justificar la resposta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": false, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "S00018-4.0",
+    "S00018-4.1",
+    "S00018-4.2",
+    "S00018-5.0",
+    "S00018-5.1",
+    "S00018-5.2",
+    "S00018-6.0",
+    "S00018-6.1",
+    "S00018-6.2",
+    "S00018-8.0"
+   ],
+   "prompt_sha256": "5e5c322f60355c06a987183b6dc4d42f4a66c79c7169bc63ddfd865680d252f7",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "S00018-4.0": "67e880bf1fd1f50cdcf81e27f258edef39019da4e7cd1eb46959baa3c8889dbd",
+    "S00018-4.1": "f69d26a437f2b8c51944e067d73209dca20cd304f9d8441a7ffde53e4734cacb",
+    "S00018-4.2": "7c9d9c68283f74136ae394174e826f77b77b6ce76f887713110a5fe0180a5485",
+    "S00018-5.0": "9c13c36814222fb59bbcae25a9a48c53983ee2a1326ac20a09062e986482c641",
+    "S00018-5.1": "77eacc79540289972119460dd3b1b0b2cc3a2f6aeccd0e41645abd3b5cfd5342",
+    "S00018-5.2": "f66bc685fa9a78fe3d45c2de3dad005a023e10727daa050b25daab344b7594c9",
+    "S00018-6.0": "bc5efb61003d47bc29c36d0df00d7283c120923e9c7b0c6e847ddbe101019996",
+    "S00018-6.1": "a55b577caf85293af2608e93b71c2e192ca59a1907ee4095ef1c861ca48caed2",
+    "S00018-6.2": "22f6239400674d0325e7abaaea5cf5a7f4b882d6613ff66a02af2a73ef7baa32",
+    "S00018-8.0": "aceef04a442d38118f4145e69c129f1b1f7901884ba2305cd0dbfc110bbee55d"
+   },
+   "veredictos": [
+    {
+     "question_id": "S00018-4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La Taula de Ciutadania i Immigració és clarament confirmada al text com l'òrgan de consulta i participació creat el 2008 amb el Pacte nacional per a la immigració. La cita conté tota la informació necessària per justificar l'opció correcta de forma única i sense ambigüitat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix clarament que els estats tienen cert marge de maniobra en l'aplicació de les directives, i per tant han hagut de transposar-les. La cita és suficient per justificar l'opció correcta de forma única. La pregunta és clara i útil per a l'examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text de la Directiva 2011/95/UE estableix que la llibertat de circulació dels beneficiaris de protecció internacional és en les mateixes condicions que els nacionals de països tercers amb residència legal. La cita és completa i suficient. L'opció correcta és única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text especifica explícitament que el Comitè Executiu de la Interpol està format per 13 personalitats escollides per l'Assemblea General. La cita és suficient per justificar l'opció correcta de forma única i sense ambigüitat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text del Europol estableix que té com a objectiu millorar la cooperació sempre que hi hagi estructura delictiva organitzada i que dos o més estats membres s'hi vegin afectats. Aquestes dues condicions són clarament presents a la cita i al text. L'opció correcta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix que l'oficina central nacional (OCN) és qui executa les operacions policials sol·licitades per altres països, mitjançant les respectives OCN. La cita conté aquesta informació de forma clara i completa. L'opció correcta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text confirma que la línia Barcelona-Mataró de 1848 va ser la primera construïda a Espanya. Es tracta d'un fet històric que és fita important del programa, apropiat per a examen. La cita és completa i suficient. L'opció correcta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta demana quina afirmació NO és correcta sobre la industrialització catalana. El text explícitament nega la possible creixença de la siderúrgia per manca de carbó i ferro, cosa que invalidà l'opció 2. Les altres tres opcions (0, 1, 3) són correctes segons el text. La cita justifica clarament l'opció correcta de forma única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text especifica que el PSOE es va fundar el 1879 a Madrid i la UGT el 1888 a Barcelona, i la Unió de Rabassaires el 1922. L'opció correcta 1 (UGT, 1888, Barcelona) és única i completa. Les altres opcions combinen dades incorrectes. La cita conté tota la informació necessària.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix de forma clara que els drets fonamentals i les llibertats públiques estan previstos als articles 15 a 29 de la CE. Es tracta de coneixement específic del programa apropiat per a examen. La cita és suficient i l'opció correcta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a41d902ed35db7e7e.jsonl",
+    "respuesta_sha256": "b9cd3d4f4f4031213f75cfdbd88e25899f6852adeaf571a67f12faa7897803bf"
+   },
+   "registrada_el": "2026-10-02T22:49:36",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:49:36",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a41d902ed35db7e7e.jsonl",
+      "respuesta_sha256": "b9cd3d4f4f4031213f75cfdbd88e25899f6852adeaf571a67f12faa7897803bf"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"S00018-4.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La Taula de Ciutadania i Immigració és clarament confirmada al text com l'òrgan de consulta i participació creat el 2008 amb el Pacte nacional per a la immigració. La cita conté tota la informació necessària per justificar l'opció correcta de forma única i sense ambigüitat.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-4.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix clarament que els estats tienen cert marge de maniobra en l'aplicació de les directives, i per tant han hagut de transposar-les. La cita és suficient per justificar l'opció correcta de forma única. La pregunta és clara i útil per a l'examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-4.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text de la Directiva 2011/95/UE estableix que la llibertat de circulació dels beneficiaris de protecció internacional és en les mateixes condicions que els nacionals de països tercers amb residència legal. La cita és completa i suficient. L'opció correcta és única i clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-5.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text especifica explícitament que el Comitè Executiu de la Interpol està format per 13 personalitats escollides per l'Assemblea General. La cita és suficient per justificar l'opció correcta de forma única i sense ambigüitat.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-5.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text del Europol estableix que té com a objectiu millorar la cooperació sempre que hi hagi estructura delictiva organitzada i que dos o més estats membres s'hi vegin afectats. Aquestes dues condicions són clarament presents a la cita i al text. L'opció correcta és única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-5.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix que l'oficina central nacional (OCN) és qui executa les operacions policials sol·licitades per altres països, mitjançant les respectives OCN. La cita conté aquesta informació de forma clara i completa. L'opció correcta és única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-6.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text confirma que la línia Barcelona-Mataró de 1848 va ser la primera construïda a Espanya. Es tracta d'un fet històric que és fita important del programa, apropiat per a examen. La cita és completa i suficient. L'opció correcta és única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-6.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta demana quina afirmació NO és correcta sobre la industrialització catalana. El text explícitament nega la possible creixença de la siderúrgia per manca de carbó i ferro, cosa que invalidà l'opció 2. Les altres tres opcions (0, 1, 3) són correctes segons el text. La cita justifica clarament l'opció correcta de forma única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-6.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text especifica que el PSOE es va fundar el 1879 a Madrid i la UGT el 1888 a Barcelona, i la Unió de Rabassaires el 1922. L'opció correcta 1 (UGT, 1888, Barcelona) és única i completa. Les altres opcions combinen dades incorrectes. La cita conté tota la informació necessària.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-8.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix de forma clara que els drets fonamentals i les llibertats públiques estan previstos als articles 15 a 29 de la CE. Es tracta de coneixement específic del programa apropiat per a examen. La cita és suficient i l'opció correcta és única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "S00018-8.1",
+    "S00018-8.2",
+    "S00018-9.0",
+    "S00018-9.1",
+    "S00018-9.2",
+    "S00018-10.0",
+    "S00018-10.1",
+    "S00018-10.2",
+    "S00018-11.0",
+    "S00018-11.1"
+   ],
+   "prompt_sha256": "54debfc32e9f844119877fa85467c7ff7b249915a8c057352c6084e1c8b6f023",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "S00018-8.1": "a58ee55b29961577018ef667253a74f13fe506bec0a8d4665cc719a23319805d",
+    "S00018-8.2": "11b002d8b8f7a50114c26f5729933181671f12c7a04b77e42fe14f4e966a0cfb",
+    "S00018-9.0": "ffe059e7016ef479b0ab5686c3c9a593ca023465edf89f2b0fd1784735b489dc",
+    "S00018-9.1": "ae00cf840f42a1a863e6f01bebcd52e5975514c4352584ddb42ad5c4332e5788",
+    "S00018-9.2": "cd25912a09e5ace953161d94a57d060b65f7b2c836188f59be564cf9c6079aae",
+    "S00018-10.0": "dad31442f600766f00a831a2346d4805614fe5be598ed6696af76d313f08efb8",
+    "S00018-10.1": "a4bd891abf4b5a4bf5b3197c012a1bb51320381219a7172898b392d8a0d932a8",
+    "S00018-10.2": "2345aa8ac627a1cc1772cd33fdf8da45124a2eff44dbcd376fd9d4b3978c2f4f",
+    "S00018-11.0": "6cdc972712616fc48820f4623cd6639e171b19959423993ca939c4a5fc0dae92",
+    "S00018-11.1": "ca51488c1f6307898a684fb0bee67a6e180623d6e84975306d0e60c8a85f1139"
+   },
+   "veredictos": [
+    {
+     "question_id": "S00018-8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma explícitament que els drets personals «no necessiten una llei per regular l'exercici del dret, sinó per protegir-los». La cita és exacta i completa. L'opció correcta és l'única viable: les altres descriuen tipus de drets diferents (econòmics-socials) o característiques errònies.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text classifica explícitament «el dret de reunió i manifestació (art. 21)» sota «Drets de participació o polítics». Els altres articles esmentats (16=ideologia/religió, 19=residència/circulació, 28=vaga/sindicació) corresponen a drets completament diferents. La cita és precisa i suficient.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma «L'aprovació el 1979 dels primers estatuts d'autonomia». Aquesta data de fita històrica és material d'examen útil segons les instruccions, no trivial. La cita coincideix exactament amb el text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text indica «partint de l'anomenat principi dispositiu, la CE possibilita que el règim autonòmic es generalitzi». Els altres principis (jerarquia, supletorietat, competència) no apareixen en relació amb les autonomies. La cita és exacta i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-9.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta negativa: quin element NO forma part. El text especifica dos elements de la fórmula: (a) un únic Estat, constitució i ordenament, i (b) el dret a l'autonomia. Però la cita proporcionada només inclou part (a), omitent la menció del dret d'autonomia de part (b). Un lector que veurà només aquesta cita podria concloure erròniament que l'opció 2 (autonomia) no forma part de la fórmula, quan de fet sí. Cita insuficient per a pregunta negativa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma «En la nova societat del coneixement, el coneixement és, precisament, la primera font de productivitat». El context contrasta amb la dependència passada de recursos naturals i producció industrial. La cita és completa i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera 5 característiques del canvi, i l'opció 2 és exactament la característica (e): «Augmenten els treballadors terciaris –oficinistes i venedors– en la base del sistema productiu». Les altres opcions contradiuen característiques explícites del text (a=minoritaris, b=disminueix industrial, d=augmenta alta qualificació).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-10.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma explícitament «El que és nou és que ara aquest cicle vital dels coneixements s'ha fet molt més curt que la vida de les persones, i això no havia passat mai en la história de la humanitat». La pregunta és clara i la resposta és única. Bon material d'examen per contrastar amb el passat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text especifica «la Pica d'Estats (3.143 m), que és el punt més elevat de Catalunya». Les dades geogràfiques específiques (altitud, localització) són material d'examen útil. Els altres cims esmentats són inferiors en altura (Puigmal 2.913 m, Tossa Plana 2.916 m, Turó 1.706 m).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text descriu la Cerdanya com l'excepció a les valls orientades nord-sud: «plana d'origen tectònic, orientada d'est a oest i per on circula el curs alt del Segre». La cita conté tots els elements necessaris per identificar-la unívocament entre les opcions donades, que fan referència a altres localitzacions (Vall d'Aran, Conca de Tremp, plana d'Urgell).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-aad3345aa7ee86752.jsonl",
+    "respuesta_sha256": "63d7b22fd6a24bf4a8bcc6be97f158f65eb9945af7033f4a94fc7f4821c3ec6d"
+   },
+   "registrada_el": "2026-10-02T22:50:57",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:50:57",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-aad3345aa7ee86752.jsonl",
+      "respuesta_sha256": "63d7b22fd6a24bf4a8bcc6be97f158f65eb9945af7033f4a94fc7f4821c3ec6d"
+     },
+     "respuesta": "[{\"question_id\": \"S00018-8.1\", \"verdict\": \"VALID\", \"reason\": \"El text afirma explícitament que els drets personals «no necessiten una llei per regular l'exercici del dret, sinó per protegir-los». La cita és exacta i completa. L'opció correcta és l'única viable: les altres descriuen tipus de drets diferents (econòmics-socials) o característiques errònies.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-8.2\", \"verdict\": \"VALID\", \"reason\": \"El text classifica explícitament «el dret de reunió i manifestació (art. 21)» sota «Drets de participació o polítics». Els altres articles esmentats (16=ideologia/religió, 19=residència/circulació, 28=vaga/sindicació) corresponen a drets completament diferents. La cita és precisa i suficient.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-9.0\", \"verdict\": \"VALID\", \"reason\": \"El text afirma «L'aprovació el 1979 dels primers estatuts d'autonomia». Aquesta data de fita històrica és material d'examen útil segons les instruccions, no trivial. La cita coincideix exactament amb el text.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-9.1\", \"verdict\": \"VALID\", \"reason\": \"El text indica «partint de l'anomenat principi dispositiu, la CE possibilita que el règim autonòmic es generalitzi». Els altres principis (jerarquia, supletorietat, competència) no apareixen en relació amb les autonomies. La cita és exacta i única.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-9.2\", \"verdict\": \"REVIEW_REQUIRED\", \"reason\": \"Pregunta negativa: quin element NO forma part. El text especifica dos elements de la fórmula: (a) un únic Estat, constitució i ordenament, i (b) el dret a l'autonomia. Però la cita proporcionada només inclou part (a), omitent la menció del dret d'autonomia de part (b). Un lector que veurà només aquesta cita podria concloure erròniament que l'opció 2 (autonomia) no forma part de la fórmula, quan de fet sí. Cita insuficient per a pregunta negativa.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": false, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-10.0\", \"verdict\": \"VALID\", \"reason\": \"El text afirma «En la nova societat del coneixement, el coneixement és, precisament, la primera font de productivitat». El context contrasta amb la dependència passada de recursos naturals i producció industrial. La cita és completa i única.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-10.1\", \"verdict\": \"VALID\", \"reason\": \"El text enumera 5 característiques del canvi, i l'opció 2 és exactament la característica (e): «Augmenten els treballadors terciaris –oficinistes i venedors– en la base del sistema productiu». Les altres opcions contradiuen característiques explícites del text (a=minoritaris, b=disminueix industrial, d=augmenta alta qualificació).\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-10.2\", \"verdict\": \"VALID\", \"reason\": \"El text afirma explícitament «El que és nou és que ara aquest cicle vital dels coneixements s'ha fet molt més curt que la vida de les persones, i això no havia passat mai en la história de la humanitat». La pregunta és clara i la resposta és única. Bon material d'examen per contrastar amb el passat.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-11.0\", \"verdict\": \"VALID\", \"reason\": \"El text especifica «la Pica d'Estats (3.143 m), que és el punt més elevat de Catalunya». Les dades geogràfiques específiques (altitud, localització) són material d'examen útil. Els altres cims esmentats són inferiors en altura (Puigmal 2.913 m, Tossa Plana 2.916 m, Turó 1.706 m).\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-11.1\", \"verdict\": \"VALID\", \"reason\": \"El text descriu la Cerdanya com l'excepció a les valls orientades nord-sud: «plana d'origen tectònic, orientada d'est a oest i per on circula el curs alt del Segre». La cita conté tots els elements necessaris per identificar-la unívocament entre les opcions donades, que fan referència a altres localitzacions (Vall d'Aran, Conca de Tremp, plana d'Urgell).\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "S00018-11.2",
+    "S00018-12.0",
+    "S00018-12.1",
+    "S00018-12.2",
+    "S00018-13.0",
+    "S00018-13.1",
+    "S00018-13.2",
+    "S00018-14.0",
+    "S00018-14.1",
+    "S00018-14.2"
+   ],
+   "prompt_sha256": "baea633f6f222d8f9d96350815f6dbb9322320434ec1e8a51fc0df2e46ec38be",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "S00018-11.2": "3a46a91f17ee32fe5a7d3f25ed7c9331367b916f41a632b67cdb18b6988f1675",
+    "S00018-12.0": "961b3bd0de43937db1e8ec8d1298f82581dd1c5aca574675ebcfa97c60b1f20e",
+    "S00018-12.1": "0d91589c447ceede12d2a435f201d77c07fca56684816a696fd0142dbbc4c4d0",
+    "S00018-12.2": "8b1a88eedcbbeb9e044a17620ef2b7d7dba499e9806a86c7991c20fb52c50f33",
+    "S00018-13.0": "743cc11f7c816b007d7cd3a6d56f9a32fc9fe5214c63d6711c6e56ae7e557fcc",
+    "S00018-13.1": "84821fbd3948a40b30921293dba79d0d9091313fb7da10fb011c2a1cfd3ecec1",
+    "S00018-13.2": "7e01410027ddad127d054126050bdf3d83d10bd9b831c11f9f460491e6725b06",
+    "S00018-14.0": "d863036c8f229ac437d147e491eec8f636d396c7889fa78a815d651e5b416e12",
+    "S00018-14.1": "6dd07d854e8c8d5b641601cff856e45fea08a17ea4711aed4fc981d294a0c776",
+    "S00018-14.2": "437dbcabcf0c5c47ac25ab2409a39bbd10faccbcd84cc8a4a8f189fbe631eddd"
+   },
+   "veredictos": [
+    {
+     "question_id": "S00018-11.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto i la cita identifiquen clarament les tres subunitats del Sistema Mediterrani: Serralada Prelitoral, Serralada Litoral i Depressió Prelitoral. L'opció a (index 1) és l'única correcta entre les quatre opcions. La cita conté tots els elements necessaris. Pregunta clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix clarament que si transcorren dos mesos des de la primera votació i cap candidat no obté confiança, el Parlament es dissoldrà automàticament. La cita és la frase exacta del texto. L'opció a (index 1) és l'única correcta. Pregunta sobre terminis específics, útil per a examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-12.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto especifica que pels delictes comesos a Catalunya, el Tribunal Superior de Justícia de Catalunya és competent per a inculpació, presó, processament i judici. La cita és la frase literal del texto. L'opció a (index 1) és l'única correcta. Pregunta clara sobre competències jurisdiccionals.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-12.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto enumera accions que el Parlament pot realitzar respecte als òrgans centrals, incloent 'interposar davant el Tribunal Constitucional un recurs d'inconstitucionalitat'. La cita és la frase exacta. L'opció a (index 2) és l'única vàlida entre les quatre. Pregunta clara i ben formada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explica que el 1719 les tensions amb França van fer situar l'exèrcit a la frontera, per la qual cosa calia una força policial per controlar l'interior. La cita conté la causa: 'l'exèrcit a la frontera' i 'controlar l'interior'. L'opció a (index 1) és l'única correcta. Pregunta històrica útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa: quin enunciat NO és correcte. L'opció a (index 3) afirma 'a principis de segle' però el texto diu 'a la segona meitat de segle'. La cita mostra clarament que l'exportació fou a la segona meitat, no al principi. Les altres tres afirmacions són correctes segons el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que el 1721, quan es van desfer les esquadres, només es va mantenir 'la de Valls, amb destacaments a Riudoms i Rodonyà, sota la comandància única de Pere Anton Veciana'. La cita és la frase exacta amb tots els detalls. L'opció a (index 2) és l'única correcta. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto classifica els dialectes en dos blocs: 'català oriental: rossellonès o septentrional, central, balear i alguerès' i 'català occidental'. L'alguerès s'inclou explícitament en oriental. La cita conté l'afirmació directa. L'opció a (index 1) és l'única correcta. Pregunta clara sobre classificació lingüística.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto classifica els graus de formalitat i exemplifica: 'L'individu presenta intoxicació etílica aguda' (culte). La cita assigna expressament aquesta expressió al nivell culte. L'opció a (index 2) és l'única correcta. Pregunta clara i pràctica per a un agent de policia.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-14.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix clarament: 'no s'ha d'equiparar llengua estàndard a llengua correcta (una solució pot ser correcta, però no estàndard)'. La cita és la frase exacta que respon la pregunta. L'opció a (index 1) és l'única correcta. Pregunta conceptual útil i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a15c36588797d959c.jsonl",
+    "respuesta_sha256": "eeff88a8ba13b421b1d97e438d843cb4ee63f09d529be395c3689c8d41e750d0"
+   },
+   "registrada_el": "2026-10-02T22:51:23",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:51:23",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a15c36588797d959c.jsonl",
+      "respuesta_sha256": "eeff88a8ba13b421b1d97e438d843cb4ee63f09d529be395c3689c8d41e750d0"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"S00018-11.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto i la cita identifiquen clarament les tres subunitats del Sistema Mediterrani: Serralada Prelitoral, Serralada Litoral i Depressió Prelitoral. L'opció a (index 1) és l'única correcta entre les quatre opcions. La cita conté tots els elements necessaris. Pregunta clara i útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-12.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix clarament que si transcorren dos mesos des de la primera votació i cap candidat no obté confiança, el Parlament es dissoldrà automàticament. La cita és la frase exacta del texto. L'opció a (index 1) és l'única correcta. Pregunta sobre terminis específics, útil per a examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-12.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto especifica que pels delictes comesos a Catalunya, el Tribunal Superior de Justícia de Catalunya és competent per a inculpació, presó, processament i judici. La cita és la frase literal del texto. L'opció a (index 1) és l'única correcta. Pregunta clara sobre competències jurisdiccionals.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-12.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto enumera accions que el Parlament pot realitzar respecte als òrgans centrals, incloent 'interposar davant el Tribunal Constitucional un recurs d'inconstitucionalitat'. La cita és la frase exacta. L'opció a (index 2) és l'única vàlida entre les quatre. Pregunta clara i ben formada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-13.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto explica que el 1719 les tensions amb França van fer situar l'exèrcit a la frontera, per la qual cosa calia una força policial per controlar l'interior. La cita conté la causa: 'l'exèrcit a la frontera' i 'controlar l'interior'. L'opció a (index 1) és l'única correcta. Pregunta històrica útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-13.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta negativa: quin enunciat NO és correcte. L'opció a (index 3) afirma 'a principis de segle' però el texto diu 'a la segona meitat de segle'. La cita mostra clarament que l'exportació fou a la segona meitat, no al principi. Les altres tres afirmacions són correctes segons el texto. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-13.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto indica que el 1721, quan es van desfer les esquadres, només es va mantenir 'la de Valls, amb destacaments a Riudoms i Rodonyà, sota la comandància única de Pere Anton Veciana'. La cita és la frase exacta amb tots els detalls. L'opció a (index 2) és l'única correcta. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-14.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto classifica els dialectes en dos blocs: 'català oriental: rossellonès o septentrional, central, balear i alguerès' i 'català occidental'. L'alguerès s'inclou explícitament en oriental. La cita conté l'afirmació directa. L'opció a (index 1) és l'única correcta. Pregunta clara sobre classificació lingüística.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-14.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto classifica els graus de formalitat i exemplifica: 'L'individu presenta intoxicació etílica aguda' (culte). La cita assigna expressament aquesta expressió al nivell culte. L'opció a (index 2) és l'única correcta. Pregunta clara i pràctica per a un agent de policia.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-14.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix clarament: 'no s'ha d'equiparar llengua estàndard a llengua correcta (una solució pot ser correcta, però no estàndard)'. La cita és la frase exacta que respon la pregunta. L'opció a (index 1) és l'única correcta. Pregunta conceptual útil i clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "S00018-15.0",
+    "S00018-15.1",
+    "S00018-15.2",
+    "S00018-16.0",
+    "S00018-16.1",
+    "S00018-16.2",
+    "S00018-17.0",
+    "S00018-17.1",
+    "S00018-17.2",
+    "S00018-18.0"
+   ],
+   "prompt_sha256": "be70e46bf7167cff22d811b51f9eebce1d1946108b5055d1c9b86398cf5498d9",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "S00018-15.0": "c8f44c1e5b39ee70e998e4388d5c094a260766900ee1c60b06cd8a87bc0cd917",
+    "S00018-15.1": "e1ea6628b219734b264198a8723417fb36f7536b254d7afc53b7d492d3b179e5",
+    "S00018-15.2": "0e97034d5b8b132cc8e4d44c4f8e1bf8aea6830666ed8433fde652336a34a68b",
+    "S00018-16.0": "1337f1a6efa0fdcef8811e31e6b690d9c0d81a476487a83da63ca33e1d737422",
+    "S00018-16.1": "334613fed774c298a1b1d4f440321b5f7b5c804a25919531c5da158569e5f2c6",
+    "S00018-16.2": "378cbf3e6eab57126262c32d5bb92ccb6830a8156d47df34457688a5a16e244e",
+    "S00018-17.0": "f0e891b210a30b505a20c0666d528842e6559587970dd07c28c9350b21efbf41",
+    "S00018-17.1": "56cb3970adf36d93681d8d70aa6716717c1532037131d7b4bb9b71fee4259223",
+    "S00018-17.2": "dee25bb1927e7ce893f8d89f40e3710a275bc4e94a5160f06b690084a5d037aa",
+    "S00018-18.0": "b30b7d4f892b34539858ff6da1c14df43d74e4c14a03fae0f47195db684f7040"
+   },
+   "veredictos": [
+    {
+     "question_id": "S00018-15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explícitament estableix que el president del CGPJ és elegit pels vint vocals amb majoria de 3/5. La cita conté tots els elements necessaris per identificar la resposta correcta sense ambigüitat. Les altres opcions no corresponen al procediment descrit.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix que els jutges necessiten l'aval de 25 membres O d'una associació judicial (l'ús de 'o bé' indica alternativa). La cita és suficient per rebutjar la opció 1 que utilitza 'i' (conjunció) en lloc de 'o'. Les altres opcions no corresponen al requisit legal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explícitament enumera les funcions del CGPJ. La opció correcta (b) correspon a la funció (g) listada al texto: presentar anualment memòria. Les altres opcions corresponen a altres òrgans o no són funcions del CGPJ segons la guia.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto especifica que per a les Decisions, els efectes jurídics comencen a partir de la notificació als destinataris. La cita és exacta i completa. Les altres opcions descriuen procediments que no corresponen a Decisions (publicació és per Reglaments, transposició és per Directives).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explica clarament el caràcter de les Directives: obligació de resultat amb elecció de mitjans. La cita conté la definició completa i permet descartar les altres opcions (la directa aplicabilitat és dels Reglaments, no de les Directives).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-16.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix el principi de primacia: la norma comunitària s'aplica però la norma interna no desapareix de l'ordenament jurídic. La cita és suficient per distingir entre aplicabilitat i derogació. Les altres opcions contradiuen aquest principi.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explícitament caracteritza la responsabilitat de la Generalitat com territorial, estesa a tot el territori de Catalunya. La cita és directa i completa. Les altres opcions (personal, local, sectorial) no corresponen a la definició legal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto enumera explícitament que 'Trànsit i seguretat viària' és un dels àmbits de la competència de la Generalitat en protecció i ordre públic. La cita és suficient. Les altres opcions són competències estatal (fronteres, passaports, estrangeria).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-17.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix que l'Estatut atorga a la Generalitat crear policia autònoma, tenir comandament suprem sobre ella, i coordinar les policies locals. La cita conté els dos elements essencials. Les altres opcions exclouen un dels elements o descriuen situacions incorrectes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix que les armes només s'utilitzan quan hi ha risc racionalment greu per a vida o integritat, o risc greu per a seguretat ciutadana. La cita és exacta i completa. Les altres opcions (qualsevol risc, ordre superior, béns materials) contradiuen la normativa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a6fb70e1f7038a5c8.jsonl",
+    "respuesta_sha256": "e10c5b6ecd44b5da305c7ae9c6ce64a78691bff5da99cc4b096a8e316262908e"
+   },
+   "registrada_el": "2026-10-02T22:52:24",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:52:24",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a6fb70e1f7038a5c8.jsonl",
+      "respuesta_sha256": "e10c5b6ecd44b5da305c7ae9c6ce64a78691bff5da99cc4b096a8e316262908e"
+     },
+     "respuesta": "[{\"question_id\": \"S00018-15.0\", \"verdict\": \"VALID\", \"reason\": \"El texto explícitament estableix que el president del CGPJ és elegit pels vint vocals amb majoria de 3/5. La cita conté tots els elements necessaris per identificar la resposta correcta sense ambigüitat. Les altres opcions no corresponen al procediment descrit.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-15.1\", \"verdict\": \"VALID\", \"reason\": \"El texto estableix que els jutges necessiten l'aval de 25 membres O d'una associació judicial (l'ús de 'o bé' indica alternativa). La cita és suficient per rebutjar la opció 1 que utilitza 'i' (conjunció) en lloc de 'o'. Les altres opcions no corresponen al requisit legal.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-15.2\", \"verdict\": \"VALID\", \"reason\": \"El texto explícitament enumera les funcions del CGPJ. La opció correcta (b) correspon a la funció (g) listada al texto: presentar anualment memòria. Les altres opcions corresponen a altres òrgans o no són funcions del CGPJ segons la guia.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-16.0\", \"verdict\": \"VALID\", \"reason\": \"El texto especifica que per a les Decisions, els efectes jurídics comencen a partir de la notificació als destinataris. La cita és exacta i completa. Les altres opcions descriuen procediments que no corresponen a Decisions (publicació és per Reglaments, transposició és per Directives).\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-16.1\", \"verdict\": \"VALID\", \"reason\": \"El texto explica clarament el caràcter de les Directives: obligació de resultat amb elecció de mitjans. La cita conté la definició completa i permet descartar les altres opcions (la directa aplicabilitat és dels Reglaments, no de les Directives).\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-16.2\", \"verdict\": \"VALID\", \"reason\": \"El texto estableix el principi de primacia: la norma comunitària s'aplica però la norma interna no desapareix de l'ordenament jurídic. La cita és suficient per distingir entre aplicabilitat i derogació. Les altres opcions contradiuen aquest principi.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-17.0\", \"verdict\": \"VALID\", \"reason\": \"El texto explícitament caracteritza la responsabilitat de la Generalitat com territorial, estesa a tot el territori de Catalunya. La cita és directa i completa. Les altres opcions (personal, local, sectorial) no corresponen a la definició legal.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-17.1\", \"verdict\": \"VALID\", \"reason\": \"El texto enumera explícitament que 'Trànsit i seguretat viària' és un dels àmbits de la competència de la Generalitat en protecció i ordre públic. La cita és suficient. Les altres opcions són competències estatal (fronteres, passaports, estrangeria).\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-17.2\", \"verdict\": \"VALID\", \"reason\": \"El texto estableix que l'Estatut atorga a la Generalitat crear policia autònoma, tenir comandament suprem sobre ella, i coordinar les policies locals. La cita conté els dos elements essencials. Les altres opcions exclouen un dels elements o descriuen situacions incorrectes.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"S00018-18.0\", \"verdict\": \"VALID\", \"reason\": \"El texto estableix que les armes només s'utilitzan quan hi ha risc racionalment greu per a vida o integritat, o risc greu per a seguretat ciutadana. La cita és exacta i completa. Les altres opcions (qualsevol risc, ordre superior, béns materials) contradiuen la normativa.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "06",
+   "ids": [
+    "S00018-18.1",
+    "S00018-18.2",
+    "S00018-19.0",
+    "S00018-19.1",
+    "S00018-19.2",
+    "S00018-20.0",
+    "S00018-20.1",
+    "S00018-20.2",
+    "S00018-21.0"
+   ],
+   "prompt_sha256": "24814d181ffcffe25c60270ea5e9f78bfccd7b2eae96f519766093f4a657a27b",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "S00018-18.1": "83a7dac3124376bc3f349662fd907c56c5b2e4b315159b0be9cb6316ebeb1abf",
+    "S00018-18.2": "bb328e79437a10d5e0c45d9a4710e187dc0f35feca8044e2dd89c4f12da36789",
+    "S00018-19.0": "f63ac1c3f55590fa70e04038439389542dfd69f0ee85c5fbdebf1f3e26ce9913",
+    "S00018-19.1": "5a04707d56c7a411e4e3023c455c0e68ec1c501ff7960c00eb250b8421565660",
+    "S00018-19.2": "259deb7726ed7992cee1019c0a04adf21d0c2d056de783dc4b8577f848fc2f86",
+    "S00018-20.0": "55de99d8fcdf37eb0ce65ceb728439836114d75d27848f834d1b9039a6f68e73",
+    "S00018-20.1": "343e9ba2d7cc9320e4fdb552f89be4dce0738a6e8080e35dff193e1617f81b47",
+    "S00018-20.2": "0ad0a8ba4f5dada50120414a11aefea313bad079ba7eec5b0c5635e1bef455da",
+    "S00018-21.0": "7c89860337501003214d8c7d750fde052c37ef3ab447fc04540618ce300ba59a"
+   },
+   "veredictos": [
+    {
+     "question_id": "S00018-18.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto identifica clarament que la participació en funcions de policia judicial és una funció de col·laboració amb altres forces de seguretat de l'Estat. La cita conté tots els elements: que apareix sota 'Les funcions de col·laboració amb altres FCSE' i s'enumera específicament 'Participar en funcions de policia judicial'. Les altres opcions (propi de la comunitat, compartit indiferenciat, reservat a polícia local) no són correctes segons el text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-18.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta pregunta quina és l'obligació en el moment d'efectuar una detenció. El texto especifica sota 'Tractament de detinguts' que els membres 's'han d'identificar degudament com a tals en el moment d'efectuar una detenció'. Això s'aplica a tot moment ('han d'intervenir sempre, en qualsevol temps i lloc, tant si es troben de servei com si no'), incloent quan estan fora de servei. La cita cobreix completament el requisit.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-19.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta demana quin element NO és font directa del dret administratiu. El texto classifica clarament les fonts directes (amb subdivisions primàries i subsidiàries) separades de les fonts indirectes. 'La doctrina científica' apareix explícitament sota 'Fonts indirectes', mentre que 'El costum' i 'Els principis generals del dret' estan sota 'Fonts directes subsidiàries' i 'El reglament' sota 'Fonts directes primàries'. La cita deixa clar que la doctrina és indirecta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-19.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta presenta dos lleis del mateix rang (2020 i 2010) que es contradiuen, demandant quin principi les resol. El texto estableix: 'Principi de temporalitat: la norma posterior en el temps deroga l'antiga... Aquest és un principi que només pot ser aplicat entre normes del mateix rang'. Aquesta és una situació clàssica on el principi de temporalitat s'aplica. La cita és exacta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-19.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta pregunta quina institució garanteix la jerarquia màxima de la Constitució. El texto afirma: 'la jerarquia màxima correspon a la Constitució i és garantida pel control de constitucionalitat de les normes amb rang de llei que fa el Tribunal Constitucional'. Aquesta afirmació és directa i precisa. Cap altra opció (Tribunal Suprem, Corts Generals, Consell d'Estat) apareix associada a aquesta funció.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-20.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta demana quin òrgan va adoptar la Recomanació REC(2001)10. El texto comença: 'El Comitè de Ministres del Consell d'Europa, en la Recomanació REC(2001)10, sobre el Codi europeu d'ètica de la policia, adoptada el 19 de setembre de 2001'. Aquesta és una identificació directa i inequívoca. Les altres opcions (Parlament Europeu, Comissió Europea, ONU) són incorrectes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-20.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta pregunta a quins altres òrgans s'aplica el Codi. El texto especifica: 'o a altres òrgans autoritzats i/o controlats pels poders públics el primer objectiu dels quals consisteix a garantir el manteniment de l'ordre en la societat civil, i que estan autoritzats per l'Estat a utilitzar la força i/o poders especials'. L'opció 1 (òrgans controlats pels poders públics que mantinguin ordre i puguin usar força) correspon exactament. L'opció 0 (empreses privades sense autorització) és explícitament exclosa per 'controlats pels poders públics'.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-20.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La pregunta pregunta la finalitat de la Resolució INT/1828/2004. El texto estableix: 'per tal que els membres del Cos de Mossos d'Esquadra procurin adequar-se en la seva actuació i en el compliment de les seves funcions als principis, les bases i els criteris establerts en el Codi ètic esmentat'. L'opció 1 (adequar la seva actuació als principis del Codi europeu) és el reflecteix exacte de la finalitat expressada. La cita cobreix completament aquesta finalitat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "S00018-21.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Mentre que el texto respon correctament que la reserva estatutària 'no impedeix totalment' la regulació per altres normes, i proporciona l'exemple específic de les lleis de l'article 150 CE, la cita oferida ('La reserva d'aquestes matèries a l'Estatut no impedeix totalment que altres normes completin la regulació estatutària') no menciona l'article 150 CE. La cita estableix el principi general però no el mecanisme específic (article 150 CE) que l'opció correcta invoca com a exemple. L'exemple de l'article 150 CE apareix només en el texto complet, no en la cita.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "06",
+    "transcripcion": "agent-a199da980dd8a7c94.jsonl",
+    "respuesta_sha256": "776b4bee81931f15ae21716fc7cb9564650041eb3591e2d54f63e720e6ef99d3"
+   },
+   "registrada_el": "2026-10-02T22:53:27",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:53:27",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-a199da980dd8a7c94.jsonl",
+      "respuesta_sha256": "776b4bee81931f15ae21716fc7cb9564650041eb3591e2d54f63e720e6ef99d3"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"S00018-18.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto identifica clarament que la participació en funcions de policia judicial és una funció de col·laboració amb altres forces de seguretat de l'Estat. La cita conté tots els elements: que apareix sota 'Les funcions de col·laboració amb altres FCSE' i s'enumera específicament 'Participar en funcions de policia judicial'. Les altres opcions (propi de la comunitat, compartit indiferenciat, reservat a polícia local) no són correctes segons el text.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-18.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta pregunta quina és l'obligació en el moment d'efectuar una detenció. El texto especifica sota 'Tractament de detinguts' que els membres 's'han d'identificar degudament com a tals en el moment d'efectuar una detenció'. Això s'aplica a tot moment ('han d'intervenir sempre, en qualsevol temps i lloc, tant si es troben de servei com si no'), incloent quan estan fora de servei. La cita cobreix completament el requisit.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-19.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta demana quin element NO és font directa del dret administratiu. El texto classifica clarament les fonts directes (amb subdivisions primàries i subsidiàries) separades de les fonts indirectes. 'La doctrina científica' apareix explícitament sota 'Fonts indirectes', mentre que 'El costum' i 'Els principis generals del dret' estan sota 'Fonts directes subsidiàries' i 'El reglament' sota 'Fonts directes primàries'. La cita deixa clar que la doctrina és indirecta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-19.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta presenta dos lleis del mateix rang (2020 i 2010) que es contradiuen, demandant quin principi les resol. El texto estableix: 'Principi de temporalitat: la norma posterior en el temps deroga l'antiga... Aquest és un principi que només pot ser aplicat entre normes del mateix rang'. Aquesta és una situació clàssica on el principi de temporalitat s'aplica. La cita és exacta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-19.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta pregunta quina institució garanteix la jerarquia màxima de la Constitució. El texto afirma: 'la jerarquia màxima correspon a la Constitució i és garantida pel control de constitucionalitat de les normes amb rang de llei que fa el Tribunal Constitucional'. Aquesta afirmació és directa i precisa. Cap altra opció (Tribunal Suprem, Corts Generals, Consell d'Estat) apareix associada a aquesta funció.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-20.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta demana quin òrgan va adoptar la Recomanació REC(2001)10. El texto comença: 'El Comitè de Ministres del Consell d'Europa, en la Recomanació REC(2001)10, sobre el Codi europeu d'ètica de la policia, adoptada el 19 de setembre de 2001'. Aquesta és una identificació directa i inequívoca. Les altres opcions (Parlament Europeu, Comissió Europea, ONU) són incorrectes.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-20.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta pregunta a quins altres òrgans s'aplica el Codi. El texto especifica: 'o a altres òrgans autoritzats i/o controlats pels poders públics el primer objectiu dels quals consisteix a garantir el manteniment de l'ordre en la societat civil, i que estan autoritzats per l'Estat a utilitzar la força i/o poders especials'. L'opció 1 (òrgans controlats pels poders públics que mantinguin ordre i puguin usar força) correspon exactament. L'opció 0 (empreses privades sense autorització) és explícitament exclosa per 'controlats pels poders públics'.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-20.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La pregunta pregunta la finalitat de la Resolució INT/1828/2004. El texto estableix: 'per tal que els membres del Cos de Mossos d'Esquadra procurin adequar-se en la seva actuació i en el compliment de les seves funcions als principis, les bases i els criteris establerts en el Codi ètic esmentat'. L'opció 1 (adequar la seva actuació als principis del Codi europeu) és el reflecteix exacte de la finalitat expressada. La cita cobreix completament aquesta finalitat.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"S00018-21.0\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"Mentre que el texto respon correctament que la reserva estatutària 'no impedeix totalment' la regulació per altres normes, i proporciona l'exemple específic de les lleis de l'article 150 CE, la cita oferida ('La reserva d'aquestes matèries a l'Estatut no impedeix totalment que altres normes completin la regulació estatutària') no menciona l'article 150 CE. La cita estableix el principi general però no el mecanisme específic (article 150 CE) que l'opció correcta invoca com a exemple. L'exemple de l'article 150 CE apareix només en el texto complet, no en la cita.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

@@ -68,6 +68,11 @@ def siguiente_lote(estado):
     usados = [int(x["id"][1:]) for x in estado.get("lotes", []) if re.fullmatch(r"S\d+", x.get("id", ""))]
     for f in glob.glob(os.path.join(R, "datos", "preguntas-*.json")) + glob.glob(os.path.join(R, "datos", "candidatas", "*.json")):
         usados += [int(q["lote"][1:]) for q in B.leer(f, []) if re.fullmatch(r"S\d+", str(q.get("lote", "")))]
+    # lotes abiertos, suspendidos o archivados sin cerrar (p. ej. S00018): su carpeta nunca se reutiliza
+    for d in glob.glob(os.path.join(DIR, "S*")) + glob.glob(os.path.join(ARCHIVO, "S*")):
+        m = re.match(r"S(\d+)", os.path.basename(d))
+        if m:
+            usados.append(int(m.group(1)))
     return max(usados, default=0) + 1
 
 
