@@ -282,6 +282,13 @@ def main(argv=None):
     if a.reanudar and estado.get("pausa"):
         estado.setdefault("pausas_levantadas", []).append(dict(estado["pausa"], levantada=hoy()))
         estado["pausa"] = None
+    if not a.dry_run:  # el modo API juzga con los criterios de v1 y no deja evidencia archivada: no puede publicar bajo v3
+        from fabrica import politica as P
+        pol = P.cargar()
+        if pol["componentes"].get("mecanismo", {}).get("veredicto_trazable"):
+            print(f"MODO_API_BLOQUEADO: la política activa {pol['version']} exige veredicto trazable (juez de sesión en tandas de ≤10, "
+                  "evaluación archivada). El modo API no lo cumple: usa python3 -m fabrica.sesion. No se genera ni se publica nada.")
+            return 4
     oposiciones = resolver_oposiciones(a.oposicion, cfg)
     fuentes, banco = F.Fuentes(), B.Banco()
     temas, sin_fuente = planificar(cfg, fuentes, oposiciones)

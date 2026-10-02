@@ -41,9 +41,11 @@ class Cobertura(unittest.TestCase):
         for t in r["temas"]:
             self.assertLessEqual(t["objetivo"], t["capacidad"])
             self.assertLessEqual(por_tema[t["tema"]], t["falta"], t["tema"])
-        c5 = next(t for t in r["temas"] if t["tema"] == "C.5")
-        self.assertEqual(c5["actuales"], 0)
-        self.assertGreater(por_tema["C.5"], 0)
+        for t in r["temas"]:  # todo tema con hueco de generación tiene necesidades (y uno en objetivo, ninguna)
+            if t["tipo_gap"] == "GENERACION":
+                self.assertGreater(por_tema[t["tema"]], 0, t["tema"])
+            if t["falta"] == 0:
+                self.assertEqual(por_tema[t["tema"]], 0, t["tema"])
 
     def test_oficiales_no_cuentan_como_cobertura(self):
         c2 = next(t for t in res()["temas"] if t["tema"] == "C.2")

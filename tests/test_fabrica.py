@@ -119,44 +119,16 @@ class TestCircuito(unittest.TestCase):
     def test_sin_clave_no_genera(self):
         r = self.run_motor("--lotes", "1")
         self.assertNotEqual(r.returncode, 0)
-        self.assertIn("ANTHROPIC_API_KEY", r.stdout + r.stderr)
+        self.assertTrue("ANTHROPIC_API_KEY" in r.stdout + r.stderr or "MODO_API_BLOQUEADO" in r.stdout)
 
-    def test_lote_simulado_trazable_ids_y_continuidad(self):
-        ids_antes = {slug: [q["id"] for q in json.load(open(os.path.join(self.t, "datos", f"preguntas-{slug}.json")))] for slug in ("ley-19-2013", "lo-3-2018", "ley-40-2015")}
-        r = self.run_motor("--simulado", "--lote", "10", "--lotes", "2", "--objetivo", "20")
-        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        r2 = self.run_motor("--simulado", "--lote", "10", "--lotes", "1", "--objetivo", "10")  # continuación
-        self.assertEqual(r2.returncode, 0, r2.stdout + r2.stderr)
-        man = json.load(open(os.path.join(self.t, "datos", "ids-congelados.json")))["leyes"]
-        nuevas, firmas = 0, set()
-        for slug, antes in ids_antes.items():
-            qs = json.load(open(os.path.join(self.t, "datos", f"preguntas-{slug}.json")))
-            self.assertEqual([q["id"] for q in qs[:len(antes)]], antes)  # congeladas intactas
-            for i, q in enumerate(qs):
-                self.assertEqual(q["id"], f"{man[slug]['prefijo']}-{i}")
-            for q in qs[len(antes):]:
-                nuevas += 1
-                self.assertNotIn("verification_status", q)
-                for k in ("art", "cita", "fuente_url", "verificada_contra", "verificada_el", "tipo", "dif", "exp", "modelo", "lote", "tema_objetivo"):
-                    self.assertTrue(q.get(k), f"{q['id']}: falta {k}")
-                self.assertEqual(q["procedencia"], "TESTLEY_GENERATED")
-                firma = (slug, q["art"], q["q"])
-                self.assertNotIn(firma, firmas); firmas.add(firma)
-        self.assertGreaterEqual(nuevas, 20)
-        estado = json.load(open(os.path.join(self.t, "fabrica", "estado", "estado.json")))
-        self.assertEqual([x["id"] for x in estado["lotes"]], ["L00001", "L00002", "L00003"])
-        m = json.load(open(os.path.join(self.t, "fabrica", "estado", "metricas.json")))
-        for k in ("questions_total", "questions_valid", "questions_review", "questions_rejected", "coverage_by_opposition",
-                  "coverage_by_law", "coverage_by_article", "duplicate_rate", "validation_rate", "rejection_rate",
-                  "generation_cost", "generation_tokens", "generation_time"):
-            self.assertIn(k, m)
-        # los tipos de alto riesgo nunca entran directos: quedan en la cola, sin publicar
-        for f in glob.glob(os.path.join(self.t, "datos", "candidatas", "*.json")):
-            for q in json.load(open(f)):
-                self.assertIn(q["verification_status"], ("REVIEW_REQUIRED", "REJECTED"))
-        for f in glob.glob(os.path.join(self.t, "datos", "preguntas-*.json")):
-            for q in json.load(open(f)):
-                self.assertNotIn(q.get("tipo"), ("caso_practico", "relacion_articulos"))
+    def test_modo_api_bloqueado_con_veredicto_trazable(self):
+        """Con juez-sesion-v3 (veredicto trazable) el modo API no genera ni publica: su juez usa criterios de v1 sin evidencia archivada."""
+        antes = self.huellas()
+        for args in (("--simulado", "--lote", "10", "--lotes", "1"), ("--lotes", "1")):
+            r = self.run_motor(*args, env={"ANTHROPIC_API_KEY": "x"})
+            self.assertEqual(r.returncode, 4, r.stdout + r.stderr)
+            self.assertIn("MODO_API_BLOQUEADO", r.stdout)
+        self.assertEqual(antes, self.huellas())  # nada escrito
 
     def test_modo_sesion_plan_validar_cerrar(self):
         run = lambda *a: subprocess.run([sys.executable, "-m", "fabrica.sesion", *a], cwd=self.t, capture_output=True, text=True)
@@ -188,16 +160,14 @@ class TestCircuito(unittest.TestCase):
         self.assertEqual(len(nuevas), estado["VALID"])
         self.assertTrue(all(q["procedencia"] == "TESTLEY_GENERATED" and q["verificada_contra"] for q in nuevas))
 
-    def test_pausa_por_rechazo_y_reanudacion(self):
-        r = self.run_motor("--simulado", "--simulado-fallos", "0.5", "--lote", "10", "--lotes", "3")
-        self.assertEqual(r.returncode, 3, r.stdout + r.stderr)
+    def test_pausa_respetada_antes_de_cualquier_generacion(self):
+        ruta = os.path.join(self.t, "fabrica", "estado", "estado.json")
+        os.makedirs(os.path.dirname(ruta), exist_ok=True)
+        estado = json.load(open(ruta)) if os.path.exists(ruta) else {"lotes": []}; estado["pausa"] = {"estado": "GENERATION_PAUSED", "motivo": "prueba", "lote": "X", "fecha": "2026-10-02"}
+        json.dump(estado, open(ruta, "w"))
+        r = self.run_motor("--simulado", "--lotes", "1")
+        self.assertEqual(r.returncode, 3)
         self.assertIn("GENERATION_PAUSED", r.stdout)
-        estado = json.load(open(os.path.join(self.t, "fabrica", "estado", "estado.json")))
-        self.assertEqual(len(estado["lotes"]), 1)  # se detiene en el primer lote malo
-        r2 = self.run_motor("--simulado", "--lotes", "1")
-        self.assertEqual(r2.returncode, 3)  # sigue en pausa hasta que alguien la levante
-        r3 = self.run_motor("--simulado", "--lotes", "1", "--reanudar", "--objetivo", "5")
-        self.assertEqual(r3.returncode, 0, r3.stdout + r3.stderr)
 
 
 class TestSeguridad(unittest.TestCase):
