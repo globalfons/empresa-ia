@@ -21,6 +21,8 @@ def publicable(q):
         return True
     if q.get("verification_status") not in (None, "VALID"):
         return False
+    if "reevaluation_verdict" in q:  # reevaluada con el juez v2: manda el veredicto nuevo
+        return q["reevaluation_verdict"] == "VALID"
     t = q.get("traza")
     return t is None or (t.get("validation_status") == "VALID" and t.get("judge_verdict") == "VALID")
 

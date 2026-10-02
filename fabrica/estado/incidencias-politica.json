@@ -10,5 +10,23 @@
   "tipo": "juez_no_evaluo",
   "lote": "S00018",
   "detalle": "Ejecución 2 del juez de S00018: veredictos escritos por scripts con todas las banderas true por defecto y solo 2-3 ítems revisados a mano (58/59 OK). Tampoco es un juicio ítem a ítem. Veredictos archivados sin usar. El juez del piloto S00017 siguió el mismo patrón (scripts con true por defecto tras imprimir los ítems). Fábrica en GENERATION_PAUSED; decisión humana pendiente."
+ },
+ {
+  "fecha": "2026-10-02T18:34:49",
+  "tipo": "lote_suspendido",
+  "lote": "S00018",
+  "detalle": "S00018 suspendido sin cerrar ni publicar: sus 59 candidatas se reevalúan con juez-sesion-v2 (autorización explícita del 2026-10-02)."
+ },
+ {
+  "fecha": "2026-10-02T18:43:01",
+  "tipo": "tanda_juez_rechazada",
+  "lote": "CAL50-v2",
+  "detalle": "CAL50-v2 tanda 01: RESPUESTA_AGREGADA: lef-1954-47: la razón es una valoración agregada («El artículo 33.1 establece que en primera convocatoria se re»)"
+ },
+ {
+  "fecha": "2026-10-02T18:43:17",
+  "tipo": "guard_falso_positivo",
+  "lote": "CAL50-v2",
+  "detalle": "CAL50-v2 tanda 01 rechazada por el patrón de respuestas agregadas («todos sus miembros… correcta», razón individual). Se acota el patrón a valoraciones sobre el conjunto de preguntas (test añadido) y se vuelve a registrar la MISMA respuesta del juez, sin cambios."
  }
 ]

@@ -177,9 +177,8 @@ class TestCircuito(unittest.TestCase):
         cands.append(dict(cands[0], q="Pregunta con cita inventada que no existe", cita="esta frase no está en el artículo"))
         json.dump(cands, open(os.path.join(d, "candidatas.json"), "w"), ensure_ascii=False)
         r = run("validar"); self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        rev = json.load(open(os.path.join(d, "revision.json")))
-        json.dump([{"r": it["r"], "respaldada": True, "unica": True, "clara": True, "duplicada_de": "", "motivo": ""} for it in rev["items"]],
-                  open(os.path.join(d, "veredictos.json"), "w"))
+        from tests import juez_simulado  # juez-sesion-v2: un veredicto por pregunta, registrado desde la transcripción del juez
+        self.assertTrue(all(x.returncode == 0 for x in juez_simulado.aprobar_todo(self.t, os.path.basename(d))))
         r = run("cerrar"); self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertFalse(os.path.exists(os.path.join(self.t, "fabrica", "sesion", "abierto.json")))
         estado = json.load(open(os.path.join(self.t, "fabrica", "estado", "estado.json")))["lotes"][-1]

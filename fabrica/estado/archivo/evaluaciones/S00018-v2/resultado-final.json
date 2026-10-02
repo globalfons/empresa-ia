@@ -1,0 +1,965 @@
+{
+ "lote": "S00018",
+ "estado": "GENERATION_PAUSED · sin publicar (pendiente de autorización)",
+ "recuento_final": {
+  "VALID": 52,
+  "REVIEW_REQUIRED": 6,
+  "REJECTED": 1
+ },
+ "preguntas": [
+  {
+   "question_id": "S00018-0.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, d'on solen sorgir les normes deontològiques d'una professió?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text afirma explícitament que les normes deontològiques solen sorgir del mateix col·lectiu professional. L'opció marcada com correcta (1) té suport clar en el text. Cap altra opció és mencionada com font de normes deontològiques. La pregunta és clara i útil per avaluar comprensió lectora.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-0.1",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, per a qui és una garantia el Codi de deontologia policial?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text conté la frase exacta: 'El Codi de deontologia policial és una garantia per al ciutadà, però també per al mateix agent de policia'. L'opció 2 reprodueix aquesta garantia dual. Ninguna altra opció és suportada pel text. La pregunta és clara i ben formulada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-0.2",
+   "tipo": "caso_practico",
+   "q": "Un agent sosté que, en un estat democràtic, la policia compleix tota la seva missió amb complir i fer complir la llei. D'acord amb la Guia d'estudi, aquesta afirmació és:",
+   "deterministic": "REVIEW_REQUIRED",
+   "deterministic_motivos": [
+    "tipo caso_practico: revisión humana obligatoria en esta fase"
+   ],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text afirma: 'la policia no solament ha de complir i fer complir la llei, sinó que, a més, ha de mostrar respecte cap als drets de les persones'. L'opció 3 identifica correctament la incompletesa. Els altres distractors no trobem suport al text. La pregunta és clara i ben formulada.",
+   "final": "REVIEW_REQUIRED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-1.0",
+   "tipo": "conceptual",
+   "q": "Según el artículo 1 del Estatuto de Autonomía de Cataluña, ¿cómo ejerce Cataluña su autogobierno?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text reprodueix la definició constitucional: 'Cataluña, como nacionalidad, ejerce su autogobierno constituida en Comunidad Autónoma de acuerdo con la Constitución y con el presente Estatuto'. L'opció 1 coincideix exactament. Cap altra opció és suportada. Pregunta clara de comprensió literal.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-2.0",
+   "tipo": "organos",
+   "q": "Segons la Guia d'estudi, quin òrgan pot exigir la responsabilitat penal dels membres del Govern de l'Estat?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text conté: 'la seva responsabilitat penal només pot ser exigida pel Tribunal Suprem'. L'opció 2 és l'única que coincideix. Els altres tribunals mencionats (Audiència Nacional, Constitucional, Superior de Justícia) no apareixen en aquesta context. Pregunta clara sobre norma específica d'aforament.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-2.1",
+   "tipo": "negativa",
+   "q": "Segons la Guia d'estudi, en quin dels casos següents NO cessa conjuntament el Govern de l'Estat?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text enumera explícitament: 'el Govern cessa conjuntament en tres casos concrets: després d'unes eleccions, en els casos de pèrdua de confiança parlamentària i per dimissió o mort del president del Govern'. La dimissió d'un ministre no és cas de cessament conjunt. L'opció 0 és correcta per ser l'única NO inclosa. Pregunta clara de lògica negativa ben formulada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-2.2",
+   "tipo": "requisitos",
+   "q": "Segons la Guia d'estudi, quin règim d'incompatibilitats estableix la CE per als membres del Govern de l'Estat?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text especifica que no poden exercir 'cap activitat professional o mercantil' i que hi ha excepció per ser parlamentaris. L'opció 0 (poden ser parlamentaris però no exercir activitats mercantils) és l'única correcta. El parecida llistat es refereix a una pregunta diferent (responsabilitat penal, no incompatibilitats). Pregunta clara sobre règim d'incompatibilitats.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-3.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, quina fou la ciutat més important de la Catalunya romana?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "REJECTED",
+   "judge_v2_reason": "El text afirma: 'La ciutat més important de la Catalunya romana fou Tarraco'. L'opció és correcta i suportada. Però el camp 'parecidas' inclou l'entrada 'mx46-002-19-6' que conté la mateixa pregunta ('La ciutat més important de la Catalunya romana fou:') amb la mateixa resposta ('Tarraco'). Es tracta de duplicació clara de contingut.",
+   "final": "REJECTED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "REJECTED",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-3.1",
+   "tipo": "dificil",
+   "q": "Segons la Guia d'estudi, què va provocar l'encariment dels esclaus que va conduir a la crisi del sistema esclavista romà?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text estableix causa-efecte: 'la paralització de l'expansió militar –que feia que no augmentés el nombre d'esclaus i, consegüentment, n'augmentés el preu– va portar... a una gradual transformació'. L'opció 1 reprodueix aquesta causalitat. Ningu altre opció és suportada. Pregunta clara sobre factor econòmic específic.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-3.2",
+   "tipo": "aplicacion",
+   "q": "Un text descriu una societat ruralitzada, amb crisi de les ciutats i esclaus convertits en colons. Segons la Guia d'estudi, a quin procés correspon?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text vincula els símptomes descrits ('ruralització de la societat, transformació dels esclaus en colons') al procés històric 'a partir del segle iii d. de C., cap a una gradual transformació de l'imperi'. L'opció 2 és l'única que coincideix amb aquest període i procés. Pregunta clara de contextualització històrica.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-4.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, quin òrgan de consulta i participació es va crear el 2008 amb el Pacte nacional per a la immigració?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto afirma explícitament que el 2008 es va crear La Taula de Ciutadania i Immigració amb el Pacte nacional per a la immigració. L'opció 2 és l'única correcta i correspon exactament al que estableix el text.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-4.1",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, per què els estats membres han hagut de transposar a la legislació interna les directives europees en matèria d'asil?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto precisa que els estats tenen marge de maniobra en l'aplicació de les directives i per tant les han de transposar a la legislació interna. L'opció 1 és l'única correcta i clara. L'opció 0 descriu correctament els reglaments (que no necessiten transposició), no les directives.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-4.2",
+   "tipo": "dificil",
+   "q": "Segons la Guia d'estudi, en quines condicions la Directiva 2011/95/UE preveu la llibertat de circulació dins de l'estat membre dels beneficiaris de protecció internacional?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix expressament que la Directiva 2011/95/UE concedeix la llibertat de circulació als beneficiaris de protecció internacional en les mateixes condicions que els nacionals de països tercers amb residència legal. L'opció 2 reprodueix exactament aquesta previsió.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-5.0",
+   "tipo": "organos",
+   "q": "Segons la Guia d'estudi, quin òrgan de la Interpol està format per 13 personalitats escollides per l'Assemblea General?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix que el Comitè Executiu de la Interpol està format per 13 personalitats escollides per l'Assemblea General. L'opció 1 és l'única que coincideix amb el text. Les altres opcions (Secretaria General, Oficina d'Enllaç Europea, Oficina Central Nacional) no són compostes per 13 personalitats.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-5.1",
+   "tipo": "competencias",
+   "q": "Segons la Guia d'estudi, l'Europol té com a objectiu millorar la cooperació policial contra delictes com el terrorisme o el blanqueig de diners, sempre que:",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix que l'Europol actua sempre que hi hagi estructura delictiva organitzada i dos o més estats membres s'hi vegin afectats. L'opció 1 recull ambdues condicions necessàries. Les altres opcions afegeixen requeriments no esmentats al text (sol·licitud de la Interpol, autorització del Consell, víctimes comunitàries).",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-5.2",
+   "tipo": "procedimiento",
+   "q": "Segons la Guia d'estudi, qui executa dins d'un país membre de la Interpol les operacions policials que hi sol·liciten altres països membres?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto especifica que l'Oficina Central Nacional executa dins del país les operacions policials sol·licitades per altres membres a través de les respectives OCN. L'opció 2 és l'única que identifica correctament la Secretaria General, el Comitè Executiu i l'Oficina d'Enllaç Europea no són els encarregats d'executar aquestes operacions en el territori nacional.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-6.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, quina va ser la primera línia de ferrocarril construïda a Espanya?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto afirma explícitament que la línia Barcelona-Mataró de 1848 va ser la primera construïda a Espanya. L'opció 1 és l'única correcta. Es tracta d'un fet històric específic que és material útil per a una oposició (no és trivial malgrat ser una data/nom).",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-6.1",
+   "tipo": "negativa",
+   "q": "Segons la Guia d'estudi, quina de les afirmacions següents sobre la industrialització catalana del segle XIX NO és correcta?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix explícitament que 'no fou possible un creixement de la indústria siderúrgica per manca de carbó i ferro', per tant l'opció 2 (que afirma que va créixer per abundant carbó i ferro) és incorrecta. Les altres tres opcions (0, 1, 3) són correctes segons el text, responent correctament a la pregunta formulada sobre quina afirmació NO és correcta.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-6.2",
+   "tipo": "dificil",
+   "q": "Segons la Guia d'estudi, quina d'aquestes combinacions d'organització obrera, any i lloc de fundació és correcta?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto especifica que 'la UGT, el 1888, a Barcelona' de caràcter marxista. L'opció 1 recull exactament aquesta informació. L'opció 0 és falsa (PSOE a Madrid, no Barcelona); l'opció 2 és falsa (Unió de Rabassaires el 1922, no 1888); l'opció 3 és falsa (UGT el 1888, no 1879).",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-8.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, en quins articles de la CE estan previstos els drets fonamentals i les llibertats públiques?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix que 'els drets fonamentals i les llibertats públiques estan previstos als articles 15 a 29 de la CE'. L'opció 1 reprodueix exactament aquest precepte. Preguntes sobre articles específics de normativa de referència són material útil per a oposicions (no són trivials).",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-8.1",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, quina característica tenen els drets personals o de llibertat pel que fa a la seva relació amb la llei?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text especifica clarament que els drets personals no necessiten una llei per regular l'exercici sinó per protegir-los. L'opció a és única i correcta. Pregunta clara i útil per a l'examen.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-8.2",
+   "tipo": "caso_practico",
+   "q": "Un grup de veïns convoca una manifestació per protestar contra una decisió municipal. Segons la classificació de la Guia d'estudi, quin tipus de dret exerceixen?",
+   "deterministic": "REVIEW_REQUIRED",
+   "deterministic_motivos": [
+    "tipo caso_practico: revisión humana obligatoria en esta fase"
+   ],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text categoritza explícitament el dret de reunió i manifestació (art. 21) com a dret de participació o polític. L'opció és única i clarament correcta. La pregunta és ben formada i útil.",
+   "final": "REVIEW_REQUIRED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-9.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, en quin any es van aprovar els primers estatuts d'autonomia?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "REVIEW_REQUIRED",
+   "judge_v2_reason": "Pregunta sobre una data específica (any 1979). Segons les instruccions, les dates d'aprovació de decrets es consideren trivials i no són material útil per a examen (clara=false). El text es limita a repetir la data sense context més profund.",
+   "final": "REVIEW_REQUIRED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-9.1",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, a partir de quin principi la CE possibilita que el règim autonòmic es generalitzi?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text afirma explícitament que el principi dispositiu és el que permet la generalització del règim autonòmic. L'opció a és única i clarament correcta segons el text proporcionat.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-9.2",
+   "tipo": "negativa",
+   "q": "Segons la Guia d'estudi, quin d'aquests elements NO forma part de la fórmula definidora de l'organització territorial que adopta la CE?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text enumera explícitament els elements de la fórmula definitòria (únic Estat, constitució, ordenament jurídic; dret a l'autonomia). L'opció d (estatut únic per a totes les regions) no apareix a la fórmula. Pregunta clara amb resposta única correcta.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-10.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, què constitueix la primera font de productivitat en la nova societat sorgida de les TIC?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text afirma textualment que 'el coneixement és, precisament, la primera font de productivitat' en la nova societat. L'opció a és única i correcta. Pregunta clara i útil.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-10.1",
+   "tipo": "dificil",
+   "q": "Segons la Guia d'estudi, quina de les següents és una de les característiques que defineixen el canvi cap a la societat del coneixement?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text enumera 5 característiques del canvi (a-e). L'opció c coincideix exactament amb la característica e: 'Augmenten els treballadors terciaris'. Les altres opcions contradeixen les característiques listades.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-10.2",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, quina és la novetat respecte al cicle vital dels coneixements en la societat actual?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text explicita que la novetat és que 'aquest cicle vital dels coneixements s'ha fet molt més curt que la vida de les persones'. L'opció b és única i directament respaldada. Pregunta clara i útil per a examen.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-11.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, quin és el punt més elevat de Catalunya?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text identifica explícitament 'la Pica d'Estats (3.143 m), que és el punt més elevat de Catalunya'. Pregunta sobre geografia física de Catalunya amb resposta única. Es tracta de material útil per a examen, no merament trivial.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-11.1",
+   "tipo": "aplicacion",
+   "q": "Un excursionista travessa una plana d'origen tectònic, orientada d'est a oest, per on circula el curs alt del Segre. Segons la Guia d'estudi, on es troba?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text descriu 'la Cerdanya, plana d'origen tectònic, orientada d'est a oest i per on circula el curs alt del Segre', que coincideix exactament amb la descripció de l'escenari. Resposta única i ben fonamentada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-11.2",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, quines subunitats de relleu constitueixen el Sistema Mediterrani?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto especifica claramente que el Sistema Mediterrani està constituït per tres subunitats: Serralada Prelitoral, Serralada Litoral, i Depressió Prelitoral. L'opció 1 coincideix exactament amb aquesta descripció. La pregunta és clara i el text justifica plenament la resposta correcta.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-12.0",
+   "tipo": "plazos",
+   "q": "Segons la Guia d'estudi, quin termini ha de transcórrer sense que cap candidat obtingui la confiança del Parlament perquè aquest quedi dissolt automàticament?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix explícitament que si transcorren dos mesos a comptar des de la primera votació i cap candidat obté la confiança del Parlament, aquest serà dissolt automàticament. L'opció 1 és correcta i única. La pregunta sobre terminis concrets és material útil per a un examen.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-12.1",
+   "tipo": "caso_practico",
+   "q": "Un diputat del Parlament de Catalunya és investigat per un presumpte delicte comès a Girona. Segons la Guia d'estudi, quin òrgan és competent per a la seva inculpació, processament i judici?",
+   "deterministic": "REVIEW_REQUIRED",
+   "deterministic_motivos": [
+    "tipo caso_practico: revisión humana obligatoria en esta fase"
+   ],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto especifica que pels actes delictius comesos al territori de Catalunya, el Tribunal Superior de Justícia de Catalunya és competent per determinar la inculpació, presó, processament i judici. L'opció 1 és l'única correcta. La pregunta sobre jurisdicció és clara i ben formulada.",
+   "final": "REVIEW_REQUIRED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-12.2",
+   "tipo": "competencias",
+   "q": "Segons la Guia d'estudi, quina d'aquestes actuacions pot dur a terme el Parlament de Catalunya en relació amb els òrgans centrals de l'Estat?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto menciona explícitament que el Parlament pot interposar davant el Tribunal Constitucional un recurs d'inconstitucionalitat o conflicte de competències. L'opció 2 és correcta; les altres funcions corresponen a altres òrgans de l'Estat. La pregunta és clara i ben diferencia competències.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-13.0",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, per què el 1719 es van organitzar unes esquadres de paisans distribuïdes pels corregiments?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto explica clarament que el 1719, les tensions amb França van fer situar l'exèrcit a la frontera, per la qual cosa calia crear una força policial que controlés l'interior. L'opció 1 reflecteix correctament aquesta relació causal. La pregunta és clara i útil per avaluar comprensió de context històric.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-13.1",
+   "tipo": "negativa",
+   "q": "Segons la Guia d'estudi, quina de les afirmacions següents sobre els Mossos d'Esquadra al segle XVIII NO és correcta?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Es demana quina afirmació NO és correcta. El texto estableix que el model es va exportar 'a la segona meitat de segle', no 'a principis de segle'. L'opció 3 és correctament identificada com a incorrecta. Les altres tres opcions són confirmades pel texto. La pregunta de negació és clara.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-13.2",
+   "tipo": "dificil",
+   "q": "Segons la Guia d'estudi, quan el 1721 es van desfer les colles de veïns armats, quina esquadra es va mantenir i sota quin comandament?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto especifica que la de Valls, amb destacaments a Riudoms i Rodonyà, es va mantenir sota la comandància única de Pere Anton Veciana. L'opció 2 reprodueix correctament aquesta informació amb tots els detalls. La pregunta és clara i factual.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-14.0",
+   "tipo": "literal",
+   "q": "Segons la Guia d'estudi, en quin gran bloc dialectal del català s'inclou l'alguerès?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto classifica explícitament l'alguerès dins el 'català oriental: rossellonès o septentrional, central, balear i alguerès'. L'opció 1 és correcta i única. La pregunta sobre classificació dialectal és clara i ben definida al texto.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-14.1",
+   "tipo": "aplicacion",
+   "q": "Un agent escriu en un informe «L'individu presenta intoxicació etílica aguda». Segons la Guia d'estudi, a quin grau de formalitat correspon aquesta expressió?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto proporciona l'exemple 'L'individu presenta intoxicació etílica aguda' i l'etiqueta explícitament com a '(culte)'. L'opció 2 és correcta. La pregunta amb exemple concret és clara i útil per avaluar reconeixement de registres lingüístics.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-14.2",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, quina relació hi ha entre llengua estàndard i llengua correcta?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El texto estableix: 'no s'ha d'equiparar llengua estàndard a llengua correcta (una solució pot ser correcta, però no estàndard)'. L'opció 1 reprodueix exactament aquesta definició. La pregunta és clara i les altres opcions es contradiuen amb el texto.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-15.0",
+   "tipo": "organos",
+   "q": "Segons la Guia d'estudi, qui elegeix el president o presidenta del Consell General del Poder Judicial?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text indica clarament que el president del CGPJ és elegit per majoria de 3/5 dels vint vocals del Consell. L'opció a és correcta, única i ben respaldada per la text oficial.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-15.1",
+   "tipo": "caso_practico",
+   "q": "Una magistrada vol ser vocal del Consell General del Poder Judicial pel torn de jutges i magistrats. Segons la Guia d'estudi, quin aval necessita?",
+   "deterministic": "REVIEW_REQUIRED",
+   "deterministic_motivos": [
+    "tipo caso_practico: revisión humana obligatoria en esta fase"
+   ],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "La norma estableix clarament que els jutges que volen ser vocals necessiten l'aval de 25 membres en servei actiu O una associació judicial. L'opció a reflecteix correctament aquesta disjuntiva (o bé). Les altres opcions són incorrectes.",
+   "final": "REVIEW_REQUIRED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-15.2",
+   "tipo": "competencias",
+   "q": "Segons la Guia d'estudi, quina d'aquestes funcions correspon al Consell General del Poder Judicial?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text llista com a funció del CGPJ 'Presentar anualment a les Corts Generals una memòria sobre l'estat, el funcionament i l'activitat del CGPJ'. L'opció a (index 1) és correcta. Les altres opcions (nomenar Fiscal General, resoldre conflictes, dictar sentències) no són funcions de l'òrgan.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-16.0",
+   "tipo": "plazos",
+   "q": "Segons la Guia d'estudi, a partir de quin moment comencen els efectes jurídics de les decisions de la Unió Europea?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "La norma especifica clarament que les decisions de la UE produeixen efectes jurídics a partir de la notificació als destinataris. L'opció a (index 1) és correcta i única. Les altres opcions corresponen a altres actes comunitaris.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-16.1",
+   "tipo": "procedimiento",
+   "q": "Segons la Guia d'estudi, com han de donar compliment els estats destinataris a una directiva?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "El text estableix que les directives imposen una obligació de resultat però deixen als estats la manera i els mitjans de compliment. L'opció a (index 1) reflecteix correctament aquesta obligació de resultat amb marge discrecional.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-16.2",
+   "tipo": "aplicacion",
+   "q": "Un jutge espanyol constata que per resoldre un cas hi ha una norma comunitària i una d'interna que són contradictòries. Segons la Guia d'estudi, què ha de fer?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Segons el principi de primacia, quan hi ha normes contradictòries s'aplica la comunitària, però la interna no deixa de formar part de l'ordenament. L'opció a (index 2) és correcta i es distingeix de l'opció 0 que diu 'declarar derogada'.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-17.0",
+   "tipo": "literal",
+   "q": "Segons les idees força del tema C.1, quin abast té la responsabilitat de la Generalitat en matèria de seguretat?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "La norma indica explícitament que la responsabilitat de la Generalitat en seguretat és territorial, abastant tot el territori de Catalunya. L'opció a (index 1) és correcta. Les altres opcions (personal, local, sectorial) no apareixen en el text.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-17.1",
+   "tipo": "competencias",
+   "q": "Segons les idees força del tema C.1, quin d'aquests àmbits inclou la competència de la Generalitat en protecció de persones i béns i manteniment de l'ordre públic?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Entre els àmbits de competència de la Generalitat en protecció de persones i manteniment de l'ordre públic, el text llista explícitament 'Trànsit i seguretat viària'. L'opció a (index 2) és correcta. Les altres (control de fronteres, passaports, estrangeria) són competències estatals.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-17.2",
+   "tipo": "dificil",
+   "q": "Segons les idees força del tema C.1, què atorga l'Estatut d'autonomia a la Generalitat pel que fa a la policia?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "L'Estatut atorga a la Generalitat competència per crear una policia autònoma amb comandament suprem i coordinar les policies locals. L'opció a (index 2) és l'única que recull correctament ambdues atribucions. Les altres són incompletes o incorrectes.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-18.0",
+   "tipo": "requisitos",
+   "q": "Segons la Guia d'estudi, en quines situacions han d'utilitzar les armes els membres de les forces i cossos de seguretat?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "La llei estableix explícitament que les armes només s'han d'utilitzar en situacions de risc racionalment greu per a vides/integritat o greu per a seguretat ciutadana. L'opció a (index 2) és correcta. Les altres són massa permissives o incorrectes.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-18.1",
+   "tipo": "competencias",
+   "q": "Segons la Guia d'estudi, de quin tipus és la funció de participar en funcions de policia judicial que poden exercir els cossos de policia autonòmics?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "La pregunta demana el tipus de funció sobre participació en policia judicial. El text especifica clarament que participar en funcions de policia judicial és una funció de col·laboració amb altres FCSE, no funció pròpia ni compartida. L'opció correcta és única i està recolzada perfectament per la cita i el texto.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-18.2",
+   "tipo": "caso_practico",
+   "q": "Un mosso que està fora de servei practica una detenció. Segons la Guia d'estudi, què ha de fer en el moment d'efectuar-la?",
+   "deterministic": "REVIEW_REQUIRED",
+   "deterministic_motivos": [
+    "tipo caso_practico: revisión humana obligatoria en esta fase"
+   ],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre l'obligació d'identificació en el moment de la detenció. El texto afirma expressament: 's'han d'identificar degudament com a tals en el moment d'efectuar una detenció'. L'opció correcta és clara, única i totalment recolzada per la font legal.",
+   "final": "REVIEW_REQUIRED",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-19.0",
+   "tipo": "negativa",
+   "q": "Segons la Guia d'estudi, quina de les següents NO és una font directa del dret administratiu?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre fonts indirectes del dret administratiu. El texto enumera clarament les fonts directes (Constitució, llei, reglament com a primàries; costum i principis generals com a subsidiàries) i les indirectes (tractats, jurisprudència contenciosa, doctrina científica). La doctrina científica és l'única opció que figura com a indirecta.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-19.1",
+   "tipo": "aplicacion",
+   "q": "Una llei aprovada el 2020 contradiu una altra llei del mateix rang aprovada el 2010. Segons la Guia d'estudi, quin principi resol el conflicte?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Conflicte entre dues lleis del mateix rang aprovat en anys diferents. El texto estableix explícitament que 'la norma posterior en el temps deroga l'antiga' i que aquest principi només pot aplicar-se entre normes del mateix rang. La resposta és correcta, única i clara.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-19.2",
+   "tipo": "organos",
+   "q": "Segons la Guia d'estudi, quin òrgan garanteix la jerarquia màxima de la Constitució mitjançant el control de les normes amb rang de llei?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre l'òrgan que garanteix la jerarquia de la Constitució. El texto estableix específicament: 'la jerarquia màxima correspon a la Constitució i és garantida pel control de constitucionalitat de les normes amb rang de llei que fa el Tribunal Constitucional'. Resposta única i totalment recolzada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-20.0",
+   "tipo": "organos",
+   "q": "Segons la Guia d'estudi, quin òrgan va adoptar la Recomanació REC(2001)10, sobre el Codi europeu d'ètica de la policia?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre l'òrgan que va adoptar la Recomanació REC(2001)10. El texto identifica explícitament: 'El Comitè de Ministres del Consell d'Europa, en la Recomanació REC(2001)10, sobre el Codi europeu d'ètica de la policia, adoptada el 19 de setembre de 2001'. Resposta clara, única i totalment documentada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-20.1",
+   "tipo": "dificil",
+   "q": "Segons la Guia d'estudi, a més dels serveis de policia tradicionals, a quins altres òrgans s'aplica el Codi europeu d'ètica de la policia?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre altres òrgans als quals s'aplica el Codi europeu d'ètica. El texto especifica: 'altres òrgans autoritzats i/o controlats pels poders públics el primer objectiu dels quals consisteix a garantir el manteniment de l'ordre en la societat civil, i que estan autoritzats per l'Estat a utilitzar la força'. L'opció correcta és única i recolzada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-20.2",
+   "tipo": "conceptual",
+   "q": "Segons la Guia d'estudi, quina finalitat té la Instrucció aprovada per la Resolució INT/1828/2004 respecte als Mossos d'Esquadra?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre la finalitat de la Instrucció INT/1828/2004. El texto declara clarament: 'per tal que els membres del Cos de Mossos d'Esquadra procurin adequar-se en la seva actuació i en el compliment de les seves funcions als principis, les bases i els criteris establerts en el Codi ètic esmentat'. Resposta única, clara i totalment recolzada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  },
+  {
+   "question_id": "S00018-21.0",
+   "tipo": "excepcion",
+   "q": "Segons la Guia d'estudi, la reserva estatutària de l'article 147.2 CE impedeix que altres normes completin la regulació de les matèries reservades a l'Estatut?",
+   "deterministic": "VALID",
+   "deterministic_motivos": [],
+   "judge_v2": "VALID",
+   "judge_v2_reason": "Pregunta sobre si la reserva estatutària de l'article 147.2 CE impedeix que altres normes completin la regulació. El texto ho aclareix: 'La reserva d'aquestes matèries a l'Estatut no impedeix totalment que altres normes completin la regulació estatutària' i proporciona l'exemple específic: 'la comunitat autònoma pot rebre noves competències en virtut de les lleis estatals de l'article 150 CE'. Resposta única i totalment recolzada.",
+   "final": "VALID",
+   "legacy_verdict": {
+    "ejecucion1": "VALID",
+    "ejecucion2": "VALID",
+    "nota": "juez-sesion-v1, ejecuciones invalidadas (scripts con aprobación por defecto); no se usan"
+   },
+   "publicada": false
+  }
+ ]
+}

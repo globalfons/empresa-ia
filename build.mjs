@@ -32,7 +32,9 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
   // Estados de la pregunta: VALID (sin campo) · REVIEW_REQUIRED (su artículo cambió; se publica y se revisa) · OUTDATED (la cita ya no está en la ley vigente) · DEPRECATED (retirada a mano)
   L.desfasadas = L.qs.filter((q) => ["DEPRECATED", "OUTDATED"].includes(q.verification_status)); // no se publican (datos/vigilar_leyes.py, revisar_vigencia.py)
   L.revisar = L.qs.filter((q) => q.verification_status === "REVIEW_REQUIRED");
-  L.qs = L.qs.filter((q) => !["DEPRECATED", "OUTDATED"].includes(q.verification_status));
+  // REVIEW_REQUIRED_REEVALUATION: publicada antes y en reevaluación con el juez v2 (fabrica/reevaluacion.py) → no se sirve; conserva su id
+  L.reevaluacion = L.qs.filter((q) => q.verification_status === "REVIEW_REQUIRED_REEVALUATION");
+  L.qs = L.qs.filter((q) => !["DEPRECATED", "OUTDATED", "REVIEW_REQUIRED_REEVALUATION"].includes(q.verification_status));
   return L;
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);

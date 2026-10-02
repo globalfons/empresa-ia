@@ -1,6 +1,8 @@
 # Mossos 46/26 — informe del lote de la fábrica (fase B, objetivo +100 VALID)
 
-**Estado: GENERATION_PAUSED. Lote S00018 abierto y sin publicar. +0 VALID nuevas.**
+**Estado: GENERATION_PAUSED. Lote S00018 suspendido y sin publicar. +0 VALID nuevas.**
+
+> Actualización 2026-10-02 (juez-sesion-v2): S00018 reevaluado → 52 VALID · 6 REVIEW_REQUIRED (5 casos prácticos + 1 trivial) · 1 REJECTED (duplicado de mx46-002-19-6). Sigue sin publicar hasta autorización. Detalle: `fabrica/estado/archivo/evaluaciones/S00018-v2/resultado-final.json`.
 Fecha: 2026-10-02. Autorización: fase B (100 VALID para Mossos), sin escalado general.
 
 ## Resumen

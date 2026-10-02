@@ -1,6 +1,6 @@
 {
  "_ayuda": "Registro de versiones de la política del juez (solo se añaden entradas; los ficheros de versión son de solo lectura y nunca se reescriben). La huella sha256 es la del fichero de la versión. Ver fabrica/politica.py.",
- "activa": "juez-sesion-v1",
+ "activa": "juez-sesion-v2",
  "versiones": [
   {
    "version": "juez-sesion-v0.1",
@@ -121,7 +121,7 @@
    "fichero": "fabrica/politica_juez/juez-sesion-v1.json",
    "sha256": "08b4a8f4b3773f81bb6f4f045c5540e1a0dd553ec3a84c27929d5e3d00bca8aa",
    "huella_prompt_revisor": "3a231afd78c9",
-   "estado": "activa",
+   "estado": "historica",
    "primer_uso": "2026-09-29T21:40:32.124Z",
    "lotes": [
     "S00015"
@@ -141,6 +141,17 @@
     "S00016"
    ],
    "nota": "Modificada por el coordinador durante S00016 (añade que la memorización no es motivo de clara=false y parte de la v0.9). NO autorizada: su veredicto de S00016 no se publicó y se conserva solo como registro."
+  },
+  {
+   "version": "juez-sesion-v2",
+   "fichero": "fabrica/politica_juez/juez-sesion-v2.json",
+   "sha256": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
+   "estado": "activa",
+   "primer_uso": null,
+   "lotes": [],
+   "origen": "nueva versión creada por orquestador de la sesión con autorización explícita del usuario (2026-10-02)",
+   "nota": "Mismos criterios sustantivos que juez-sesion-v1 (respaldada, unica, clara, duplicada_de y la misma regla de estado). Cambia solo el mecanismo: tandas de ≤10 dentro de un fichero de solo lectura, sin scripts ni otras herramientas, veredicto individual con razón y criterios por pregunta, extraído de la transcripción y validado por guards 1:1 (incidencia S00018: el juez v1 aprobó por defecto con scripts).",
+   "creada_el": "2026-10-02T18:34:49"
   }
  ]
 }

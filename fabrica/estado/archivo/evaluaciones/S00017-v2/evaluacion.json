@@ -1,0 +1,830 @@
+{
+ "evaluacion": "S00017-v2",
+ "creada_el": "2026-10-02T18:36:46",
+ "judge_policy_version": "juez-sesion-v2",
+ "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
+ "preguntas": 43,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "guia-mossos-0",
+    "guia-mossos-1",
+    "guia-mossos-2",
+    "guia-mossos-3",
+    "guia-mossos-4",
+    "guia-mossos-5",
+    "guia-mossos-6",
+    "guia-mossos-7",
+    "guia-mossos-8",
+    "guia-mossos-9"
+   ],
+   "prompt_sha256": "d3cf6c69ecf90791e25ca63c44230c835a63b4c5acad77aba176c7049f5bb41e",
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "El text respalda correctament que l'home de Talteüll té aproximadament 450.000 anys i és la resta humana més antiga. No obstant, aquesta pregunta és essencialment duplicada de mx46-002-23-1, que planteja la mateixa informació de manera inversa (identifica la resta en lloc de l'edat).",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "mx46-002-23-1"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix clarament Catalunya com a 'redós' on 'es configuraran cultures pròpies i autòctones'. La resposta és única ja que 'passadís' (opció 0) es referia a on circularien pobles de fora. La pregunta és clara i útil per a l'examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma explícitament 'Sabem per la indústria lítica...que existien grups humans caçadors/recol·lectors' al paleolític inferior. La resposta és única; altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen com a evidència d'aquest període al text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix directament que 'en la seva redacció hi tingué un paper important el català Antoni de Capmany'. La resposta és única i ben documentada. La pregunta és clara i específica.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text caracteritza clarament els moderats amb 'concepte més autoritari, més protagonisme de la corona, més restrictius amb llibertats i sufragi restringit'. La resposta és única perquè el text contrasta explícitament amb els progressistes que tenien un concepte més ampli.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text atribueix explícitament al Trienni Liberal: 'llibertat econòmica industrial, primera desamortització eclesiàstica...afavorí les llibertats públiques'. La derogació de la Llei sàlica es menciona en context diferent (sous la regència de Maria Cristina després de la mort de Ferran VII), no com mesura del Trienni Liberal. La resposta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma directament 'A Catalunya no va existir mai un cos permanent de policia i el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La resposta és única i clara. La pregunta és ben formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-7",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix clarament que el feudalisme 'amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La resposta és única perquè reflecteix la descentralització, no la centralització. Pregunta clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-8",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text explica que els territoris sota jurisdicció baronial 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells'. La resposta és única: el baró que exercia jurisdicció era responsable de l'ordre públic. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text declara que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La resposta és única; altres organismes (Diputació, Consell de Cent, Reial Audiència) no es mencionen en aquesta funció.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "af58399a02daa0345.output",
+    "respuesta_sha256": "e4fcbfe01b589f5f2e5292652dd8adf9bad6db400a0b5a6f6baa7194348d13d1"
+   },
+   "registrada_el": "2026-10-02T18:43:01",
+   "intentos": [
+    {
+     "t": "2026-10-02T18:43:01",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "af58399a02daa0345.output",
+      "respuesta_sha256": "e4fcbfe01b589f5f2e5292652dd8adf9bad6db400a0b5a6f6baa7194348d13d1"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-0\",\n    \"verdict\": \"REJECTED\",\n    \"reason\": \"El text respalda correctament que l'home de Talteüll té aproximadament 450.000 anys i és la resta humana més antiga. No obstant, aquesta pregunta és essencialment duplicada de mx46-002-23-1, que planteja la mateixa informació de manera inversa (identifica la resta en lloc de l'edat).\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"mx46-002-23-1\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text defineix clarament Catalunya com a 'redós' on 'es configuraran cultures pròpies i autòctones'. La resposta és única ja que 'passadís' (opció 0) es referia a on circularien pobles de fora. La pregunta és clara i útil per a l'examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text afirma explícitament 'Sabem per la indústria lítica...que existien grups humans caçadors/recol·lectors' al paleolític inferior. La resposta és única; altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen com a evidència d'aquest període al text.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix directament que 'en la seva redacció hi tingué un paper important el català Antoni de Capmany'. La resposta és única i ben documentada. La pregunta és clara i específica.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text caracteritza clarament els moderats amb 'concepte més autoritari, més protagonisme de la corona, més restrictius amb llibertats i sufragi restringit'. La resposta és única perquè el text contrasta explícitament amb els progressistes que tenien un concepte més ampli.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text atribueix explícitament al Trienni Liberal: 'llibertat econòmica industrial, primera desamortització eclesiàstica...afavorí les llibertats públiques'. La derogació de la Llei sàlica es menciona en context diferent (sous la regència de Maria Cristina després de la mort de Ferran VII), no com mesura del Trienni Liberal. La resposta és única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text afirma directament 'A Catalunya no va existir mai un cos permanent de policia i el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La resposta és única i clara. La pregunta és ben formulada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-7\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix clarament que el feudalisme 'amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La resposta és única perquè reflecteix la descentralització, no la centralització. Pregunta clara i útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-8\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text explica que els territoris sota jurisdicció baronial 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells'. La resposta és única: el baró que exercia jurisdicció era responsable de l'ordre públic. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-9\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text declara que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La resposta és única; altres organismes (Diputació, Consell de Cent, Reial Audiència) no es mencionen en aquesta funció.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "guia-mossos-10",
+    "guia-mossos-11",
+    "guia-mossos-12",
+    "guia-mossos-13",
+    "guia-mossos-14",
+    "guia-mossos-15",
+    "guia-mossos-16",
+    "guia-mossos-17",
+    "guia-mossos-18",
+    "guia-mossos-19"
+   ],
+   "prompt_sha256": "841ba0d9e94dcd65f9a59fc3a9b4d41829fb5f474d67fa7960b6585da636cc85",
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre la posició del català en la situació de diglòssia dels segles IX-XI. El text suporta clarament que el català era la llengua B amb menys prestigi usada en àmbits privats. Resposta única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre els criteris de la Gramàtica Catalana de Pompeu Fabra de 1918. El text especifica que havia de ser supradialectal. Resposta única i ben fonamentada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-12",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta de geografia: quins territoris limiten amb Catalunya. El text enumera França, Andorra, Aragó i País Valencià. Navarra no s'esmenta. Resposta clara i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-13",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre els nombres de vegueries establerts per la Llei de 2010. El text suporta exactament 'set, ampliades a vuit a començaments de 2017'. Pregunta precisa amb dades numèriques úniques.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-14",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre la vegueria que inclou la comarca del Garraf. El text especifica que Penedès comprèn 'el Garraf'. Resposta única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-15",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre la definició de xarxes i cadenes migratòries. El text defineix exactament aquesta pregunta com 'el conjunt de relacions entre individus, famílies i grups que serveixen de pont'. Definitió clara i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-16",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre factors explicatius de la immigració a Catalunya (1998-2008). El text identifica dos factors: creixement econòmic i realitat demogràfica d'envelliment. L'opció 2 es suporta clarament al text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-17",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre l'any de naixement de la societat del coneixement. El text afirma explícitament 'l'any 1981'. Pregunta de data específica, útil i ben fonamentada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-18",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre la definició de hipermèdia. El text defineix 'integració de multimèdia i hipertext'. Resposta única i clara amb suport explícit al text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-19",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta sobre conceptes anglosaxons de seguretat (safety vs security). El text clarament vincula la inspecció d'aparells elevadors a 'safety' (seguretat ambiental i riscos). Aplicació conceptual clara i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 5,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "ae6fa02c5e38801ad.output",
+    "respuesta_sha256": "06a6c6be0f0e403e4324636740bdd1cb2281edcf73fd708356afd27df6c3dc55"
+   },
+   "registrada_el": "2026-10-02T18:42:12",
+   "intentos": [
+    {
+     "t": "2026-10-02T18:42:12",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 5,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "ae6fa02c5e38801ad.output",
+      "respuesta_sha256": "06a6c6be0f0e403e4324636740bdd1cb2281edcf73fd708356afd27df6c3dc55"
+     },
+     "respuesta": "[{\"question_id\": \"guia-mossos-10\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre la posició del català en la situació de diglòssia dels segles IX-XI. El text suporta clarament que el català era la llengua B amb menys prestigi usada en àmbits privats. Resposta única i clara.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-11\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre els criteris de la Gramàtica Catalana de Pompeu Fabra de 1918. El text especifica que havia de ser supradialectal. Resposta única i ben fonamentada.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-12\", \"verdict\": \"VALID\", \"reason\": \"Pregunta de geografia: quins territoris limiten amb Catalunya. El text enumera França, Andorra, Aragó i País Valencià. Navarra no s'esmenta. Resposta clara i única.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-13\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre els nombres de vegueries establerts per la Llei de 2010. El text suporta exactament 'set, ampliades a vuit a començaments de 2017'. Pregunta precisa amb dades numèriques úniques.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-14\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre la vegueria que inclou la comarca del Garraf. El text especifica que Penedès comprèn 'el Garraf'. Resposta única i clara.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-15\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre la definició de xarxes i cadenes migratòries. El text defineix exactament aquesta pregunta com 'el conjunt de relacions entre individus, famílies i grups que serveixen de pont'. Definitió clara i única.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-16\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre factors explicatius de la immigració a Catalunya (1998-2008). El text identifica dos factors: creixement econòmic i realitat demogràfica d'envelliment. L'opció 2 es suporta clarament al text.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-17\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre l'any de naixement de la societat del coneixement. El text afirma explícitament 'l'any 1981'. Pregunta de data específica, útil i ben fonamentada.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-18\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre la definició de hipermèdia. El text defineix 'integració de multimèdia i hipertext'. Resposta única i clara amb suport explícit al text.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"guia-mossos-19\", \"verdict\": \"VALID\", \"reason\": \"Pregunta sobre conceptes anglosaxons de seguretat (safety vs security). El text clarament vincula la inspecció d'aparells elevadors a 'safety' (seguretat ambiental i riscos). Aplicació conceptual clara i única.\", \"criteria_checked\": {\"respaldada\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "guia-mossos-20",
+    "guia-mossos-21",
+    "guia-mossos-22",
+    "guia-mossos-23",
+    "guia-mossos-24",
+    "guia-mossos-25",
+    "guia-mossos-26",
+    "guia-mossos-27",
+    "guia-mossos-28",
+    "guia-mossos-29"
+   ],
+   "prompt_sha256": "3ab82055909979b2bc3312c2c096c7cd66f06ce155fadccc3e6ef98e5675f1f1",
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-20",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto esmenteix explícitament que 'el Dictamen núm. 269 del Consell Consultiu (5 de setembre de 2005)' es va pronunciar sobre la constitucionalitat. L'opció a és única i clara com a resposta correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-21",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto afirma textualment que 'l'EAC té una doble naturalesa jurídica: d'una banda, és la llei primera i fonamental de l'ordenament jurídic català i, de l'altra, és una llei orgànica estatal'. Pregunta clara i única sobre aquest concepte fonamental.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-22",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Aquesta pregunta és duplicada de mx46-22-2, que planteja essencialment el mateix: preguntar quin era l'altre nom de l'òrgan medieval evocat per 'Generalitat', amb la mateixa resposta 'Diputació del General' basada en el mateix fragment de text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "mx46-22-2"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-23",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto especifica clarament les dues majories requerides: 'majoria absoluta dels diputats' per a la moció de censura i 'majoria simple dels vots emesos' per a la qüestió de confiança. Pregunta útil i ben formulada sobre procediment parlamentari.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-24",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix que 'La Generalitat només engloba les institucions autonòmiques d'àmbit territorial català i resten fora...les altres que deriven de l'autonomia local'. L'ajuntament és correctament identificat com l'institució exclosa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-25",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto afirma que entre les cartes de drets de les colònies britàniques d'Amèrica al segle xviii, 'la més important de les quals és la Declaració de drets de Virgínia de 1776'. Pregunta factual clara i únic amb resposta correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-26",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix clarament que 'Les greus vulneracions dels drets en el període d'entreguerres i a la Segona Guerra Mundial pels estats totalitaris posaran de manifest la insuficiència d'aquesta previsió interna dels drets. És a partir d'aquest moment quan es produeix una internacionalització'. Relació causal ben documentada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-27",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto cita l'article 10.2 CE especificant que les normes sobre drets fonamentals 's'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats i acords internacionals sobre aquestes matèries ratificats per l'Estat espanyol'. Pregunta sobre requisit constitucional específic.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-28",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto identifica explícitament que 'Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública, sinó que té el seu propi estatut personal'. Pregunta clara sobre classificació de les autonomies de les cambres.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-29",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto afirma textualment que 'Correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya'. Pregunta factual clara sobre jurisdicció dels tribunals autonòmics.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "a86c9c134eb3156c1.output",
+    "respuesta_sha256": "6821dbafb8ca4ad753bfa60d4aca2932d3a7127b082813d6f7328a6f24504473"
+   },
+   "registrada_el": "2026-10-02T18:42:16",
+   "intentos": [
+    {
+     "t": "2026-10-02T18:42:16",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "a86c9c134eb3156c1.output",
+      "respuesta_sha256": "6821dbafb8ca4ad753bfa60d4aca2932d3a7127b082813d6f7328a6f24504473"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-20\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto esmenteix explícitament que 'el Dictamen núm. 269 del Consell Consultiu (5 de setembre de 2005)' es va pronunciar sobre la constitucionalitat. L'opció a és única i clara com a resposta correcta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-21\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto afirma textualment que 'l'EAC té una doble naturalesa jurídica: d'una banda, és la llei primera i fonamental de l'ordenament jurídic català i, de l'altra, és una llei orgànica estatal'. Pregunta clara i única sobre aquest concepte fonamental.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-22\",\n    \"verdict\": \"REJECTED\",\n    \"reason\": \"Aquesta pregunta és duplicada de mx46-22-2, que planteja essencialment el mateix: preguntar quin era l'altre nom de l'òrgan medieval evocat per 'Generalitat', amb la mateixa resposta 'Diputació del General' basada en el mateix fragment de text.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"mx46-22-2\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-23\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto especifica clarament les dues majories requerides: 'majoria absoluta dels diputats' per a la moció de censura i 'majoria simple dels vots emesos' per a la qüestió de confiança. Pregunta útil i ben formulada sobre procediment parlamentari.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-24\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix que 'La Generalitat només engloba les institucions autonòmiques d'àmbit territorial català i resten fora...les altres que deriven de l'autonomia local'. L'ajuntament és correctament identificat com l'institució exclosa.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-25\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto afirma que entre les cartes de drets de les colònies britàniques d'Amèrica al segle xviii, 'la més important de les quals és la Declaració de drets de Virgínia de 1776'. Pregunta factual clara i únic amb resposta correcta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-26\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix clarament que 'Les greus vulneracions dels drets en el període d'entreguerres i a la Segona Guerra Mundial pels estats totalitaris posaran de manifest la insuficiència d'aquesta previsió interna dels drets. És a partir d'aquest moment quan es produeix una internacionalització'. Relació causal ben documentada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-27\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto cita l'article 10.2 CE especificant que les normes sobre drets fonamentals 's'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats i acords internacionals sobre aquestes matèries ratificats per l'Estat espanyol'. Pregunta sobre requisit constitucional específic.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-28\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto identifica explícitament que 'Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública, sinó que té el seu propi estatut personal'. Pregunta clara sobre classificació de les autonomies de les cambres.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-29\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto afirma textualment que 'Correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya'. Pregunta factual clara sobre jurisdicció dels tribunals autonòmics.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "guia-mossos-30",
+    "guia-mossos-31",
+    "guia-mossos-32",
+    "guia-mossos-33",
+    "guia-mossos-34",
+    "guia-mossos-35",
+    "guia-mossos-36",
+    "guia-mossos-37",
+    "guia-mossos-38",
+    "guia-mossos-39"
+   ],
+   "prompt_sha256": "37a892fa0019826a6b4546736fcb4c8ff4624d3f28f43a5fa0f494e9cd446283",
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-30",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto confirma exactament que el rei nomena el president del TSJC a proposta del Consell General del Poder Judicial. La resposta és única i la pregunta és clara i factual.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-31",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto especifica que els jutjats de pau són els òrgans judicials que hi pot haver en municipis sense jutjat de primera instància. La resposta és única i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-32",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto defineix explícitament la uniformitat com 'la mateixa llei per a tot el territorio'. Resposta única i pregunta clara sobre el concepte.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-33",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto enumera les estructures unitàries mantingudes en els estats federals (exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols). La moneda és clarament l'única opció correcta entre les ofertes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-34",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto confirma exactament la durada de dos anys i mig amb possibilitat de reelecció per a la presidència estable del Consell Europeu. Pregunta clara amb resposta única sobre dada específica.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-35",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto classifica les competències exclusives de la UE i inclou explícitament la política monetària. Les altres opcions (turisme, sanitat, protecció civil) s'esmenten com a noves bases jurídiques de suport, no com a exclusives.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-36",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto detalla exactament el sistema de doble majoria: 55% dels estats membres i 65% de la població UE. Pregunta sobre dades específiques i úniques.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-37",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix que l'Estatut d'autonomia és la norma atributiva de competències però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La resposta és única i clarament fonamentada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-38",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto defineix competència com el conjunt de funcions que l'ordenament jurídic atribueix a un subjecte públic en una determinada matèria. L'opció 0 és una versió correcta simplificada. Les altres opcions són clarament incorrectes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-39",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto especifica explícitament que la vigilància i control del medi natural s'exerceix mitjançant el Cos d'Agents Rurals. Resposta única i clarament fonamentada en el text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "a0f7a8137f40dc3f3.output",
+    "respuesta_sha256": "95769eb4dd54107476c274612e08d04c88cc419959b5f1fc9312a432f38e6285"
+   },
+   "registrada_el": "2026-10-02T18:41:57",
+   "intentos": [
+    {
+     "t": "2026-10-02T18:41:57",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "a0f7a8137f40dc3f3.output",
+      "respuesta_sha256": "95769eb4dd54107476c274612e08d04c88cc419959b5f1fc9312a432f38e6285"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-30\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto confirma exactament que el rei nomena el president del TSJC a proposta del Consell General del Poder Judicial. La resposta és única i la pregunta és clara i factual.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-31\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto especifica que els jutjats de pau són els òrgans judicials que hi pot haver en municipis sense jutjat de primera instància. La resposta és única i la pregunta és clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-32\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto defineix explícitament la uniformitat com 'la mateixa llei per a tot el territorio'. Resposta única i pregunta clara sobre el concepte.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-33\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto enumera les estructures unitàries mantingudes en els estats federals (exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols). La moneda és clarament l'única opció correcta entre les ofertes.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-34\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto confirma exactament la durada de dos anys i mig amb possibilitat de reelecció per a la presidència estable del Consell Europeu. Pregunta clara amb resposta única sobre dada específica.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-35\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto classifica les competències exclusives de la UE i inclou explícitament la política monetària. Les altres opcions (turisme, sanitat, protecció civil) s'esmenten com a noves bases jurídiques de suport, no com a exclusives.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-36\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto detalla exactament el sistema de doble majoria: 55% dels estats membres i 65% de la població UE. Pregunta sobre dades específiques i úniques.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-37\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix que l'Estatut d'autonomia és la norma atributiva de competències però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La resposta és única i clarament fonamentada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-38\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto defineix competència com el conjunt de funcions que l'ordenament jurídic atribueix a un subjecte públic en una determinada matèria. L'opció 0 és una versió correcta simplificada. Les altres opcions són clarament incorrectes.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-39\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto especifica explícitament que la vigilància i control del medi natural s'exerceix mitjançant el Cos d'Agents Rurals. Resposta única i clarament fonamentada en el text.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "guia-mossos-40",
+    "guia-mossos-41",
+    "guia-mossos-42"
+   ],
+   "prompt_sha256": "b4d8858b42b2a1660fcea1bc1a79c76e3f994c4fd32b8aee2c774c8d3d3b80ef",
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-40",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto enumera explícitamente les funcions genèriques del departament: seguretat ciudadana, trànsit, emergències, prevenció d'incendis i salvament, espectacles i activitats recreatives, gestió ambiental. L'opció 3 (gestió dels centres penitenciaris) no figura en cap moment al texto, mentre que les altres tres opcions sí que apareixen. La pregunta és clara, no trivial i d'utilitat examinal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-41",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix explícitament que la Junta de Seguretat de Catalunya 'és integrada per un nombre igual de representants del Govern central i de la Generalitat'. L'opció 2 reprodueix exactament aquesta definició. Les altres opcions (majoria de Generalitat, majoria de Govern central, representants d'ajuntaments) no troben suport en el texto. La pregunta és clara i examinal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-42",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto defineix explícitament: 'Un sistema de seguretat pública és el conjunt d'administracions, òrgans, autoritats i serveis que contribueixen a garantir la llibertat i la seguretat dels ciutadans i l'ordre públic'. L'opció 0 coincideix plenament amb aquesta definició. Les altres opcions descriuen conceptes diferents (forces policials estrictament estatals, òrgan administratiu específic, normes de policies locals) que no coincideixen amb la definició. La pregunta és clara i de valor examinal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "a7d631908185a48c3.output",
+    "respuesta_sha256": "57fbd26b50577bf7307ea0a9c136fcde80dd5e11b5436efdf5d59bbffaddd61a"
+   },
+   "registrada_el": "2026-10-02T18:41:53",
+   "intentos": [
+    {
+     "t": "2026-10-02T18:41:53",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "a7d631908185a48c3.output",
+      "respuesta_sha256": "57fbd26b50577bf7307ea0a9c136fcde80dd5e11b5436efdf5d59bbffaddd61a"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-40\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto enumera explícitamente les funcions genèriques del departament: seguretat ciudadana, trànsit, emergències, prevenció d'incendis i salvament, espectacles i activitats recreatives, gestió ambiental. L'opció 3 (gestió dels centres penitenciaris) no figura en cap moment al texto, mentre que les altres tres opcions sí que apareixen. La pregunta és clara, no trivial i d'utilitat examinal.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-41\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix explícitament que la Junta de Seguretat de Catalunya 'és integrada per un nombre igual de representants del Govern central i de la Generalitat'. L'opció 2 reprodueix exactament aquesta definició. Les altres opcions (majoria de Generalitat, majoria de Govern central, representants d'ajuntaments) no troben suport en el texto. La pregunta és clara i examinal.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-42\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto defineix explícitament: 'Un sistema de seguretat pública és el conjunt d'administracions, òrgans, autoritats i serveis que contribueixen a garantir la llibertat i la seguretat dels ciutadans i l'ordre públic'. L'opció 0 coincideix plenament amb aquesta definició. Les altres opcions descriuen conceptes diferents (forces policials estrictament estatals, òrgan administratiu específic, normes de policies locals) que no coincideixen amb la definició. La pregunta és clara i de valor examinal.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

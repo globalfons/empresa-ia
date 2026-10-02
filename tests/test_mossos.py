@@ -114,6 +114,7 @@ class Guia(unittest.TestCase):
         fq = os.path.join(R, "datos", "preguntas-guia-mossos.json")
         qs = json.load(open(fq, encoding="utf-8"))
         self.assertTrue(qs)
+        qs = [q for q in qs if q.get("verification_status") not in ("DEPRECATED", "OUTDATED", "REVIEW_REQUIRED_REEVALUATION")]  # no se sirven
         for q in qs:
             self.assertEqual(q.get("verification_status", "VALID"), "VALID", f"{q['id']}: solo se publican VALID")
             self.assertTrue(q.get("cita") and q.get("art"))

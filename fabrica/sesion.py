@@ -23,7 +23,7 @@ import argparse, collections, datetime, json, os, shutil, sys
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
-from fabrica import motor as MO, fuente as F, banco as B, generador as G, metricas as M, politica as P  # noqa: E402
+from fabrica import motor as MO, fuente as F, banco as B, generador as G, metricas as M, politica as P, juez_v2 as J  # noqa: E402
 
 DIR = os.path.join(R, "fabrica", "sesion")
 ABIERTO = os.path.join(DIR, "abierto.json")
@@ -152,8 +152,13 @@ def validar(a, cfg):
     B.escribir(os.path.join(d, "validacion.json"), estado_val)
     c = pol["componentes"]
     B.escribir(os.path.join(d, "revision.json"), {"instrucciones": c["sistema"] + c["formato_revision"], "items": items})
+    if "prompt_revisor_tanda" in c:  # juez v2: tandas de ≤10 con prompt propio; prompt_juez.txt es el índice de tandas
+        tandas = J.preparar(ab["lote"], [dict(i, question_id=i["r"]) for i in items], version=pol["version"])
+        indice = "\n".join(f"tanda {t['tanda']}: {len(t['ids'])} preguntas · prompt {t['fichero'][:-5]}.prompt.txt · sha256 {t['prompt_sha256']}" for t in tandas)
+    else:
+        indice = P.prompt_revisor(pol, ab["lote"])
     with open(os.path.join(d, "prompt_juez.txt"), "w", encoding="utf-8") as f:
-        f.write(P.prompt_revisor(pol, ab["lote"]))
+        f.write(indice)
     ab.update(revision_sha256=sha(os.path.join(d, "revision.json")), candidatas_sha256=sha(os.path.join(d, "candidatas.json")),
               prompt_juez_sha256=sha(os.path.join(d, "prompt_juez.txt")))
     B.escribir(ABIERTO, ab)
@@ -208,7 +213,18 @@ def cerrar(a, cfg):
     sin_veredictos_ajenos(d, lote)
     p = B.leer(os.path.join(d, "plan.json"), None)
     val = B.leer(os.path.join(d, "validacion.json"), None)
-    ver = B.leer(os.path.join(d, "veredictos.json"), None)
+    v2 = "prompt_revisor_tanda" in pol["componentes"]
+    finales = {}
+    if v2:  # juez v2: solo cuentan las tandas aceptadas por los guards; sin todas, no se cierra ni se publica nada
+        if os.path.exists(os.path.join(d, "veredictos.json")):
+            bloquear("veredictos.json no se usa con juez-sesion-v2 (los veredictos salen de las tandas registradas)", "veredicto_ajeno", lote)
+        res_j = J.resultado(lote)
+        if res_j is None:
+            bloquear("hay tandas del juez sin aceptar (pendientes o rechazadas por los guards)", "juez_incompleto", lote)
+        finales = {v["question_id"]: v["verdict"] for v in res_j["veredictos"]}
+        ver = [dict({k: v["criteria_checked"][k] for k in J.CRITERIOS}, r=v["question_id"], motivo=v["reason"]) for v in res_j["veredictos"]]
+    else:
+        ver = B.leer(os.path.join(d, "veredictos.json"), None)
     if val is None or ver is None:
         raise SystemExit("Faltan validacion.json (paso validar) o veredictos.json (revisor).")
     for f, k in (("revision.json", "revision_sha256"), ("candidatas.json", "candidatas_sha256"), ("prompt_juez.txt", "prompt_juez_sha256")):
@@ -232,6 +248,9 @@ def cerrar(a, cfg):
         verd = [dict(por_r[f"{v['s']}.{k}"], i=k) for k in range(len(v["idx"])) if f"{v['s']}.{k}" in por_r]
         del_juez = {i: por_r.get(f"{v['s']}.{k}") for k, i in enumerate(v["idx"])}
         for i, (est, q, motivos, dup) in enumerate(MO.aplicar_veredictos(res, v["idx"], verd)):
+            r_id = next((f"{v['s']}.{k}" for k, j in enumerate(v["idx"]) if j == i), None)
+            if v2 and r_id in finales and est in J.ORDEN:  # nunca más permisivo que el veredicto del juez
+                est = J.mas_conservador(est, finales[r_id])
             cnt["generadas"] += 1; cnt[est] += 1; cnt["duplicadas"] += bool(dup and est == "REJECTED")
             vj = del_juez.get(i)
             traza = {"batch_id": lote, "session_id": ab.get("session_id"), "opposition_id": h["tema"]["oposicion"],
@@ -253,7 +272,8 @@ def cerrar(a, cfg):
            "judge_policy_version": pol["version"], "judge_policy_sha256": pol["sha256"], "session_id": ab.get("session_id"),
            "generator_prompt_version": ab.get("generator_prompt_version"),
            "huellas": {"candidatas": ab.get("candidatas_sha256"), "revision": ab.get("revision_sha256"),
-                       "veredictos": sha(os.path.join(d, "veredictos.json")), "prompt_juez": ab.get("prompt_juez_sha256")}}
+                       "veredictos": sha(os.path.join(d, "veredictos.json")) if not v2 else sha(os.path.join(J.dir_eval(lote), "evaluacion.json")),
+                       "prompt_juez": ab.get("prompt_juez_sha256")}}
     estado["lotes"].append(reg)
     motivo = MO.comprobar_calidad(estado, cfg) if cnt["generadas"] else "lote sin ninguna pregunta"
     if motivo:

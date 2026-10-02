@@ -56,9 +56,9 @@ class Copia(unittest.TestCase):
         return d
 
     def juez_aprueba_todo(self, d, **extra):
-        rev = json.load(open(os.path.join(d, "revision.json")))
-        json.dump([dict({"r": it["r"], "respaldada": True, "unica": True, "clara": True, "duplicada_de": "", "motivo": ""}, **extra) for it in rev["items"]],
-                  open(os.path.join(d, "veredictos.json"), "w"))
+        """Juez v2 simulado (tandas registradas desde su transcripción); con `extra` sus tandas deben rechazarse."""
+        from tests import juez_simulado
+        juez_simulado.aprobar_todo(self.t, os.path.basename(d), **extra)
 
     def banco_publicado(self):
         return [q for f in glob.glob(os.path.join(self.t, "datos", "preguntas-*.json")) for q in json.load(open(f))]
@@ -123,8 +123,13 @@ class TestSeparacionDeFunciones(Copia):
         self.juez_aprueba_todo(d, override="coordinador")
         r = self.run_sesion("cerrar")
         self.assertNotEqual(r.returncode, 0)
-        self.assertIn("veredicto_invalido", r.stdout + r.stderr)
+        self.assertIn("juez_incompleto", r.stdout + r.stderr)  # con v2: la tanda con campos ajenos se rechaza y no se cierra
         self.assertEqual(len(self.banco_publicado()), antes)
+        # un veredictos.json escrito por otro (sin pasar por las tandas) nunca se usa
+        json.dump([], open(os.path.join(d, "veredictos.json"), "w"))
+        r = self.run_sesion("cerrar")
+        self.assertIn("veredicto_ajeno", r.stdout + r.stderr)
+        os.remove(os.path.join(d, "veredictos.json"))
         # cambiar las preguntas después de validar → cerrar se bloquea
         self.juez_aprueba_todo(d)
         c = json.load(open(os.path.join(d, "candidatas.json"))); c[0]["a"] = 1
@@ -285,6 +290,8 @@ class TestIntegridadReal(unittest.TestCase):
         for f in glob.glob(os.path.join(R, "datos", "preguntas-*.json")):
             for q in json.load(open(f)):
                 if str(q.get("generador", "")).startswith("fabrica"):
+                    if q.get("verification_status") in ("DEPRECATED", "OUTDATED", "REVIEW_REQUIRED_REEVALUATION"):
+                        continue  # retirada o en reevaluación: no se sirve
                     self.assertNotIn(q.get("verification_status"), ("REVIEW_REQUIRED", "REJECTED"), q.get("id"))
                     self.assertTrue(B.publicable(q), q.get("id"))
 

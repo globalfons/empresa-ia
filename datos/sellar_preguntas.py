@@ -17,7 +17,7 @@ def sellar(slug, boe_id, meta, hoy=None):
     qs = json.load(open(fq)); arts = {a["n"]: norm(vigente(a["texto"])) for a in json.load(open(fa))}
     n = 0
     for q in qs:
-        if q.get("verification_status") in ("OUTDATED", "DEPRECATED", "REVIEW_REQUIRED"): continue
+        if q.get("verification_status") in ("OUTDATED", "DEPRECATED", "REVIEW_REQUIRED", "REVIEW_REQUIRED_REEVALUATION"): continue
         if q["art"] in arts and norm(q["cita"]) in arts[q["art"]] and q.get("verificada_contra") != meta.get(boe_id):
             q["verificada_contra"] = meta.get(boe_id); q["verificada_el"] = hoy; n += 1
     if n: json.dump(qs, open(fq, "w"), ensure_ascii=False, indent=1)

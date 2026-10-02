@@ -74,6 +74,19 @@ Mismos controles que el modo API, con la redacción y el juicio hechos por subag
 - `origen` de cada pregunta: «a partir de la Guia d'estudi oficial de la Generalitat».
 - Piloto S00017 (2026-10-01): 49 generadas · 43 VALID · 6 REVIEW_REQUIRED (4 casos prácticos, revisión humana obligatoria; 2 rechazadas por el juez: la cita no cubría toda la respuesta) · 0 rechazadas · 0 duplicadas. Escalado 100 → 250 → 500 → 1.000 → 2.000+ solo con autorización explícita; la fábrica queda en GENERATION_PAUSED.
 
+## Juez v2 (juez-sesion-v2): evaluación individual demostrable
+Mismos criterios que v1 (respaldada, unica, clara, duplicada_de; misma regla de estado). Cambia el mecanismo (`fabrica/juez_v2.py`):
+- `validar` reparte las preguntas en tandas de ≤10 (`fabrica/sesion/evaluaciones/<lote>/tanda-NN.json` + su prompt exacto).
+- El juez (subagente) solo puede **leer su tanda** y devolver un JSON con `question_id, verdict, reason, criteria_checked` por pregunta.
+- `python3 -m fabrica.juez_v2 registrar <lote> <NN> <transcripción>`: la respuesta se extrae de la transcripción del juez (nadie la copia)
+  y pasa los guards: JSON estricto, 1:1 de IDs, sin duplicados/ausentes/inexistentes, razón individual y criterios completos, veredicto
+  final = el más conservador, transcripción solo con Read de su tanda. Si falla: tanda rechazada, incidencia y nada se publica.
+- 100 % VALID → `ALL_VALID_REVIEW_REQUIRED` + segunda comprobación estructural (razón específica de cada ID).
+- `cerrar` solo acepta tandas aceptadas; un `veredictos.json` suelto se bloquea. Ningún script asigna, completa ni mejora veredictos.
+- Preguntas ya publicadas: `python3 -m fabrica.reevaluacion marcar|aplicar <lote>` (legacy_* intactos, reevaluation_* añadidos;
+  REVIEW_REQUIRED_REEVALUATION no se sirve; VALID vuelve; REJECTED → DEPRECATED, con su id).
+- Informes: `FACTORY_JUDGE_AUDIT.md` (S00001–S00016), `JUDGE_V2_CALIBRATION.md` (50), `MOSSOS_FACTORY_BATCH_REPORT.md`.
+
 ## Paradas automáticas (GENERATION_PAUSED)
 Rechazo del lote > 30 %; en los últimos 5 lotes, revisión > 45 %, duplicados > 30 % o coste por VALID > 0,25 USD; dos lotes
 sin generar nada. La pausa persiste hasta relanzar con `resume` (workflow) o `--reanudar` (CLI) tras corregir la causa.
