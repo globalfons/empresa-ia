@@ -248,6 +248,9 @@ const pctOp = (o) => Math.round((100 * o.temasCubiertos) / Math.max(1, o.cobertu
 // Nombres cortos para títulos (como se buscan); el nombre oficial completo sigue en el h1 y en el cuerpo
 const OP_CORTO = { "mossos-esquadra": "Mossos d'Esquadra", "guardia-civil-cabos-guardias": "Guardia Civil Cabos y Guardias", "policia-nacional-escala-basica": "Policía Nacional Escala Básica", "policia-nacional-escala-ejecutiva": "Policía Nacional Escala Ejecutiva", "age-administrativo-c1": "Administrativo del Estado", "age-auxiliar-administrativo-c2": "Auxiliar Administrativo del Estado", "age-gestion-a2": "Gestión Civil del Estado" };
 const opCorto = (o) => OP_CORTO[o.id] || o.nombre.replace(/\s*\([^)]*\)/g, "").replace(/^Cuerpo (General )?/, "").replace(/,/g, "");
+// Llamada a la acción y «seguir» de la ficha: «Preparar Mossos», «Seguir Mossos d'Esquadra 46/26» (convocatoria del perfil)
+const ctaOp = (o) => `Preparar ${o.id === "mossos-esquadra" ? "Mossos" : opCorto(o)}`;
+const seguirOp = (o) => { const f = `catalogo/perfiles/${o.id}.json`; return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")).convocatoria.actual.seguir : opCorto(o); };
 // Año de la convocatoria: el de su fecha oficial de publicación (si no consta, no se pone)
 const anioOp = (o) => ((o.convocatoria || {}).fecha_publicacion || "").slice(0, 4);
 // Referencia corta de una ley para títulos: «RDL 8/2015» en vez de «Ley General de la Seguridad Social (RDL 8/2015)»
@@ -678,7 +681,7 @@ ${c.plazas ? `<div><dt>Plazas</dt><dd>${fmtN(c.plazas)}</dd></div>` : ""}
 ${o.qs.length ? `<div><dt>Preguntas</dt><dd>${fmtN(o.qs.length)}</dd></div>` : ""}
 </dl>
 <p class="op-verif small"><span class="badge-oficial">Fuente oficial</span> <a href="${esc(c.url_oficial)}" rel="noopener">${esc(c.referencia)}</a>, publicada el ${fmtFecha(c.fecha_publicacion)}. Última verificación: ${fmtFecha(ultimaVerif)}. <span class="${tCls}">${tLbl}</span></p>
-<div id="op-accion" data-op="${o.id}" data-nombre="${esc(o.nombre)}" data-tests="${o.qs.length ? 1 : 0}"></div>
+<div id="op-accion" data-op="${o.id}" data-nombre="${esc(o.nombre)}" data-tests="${o.qs.length ? 1 : 0}" data-cta="${esc(ctaOp(o))}" data-seguir="${esc(seguirOp(o))}"></div>
 </header>
 <div class="ficha">
 <nav class="ficha-nav" aria-label="En esta página"><p class="ficha-nav-t">En esta página</p><ol>${navFicha.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join("")}</ol></nav>
@@ -868,9 +871,30 @@ ${ti.nq ? `<p class="muted small">${ti.nq} preguntas de este tema. Cada respuest
 <section class="card"><h2>Preguntas pendientes de revisión (la ley cambió)</h2>${revisar.length ? `<ul class="nov">${revisar.map((q) => `<li>${esc(q.ley)} · art. ${esc(q.art)} · ${esc(q.q.slice(0, 120))} <small class="muted">${esc(q.motivo || "")}</small></li>`).join("")}</ul><p class="muted small">Tras revisarlas: <code>python3 datos/sellar_preguntas.py --revisadas ley:art</code></p>` : "<p class='muted'>Ninguna.</p>"}</section>
 <section class="card"><h2>Preguntas retiradas (OUTDATED / DEPRECATED)</h2>${retiradas.length ? `<ul class="nov">${retiradas.map((q) => `<li>${esc(q.ley)} · art. ${esc(q.art)} · ${esc(q.q.slice(0, 120))} <small class="muted">${esc(q.motivo || "")}</small></li>`).join("")}</ul>` : "<p class='muted'>Ninguna.</p>"}</section>
 <section class="card"><h2>Errores y duplicados (datos/calidad_preguntas.py)</h2>${errores.length || avisos.length ? `<ul class="nov">${[...errores, ...avisos].map((e) => `<li><span class="chip">${esc(e.control)}</span> ${esc(e.ley)} #${e.i} · ${esc(e.mensaje)} · <small>${esc(e.q)}</small></li>`).join("")}</ul>` : "<p class='muted'>Sin errores ni duplicados.</p>"}</section>
+${metricas360(o)}
 ${adminGencat(o)}
 <section class="card"><h2>Fuentes pendientes</h2>${(o.pendientes || []).length ? `<ul class="nov">${o.pendientes.map((x) => `<li><b>${esc(x.campo)}</b>: ${esc(x.motivo)}</li>`).join("")}</ul>` : "<p class='muted'>Ninguna.</p>"}</section>`,
   });
+}
+
+// Métricas 360 (perfil de la oposición + registro de fuentes + vigilancia + CoverageEngine): lo que el admin debe vigilar
+function metricas360(o) {
+  const f = `catalogo/perfiles/${o.id}.json`;
+  if (!fs.existsSync(f)) return "";
+  const p = JSON.parse(fs.readFileSync(f, "utf8")), c = p.contenido;
+  const conFuente = p.temario.filter((t) => t.documentos.length), cubiertos = conFuente.filter((t) => t.cobertura === "CUBIERTO").length;
+  const coverage = conFuente.length ? Math.round((100 * conFuente.reduce((a, t) => a + Math.min(1, t.preguntas.TESTLEY_GENERATED / Math.max(1, t.objetivo)), 0)) / conFuente.length) : 0;
+  const fu = p.fuentes, sanas = fu.filter((x) => x.verification_status === "OFFICIAL_VERIFIED").length;
+  const vg = (fs.existsSync("catalogo/vigilancia-gencat-estado.json") ? JSON.parse(fs.readFileSync("catalogo/vigilancia-gencat-estado.json", "utf8")) : {})[o.id] || {};
+  const vb = fs.existsSync("catalogo/vigilancia-estado.json") ? JSON.parse(fs.readFileSync("catalogo/vigilancia-estado.json", "utf8")) : {};
+  const sync = [...fu.map((x) => (x.retrieved_at || "").slice(0, 10)), vg.ultimo_ok || "", vb.ultimo_dia || ""].filter(Boolean).sort().pop() || "—";
+  const pend = p.temario.flatMap((t) => t.leyes_pendientes.map((l) => `${t.id}: ${l.nombre}`));
+  const nec = fs.existsSync(`documentacion/cobertura-${o.id}.json`) ? JSON.parse(fs.readFileSync(`documentacion/cobertura-${o.id}.json`, "utf8")) : null;
+  const kpi = (n, l, cls = "") => `<div class="kpi"><span class="kpi-n ${cls}">${n}</span><span class="kpi-l">${l}</span></div>`;
+  return `<section class="card" id="metricas-360"><h2>Métricas 360</h2><div class="kpis">${kpi(coverage + " %", `coverage (${cubiertos}/${conFuente.length} temas en objetivo)`)}${kpi(c.TESTLEY_GENERATED, "question_count (TESTLEY_GENERATED)")}${kpi(c.OFFICIAL_EXAM, "official_exam_count")}${kpi(c.REVIEW_REQUIRED, "review_required")}${kpi(c.DEPRECATED, "deprecated")}${kpi(c.OUTDATED, "outdated")}${kpi(`${sanas}/${fu.length}`, "source_health (fuentes OFFICIAL_VERIFIED)", sanas < fu.length || vg.error ? "bad" : "")}${kpi(esc(sync), "last_sync")}</div>
+${vg.error ? `<p class="bad">Error de vigilancia: ${esc(vg.error)}</p>` : ""}${pend.length ? `<p class="small">Leyes OFFICIAL_PENDING_REVIEW: ${esc(pend.join(" · "))}</p>` : ""}
+${nec ? `<h3>Necesidades de cobertura (CoverageEngine · fábrica ${esc(nec.estado_fabrica)})</h3><p class="small">${nec.total_necesario} preguntas en ${nec.necesidades.length} necesidades${nec.bloqueados.length ? ` · bloqueados: ${esc(nec.bloqueados.map((b) => b.tema).join(", "))}` : ""}</p><ul class="nov">${nec.necesidades.slice(0, 8).map((n) => `<li>${esc(n.texto)}${n.revision_humana ? ' <span class="chip">revisión humana</span>' : ""}</li>`).join("")}</ul>` : ""}
+<p class="muted small">Perfil generado el ${esc(p.generado)} desde fuentes verificadas (catalogo/perfiles/${esc(o.id)}.json).</p></section>`;
 }
 
 // Admin de oposiciones de la Generalitat (Mossos): fuentes oficiales con su estado, vigilancia, alertas, exámenes y esmenes de la guía

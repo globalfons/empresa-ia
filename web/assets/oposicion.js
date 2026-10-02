@@ -13,12 +13,13 @@
   }
   function pintar() {
     var mia = TL.miOposicion() === op, sig = TL.sigo(op), tests = box.getAttribute("data-tests") === "1";
-    var seguir = '<button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "Siguiendo" : "Seguir convocatoria") + "</button>";
+    var nom = box.getAttribute("data-seguir"), cta = box.getAttribute("data-cta") || "Preparar esta oposición";
+    var seguir = '<button class="btn" id="seguir" aria-pressed="' + sig + '">' + (sig ? "Siguiendo" + (nom ? " " + nom : "") : "Seguir " + (nom || "convocatoria")) + "</button>";
     var probar = tests ? '<a class="btn" href="#tests">Hacer un test</a>' : "";
     box.innerHTML = mia
       ? '<div class="acciones"><a class="cta" href="' + TL.root + "panel/?c=" + op + '">Ver mi progreso</a>' + probar + seguir +
         '<p class="acciones-nota">Es tu oposición. <a href="' + TL.root + "ranking/?c=" + op + '">Ranking</a></p></div>'
-      : '<div class="acciones"><button class="cta" id="elegir">Preparar esta oposición</button>' + probar + seguir +
+      : '<div class="acciones"><button class="cta" id="elegir">' + cta.replace(/[<>&"]/g, "") + "</button>" + probar + seguir +
         '<p class="acciones-nota">Tu panel, tu plan y tu nota se centrarán en esta oposición. Puedes cambiarla cuando quieras.</p></div>';
     var b = document.getElementById("elegir");
     if (b) b.onclick = function () { TL.setMiOposicion(op); if (!TL.sigo(op)) TL.alternarSeguir(op); location.href = TL.root + "panel/?c=" + op; };

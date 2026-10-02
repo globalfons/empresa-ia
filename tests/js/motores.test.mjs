@@ -104,3 +104,27 @@ test("build: perfil para el navegador sin preguntas ni respuestas y simulacro co
   assert.equal(sim.reparto.reduce((a, r) => a + r.preguntas, 0), sim.preguntas);
   assert.equal(sim.evitar_repetidas, true);
 });
+
+test("landing y admin: CTA «Preparar Mossos», seguir 46/26 y métricas 360", () => {
+  const html = fs.readFileSync(`docs/oposiciones/${OP}/index.html`, "utf8");
+  assert.match(html, /data-cta="Preparar Mossos"/);
+  assert.match(html, /data-seguir="Mossos d&#39;Esquadra 46\/26"|data-seguir="Mossos d'Esquadra 46\/26"/);
+  assert.ok(!/garantiz|aprobado seguro|éxito asegurado|% de aprobados/i.test(html), "sin afirmaciones comerciales no verificadas");
+  const adm = fs.readFileSync(`docs/admin/oposiciones/${OP}/quality/index.html`, "utf8");
+  for (const k of ["coverage", "question_count", "official_exam_count", "review_required", "deprecated", "outdated", "source_health", "last_sync"]) assert.ok(adm.includes(k), k);
+  assert.match(adm, /noindex/);
+});
+
+test("avisos: evento tipificado y fuente (BOE, DOGC o web de Mossos)", async () => {
+  const nov = [
+    { oposicion: OP, id: "a", fecha: "2026-09-21", titulo: "Llista definitiva", url: "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1054777", tipo: "listas", evento: "NEW_OFFICIAL_DOCUMENT", fuente: "mossos.gencat.cat", relevancia: "convocatoria" },
+    { oposicion: OP, id: "b", fecha: "2026-09-21", titulo: "Indicacions per a la 1a prova", url: "https://mossos.gencat.cat/x", tipo: "fecha_examen", evento: "NEW_TRIBUNAL_NOTICE", fuente: "mossos.gencat.cat", relevancia: "convocatoria" },
+  ];
+  const { ctx } = cargar(["web/assets/store.js", "web/assets/avisos.js"], { opos: [OP] }, { fetch: () => Promise.resolve({ ok: true, json: () => Promise.resolve(nov) }) });
+  ctx.TL.alternarSeguir(OP);
+  const box = { innerHTML: "" };
+  ctx.TLAvisos.pintar(box);
+  await new Promise((r) => setTimeout(r, 10));
+  assert.match(box.innerHTML, /Nuevo documento oficial<\/span> <span class="chip">DOGC/);
+  assert.match(box.innerHTML, /Aviso del tribunal<\/span> <span class="chip">Mossos/);
+});
