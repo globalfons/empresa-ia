@@ -15104,5 +15104,296 @@
    "publicados": [],
    "pendientes_manual": []
   }
+ },
+ "480617e752bd4b91b5f8de12c9fe9611:fecha-examen:update_seo": {
+  "id": "480617e752bd4b91b5f8de12c9fe9611:fecha-examen:update_seo",
+  "type": "update_seo",
+  "data": {
+   "regla": "fecha-examen",
+   "accion": {
+    "accion": "update_seo"
+   },
+   "evento": {
+    "id": "480617e752bd4b91b5f8de12c9fe9611",
+    "type": "EXAM_DATE_CHANGED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Indicacions per a la 1a prova i mapa amb les zones d’espera i estacionaments",
+     "url": "https://mossos.gencat.cat/ca/els_mossos_desquadra/acces_al_cos/Mosso_a/mosso-a-convocatoria-46-26/",
+     "boe_id": "MOSSOS-21cc4726c1",
+     "fecha": "2026-09-21",
+     "campos": [
+      "fecha_examen"
+     ],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "480617e752bd4b91b5f8de12c9fe9611"
+   },
+   "importancia": "CRITICAL"
+  },
+  "event_id": "480617e752bd4b91b5f8de12c9fe9611",
+  "status": "done",
+  "priority": 1,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "ruta": "oposiciones/mossos-esquadra/",
+   "indexable": true,
+   "motivo": "ficha revisada"
+  }
+ },
+ "480617e752bd4b91b5f8de12c9fe9611:fecha-examen:notify_followers": {
+  "id": "480617e752bd4b91b5f8de12c9fe9611:fecha-examen:notify_followers",
+  "type": "notify_followers",
+  "data": {
+   "regla": "fecha-examen",
+   "accion": {
+    "accion": "notify_followers"
+   },
+   "evento": {
+    "id": "480617e752bd4b91b5f8de12c9fe9611",
+    "type": "EXAM_DATE_CHANGED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Indicacions per a la 1a prova i mapa amb les zones d’espera i estacionaments",
+     "url": "https://mossos.gencat.cat/ca/els_mossos_desquadra/acces_al_cos/Mosso_a/mosso-a-convocatoria-46-26/",
+     "boe_id": "MOSSOS-21cc4726c1",
+     "fecha": "2026-09-21",
+     "campos": [
+      "fecha_examen"
+     ],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "480617e752bd4b91b5f8de12c9fe9611"
+   },
+   "importancia": "CRITICAL"
+  },
+  "event_id": "480617e752bd4b91b5f8de12c9fe9611",
+  "status": "skipped",
+  "priority": 1,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "motivo": "flag email desactivado (los avisos in-app siguen funcionando)"
+  }
+ },
+ "480617e752bd4b91b5f8de12c9fe9611:fecha-examen:analytics_event": {
+  "id": "480617e752bd4b91b5f8de12c9fe9611:fecha-examen:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "fecha-examen",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "480617e752bd4b91b5f8de12c9fe9611",
+    "type": "EXAM_DATE_CHANGED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Indicacions per a la 1a prova i mapa amb les zones d’espera i estacionaments",
+     "url": "https://mossos.gencat.cat/ca/els_mossos_desquadra/acces_al_cos/Mosso_a/mosso-a-convocatoria-46-26/",
+     "boe_id": "MOSSOS-21cc4726c1",
+     "fecha": "2026-09-21",
+     "campos": [
+      "fecha_examen"
+     ],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "480617e752bd4b91b5f8de12c9fe9611"
+   },
+   "importancia": "CRITICAL"
+  },
+  "event_id": "480617e752bd4b91b5f8de12c9fe9611",
+  "status": "done",
+  "priority": 1,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-02",
+   "tipo": "EXAM_DATE_CHANGED"
+  }
+ },
+ "cd525cd47beb4efa929ba6c622855515:listas-publicadas:notify_followers": {
+  "id": "cd525cd47beb4efa929ba6c622855515:listas-publicadas:notify_followers",
+  "type": "notify_followers",
+  "data": {
+   "regla": "listas-publicadas",
+   "accion": {
+    "accion": "notify_followers"
+   },
+   "evento": {
+    "id": "cd525cd47beb4efa929ba6c622855515",
+    "type": "OFFICIAL_LIST_PUBLISHED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Llista definitiva de persones admeses i excloses i convocades a la 1a prova",
+     "url": "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1054777",
+     "boe_id": "DOGC-1054777",
+     "fecha": "2026-09-21",
+     "campos": [],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "cd525cd47beb4efa929ba6c622855515"
+   },
+   "importancia": "HIGH"
+  },
+  "event_id": "cd525cd47beb4efa929ba6c622855515",
+  "status": "skipped",
+  "priority": 2,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "motivo": "flag email desactivado (los avisos in-app siguen funcionando)"
+  }
+ },
+ "cd525cd47beb4efa929ba6c622855515:listas-publicadas:analytics_event": {
+  "id": "cd525cd47beb4efa929ba6c622855515:listas-publicadas:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "listas-publicadas",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "cd525cd47beb4efa929ba6c622855515",
+    "type": "OFFICIAL_LIST_PUBLISHED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Llista definitiva de persones admeses i excloses i convocades a la 1a prova",
+     "url": "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1054777",
+     "boe_id": "DOGC-1054777",
+     "fecha": "2026-09-21",
+     "campos": [],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "cd525cd47beb4efa929ba6c622855515"
+   },
+   "importancia": "HIGH"
+  },
+  "event_id": "cd525cd47beb4efa929ba6c622855515",
+  "status": "done",
+  "priority": 2,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-02",
+   "tipo": "OFFICIAL_LIST_PUBLISHED"
+  }
+ },
+ "784ef19ab06a4b8094e8b1fb468d8638:listas-publicadas:notify_followers": {
+  "id": "784ef19ab06a4b8094e8b1fb468d8638:listas-publicadas:notify_followers",
+  "type": "notify_followers",
+  "data": {
+   "regla": "listas-publicadas",
+   "accion": {
+    "accion": "notify_followers"
+   },
+   "evento": {
+    "id": "784ef19ab06a4b8094e8b1fb468d8638",
+    "type": "OFFICIAL_LIST_PUBLISHED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Llista provisional de persones admeses i excloses i termini per presentar al·legacions",
+     "url": "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1050047",
+     "boe_id": "DOGC-1050047",
+     "fecha": "2026-07-16",
+     "campos": [],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "784ef19ab06a4b8094e8b1fb468d8638"
+   },
+   "importancia": "HIGH"
+  },
+  "event_id": "784ef19ab06a4b8094e8b1fb468d8638",
+  "status": "skipped",
+  "priority": 2,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "motivo": "flag email desactivado (los avisos in-app siguen funcionando)"
+  }
+ },
+ "784ef19ab06a4b8094e8b1fb468d8638:listas-publicadas:analytics_event": {
+  "id": "784ef19ab06a4b8094e8b1fb468d8638:listas-publicadas:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "listas-publicadas",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "784ef19ab06a4b8094e8b1fb468d8638",
+    "type": "OFFICIAL_LIST_PUBLISHED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Llista provisional de persones admeses i excloses i termini per presentar al·legacions",
+     "url": "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1050047",
+     "boe_id": "DOGC-1050047",
+     "fecha": "2026-07-16",
+     "campos": [],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "784ef19ab06a4b8094e8b1fb468d8638"
+   },
+   "importancia": "HIGH"
+  },
+  "event_id": "784ef19ab06a4b8094e8b1fb468d8638",
+  "status": "done",
+  "priority": 2,
+  "retries": 0,
+  "created_at": "2026-10-02T00:46:16Z",
+  "run_after": "2026-10-02T00:46:16Z",
+  "started_at": "2026-10-02T00:46:16Z",
+  "finished_at": "2026-10-02T00:46:16Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-02",
+   "tipo": "OFFICIAL_LIST_PUBLISHED"
+  }
  }
 }
