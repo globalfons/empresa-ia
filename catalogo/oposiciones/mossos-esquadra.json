@@ -545,5 +545,24 @@
    "motivo": "La fórmula de puntuació de la subprova de coneixements no apareix com a text al DOGC (només les variables); la penalització d'1/4 sí que hi consta literalment."
   }
  ],
- "solo_ambito": true
+ "solo_ambito": true,
+ "fabrica_excluir": [
+  {
+   "ley": "guia-mossos",
+   "arts": [
+    "B.8.IF",
+    "C.1.2",
+    "C.2.4",
+    "C.2.7",
+    "C.3.1",
+    "C.3.2",
+    "C.3.3",
+    "C.3.IF",
+    "C.4.2",
+    "C.4.3",
+    "C.4.IF"
+   ],
+   "motivo": "Apartats de la guia que citen o desenvolupen la Llei 10/1994, la Llei 4/2003 o la Llei 16/1991, sense text consolidat oficial verificat al repositori (OFFICIAL_PENDING_REVIEW). B.8.IF conté a més text de l'índex del bloc C (defecte d'extracció del PDF). No s'hi generen preguntes fins que s'incorpori la font oficial."
+  }
+ ]
 }

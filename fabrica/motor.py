@@ -72,9 +72,21 @@ def orden_temas(temas):
                   key=lambda t: (t["preguntas"] > 0, t["preguntas"] / max(1, t["objetivo"]), t["prio"], t["indice"]))
 
 
+def sin_fuente_verificada():
+    """(ley, artículo) que la fábrica no debe usar: fuentes sin texto oficial vigente verificado (catalogo/oposiciones/*.json → fabrica_excluir)."""
+    import glob
+    out = {}
+    for f in glob.glob(os.path.join(R, "catalogo", "oposiciones", "*.json")):
+        for x in json.load(open(f, encoding="utf-8")).get("fabrica_excluir", []):
+            for n in x["arts"]:
+                out[(x["ley"], n)] = x["motivo"]
+    return out
+
+
 def elegir(temas, fuentes, banco, cfg, tamano, usados):
     """Reparte el lote entre temas (ronda) y, en cada tema, el artículo menos cubierto de su ámbito."""
     slots, total, lc = [], 0, cfg["lote"]
+    usados.update(sin_fuente_verificada())  # nunca se planifica sobre una fuente no verificada (el llamador conserva su conjunto)
     pendiente = {id(t): t["faltan"] for t in temas}
     progreso = True
     while total < tamano and progreso:

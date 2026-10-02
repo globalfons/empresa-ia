@@ -42,6 +42,10 @@ def leer(ruta, defecto):
     return json.load(open(ruta, encoding="utf-8")) if os.path.exists(ruta) else defecto
 
 
+# Exámenes oficiales anteriores cuyas preguntas llevan el apartado de la guía (apartat_guia): entran en la deduplicación
+EXAMENES_OFICIALES = {"guia-mossos": os.path.join("datos", "examens-oficials", "mossos-esquadra.json")}
+
+
 class Banco:
     def __init__(self, raiz=R):
         self.raiz = raiz
@@ -67,10 +71,19 @@ class Banco:
         return (self.manifiesto.get(slug) or {}).get("prefijo", "l39" if slug == "ley-39-2015" else slug)
 
     def existentes(self, slug, n):
-        """Todas las preguntas del artículo (banco no retirado + cola entera): base de la deduplicación."""
+        """Todas las preguntas del artículo (banco no retirado + cola entera + preguntas de exámenes oficiales del mismo
+        apartado): base de la deduplicación. Las oficiales solo se comparan; no cuentan como cobertura ni se tocan."""
         self.cargar(slug)
         return [q for q in self.qs[slug] if q["art"] == n and q.get("verification_status") not in RETIRADAS] + \
-               [q for q in self.cola[slug] if q["art"] == n]
+               [q for q in self.cola[slug] if q["art"] == n] + self.oficiales(slug, n)
+
+    def oficiales(self, slug, n):
+        f = EXAMENES_OFICIALES.get(slug)
+        if not f or not os.path.exists(os.path.join(self.raiz, f)):
+            return []
+        ex = leer(os.path.join(self.raiz, f), {"examenes": []})["examenes"]
+        return [{"id": q["id"], "q": q["q"], "o": q["o"], "a": q["a"], "art": n, "procedencia": "OFFICIAL_EXAM"}
+                for e in ex for q in e["preguntes"] if q.get("apartat_guia") == n]
 
     def cuenta(self, slug, n):
         """Preguntas que ya ocupan el artículo: publicadas y pendientes de revisión (las rechazadas no cuentan)."""

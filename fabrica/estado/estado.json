@@ -491,9 +491,9 @@
  ],
  "pausa": {
   "estado": "GENERATION_PAUSED",
-  "motivo": "Piloto Mossos S00017 completado (49 generadas · 43 VALID · 6 REVIEW_REQUIRED · 0 rechazadas). El escalado (100 → 250 → 500 → 1.000 → 2.000+) requiere autorización explícita. Reanudar con --reanudar.",
-  "lote": "S00017",
-  "fecha": "2026-10-01"
+  "motivo": "Fallo del juez (S00018): dos ejecuciones con la política juez-sesion-v1 no evaluaron ítem a ítem (scripts que aprueban por defecto). Lote S00018 abierto y sin publicar (59 candidatas). El piloto S00017 se juzgó con el mismo patrón. Requiere decisión humana antes de reanudar.",
+  "lote": "S00018",
+  "fecha": "2026-10-02"
  },
  "omitidos": {
   "lo-4-2015|24": 2
@@ -505,6 +505,13 @@
    "lote": "S00016",
    "fecha": "2026-10-01",
    "levantada": "2026-10-01"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "Piloto Mossos S00017 completado (49 generadas · 43 VALID · 6 REVIEW_REQUIRED · 0 rechazadas). El escalado (100 → 250 → 500 → 1.000 → 2.000+) requiere autorización explícita. Reanudar con --reanudar.",
+   "lote": "S00017",
+   "fecha": "2026-10-01",
+   "levantada": "2026-10-02"
   }
  ]
 }

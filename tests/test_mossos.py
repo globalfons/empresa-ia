@@ -251,5 +251,32 @@ class Paginas(unittest.TestCase):
         self.assertFalse([q for q in d["qs"] if q.get("verification_status") in ("REVIEW_REQUIRED", "OUTDATED", "DEPRECATED")])
 
 
+class Fabrica(unittest.TestCase):
+    def test_no_se_planifica_sobre_leyes_catalanas_sin_fuente_verificada(self):
+        from fabrica import motor as MO
+        ex = MO.sin_fuente_verificada()
+        for n in ("C.4.2", "C.4.3", "C.3.3"):
+            self.assertIn(("guia-mossos", n), ex)
+        a = json.load(open(G.assegurar_guia(), encoding="utf-8")) if os.path.exists(G.GUIA_JSON) else []
+        import re
+        citan = {x["n"] for x in a if re.search(r"10/1994|4/2003|16/1991", x["texto"])}
+        self.assertFalse(citan - {n for (l, n) in ex if l == "guia-mossos"}, "apartat que cita una llei sense font verificada i no està exclòs")
+        usados = set()
+        tema = {"faltan": 99, "preguntas": 0, "objetivo": 100, "prio": 0, "indice": 0, "arts": {"guia-mossos": ["C.4.2"]}}
+        fuentes = mock.Mock(); fuentes.ley.return_value.capacidad.return_value = 10
+        banco = mock.Mock(); banco.cuenta.return_value = 0; banco.rechazos.return_value = 0
+        cfg = {"lote": {"max_preguntas_por_llamada": 3, "max_rechazos_por_articulo": 3}}
+        self.assertEqual(MO.elegir([tema], fuentes, banco, cfg, 10, usados), [])
+        tema["arts"] = {"guia-mossos": ["C.5.1"]}; tema["faltan"] = 99
+        self.assertEqual([s["n"] for s in MO.elegir([tema], fuentes, banco, cfg, 3, set())], ["C.5.1"])
+
+    def test_deduplicacion_incluye_preguntas_oficiales(self):
+        from fabrica import banco as B
+        q = next(q for e in EX["examenes"] for q in e["preguntes"] if q.get("apartat_guia"))
+        ids = [x["id"] for x in B.Banco().existentes("guia-mossos", q["apartat_guia"])]
+        self.assertIn(q["id"], ids)
+        self.assertEqual(B.Banco().cuenta("guia-mossos", "ZZZ"), 0)
+
+
 if __name__ == "__main__":
     unittest.main()
