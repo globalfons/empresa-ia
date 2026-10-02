@@ -109,7 +109,7 @@ class Mossos(unittest.TestCase):
 
     def test_modulos_no_medibles_no_inventan_medicion(self):
         mods = {m["id"]: m for m in self.p["modulos"]}
-        self.assertEqual(set(mods), {"conocimientos", "examenes_oficiales", "psicotecnicos", "prueba_fisica", "adecuacion_psicoprofesional",
+        self.assertEqual(set(mods), {"conocimientos", "examenes_oficiales", "psicotecnicos", "prueba_fisica", "adecuacion_psicoprofesional", "entrevista",
                                      "idiomas", "requisitos", "reconocimiento_medico", "documentacion", "calendario"})
         for m in mods.values():
             if m["tipo"] != "test":

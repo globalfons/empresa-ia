@@ -182,6 +182,22 @@ for (const o of OPOS) {
   const f = `datos/examens-oficials/${o.id}.json`;
   o.examenes = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")).examenes.map((e) => ({ ...e, preguntes: e.preguntes.filter((q) => q.verification_status !== "DEPRECATED") })) : [];
 }
+// Simulacro desde el perfil (SimulationEngine): reparto por tema según el peso real de cada tema en los exámenes oficiales
+// (catalogo/perfiles/<id>.json → examen.simulacro.distribucion), restos mayores; sin repeticiones recientes si el perfil lo indica.
+for (const o of OPOS) {
+  const f = `catalogo/perfiles/${o.id}.json`, sim = (o.examen || {}).simulacro;
+  if (!sim || sim.reparto || !fs.existsSync(f)) continue;
+  const ps = JSON.parse(fs.readFileSync(f, "utf8")).examen.simulacro || {};
+  if (ps.evitar_repetidas) sim.evitar_repetidas = true;
+  const pesos = ps.distribucion || {}, idx = Object.fromEntries(o.temario.map((t, i) => [t.codigo || String(t.tema), i]));
+  const ks = Object.keys(pesos).filter((k) => k in idx);
+  if (!ks.length) continue;
+  const exacto = ks.map((k) => sim.preguntas * pesos[k]), base = exacto.map(Math.floor);
+  let resto = sim.preguntas - base.reduce((a, b) => a + b, 0);
+  exacto.map((x, j) => [x - base[j], j]).sort((a, b) => b[0] - a[0] || a[1] - b[1]).forEach(([, j]) => { if (resto > 0) { base[j]++; resto--; } });
+  sim.reparto = ks.map((k, j) => ({ temas: [idx[k]], preguntas: base[j] })).filter((r) => r.preguntas > 0);
+  sim.reparto_origen = ps.distribucion_origen;
+}
 const rutaTema = (o, i) => `oposiciones/${o.id}/tema-${i + 1}/`;
 // «Tema N» (con la letra del bloque delante si el número se repite en varios bloques)
 const nombreTema = (o, i) => { const t = o.temario[i]; if (t.codigo) return `Tema ${t.codigo}`; return (o.temario.filter((x) => x.tema === t.tema).length > 1 ? `${t.bloque.split(/[.)]/)[0]} · ` : "") + `Tema ${t.tema}`; };
@@ -463,7 +479,7 @@ ${LEYES.filter((L) => !L.qs.length).length ? `<h2>En preparación</h2><ul>${LEYE
 // ---------- Panel, ranking y cuenta ----------
 page("panel/", {
   title: "Mi panel de progreso", description: "Tu progreso en TestLey: nota orientativa, dominio por título, puntos débiles, racha y logros.", noindex: true, wide: true,
-  scripts: ["plan.js", "avisos.js", "panel.js"],
+  scripts: ["plan.js", "motores.js", "avisos.js", "panel.js"],
   body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
 page("errores/", {
@@ -589,7 +605,7 @@ ${lista.length
 ${convs.length ? `<h2>Convocatorias oficiales recientes (${convs.length})</h2><div class="cards">${convs.slice(0, 30).map((v) => tarjetaConv(v, r)).join("")}</div>${convs.length > 30 ? `<p><a class="cta alt" href="${r}convocatorias/?cat=${c.id}">Ver las ${convs.length} convocatorias</a></p>` : ""}` : ""}`,
   });
 }
-const ETIQ = { grupo: "Grupo y subgrupo", plazas: "Plazas", plazas_libres: "Plazas de acceso libre", sistema_selectivo: "Sistema selectivo", temario_referencia: "Norma que fija el temario", plazas_reservadas: "Plazas reservadas", titulacion: "Titulación", requisitos: "Requisitos", plazo_solicitudes: "Plazo de solicitudes", fecha_examen: "Fecha del examen", pruebas: "Pruebas y examen" };
+const ETIQ = { calendario: "Calendario del proceso", calendario_aviso: "Aviso sobre el calendario", prova_fisica: "Prueba física", adequacio_psicoprofessional: "Adecuación psicoprofesional", catala: "Lengua catalana", exclusions_mediques: "Exclusiones médicas", grupo: "Grupo y subgrupo", plazas: "Plazas", plazas_libres: "Plazas de acceso libre", sistema_selectivo: "Sistema selectivo", temario_referencia: "Norma que fija el temario", plazas_reservadas: "Plazas reservadas", titulacion: "Titulación", requisitos: "Requisitos", plazo_solicitudes: "Plazo de solicitudes", fecha_examen: "Fecha del examen", pruebas: "Pruebas y examen" };
 function oficialHtml(o) {
   const dato = (d) => {
     const f = o.fuentes[d.fuente];

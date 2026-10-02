@@ -40,10 +40,19 @@
     guardar(l);
     if (ctx && ctx !== l) { marcarDia(ley(ctx)); guardar(ctx); }
   }
-  // Sesión: [ts, preguntas, aciertos, errores, en blanco, modo, penalización, segundos]
-  function registrarSesion(l, n, ok, ko, blank, modo, pen, segundos) {
-    var p = ley(l);
-    p.ses.push([Date.now(), n, ok, ko, blank, modo || "", pen == null ? 1 / 3 : pen, Math.max(0, Math.round(segundos || 0))]);
+  // Tipos de sesión normalizados (Mossos 360 · F11) a partir del modo del motor de test
+  var TIPOS_SESION = { medida: "CUSTOM", tema: "TRAINING", art: "TRAINING", favoritas: "CUSTOM", fallos: "WEAKNESS", repaso: "REVIEW",
+    simulacro: "SIMULATION", examen: "SIMULATION", oficial: "OFFICIAL_EXAM", rapido: "QUICK_TEST", muestra: "QUICK_TEST" };
+  function esOpo(id) { return (CFG.opos || []).indexOf(id) >= 0; }
+  function tipoSesion(modo) { return TIPOS_SESION[modo] || "CUSTOM"; }
+  // Sesión: [ts, preguntas, aciertos, errores, en blanco, modo, penalización, segundos, detalle]
+  // detalle (opcional) = { tipo, inicio, fin, oposicion, temas: {i: n}, dificultad: {1: n…}, nota }
+  function registrarSesion(l, n, ok, ko, blank, modo, pen, segundos, det) {
+    var p = ley(l), fin = Date.now(), sg = Math.max(0, Math.round(segundos || 0)), pe = pen == null ? 1 / 3 : pen;
+    var d = det || {};
+    var detalle = { tipo: tipoSesion(modo), inicio: fin - sg * 1000, fin: fin, oposicion: d.oposicion || (esOpo(l) ? l : null),
+      temas: d.temas || {}, dificultad: d.dificultad || {}, nota: n ? Math.round(Math.max(0, ((ok - ko * pe) / n) * 10) * 100) / 100 : 0 };
+    p.ses.push([fin, n, ok, ko, blank, modo || "", pe, sg, detalle]);
     if (p.ses.length > 200) p.ses.shift();
     guardar(l);
   }
@@ -416,7 +425,10 @@
     azar = azar || Math.random;
     var mezcla = function (a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(azar() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
     var n = Math.min(sim.preguntas, qs.length), usadas = {}, lista = [];
-    var tomar = function (pool, k) { mezcla(pool.filter(function (q) { return !usadas[q.id]; })).slice(0, k).forEach(function (q) { usadas[q.id] = 1; lista.push(q); }); };
+    // Sin repeticiones recientes (sim.evitar_repetidas): primero las preguntas que no has respondido en los últimos 7 días
+    var reciente = function (q) { var r = sim.evitar_repetidas && q.ley ? ley(q.ley).q[q.id] : null; return r && Date.now() - r[3] < 7 * 864e5 ? 1 : 0; };
+    var ordenar = function (a) { return sim.evitar_repetidas ? a.map(function (q, i) { return [reciente(q), i, q]; }).sort(function (x, y) { return x[0] - y[0] || x[1] - y[1]; }).map(function (x) { return x[2]; }) : a; };
+    var tomar = function (pool, k) { ordenar(mezcla(pool.filter(function (q) { return !usadas[q.id]; }))).slice(0, k).forEach(function (q) { usadas[q.id] = 1; lista.push(q); }); };
     var grupos = {};
     qs.forEach(function (q) { var t = q.tm && q.tm.length ? q.tm[0] : "sin"; (grupos[t] = grupos[t] || []).push(q); });
     if (sim.reparto && sim.reparto.length) {
@@ -436,7 +448,7 @@
 
   window.TL = {
     online: ONLINE, root: CFG.root || "./",
-    registrarRespuesta: registrarRespuesta, registrarSesion: registrarSesion, estado: estado,
+    registrarRespuesta: registrarRespuesta, registrarSesion: registrarSesion, estado: estado, tipoSesion: tipoSesion, TIPOS_SESION: TIPOS_SESION,
     stats: stats, logros: logros, estrellas: estrellas, proximoRepaso: proximoRepaso, vencida: vencida, _INTERVALOS: INTERVALOS,
     registro: function (l, qid) { return ley(l).q[qid] || null; }, comparaSimulacros: comparaSimulacros, seleccionSimulacro: seleccionSimulacro, puntos: puntos, objetivoSemanal: objetivoSemanal,
     sesion: sesion, registrar: registrar, entrar: entrar, salir: salir, recordar: recordar,

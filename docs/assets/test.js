@@ -304,7 +304,9 @@
     var n = puntuables(parcial ? idx : queue.length);
     var pen = SIM.penalizacion; // la de la oposición (o 1/3 por defecto)
     var segundos = Math.round((Date.now() - t0) / 1000);
-    TL.registrarSesion(LEY, n, ok, ko, blank, modo, pen, segundos);
+    var hechas = queue.slice(0, parcial ? idx : queue.length).filter(function (q) { return !reserva[q.id]; }), temas = {}, dif = {};
+    hechas.forEach(function (q) { (q.tm || []).forEach(function (i) { temas[i] = (temas[i] || 0) + 1; }); if (q.dif) dif[q.dif] = (dif[q.dif] || 0) + 1; });
+    TL.registrarSesion(LEY, n, ok, ko, blank, modo, pen, segundos, { temas: temas, dificultad: dif });
     var nota = n ? Math.max(0, ((ok - ko * pen) / n) * 10) : 0;
     var s = TL.stats(LEY, data);
     var cmp = esExamen() ? TL.comparaSimulacros(s.sesiones, modo) : null;

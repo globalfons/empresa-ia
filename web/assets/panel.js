@@ -137,6 +137,54 @@
       }).join("") + '</ol><a class="cta" href="' + (tareas[0].url || LEY_URL + "#test=" + tareas[0].ancla) + '">Empezar sesión</a> <a class="small" href="' + TL.root + "errores/?c=" + LEY + '">Mis errores</a>' +
       (plan ? "" : TL.puede("plan_estudio") ? "" : ' <a class="small" href="' + TL.root + 'precios/">Con el Pase, tu sesión sale de un plan adaptado a tu fecha de examen</a>') + "</section>";
   }
+  // «Qué debo estudiar hoy» (TLMotor.hoy) a partir del perfil de la oposición y de tu progreso
+  var PERFIL = null;
+  function seccionQueEstudiar(s, data) {
+    if (!ES_OP || !window.TLMotor || !PERFIL) return "";
+    var info = opInfo(LEY), h = TLMotor.hoy({ s: s, data: data, aj: TL.ajustes(), perfil: PERFIL, sim: info && info.sim, estado: TL.estado });
+    if (h.descanso) return "";
+    var mpq = h.minPorPregunta, fila = function (txt, det, n, url) {
+      return n ? '<li><a href="' + url + '"><b>' + esc(txt) + "</b>" + (det ? '<span class="muted small">' + esc(det) + "</span>" : "") + '</a><span class="min">' + Math.max(1, Math.round(n * mpq)) + " min</span></li>" : "";
+    };
+    var items = fila("Repaso: " + h.review.preguntas + " preguntas que te tocan hoy", h.review.pendientes + " pendientes de repaso", h.review.preguntas, LEY_URL + "#test=repaso") +
+      h.weak_topics.map(function (t) { return fila("Tema " + t.tema + ": " + t.preguntas + " preguntas", t.titulo + " · dominio " + t.dominio + " %" + (t.fallos ? " · " + t.fallos + " fallos" : ""), t.preguntas, LEY_URL + "#test=" + t.ancla); }).join("") +
+      fila("Nuevas: " + h.new_questions.preguntas + " preguntas que aún no has visto", h.new_questions.pendientes + " sin ver", h.new_questions.preguntas, LEY_URL + "#test=repaso") +
+      fila("Difíciles: " + h.difficult_questions.preguntas + " preguntas de dificultad alta", null, h.difficult_questions.preguntas, LEY_URL + "#quiz") +
+      (h.simulation ? '<li><a href="' + LEY_URL + '#test=simulacro"><b>Simulacro: ' + h.simulation.preguntas + " preguntas en " + h.simulation.minutos + ' min</b><span class="muted small">Toca porque ' + esc(h.simulation.motivo) + '</span></a><span class="min">' + h.simulation.minutos + " min</span></li>" : "");
+    if (!items) return "";
+    return '<section class="card hoy" id="que-estudiar"><div class="of-head"><h2>Qué debo estudiar hoy</h2><span class="muted">' + h.recommended_minutes + " min recomendados</span></div>" +
+      '<ol class="hoy-lista">' + items + "</ol>" +
+      (h.temas_sin_preguntas.length ? '<p class="muted small">Temas sin preguntas de TestLey todavía (' + esc(h.temas_sin_preguntas.join(", ")) + "): estúdialos con el material oficial y los exámenes oficiales.</p>" : "") +
+      '<p class="muted small">Calculado con tu tiempo disponible, tus fallos y tus repasos pendientes. Es una orientación de TestLey, no un dato oficial.</p></section>';
+  }
+  // Módulos de preparación del perfil: los de tipo «test» enlazan a los tests; el resto, checklist y registro manual (sin nota)
+  function seccionPreparacion() {
+    if (!ES_OP || !window.TLMotor || !PERFIL || !PERFIL.modulos.length) return "";
+    var cal = TLMotor.proximos(PERFIL).slice(0, 4);
+    return '<section class="card" id="preparacion"><h2>Preparación completa</h2>' +
+      (cal.length ? '<h3>Próximas fechas</h3><ul class="weak">' + cal.map(function (c) {
+        return "<li><span><b>" + c.fecha.split("-").reverse().join("/") + "</b> · " + esc(c.hito) + "</span><span>" + (c.caracter === "OFICIAL" ? '<span class="badge-oficial">Oficial</span>' : '<span class="chip grey">Previsión</span>') + " " + (c.dias === 0 ? "hoy" : "en " + c.dias + " días") + "</span></li>";
+      }).join("") + "</ul>" : "") +
+      PERFIL.modulos.map(function (m) {
+        var e = TLMotor.estadoModulo(LEY, m);
+        if (m.tipo === "test") return '<details class="modulo"><summary><b>' + esc(m.nombre) + '</b> <span class="muted small">' + esc(m.parte_oficial || "") + "</span></summary><p class=\"small\">" + esc(m.descripcion) + '</p><a class="btn" href="' + LEY_URL + (m.id === "examenes_oficiales" ? "examenes-oficiales/" : "#quiz") + '">Practicar</a></details>';
+        return '<details class="modulo" data-mod="' + esc(m.id) + '"><summary><b>' + esc(m.nombre) + '</b> <span class="muted small">' + e.hechas + "/" + e.total + " hecho" + (m.parte_oficial ? " · " + esc(m.parte_oficial) : "") + "</span></summary>" +
+          '<p class="small">' + esc(m.descripcion) + "</p>" +
+          Object.keys(m.datos_oficiales || {}).map(function (k) { var d = m.datos_oficiales[k]; return d.cita ? '<blockquote class="small">«' + esc(d.cita.length > 220 ? d.cita.slice(0, 218) + "…" : d.cita) + "»" + (d.fuente ? ' <a href="' + esc(d.fuente.url) + '" rel="noopener">Fuente oficial</a>' : "") + "</blockquote>" : ""; }).join("") +
+          '<ul class="checklist">' + (m.acciones || []).map(function (a, i) { return '<li><label class="check"><input type="checkbox" data-acc="' + i + '"' + (e.acciones[i] ? " checked" : "") + "> " + esc(a) + "</label></li>"; }).join("") + "</ul>" +
+          '<form class="form-inline reg-manual"><label>Mi registro <input name="t" maxlength="200" placeholder="p. ej. Course Navette: palier 7"></label><button class="btn">Anotar</button></form>' +
+          (e.registros.length ? '<ul class="small muted">' + e.registros.map(function (r) { return "<li>" + new Date(r.ts).toLocaleDateString("es-ES") + " · " + esc(r.texto) + "</li>"; }).join("") + "</ul>" : "") +
+          '<p class="muted small">TestLey no mide ni puntúa esta prueba: solo guarda tu checklist y tus anotaciones en este dispositivo.</p></details>';
+      }).join("") + "</section>";
+  }
+  function enlazarPreparacion(repintar) {
+    [].forEach.call(el.querySelectorAll("[data-mod]"), function (d) {
+      var id = d.getAttribute("data-mod");
+      [].forEach.call(d.querySelectorAll("[data-acc]"), function (c) { c.onchange = function () { TLMotor.marcarAccion(LEY, id, +c.getAttribute("data-acc"), c.checked); }; });
+      var f = d.querySelector(".reg-manual");
+      if (f) f.onsubmit = function (e) { e.preventDefault(); if (TLMotor.registrarManual(LEY, id, f.t.value)) repintar(id); };
+    });
+  }
   function seccionProgresoSemanal(s) {
     var p = TL.puntos(s), o = TL.objetivoSemanal(p, TL.ajustes().horasSemana);
     return '<section class="card"><div class="of-head"><h2>Tu semana</h2><span class="pill">Nivel ' + p.nivel + " · " + p.total + " puntos</span></div>" +
@@ -181,7 +229,7 @@
     var ult = s.sesiones.slice(-12);
 
     el.innerHTML =
-      '<div class="panel-grid"><div class="panel-main">' + seccionHoy(s, data) +
+      '<div class="panel-grid"><div class="panel-main">' + seccionQueEstudiar(s, data) + seccionHoy(s, data) + seccionPreparacion() +
       // Cabecera
       '<section class="hero-panel">' +
       '<div class="hp-main"><span class="kicker">' + (ses ? "Hola, " + esc((perfil && perfil.alias) || ses.user.email.split("@")[0]) : "Tu progreso en este dispositivo") + "</span>" +
@@ -302,11 +350,17 @@
       el.querySelector("#tutor-rec").onclick = function () { TLTutor.recomendar(resumenTutor(s, data), el.querySelector("#tutor-out")); };
     }
     cargarReferidos();
+    enlazarPreparacion(function (id) { pintar(data, perfil); var d = el.querySelector('[data-mod="' + id + '"]'); if (d) d.open = true; });
     var sb = el.querySelector("#salir");
     if (sb) sb.onclick = function () { TL.salir().then(function () { location.href = TL.root; }); };
   }
 
-  fetch(TL.root + "datos/catalogo.json").then(function (r) { return r.json(); }).catch(function () { return []; }).then(function (c) { CATALOGO = c; return TL.cargar(LEY); }).then(function (data) {
+  fetch(TL.root + "datos/catalogo.json").then(function (r) { return r.json(); }).catch(function () { return []; }).then(function (c) {
+    CATALOGO = c;
+    var perfil = ES_OP ? fetch(TL.root + "datos/perfil-" + LEY + ".json").then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }) : Promise.resolve(null);
+    return Promise.all([TL.cargar(LEY), perfil]);
+  }).then(function (r) {
+    var data = r[0]; PERFIL = r[1];
     pintar(data, null);
     if (TL.online && TL.sesion()) {
       TL.bajar().then(function () { TL.subir(LEY); return TL.perfil(); }).then(function (p) { pintar(data, p); }).catch(function () {});
