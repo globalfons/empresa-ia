@@ -117,6 +117,27 @@ class Mecanismo(unittest.TestCase):
             J.preparar("v3e", it, version=V3)
 
 
+class ReevaluacionSinPublicacionAutomatica(unittest.TestCase):
+    def test_valid_v3_no_publica_una_pregunta_que_no_se_servia(self):
+        from fabrica import reevaluacion as RV
+        tmp = tempfile.mkdtemp()
+        try:
+            os.makedirs(os.path.join(tmp, "datos"))
+            q = {"id": "guia-mossos-99", "q": "¿x?", "o": ["a", "b", "c", "d"], "a": 0, "cita": "c", "art": "A.1.1",
+                 "verification_status": "REVIEW_REQUIRED_REEVALUATION", "current_status": "HUMAN_REVIEW_QUEUE", "legacy_batch": "S00018",
+                 "legacy_verdict": "VALID", "legacy_policy_version": "juez-sesion-v1", "legacy_judge": "x"}
+            f = os.path.join(tmp, "datos", "preguntas-guia-mossos.json")
+            json.dump([q], open(f, "w"))
+            res = {"judge_policy_version": V3, "policy_hash": "h", "veredictos": [{"question_id": "guia-mossos-99", "verdict": "VALID", "reason": "r" * 30, "criteria_checked": {}}]}
+            RV.aplicar("S00018", "S00018-v3", raiz=tmp, res=res)
+            q2 = json.load(open(f))[0]
+            self.assertEqual(q2["verification_status"], "REVIEW_REQUIRED_REEVALUATION")  # sigue sin servirse
+            self.assertEqual(q2["reevaluation_verdict"], "VALID")
+            self.assertIn("sin publicar hasta autorización", q2["motivo"])
+        finally:
+            shutil.rmtree(tmp, True)
+
+
 class SoloPorLaPuerta(unittest.TestCase):
     def test_pregunta_nueva_sin_evidencia_rompe_la_integridad_y_con_ella_no(self):
         q = {"id": "constitucion-nueva-x", "q": "¿Pregunta nueva?", "o": ["a", "b", "c", "d"], "a": 0, "cita": "cita literal", "art": "1"}

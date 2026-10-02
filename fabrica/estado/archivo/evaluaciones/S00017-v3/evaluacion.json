@@ -1,0 +1,930 @@
+{
+ "evaluacion": "S00017-v3",
+ "creada_el": "2026-10-02T22:43:06",
+ "judge_policy_version": "juez-sesion-v3",
+ "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+ "judge_model": "claude-haiku-4-5 (subagente de la sesión, igual que v1 y v2)",
+ "session_id": "99d978c0-2dae-5759-b0b5-c9d96487a509",
+ "preguntas": 43,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "guia-mossos-0",
+    "guia-mossos-1",
+    "guia-mossos-2",
+    "guia-mossos-3",
+    "guia-mossos-4",
+    "guia-mossos-5",
+    "guia-mossos-6",
+    "guia-mossos-7",
+    "guia-mossos-8",
+    "guia-mossos-9"
+   ],
+   "prompt_sha256": "279f189f0696e3301d6b0b50a0918e2f54f321b495d2ef2de8a8cd1eadd90a9d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "guia-mossos-0": "0e1b4cf51f9bdbbc56d0ca8a4f7f1d716c364c03648c01652249dc39412cd0c5",
+    "guia-mossos-1": "96437ff8e1b03e205d3e6986e72d168ec9b622249ccc2e80d110d0750d6150ab",
+    "guia-mossos-2": "8f092332d0d7b60cd6286b38cebff5911b25ce6b098f82d69f0d5c450eb7ccd8",
+    "guia-mossos-3": "be6c476ee3bb529aa47c3259352f1af8940b73693c013f6ad622b0b04b486bb8",
+    "guia-mossos-4": "76ada6b979f68f302cdd1a3bb6b527d877efe80f743aacc0bddc6ee6a8f6112c",
+    "guia-mossos-5": "3cc61c9b681b380f2eb315e91307f015dfdf85ea9d023685e90663442eaff1e7",
+    "guia-mossos-6": "2272b1af974d7d95e9265707d08c2d0ff358f77bf0edd5aa8ea83266741018af",
+    "guia-mossos-7": "6c6c140cf1ae982079fd83049409b6f579a69290b3fbae39e74b16df8bc87fd3",
+    "guia-mossos-8": "da478bd7a0933a32241b3badb3af82405d748cb1ee1ab1b948b2ba0d2b8bb181",
+    "guia-mossos-9": "5da02d981f8fde5c15fe89cbd8edc29167920fb9083d59c80c5c172348f28dcc"
+   },
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Aquesta pregunta duplica essencialment la parecida mx46-002-23-1. Ambdues proven el mateix fait: que l'Home de Talteüll té una antiguitat aproximada de 450.000 anys. L'única diferència és l'angle de formulació (quants anys vs quina resta), però el coneixement testat és idèntic.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "mx46-002-23-1"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix clarament Catalunya com a 'redós on es configuraran cultures pròpies i autòctones'. La cita conté completament l'element necessari per triar l'opció 2. L'opció 0 descriu 'passadís', no 'redós'. Les altres opcions (1 i 3) no apareixen al text. Pregunta clara, bien formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text especifica que 'Sabem per la indústria lítica, pertanyent al paleolític inferior, que existien grups humans caçadors/recol·lectors'. La cita és completa i suficient per seleccionar l'opció 0. Les altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen en el context paleolític inferior descrit. Pregunta ben formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma que 'en la seva redacció [de la Constitució de 1812] hi tingué un paper important el català Antoni de Capmany'. La cita és completa i suficient. El distractors (Pi i Margall, Joan Prim, Valentí Almirall) apareixen en el text però en altres contextos (Pi i Margall com a president de la República, Prim a 1868, Almirall amb Lo catalanisme de 1886), no relacionats amb la Constitució de 1812. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text descriu que els moderats 'volien donar més protagonisme a la corona, eren més restrictius amb les llibertats i apostaven per un sufragi restringit'. La cita conté tots els elements necesaris per seleccionar l'opció 1. L'opció 0 descriu els progressistes, no els moderats. Les opcions 2 i 3 no apareixen en el text sobre aquesta qüestió. Pregunta clara i ben formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-5",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La pregunta demana quina mesura NO s'atribueix al Trienni Liberal. El text menciona que el Trienni 'tendí a aplicar mesures liberals (llibertat econòmica industrial, primera desamortització eclesiàstica), reordenà la presència de cases de religiosos i afavorí les llibertats públiques'. La cita proporcionada ('tendí a aplicar mesures liberals per tal de redreçar l'economia (llibertat econòmica industrial, primera desamortització eclesiàstica') és incompleta i no inclou l'afavoriment de llibertats públiques, un element clau del Trienni. Per tant, la cita sola no conté tots els elements necessaris per confirmar quina opció és la correcta definitiva. L'opció 2 (derogació de la Llei sàlica) es menciona al text com a posterior al Trienni (a la mort de Ferdinand VII el 1833), però la cita truncada no ho clarifica prou.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix que a Catalunya 'el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La cita és directa i completa. L'opció 0 (prevenció) és l'oposat de la resposta. Les opcions 2 i 3 (cos de policia reial, tribunals eclesiàstics) no apareixen. El text clarifica que 'A Catalunya no va existir mai un cos permanent de policia'. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-7",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix que 'El feudalisme, amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La cita és completa i suficient per triar l'opció 2. Les altres opcions (centralització, cos de policia comú, ciutats reials) contradiuen el que el text afirma sobre la parcel·lació de poders. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-8",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix que la major part del país 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells' (els barons eclesiàstics i laics). La cita fa referència clara als barons esmentats immediatament antes en el text, deixant clar que ells eren responsables de l'ordre públic. Això fa que l'opció 1 sigui la correcta. Els distractors no apareixen en aquest context. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La cita és completa i suficient. L'opció 3 és l'única que coincideix amb els elements del text. Les altres opcions (Diputació del General, Consell de Cent, Reial Audiència) es mencionen en altres contextos o períodes, no relacionats amb aquesta funció específica en el regnat de Pere el Cerimoniós. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-acdeeb33b884def75.jsonl",
+    "respuesta_sha256": "09ec6953ede57348985b3c76c3187fa2caed18decef1c2113d6ddd8d2d23dfd3"
+   },
+   "registrada_el": "2026-10-02T22:44:59",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:44:59",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-acdeeb33b884def75.jsonl",
+      "respuesta_sha256": "09ec6953ede57348985b3c76c3187fa2caed18decef1c2113d6ddd8d2d23dfd3"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-0\",\n    \"verdict\": \"REJECTED\",\n    \"reason\": \"Aquesta pregunta duplica essencialment la parecida mx46-002-23-1. Ambdues proven el mateix fait: que l'Home de Talteüll té una antiguitat aproximada de 450.000 anys. L'única diferència és l'angle de formulació (quants anys vs quina resta), però el coneixement testat és idèntic.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"mx46-002-23-1\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text defineix clarament Catalunya com a 'redós on es configuraran cultures pròpies i autòctones'. La cita conté completament l'element necessari per triar l'opció 2. L'opció 0 descriu 'passadís', no 'redós'. Les altres opcions (1 i 3) no apareixen al text. Pregunta clara, bien formulada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text especifica que 'Sabem per la indústria lítica, pertanyent al paleolític inferior, que existien grups humans caçadors/recol·lectors'. La cita és completa i suficient per seleccionar l'opció 0. Les altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen en el context paleolític inferior descrit. Pregunta ben formulada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text afirma que 'en la seva redacció [de la Constitució de 1812] hi tingué un paper important el català Antoni de Capmany'. La cita és completa i suficient. El distractors (Pi i Margall, Joan Prim, Valentí Almirall) apareixen en el text però en altres contextos (Pi i Margall com a president de la República, Prim a 1868, Almirall amb Lo catalanisme de 1886), no relacionats amb la Constitució de 1812. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text descriu que els moderats 'volien donar més protagonisme a la corona, eren més restrictius amb les llibertats i apostaven per un sufragi restringit'. La cita conté tots els elements necesaris per seleccionar l'opció 1. L'opció 0 descriu els progressistes, no els moderats. Les opcions 2 i 3 no apareixen en el text sobre aquesta qüestió. Pregunta clara i ben formulada.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-5\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"La pregunta demana quina mesura NO s'atribueix al Trienni Liberal. El text menciona que el Trienni 'tendí a aplicar mesures liberals (llibertat econòmica industrial, primera desamortització eclesiàstica), reordenà la presència de cases de religiosos i afavorí les llibertats públiques'. La cita proporcionada ('tendí a aplicar mesures liberals per tal de redreçar l'economia (llibertat econòmica industrial, primera desamortització eclesiàstica') és incompleta i no inclou l'afavoriment de llibertats públiques, un element clau del Trienni. Per tant, la cita sola no conté tots els elements necessaris per confirmar quina opció és la correcta definitiva. L'opció 2 (derogació de la Llei sàlica) es menciona al text com a posterior al Trienni (a la mort de Ferdinand VII el 1833), però la cita truncada no ho clarifica prou.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix que a Catalunya 'el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La cita és directa i completa. L'opció 0 (prevenció) és l'oposat de la resposta. Les opcions 2 i 3 (cos de policia reial, tribunals eclesiàstics) no apareixen. El text clarifica que 'A Catalunya no va existir mai un cos permanent de policia'. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-7\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix que 'El feudalisme, amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La cita és completa i suficient per triar l'opció 2. Les altres opcions (centralització, cos de policia comú, ciutats reials) contradiuen el que el text afirma sobre la parcel·lació de poders. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-8\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix que la major part del país 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells' (els barons eclesiàstics i laics). La cita fa referència clara als barons esmentats immediatament antes en el text, deixant clar que ells eren responsables de l'ordre públic. Això fa que l'opció 1 sigui la correcta. Els distractors no apareixen en aquest context. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-9\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text afirma que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La cita és completa i suficient. L'opció 3 és l'única que coincideix amb els elements del text. Les altres opcions (Diputació del General, Consell de Cent, Reial Audiència) es mencionen en altres contextos o períodes, no relacionats amb aquesta funció específica en el regnat de Pere el Cerimoniós. Pregunta clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "guia-mossos-10",
+    "guia-mossos-11",
+    "guia-mossos-12",
+    "guia-mossos-13",
+    "guia-mossos-14",
+    "guia-mossos-15",
+    "guia-mossos-16",
+    "guia-mossos-17",
+    "guia-mossos-18",
+    "guia-mossos-19"
+   ],
+   "prompt_sha256": "e7389f68b37527d30940ca27ba2c858c38f5ecd8353302bf33c0e1f296a2d778",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "guia-mossos-10": "e0dcf15a47bf5209fef1afd79b81d21fd0b695f042b176c161a450320bf6fad3",
+    "guia-mossos-11": "e1b77d8a836240004d38ce6aab0d004c6886f72e327efba48603727185a0e914",
+    "guia-mossos-12": "f97f73c4eaa1d6bf58e5ba79b52b4397a8cf2e2e5e099d0a69d8959801815bfa",
+    "guia-mossos-13": "1bfe257433e2eaac165e7ffd6ab641481c5061ec93b2f4047550e62c4af702e1",
+    "guia-mossos-14": "36aba9e2f001fa064ad77d736b113e65c79633dfa586e8c17f852dcb6e4dfe52",
+    "guia-mossos-15": "f5f03a9479a78eac98dd7853fd9b31268e7215467e35a7a6324e8eae57967bfd",
+    "guia-mossos-16": "a44eb0df4c9e2e13703afe2051cc5e7a385cfdda7792889cbd5957b940944fa6",
+    "guia-mossos-17": "3dd488d903e95ec441f33e8d2dd2fb5879936b9fad8a8c497b7b874bb6ff32c1",
+    "guia-mossos-18": "251149c2f65a86d419e6bc07da40713a4e83cff69d24c0834499ce931c2d8605",
+    "guia-mossos-19": "cc381bf983d834b0b1624c47ace56c17f3b996d271dc0795e86bcb320893b457"
+   },
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix clarament que el català era la llengua B amb menys prestigi usada en àmbits privats durant la diglossia (segles IX-XI). La cita conté tots els elements necessaris per justificar la resposta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera explícitament els criteris de Pompeu Fabra per a la Gramàtica Catalana de 1918, incloent que havia de ser supradialectal. La cita extreu aquesta criteri de manera completa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-12",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text especifica exactament les fronteres de Catalunya (França, Andorra, Aragó, País Valencià) i Navarra no apareix. La cita conté tota la informació necessària per identificar la resposta correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-13",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text indica clarament que la Llei de vegueries de 2010 va fixar set vegueries, ampliades a vuit el 2017. La cita és precisa i suficient.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-14",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera que Penedès comprèn les comarques del Garraf entre altres. La cita conté l'informació necessària per respon correctament.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-15",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix les xarxes i cadenes migratòries com el conjunt de relacions entre individus que serveixen de pont entre origen i destinació. La cita conté la definició completa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-16",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text identifica la realitat demogràfica immersa en un ràpid procés d'envelliment com un dels factors que explica que Catalunya es convertís en receptora d'immigració durant 1998-2008. La cita sustenta aquest factor.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-17",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix explícitament que l'any 1981 és l'acte de naixement de la societat de la informació, moment en què Microsoft i IBM llançaren els seus productes claus. La cita és precisa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-18",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix hipermèdia com la integració de multimèdia i hipertext organitzat de forma no seqüencial. La cita extreu aquesta definició correctament.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-19",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Mentre que el text clarament associa la inspecció d'aparells elevadors amb 'safety', la cita proporcionada ('Tot plegat per garantir la safety d'aquests elements i els seus entorns') no conté la definició que distingeix safety de security. Per entendre per què la resposta és 'safety' i no 'security', es necessita la definició del text que apareix línies més amunt (que safety és per a seguretat ambiental i riscos laborals, mentre que security és per a control d'accessos i prevenció d'intrusions). La cita sola no és suficient per justificar la resposta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 6,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a1d56746397375861.jsonl",
+    "respuesta_sha256": "f389da44f74cd7e208fc182543c4101c1b882018026c797efdf83b782704efea"
+   },
+   "registrada_el": "2026-10-02T22:45:15",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:45:15",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 6,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a1d56746397375861.jsonl",
+      "respuesta_sha256": "f389da44f74cd7e208fc182543c4101c1b882018026c797efdf83b782704efea"
+     },
+     "respuesta": "[\n  {\"question_id\": \"guia-mossos-10\", \"verdict\": \"VALID\", \"reason\": \"El text defineix clarament que el català era la llengua B amb menys prestigi usada en àmbits privats durant la diglossia (segles IX-XI). La cita conté tots els elements necessaris per justificar la resposta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-11\", \"verdict\": \"VALID\", \"reason\": \"El text enumera explícitament els criteris de Pompeu Fabra per a la Gramàtica Catalana de 1918, incloent que havia de ser supradialectal. La cita extreu aquesta criteri de manera completa.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-12\", \"verdict\": \"VALID\", \"reason\": \"El text especifica exactament les fronteres de Catalunya (França, Andorra, Aragó, País Valencià) i Navarra no apareix. La cita conté tota la informació necessària per identificar la resposta correcta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-13\", \"verdict\": \"VALID\", \"reason\": \"El text indica clarament que la Llei de vegueries de 2010 va fixar set vegueries, ampliades a vuit el 2017. La cita és precisa i suficient.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-14\", \"verdict\": \"VALID\", \"reason\": \"El text enumera que Penedès comprèn les comarques del Garraf entre altres. La cita conté l'informació necessària per respon correctament.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-15\", \"verdict\": \"VALID\", \"reason\": \"El text defineix les xarxes i cadenes migratòries com el conjunt de relacions entre individus que serveixen de pont entre origen i destinació. La cita conté la definició completa.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-16\", \"verdict\": \"VALID\", \"reason\": \"El text identifica la realitat demogràfica immersa en un ràpid procés d'envelliment com un dels factors que explica que Catalunya es convertís en receptora d'immigració durant 1998-2008. La cita sustenta aquest factor.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-17\", \"verdict\": \"VALID\", \"reason\": \"El text estableix explícitament que l'any 1981 és l'acte de naixement de la societat de la informació, moment en què Microsoft i IBM llançaren els seus productes claus. La cita és precisa.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-18\", \"verdict\": \"VALID\", \"reason\": \"El text defineix hipermèdia com la integració de multimèdia i hipertext organitzat de forma no seqüencial. La cita extreu aquesta definició correctament.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}},\n  {\"question_id\": \"guia-mossos-19\", \"verdict\": \"REVIEW_REQUIRED\", \"reason\": \"Mentre que el text clarament associa la inspecció d'aparells elevadors amb 'safety', la cita proporcionada ('Tot plegat per garantir la safety d'aquests elements i els seus entorns') no conté la definició que distingeix safety de security. Per entendre per què la resposta és 'safety' i no 'security', es necessita la definició del text que apareix línies més amunt (que safety és per a seguretat ambiental i riscos laborals, mentre que security és per a control d'accessos i prevenció d'intrusions). La cita sola no és suficient per justificar la resposta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": false, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "guia-mossos-20",
+    "guia-mossos-21",
+    "guia-mossos-22",
+    "guia-mossos-23",
+    "guia-mossos-24",
+    "guia-mossos-25",
+    "guia-mossos-26",
+    "guia-mossos-27",
+    "guia-mossos-28",
+    "guia-mossos-29"
+   ],
+   "prompt_sha256": "d654851fd53d906e3ead979c54e7afd97df954a4d0aa532cdade77b99fa3382f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "guia-mossos-20": "827f6d7eefb97e216b136f91e9fbf1ea7191184aa9e3892ff18661de218a8a9b",
+    "guia-mossos-21": "224dba8a6657ca5c6c79c533f7d3eb1642ba3494ad93770b2a7f27beb2b62c27",
+    "guia-mossos-22": "e30a7e87585db32ae681311cf6675e415d249275fdc8a77f92430bc8b31c23ff",
+    "guia-mossos-23": "d01607536d735a828a549e134c766def0fef94afd245092c0a8f0b76c013e381",
+    "guia-mossos-24": "68c942533db45613b532a2b2048e2bb2406e46a26cd7f9ed187c2959c1ad000e",
+    "guia-mossos-25": "d3c55c6e4d6119458a58325824f35b468cd0cd76c2736529fd9fa61b281a0af4",
+    "guia-mossos-26": "e2e07ca9285a247ca38c45679bee424002c1e690de28ef81a4c112311adfcd44",
+    "guia-mossos-27": "f1a42fb3e79d6f2dc62be267ef384ad78927287f6856d8bcc876feddc9c05782",
+    "guia-mossos-28": "575df45397cd1c5139dd8e24dae9ec955111b23a706829ef1c2ba924a4a1c327",
+    "guia-mossos-29": "338d4554e9a90a149404843c8764f504b8c72959f1a35003d4440c31b1d5b49d"
+   },
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-20",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita extreta del text identifica correctament l'òrgan que va emetre el Dictamen: el Consell Consultiu el 5 de setembre de 2005. La cita és completa i suficient per justificar l'opció correcta. No hi ha altres opcions que siguin correctes segons el text. La pregunta és clara i útil per a l'examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-21",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita reprodueix exactament del text la definició de la doble naturalesa jurídica: 'la llei primera i fonamental de l'ordenament jurídic català' i 'llei orgànica estatal'. La cita és completa i autònoma. Only option 0 is correct. La pregunta és clara i d'utilitat per a l'examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-22",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Aquesta pregunta és duplicada de 'mx46-22-2'. Ambdues pregunten pel nom medieval de la Generalitat i ambdues contenen la mateixa resposta (Diputació del General) i la mateixa font normativa. Testeja exactament el mateix concepte.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "mx46-22-2"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-23",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita extreta del text especifica clarament els dos requisits requerits: majoria absoluta dels diputats per a la moció de censura i majoria simple dels vots emesos per a la qüestió de confiança. La cita és completa i autònoma per justificar l'opció. Cap altra opció és correcta. La pregunta és clara i és material útil per a l'examen (requeriments específics).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-24",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita del text estableix que resten fora de la Generalitat els òrgans que depenen de l'Estat central o deriven de l'autonomia local. Les tres primeres opcions (Parlament, Presidència, Govern) estan explícitament incloses en el text com a parts del complex institucional. Solo la quarta opció (ajuntament derivat de l'autonomia local) està clarament exclosa. La pregunta és clara i té utilitat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-25",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita extreta del text identifica correctament la carta de drets més important de les colònies britàniques d'Amèrica en el segle xviii: la Declaració de drets de Virgínia de 1776. La cita és completa i suficient. Solo una opció és correcta. La pregunta és clara i useful per a l'examen (fita histórica de l'obra).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-26",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita extreta del text explica clarament la motivació de la internacionalització dels drets humans: les greus vulneracions dels drets pels estats totalitaris (feixisme, nazisme, estalinisme) durant el periode d'entreguerres i la Segona Guerra Mundial. La cita és completa i autònoma. Solo l'opció 2 és correcta. La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-27",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita extreta del text especifica que les normes de drets fonamentals s'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats ratificats per Espanya. La cita és completa i suficient per justificar l'opció correcta. Solo l'opció 1 és correcta. La pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-28",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Mentre que el text sí suporta la resposta (autonomia administrativa), la cita proporcionada ('Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública') està truncada. La cita omit la part essencial del text que conecta directament aquesta autonomia amb el fet que el personal 'té el seu propi estatut personal', que és la premissa de la pregunta. La cita sola no conté tots els elements necessaris per comprendre per què tenir estatut propi és una manifestació d'autonomia administrativa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-29",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La cita extreta del text identifica correctament que correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya. La cita és completa i autònoma per justificar l'opció correcta. Solo l'opció 3 és correcta. La pregunta és clara i útil per a l'examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a7d332a4f9dcb6faf.jsonl",
+    "respuesta_sha256": "4b20a2988b4f8b42ef26b011b4301454dc0cd4bea19c157d04422b024eb3763e"
+   },
+   "registrada_el": "2026-10-02T22:46:25",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:46:25",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a7d332a4f9dcb6faf.jsonl",
+      "respuesta_sha256": "4b20a2988b4f8b42ef26b011b4301454dc0cd4bea19c157d04422b024eb3763e"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-20\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita extreta del text identifica correctament l'òrgan que va emetre el Dictamen: el Consell Consultiu el 5 de setembre de 2005. La cita és completa i suficient per justificar l'opció correcta. No hi ha altres opcions que siguin correctes segons el text. La pregunta és clara i útil per a l'examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-21\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita reprodueix exactament del text la definició de la doble naturalesa jurídica: 'la llei primera i fonamental de l'ordenament jurídic català' i 'llei orgànica estatal'. La cita és completa i autònoma. Only option 0 is correct. La pregunta és clara i d'utilitat per a l'examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-22\",\n    \"verdict\": \"REJECTED\",\n    \"reason\": \"Aquesta pregunta és duplicada de 'mx46-22-2'. Ambdues pregunten pel nom medieval de la Generalitat i ambdues contenen la mateixa resposta (Diputació del General) i la mateixa font normativa. Testeja exactament el mateix concepte.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"mx46-22-2\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-23\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita extreta del text especifica clarament els dos requisits requerits: majoria absoluta dels diputats per a la moció de censura i majoria simple dels vots emesos per a la qüestió de confiança. La cita és completa i autònoma per justificar l'opció. Cap altra opció és correcta. La pregunta és clara i és material útil per a l'examen (requeriments específics).\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-24\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita del text estableix que resten fora de la Generalitat els òrgans que depenen de l'Estat central o deriven de l'autonomia local. Les tres primeres opcions (Parlament, Presidència, Govern) estan explícitament incloses en el text com a parts del complex institucional. Solo la quarta opció (ajuntament derivat de l'autonomia local) està clarament exclosa. La pregunta és clara i té utilitat.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-25\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita extreta del text identifica correctament la carta de drets més important de les colònies britàniques d'Amèrica en el segle xviii: la Declaració de drets de Virgínia de 1776. La cita és completa i suficient. Solo una opció és correcta. La pregunta és clara i useful per a l'examen (fita histórica de l'obra).\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-26\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita extreta del text explica clarament la motivació de la internacionalització dels drets humans: les greus vulneracions dels drets pels estats totalitaris (feixisme, nazisme, estalinisme) durant el periode d'entreguerres i la Segona Guerra Mundial. La cita és completa i autònoma. Solo l'opció 2 és correcta. La pregunta és clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-27\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita extreta del text especifica que les normes de drets fonamentals s'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats ratificats per Espanya. La cita és completa i suficient per justificar l'opció correcta. Solo l'opció 1 és correcta. La pregunta és clara i útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-28\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"Mentre que el text sí suporta la resposta (autonomia administrativa), la cita proporcionada ('Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública') està truncada. La cita omit la part essencial del text que conecta directament aquesta autonomia amb el fet que el personal 'té el seu propi estatut personal', que és la premissa de la pregunta. La cita sola no conté tots els elements necessaris per comprendre per què tenir estatut propi és una manifestació d'autonomia administrativa.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-29\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La cita extreta del text identifica correctament que correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya. La cita és completa i autònoma per justificar l'opció correcta. Solo l'opció 3 és correcta. La pregunta és clara i útil per a l'examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "guia-mossos-30",
+    "guia-mossos-31",
+    "guia-mossos-32",
+    "guia-mossos-33",
+    "guia-mossos-34",
+    "guia-mossos-35",
+    "guia-mossos-36",
+    "guia-mossos-37",
+    "guia-mossos-38",
+    "guia-mossos-39"
+   ],
+   "prompt_sha256": "d5e881c224e3e34fee1cf4ebb64c2ffc1ff9393bde02b1d5889fdb996bb3991a",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "guia-mossos-30": "2e43fcef373384d80baad1c059ccaae48660913461ba862fcfab74b8ca04500f",
+    "guia-mossos-31": "283cb242fb22ad76f1110868ab24aa7c45de76318ca213834607e696a7f1226c",
+    "guia-mossos-32": "1abd79fd38fd08ce02dcbd9a0d72515490ff6152433e545b5b0785087d71a1c8",
+    "guia-mossos-33": "7c3abc9dadfaf1e3d4a10d1145baf0089c4895133cf5bd8a748a4a41f3cf4d63",
+    "guia-mossos-34": "fcc6ff0aa2f1284d4439e2457570b55ea0f1eb17f5ec5b538ed536459f3fb680",
+    "guia-mossos-35": "0b7173b1ae2c4bbcfeae5eb0677aa0528f3c37390aed87140c49b2d989914fc5",
+    "guia-mossos-36": "90120d9271aa1722e76c8ef980634f060d86e4ab926ec62ab42ec897aa990007",
+    "guia-mossos-37": "a11069bae1dc161d22abac70ea9e83ca490e33aeb32e5eb8948722a9773f467b",
+    "guia-mossos-38": "f3692eb1a7ab5d050689cba72a69b0d4ed910ba559bbec06bca8528fb492ce44",
+    "guia-mossos-39": "1ef173a9458be0f16483c6910f2abcbe43b19ce000b3b1a0e9b1ad8043fa174f"
+   },
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-30",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto i la cita estableixen clarament que el rei nomena el president a proposta del Consell General del Poder Judicial. La cita és completa, contiene tots els elements necessaris i l'únic òrgan que pot nombrar és el rei.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-31",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto especifica que els jutjats de pau existeixen als municipis sense jutjat de primera instància i instrucció. La cita és precisa i exhaustiva. Els altres òrgans (penal, audiència provincial, vigilància penitenciària) corresponen a altres circumscripcions territorials.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-32",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto defineix explícitament els tres principis del Estado unitari: unitat, uniformitat i centralització. La cita aïlla la definició de uniformitat. L'opció correcta és l'única que correspon a aquest principi.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-33",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto clarament enumera les estructures unitàries mantingudes en un estado federal: exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols. La moneda és l'opció correcta. Les altres opcions (constitucions pròpies, organitzacions polítiques, poders propis) són elements federals, no unitaris.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-34",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto recull la durada i la possibilitat de reelecció de la presidència estable del Consell Europeu segons el Tractat de Lisboa. La cita extreta de la llista d'innovacions és exacta i contiene tots els elements necessaris.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-35",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto classifica la política monetária entre les competències exclusives de la UE. La cita la menciona explícitament en la llista d'exclusives. Les altres opcions (turisme, sanitat, protecció civil) apareixen en la secció de 'noves bases jurídiques' com a matèries de suport o coordinació, no exclusives.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-36",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto i la cita estableixen amb precisió els percentatges del sistema de doble majoria: 55% dels estats membres i 65% de la població UE a partir de novembre de 2014. La pregunta és clara i l'opció correcta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-37",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto estableix que l'Estatut és la norma atributiva però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La cita és completa i contiene la referència normativa exacta. Les altres opcions (decrets, lleis del Parlament de Catalunya, reglaments de l'Estat) no apareixen en el texto com a fonts d'atribució de competències.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-38",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta és una duplicació de dues altres ja existents en les parecidas: mx46-002-23-30 ('Quina és la definició de competència...?') i mx46-17-39 ('s'utilitza l'expressió competència per designar...'). Les tres preguntes formulen el mateix contingut (la definició de competència en dret públic) amb variacions de redacció menors. No afegeix valor pedagògic com a pregunta independent.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": "mx46-002-23-30"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-39",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explícitament assigna la vigilància, control i col·laboració en la gestió del medi natural al Cos d'Agents Rurals. La cita és completa i contiene tots els elements. Els altres cossos (Bombers, Mossos, Protecció Civil) exerceixen altres funcions específiques, no aquesta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-aaa95c1340bb60ec8.jsonl",
+    "respuesta_sha256": "d1118cfa5ba883226a4741aa0c22adbe78dc8c4613e534ebd4745c16810b7204"
+   },
+   "registrada_el": "2026-10-02T22:47:30",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:47:30",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-aaa95c1340bb60ec8.jsonl",
+      "respuesta_sha256": "d1118cfa5ba883226a4741aa0c22adbe78dc8c4613e534ebd4745c16810b7204"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-30\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto i la cita estableixen clarament que el rei nomena el president a proposta del Consell General del Poder Judicial. La cita és completa, contiene tots els elements necessaris i l'únic òrgan que pot nombrar és el rei.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-31\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto especifica que els jutjats de pau existeixen als municipis sense jutjat de primera instància i instrucció. La cita és precisa i exhaustiva. Els altres òrgans (penal, audiència provincial, vigilància penitenciària) corresponen a altres circumscripcions territorials.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-32\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto defineix explícitament els tres principis del Estado unitari: unitat, uniformitat i centralització. La cita aïlla la definició de uniformitat. L'opció correcta és l'única que correspon a aquest principi.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-33\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto clarament enumera les estructures unitàries mantingudes en un estado federal: exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols. La moneda és l'opció correcta. Les altres opcions (constitucions pròpies, organitzacions polítiques, poders propis) són elements federals, no unitaris.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-34\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto recull la durada i la possibilitat de reelecció de la presidència estable del Consell Europeu segons el Tractat de Lisboa. La cita extreta de la llista d'innovacions és exacta i contiene tots els elements necessaris.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-35\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto classifica la política monetária entre les competències exclusives de la UE. La cita la menciona explícitament en la llista d'exclusives. Les altres opcions (turisme, sanitat, protecció civil) apareixen en la secció de 'noves bases jurídiques' com a matèries de suport o coordinació, no exclusives.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-36\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto i la cita estableixen amb precisió els percentatges del sistema de doble majoria: 55% dels estats membres i 65% de la població UE a partir de novembre de 2014. La pregunta és clara i l'opció correcta és única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-37\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto estableix que l'Estatut és la norma atributiva però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La cita és completa i contiene la referència normativa exacta. Les altres opcions (decrets, lleis del Parlament de Catalunya, reglaments de l'Estat) no apareixen en el texto com a fonts d'atribució de competències.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-38\",\n    \"verdict\": \"REJECTED\",\n    \"reason\": \"La pregunta és una duplicació de dues altres ja existents en les parecidas: mx46-002-23-30 ('Quina és la definició de competència...?') i mx46-17-39 ('s'utilitza l'expressió competència per designar...'). Les tres preguntes formulen el mateix contingut (la definició de competència en dret públic) amb variacions de redacció menors. No afegeix valor pedagògic com a pregunta independent.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": false,\n      \"duplicada_de\": \"mx46-002-23-30\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-39\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto explícitament assigna la vigilància, control i col·laboració en la gestió del medi natural al Cos d'Agents Rurals. La cita és completa i contiene tots els elements. Els altres cossos (Bombers, Mossos, Protecció Civil) exerceixen altres funcions específiques, no aquesta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "guia-mossos-40",
+    "guia-mossos-41",
+    "guia-mossos-42"
+   ],
+   "prompt_sha256": "e296b2f41f247feeff2182c7b7fba92bd145ed2b6b790a4e65fae1220ed7e47d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "guia-mossos-40": "c72a93cd204ce41c483fab2152c863aaddfa3f4da301fcd0389bb4d64af0249d",
+    "guia-mossos-41": "d71de0b27942d61dfde7cb6ad4b2570a49701b9e6d03a40e31a81635e50d0cf3",
+    "guia-mossos-42": "e59f486cd5c2092c5a88d3292cf6c656613aff890e1ce612c7c71fe89424f8f1"
+   },
+   "veredictos": [
+    {
+     "question_id": "guia-mossos-40",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera explícitament les funcions genèriques del Departament: trànsit, emergències, prevenció d'incendis i salvament, i espectacles públics. L'opció 3 (gestió de centres penitenciaris) no apareix en aquesta enumeració. La cita és suficient per establir quines funcions SÍ es mencionen, i per tant quines NO. La resposta és única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-41",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix clarament que la Junta de Seguretat de Catalunya és integrada per un nombre igual de representants del Govern central i de la Generalitat. La cita extreta és directa i suficient. Cap altra opció és correcta ja que descarten la paritat (majoria) o introdueixen altres elements (ajuntaments). La pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "guia-mossos-42",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text proporciona la definició exacta d'un sistema de seguretat pública: el conjunt d'administracions, òrgans, autoritats i serveis que garanteixen llibertat, seguretat i ordre públic. La cita és íntegra i suficient per reconèixer l'opció correcta. Les altres opcions es refereixen a conceptes distints (cossos estatals, junta de coordinació, normes de policies locals). La pregunta és clara i conceptualment útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-adb2700d9f18834f6.jsonl",
+    "respuesta_sha256": "e87c29e330bffc9a7ad62a635f12c5d26ef34f64bb77bf2c912a66c3d975de8d"
+   },
+   "registrada_el": "2026-10-02T22:48:06",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:48:06",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-adb2700d9f18834f6.jsonl",
+      "respuesta_sha256": "e87c29e330bffc9a7ad62a635f12c5d26ef34f64bb77bf2c912a66c3d975de8d"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"guia-mossos-40\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text enumera explícitament les funcions genèriques del Departament: trànsit, emergències, prevenció d'incendis i salvament, i espectacles públics. L'opció 3 (gestió de centres penitenciaris) no apareix en aquesta enumeració. La cita és suficient per establir quines funcions SÍ es mencionen, i per tant quines NO. La resposta és única i clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-41\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix clarament que la Junta de Seguretat de Catalunya és integrada per un nombre igual de representants del Govern central i de la Generalitat. La cita extreta és directa i suficient. Cap altra opció és correcta ja que descarten la paritat (majoria) o introdueixen altres elements (ajuntaments). La pregunta és clara i útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"guia-mossos-42\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text proporciona la definició exacta d'un sistema de seguretat pública: el conjunt d'administracions, òrgans, autoritats i serveis que garanteixen llibertat, seguretat i ordre públic. La cita és íntegra i suficient per reconèixer l'opció correcta. Les altres opcions es refereixen a conceptes distints (cossos estatals, junta de coordinació, normes de policies locals). La pregunta és clara i conceptualment útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

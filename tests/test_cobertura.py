@@ -73,3 +73,19 @@ class Cobertura(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PlanControlado(unittest.TestCase):
+    def test_plan_desde_cobertura_usa_exactamente_sus_necesidades(self):
+        from fabrica import sesion as S, fuente as F
+        sl = S.slots_desde_cobertura("mossos-esquadra", ["C.5", "C.3", "C.2"], 15, F.Fuentes())
+        self.assertEqual(sum(s["k"] for s in sl), 15)
+        self.assertEqual({s["n"].rsplit(".", 1)[0] for s in sl} <= {"C.5", "C.3", "C.2"}, True)
+        nec = {(n["tema"], n["tipo"], n["dificultad"]) for n in res()["necesidades"]}
+        for s in sl:
+            self.assertEqual(len(s["pedidas"]), s["k"])
+            for p in s["pedidas"]:
+                self.assertIn((s["n"].rsplit(".", 1)[0], p["tipo"], p["dif"]), nec)
+            self.assertNotIn(s["n"], {"C.3.1", "C.3.2", "C.3.3", "C.3.IF", "C.2.4", "C.2.7"}, "nunca apartados sin fuente verificada")
+        difs = collections.Counter(p["dif"] for s in sl for p in s["pedidas"])
+        self.assertLess(difs[1], 15 * 0.5, f"no se llena con preguntas fáciles: {difs}")

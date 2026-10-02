@@ -69,7 +69,7 @@
   "legacy_judge": "claude-haiku-4-5",
   "legacy_batch": "S00017",
   "verification_status": "DEPRECATED",
-  "motivo": "juez-sesion-v2: El text respalda correctament que l'home de Talteüll té aproximadament 450.000 anys i és la resta humana més antiga. No obstant, aquesta pregunta és essencialment duplicada de mx46-002-23-1, que plant",
+  "motivo": "juez-sesion-v3: Aquesta pregunta duplica essencialment la parecida mx46-002-23-1. Ambdues proven el mateix fait: que l'Home de Talteüll té una antiguitat aproximada de 450.000 anys. L'única diferència és l'angle de f",
   "estado_desde": "2026-10-02",
   "reevaluaciones": [
    {
@@ -85,13 +85,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "REJECTED",
+    "reason": "Aquesta pregunta duplica essencialment la parecida mx46-002-23-1. Ambdues proven el mateix fait: que l'Home de Talteüll té una antiguitat aproximada de 450.000 anys. L'única diferència és l'angle de formulació (quants anys vs quina resta), però el coneixement testat és idèntic.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": "mx46-002-23-1"
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "REJECTED",
-  "reevaluation_reason": "El text respalda correctament que l'home de Talteüll té aproximadament 450.000 anys i és la resta humana més antiga. No obstant, aquesta pregunta és essencialment duplicada de mx46-002-23-1, que planteja la mateixa informació de manera inversa (identifica la resta en lloc de l'edat).",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "Aquesta pregunta duplica essencialment la parecida mx46-002-23-1. Ambdues proven el mateix fait: que l'Home de Talteüll té una antiguitat aproximada de 450.000 anys. L'única diferència és l'angle de formulació (quants anys vs quina resta), però el coneixement testat és idèntic.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.1.1",
@@ -177,13 +192,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text defineix clarament Catalunya com a 'redós on es configuraran cultures pròpies i autòctones'. La cita conté completament l'element necessari per triar l'opció 2. L'opció 0 descriu 'passadís', no 'redós'. Les altres opcions (1 i 3) no apareixen al text. Pregunta clara, bien formulada.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text defineix clarament Catalunya com a 'redós' on 'es configuraran cultures pròpies i autòctones'. La resposta és única ja que 'passadís' (opció 0) es referia a on circularien pobles de fora. La pregunta és clara i útil per a l'examen.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text defineix clarament Catalunya com a 'redós on es configuraran cultures pròpies i autòctones'. La cita conté completament l'element necessari per triar l'opció 2. L'opció 0 descriu 'passadís', no 'redós'. Les altres opcions (1 i 3) no apareixen al text. Pregunta clara, bien formulada.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.1.1",
@@ -269,13 +299,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text especifica que 'Sabem per la indústria lítica, pertanyent al paleolític inferior, que existien grups humans caçadors/recol·lectors'. La cita és completa i suficient per seleccionar l'opció 0. Les altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen en el context paleolític inferior descrit. Pregunta ben formulada.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text afirma explícitament 'Sabem per la indústria lítica...que existien grups humans caçadors/recol·lectors' al paleolític inferior. La resposta és única; altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen com a evidència d'aquest període al text.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text especifica que 'Sabem per la indústria lítica, pertanyent al paleolític inferior, que existien grups humans caçadors/recol·lectors'. La cita és completa i suficient per seleccionar l'opció 0. Les altres opcions (pintures rupestres, ceràmica, eines de metall) no apareixen en el context paleolític inferior descrit. Pregunta ben formulada.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.2.1",
@@ -361,13 +406,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text afirma que 'en la seva redacció [de la Constitució de 1812] hi tingué un paper important el català Antoni de Capmany'. La cita és completa i suficient. El distractors (Pi i Margall, Joan Prim, Valentí Almirall) apareixen en el text però en altres contextos (Pi i Margall com a president de la República, Prim a 1868, Almirall amb Lo catalanisme de 1886), no relacionats amb la Constitució de 1812. Pregunta clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text estableix directament que 'en la seva redacció hi tingué un paper important el català Antoni de Capmany'. La resposta és única i ben documentada. La pregunta és clara i específica.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text afirma que 'en la seva redacció [de la Constitució de 1812] hi tingué un paper important el català Antoni de Capmany'. La cita és completa i suficient. El distractors (Pi i Margall, Joan Prim, Valentí Almirall) apareixen en el text però en altres contextos (Pi i Margall com a president de la República, Prim a 1868, Almirall amb Lo catalanisme de 1886), no relacionats amb la Constitució de 1812. Pregunta clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.2.1",
@@ -453,13 +513,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text descriu que els moderats 'volien donar més protagonisme a la corona, eren més restrictius amb les llibertats i apostaven per un sufragi restringit'. La cita conté tots els elements necesaris per seleccionar l'opció 1. L'opció 0 descriu els progressistes, no els moderats. Les opcions 2 i 3 no apareixen en el text sobre aquesta qüestió. Pregunta clara i ben formulada.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text caracteritza clarament els moderats amb 'concepte més autoritari, més protagonisme de la corona, més restrictius amb llibertats i sufragi restringit'. La resposta és única perquè el text contrasta explícitament amb els progressistes que tenien un concepte més ampli.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text descriu que els moderats 'volien donar més protagonisme a la corona, eren més restrictius amb les llibertats i apostaven per un sufragi restringit'. La cita conté tots els elements necesaris per seleccionar l'opció 1. L'opció 0 descriu els progressistes, no els moderats. Les opcions 2 i 3 no apareixen en el text sobre aquesta qüestió. Pregunta clara i ben formulada.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.2.1",
@@ -518,7 +593,7 @@
    "id": "guia-mossos-5"
   },
   "id": "guia-mossos-5",
-  "current_status": "PUBLISHED",
+  "current_status": "HUMAN_REVIEW_QUEUE",
   "legacy_verdict": "VALID",
   "legacy_flags": {
    "respaldada": true,
@@ -545,13 +620,30 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "REVIEW_REQUIRED",
+    "reason": "La pregunta demana quina mesura NO s'atribueix al Trienni Liberal. El text menciona que el Trienni 'tendí a aplicar mesures liberals (llibertat econòmica industrial, primera desamortització eclesiàstica), reordenà la presència de cases de religiosos i afavorí les llibertats públiques'. La cita proporcionada ('tendí a aplicar mesures liberals per tal de redreçar l'economia (llibertat econòmica industrial, primera desamortització eclesiàstica') és incompleta i no inclou l'afavoriment de llibertats públiques, un element clau del Trienni. Per tant, la cita sola no conté tots els elements necessaris per confirmar quina opció és la correcta definitiva. L'opció 2 (derogació de la Llei sàlica) es menciona al text com a posterior al Trienni (a la mort de Ferdinand VII el 1833), però la cita truncada no ho clarifica prou.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": false,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
-  "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text atribueix explícitament al Trienni Liberal: 'llibertat econòmica industrial, primera desamortització eclesiàstica...afavorí les llibertats públiques'. La derogació de la Llei sàlica es menciona en context diferent (sous la regència de Maria Cristina després de la mort de Ferran VII), no com mesura del Trienni Liberal. La resposta és única.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_verdict": "REVIEW_REQUIRED",
+  "reevaluation_reason": "La pregunta demana quina mesura NO s'atribueix al Trienni Liberal. El text menciona que el Trienni 'tendí a aplicar mesures liberals (llibertat econòmica industrial, primera desamortització eclesiàstica), reordenà la presència de cases de religiosos i afavorí les llibertats públiques'. La cita proporcionada ('tendí a aplicar mesures liberals per tal de redreçar l'economia (llibertat econòmica industrial, primera desamortització eclesiàstica') és incompleta i no inclou l'afavoriment de llibertats públiques, un element clau del Trienni. Per tant, la cita sola no conté tots els elements necessaris per confirmar quina opció és la correcta definitiva. L'opció 2 (derogació de la Llei sàlica) es menciona al text com a posterior al Trienni (a la mort de Ferdinand VII el 1833), però la cita truncada no ho clarifica prou.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14",
+  "verification_status": "REVIEW_REQUIRED_REEVALUATION",
+  "motivo": "juez-sesion-v3: La pregunta demana quina mesura NO s'atribueix al Trienni Liberal. El text menciona que el Trienni 'tendí a aplicar mesures liberals (llibertat econòmica industrial, primera desamortització eclesiàsti"
  },
  {
   "art": "A.3.1",
@@ -637,13 +729,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text estableix que a Catalunya 'el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La cita és directa i completa. L'opció 0 (prevenció) és l'oposat de la resposta. Les opcions 2 i 3 (cos de policia reial, tribunals eclesiàstics) no apareixen. El text clarifica que 'A Catalunya no va existir mai un cos permanent de policia'. Pregunta clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text afirma directament 'A Catalunya no va existir mai un cos permanent de policia i el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La resposta és única i clara. La pregunta és ben formulada.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text estableix que a Catalunya 'el manteniment de l'ordre s'exercia a través de la repressió més que de la prevenció'. La cita és directa i completa. L'opció 0 (prevenció) és l'oposat de la resposta. Les opcions 2 i 3 (cos de policia reial, tribunals eclesiàstics) no apareixen. El text clarifica que 'A Catalunya no va existir mai un cos permanent de policia'. Pregunta clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.3.1",
@@ -729,13 +836,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text estableix que 'El feudalisme, amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La cita és completa i suficient per triar l'opció 2. Les altres opcions (centralització, cos de policia comú, ciutats reials) contradiuen el que el text afirma sobre la parcel·lació de poders. Pregunta clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text estableix clarament que el feudalisme 'amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La resposta és única perquè reflecteix la descentralització, no la centralització. Pregunta clara i útil.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text estableix que 'El feudalisme, amb la consegüent parcel·lació dels poders, va comportar que cada un d'ells refermés el seu propi sistema de seguretat'. La cita és completa i suficient per triar l'opció 2. Les altres opcions (centralització, cos de policia comú, ciutats reials) contradiuen el que el text afirma sobre la parcel·lació de poders. Pregunta clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.3.1",
@@ -821,13 +943,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text estableix que la major part del país 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells' (els barons eclesiàstics i laics). La cita fa referència clara als barons esmentats immediatament antes en el text, deixant clar que ells eren responsables de l'ordre públic. Això fa que l'opció 1 sigui la correcta. Els distractors no apareixen en aquest context. Pregunta clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text explica que els territoris sota jurisdicció baronial 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells'. La resposta és única: el baró que exercia jurisdicció era responsable de l'ordre públic. Pregunta clara.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text estableix que la major part del país 'escapava a la vigilància normal de l'autoritat reial, amb la qual cosa l'ordre públic era també responsabilitat d'ells' (els barons eclesiàstics i laics). La cita fa referència clara als barons esmentats immediatament antes en el text, deixant clar que ells eren responsables de l'ordre públic. Això fa que l'opció 1 sigui la correcta. Els distractors no apareixen en aquest context. Pregunta clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.4.1",
@@ -913,13 +1050,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text afirma que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La cita és completa i suficient. L'opció 3 és l'única que coincideix amb els elements del text. Les altres opcions (Diputació del General, Consell de Cent, Reial Audiència) es mencionen en altres contextos o períodes, no relacionats amb aquesta funció específica en el regnat de Pere el Cerimoniós. Pregunta clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El text declara que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La resposta és única; altres organismes (Diputació, Consell de Cent, Reial Audiència) no es mencionen en aquesta funció.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text afirma que 'Es reforma la Cancelleria reial durant el regnat de Pere el Cerimoniós. Aquest organisme administratiu i burocràtic té la tasca de redactar els documents oficials de la Corona'. La cita és completa i suficient. L'opció 3 és l'única que coincideix amb els elements del text. Les altres opcions (Diputació del General, Consell de Cent, Reial Audiència) es mencionen en altres contextos o períodes, no relacionats amb aquesta funció específica en el regnat de Pere el Cerimoniós. Pregunta clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.4.1",
@@ -1005,13 +1157,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text defineix clarament que el català era la llengua B amb menys prestigi usada en àmbits privats durant la diglossia (segles IX-XI). La cita conté tots els elements necessaris per justificar la resposta.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre la posició del català en la situació de diglòssia dels segles IX-XI. El text suporta clarament que el català era la llengua B amb menys prestigi usada en àmbits privats. Resposta única i clara.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text defineix clarament que el català era la llengua B amb menys prestigi usada en àmbits privats durant la diglossia (segles IX-XI). La cita conté tots els elements necessaris per justificar la resposta.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.4.1",
@@ -1097,13 +1264,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text enumera explícitament els criteris de Pompeu Fabra per a la Gramàtica Catalana de 1918, incloent que havia de ser supradialectal. La cita extreu aquesta criteri de manera completa.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre els criteris de la Gramàtica Catalana de Pompeu Fabra de 1918. El text especifica que havia de ser supradialectal. Resposta única i ben fonamentada.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text enumera explícitament els criteris de Pompeu Fabra per a la Gramàtica Catalana de 1918, incloent que havia de ser supradialectal. La cita extreu aquesta criteri de manera completa.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.5.1",
@@ -1189,13 +1371,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text especifica exactament les fronteres de Catalunya (França, Andorra, Aragó, País Valencià) i Navarra no apareix. La cita conté tota la informació necessària per identificar la resposta correcta.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta de geografia: quins territoris limiten amb Catalunya. El text enumera França, Andorra, Aragó i País Valencià. Navarra no s'esmenta. Resposta clara i única.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text especifica exactament les fronteres de Catalunya (França, Andorra, Aragó, País Valencià) i Navarra no apareix. La cita conté tota la informació necessària per identificar la resposta correcta.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.5.1",
@@ -1281,13 +1478,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text indica clarament que la Llei de vegueries de 2010 va fixar set vegueries, ampliades a vuit el 2017. La cita és precisa i suficient.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre els nombres de vegueries establerts per la Llei de 2010. El text suporta exactament 'set, ampliades a vuit a començaments de 2017'. Pregunta precisa amb dades numèriques úniques.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text indica clarament que la Llei de vegueries de 2010 va fixar set vegueries, ampliades a vuit el 2017. La cita és precisa i suficient.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.5.1",
@@ -1373,13 +1585,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text enumera que Penedès comprèn les comarques del Garraf entre altres. La cita conté l'informació necessària per respon correctament.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre la vegueria que inclou la comarca del Garraf. El text especifica que Penedès comprèn 'el Garraf'. Resposta única i clara.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text enumera que Penedès comprèn les comarques del Garraf entre altres. La cita conté l'informació necessària per respon correctament.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.6.1",
@@ -1465,13 +1692,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text defineix les xarxes i cadenes migratòries com el conjunt de relacions entre individus que serveixen de pont entre origen i destinació. La cita conté la definició completa.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre la definició de xarxes i cadenes migratòries. El text defineix exactament aquesta pregunta com 'el conjunt de relacions entre individus, famílies i grups que serveixen de pont'. Definitió clara i única.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text defineix les xarxes i cadenes migratòries com el conjunt de relacions entre individus que serveixen de pont entre origen i destinació. La cita conté la definició completa.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.6.1",
@@ -1557,13 +1799,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text identifica la realitat demogràfica immersa en un ràpid procés d'envelliment com un dels factors que explica que Catalunya es convertís en receptora d'immigració durant 1998-2008. La cita sustenta aquest factor.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre factors explicatius de la immigració a Catalunya (1998-2008). El text identifica dos factors: creixement econòmic i realitat demogràfica d'envelliment. L'opció 2 es suporta clarament al text.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text identifica la realitat demogràfica immersa en un ràpid procés d'envelliment com un dels factors que explica que Catalunya es convertís en receptora d'immigració durant 1998-2008. La cita sustenta aquest factor.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.7.1",
@@ -1649,13 +1906,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text estableix explícitament que l'any 1981 és l'acte de naixement de la societat de la informació, moment en què Microsoft i IBM llançaren els seus productes claus. La cita és precisa.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre l'any de naixement de la societat del coneixement. El text afirma explícitament 'l'any 1981'. Pregunta de data específica, útil i ben fonamentada.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text estableix explícitament que l'any 1981 és l'acte de naixement de la societat de la informació, moment en què Microsoft i IBM llançaren els seus productes claus. La cita és precisa.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.7.1",
@@ -1741,13 +2013,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text defineix hipermèdia com la integració de multimèdia i hipertext organitzat de forma no seqüencial. La cita extreu aquesta definició correctament.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre la definició de hipermèdia. El text defineix 'integració de multimèdia i hipertext'. Resposta única i clara amb suport explícit al text.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text defineix hipermèdia com la integració de multimèdia i hipertext organitzat de forma no seqüencial. La cita extreu aquesta definició correctament.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "A.7.1",
@@ -1806,7 +2093,7 @@
    "id": "guia-mossos-19"
   },
   "id": "guia-mossos-19",
-  "current_status": "PUBLISHED",
+  "current_status": "HUMAN_REVIEW_QUEUE",
   "legacy_verdict": "VALID",
   "legacy_flags": {
    "respaldada": true,
@@ -1833,13 +2120,30 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "REVIEW_REQUIRED",
+    "reason": "Mentre que el text clarament associa la inspecció d'aparells elevadors amb 'safety', la cita proporcionada ('Tot plegat per garantir la safety d'aquests elements i els seus entorns') no conté la definició que distingeix safety de security. Per entendre per què la resposta és 'safety' i no 'security', es necessita la definició del text que apareix línies més amunt (que safety és per a seguretat ambiental i riscos laborals, mentre que security és per a control d'accessos i prevenció d'intrusions). La cita sola no és suficient per justificar la resposta.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": false,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
-  "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "Pregunta sobre conceptes anglosaxons de seguretat (safety vs security). El text clarament vincula la inspecció d'aparells elevadors a 'safety' (seguretat ambiental i riscos). Aplicació conceptual clara i única.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_verdict": "REVIEW_REQUIRED",
+  "reevaluation_reason": "Mentre que el text clarament associa la inspecció d'aparells elevadors amb 'safety', la cita proporcionada ('Tot plegat per garantir la safety d'aquests elements i els seus entorns') no conté la definició que distingeix safety de security. Per entendre per què la resposta és 'safety' i no 'security', es necessita la definició del text que apareix línies més amunt (que safety és per a seguretat ambiental i riscos laborals, mentre que security és per a control d'accessos i prevenció d'intrusions). La cita sola no és suficient per justificar la resposta.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14",
+  "verification_status": "REVIEW_REQUIRED_REEVALUATION",
+  "motivo": "juez-sesion-v3: Mentre que el text clarament associa la inspecció d'aparells elevadors amb 'safety', la cita proporcionada ('Tot plegat per garantir la safety d'aquests elements i els seus entorns') no conté la defin"
  },
  {
   "art": "B.1.1",
@@ -1925,13 +2229,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita extreta del text identifica correctament l'òrgan que va emetre el Dictamen: el Consell Consultiu el 5 de setembre de 2005. La cita és completa i suficient per justificar l'opció correcta. No hi ha altres opcions que siguin correctes segons el text. La pregunta és clara i útil per a l'examen.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto esmenteix explícitament que 'el Dictamen núm. 269 del Consell Consultiu (5 de setembre de 2005)' es va pronunciar sobre la constitucionalitat. L'opció a és única i clara com a resposta correcta.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita extreta del text identifica correctament l'òrgan que va emetre el Dictamen: el Consell Consultiu el 5 de setembre de 2005. La cita és completa i suficient per justificar l'opció correcta. No hi ha altres opcions que siguin correctes segons el text. La pregunta és clara i útil per a l'examen.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.1.1",
@@ -2017,13 +2336,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita reprodueix exactament del text la definició de la doble naturalesa jurídica: 'la llei primera i fonamental de l'ordenament jurídic català' i 'llei orgànica estatal'. La cita és completa i autònoma. Only option 0 is correct. La pregunta és clara i d'utilitat per a l'examen.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto afirma textualment que 'l'EAC té una doble naturalesa jurídica: d'una banda, és la llei primera i fonamental de l'ordenament jurídic català i, de l'altra, és una llei orgànica estatal'. Pregunta clara i única sobre aquest concepte fonamental.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita reprodueix exactament del text la definició de la doble naturalesa jurídica: 'la llei primera i fonamental de l'ordenament jurídic català' i 'llei orgànica estatal'. La cita és completa i autònoma. Only option 0 is correct. La pregunta és clara i d'utilitat per a l'examen.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.2.1",
@@ -2095,7 +2429,7 @@
   "legacy_judge": "claude-haiku-4-5",
   "legacy_batch": "S00017",
   "verification_status": "DEPRECATED",
-  "motivo": "juez-sesion-v2: Aquesta pregunta és duplicada de mx46-22-2, que planteja essencialment el mateix: preguntar quin era l'altre nom de l'òrgan medieval evocat per 'Generalitat', amb la mateixa resposta 'Diputació del Ge",
+  "motivo": "juez-sesion-v3: Aquesta pregunta és duplicada de 'mx46-22-2'. Ambdues pregunten pel nom medieval de la Generalitat i ambdues contenen la mateixa resposta (Diputació del General) i la mateixa font normativa. Testeja e",
   "estado_desde": "2026-10-02",
   "reevaluaciones": [
    {
@@ -2111,13 +2445,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "REJECTED",
+    "reason": "Aquesta pregunta és duplicada de 'mx46-22-2'. Ambdues pregunten pel nom medieval de la Generalitat i ambdues contenen la mateixa resposta (Diputació del General) i la mateixa font normativa. Testeja exactament el mateix concepte.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": "mx46-22-2"
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "REJECTED",
-  "reevaluation_reason": "Aquesta pregunta és duplicada de mx46-22-2, que planteja essencialment el mateix: preguntar quin era l'altre nom de l'òrgan medieval evocat per 'Generalitat', amb la mateixa resposta 'Diputació del General' basada en el mateix fragment de text.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "Aquesta pregunta és duplicada de 'mx46-22-2'. Ambdues pregunten pel nom medieval de la Generalitat i ambdues contenen la mateixa resposta (Diputació del General) i la mateixa font normativa. Testeja exactament el mateix concepte.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.2.1",
@@ -2203,13 +2552,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita extreta del text especifica clarament els dos requisits requerits: majoria absoluta dels diputats per a la moció de censura i majoria simple dels vots emesos per a la qüestió de confiança. La cita és completa i autònoma per justificar l'opció. Cap altra opció és correcta. La pregunta és clara i és material útil per a l'examen (requeriments específics).",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto especifica clarament les dues majories requerides: 'majoria absoluta dels diputats' per a la moció de censura i 'majoria simple dels vots emesos' per a la qüestió de confiança. Pregunta útil i ben formulada sobre procediment parlamentari.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita extreta del text especifica clarament els dos requisits requerits: majoria absoluta dels diputats per a la moció de censura i majoria simple dels vots emesos per a la qüestió de confiança. La cita és completa i autònoma per justificar l'opció. Cap altra opció és correcta. La pregunta és clara i és material útil per a l'examen (requeriments específics).",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.2.1",
@@ -2295,13 +2659,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita del text estableix que resten fora de la Generalitat els òrgans que depenen de l'Estat central o deriven de l'autonomia local. Les tres primeres opcions (Parlament, Presidència, Govern) estan explícitament incloses en el text com a parts del complex institucional. Solo la quarta opció (ajuntament derivat de l'autonomia local) està clarament exclosa. La pregunta és clara i té utilitat.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto estableix que 'La Generalitat només engloba les institucions autonòmiques d'àmbit territorial català i resten fora...les altres que deriven de l'autonomia local'. L'ajuntament és correctament identificat com l'institució exclosa.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita del text estableix que resten fora de la Generalitat els òrgans que depenen de l'Estat central o deriven de l'autonomia local. Les tres primeres opcions (Parlament, Presidència, Govern) estan explícitament incloses en el text com a parts del complex institucional. Solo la quarta opció (ajuntament derivat de l'autonomia local) està clarament exclosa. La pregunta és clara i té utilitat.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.4.1",
@@ -2387,13 +2766,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita extreta del text identifica correctament la carta de drets més important de les colònies britàniques d'Amèrica en el segle xviii: la Declaració de drets de Virgínia de 1776. La cita és completa i suficient. Solo una opció és correcta. La pregunta és clara i useful per a l'examen (fita histórica de l'obra).",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto afirma que entre les cartes de drets de les colònies britàniques d'Amèrica al segle xviii, 'la més important de les quals és la Declaració de drets de Virgínia de 1776'. Pregunta factual clara i únic amb resposta correcta.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita extreta del text identifica correctament la carta de drets més important de les colònies britàniques d'Amèrica en el segle xviii: la Declaració de drets de Virgínia de 1776. La cita és completa i suficient. Solo una opció és correcta. La pregunta és clara i useful per a l'examen (fita histórica de l'obra).",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.4.1",
@@ -2479,13 +2873,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita extreta del text explica clarament la motivació de la internacionalització dels drets humans: les greus vulneracions dels drets pels estats totalitaris (feixisme, nazisme, estalinisme) durant el periode d'entreguerres i la Segona Guerra Mundial. La cita és completa i autònoma. Solo l'opció 2 és correcta. La pregunta és clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto estableix clarament que 'Les greus vulneracions dels drets en el període d'entreguerres i a la Segona Guerra Mundial pels estats totalitaris posaran de manifest la insuficiència d'aquesta previsió interna dels drets. És a partir d'aquest moment quan es produeix una internacionalització'. Relació causal ben documentada.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita extreta del text explica clarament la motivació de la internacionalització dels drets humans: les greus vulneracions dels drets pels estats totalitaris (feixisme, nazisme, estalinisme) durant el periode d'entreguerres i la Segona Guerra Mundial. La cita és completa i autònoma. Solo l'opció 2 és correcta. La pregunta és clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.4.1",
@@ -2571,13 +2980,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita extreta del text especifica que les normes de drets fonamentals s'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats ratificats per Espanya. La cita és completa i suficient per justificar l'opció correcta. Solo l'opció 1 és correcta. La pregunta és clara i útil.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto cita l'article 10.2 CE especificant que les normes sobre drets fonamentals 's'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats i acords internacionals sobre aquestes matèries ratificats per l'Estat espanyol'. Pregunta sobre requisit constitucional específic.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita extreta del text especifica que les normes de drets fonamentals s'han d'interpretar de conformitat amb la Declaració Universal dels Drets Humans i els tractats ratificats per Espanya. La cita és completa i suficient per justificar l'opció correcta. Solo l'opció 1 és correcta. La pregunta és clara i útil.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.5.1",
@@ -2636,7 +3060,7 @@
    "id": "guia-mossos-28"
   },
   "id": "guia-mossos-28",
-  "current_status": "PUBLISHED",
+  "current_status": "HUMAN_REVIEW_QUEUE",
   "legacy_verdict": "VALID",
   "legacy_flags": {
    "respaldada": true,
@@ -2663,13 +3087,30 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "REVIEW_REQUIRED",
+    "reason": "Mentre que el text sí suporta la resposta (autonomia administrativa), la cita proporcionada ('Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública') està truncada. La cita omit la part essencial del text que conecta directament aquesta autonomia amb el fet que el personal 'té el seu propi estatut personal', que és la premissa de la pregunta. La cita sola no conté tots els elements necessaris per comprendre per què tenir estatut propi és una manifestació d'autonomia administrativa.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": false,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
-  "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto identifica explícitament que 'Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública, sinó que té el seu propi estatut personal'. Pregunta clara sobre classificació de les autonomies de les cambres.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_verdict": "REVIEW_REQUIRED",
+  "reevaluation_reason": "Mentre que el text sí suporta la resposta (autonomia administrativa), la cita proporcionada ('Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració pública') està truncada. La cita omit la part essencial del text que conecta directament aquesta autonomia amb el fet que el personal 'té el seu propi estatut personal', que és la premissa de la pregunta. La cita sola no conté tots els elements necessaris per comprendre per què tenir estatut propi és una manifestació d'autonomia administrativa.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14",
+  "verification_status": "REVIEW_REQUIRED_REEVALUATION",
+  "motivo": "juez-sesion-v3: Mentre que el text sí suporta la resposta (autonomia administrativa), la cita proporcionada ('Autonomia administrativa: el personal al servei de les Corts Generals no forma part de l'Administració púb"
  },
  {
   "art": "B.6.1",
@@ -2755,13 +3196,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "La cita extreta del text identifica correctament que correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya. La cita és completa i autònoma per justificar l'opció correcta. Solo l'opció 3 és correcta. La pregunta és clara i útil per a l'examen.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto afirma textualment que 'Correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya'. Pregunta factual clara sobre jurisdicció dels tribunals autonòmics.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "La cita extreta del text identifica correctament que correspon en exclusiva al Tribunal Superior de Justícia de Catalunya la unificació de la interpretació del dret de Catalunya. La cita és completa i autònoma per justificar l'opció correcta. Solo l'opció 3 és correcta. La pregunta és clara i útil per a l'examen.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.6.1",
@@ -2847,13 +3303,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto i la cita estableixen clarament que el rei nomena el president a proposta del Consell General del Poder Judicial. La cita és completa, contiene tots els elements necessaris i l'únic òrgan que pot nombrar és el rei.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto confirma exactament que el rei nomena el president del TSJC a proposta del Consell General del Poder Judicial. La resposta és única i la pregunta és clara i factual.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto i la cita estableixen clarament que el rei nomena el president a proposta del Consell General del Poder Judicial. La cita és completa, contiene tots els elements necessaris i l'únic òrgan que pot nombrar és el rei.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.6.1",
@@ -2939,13 +3410,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto especifica que els jutjats de pau existeixen als municipis sense jutjat de primera instància i instrucció. La cita és precisa i exhaustiva. Els altres òrgans (penal, audiència provincial, vigilància penitenciària) corresponen a altres circumscripcions territorials.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto especifica que els jutjats de pau són els òrgans judicials que hi pot haver en municipis sense jutjat de primera instància. La resposta és única i la pregunta és clara.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto especifica que els jutjats de pau existeixen als municipis sense jutjat de primera instància i instrucció. La cita és precisa i exhaustiva. Els altres òrgans (penal, audiència provincial, vigilància penitenciària) corresponen a altres circumscripcions territorials.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.7.1",
@@ -3031,13 +3517,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto defineix explícitament els tres principis del Estado unitari: unitat, uniformitat i centralització. La cita aïlla la definició de uniformitat. L'opció correcta és l'única que correspon a aquest principi.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto defineix explícitament la uniformitat com 'la mateixa llei per a tot el territorio'. Resposta única i pregunta clara sobre el concepte.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto defineix explícitament els tres principis del Estado unitari: unitat, uniformitat i centralització. La cita aïlla la definició de uniformitat. L'opció correcta és l'única que correspon a aquest principi.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.7.1",
@@ -3123,13 +3624,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto clarament enumera les estructures unitàries mantingudes en un estado federal: exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols. La moneda és l'opció correcta. Les altres opcions (constitucions pròpies, organitzacions polítiques, poders propis) són elements federals, no unitaris.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto enumera les estructures unitàries mantingudes en els estats federals (exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols). La moneda és clarament l'única opció correcta entre les ofertes.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto clarament enumera les estructures unitàries mantingudes en un estado federal: exèrcit, moneda, sistema econòmic, duanes, comunicacions i símbols. La moneda és l'opció correcta. Les altres opcions (constitucions pròpies, organitzacions polítiques, poders propis) són elements federals, no unitaris.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.8.1",
@@ -3215,13 +3731,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto recull la durada i la possibilitat de reelecció de la presidència estable del Consell Europeu segons el Tractat de Lisboa. La cita extreta de la llista d'innovacions és exacta i contiene tots els elements necessaris.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto confirma exactament la durada de dos anys i mig amb possibilitat de reelecció per a la presidència estable del Consell Europeu. Pregunta clara amb resposta única sobre dada específica.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto recull la durada i la possibilitat de reelecció de la presidència estable del Consell Europeu segons el Tractat de Lisboa. La cita extreta de la llista d'innovacions és exacta i contiene tots els elements necessaris.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.8.1",
@@ -3307,13 +3838,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto classifica la política monetária entre les competències exclusives de la UE. La cita la menciona explícitament en la llista d'exclusives. Les altres opcions (turisme, sanitat, protecció civil) apareixen en la secció de 'noves bases jurídiques' com a matèries de suport o coordinació, no exclusives.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto classifica les competències exclusives de la UE i inclou explícitament la política monetària. Les altres opcions (turisme, sanitat, protecció civil) s'esmenten com a noves bases jurídiques de suport, no com a exclusives.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto classifica la política monetária entre les competències exclusives de la UE. La cita la menciona explícitament en la llista d'exclusives. Les altres opcions (turisme, sanitat, protecció civil) apareixen en la secció de 'noves bases jurídiques' com a matèries de suport o coordinació, no exclusives.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "B.8.1",
@@ -3399,13 +3945,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto i la cita estableixen amb precisió els percentatges del sistema de doble majoria: 55% dels estats membres i 65% de la població UE a partir de novembre de 2014. La pregunta és clara i l'opció correcta és única.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto detalla exactament el sistema de doble majoria: 55% dels estats membres i 65% de la població UE. Pregunta sobre dades específiques i úniques.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto i la cita estableixen amb precisió els percentatges del sistema de doble majoria: 55% dels estats membres i 65% de la població UE a partir de novembre de 2014. La pregunta és clara i l'opció correcta és única.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "C.1.1",
@@ -3491,13 +4052,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto estableix que l'Estatut és la norma atributiva però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La cita és completa i contiene la referència normativa exacta. Les altres opcions (decrets, lleis del Parlament de Catalunya, reglaments de l'Estat) no apareixen en el texto com a fonts d'atribució de competències.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto estableix que l'Estatut d'autonomia és la norma atributiva de competències però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La resposta és única i clarament fonamentada.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto estableix que l'Estatut és la norma atributiva però que excepcionalment podria ser una llei estatal (art. 150.1 i 2 CE). La cita és completa i contiene la referència normativa exacta. Les altres opcions (decrets, lleis del Parlament de Catalunya, reglaments de l'Estat) no apareixen en el texto com a fonts d'atribució de competències.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "C.1.1",
@@ -3556,7 +4132,7 @@
    "id": "guia-mossos-38"
   },
   "id": "guia-mossos-38",
-  "current_status": "PUBLISHED",
+  "current_status": "WITHDRAWN",
   "legacy_verdict": "VALID",
   "legacy_flags": {
    "respaldada": true,
@@ -3583,13 +4159,30 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "REJECTED",
+    "reason": "La pregunta és una duplicació de dues altres ja existents en les parecidas: mx46-002-23-30 ('Quina és la definició de competència...?') i mx46-17-39 ('s'utilitza l'expressió competència per designar...'). Les tres preguntes formulen el mateix contingut (la definició de competència en dret públic) amb variacions de redacció menors. No afegeix valor pedagògic com a pregunta independent.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": false,
+     "duplicada_de": "mx46-002-23-30"
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
-  "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto defineix competència com el conjunt de funcions que l'ordenament jurídic atribueix a un subjecte públic en una determinada matèria. L'opció 0 és una versió correcta simplificada. Les altres opcions són clarament incorrectes.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_verdict": "REJECTED",
+  "reevaluation_reason": "La pregunta és una duplicació de dues altres ja existents en les parecidas: mx46-002-23-30 ('Quina és la definició de competència...?') i mx46-17-39 ('s'utilitza l'expressió competència per designar...'). Les tres preguntes formulen el mateix contingut (la definició de competència en dret públic) amb variacions de redacció menors. No afegeix valor pedagògic com a pregunta independent.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14",
+  "verification_status": "DEPRECATED",
+  "motivo": "juez-sesion-v3: La pregunta és una duplicació de dues altres ja existents en les parecidas: mx46-002-23-30 ('Quina és la definició de competència...?') i mx46-17-39 ('s'utilitza l'expressió competència per designar.."
  },
  {
   "art": "C.2.1",
@@ -3675,13 +4268,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El texto explícitament assigna la vigilància, control i col·laboració en la gestió del medi natural al Cos d'Agents Rurals. La cita és completa i contiene tots els elements. Els altres cossos (Bombers, Mossos, Protecció Civil) exerceixen altres funcions específiques, no aquesta.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto especifica explícitament que la vigilància i control del medi natural s'exerceix mitjançant el Cos d'Agents Rurals. Resposta única i clarament fonamentada en el text.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El texto explícitament assigna la vigilància, control i col·laboració en la gestió del medi natural al Cos d'Agents Rurals. La cita és completa i contiene tots els elements. Els altres cossos (Bombers, Mossos, Protecció Civil) exerceixen altres funcions específiques, no aquesta.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "C.2.1",
@@ -3767,13 +4375,28 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text enumera explícitament les funcions genèriques del Departament: trànsit, emergències, prevenció d'incendis i salvament, i espectacles públics. L'opció 3 (gestió de centres penitenciaris) no apareix en aquesta enumeració. La cita és suficient per establir quines funcions SÍ es mencionen, i per tant quines NO. La resposta és única i clara.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto enumera explícitamente les funcions genèriques del departament: seguretat ciudadana, trànsit, emergències, prevenció d'incendis i salvament, espectacles i activitats recreatives, gestió ambiental. L'opció 3 (gestió dels centres penitenciaris) no figura en cap moment al texto, mentre que les altres tres opcions sí que apareixen. La pregunta és clara, no trivial i d'utilitat examinal.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text enumera explícitament les funcions genèriques del Departament: trànsit, emergències, prevenció d'incendis i salvament, i espectacles públics. L'opció 3 (gestió de centres penitenciaris) no apareix en aquesta enumeració. La cita és suficient per establir quines funcions SÍ es mencionen, i per tant quines NO. La resposta és única i clara.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14"
  },
  {
   "art": "C.3.1",
@@ -3832,7 +4455,7 @@
    "id": "guia-mossos-41"
   },
   "id": "guia-mossos-41",
-  "current_status": "PUBLISHED",
+  "current_status": "HUMAN_REVIEW_QUEUE",
   "legacy_verdict": "VALID",
   "legacy_flags": {
    "respaldada": true,
@@ -3859,13 +4482,30 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text estableix clarament que la Junta de Seguretat de Catalunya és integrada per un nombre igual de representants del Govern central i de la Generalitat. La cita extreta és directa i suficient. Cap altra opció és correcta ja que descarten la paritat (majoria) o introdueixen altres elements (ajuntaments). La pregunta és clara i útil.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto estableix explícitament que la Junta de Seguretat de Catalunya 'és integrada per un nombre igual de representants del Govern central i de la Generalitat'. L'opció 2 reprodueix exactament aquesta definició. Les altres opcions (majoria de Generalitat, majoria de Govern central, representants d'ajuntaments) no troben suport en el texto. La pregunta és clara i examinal.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text estableix clarament que la Junta de Seguretat de Catalunya és integrada per un nombre igual de representants del Govern central i de la Generalitat. La cita extreta és directa i suficient. Cap altra opció és correcta ja que descarten la paritat (majoria) o introdueixen altres elements (ajuntaments). La pregunta és clara i útil.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14",
+  "verification_status": "REVIEW_REQUIRED_REEVALUATION",
+  "motivo": "puerta de publicación: fuente: apartado/artículo excluido por fuente oficial no verificada (OFFICIAL_PENDING_REVIEW)"
  },
  {
   "art": "C.3.1",
@@ -3924,7 +4564,7 @@
    "id": "guia-mossos-42"
   },
   "id": "guia-mossos-42",
-  "current_status": "PUBLISHED",
+  "current_status": "HUMAN_REVIEW_QUEUE",
   "legacy_verdict": "VALID",
   "legacy_flags": {
    "respaldada": true,
@@ -3951,12 +4591,29 @@
     "policy_hash": "a72e35e26702d4337edb85238f02c4f8d30c5e92186cea464a43c7099ac0c3d5",
     "evaluacion": "S00017-v2",
     "at": "2026-10-02T18:43:31"
+   },
+   {
+    "verdict": "VALID",
+    "reason": "El text proporciona la definició exacta d'un sistema de seguretat pública: el conjunt d'administracions, òrgans, autoritats i serveis que garanteixen llibertat, seguretat i ordre públic. La cita és íntegra i suficient per reconèixer l'opció correcta. Les altres opcions es refereixen a conceptes distints (cossos estatals, junta de coordinació, normes de policies locals). La pregunta és clara i conceptualment útil.",
+    "criteria_checked": {
+     "respaldada": true,
+     "cita_suficiente": true,
+     "unica": true,
+     "clara": true,
+     "duplicada_de": ""
+    },
+    "policy_version": "juez-sesion-v3",
+    "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+    "evaluacion": "S00017-v3",
+    "at": "2026-10-02T22:48:14"
    }
   ],
   "reevaluation_verdict": "VALID",
-  "reevaluation_reason": "El texto defineix explícitament: 'Un sistema de seguretat pública és el conjunt d'administracions, òrgans, autoritats i serveis que contribueixen a garantir la llibertat i la seguretat dels ciutadans i l'ordre públic'. L'opció 0 coincideix plenament amb aquesta definició. Les altres opcions descriuen conceptes diferents (forces policials estrictament estatals, òrgan administratiu específic, normes de policies locals) que no coincideixen amb la definició. La pregunta és clara i de valor examinal.",
-  "reevaluation_policy_version": "juez-sesion-v2",
-  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)",
-  "reevaluation_at": "2026-10-02T18:43:31"
+  "reevaluation_reason": "El text proporciona la definició exacta d'un sistema de seguretat pública: el conjunt d'administracions, òrgans, autoritats i serveis que garanteixen llibertat, seguretat i ordre públic. La cita és íntegra i suficient per reconèixer l'opció correcta. Les altres opcions es refereixen a conceptes distints (cossos estatals, junta de coordinació, normes de policies locals). La pregunta és clara i conceptualment útil.",
+  "reevaluation_policy_version": "juez-sesion-v3",
+  "reevaluation_judge": "claude-haiku-4-5 (subagente de la sesión, juez-sesion-v3)",
+  "reevaluation_at": "2026-10-02T22:48:14",
+  "verification_status": "REVIEW_REQUIRED_REEVALUATION",
+  "motivo": "puerta de publicación: fuente: apartado/artículo excluido por fuente oficial no verificada (OFFICIAL_PENDING_REVIEW)"
  }
 ]

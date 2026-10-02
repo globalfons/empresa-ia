@@ -29,7 +29,7 @@ DIR = os.path.join(R, "fabrica", "sesion")
 ABIERTO = os.path.join(DIR, "abierto.json")
 ARCHIVO = os.path.join(R, "fabrica", "estado", "archivo")
 MODELOS = {"generador": "claude-opus-5-5 (sesión de Claude Code)", "juez": "claude-haiku-4-5 (revisor en la sesión)"}
-REDACTOR = {"version": "redactor-sesion-v2", "fichero": os.path.join(R, "fabrica", "prompts", "redactor-sesion-v2.txt")}
+REDACTOR = {"version": "redactor-sesion-v3", "fichero": os.path.join(R, "fabrica", "prompts", "redactor-sesion-v3.txt")}
 VEREDICTO_CAMPOS = {"r", "respaldada", "cita_suficiente", "unica", "clara", "duplicada_de", "motivo"}
 
 
@@ -83,9 +83,12 @@ def plan(a, cfg):
     politica = P.congelar(R)  # la política activa queda congelada para todo el lote (bloquea si el fichero no es el registrado)
     oposiciones = MO.resolver_oposiciones(a.oposicion, cfg)
     fuentes, banco = F.Fuentes(), B.Banco()
-    temas, _ = MO.planificar(cfg, fuentes, oposiciones)
-    agotados = {tuple(k.split("|", 1)) for k, v in estado.get("omitidos", {}).items() if v >= 2}  # artículos que no dan más preguntas
-    slots = MO.elegir(temas, fuentes, banco, cfg, max(1, min(a.lote, cfg["lote"]["tamano_maximo"] * 4)), agotados)
+    if getattr(a, "temas", None):  # generación controlada: exactamente las necesidades del CoverageEngine, en el orden de temas pedido
+        slots = slots_desde_cobertura(oposiciones[0], a.temas.split(","), a.lote, fuentes)
+    else:
+        temas, _ = MO.planificar(cfg, fuentes, oposiciones)
+        agotados = {tuple(k.split("|", 1)) for k, v in estado.get("omitidos", {}).items() if v >= 2}  # artículos que no dan más preguntas
+        slots = MO.elegir(temas, fuentes, banco, cfg, max(1, min(a.lote, cfg["lote"]["tamano_maximo"] * 4)), agotados)
     if not slots:
         raise SystemExit("No quedan artículos con capacidad en los temas con déficit de esas oposiciones.")
     dist = cfg["dificultad_por_oposicion"].get(oposiciones[0], cfg["dificultad_por_defecto"])
@@ -94,7 +97,7 @@ def plan(a, cfg):
     huecos = []
     for k, s in enumerate(slots):
         ley = fuentes.ley(s["slug"])
-        pedidas = MO.pedir_tipos(ley, s["n"], s["k"], ct, cd, cfg, dist)
+        pedidas = s.get("pedidas") or MO.pedir_tipos(ley, s["n"], s["k"], ct, cd, cfg, dist)
         rel = ley.relacionados(s["n"]) if any(p["tipo"] == "relacion_articulos" for p in pedidas) else []
         art = ley.arts[s["n"]]
         huecos.append({"s": k, "ley": s["slug"], "norma": f"{ley.nombre} ({ley.id})", "version": ley.version, "art": s["n"], "idioma": ley.idioma,
@@ -118,6 +121,42 @@ def plan(a, cfg):
     B.escribir(ABIERTO, {"lote": lote, "fecha": MO.hoy(), "politica": politica, "session_id": sesion_id(),
                          "generator_prompt_version": REDACTOR["version"], "generator_prompt_sha256": sha(REDACTOR["fichero"])})
     print(f"Lote {lote}: {sum(h['k'] for h in huecos)} preguntas en {len(huecos)} artículos → {os.path.relpath(os.path.join(DIR, lote, 'plan.json'), R)}")
+
+
+def slots_desde_cobertura(oposicion, codigos, n, fuentes):
+    """Huecos con tipo y dificultad exactos de las necesidades del CoverageEngine (fabrica/cobertura.py) de los temas pedidos:
+    se toma una pregunta cada vez de cada tema, en el orden dado, recorriendo sus necesidades por prioridad y sus apartados."""
+    from fabrica import cobertura as COB
+    from catalogo import perfil as PF
+    perfil = PF.leer(f"catalogo/perfiles/{oposicion}.json") or PF.construir(oposicion)
+    temas = {t["id"]: (i, t) for i, t in enumerate(perfil["temario"])}
+    nec = COB.analizar(oposicion, perfil, fuentes)
+    unidades = {}
+    for c in codigos:
+        # dentro del tema se rota entre sus necesidades (una de cada tipo/dificultad por vuelta): no se llena con las fáciles
+        pendientes = [[(x["tipo"], x["dificultad"], x["articulos"][j % len(x["articulos"])]) for j in range(x["n"])]
+                      for x in nec["necesidades"] if x["tema"] == c]
+        cola = []
+        while any(pendientes):
+            for p in pendientes:
+                if p:
+                    cola.append(p.pop(0))
+        unidades[c] = cola
+    elegidas = []
+    while len(elegidas) < n and any(unidades.values()):
+        for c in codigos:
+            if unidades.get(c) and len(elegidas) < n:
+                elegidas.append((c,) + unidades[c].pop(0))
+    por_art = collections.OrderedDict()
+    for c, tipo, dif, ref in elegidas:
+        slug, art = ref.split(":", 1)
+        i, t = temas[c]
+        s = por_art.setdefault((slug, art), {"slug": slug, "n": art, "k": 0, "pedidas": [],
+                                              "tema": {"oposicion": oposicion, "indice": i, "tema": t["numero"], "titulo": t["titulo"],
+                                                       "arts": {slug: [x["art"] for x in t["articulos"] if x["ley"] == slug and not x.get("excluido")]}}})
+        s["k"] += 1
+        s["pedidas"].append({"tipo": tipo, "dif": dif})
+    return list(por_art.values())
 
 
 def _slot(h, temas_por_id):
@@ -305,6 +344,7 @@ def main(argv=None):
     ap.add_argument("--lote", type=int, default=10)
     ap.add_argument("--reanudar", action="store_true")
     ap.add_argument("--forzar", action="store_true")
+    ap.add_argument("--temas", help="generación controlada: códigos de tema en orden (p. ej. C.5,C.3,C.2) → necesidades del CoverageEngine")
     a = ap.parse_args(argv)
     cfg = json.load(open(MO.CFG, encoding="utf-8"))
     return {"plan": plan, "validar": validar, "cerrar": cerrar}[a.paso](a, cfg) or 0
