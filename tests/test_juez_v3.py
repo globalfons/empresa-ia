@@ -107,6 +107,12 @@ class Mecanismo(unittest.TestCase):
         t2 = J.preparar("v3d", it, version=V3)[0]
         self.assertEqual(J.registrar("v3d", "01", self.tr(t2, resp(it), extra=[("Bash", {"command": "python3 aprobar.py"})]))["estado"], "RECHAZADA")
 
+    def test_se_puede_volver_a_preparar_mientras_ningun_juez_haya_respondido(self):
+        it = items(2)
+        J.preparar("v3f", it, version=V3)
+        t = J.preparar("v3f", items(3), version=V3)[0]  # el redactor corrigió y añadió una: aún sin veredictos
+        self.assertEqual(len(t["ids"]), 3)
+
     def test_veredictos_inmutables(self):
         it = items(2)
         t = J.preparar("v3e", it, version=V3)[0]

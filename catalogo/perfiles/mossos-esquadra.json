@@ -132,9 +132,9 @@
  },
  "contenido": {
   "OFFICIAL_EXAM": 290,
-  "TESTLEY_GENERATED": 82,
-  "REVIEW_REQUIRED": 6,
-  "DEPRECATED": 2,
+  "TESTLEY_GENERATED": 87,
+  "REVIEW_REQUIRED": 11,
+  "DEPRECATED": 3,
   "OUTDATED": 0,
   "nota": "OFFICIAL_EXAM y TESTLEY_GENERATED son bancos separados: nunca se mezclan en un examen oficial ni cuentan como cobertura uno del otro."
  },
@@ -1166,7 +1166,7 @@
     {
      "ley": "guia-mossos",
      "art": "A.2.1",
-     "preguntas": 3
+     "preguntas": 2
     },
     {
      "ley": "guia-mossos",
@@ -1212,20 +1212,19 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 3,
+    "TESTLEY_GENERATED": 2,
     "OFFICIAL_EXAM": 14,
-    "REVIEW_REQUIRED": 0,
+    "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 1,
-    "2": 2
+    "2": 1
    },
    "tipos": {
     "conceptual": 1,
-    "literal": 1,
-    "negativa": 1
+    "literal": 1
    },
    "ultima_actualizacion": "2026-10-02",
    "cambios_recientes": [
@@ -1726,7 +1725,7 @@
     {
      "ley": "guia-mossos",
      "art": "A.7.1",
-     "preguntas": 3
+     "preguntas": 2
     },
     {
      "ley": "guia-mossos",
@@ -1762,18 +1761,16 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 3,
+    "TESTLEY_GENERATED": 2,
     "OFFICIAL_EXAM": 8,
-    "REVIEW_REQUIRED": 0,
+    "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 2,
-    "2": 1
+    "1": 2
    },
    "tipos": {
-    "aplicacion": 1,
     "definiciones": 1,
     "literal": 1
    },
@@ -2416,7 +2413,7 @@
     {
      "ley": "guia-mossos",
      "art": "B.5.1",
-     "preguntas": 1
+     "preguntas": 0
     },
     {
      "ley": "guia-mossos",
@@ -2439,21 +2436,17 @@
      "preguntas": 0
     }
    ],
-   "cobertura": "PARCIAL",
+   "cobertura": "SIN_PREGUNTAS",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 1,
+    "TESTLEY_GENERATED": 0,
     "OFFICIAL_EXAM": 5,
-    "REVIEW_REQUIRED": 2,
+    "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
-   "dificultad": {
-    "2": 1
-   },
-   "tipos": {
-    "conceptual": 1
-   },
+   "dificultad": {},
+   "tipos": {},
    "ultima_actualizacion": "2026-10-02",
    "cambios_recientes": []
   },
@@ -2817,7 +2810,7 @@
     {
      "ley": "guia-mossos",
      "art": "C.1.1",
-     "preguntas": 2
+     "preguntas": 1
     },
     {
      "ley": "guia-mossos",
@@ -2834,18 +2827,16 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 2,
+    "TESTLEY_GENERATED": 1,
     "OFFICIAL_EXAM": 7,
     "REVIEW_REQUIRED": 0,
-    "DEPRECATED": 0,
+    "DEPRECATED": 1,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 1,
     "2": 1
    },
    "tipos": {
-    "definiciones": 1,
     "excepcion": 1
    },
    "ultima_actualizacion": "2026-10-02",
@@ -2926,7 +2917,7 @@
     {
      "ley": "guia-mossos",
      "art": "C.2.5",
-     "preguntas": 0
+     "preguntas": 1
     },
     {
      "ley": "guia-mossos",
@@ -2948,7 +2939,7 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 2,
+    "TESTLEY_GENERATED": 3,
     "OFFICIAL_EXAM": 35,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
@@ -2956,9 +2947,10 @@
    },
    "dificultad": {
     "1": 1,
-    "2": 1
+    "2": 2
    },
    "tipos": {
+    "competencias": 1,
     "literal": 1,
     "negativa": 1
    },
@@ -3063,7 +3055,7 @@
      "ley": "guia-mossos",
      "art": "C.3.1",
      "excluido": true,
-     "preguntas": 2
+     "preguntas": 0
     },
     {
      "ley": "guia-mossos",
@@ -3080,7 +3072,7 @@
     {
      "ley": "guia-mossos",
      "art": "C.3.4",
-     "preguntas": 0
+     "preguntas": 5
     },
     {
      "ley": "guia-mossos",
@@ -3097,17 +3089,21 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 2,
+    "TESTLEY_GENERATED": 5,
     "OFFICIAL_EXAM": 25,
-    "REVIEW_REQUIRED": 1,
+    "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 2
+    "1": 2,
+    "2": 3
    },
    "tipos": {
-    "definiciones": 1,
+    "aplicacion": 1,
+    "competencias": 1,
+    "conceptual": 1,
+    "literal": 1,
     "organos": 1
    },
    "ultima_actualizacion": "2026-10-02",
@@ -3364,12 +3360,12 @@
     {
      "ley": "guia-mossos",
      "art": "C.5.1",
-     "preguntas": 0
+     "preguntas": 3
     },
     {
      "ley": "guia-mossos",
      "art": "C.5.2",
-     "preguntas": 0
+     "preguntas": 2
     },
     {
      "ley": "guia-mossos",
@@ -3382,17 +3378,26 @@
      "preguntas": 0
     }
    ],
-   "cobertura": "SIN_PREGUNTAS",
+   "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 0,
+    "TESTLEY_GENERATED": 5,
     "OFFICIAL_EXAM": 4,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
-   "dificultad": {},
-   "tipos": {},
+   "dificultad": {
+    "1": 2,
+    "2": 3
+   },
+   "tipos": {
+    "aplicacion": 1,
+    "conceptual": 1,
+    "literal": 1,
+    "organos": 1,
+    "requisitos": 1
+   },
    "ultima_actualizacion": "2026-10-01",
    "cambios_recientes": []
   },

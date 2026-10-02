@@ -1,11 +1,11 @@
 {
- "questions_total": 4159,
- "questions_valid": 4026,
+ "questions_total": 4170,
+ "questions_valid": 4031,
  "questions_review": 128,
  "questions_rejected": 3,
  "questions_outdated": 0,
- "questions_deprecated": 2,
- "questions_valid_fabrica": 698,
+ "questions_deprecated": 3,
+ "questions_valid_fabrica": 703,
  "coverage_by_opposition": {
   "guardia-civil-cabos-guardias": {
    "preguntas": 1502,
@@ -36,7 +36,7 @@
    "mediana_por_tema": 83
   },
   "mossos-esquadra": {
-   "preguntas": 84,
+   "preguntas": 82,
    "temas_legislativos": 20,
    "temas_con_preguntas": 19,
    "minimo_por_tema": 0,
@@ -412,7 +412,7 @@
   "mossos-esquadra": [
    {
     "tema": 1,
-    "preguntas": 3
+    "preguntas": 2
    },
    {
     "tema": 2,
@@ -444,7 +444,7 @@
    },
    {
     "tema": 2,
-    "preguntas": 3
+    "preguntas": 2
    },
    {
     "tema": 3,
@@ -964,7 +964,7 @@
   "codigo-civil": 108,
   "codigo-penal": 687,
   "constitucion": 226,
-  "guia-mossos": 41,
+  "guia-mossos": 46,
   "lecrim": 225,
   "lef-1954": 49,
   "ley-12-2009": 61,
@@ -1031,7 +1031,7 @@
   },
   "guia-mossos": {
    "articulos": 0,
-   "articulos_con_preguntas": 17,
+   "articulos_con_preguntas": 21,
    "cobertura_articulos": 0
   },
   "lecrim": {
@@ -1271,17 +1271,12 @@
   }
  },
  "duplicate_rate": 0.0024,
- "validation_rate": 0.8424,
+ "validation_rate": 0.8444,
  "rejection_rate": 0.0036,
- "review_rate": 0.154,
+ "review_rate": 0.152,
  "generation_cost": 0.0,
  "generation_tokens": {},
  "generation_time": 0,
- "lotes": 17,
- "pausa": {
-  "estado": "GENERATION_PAUSED",
-  "motivo": "Fase juez-sesion-v2 terminada (S00018 y S00017 reevaluados, auditoría S00001–S00016 y calibración de 50). No se genera ningún lote ni se publica S00018 sin autorización explícita posterior.",
-  "lote": "S00018",
-  "fecha": "2026-10-02"
- }
+ "lotes": 18,
+ "pausa": null
 }

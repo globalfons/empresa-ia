@@ -487,16 +487,41 @@
     "veredictos": "5d442a95875a4f057d33cd9ac0cc12b2a20f12616e3eb7f2b889e2ca2df14566",
     "prompt_juez": "d51ac613fac7876379432ee93a9e528035dc88c12a5d62689f59d8eadd80df4d"
    }
+  },
+  {
+   "id": "S00019",
+   "fecha": "2026-10-02T22:56:50",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 5,
+   "generadas": 11,
+   "VALID": 11,
+   "REVIEW_REQUIRED": 0,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v3",
+   "judge_policy_sha256": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "168c7436fb0955565fdee7f0874fa61f7092ff6761e12a2de8a29ef797407df6",
+    "revision": "c7f4100ffe4b38a4163870523b74a487f81c8175e107075b1453168e1100fe9f",
+    "veredictos": "b4b6e4a343969c0bfb3edbe0f0b8a22d4caa13a5e8d7fc437d06a2fa4bac1fbb",
+    "prompt_juez": "b96c2c6b908c67b1255840fd71438005c5aefb01de3b1a3deed73b86a075797f"
+   }
   }
  ],
- "pausa": {
-  "estado": "GENERATION_PAUSED",
-  "motivo": "Fase juez-sesion-v2 terminada (S00018 y S00017 reevaluados, auditoría S00001–S00016 y calibración de 50). No se genera ningún lote ni se publica S00018 sin autorización explícita posterior.",
-  "lote": "S00018",
-  "fecha": "2026-10-02"
- },
+ "pausa": null,
  "omitidos": {
-  "lo-4-2015|24": 2
+  "lo-4-2015|24": 2,
+  "guia-mossos|C.2.2": 1
  },
  "pausas_levantadas": [
   {
@@ -511,6 +536,13 @@
    "motivo": "Piloto Mossos S00017 completado (49 generadas · 43 VALID · 6 REVIEW_REQUIRED · 0 rechazadas). El escalado (100 → 250 → 500 → 1.000 → 2.000+) requiere autorización explícita. Reanudar con --reanudar.",
    "lote": "S00017",
    "fecha": "2026-10-01",
+   "levantada": "2026-10-02"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "Fase juez-sesion-v2 terminada (S00018 y S00017 reevaluados, auditoría S00001–S00016 y calibración de 50). No se genera ningún lote ni se publica S00018 sin autorización explícita posterior.",
+   "lote": "S00018",
+   "fecha": "2026-10-02",
    "levantada": "2026-10-02"
   }
  ]

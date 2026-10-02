@@ -246,8 +246,10 @@ class Politica(unittest.TestCase):
             with mock.patch.object(J, "TRABAJO", d):
                 ts = J.preparar("t", items(23))
             self.assertEqual([len(t["ids"]) for t in ts], [10, 10, 3])
+            ruta = os.path.join(d, "t", "evaluacion.json")
+            ev = J.leer(ruta); ev["tandas"][0]["intentos"] = [{"resultado": "BATCH_REJECTED"}]; J.escribir(ruta, ev)
             with self.assertRaises(SystemExit), mock.patch.object(J, "TRABAJO", d):
-                J.preparar("t", items(3))  # una evaluación nunca se reescribe
+                J.preparar("t", items(3))  # con algún juicio registrado, una evaluación nunca se reescribe
         finally:
             shutil.rmtree(d)
 

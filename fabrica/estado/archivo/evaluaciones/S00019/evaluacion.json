@@ -1,0 +1,275 @@
+{
+ "evaluacion": "S00019",
+ "creada_el": "2026-10-02T22:55:08",
+ "judge_policy_version": "juez-sesion-v3",
+ "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+ "judge_model": "claude-haiku-4-5 (subagente de la sesión, igual que v1 y v2)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 11,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "3.0",
+    "3.1"
+   ],
+   "prompt_sha256": "812c9a6b9094c2b571c1c106adab7a61ae911989aa6d8be52fbc38d025753278",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "e95424419477e9bbcee4316f075685b492c377545dd8383d81265f442f4a7f35",
+    "0.1": "3f045daf7e0a36130d6dbc4f1fd65eae6f0a7437a1c1520be18c762e0cb5c66e",
+    "0.2": "87ff7af49c0fecaa9dddedb5c589b5dce0665cca9a1354181500e2c09537b67f",
+    "1.0": "2f1a2ad32d83ea0c60941cf2d623c2b97f6883d4f387ea878e8d9e8e9e030c4a",
+    "1.1": "7132e015761502163153b3cb76604e0bbb8f0be30a113f5f16a1b06effb019a7",
+    "1.2": "a659dcf0ce1e263f3e91c8719e26625584e88696d65bce7ec738b2f45b8bf23e",
+    "1.3": "c50b65e496c32c202d0196b6d2116bbc2ae7694c06f93023c286a00d295f440c",
+    "1.4": "7c1b3d5158777f0e22212c9a8ff635e2230d1488b374e11a27df8d4e40161315",
+    "3.0": "4f1e62f8fdff2d397551ccf4d7444ac076691fda67bcfa94a96d927a72bc928e",
+    "3.1": "082869b79baf884dc1729d4b9e706d97de5e87e8b33c090054af63840d928cb0"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estableix clarament que les normes deontològiques solen sorgir del mateix col·lectiu professional, que és exactament l'opció marcada com correcta. La cita conté tots els elements necessaris per justificar aquesta resposta. No hi ha altres opcions defensables al text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma explícitament que la policia 'no solament ha de complir i fer complir la llei, sinó que, a més, ha de mostrar respecte cap als drets de les persones'. La pregunta és clara i bé formulada, i la resposta (opció 2) és l'única correcta segons el text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu expressament que el Codi de deontologia policial 'és una garantia per al ciutadà, però també per al mateix agent de policia'. La cita és completa i suficient. La resposta és única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "L'article 3 de l'Estatut de la Interpol, tal com consta al text, estableix que l'OIPC-Interpol no ha d'intervenir en assumptes de caràcter polític, militar, religiós o racial. L'opció 1 (assumptes religiosos) és correcta. Les altres opcions (0, 2, 3) són expressament àmbits on Interpol sí intervé.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text especifica directament que 'L'Oficina d'Enllaç Europea depèn directament de la Secretaria General'. La cita és idèntica al fragment pertinent i suficient per respondre.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La Guia estableix que les funcions de l'oficina central nacional (OCN) inclouen 'Executar, dins del propi país, les operacions i actuacions policials sol·licitades per altres països membres de l'organització'. La cita és completa i clara. L'opció 3 és l'única correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estipula que els objectius de l'Europol en blanqueig de diners s'apliquen 'sempre que hi hagi una estructura delictiva organitzada i que dos o més estats membres s'hi vegin afectats'. La pregunta és clara i didàctica, posant a prova la comprensió de la condició de múltiples estats. L'opció 1 és correcta i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma que 'La coordinació efectiva d'àmbit internacional, atesa la necessitat de perseguir noves formes de delinqüència organitzada que ultrapassen l'àmbit de les nostres fronteres, és una necessitat de primer ordre dels cossos policials'. La cita és completa. L'opció 1 és única i correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text indica que 'El Comitè de Ministres del Consell d'Europa, en la Recomanació REC(2001)10, sobre el Codi europeu d'ètica de la policia, adoptada el 19 de setembre de 2001'. Aquesta és una pregunta institucional legítima. L'opció 2 és correcta i única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text estipula que el Codi 's'aplica a les forces públiques de seguretat tradicionals o serveis de policia, o a altres òrgans autoritzats i/o controlats pels poders públics el primer objectiu dels quals consisteix a garantir el manteniment de l'ordre en la societat civil, i que estan autoritzats per l'Estat a utilitzar la força'. La cita és completa. L'opció 3 resumeix correctament aquest criteri. Única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a3ad4221dec28bbf9.jsonl",
+    "respuesta_sha256": "90fb8f25e3ca0d398ee6f6ac6ceafd27f8be08ffd3c1350bf251e4b0fe0c49d7"
+   },
+   "registrada_el": "2026-10-02T22:56:50",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:56:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a3ad4221dec28bbf9.jsonl",
+      "respuesta_sha256": "90fb8f25e3ca0d398ee6f6ac6ceafd27f8be08ffd3c1350bf251e4b0fe0c49d7"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"0.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estableix clarament que les normes deontològiques solen sorgir del mateix col·lectiu professional, que és exactament l'opció marcada com correcta. La cita conté tots els elements necessaris per justificar aquesta resposta. No hi ha altres opcions defensables al text.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"0.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text afirma explícitament que la policia 'no solament ha de complir i fer complir la llei, sinó que, a més, ha de mostrar respecte cap als drets de les persones'. La pregunta és clara i bé formulada, i la resposta (opció 2) és l'única correcta segons el text.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"0.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text diu expressament que el Codi de deontologia policial 'és una garantia per al ciutadà, però també per al mateix agent de policia'. La cita és completa i suficient. La resposta és única i clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"1.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"L'article 3 de l'Estatut de la Interpol, tal com consta al text, estableix que l'OIPC-Interpol no ha d'intervenir en assumptes de caràcter polític, militar, religiós o racial. L'opció 1 (assumptes religiosos) és correcta. Les altres opcions (0, 2, 3) són expressament àmbits on Interpol sí intervé.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"1.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text especifica directament que 'L'Oficina d'Enllaç Europea depèn directament de la Secretaria General'. La cita és idèntica al fragment pertinent i suficient per respondre.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"1.2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La Guia estableix que les funcions de l'oficina central nacional (OCN) inclouen 'Executar, dins del propi país, les operacions i actuacions policials sol·licitades per altres països membres de l'organització'. La cita és completa i clara. L'opció 3 és l'única correcta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"1.3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estipula que els objectius de l'Europol en blanqueig de diners s'apliquen 'sempre que hi hagi una estructura delictiva organitzada i que dos o més estats membres s'hi vegin afectats'. La pregunta és clara i didàctica, posant a prova la comprensió de la condició de múltiples estats. L'opció 1 és correcta i única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"1.4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text afirma que 'La coordinació efectiva d'àmbit internacional, atesa la necessitat de perseguir noves formes de delinqüència organitzada que ultrapassen l'àmbit de les nostres fronteres, és una necessitat de primer ordre dels cossos policials'. La cita és completa. L'opció 1 és única i correcta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"3.0\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text indica que 'El Comitè de Ministres del Consell d'Europa, en la Recomanació REC(2001)10, sobre el Codi europeu d'ètica de la policia, adoptada el 19 de setembre de 2001'. Aquesta és una pregunta institucional legítima. L'opció 2 és correcta i única.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"3.1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El text estipula que el Codi 's'aplica a les forces públiques de seguretat tradicionals o serveis de policia, o a altres òrgans autoritzats i/o controlats pels poders públics el primer objectiu dels quals consisteix a garantir el manteniment de l'ordre en la societat civil, i que estan autoritzats per l'Estat a utilitzar la força'. La cita és completa. L'opció 3 resumeix correctament aquest criteri. Única i clara.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0"
+   ],
+   "prompt_sha256": "82d80ba3c0c1d12d95f082349019ee0aca6cd226f5c89e426af69e027133b59e",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "7a17a770df04fd3d70025cf6601b802053c98b4be62d0aa6a81280f4445a660c"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica explícitament que el Servei de Selecció i Avaluació, dependent de la Subdirecció General d'Estudis Universitaris, Recerca i Desenvolupament, és responsable de 'planificar i supervisar el suport tècnic per a l'avaluació de les condicions psicològiques necessàries per a l'ús d'armes de foc'. La cita és completa i contiene l'identificació de l'òrgan i la funció exacta. Les altres opcions corresponen a altres unitats amb funcions diverses (formació, instructors, administració) sense responsabilitat en aquesta avaluació. La pregunta és clara i útil per a l'examen. No hi ha duplicades registrades.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a423353142dd2d4ba.jsonl",
+    "respuesta_sha256": "40694e8f215a048a33f936925c8a777e3b4a315e8d52a02215c69b90da2b0e92"
+   },
+   "registrada_el": "2026-10-02T22:56:07",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:56:07",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a423353142dd2d4ba.jsonl",
+      "respuesta_sha256": "40694e8f215a048a33f936925c8a777e3b4a315e8d52a02215c69b90da2b0e92"
+     },
+     "respuesta": "[{\"question_id\": \"4.0\", \"verdict\": \"VALID\", \"reason\": \"El texto indica explícitament que el Servei de Selecció i Avaluació, dependent de la Subdirecció General d'Estudis Universitaris, Recerca i Desenvolupament, és responsable de 'planificar i supervisar el suport tècnic per a l'avaluació de les condicions psicològiques necessàries per a l'ús d'armes de foc'. La cita és completa i contiene l'identificació de l'òrgan i la funció exacta. Les altres opcions corresponen a altres unitats amb funcions diverses (formació, instructors, administració) sense responsabilitat en aquesta avaluació. La pregunta és clara i útil per a l'examen. No hi ha duplicades registrades.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

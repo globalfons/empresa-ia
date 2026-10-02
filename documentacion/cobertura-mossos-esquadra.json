@@ -7,7 +7,7 @@
   "2": 0.5,
   "3": 0.2
  },
- "estado_fabrica": "GENERATION_PAUSED",
+ "estado_fabrica": "ACTIVE",
  "temas": [
   {
    "tema": "A.1",
@@ -57,22 +57,22 @@
    "apartados_sin_fuente": 0,
    "objetivo": 30,
    "capacidad": 89,
-   "actuales": 3,
-   "falta": 27,
+   "actuales": 2,
+   "falta": 28,
    "OFFICIAL_EXAM": 14,
-   "REVIEW_REQUIRED": 0,
+   "REVIEW_REQUIRED": 1,
    "dificultad": {
     "1": 1,
-    "2": 2,
+    "2": 1,
     "3": 0
    },
    "tipos": {
     "literal": 1,
-    "conceptual": 1,
-    "negativa": 1
+    "conceptual": 1
    },
    "tipos_minimos_ausentes": [
     "aplicacion",
+    "negativa",
     "dificil",
     "caso_practico"
    ],
@@ -248,22 +248,22 @@
    "apartados_sin_fuente": 0,
    "objetivo": 30,
    "capacidad": 66,
-   "actuales": 3,
-   "falta": 27,
+   "actuales": 2,
+   "falta": 28,
    "OFFICIAL_EXAM": 8,
-   "REVIEW_REQUIRED": 0,
+   "REVIEW_REQUIRED": 1,
    "dificultad": {
     "1": 2,
-    "2": 1,
+    "2": 0,
     "3": 0
    },
    "tipos": {
     "literal": 1,
-    "definiciones": 1,
-    "aplicacion": 1
+    "definiciones": 1
    },
    "tipos_minimos_ausentes": [
     "conceptual",
+    "aplicacion",
     "negativa",
     "dificil",
     "caso_practico"
@@ -457,26 +457,26 @@
    "apartados_sin_fuente": 0,
    "objetivo": 30,
    "capacidad": 45,
-   "actuales": 1,
-   "falta": 29,
+   "actuales": 0,
+   "falta": 30,
    "OFFICIAL_EXAM": 5,
-   "REVIEW_REQUIRED": 2,
+   "REVIEW_REQUIRED": 3,
    "dificultad": {
     "1": 0,
-    "2": 1,
+    "2": 0,
     "3": 0
    },
-   "tipos": {
-    "conceptual": 1
-   },
+   "tipos": {},
    "tipos_minimos_ausentes": [
     "literal",
+    "conceptual",
     "aplicacion",
     "negativa",
     "dificil",
     "caso_practico"
    ],
    "articulos_sin_preguntas": [
+    "B.5.1",
     "B.5.2",
     "B.5.3",
     "B.5.4",
@@ -609,18 +609,17 @@
    "apartados_sin_fuente": 1,
    "objetivo": 8,
    "capacidad": 8,
-   "actuales": 2,
-   "falta": 6,
+   "actuales": 1,
+   "falta": 7,
    "OFFICIAL_EXAM": 7,
    "REVIEW_REQUIRED": 0,
    "dificultad": {
-    "1": 1,
+    "1": 0,
     "2": 1,
     "3": 0
    },
    "tipos": {
-    "excepcion": 1,
-    "definiciones": 1
+    "excepcion": 1
    },
    "tipos_minimos_ausentes": [
     "literal",
@@ -646,18 +645,19 @@
    "apartados_sin_fuente": 2,
    "objetivo": 30,
    "capacidad": 38,
-   "actuales": 2,
-   "falta": 28,
+   "actuales": 3,
+   "falta": 27,
    "OFFICIAL_EXAM": 35,
    "REVIEW_REQUIRED": 0,
    "dificultad": {
     "1": 1,
-    "2": 1,
+    "2": 2,
     "3": 0
    },
    "tipos": {
     "literal": 1,
-    "negativa": 1
+    "negativa": 1,
+    "competencias": 1
    },
    "tipos_minimos_ausentes": [
     "conceptual",
@@ -668,7 +668,6 @@
    "articulos_sin_preguntas": [
     "C.2.2",
     "C.2.3",
-    "C.2.5",
     "C.2.6",
     "C.2.IF"
    ],
@@ -686,26 +685,28 @@
    "apartados_sin_fuente": 4,
    "objetivo": 20,
    "capacidad": 20,
-   "actuales": 0,
-   "falta": 20,
+   "actuales": 5,
+   "falta": 15,
    "OFFICIAL_EXAM": 25,
-   "REVIEW_REQUIRED": 1,
+   "REVIEW_REQUIRED": 3,
    "dificultad": {
-    "1": 0,
-    "2": 0,
+    "1": 2,
+    "2": 3,
     "3": 0
    },
-   "tipos": {},
+   "tipos": {
+    "literal": 1,
+    "organos": 1,
+    "competencias": 1,
+    "aplicacion": 1,
+    "conceptual": 1
+   },
    "tipos_minimos_ausentes": [
-    "literal",
-    "conceptual",
-    "aplicacion",
     "negativa",
     "dificil",
     "caso_practico"
    ],
    "articulos_sin_preguntas": [
-    "C.3.4",
     "C.3.5"
    ],
    "articulos_sobreexplotados": [],
@@ -767,27 +768,28 @@
    "apartados_sin_fuente": 0,
    "objetivo": 26,
    "capacidad": 26,
-   "actuales": 0,
-   "falta": 26,
+   "actuales": 5,
+   "falta": 21,
    "OFFICIAL_EXAM": 4,
    "REVIEW_REQUIRED": 0,
    "dificultad": {
-    "1": 0,
-    "2": 0,
+    "1": 2,
+    "2": 3,
     "3": 0
    },
-   "tipos": {},
+   "tipos": {
+    "literal": 1,
+    "aplicacion": 1,
+    "conceptual": 1,
+    "organos": 1,
+    "requisitos": 1
+   },
    "tipos_minimos_ausentes": [
-    "literal",
-    "conceptual",
-    "aplicacion",
     "negativa",
     "dificil",
     "caso_practico"
    ],
    "articulos_sin_preguntas": [
-    "C.5.1",
-    "C.5.2",
     "C.5.3",
     "C.5.IF"
    ],
@@ -821,129 +823,184 @@
  ],
  "necesidades": [
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "literal",
    "dificultad": 1,
    "n": 3,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2",
+    "guia-mossos:B.5.3"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo literal (dificultad 1) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "3 preguntas de tipo literal (dificultad 1) del tema B.5 sobre los apartados B.5.1, B.5.2, B.5.3",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "organos",
    "dificultad": 1,
    "n": 3,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2",
+    "guia-mossos:B.5.3"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema B.5 sobre los apartados B.5.1, B.5.2, B.5.3",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
+   "tipo": "plazos",
+   "dificultad": 1,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:B.5.1"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo plazos (dificultad 1) del tema B.5 sobre el apartado B.5.1",
+   "prioridad": 101.2
+  },
+  {
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "aplicacion",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema B.5 sobre los apartados B.5.1, B.5.2",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
+   "tipo": "comparativa",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:B.5.1"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo comparativa (dificultad 2) del tema B.5 sobre el apartado B.5.1",
+   "prioridad": 101.2
+  },
+  {
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "competencias",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.3.4"
+    "guia-mossos:B.5.3"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.3 sobre el apartado C.3.4",
-   "prioridad": 106.2
+   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema B.5 sobre el apartado B.5.3",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "conceptual",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema B.5 sobre los apartados B.5.1, B.5.2",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
+   "tipo": "excepcion",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:B.5.3"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo excepción (dificultad 2) del tema B.5 sobre el apartado B.5.3",
+   "prioridad": 101.2
+  },
+  {
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "negativa",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema B.5 sobre los apartados B.5.1, B.5.2",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "procedimiento",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema B.5 sobre el apartado B.5.1",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
+   "tipo": "requisitos",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:B.5.2"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo requisitos (dificultad 2) del tema B.5 sobre el apartado B.5.2",
+   "prioridad": 101.2
+  },
+  {
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "caso_practico",
    "dificultad": 3,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2",
+    "guia-mossos:B.5.3"
    ],
    "revision_humana": true,
-   "texto": "2 preguntas de tipo caso práctico (dificultad 3) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema B.5 sobre los apartados B.5.1, B.5.2, B.5.3",
+   "prioridad": 101.2
   },
   {
-   "tema": "C.3",
-   "titulo": "La coordinació policial",
+   "tema": "B.5",
+   "titulo": "Les institucions polítiques de l'Estat",
    "tipo": "dificil",
    "dificultad": 3,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:B.5.1",
+    "guia-mossos:B.5.2",
+    "guia-mossos:B.5.3"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 106.2
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema B.5 sobre los apartados B.5.1, B.5.2, B.5.3",
+   "prioridad": 101.2
   },
   {
    "tema": "C.2",
@@ -954,12 +1011,12 @@
    "articulos": [
     "guia-mossos:C.2.2",
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5",
-    "guia-mossos:C.2.6"
+    "guia-mossos:C.2.6",
+    "guia-mossos:C.2.IF"
    ],
    "revision_humana": false,
-   "texto": "4 preguntas de tipo literal (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.5, C.2.6",
-   "prioridad": 102.1
+   "texto": "4 preguntas de tipo literal (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.6, C.2.IF",
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
@@ -970,12 +1027,12 @@
    "articulos": [
     "guia-mossos:C.2.2",
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5",
-    "guia-mossos:C.2.6"
+    "guia-mossos:C.2.6",
+    "guia-mossos:C.2.IF"
    ],
    "revision_humana": false,
-   "texto": "4 preguntas de tipo órganos (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.5, C.2.6",
-   "prioridad": 102.1
+   "texto": "4 preguntas de tipo órganos (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.6, C.2.IF",
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
@@ -986,11 +1043,11 @@
    "articulos": [
     "guia-mossos:C.2.2",
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5"
+    "guia-mossos:C.2.6"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.5",
-   "prioridad": 102.1
+   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.6",
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
@@ -999,27 +1056,26 @@
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.2.5",
-    "guia-mossos:C.2.6"
+    "guia-mossos:C.2.6",
+    "guia-mossos:C.2.IF"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.2 sobre los apartados C.2.5, C.2.6",
-   "prioridad": 102.1
+   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.2 sobre los apartados C.2.6, C.2.IF",
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
    "titulo": "El Departament d'Interior",
    "tipo": "conceptual",
    "dificultad": 2,
-   "n": 3,
+   "n": 2,
    "articulos": [
     "guia-mossos:C.2.2",
-    "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5"
+    "guia-mossos:C.2.3"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo conceptual (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.5",
-   "prioridad": 102.1
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3",
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
@@ -1033,7 +1089,7 @@
    ],
    "revision_humana": false,
    "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3",
-   "prioridad": 102.1
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
@@ -1043,187 +1099,55 @@
    "n": 2,
    "articulos": [
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.2 sobre los apartados C.2.3, C.2.5",
-   "prioridad": 102.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "requisitos",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.5",
     "guia-mossos:C.2.IF"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.2 sobre los apartados C.2.5, C.2.IF",
-   "prioridad": 102.1
+   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.2 sobre los apartados C.2.3, C.2.IF",
+   "prioridad": 98.8
   },
   {
    "tema": "C.2",
    "titulo": "El Departament d'Interior",
-   "tipo": "caso_practico",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.5",
-   "prioridad": 102.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "dificil",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.3",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.5",
-   "prioridad": 102.1
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
-   "tipo": "literal",
-   "dificultad": 1,
-   "n": 4,
-   "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.3",
-    "guia-mossos:C.5.IF"
-   ],
-   "revision_humana": false,
-   "texto": "4 preguntas de tipo literal (dificultad 1) del tema C.5 sobre los apartados C.5.1, C.5.2, C.5.3, C.5.IF",
-   "prioridad": 101.0
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
-   "tipo": "organos",
-   "dificultad": 1,
-   "n": 4,
-   "articulos": [
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.IF"
-   ],
-   "revision_humana": false,
-   "texto": "4 preguntas de tipo órganos (dificultad 1) del tema C.5 sobre los apartados C.5.2, C.5.IF",
-   "prioridad": 101.0
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
-   "tipo": "aplicacion",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.3"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema C.5 sobre los apartados C.5.1, C.5.2, C.5.3",
-   "prioridad": 101.0
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
-   "tipo": "competencias",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.5 sobre los apartados C.5.2, C.5.3",
-   "prioridad": 101.0
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
-   "tipo": "conceptual",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.3"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo conceptual (dificultad 2) del tema C.5 sobre los apartados C.5.1, C.5.2, C.5.3",
-   "prioridad": 101.0
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
-   "tipo": "negativa",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.3"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo negativa (dificultad 2) del tema C.5 sobre los apartados C.5.1, C.5.2, C.5.3",
-   "prioridad": 101.0
-  },
-  {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
    "tipo": "requisitos",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.3"
+    "guia-mossos:C.2.IF",
+    "guia-mossos:C.2.5"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.5 sobre los apartados C.5.1, C.5.3",
-   "prioridad": 101.0
+   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
+   "prioridad": 98.8
   },
   {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
    "tipo": "caso_practico",
    "dificultad": 3,
    "n": 3,
    "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.2",
-    "guia-mossos:C.5.3"
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.6"
    ],
    "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.5 sobre los apartados C.5.1, C.5.2, C.5.3",
-   "prioridad": 101.0
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.6",
+   "prioridad": 98.8
   },
   {
-   "tema": "C.5",
-   "titulo": "El Codi deontològic policial",
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
    "tipo": "dificil",
    "dificultad": 3,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:C.5.1",
-    "guia-mossos:C.5.2"
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.6"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.5 sobre los apartados C.5.1, C.5.2",
-   "prioridad": 101.0
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.6",
+   "prioridad": 98.8
   },
   {
    "tema": "B.2",
@@ -1482,183 +1406,161 @@
    "prioridad": 98.1
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "literal",
    "dificultad": 1,
-   "n": 3,
+   "n": 2,
    "articulos": [
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3",
-    "guia-mossos:B.5.4"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.3"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo literal (dificultad 1) del tema B.5 sobre los apartados B.5.2, B.5.3, B.5.4",
-   "prioridad": 97.9
+   "texto": "2 preguntas de tipo literal (dificultad 1) del tema A.2 sobre los apartados A.2.2, A.2.3",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "organos",
    "dificultad": 1,
    "n": 3,
    "articulos": [
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3",
-    "guia-mossos:B.5.4"
+    "guia-mossos:A.2.5",
+    "guia-mossos:A.2.8",
+    "guia-mossos:A.2.IF"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema B.5 sobre los apartados B.5.2, B.5.3, B.5.4",
-   "prioridad": 97.9
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema A.2 sobre los apartados A.2.5, A.2.8, A.2.IF",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "plazos",
    "dificultad": 1,
    "n": 3,
    "articulos": [
-    "guia-mossos:B.5.1"
+    "guia-mossos:A.2.7",
+    "guia-mossos:A.2.8"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo plazos (dificultad 1) del tema B.5 sobre el apartado B.5.1",
-   "prioridad": 97.9
+   "texto": "3 preguntas de tipo plazos (dificultad 1) del tema A.2 sobre los apartados A.2.7, A.2.8",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "aplicacion",
    "dificultad": 2,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.3",
+    "guia-mossos:A.2.4"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema B.5 sobre los apartados B.5.2, B.5.3",
-   "prioridad": 97.9
+   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
-   "tipo": "comparativa",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:B.5.1"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo comparativa (dificultad 2) del tema B.5 sobre el apartado B.5.1",
-   "prioridad": 97.9
-  },
-  {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "competencias",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:B.5.3"
+    "guia-mossos:A.2.IF"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema B.5 sobre el apartado B.5.3",
-   "prioridad": 97.9
+   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema A.2 sobre el apartado A.2.IF",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "conceptual",
    "dificultad": 2,
-   "n": 1,
-   "articulos": [
-    "guia-mossos:B.5.2"
-   ],
-   "revision_humana": false,
-   "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema B.5 sobre el apartado B.5.2",
-   "prioridad": 97.9
-  },
-  {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
-   "tipo": "excepcion",
-   "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:B.5.3"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.3"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo excepción (dificultad 2) del tema B.5 sobre el apartado B.5.3",
-   "prioridad": 97.9
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.3",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "negativa",
    "dificultad": 2,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.3",
+    "guia-mossos:A.2.4"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema B.5 sobre los apartados B.5.2, B.5.3",
-   "prioridad": 97.9
+   "texto": "3 preguntas de tipo negativa (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "procedimiento",
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:B.5.1"
+    "guia-mossos:A.2.7"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema B.5 sobre el apartado B.5.1",
-   "prioridad": 97.9
+   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema A.2 sobre el apartado A.2.7",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "requisitos",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:B.5.2"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.4"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo requisitos (dificultad 2) del tema B.5 sobre el apartado B.5.2",
-   "prioridad": 97.9
+   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.4",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "caso_practico",
    "dificultad": 3,
    "n": 3,
    "articulos": [
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3",
-    "guia-mossos:B.5.4"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.3",
+    "guia-mossos:A.2.4"
    ],
    "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema B.5 sobre los apartados B.5.2, B.5.3, B.5.4",
-   "prioridad": 97.9
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
+   "prioridad": 96.8
   },
   {
-   "tema": "B.5",
-   "titulo": "Les institucions polítiques de l'Estat",
+   "tema": "A.2",
+   "titulo": "Història de Catalunya (part II)",
    "tipo": "dificil",
    "dificultad": 3,
    "n": 3,
    "articulos": [
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3",
-    "guia-mossos:B.5.4"
+    "guia-mossos:A.2.2",
+    "guia-mossos:A.2.3",
+    "guia-mossos:A.2.4"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema B.5 sobre los apartados B.5.2, B.5.3, B.5.4",
-   "prioridad": 97.9
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
+   "prioridad": 96.8
   },
   {
    "tema": "A.6",
@@ -1828,6 +1730,150 @@
    "revision_humana": false,
    "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.6 sobre los apartados A.6.2, A.6.3, A.6.4",
    "prioridad": 95.8
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "literal",
+   "dificultad": 1,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo literal (dificultad 1) del tema A.7 sobre los apartados A.7.2, A.7.3",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "organos",
+   "dificultad": 1,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.6",
+    "guia-mossos:A.7.IF"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema A.7 sobre los apartados A.7.2, A.7.6, A.7.IF",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "plazos",
+   "dificultad": 1,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo plazos (dificultad 1) del tema A.7 sobre los apartados A.7.2, A.7.3",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "aplicacion",
+   "dificultad": 2,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3",
+    "guia-mossos:A.7.4"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "conceptual",
+   "dificultad": 2,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3",
+    "guia-mossos:A.7.4"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo conceptual (dificultad 2) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "negativa",
+   "dificultad": 2,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3",
+    "guia-mossos:A.7.4"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo negativa (dificultad 2) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "procedimiento",
+   "dificultad": 2,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo procedimiento (dificultad 2) del tema A.7 sobre el apartado A.7.2",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "requisitos",
+   "dificultad": 2,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.1"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo requisitos (dificultad 2) del tema A.7 sobre el apartado A.7.1",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "caso_practico",
+   "dificultad": 3,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3",
+    "guia-mossos:A.7.4"
+   ],
+   "revision_humana": true,
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
+   "prioridad": 95.3
+  },
+  {
+   "tema": "A.7",
+   "titulo": "Les tecnologies de la informació en el segle XXI",
+   "tipo": "dificil",
+   "dificultad": 3,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:A.7.2",
+    "guia-mossos:A.7.3",
+    "guia-mossos:A.7.4"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
+   "prioridad": 95.3
   },
   {
    "tema": "B.7",
@@ -2279,162 +2325,6 @@
    "revision_humana": false,
    "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.4 sobre los apartados A.4.2, A.4.3, A.4.4",
    "prioridad": 94.0
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "literal",
-   "dificultad": 1,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo literal (dificultad 1) del tema A.2 sobre los apartados A.2.2, A.2.3",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "organos",
-   "dificultad": 1,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.2.5",
-    "guia-mossos:A.2.8",
-    "guia-mossos:A.2.IF"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema A.2 sobre los apartados A.2.5, A.2.8, A.2.IF",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "plazos",
-   "dificultad": 1,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.2.7",
-    "guia-mossos:A.2.8"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo plazos (dificultad 1) del tema A.2 sobre los apartados A.2.7, A.2.8",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "aplicacion",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3",
-    "guia-mossos:A.2.4"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "competencias",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.2.IF"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema A.2 sobre el apartado A.2.IF",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "conceptual",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.3",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "negativa",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.3",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "procedimiento",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.2.7"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema A.2 sobre el apartado A.2.7",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "requisitos",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.4"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema A.2 sobre los apartados A.2.2, A.2.4",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "caso_practico",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3",
-    "guia-mossos:A.2.4"
-   ],
-   "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
-   "prioridad": 93.5
-  },
-  {
-   "tema": "A.2",
-   "titulo": "Història de Catalunya (part II)",
-   "tipo": "dificil",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3",
-    "guia-mossos:A.2.4"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.2 sobre los apartados A.2.2, A.2.3, A.2.4",
-   "prioridad": 93.5
   },
   {
    "tema": "A.5",
@@ -3030,149 +2920,6 @@
    "prioridad": 92.8
   },
   {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "literal",
-   "dificultad": 1,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo literal (dificultad 1) del tema A.7 sobre los apartados A.7.2, A.7.3",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "organos",
-   "dificultad": 1,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.6",
-    "guia-mossos:A.7.IF"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema A.7 sobre los apartados A.7.2, A.7.6, A.7.IF",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "plazos",
-   "dificultad": 1,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo plazos (dificultad 1) del tema A.7 sobre los apartados A.7.2, A.7.3",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "aplicacion",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema A.7 sobre los apartados A.7.2, A.7.3",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "conceptual",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3",
-    "guia-mossos:A.7.4"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo conceptual (dificultad 2) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "negativa",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3",
-    "guia-mossos:A.7.4"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo negativa (dificultad 2) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "procedimiento",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.2"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo procedimiento (dificultad 2) del tema A.7 sobre el apartado A.7.2",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "requisitos",
-   "dificultad": 2,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.1"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo requisitos (dificultad 2) del tema A.7 sobre el apartado A.7.1",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "caso_practico",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3",
-    "guia-mossos:A.7.4"
-   ],
-   "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
-   "prioridad": 92.0
-  },
-  {
-   "tema": "A.7",
-   "titulo": "Les tecnologies de la informació en el segle XXI",
-   "tipo": "dificil",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3",
-    "guia-mossos:A.7.4"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.7 sobre los apartados A.7.2, A.7.3, A.7.4",
-   "prioridad": 92.0
-  },
-  {
    "tema": "A.3",
    "titulo": "Història de la policia a Catalunya",
    "tipo": "literal",
@@ -3296,13 +3043,14 @@
    "titulo": "Les competències de la Generalitat en matèria de seguretat",
    "tipo": "literal",
    "dificultad": 1,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.1.IF"
+    "guia-mossos:C.1.IF",
+    "guia-mossos:C.1.1"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo literal (dificultad 1) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 76.8
+   "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.1 sobre los apartados C.1.IF, C.1.1",
+   "prioridad": 89.2
   },
   {
    "tema": "C.1",
@@ -3315,7 +3063,7 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo aplicación (dificultad 2) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 76.8
+   "prioridad": 89.2
   },
   {
    "tema": "C.1",
@@ -3328,7 +3076,7 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 76.8
+   "prioridad": 89.2
   },
   {
    "tema": "C.1",
@@ -3341,7 +3089,7 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 76.8
+   "prioridad": 89.2
   },
   {
    "tema": "C.1",
@@ -3354,7 +3102,7 @@
    ],
    "revision_humana": true,
    "texto": "1 pregunta de tipo caso práctico (dificultad 3) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 76.8
+   "prioridad": 89.2
   },
   {
    "tema": "C.1",
@@ -3367,7 +3115,258 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo difícil (dificultad 3) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 76.8
+   "prioridad": 89.2
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "literal",
+   "dificultad": 1,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.IF",
+    "guia-mossos:C.5.2"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo literal (dificultad 1) del tema C.5 sobre los apartados C.5.3, C.5.IF, C.5.2",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "organos",
+   "dificultad": 1,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.5.IF",
+    "guia-mossos:C.5.2"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema C.5 sobre los apartados C.5.IF, C.5.2",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "aplicacion",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.5 sobre los apartados C.5.3, C.5.IF",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "competencias",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.2"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.5 sobre los apartados C.5.3, C.5.2",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "conceptual",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.5 sobre los apartados C.5.3, C.5.IF",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "negativa",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.5 sobre los apartados C.5.3, C.5.IF",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "requisitos",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.1"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.5 sobre los apartados C.5.3, C.5.1",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "caso_practico",
+   "dificultad": 3,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.IF",
+    "guia-mossos:C.5.2"
+   ],
+   "revision_humana": true,
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.5 sobre los apartados C.5.3, C.5.IF, C.5.2",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.5",
+   "titulo": "El Codi deontològic policial",
+   "tipo": "dificil",
+   "dificultad": 3,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.5.3",
+    "guia-mossos:C.5.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.5 sobre los apartados C.5.3, C.5.IF",
+   "prioridad": 81.8
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "literal",
+   "dificultad": 1,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.5",
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.3 sobre los apartados C.3.5, C.3.4",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "organos",
+   "dificultad": 1,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.5",
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo órganos (dificultad 1) del tema C.3 sobre los apartados C.3.5, C.3.4",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "aplicacion",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.5"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo aplicación (dificultad 2) del tema C.3 sobre el apartado C.3.5",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "competencias",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo competencias (dificultad 2) del tema C.3 sobre el apartado C.3.4",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "conceptual",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.5"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema C.3 sobre el apartado C.3.5",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "negativa",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.5",
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.3 sobre los apartados C.3.5, C.3.4",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "procedimiento",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.5",
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.3 sobre los apartados C.3.5, C.3.4",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "caso_practico",
+   "dificultad": 3,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.5",
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": true,
+   "texto": "2 preguntas de tipo caso práctico (dificultad 3) del tema C.3 sobre los apartados C.3.5, C.3.4",
+   "prioridad": 81.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "dificil",
+   "dificultad": 3,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.5",
+    "guia-mossos:C.3.4"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.3 sobre los apartados C.3.5, C.3.4",
+   "prioridad": 81.2
   },
   {
    "tema": "C.4",
@@ -3523,7 +3522,7 @@
    "apartados": []
   }
  ],
- "total_necesario": 479,
+ "total_necesario": 472,
  "gaps_fuente": [
   "D",
   "B.8 (1 apartados)",

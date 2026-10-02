@@ -242,7 +242,11 @@ def preparar(nombre, items, version="juez-sesion-v2", raiz=None, tam=None, sesio
     tam = tam or pol["componentes"]["mecanismo"]["tamano_tanda"]
     d = dir_eval(nombre, raiz)
     if os.path.exists(os.path.join(d, "evaluacion.json")):
-        raise SystemExit(f"La evaluación {nombre} ya existe: no se reescribe (los veredictos registrados son inmutables).")
+        previa = leer(os.path.join(d, "evaluacion.json"))
+        if any(t.get("intentos") or t.get("estado") != "PENDIENTE" for t in previa["tandas"]):
+            raise SystemExit(f"La evaluación {nombre} ya existe: no se reescribe (los veredictos registrados son inmutables).")
+        import shutil  # ningún juez ha respondido todavía: se puede volver a preparar (p. ej. el redactor corrige una candidata)
+        shutil.rmtree(d)
     ids = [i["question_id"] for i in items]
     if len(ids) != len(set(ids)):
         raise SystemExit("IDs repetidos en los items")
