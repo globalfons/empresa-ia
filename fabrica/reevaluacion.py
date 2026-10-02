@@ -13,7 +13,7 @@ import datetime, glob, json, os, sys
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
-from fabrica import juez_v2 as J  # noqa: E402
+from fabrica import juez_v2 as J, banco as B  # noqa: E402
 
 EN_REEVALUACION = "REVIEW_REQUIRED_REEVALUATION"
 DESTINO = {"VALID": None, "REVIEW_REQUIRED": EN_REEVALUACION, "REJECTED": "DEPRECATED"}
@@ -62,6 +62,7 @@ def aplicar(lote, evaluacion, raiz=R, res=None):
     por = {v["question_id"]: v for v in res["veredictos"]}
     hechas, cuenta = set(), {"VALID": 0, "REVIEW_REQUIRED": 0, "REJECTED": 0}
     ahora = datetime.datetime.now().isoformat(timespec="seconds")
+    banco = None
     for f in ficheros(raiz):
         qs, sangria = _leer(f)
         cambio = False
@@ -76,6 +77,18 @@ def aplicar(lote, evaluacion, raiz=R, res=None):
             q.update(reevaluation_verdict=v["verdict"], reevaluation_reason=v["reason"], reevaluation_policy_version=res["judge_policy_version"],
                      reevaluation_judge="claude-haiku-4-5 (subagente de la sesión, juez-sesion-v2)", reevaluation_at=ahora, estado_desde=ahora[:10])
             destino = DESTINO[v["verdict"]]
+            if destino is None:  # vuelve a publicarse solo si pasa la puerta de publicación del banco
+                if banco is None:
+                    banco = B.Banco(raiz)
+                slug = os.path.basename(f)[len("preguntas-"):-len(".json")]
+                banco.qs[slug] = qs; banco.cola.setdefault(slug, B.leer(banco._fc(slug), []))
+                motivos = banco.verificar_publicacion(slug, dict(q, verification_status=None), republicar=True)
+                if motivos:
+                    destino = EN_REEVALUACION
+                    q.update(verification_status=destino, current_status="HUMAN_REVIEW_QUEUE",
+                             motivo="puerta de publicación: " + " · ".join(motivos)[:300])
+                    hechas.add(q["id"]); cuenta["VALID"] += 1; cambio = True
+                    continue
             if destino is None:
                 q.pop("verification_status", None); q.pop("motivo", None); q["current_status"] = "PUBLISHED"
             else:

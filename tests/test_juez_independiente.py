@@ -160,7 +160,10 @@ class TestSeparacionDeFunciones(Copia):
     def test_4_valid_se_publica(self):
         banco = B.Banco(self.t)
         n = len(banco.cargar("constitucion"))
-        pid = banco.publicar("constitucion", dict(buena(), art="1", traza={"validation_status": "VALID", "judge_verdict": "VALID"}))
+        reg = P.registro(self.t); act = reg["activa"]; huella = next(e["sha256"] for e in reg["versiones"] if e["version"] == act)
+        traza = {"validation_status": "VALID", "judge_verdict": "VALID", "judge_model": "claude-haiku-4-5",
+                 "judge_policy_version": act, "judge_policy_sha256": huella}
+        pid = banco.publicar("constitucion", dict(buena(), art="1", traza=traza))
         self.assertEqual(pid, f"{banco.prefijo('constitucion')}-{n}")
         # y una REVIEW_REQUIRED aprobada explícitamente por una persona también (vía revisión humana trazable)
         cid = banco.anadir("constitucion", dict(buena(q="Según el artículo 1 de la Constitución, ¿qué valores superiores propugna el Estado?"), art="1",

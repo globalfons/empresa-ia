@@ -151,7 +151,7 @@ class Publicacion(unittest.TestCase):
         self.assertFalse(vs[0]["coherente"])
 
 
-class Historico(unittest.TestCase):
+class _Datos(unittest.TestCase):
     def setUp(self):
         self.d = tempfile.mkdtemp()
         os.makedirs(os.path.join(self.d, "datos"))
@@ -167,6 +167,7 @@ class Historico(unittest.TestCase):
     def banco(self):
         return {q["id"]: q for q in json.load(open(os.path.join(self.d, "datos", "preguntas-guia-mossos.json")))}
 
+class Historico(_Datos):
     def test_13_s00017_conserva_sus_veredictos_historicos(self):
         self.assertEqual(RV.marcar("S00017", raiz=self.d), 3)
         b = self.banco()
@@ -185,7 +186,8 @@ class Historico(unittest.TestCase):
             {"question_id": "guia-mossos-0", "verdict": "VALID", "reason": "r0" * 12, "criteria_checked": {}},
             {"question_id": "guia-mossos-1", "verdict": "REVIEW_REQUIRED", "reason": "r1" * 12, "criteria_checked": {}},
             {"question_id": "guia-mossos-2", "verdict": "REJECTED", "reason": "r2" * 12, "criteria_checked": {}}]}
-        self.assertEqual(RV.aplicar("S00017", "S00017-v2", raiz=self.d, res=res), {"VALID": 1, "REVIEW_REQUIRED": 1, "REJECTED": 1})
+        with mock.patch.object(RV.B.Banco, "verificar_publicacion", return_value=[]):  # aquí se prueba el histórico; la puerta tiene su test
+            self.assertEqual(RV.aplicar("S00017", "S00017-v2", raiz=self.d, res=res), {"VALID": 1, "REVIEW_REQUIRED": 1, "REJECTED": 1})
         b = self.banco()
         for k, (est, cur) in enumerate([(None, "PUBLISHED"), ("REVIEW_REQUIRED_REEVALUATION", "HUMAN_REVIEW_QUEUE"), ("DEPRECATED", "WITHDRAWN")]):
             q = b[f"guia-mossos-{k}"]
@@ -195,6 +197,19 @@ class Historico(unittest.TestCase):
             self.assertEqual(q["reevaluation_policy_version"], "juez-sesion-v2")
             self.assertEqual((q["q"], q["o"], q["a"], q["id"]), (self.qs[k]["q"], self.qs[k]["o"], self.qs[k]["a"], self.qs[k]["id"]))
             self.assertEqual(len(q["reevaluaciones"]), 1)
+
+
+class PuertaRepublicacion(_Datos):
+    def test_valid_que_no_pasa_la_puerta_sigue_en_revision(self):
+        RV.marcar("S00017", raiz=self.d)
+        res = {"judge_policy_version": "juez-sesion-v2", "policy_hash": "no-registrada", "veredictos": [
+            {"question_id": "guia-mossos-0", "verdict": "VALID", "reason": "r0" * 12, "criteria_checked": {}}]}
+        RV.aplicar("S00017", "S00017-v2", raiz=self.d, res=res)
+        q = self.banco()["guia-mossos-0"]
+        self.assertEqual(q["verification_status"], "REVIEW_REQUIRED_REEVALUATION")  # no se sirve
+        self.assertIn("puerta de publicación", q["motivo"])
+        self.assertEqual(q["reevaluation_verdict"], "VALID")  # el veredicto del juez queda registrado, sin publicar
+        self.assertEqual(q["legacy_verdict"], "VALID")
 
 
 class Politica(unittest.TestCase):
