@@ -41,7 +41,32 @@ const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
 const PUBLICADAS_WEB = PUBLICADAS.filter((L) => !L.privada); // con página propia de la norma y de sus artículos
 const LEYPOR = Object.fromEntries(PUBLICADAS.map((L) => [L.slug, L]));
 // Campos internos de la fábrica (fabrica/): se quedan en datos/, no viajan al navegador
-const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, traza, aprobacion_humana, revision_humana, ...q }) => q;
+const PUBLICO = ({ generador, modelo, juez, lote, tema_objetivo, fuente_url, origen, creada_el, traza, aprobacion_humana, revision_humana,
+  current_status, legacy_verdict, legacy_flags, legacy_reason, legacy_policy_version, legacy_judge, legacy_batch, reevaluaciones,
+  reevaluation_verdict, reevaluation_reason, reevaluation_policy_version, reevaluation_judge, reevaluation_at, ...q }) => q;
+// ---------- Banco premium (B1, documentacion/PREMIUM_DEPLOYMENT.md) ----------
+// Contenido premium = preguntas de normas sin acceso gratuito: las de fuentes no publicadas (guía de Mossos, sin páginas de
+// artículo) que no están en planes.free.leyes_completas. Las preguntas de las leyes del BOE son gratuitas por artículo (promesa
+// de la página de precios) y siguen en docs/datos. Con bancoPrivado activo, docs/ solo lleva una muestra del contenido premium
+// y el resto va a OUT_PRIV (fuera de docs/, ignorado por git), que scripts/subir_banco.py sube a public.banco_premium; el
+// navegador lo pide a la función «banco», que comprueba el entitlement en el servidor (mi_plan() o clave de licencia).
+const BANCO_PRIVADO = process.env.TL_BANCO_PRIVADO ? process.env.TL_BANCO_PRIVADO === "1" : !!C.bancoPrivado;
+const OUT_PRIV = process.env.TL_PRIV || ".banco-privado";
+const PLAN_FREE = (C.planes || {}).free || {};
+const LIBRES = new Set(PLAN_FREE.leyes_completas || []);
+const MUESTRA_N = PLAN_FREE.preguntas_muestra || 10;
+const PRIVADO = {};
+const esPremium = (q, ley) => { const sl = q.ley || ley; return !!(LEYPOR[sl] || {}).privada && !LIBRES.has(sl); };
+function separarPremium(clave, qs, ley) {
+  if (!BANCO_PRIVADO) return qs;
+  const prem = qs.filter((q) => esPremium(q, ley));
+  if (!prem.length) return qs;
+  const paso = prem.length / MUESTRA_N, muestra = new Set();
+  for (let i = 0; i < Math.min(MUESTRA_N, prem.length); i++) muestra.add(prem[Math.floor(i * paso)].id);
+  PRIVADO[clave] = prem.filter((q) => !muestra.has(q.id)).map(PUBLICO);
+  const fuera = new Set(PRIVADO[clave].map((q) => q.id));
+  return qs.filter((q) => !fuera.has(q.id));
+}
 // lastmod de las páginas de cada ley: último commit de sus preguntas o de su texto (si hay cambios sin commit, hoy).
 // En un clon superficial (checkout de CI con fetch-depth 1) la historia no es fiable: se usa config.updated.
 const GIT_OK = (() => { try { return execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() === "false"; } catch { return false; } })();
@@ -148,7 +173,7 @@ function render({ route, opts, title: full, description }) {
 <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='10' width='80' height='80' rx='18' fill='%231d4ed8'/><path d='M30 52l14 14 26-30' stroke='white' stroke-width='10' fill='none'/></svg>">
 <link rel="stylesheet" href="${root}assets/style.css">
-<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id), tutorUrl: C.tutorUrl || "", planes: C.planes || null, flags: FLAGS, experimentos: EXP_ACTIVOS })};</script>
+<script>window.TL_CONFIG=${JSON.stringify({ root, supabaseUrl: C.supabaseUrl || "", supabaseAnonKey: C.supabaseAnonKey || "", lsStoreId: C.lsStoreId || "", lsProductId: C.lsProductId || "", pase: !!C.checkoutUrl, opos: OPOS.map((o) => o.id), tutorUrl: C.tutorUrl || "", planes: C.planes || null, bancoPrivado: BANCO_PRIVADO, flags: FLAGS, experimentos: EXP_ACTIVOS })};</script>
 <script src="${root}assets/store.js"></script>
 <script src="${root}assets/eventos.js" defer></script>${C.tutorUrl ? `\n<script src="${root}assets/tutor.js" defer></script>` : ""}
 ${schema ? ldJson(schema) : ""}${migas ? ldJson({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: migas.map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) }) : ""}
@@ -634,7 +659,7 @@ for (const o of OPOS) {
       return PUB[id] ? `<a class="chip ok" href="../../${PUB[id].slug}/">✔ ${esc(n.nombre)}</a>` : `<span class="chip">${esc(n.nombre)} · en preparación</span>`;
     }).join(" ");
   };
-  const datosOp = { leyes: o.leyes, arts: o.arts, qs: o.qs, temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, nq: o.temaInfo[i].nq, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) ,
+  const datosOp = { leyes: o.leyes, arts: o.arts, qs: separarPremium(o.id, o.qs).map(PUBLICO), premium: !!PRIVADO[o.id], temario: o.temario.map((t, i) => ({ i, b: t.bloque, n: t.tema, t: t.titulo, tipo: t.tipo, nq: o.temaInfo[i].nq, leyes: t.normas.filter((id) => PUB[id]).map((id) => PUB[id].slug), normas: t.normas.map((id) => (NORMAS[id] || { nombre: id }).nombre) })) ,
     // guía oficial no publicada: el test enlaza al PDF oficial en vez de a la página del artículo
     privadas: Object.fromEntries(Object.keys(o.leyes).filter((sl) => (LEYPOR[sl] || {}).privada).map((sl) => [sl, LEYPOR[sl].fuente])) };
   fs.mkdirSync(path.join(OUT_TMP, "datos"), { recursive: true });
@@ -1205,8 +1230,14 @@ fs.cpSync(path.join(OUT_TMP, "datos"), path.join(OUT, "datos"), { recursive: tru
 for (const L of PUBLICADAS)
   fs.writeFileSync(
     path.join(OUT, "datos", `${L.slug}.json`),
-    JSON.stringify({ leyes: { [L.slug]: L.corto }, arts: Object.fromEntries(L.arts.map((a) => [a.n, { t: a.titulo || "Artículo " + a.n, b: a.bloque || L.corto }])), qs: L.qs.map(PUBLICO) })
+    JSON.stringify({ leyes: { [L.slug]: L.corto }, arts: Object.fromEntries(L.arts.map((a) => [a.n, { t: a.titulo || "Artículo " + a.n, b: a.bloque || L.corto }])), qs: separarPremium(L.slug, L.qs, L.slug).map(PUBLICO), premium: !!PRIVADO[L.slug] })
   );
+// Banco premium fuera de docs/: nunca se publica en la web estática
+if (BANCO_PRIVADO) {
+  fs.rmSync(OUT_PRIV, { recursive: true, force: true });
+  fs.mkdirSync(OUT_PRIV, { recursive: true });
+  for (const [clave, qs] of Object.entries(PRIVADO)) fs.writeFileSync(path.join(OUT_PRIV, `${clave}.json`), JSON.stringify({ clave, qs }));
+}
 // Títulos y descripciones únicos: si varias páginas comparten uno, cada una pasa a su alternativa más específica
 for (const [campo, alt, fmt] of [["title", "tituloAlt", conMarca], ["description", "descAlt", (x) => x]]) {
   for (let nivel = 0; nivel < 3; nivel++) {

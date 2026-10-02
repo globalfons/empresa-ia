@@ -6,3 +6,6 @@ crecimiento/privado/
 # Fábrica en modo sesión: ficheros de trabajo de cada lote (plan, candidatas, revisión)
 fabrica/sesion/
 datos/cache/
+
+# Banco premium (B1): se genera en la build y se sube a Supabase; nunca al repositorio ni a docs/
+.banco-privado/

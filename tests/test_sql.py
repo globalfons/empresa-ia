@@ -73,6 +73,19 @@ class TestEsquema(unittest.TestCase):
         self.assertEqual(psql("select count(*) from public.suscripciones", rol="authenticated", uid=self.B), "0")
         self.assertIn("permission denied", falla("insert into public.suscripciones (id, email, status) values ('x', 'b@x.es', 'active')", rol="authenticated", uid=self.B))
 
+    def test_banco_premium_inaccesible_salvo_servicio(self):
+        """B1: ni anon, ni un usuario free, ni siquiera uno premium leen public.banco_premium directamente (solo la función «banco»)."""
+        psql("insert into public.banco_premium (clave, datos) values ('mossos-esquadra', '{\"qs\": [{\"id\": \"p1\"}]}') on conflict (clave) do nothing")
+        psql("delete from public.suscripciones")
+        psql(f"insert into public.suscripciones (id, user_id, email, status) values ('sp', '{self.A}', 'a@x.es', 'active')")
+        self.assertEqual(psql("select public.mi_plan()->>'plan'", rol="authenticated", uid=self.A), "premium")
+        for rol, uid in (("anon", None), ("authenticated", self.B), ("authenticated", self.A)):
+            self.assertIn("permission denied", falla("select datos from public.banco_premium", rol=rol, uid=uid), f"{rol} {uid}")
+            self.assertIn("permission denied", falla("insert into public.banco_premium (clave, datos) values ('x-y', '{}')", rol=rol, uid=uid))
+        self.assertEqual(psql("select count(*) from public.banco_premium"), "1")  # el propietario/servicio sí
+        self.assertIsNotNone(falla("insert into public.banco_premium (clave, datos) values ('../mal', '{}')"))  # clave saneada
+        psql("delete from public.suscripciones")
+
     def test_referidos_antifraude(self):
         cod = psql("select public.mi_codigo_referido()", rol="authenticated", uid=self.A)
         self.assertEqual(psql("select public.mi_codigo_referido()", rol="authenticated", uid=self.A), cod)  # estable

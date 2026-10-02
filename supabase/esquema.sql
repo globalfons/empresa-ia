@@ -198,6 +198,13 @@ create or replace function public.mi_plan() returns jsonb language sql stable se
 $$;
 grant execute on function public.mi_plan() to authenticated;
 
+-- Banco premium (B1 · documentacion/PREMIUM_DEPLOYMENT.md): contenido sin acceso gratuito. RLS activa y SIN políticas:
+-- ni anon ni authenticated (aunque sean premium) pueden leerla ni escribirla; solo la clave de servicio, que usan la función
+-- «banco» (tras comprobar mi_plan() o la licencia) y scripts/subir_banco.py desde GitHub Actions.
+create table if not exists public.banco_premium (clave text primary key check (clave ~ '^[a-z0-9-]{2,60}$'), datos jsonb not null, actualizado timestamptz not null default now());
+alter table public.banco_premium enable row level security;
+revoke all on public.banco_premium from anon, authenticated;
+
 -- Referidos (con antifraude)
 create table if not exists public.referidores (user_id uuid primary key references auth.users(id) on delete cascade, codigo text not null unique, creado timestamptz not null default now());
 create table if not exists public.referidos (

@@ -51,7 +51,7 @@ jobs:
       - name: Reconstruir la web si hay contenido publicado nuevo
         run: |
           if [ -n "$(git status --porcelain crecimiento/estado/contenidos)" ]; then
-            python3 catalogo/construir.py && node build.mjs
+            python3 catalogo/construir.py && node build.mjs && python3 scripts/subir_banco.py
           fi
       - name: Guardar estado (sin datos personales; crecimiento/privado no se sube)
         run: |

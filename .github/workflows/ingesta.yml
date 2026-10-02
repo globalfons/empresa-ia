@@ -56,13 +56,16 @@ jobs:
           python3 datos/vigilar_leyes.py
           python3 datos/sellar_preguntas.py
         continue-on-error: true
-      - name: Validar catálogo y construir la web
+      - name: Validar catálogo y construir la web (y subir el banco premium a Supabase si bancoPrivado está activo)
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           python3 catalogo/validar_catalogo.py
           python3 datos/validar_todo.py
           python3 datos/calidad_preguntas.py
           python3 catalogo/construir.py
           node build.mjs
+          python3 scripts/subir_banco.py
       - name: Guardar resultados
         run: |
           git config user.name "testley-ingesta"
