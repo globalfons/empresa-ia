@@ -11,6 +11,31 @@ def norm(t):
     return re.sub(r"\W+", " ", "".join(c for c in t if not unicodedata.combining(c))).strip()
 
 
+def trazabilidad_v3(banco, raiz=R, archivo=None):
+    """Ninguna pregunta entra en producción sin el juez: toda pregunta servida que no estaba en el banco al activar
+    juez-sesion-v3 (fabrica/estado/banco-pre-v3.json) necesita su evaluación archivada (veredicto recalculado VALID y pregunta
+    idéntica a la juzgada) o una aprobación humana; y toda republicación tras una reevaluación v3, la suya."""
+    sys.path.insert(0, raiz)
+    from fabrica import juez_v2 as J
+    previas = set(json.load(open(os.path.join(raiz, "fabrica", "estado", "banco-pre-v3.json"), encoding="utf-8"))["ids"])
+    archivo = archivo or os.path.join(raiz, "fabrica", "estado", "archivo", "evaluaciones")
+    out = []
+    for f, q in banco:
+        if q.get("verification_status") in NO_SERVIR or (q.get("aprobacion_humana") or {}).get("decision") == "aprobar":
+            continue
+        ree = (q.get("reevaluaciones") or [{}])[-1]
+        if ree.get("policy_version") == "juez-sesion-v3":
+            m = J.veredicto_archivado(ree.get("evaluacion"), q["id"], q, archivo, raiz)
+        elif q["id"] not in previas:
+            t = q.get("traza") or {}
+            m = J.veredicto_archivado(t.get("judge_evaluation"), t.get("judge_question_id"), q, archivo, raiz) if t.get("judge_evaluation") \
+                else ["sin evaluación archivada del juez ni aprobación humana"]
+        else:
+            continue
+        out += [f"{f}: {q['id']} servida sin veredicto trazable: {x}" for x in m]
+    return out
+
+
 def main():
     fallos, avisos, banco = [], [], []
     for f in sorted(glob.glob(os.path.join(R, "datos", "preguntas-*.json"))):
@@ -51,6 +76,7 @@ def main():
                 fallos.append(f"pregunta no oficial en un examen oficial: {q.get('id')} ({os.path.basename(f)})")
             if not examen and q.get("procedencia") == "OFFICIAL_EXAM":
                 fallos.append(f"pregunta oficial mezclada en {os.path.basename(f)}: {q.get('id')}")
+    fallos += trazabilidad_v3(banco)
     cola = [q for f in glob.glob(os.path.join(R, "datos", "candidatas", "*.json")) for q in json.load(open(f))]
     est = collections.Counter(q.get("verification_status", "VALID") for _, q in banco)
     print(f"banco: {len(banco)} preguntas {dict(est)} · cola: {len(cola)} {dict(collections.Counter(q.get('verification_status') for q in cola))}")

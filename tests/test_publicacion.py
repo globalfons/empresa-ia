@@ -1,20 +1,30 @@
 """Puerta de publicación del banco (Mossos 360 · Fase 1): solo `Banco.publicar()` publica, y solo si pasa todas las comprobaciones.
 Uso: python3 -m unittest tests.test_publicacion"""
-import copy, json, os, sys, unittest
+import copy, json, os, shutil, sys, tempfile, unittest
 from unittest import mock
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
+sys.path.insert(0, os.path.join(R, "tests"))
+import juez_simulado as JS  # noqa: E402
 from fabrica import banco as B, juez_v2 as J, motor as MO, politica as P  # noqa: E402
 
 
-def base():
-    """Una pregunta real de la fábrica (Constitución), retirada del banco en memoria para volver a publicarla."""
+def base(veredicto="VALID", nombre="PUERTA"):
+    """Una pregunta real de la fábrica (Constitución), retirada del banco en memoria, juzgada de nuevo por una evaluación REAL
+    del mecanismo del juez con la política activa (archivada en un directorio temporal) para volver a publicarla."""
     b = B.Banco()
     qs = b.cargar("constitucion")
     q = next(x for x in qs if (x.get("traza") or {}).get("judge_policy_sha256") and x.get("tipo"))
     b.qs["constitucion"] = [x for x in qs if x is not q]
-    return b, copy.deepcopy(q)
+    q = copy.deepcopy(q)
+    tmp = tempfile.mkdtemp(); _TMP.append(tmp)
+    b.archivo_juez, traza = JS.evaluar([dict(q, question_id=q["id"])], tmp, nombre, veredicto)
+    q["traza"] = dict(q["traza"], **traza, judge_question_id=q["id"])
+    return b, q
+
+
+_TMP = []
 
 
 class Puerta(unittest.TestCase):
@@ -78,6 +88,44 @@ class Puerta(unittest.TestCase):
         self.assertFalse(self.b.sucio)
 
 
+class VeredictoTrazable(unittest.TestCase):
+    """juez-sesion-v3: el VALID se recalcula desde la respuesta archivada del juez; nada fuera del juez lo crea ni lo cambia."""
+
+    def setUp(self):
+        self.inc = mock.patch.object(P, "incidencia").start()
+        self.addCleanup(mock.patch.stopall)
+
+    def test_traza_a_mano_sin_evaluacion_no_publica(self):
+        b, q = base()
+        q["traza"] = {k: v for k, v in q["traza"].items() if k not in ("judge_evaluation", "judge_question_id")}
+        self.assertTrue(any("traza incompleta" in m for m in b.verificar_publicacion("constitucion", q)))
+
+    def test_veredicto_editado_despues_no_publica(self):
+        b, q = base("REVIEW_REQUIRED", "EDITADA")
+        q["verification_status"] = None; q["traza"]["judge_verdict"] = "VALID"  # un script «aprueba» la pregunta
+        ruta = os.path.join(b.archivo_juez, "EDITADA", "evaluacion.json")
+        ev = json.load(open(ruta))
+        for v in ev["tandas"][0]["veredictos"]:
+            v["verdict"] = "VALID"  # y reescribe el veredicto archivado
+        json.dump(ev, open(ruta, "w"))
+        self.assertTrue(any("no dio VALID" in m for m in b.verificar_publicacion("constitucion", q)))
+        ev["tandas"][0]["intentos"][-1]["respuesta"] = ev["tandas"][0]["intentos"][-1]["respuesta"].replace("REVIEW_REQUIRED", "VALID")
+        json.dump(ev, open(ruta, "w"))  # también reescribe la respuesta del juez: su huella ya no cuadra
+        self.assertTrue(any("alterada" in m for m in b.verificar_publicacion("constitucion", q)))
+
+    def test_pregunta_cambiada_despues_del_juicio_no_publica(self):
+        b, q = base(nombre="CAMBIADA")
+        self.assertEqual(b.verificar_publicacion("constitucion", q), [])
+        q["o"] = [q["o"][0] + " (editada)"] + q["o"][1:]
+        self.assertTrue(any("no es la que juzgó" in m for m in b.verificar_publicacion("constitucion", q)))
+
+    def test_politica_no_activa_no_publica(self):
+        b, q = base(nombre="NOACTIVA")
+        v2 = next(e for e in P.registro()["versiones"] if e["version"] == "juez-sesion-v2")
+        q["traza"].update(judge_policy_version="juez-sesion-v2", judge_policy_sha256=v2["sha256"])
+        self.assertTrue(any("no es la activa" in m for m in b.verificar_publicacion("constitucion", q)))
+
+
 class JuezSinInfluencias(unittest.TestCase):
     def test_veredicto_ausente_nunca_es_valid(self):
         res = [[{"q": "x"}, [], None]]
@@ -101,6 +149,11 @@ class JuezSinInfluencias(unittest.TestCase):
         with mock.patch.object(P, "incidencia") as inc, self.assertRaises(P.PoliticaBloqueada):
             P.verificar({"judge_policy_version": "juez-sesion-v2", "sha256": "0" * 64}, R, "prueba")
         self.assertTrue(inc.called)  # queda registrado como incidencia (aquí sin escribir en el registro real)
+
+
+def tearDownModule():
+    for d in _TMP:
+        shutil.rmtree(d, ignore_errors=True)
 
 
 if __name__ == "__main__":

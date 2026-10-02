@@ -112,6 +112,26 @@ class Banco:
         self.sucio.add(slug)
         return q["id"]
 
+    def _veredicto_trazable(self, q, version, republicar):
+        """Políticas con veredicto trazable (juez-sesion-v3): el VALID se recalcula desde la respuesta archivada del juez y la
+        pregunta debe ser exactamente la juzgada; además la traza registra prompt, modelo, sesión y momento del juicio."""
+        from fabrica import politica as P, juez_v2 as J
+        try:
+            trazable = P.cargar(version, self.raiz)["componentes"].get("mecanismo", {}).get("veredicto_trazable")
+        except P.PoliticaBloqueada:
+            return [f"juez: política {version} alterada"]
+        if not trazable:
+            return []
+        archivo = getattr(self, "archivo_juez", None) or os.path.join(self.raiz, "fabrica", "estado", "archivo", "evaluaciones")
+        if republicar:
+            ult = (q.get("reevaluaciones") or [{}])[-1]
+            return [f"juez: {m}" for m in J.veredicto_archivado(ult.get("evaluacion"), q.get("id"), q, archivo, self.raiz)]
+        t = q.get("traza") or {}
+        faltan = [k for k in ("judge_evaluation", "judge_question_id", "judge_prompt_sha256", "judge_session_id", "judged_at", "judge_model") if not t.get(k)]
+        if faltan:
+            return [f"juez: traza incompleta ({', '.join(faltan)})"]
+        return [f"juez: {m}" for m in J.veredicto_archivado(t["judge_evaluation"], t["judge_question_id"], q, archivo, self.raiz)]
+
     def verificar_publicacion(self, slug, q, republicar=False):
         """Puerta de publicación (Fase 1 de Mossos 360). Devuelve la lista de motivos que impiden publicar (vacía = publicable):
         estructura · contenido (controles deterministas contra el texto vigente) · cita literal · estado de la fuente ·
@@ -159,6 +179,12 @@ class Banco:
                 reg = {}
             if not ver or reg.get(ver) != huella:
                 p.append(f"juez: política {ver!r} ausente o con huella distinta de la registrada")
+            elif not humana:
+                activa = P.registro(self.raiz)["activa"]
+                if ver != activa:  # una publicación nueva (o republicación) se juzga con la política vigente, no con una retirada
+                    p.append(f"juez: política {ver} no es la activa ({activa})")
+                else:
+                    p += self._veredicto_trazable(q, ver, republicar)
         # 5. Fuente: norma con texto vigente, no excluida por fuente no verificada, cita literal y controles de contenido
         if not hasattr(self, "_fuentes"):
             self._fuentes = F.Fuentes()

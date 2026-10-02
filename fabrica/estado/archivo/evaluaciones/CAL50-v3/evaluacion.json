@@ -1,0 +1,1045 @@
+{
+ "evaluacion": "CAL50-v3",
+ "creada_el": "2026-10-02T22:36:29",
+ "judge_policy_version": "juez-sesion-v3",
+ "policy_hash": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+ "judge_model": "claude-haiku-4-5 (subagente de la sesión, igual que v1 y v2)",
+ "session_id": "99d978c0-2dae-5759-b0b5-c9d96487a509",
+ "preguntas": 50,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ley-19-2013-43",
+    "ley-33-2003-37",
+    "ley-38-2003-57",
+    "ley-9-2017-92",
+    "lo-3-2018-61",
+    "rdl-8-2015-56",
+    "lo-4-2015-55",
+    "ley-42-2007-27",
+    "lef-1954-47",
+    "lo-4-2000-82"
+   ],
+   "prompt_sha256": "c203c596a9b62a2d22a11f28e5978016992af94f35d0841f16b91fda12c037e3",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ley-19-2013-43": "e1f835d2528a628742054f9bbf122e90af270ac469a09279dab60cb881d00856",
+    "ley-33-2003-37": "31c5e41b6b157b303c6e54042a74ee402276f2229de5c3c500aafe70cc6855be",
+    "ley-38-2003-57": "1c811d1cbc58b14c1294c9db3e26802ca0338b28f4abb886c8c0fb160b90e0c5",
+    "ley-9-2017-92": "9173ecc3381cc887b346645042e6628d8340d53c55d5f1b60a53a5f048aaf610",
+    "lo-3-2018-61": "3847f5073f3d4a01a493537a76f8648c619e2a64575e11da9f1b505671535c21",
+    "rdl-8-2015-56": "d7c52abab57c7db1c40cbe3acce477de33e4f3f3bd9048e69e0bf0b705488841",
+    "lo-4-2015-55": "8eb7a6138e1587f27f90c1328e8dacec122ca213dd4cdef61f52718ea9e02fdd",
+    "ley-42-2007-27": "dcb396ed0dbc8e48c32df67a6fe1471494030a185f24a660396088136ce4e2d5",
+    "lef-1954-47": "f3e00446572100024b140f04f2e4bcfe9d00fa0b84cd62090d304e60c2181aeb",
+    "lo-4-2000-82": "f2c8e4c7dac0d84911b7bf3061d1e101db1236ac12e589cb9c235474a45ba99f"
+   },
+   "veredictos": [
+    {
+     "question_id": "ley-19-2013-43",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto del artículo 4 establece explícitamente que la obligación de suministrar información 'se extenderá a los adjudicatarios de contratos del sector público en los términos previstos en el respectivo contrato', lo que coincide exactamente con la opción a. La cita contiene todos los elementos necesarios para justificar la respuesta. Solo esta opción figura entre los destinatarios mencionados en el texto; las otras opciones (beneficiarios de subvenciones sin excepción, empresas que contraten con particulares, ciudadanos con solicitud) no aparecen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-33-2003-37",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto del artículo 13.2 establece que las unidades 'coordinarán sus actuaciones con la Dirección General del Patrimonio del Estado', lo que coincide exactamente con la opción a (índice 1). La cita reproduces literalmente este mandato. Solo esta entidad aparece en el texto como agente de coordinación; otras opciones como Intervención General, Dirección de Presupuestos y Subsecretaría no son mencionadas en este contexto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-38-2003-57",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 53 enumera explícitamente 'b) Las entidades colaboradoras' entre los responsables de infracciones en materia de subvenciones. La cita contiene esta expresión que aparece claramente identificada en la lista de responsables. Solo la opción 1 figura expresamente entre los enumerados; órganos concedentes, miembros de comisión de valoración e instructores del procedimiento no aparecen en esta enumeración de responsables.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-9-2017-92",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 30.4 de la Ley de Contratos establece que 'la contratación con colaboradores no podrá sobrepasar el 60 por ciento del importe total del proyecto' en las obras de las letras a) y b) ejecutadas con empresarios particulares. La cita reproduce literalmente este límite. Solo el 60% aparece en el texto; las demás opciones (50%, 40%, 80%) no tienen justificación legal. Es un requisito específico y útil para un examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-3-2018-61",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 24 de la LOPDGDD declara explícitamente como lícitos 'los tratamientos de datos personales necesarios para garantizar la protección de las personas que informen sobre infracciones normativas'. La cita contiene la declaración completa de licitud. Solo la opción 1 corresponde al contenido del artículo 24; videovigilancia de centros de trabajo, elaboración de perfiles comerciales y publicación de sanciones a empleados no aparecen en este artículo.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "rdl-8-2015-56",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 17.2 de la Ley General de Seguridad Social establece que 'De igual derecho gozarán las personas que acrediten un interés personal y directo'. La cita reproduce exactamente este estándar. Solo la opción 2 coincide con el requisito de 'interés personal y directo'; otras opciones como 'cualquier persona', 'organizaciones sindicales' o 'interés legítimo o colectivo' no aparecen como legitimados en el artículo.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-4-2015-55",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 26 comienza especificando 'Reglamentariamente, en desarrollo de lo dispuesto en esta Ley, podrá establecerse la necesidad de adoptar medidas de seguridad'. La cita captura precisamente el mecanismo normativo requerido. Solo la opción 2 describe esta forma de establecimiento mediante desarrollo reglamentario; otras opciones mencionan resoluciones de Delegados, acuerdos de Juntas Locales u otro tipo de leyes, que no aparecen en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-42-2007-27",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 2 lista como principio 'f) La prevalencia de la protección ambiental sobre la ordenación territorial y urbanística'. La cita reproduce literalmente este principio. Solo la opción 1 es correcta; la opción 0 expresa exactamente lo opuesto a lo que la ley establece. Las opciones 2 y 3 sobre exigencias económicas y aprovechamiento de recursos no son principios de prevalencia mencionados.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lef-1954-47",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 33.1 establece que 'para que los Jurados de expropiación puedan válidamente constituirse y adoptar acuerdos será precisa, en primera convocatoria, la asistencia de todos sus miembros'. La cita reproduce exactamente este requisito. Solo la opción 2 es correcta para primera convocatoria; el artículo especifica requisitos diferentes para segunda convocatoria (Presidente y dos Vocales). Es un requisito procedimentalmente específico y válido para un examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-4-2000-82",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 10.2 establece explícitamente 'Los extranjeros podrán acceder al empleo público en los términos previstos en la Ley 7/2007, de 12 de abril, del Estatuto Básico del Empleado Público'. La cita contiene la respuesta completa y precisa. Solo la opción 2 es correcta; el acceso no se rige por convocatorias individuales, reciprocidad con Estados de origen ni tratados internacionales como establecen las otras opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a7aaa0ee7047e0749.jsonl",
+    "respuesta_sha256": "af7f9c941ebb15ebd27d6fc97aabd625c957a36e5ed201053cd14caf6b73feee"
+   },
+   "registrada_el": "2026-10-02T22:38:10",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:38:10",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a7aaa0ee7047e0749.jsonl",
+      "respuesta_sha256": "af7f9c941ebb15ebd27d6fc97aabd625c957a36e5ed201053cd14caf6b73feee"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"ley-19-2013-43\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto del artículo 4 establece explícitamente que la obligación de suministrar información 'se extenderá a los adjudicatarios de contratos del sector público en los términos previstos en el respectivo contrato', lo que coincide exactamente con la opción a. La cita contiene todos los elementos necesarios para justificar la respuesta. Solo esta opción figura entre los destinatarios mencionados en el texto; las otras opciones (beneficiarios de subvenciones sin excepción, empresas que contraten con particulares, ciudadanos con solicitud) no aparecen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-33-2003-37\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto del artículo 13.2 establece que las unidades 'coordinarán sus actuaciones con la Dirección General del Patrimonio del Estado', lo que coincide exactamente con la opción a (índice 1). La cita reproduces literalmente este mandato. Solo esta entidad aparece en el texto como agente de coordinación; otras opciones como Intervención General, Dirección de Presupuestos y Subsecretaría no son mencionadas en este contexto.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-38-2003-57\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 53 enumera explícitamente 'b) Las entidades colaboradoras' entre los responsables de infracciones en materia de subvenciones. La cita contiene esta expresión que aparece claramente identificada en la lista de responsables. Solo la opción 1 figura expresamente entre los enumerados; órganos concedentes, miembros de comisión de valoración e instructores del procedimiento no aparecen en esta enumeración de responsables.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-9-2017-92\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 30.4 de la Ley de Contratos establece que 'la contratación con colaboradores no podrá sobrepasar el 60 por ciento del importe total del proyecto' en las obras de las letras a) y b) ejecutadas con empresarios particulares. La cita reproduce literalmente este límite. Solo el 60% aparece en el texto; las demás opciones (50%, 40%, 80%) no tienen justificación legal. Es un requisito específico y útil para un examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-3-2018-61\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 24 de la LOPDGDD declara explícitamente como lícitos 'los tratamientos de datos personales necesarios para garantizar la protección de las personas que informen sobre infracciones normativas'. La cita contiene la declaración completa de licitud. Solo la opción 1 corresponde al contenido del artículo 24; videovigilancia de centros de trabajo, elaboración de perfiles comerciales y publicación de sanciones a empleados no aparecen en este artículo.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"rdl-8-2015-56\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 17.2 de la Ley General de Seguridad Social establece que 'De igual derecho gozarán las personas que acrediten un interés personal y directo'. La cita reproduce exactamente este estándar. Solo la opción 2 coincide con el requisito de 'interés personal y directo'; otras opciones como 'cualquier persona', 'organizaciones sindicales' o 'interés legítimo o colectivo' no aparecen como legitimados en el artículo.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-4-2015-55\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 26 comienza especificando 'Reglamentariamente, en desarrollo de lo dispuesto en esta Ley, podrá establecerse la necesidad de adoptar medidas de seguridad'. La cita captura precisamente el mecanismo normativo requerido. Solo la opción 2 describe esta forma de establecimiento mediante desarrollo reglamentario; otras opciones mencionan resoluciones de Delegados, acuerdos de Juntas Locales u otro tipo de leyes, que no aparecen en el texto.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-42-2007-27\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 2 lista como principio 'f) La prevalencia de la protección ambiental sobre la ordenación territorial y urbanística'. La cita reproduce literalmente este principio. Solo la opción 1 es correcta; la opción 0 expresa exactamente lo opuesto a lo que la ley establece. Las opciones 2 y 3 sobre exigencias económicas y aprovechamiento de recursos no son principios de prevalencia mencionados.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lef-1954-47\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 33.1 establece que 'para que los Jurados de expropiación puedan válidamente constituirse y adoptar acuerdos será precisa, en primera convocatoria, la asistencia de todos sus miembros'. La cita reproduce exactamente este requisito. Solo la opción 2 es correcta para primera convocatoria; el artículo especifica requisitos diferentes para segunda convocatoria (Presidente y dos Vocales). Es un requisito procedimentalmente específico y válido para un examen.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-4-2000-82\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 10.2 establece explícitamente 'Los extranjeros podrán acceder al empleo público en los términos previstos en la Ley 7/2007, de 12 de abril, del Estatuto Básico del Empleado Público'. La cita contiene la respuesta completa y precisa. Solo la opción 2 es correcta; el acceso no se rige por convocatorias individuales, reciprocidad con Estados de origen ni tratados internacionales como establecen las otras opciones.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "lef-1954-36",
+    "lef-1954-41",
+    "codigo-penal-674",
+    "lef-1954-32",
+    "codigo-penal-650",
+    "lef-1954-40",
+    "ley-12-2009-43",
+    "reglamento-armas-60",
+    "lecrim-192",
+    "lef-1954-38"
+   ],
+   "prompt_sha256": "c7a516d8eb773205cbb833075b92a84ba08a55851f810c86873d63aa9a8b954c",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "lef-1954-36": "cd3a706f66300ed78d8ca460611ab0f69edb18e0f3f748116a9c78f6ea1d47ac",
+    "lef-1954-41": "8eaff0736b94fe1076e721b72535edd2b34e7920633b96d14776374f269bf007",
+    "codigo-penal-674": "9e99f88f98f06cbe70df22fe45c03c565eb41df9d75e275afaedd529bdaeb8ed",
+    "lef-1954-32": "a2ac02669e750d65bb940cb8dacf0a38409035ff87667cd1373984886bf2109f",
+    "codigo-penal-650": "87455b9c1731d926bb41ad7c33071e34045e4f8fb3386f1c4967919870bc1c88",
+    "lef-1954-40": "3f9cfa8bd8c95f91141916645a3e774dd7dea9f434b403ddaafba1602a1ac582",
+    "ley-12-2009-43": "d367d47c7dde448d9f6058af7ed9b590d02df00797a003544e5030b70f76b94f",
+    "reglamento-armas-60": "d742e62add836d5216eceb7dd99ea6ddc145ccaf55241c6ea790950635e49ef7",
+    "lecrim-192": "42e2f599720eb57f53268100e4ae35b7801b35bec2cfd3647423865bdab10d81",
+    "lef-1954-38": "31832f641bb7c65aafe550b59716683c7e9c9dbd81049c2621f39dfa7a4a02f3"
+   },
+   "veredictos": [
+    {
+     "question_id": "lef-1954-36",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto establece DOS condiciones para conservar el derecho real: (1) compatibilidad con el nuevo destino Y (2) acuerdo entre expropiante y titular. La pregunta asume la compatibilidad como dada. La opción a=1 señala correctamente la segunda condición (acuerdo), pero la cita solo menciona 'si resultase compatible' sin incluir la exigencia de 'acuerdo' que es lo específico de la respuesta. La cita es insuficiente porque no contiene todos los elementos necesarios para justificar la opción.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lef-1954-41",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto del art. 19 dice explícitamente: 'Cualquier persona podrá aportar por escrito los datos oportunos... u oponerse, por razones de fondo o forma, a la necesidad de la ocupación'. La cita contiene esta frase íntegra. La opción a=0 es la única correcta: permite oposición por escrito a cualquier persona, sin limitación de titularidad. Las otras opciones son contradictadas directamente por el texto (opción 1: rechazada; opción 2: la oposición es por escrito, no de palabra; opción 3: se pueden alegar razones de forma o fondo, no solo fondo).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "codigo-penal-674",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto art. 331 especifica exactamente: 'serán sancionados, en su caso, con la pena inferior en grado, en sus respectivos supuestos, cuando se hayan cometido por imprudencia grave'. La respuesta a=2 ('la pena inferior en grado') es una cita directa de la norma. La cita contiene la formulación exacta de la pena aplicable. Las otras opciones (misma pena, dos grados, mitad inferior) son contradichas explícitamente por el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lef-1954-32",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto art. 4 párrafo 1 establece: 'En este último caso se iniciará para cada uno de los arrendatarios el respectivo expediente incidental para fijar la indemnización que pueda corresponderle'. La respuesta a=1 es una cita casi textual. La cita contiene todos los elementos: 'para cada uno' (no conjunto), 'respectivo expediente incidental', 'indemnización'. Las otras opciones son claramente excluidas: opción 0 dice 'conjunto' (contradice 'cada uno'); opciones 2 y 3 no aparecen en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "codigo-penal-650",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto art. 327 enumera las circunstancias agravantes que elevan la pena a superior en grado, entre ellas: 'c) Que se haya falseado u ocultado información sobre los aspectos ambientales de la misma'. La respuesta a=2 coincide exactamente con la circunstancia enumerada en el apartado c). La cita es directa y suficiente. Las otras opciones (beneficios, antigüedad de empresa, proximidad a núcleo urbano) no aparecen en la enumeración legal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lef-1954-40",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto art. 16 dice explícitamente: 'Cuando se trate de expropiar bienes de la Iglesia, se observará el régimen establecido al efecto en el Concordato vigente, ajustándose en lo demás a lo preceptuado en esta ley'. La respuesta a=0 es una paráfrasis fiel de esta prescripción. La cita recoge las dos partes del régimen: Concordato + resto de la ley. Las otras opciones (autorización eclesiástica, Consejo de Ministros, legislación civil) no son mencionadas en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-12-2009-43",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 7.2 de la Ley 12/2009 establece: 'será indiferente el hecho de que posea realmente la característica racial, religiosa, nacional, social o política que suscita la persecución, a condición de que el agente de persecución se la atribuya'. La respuesta a=1 ('Es indiferente que no las posea si el agente se las atribuye') es la transcripción exacta de la regla. La cita contiene todos los elementos necesarios para justificar esta respuesta. Las otras opciones son directamente contradichas: opción 0 exigiría acreditación real (rechazado); opción 2 añade elemento inexistente ('obrado'); opción 3 la excluye (rechazado por el texto).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "reglamento-armas-60",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 20.1 del RD 137/1993 prescribe que en el libro de producción se anotarán 'los documentos que hayan presentado quien las adquiera' en caso de adquisición directa de armas por particulares. La respuesta a=0 reproduce literalmente esta exigencia. La cita es directa y completa. Las otras opciones (uso concreto, antecedentes penales, lugar de guarda) no están mencionadas en el texto como datos que deba anotar el fabricante.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lecrim-192",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 11 de la LeCrim establece que cuando aparecen culpables de una y otra jurisdicción sin excepción legal, el conocimiento 'corresponderá a la ordinaria, salvo las excepciones consignadas expresamente en las Leyes'. La respuesta a=2 ('La jurisdicción ordinaria') aplica correctamente esta regla al supuesto de la pregunta (donde se excluyen excepciones). La cita contiene la regla general aplicable. Las otras opciones (jurisdicción del aforado, cada una para la suya, la que designe superior) son incompatibles con la regla de la ordinaria.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lef-1954-38",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 13 de la Ley de Expropiación Forzosa prescribe que la declaración del interés social determinante de transmisiones forzosas 'se sujetará, en cuanto a su declaración, al mismo procedimiento previsto en el artículo anterior'. La respuesta a=3 reproduce esta remisión al procedimiento del art. anterior. La cita es directa y suficiente. Las otras opciones (ley singular especial, procedimiento de urgencia, procedimiento discrecional) no aparecen en el texto que establece explícitamente la remisión al art. anterior.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a61f8e2922a67f622.jsonl",
+    "respuesta_sha256": "dd642224a796ee0ea81319337f7c3810505df46e3af27f1fcfab08ca1581152d"
+   },
+   "registrada_el": "2026-10-02T22:38:59",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:38:59",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a61f8e2922a67f622.jsonl",
+      "respuesta_sha256": "dd642224a796ee0ea81319337f7c3810505df46e3af27f1fcfab08ca1581152d"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"lef-1954-36\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El texto establece DOS condiciones para conservar el derecho real: (1) compatibilidad con el nuevo destino Y (2) acuerdo entre expropiante y titular. La pregunta asume la compatibilidad como dada. La opción a=1 señala correctamente la segunda condición (acuerdo), pero la cita solo menciona 'si resultase compatible' sin incluir la exigencia de 'acuerdo' que es lo específico de la respuesta. La cita es insuficiente porque no contiene todos los elementos necesarios para justificar la opción.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lef-1954-41\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto del art. 19 dice explícitamente: 'Cualquier persona podrá aportar por escrito los datos oportunos... u oponerse, por razones de fondo o forma, a la necesidad de la ocupación'. La cita contiene esta frase íntegra. La opción a=0 es la única correcta: permite oposición por escrito a cualquier persona, sin limitación de titularidad. Las otras opciones son contradictadas directamente por el texto (opción 1: rechazada; opción 2: la oposición es por escrito, no de palabra; opción 3: se pueden alegar razones de forma o fondo, no solo fondo).\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"codigo-penal-674\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto art. 331 especifica exactamente: 'serán sancionados, en su caso, con la pena inferior en grado, en sus respectivos supuestos, cuando se hayan cometido por imprudencia grave'. La respuesta a=2 ('la pena inferior en grado') es una cita directa de la norma. La cita contiene la formulación exacta de la pena aplicable. Las otras opciones (misma pena, dos grados, mitad inferior) son contradichas explícitamente por el texto.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lef-1954-32\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto art. 4 párrafo 1 establece: 'En este último caso se iniciará para cada uno de los arrendatarios el respectivo expediente incidental para fijar la indemnización que pueda corresponderle'. La respuesta a=1 es una cita casi textual. La cita contiene todos los elementos: 'para cada uno' (no conjunto), 'respectivo expediente incidental', 'indemnización'. Las otras opciones son claramente excluidas: opción 0 dice 'conjunto' (contradice 'cada uno'); opciones 2 y 3 no aparecen en el texto.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"codigo-penal-650\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto art. 327 enumera las circunstancias agravantes que elevan la pena a superior en grado, entre ellas: 'c) Que se haya falseado u ocultado información sobre los aspectos ambientales de la misma'. La respuesta a=2 coincide exactamente con la circunstancia enumerada en el apartado c). La cita es directa y suficiente. Las otras opciones (beneficios, antigüedad de empresa, proximidad a núcleo urbano) no aparecen en la enumeración legal.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lef-1954-40\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto art. 16 dice explícitamente: 'Cuando se trate de expropiar bienes de la Iglesia, se observará el régimen establecido al efecto en el Concordato vigente, ajustándose en lo demás a lo preceptuado en esta ley'. La respuesta a=0 es una paráfrasis fiel de esta prescripción. La cita recoge las dos partes del régimen: Concordato + resto de la ley. Las otras opciones (autorización eclesiástica, Consejo de Ministros, legislación civil) no son mencionadas en el texto.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-12-2009-43\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 7.2 de la Ley 12/2009 establece: 'será indiferente el hecho de que posea realmente la característica racial, religiosa, nacional, social o política que suscita la persecución, a condición de que el agente de persecución se la atribuya'. La respuesta a=1 ('Es indiferente que no las posea si el agente se las atribuye') es la transcripción exacta de la regla. La cita contiene todos los elementos necesarios para justificar esta respuesta. Las otras opciones son directamente contradichas: opción 0 exigiría acreditación real (rechazado); opción 2 añade elemento inexistente ('obrado'); opción 3 la excluye (rechazado por el texto).\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"reglamento-armas-60\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 20.1 del RD 137/1993 prescribe que en el libro de producción se anotarán 'los documentos que hayan presentado quien las adquiera' en caso de adquisición directa de armas por particulares. La respuesta a=0 reproduce literalmente esta exigencia. La cita es directa y completa. Las otras opciones (uso concreto, antecedentes penales, lugar de guarda) no están mencionadas en el texto como datos que deba anotar el fabricante.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lecrim-192\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 11 de la LeCrim establece que cuando aparecen culpables de una y otra jurisdicción sin excepción legal, el conocimiento 'corresponderá a la ordinaria, salvo las excepciones consignadas expresamente en las Leyes'. La respuesta a=2 ('La jurisdicción ordinaria') aplica correctamente esta regla al supuesto de la pregunta (donde se excluyen excepciones). La cita contiene la regla general aplicable. Las otras opciones (jurisdicción del aforado, cada una para la suya, la que designe superior) son incompatibles con la regla de la ordinaria.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lef-1954-38\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 13 de la Ley de Expropiación Forzosa prescribe que la declaración del interés social determinante de transmisiones forzosas 'se sujetará, en cuanto a su declaración, al mismo procedimiento previsto en el artículo anterior'. La respuesta a=3 reproduce esta remisión al procedimiento del art. anterior. La cita es directa y suficiente. Las otras opciones (ley singular especial, procedimiento de urgencia, procedimiento discrecional) no aparecen en el texto que establece explícitamente la remisión al art. anterior.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "ley-19-2013-57",
+    "ley-50-1997-49",
+    "rgc-23",
+    "ley-33-2003-35",
+    "ley-23-2014-48",
+    "lo-9-2015-18",
+    "ley-4-2015-38",
+    "lo-6-1985-71",
+    "lo-4-2000-84",
+    "ley-23-2014-40"
+   ],
+   "prompt_sha256": "f034cfc979997407f060e3cb04b579489dd203dec08e5da5eee77ef905680908",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ley-19-2013-57": "4505e07bab908bcc7735b49bf53d84acf611a664282b977aa82c6a34859e63a1",
+    "ley-50-1997-49": "c9089a60e315d692b367d87f066255be40205ebf211ddd53f0ba69241111f56d",
+    "rgc-23": "a41d14fe5afc0410fd52c69ac7dee6285459c65be0ab74fcdbd2724136db96e7",
+    "ley-33-2003-35": "017e7bda6472696bf0b32794894dc27aae5b381e18bea73eed203d82202195ec",
+    "ley-23-2014-48": "8ce05f72532f7095c1bf6f5351252df8d4b7193694b5211ce31bd475406e7d40",
+    "lo-9-2015-18": "d8156895bbbebc0615e9faae6dfb12114bfdbd79df7164171bce6740b3ebe0d6",
+    "ley-4-2015-38": "773d1f250bc2822cac70c36bfadc541e291398388512f6147ddbd2476e1539c7",
+    "lo-6-1985-71": "9aee08ccea8e802cab0331cce63a722427da57937f1afc73bcda98b57888faf6",
+    "lo-4-2000-84": "18f3fe57b47265864f8cb9cbfba5da0f67206190f17d0edc8b72783728c8b03d",
+    "ley-23-2014-40": "282e4cb92d9760b96a71bbdfedc074d6efaca4dff5fa970f2e0785751086dcbc"
+   },
+   "veredictos": [
+    {
+     "question_id": "ley-19-2013-57",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La respuesta es correcta: para un Secretario de Estado, la instrucción corresponde a la Oficina de Conflictos de Intereses (art. 31.3) y la imposición de sanción al Consejo de Ministros (art. 31.4.a). Sin embargo, la cita solo reproduce la parte sobre quién impone la sanción. La parte sobre quién instruye (Oficina de Conflictos de Intereses) está en una sección diferente del artículo y no aparece en la cita. Por lo tanto, cita_suficiente es false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-50-1997-49",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La opción 1 es una reproducción prácticamente exacta de la definición legal en el art. 7.1: 'órganos superiores...directamente responsables de la ejecución de la acción del Gobierno en un sector de actividad específica'. La cita contiene todos los elementos necesarios para identificar la respuesta correcta, y ninguna otra opción es correcta según el texto. La pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "rgc-23",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto (art. 1.4) permite la regulación de la circulación en viales privados de hoteles cuando los usuarios constituyen una colectividad indeterminada, pero 'siempre que lo hagan de manera que no desvirtúen las normas de este reglamento, ni induzcan a confusión'. La opción 2 es correcta. Sin embargo, la cita solo reproduce las restricciones ('siempre que lo hagan de manera que...'), sin incluir el verbo permisivo 'podrán regular' que aparece al principio de la frase. Leída sola, la cita podría resultar ambigua sobre si se permite o se prohíbe la regulación.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-33-2003-35",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 11.1 establece explícitamente que las competencias 'podrán ser objeto de desconcentración mediante real decreto acordado en Consejo de Ministros a propuesta del Ministro de Hacienda'. La opción 1 es una reproducción exacta. La cita contiene todos los elementos y es la única respuesta correcta según el texto. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-23-2014-48",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 21.2 establece que la ejecución 'no pudiendo hacerse extensiva a personas, bienes o documentos no comprendidos en ella, sin perjuicio de lo dispuesto para la orden europea de investigación'. La opción 1 es correcta: no se puede extender, salvo en lo previsto para la orden europea de investigación. La cita reproduce exactamente el texto relevante y contiene todos los elementos necesarios. Ninguna otra opción es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-9-2015-18",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 9.i especifica para estado de alarma: 'habrán de presentarse cuando sean emplazados para ello, de acuerdo con lo dispuesto por la autoridad competente'. La opción 2 es correcta. La cita reproduce exactamente este texto, que es claro y diáfano. Es la única respuesta correcta según la norma. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-4-2015-38",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 22 establece deber de protección especial para 'impedir la difusión de cualquier información que pueda facilitar la identificación de las víctimas menores de edad o de víctimas con discapacidad necesitadas de especial protección'. La opción 3 es una reproducción exacta de este texto. La cita contiene todos los elementos de la respuesta. Es la única opción correcta. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-6-1985-71",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 7.3 reconoce legitimación para la defensa de intereses colectivos a 'corporaciones, asociaciones, organizaciones sindicales y grupos que resulten afectados o que estén legalmente habilitados para su defensa y promoción'. La opción 0 reproduce exactamente este texto. La cita contiene la formulación completa de los criterios. Es la única respuesta correcta. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-4-2000-84",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 62quinquies.3 contiene dos elementos: (1) autorización por el director 'previamente...salvo que razones de urgencia no lo permitan' y (2) comunicación 'lo antes posible a la autoridad judicial que autorizó el internamiento'. La opción 1 es correcta. Sin embargo, la cita solo reproduce la primera parte (autorización y excepción de urgencia). La parte de comunicación al juez está en la siguiente oración y no aparece en la cita. Por lo tanto, cita_suficiente es false porque no contiene todo lo necesario para justificar la opción.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-23-2014-40",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 12 requiere remitir 'copia de la resolución judicial y del certificado emitido, traducido éste a una de las lenguas que acepte el Estado de tránsito'. La opción 2 es una reproducción exacta. La cita contiene todos los elementos necesarios para identificar correctamente qué documentación enviar y al idioma del certificado. Es la única respuesta correcta. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a992b652956789df7.jsonl",
+    "respuesta_sha256": "bf2ca5e844e59dcce5dc7e8f1a73c3961e622001d2987eca1d261bb94f1b05a1"
+   },
+   "registrada_el": "2026-10-02T22:39:49",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:39:49",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a992b652956789df7.jsonl",
+      "respuesta_sha256": "bf2ca5e844e59dcce5dc7e8f1a73c3961e622001d2987eca1d261bb94f1b05a1"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"ley-19-2013-57\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"La respuesta es correcta: para un Secretario de Estado, la instrucción corresponde a la Oficina de Conflictos de Intereses (art. 31.3) y la imposición de sanción al Consejo de Ministros (art. 31.4.a). Sin embargo, la cita solo reproduce la parte sobre quién impone la sanción. La parte sobre quién instruye (Oficina de Conflictos de Intereses) está en una sección diferente del artículo y no aparece en la cita. Por lo tanto, cita_suficiente es false.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-50-1997-49\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"La opción 1 es una reproducción prácticamente exacta de la definición legal en el art. 7.1: 'órganos superiores...directamente responsables de la ejecución de la acción del Gobierno en un sector de actividad específica'. La cita contiene todos los elementos necesarios para identificar la respuesta correcta, y ninguna otra opción es correcta según el texto. La pregunta es clara y útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"rgc-23\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El texto (art. 1.4) permite la regulación de la circulación en viales privados de hoteles cuando los usuarios constituyen una colectividad indeterminada, pero 'siempre que lo hagan de manera que no desvirtúen las normas de este reglamento, ni induzcan a confusión'. La opción 2 es correcta. Sin embargo, la cita solo reproduce las restricciones ('siempre que lo hagan de manera que...'), sin incluir el verbo permisivo 'podrán regular' que aparece al principio de la frase. Leída sola, la cita podría resultar ambigua sobre si se permite o se prohíbe la regulación.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-33-2003-35\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 11.1 establece explícitamente que las competencias 'podrán ser objeto de desconcentración mediante real decreto acordado en Consejo de Ministros a propuesta del Ministro de Hacienda'. La opción 1 es una reproducción exacta. La cita contiene todos los elementos y es la única respuesta correcta según el texto. Pregunta clara y útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-23-2014-48\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 21.2 establece que la ejecución 'no pudiendo hacerse extensiva a personas, bienes o documentos no comprendidos en ella, sin perjuicio de lo dispuesto para la orden europea de investigación'. La opción 1 es correcta: no se puede extender, salvo en lo previsto para la orden europea de investigación. La cita reproduce exactamente el texto relevante y contiene todos los elementos necesarios. Ninguna otra opción es correcta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-9-2015-18\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 9.i especifica para estado de alarma: 'habrán de presentarse cuando sean emplazados para ello, de acuerdo con lo dispuesto por la autoridad competente'. La opción 2 es correcta. La cita reproduce exactamente este texto, que es claro y diáfano. Es la única respuesta correcta según la norma. Pregunta clara y útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-4-2015-38\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 22 establece deber de protección especial para 'impedir la difusión de cualquier información que pueda facilitar la identificación de las víctimas menores de edad o de víctimas con discapacidad necesitadas de especial protección'. La opción 3 es una reproducción exacta de este texto. La cita contiene todos los elementos de la respuesta. Es la única opción correcta. Pregunta clara y útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-6-1985-71\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 7.3 reconoce legitimación para la defensa de intereses colectivos a 'corporaciones, asociaciones, organizaciones sindicales y grupos que resulten afectados o que estén legalmente habilitados para su defensa y promoción'. La opción 0 reproduce exactamente este texto. La cita contiene la formulación completa de los criterios. Es la única respuesta correcta. Pregunta clara y útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-4-2000-84\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El art. 62quinquies.3 contiene dos elementos: (1) autorización por el director 'previamente...salvo que razones de urgencia no lo permitan' y (2) comunicación 'lo antes posible a la autoridad judicial que autorizó el internamiento'. La opción 1 es correcta. Sin embargo, la cita solo reproduce la primera parte (autorización y excepción de urgencia). La parte de comunicación al juez está en la siguiente oración y no aparece en la cita. Por lo tanto, cita_suficiente es false porque no contiene todo lo necesario para justificar la opción.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-23-2014-40\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El art. 12 requiere remitir 'copia de la resolución judicial y del certificado emitido, traducido éste a una de las lenguas que acepte el Estado de tránsito'. La opción 2 es una reproducción exacta. La cita contiene todos los elementos necesarios para identificar correctamente qué documentación enviar y al idioma del certificado. Es la única respuesta correcta. Pregunta clara y útil.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "ley-23-2014-56",
+    "codigo-penal-626",
+    "lecrim-219",
+    "lo-4-2000-103",
+    "ley-12-2009-58",
+    "ley-3-2023-42",
+    "lo-4-2000-72",
+    "lo-3-2018-43",
+    "ley-19-2013-55",
+    "ley-5-2014-42"
+   ],
+   "prompt_sha256": "3c9ed1a1b215d8f97eebeec455a9a05fb34b7c21186c5c5fce7e80b3b1517b5f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ley-23-2014-56": "e61053bea4e799cfaf041ef80cea9e25c0becfb3585021b19cedae7cf84af888",
+    "codigo-penal-626": "d9e8110e70a2eaf08c9f6132fd859323bc20c1d9604c0e641a8eafa613ae04ad",
+    "lecrim-219": "e18e1ff0345c5c8a20fba85f4a1690368096a9dbcbe37ebf1b0b6f10601f72a0",
+    "lo-4-2000-103": "500c138c618926670e2b44ede62428125565fa58b151f87e175c550596a8bed3",
+    "ley-12-2009-58": "d25e6a9edc1a502787837cdf1af80c2c5cc5fd6d4d8ad7242cf56e201b0687c0",
+    "ley-3-2023-42": "574debc440ed6926ce4562b949e36d54d340a9ddebc412df714871aa5fb27765",
+    "lo-4-2000-72": "95cd49c425362e929d93f0b1300a82b72212a1791db979e11530189b3fae9d98",
+    "lo-3-2018-43": "818effe41cf13b3bde74e98de69fb9f99bd47a7d6c9cf02be467a8b8296f6e8c",
+    "ley-19-2013-55": "c19130bf4cb12b0fe0b2bc643818d40b58c37c76aa438b05e4e5239b805b28bf",
+    "ley-5-2014-42": "257eb8ec414e8f49a6abf7a9a797f51889092c0dfcc3e4a96abd621eeea5d597"
+   },
+   "veredictos": [
+    {
+     "question_id": "ley-23-2014-56",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El artículo 32.1 enumera los supuestos de no reconocimiento: non bis in ídem (letra a), formulario/certificado incompleto (letra b), inmunidad/privilegio procesal (letra c). El supuesto de hechos cometidos en territorio español figura en el apartado 3.a, no en el 1. La cita procede del apartado 3, pero para verificar completamente que las otras tres opciones sí aparecen en el apartado 1, la cita es insuficiente en una pregunta negativa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "codigo-penal-626",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El artículo 566.2 castiga a quienes desarrollen o empleen armas químicas, biológicas, nucleares o radiológicas o minas antipersonas o municiones en racimo, o no las destruyan conforme a tratados. La reparación de armas de fuego reglamentadas no está cubierta por el apartado 2. Sin embargo, la cita es incompleta: omite 'o inicien preparativos militares para su empleo o no las destruyan con infracción de los tratados', por lo que no recoge completamente los supuestos de apartado 2.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lecrim-219",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 507 enumera completamente contra qué autos cabe apelación: los que decreten, prorroguen o denieguen la prisión provisional, o acuerden la libertad. La cita recoge esta enumeración íntegra. La entrada y registro en domicilio no aparece en esta lista. La cita es suficiente porque constituye la enumeración completa y cerrada de los supuestos donde cabe apelación.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-4-2000-103",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La pregunta pide qué afirmación NO se ajusta al artículo 16. El texto muestra que: apartado 1 reconoce derecho a vida familiar (opción 0 es correcta), apartado 2 reconoce reagrupación familiar (opción 1 es correcta), apartado 1 menciona tratados internacionales (opción 3 es correcta), y apartado 2 limita la reagrupación a residentes en España (opción 2 es falsa). La cita solo cubre la reagrupación familiar, siendo insuficiente para verificar completamente la conformidad de todas las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-12-2009-58",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El artículo 46.1 enumera ejemplos de vulnerabilidad: menores, menores no acompañados, personas con discapacidad, personas de edad avanzada, mujeres embarazadas, familias monoparentales con menores de edad, personas que hayan padecido torturas, etc. Las opciones 0, 1 y 2 aparecen expresamente en el texto. La opción 3 (personas desempleadas de larga duración) no aparece. Sin embargo, la cita es una enumeración parcial, no exhaustiva, por lo que no es suficiente para afirmar con certeza que la opción 3 no figura.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-3-2023-42",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El artículo 21 establece que las organizaciones empresariales y sindicales más representativas participarán de forma tripartita y paritaria, mientras que se facilitará cuando proceda la consulta a los sectores de economía social y trabajo autónomo. La cita solo muestra lo que se prevé para estos sectores (consulta facilitada) pero no establece el contraste explícito con lo que se prevé para las organizaciones representativas. Para una pregunta sobre la diferencia, ambos términos de la comparación deben estar en la cita.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-4-2000-72",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 35.6 establece explícitamente que cuando se trate de menores de 16 años con juicio suficiente que manifiesten voluntad contraria a quien ostenta su tutela, se suspenderá el curso del procedimiento hasta el nombramiento del defensor judicial. La cita transcribe íntegramente la norma aplicable y proporciona completamente la respuesta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-3-2018-43",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 4.2.b) establece como regla específica para datos obtenidos a través de mediador o intermediario que 'El mediador o intermediario asumirá las responsabilidades que pudieran derivarse en el supuesto de comunicación al responsable de datos que no se correspondan con los facilitados por el afectado'. La cita transcribe esta regla exactamente, respondiendo completamente a la pregunta sobre la regla específica.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-19-2013-55",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 29.1.c) tipifica como infracción muy grave 'La adopción de acuerdos manifiestamente ilegales que causen perjuicio grave a la Administración o a los ciudadanos'. El artículo 29.2.c) establece como infracción grave la misma conducta cuando causa perjuicio pero no constituye infracción muy grave. La cita recoge exactamente el criterio diferenciador: la causación de perjuicio grave.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-5-2014-42",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 21.1.e) establece que 'El Ministerio del Interior y los órganos autonómicos competentes darán cuenta del funcionamiento del sector a las Cortes Generales y a los Parlamentos autonómicos correspondientes respectivamente, anualmente'. La palabra 'respectivamente' hace clara la distribución de responsabilidades: Interior a Cortes Generales, órganos autonómicos a sus Parlamentos. La cita es suficiente para responder completamente la pregunta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-af5c33a78f84b3c6a.jsonl",
+    "respuesta_sha256": "e593330d723c8068e112bc0e6bd44b77aeaa738db64a85f95056a5e5eab8ddb2"
+   },
+   "registrada_el": "2026-10-02T22:41:45",
+   "intentos": [
+    {
+     "t": "2026-10-02T22:41:45",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-af5c33a78f84b3c6a.jsonl",
+      "respuesta_sha256": "e593330d723c8068e112bc0e6bd44b77aeaa738db64a85f95056a5e5eab8ddb2"
+     },
+     "respuesta": "[\n  {\n    \"question_id\": \"ley-23-2014-56\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El artículo 32.1 enumera los supuestos de no reconocimiento: non bis in ídem (letra a), formulario/certificado incompleto (letra b), inmunidad/privilegio procesal (letra c). El supuesto de hechos cometidos en territorio español figura en el apartado 3.a, no en el 1. La cita procede del apartado 3, pero para verificar completamente que las otras tres opciones sí aparecen en el apartado 1, la cita es insuficiente en una pregunta negativa.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"codigo-penal-626\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El artículo 566.2 castiga a quienes desarrollen o empleen armas químicas, biológicas, nucleares o radiológicas o minas antipersonas o municiones en racimo, o no las destruyan conforme a tratados. La reparación de armas de fuego reglamentadas no está cubierta por el apartado 2. Sin embargo, la cita es incompleta: omite 'o inicien preparativos militares para su empleo o no las destruyan con infracción de los tratados', por lo que no recoge completamente los supuestos de apartado 2.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lecrim-219\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 507 enumera completamente contra qué autos cabe apelación: los que decreten, prorroguen o denieguen la prisión provisional, o acuerden la libertad. La cita recoge esta enumeración íntegra. La entrada y registro en domicilio no aparece en esta lista. La cita es suficiente porque constituye la enumeración completa y cerrada de los supuestos donde cabe apelación.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-4-2000-103\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"La pregunta pide qué afirmación NO se ajusta al artículo 16. El texto muestra que: apartado 1 reconoce derecho a vida familiar (opción 0 es correcta), apartado 2 reconoce reagrupación familiar (opción 1 es correcta), apartado 1 menciona tratados internacionales (opción 3 es correcta), y apartado 2 limita la reagrupación a residentes en España (opción 2 es falsa). La cita solo cubre la reagrupación familiar, siendo insuficiente para verificar completamente la conformidad de todas las opciones.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-12-2009-58\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El artículo 46.1 enumera ejemplos de vulnerabilidad: menores, menores no acompañados, personas con discapacidad, personas de edad avanzada, mujeres embarazadas, familias monoparentales con menores de edad, personas que hayan padecido torturas, etc. Las opciones 0, 1 y 2 aparecen expresamente en el texto. La opción 3 (personas desempleadas de larga duración) no aparece. Sin embargo, la cita es una enumeración parcial, no exhaustiva, por lo que no es suficiente para afirmar con certeza que la opción 3 no figura.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-3-2023-42\",\n    \"verdict\": \"REVIEW_REQUIRED\",\n    \"reason\": \"El artículo 21 establece que las organizaciones empresariales y sindicales más representativas participarán de forma tripartita y paritaria, mientras que se facilitará cuando proceda la consulta a los sectores de economía social y trabajo autónomo. La cita solo muestra lo que se prevé para estos sectores (consulta facilitada) pero no establece el contraste explícito con lo que se prevé para las organizaciones representativas. Para una pregunta sobre la diferencia, ambos términos de la comparación deben estar en la cita.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": false,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-4-2000-72\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 35.6 establece explícitamente que cuando se trate de menores de 16 años con juicio suficiente que manifiesten voluntad contraria a quien ostenta su tutela, se suspenderá el curso del procedimiento hasta el nombramiento del defensor judicial. La cita transcribe íntegramente la norma aplicable y proporciona completamente la respuesta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"lo-3-2018-43\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 4.2.b) establece como regla específica para datos obtenidos a través de mediador o intermediario que 'El mediador o intermediario asumirá las responsabilidades que pudieran derivarse en el supuesto de comunicación al responsable de datos que no se correspondan con los facilitados por el afectado'. La cita transcribe esta regla exactamente, respondiendo completamente a la pregunta sobre la regla específica.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-19-2013-55\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 29.1.c) tipifica como infracción muy grave 'La adopción de acuerdos manifiestamente ilegales que causen perjuicio grave a la Administración o a los ciudadanos'. El artículo 29.2.c) establece como infracción grave la misma conducta cuando causa perjuicio pero no constituye infracción muy grave. La cita recoge exactamente el criterio diferenciador: la causación de perjuicio grave.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  },\n  {\n    \"question_id\": \"ley-5-2014-42\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El artículo 21.1.e) establece que 'El Ministerio del Interior y los órganos autonómicos competentes darán cuenta del funcionamiento del sector a las Cortes Generales y a los Parlamentos autonómicos correspondientes respectivamente, anualmente'. La palabra 'respectivamente' hace clara la distribución de responsabilidades: Interior a Cortes Generales, órganos autonómicos a sus Parlamentos. La cita es suficiente para responder completamente la pregunta.\",\n    \"criteria_checked\": {\n      \"respaldada\": true,\n      \"cita_suficiente\": true,\n      \"unica\": true,\n      \"clara\": true,\n      \"duplicada_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "lo-3-2018-60",
+    "rd-240-2007-14",
+    "lecrim-216",
+    "lo-9-2015-15",
+    "rdl-8-2015-63",
+    "lo-4-2000-85",
+    "codigo-penal-661",
+    "codigo-penal-655",
+    "ley-5-2014-40",
+    "l39-168"
+   ],
+   "prompt_sha256": "32258e58f40897015300526ba2e7250ce69612b9a74744bd75d831280111868d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "lo-3-2018-60": "834e74dd0c10c691b71bd574cdaa6f488dca8ff5e3d0d801de78d6de5d19cf62",
+    "rd-240-2007-14": "859ac3e3d5c55a08b1f0fcf104abfc70aae131c9db6ebdeb82ab6ec1fc126b4d",
+    "lecrim-216": "b5c962ca2ac318e8232d517912b4bfa99418aa14ec66b808ae74d4e961494574",
+    "lo-9-2015-15": "4d90a7c5f0522687ff67f52717f8c757596aa555c182d56b93bea89cc436d5c3",
+    "rdl-8-2015-63": "9acfcc7fe61f08e74629fbbd938803237a17216d928bfedf9d55e649d246a7f6",
+    "lo-4-2000-85": "83018e05bfb127c9fc02459297017552ce07591202f0d382ac1785731c84436e",
+    "codigo-penal-661": "ad0bcf1af857f2bbffa399cf1e41235a86da0432915fe3e44a9892233c2cda45",
+    "codigo-penal-655": "28584edbfd80c7e7da4b039fa41bfa502895da0dafe4830682f805653e3eaaf0",
+    "ley-5-2014-40": "28799cff88ddb7838d76c0805eb788d75835be6088fbddbb48b6e2c5630d7cbf",
+    "l39-168": "16a4bdc3e93a302bbbdf2aa9edc680017f62c26963e867d5dcd734576e788aac"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-02T22:41:22",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a192ab24ca9b5cd8a.jsonl",
+      "respuesta_sha256": "d1428b19c532eacb91e50ff737de894bbb92ef836c5d660e40fdfb47f510555d"
+     },
+     "respuesta": "[{\"question_id\": \"lo-3-2018-60\", \"verdict\": \"VALID\", \"reason\": \"El texto en su párrafo final establece claramente que no será necesaria la consulta a los sistemas de exclusión cuando el afectado haya prestado consentimiento. La opción a=1 se corresponde exactamente con este supuesto. La cita contiene la totalidad de la regla jurídica necesaria para justificar la respuesta. Solo esta opción es correcta según el artículo 23.4.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"rd-240-2007-14\", \"verdict\": \"VALID\", \"reason\": \"El artículo 3.2 del Real Decreto enumera explícitamente las excepciones al derecho de acceder a actividades laborales: 'exceptuando a los descendientes mayores de veintiún años que vivan a cargo, y a los ascendientes a cargo'. La opción a=2 coincide exactamente con esta excepción. La cita es suficiente para justificar la respuesta sin necesidad de consultar el artículo 2.d). Pregunta clara y específica sobre un requisito normativo.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"lecrim-216\", \"verdict\": \"VALID\", \"reason\": \"El artículo 506.2 de la LECrim establece expresamente qué debe constar en todo caso en la notificación cuando la causa es secreta: 'una sucinta descripción del hecho imputado y de cuál o cuáles de los fines previstos en el artículo 503 se pretende conseguir con la prisión'. La opción a=1 es exactamente este contenido obligatorio. La cita es suficiente. Solo esta opción es correcta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"lo-9-2015-15\", \"verdict\": \"VALID\", \"reason\": \"El texto del artículo 8.2 LOFPN prohíbe la federación o confederación con organizaciones no integradas exclusivamente por Policías Nacionales, 'aunque sí podrán formar parte de organizaciones internacionales de su mismo carácter'. La opción a=0 es la única excepción explícitamente permitida. Las demás opciones (centrales sindicales, Guardia Civil, funcionarios civiles) no aparecen en el artículo como permitidas. Cita suficiente.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"rdl-8-2015-63\", \"verdict\": \"VALID\", \"reason\": \"El artículo 21.2 del Texto Refundido de la LSS expresa nominativamente que la función liquidatoria se ejercerá 'sin perjuicio de las competencias que tengan atribuidas sobre la materia la Inspección de Trabajo y Seguridad Social'. La opción a=1 es la única organización expresamente mencionada como excepción. La cita contiene de forma íntegra esta competencia. Pregunta específica sobre órganos administrativos.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"lo-4-2000-85\", \"verdict\": \"VALID\", \"reason\": \"El artículo 62 quinquies.3 de la LO 4/2000 establece que el juez, cuando la medida sea separación preventiva del agresor, deberá acordar su mantenimiento o revocación 'en el plazo más breve posible'. La opción a=1 transcribe literalmente el estándar legal. No se menciona ningún plazo específico en días. La cita es suficiente para justificar la respuesta. Pregunta clara sobre un requisito temporal.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"codigo-penal-661\", \"verdict\": \"VALID\", \"reason\": \"El artículo 329.1 CP estipula que el funcionario será castigado 'además, con la de prisión de seis meses a tres años y la de multa de ocho a veinticuatro meses'. La opción a=0 es exactamente la pena de prisión prescrita. La cita contiene esta pena literalmente. Solo esta opción es correcta. Pregunta sobre cuantía de pena.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"codigo-penal-655\", \"verdict\": \"VALID\", \"reason\": \"El artículo 328 CP en su letra b) establece que cuando el delito de la persona física no tenga prevista pena de más de dos años, la persona jurídica será castigada con 'Multa de seis meses a dos años, o del doble al triple del perjuicio causado si la cantidad resultante fuese más elevada, en el resto de los casos'. La opción a=3 coincide exactamente. La cita es suficiente. Solo esta multa corresponde al supuesto descrito en la pregunta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"ley-5-2014-40\", \"verdict\": \"VALID\", \"reason\": \"El artículo 21.e) de la Ley 5/2014 de Seguridad Privada obliga a 'Presentar cada año al Ministerio del Interior o al órgano autonómico competente un informe sobre sus actividades y el resumen de las cuentas anuales'. La opción a=2 es la periodicidad única mencionada. La cita contiene esta exigencia. Pregunta sobre requisito de periodicidad, que es material útil para examen.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"l39-168\", \"verdict\": \"VALID\", \"reason\": \"El artículo 28.4 de la Ley 39/2015 exige que cuando se solicite excepcionalmente un documento original en formato papel, 'el interesado deberá obtener una copia auténtica, según los requisitos establecidos en el artículo 27, con carácter previo a su presentación electrónica'. La opción a=3 refleja exactamente este requisito temporal. La cita es suficiente sin necesidad de recurrir al artículo 27. Solo este momento es correcto. Pregunta clara sobre requisito procedural.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}]",
+     "resultado": "BATCH_REJECTED · RESPUESTA_AGREGADA: codigo-penal-655: la razón es una valoración agregada («El artículo 328 CP en su letra b) establece que cuando el de»)"
+    },
+    {
+     "t": "2026-10-02T22:41:40",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a192ab24ca9b5cd8a.jsonl",
+      "respuesta_sha256": "d1428b19c532eacb91e50ff737de894bbb92ef836c5d660e40fdfb47f510555d"
+     },
+     "respuesta": "[{\"question_id\": \"lo-3-2018-60\", \"verdict\": \"VALID\", \"reason\": \"El texto en su párrafo final establece claramente que no será necesaria la consulta a los sistemas de exclusión cuando el afectado haya prestado consentimiento. La opción a=1 se corresponde exactamente con este supuesto. La cita contiene la totalidad de la regla jurídica necesaria para justificar la respuesta. Solo esta opción es correcta según el artículo 23.4.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"rd-240-2007-14\", \"verdict\": \"VALID\", \"reason\": \"El artículo 3.2 del Real Decreto enumera explícitamente las excepciones al derecho de acceder a actividades laborales: 'exceptuando a los descendientes mayores de veintiún años que vivan a cargo, y a los ascendientes a cargo'. La opción a=2 coincide exactamente con esta excepción. La cita es suficiente para justificar la respuesta sin necesidad de consultar el artículo 2.d). Pregunta clara y específica sobre un requisito normativo.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"lecrim-216\", \"verdict\": \"VALID\", \"reason\": \"El artículo 506.2 de la LECrim establece expresamente qué debe constar en todo caso en la notificación cuando la causa es secreta: 'una sucinta descripción del hecho imputado y de cuál o cuáles de los fines previstos en el artículo 503 se pretende conseguir con la prisión'. La opción a=1 es exactamente este contenido obligatorio. La cita es suficiente. Solo esta opción es correcta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"lo-9-2015-15\", \"verdict\": \"VALID\", \"reason\": \"El texto del artículo 8.2 LOFPN prohíbe la federación o confederación con organizaciones no integradas exclusivamente por Policías Nacionales, 'aunque sí podrán formar parte de organizaciones internacionales de su mismo carácter'. La opción a=0 es la única excepción explícitamente permitida. Las demás opciones (centrales sindicales, Guardia Civil, funcionarios civiles) no aparecen en el artículo como permitidas. Cita suficiente.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"rdl-8-2015-63\", \"verdict\": \"VALID\", \"reason\": \"El artículo 21.2 del Texto Refundido de la LSS expresa nominativamente que la función liquidatoria se ejercerá 'sin perjuicio de las competencias que tengan atribuidas sobre la materia la Inspección de Trabajo y Seguridad Social'. La opción a=1 es la única organización expresamente mencionada como excepción. La cita contiene de forma íntegra esta competencia. Pregunta específica sobre órganos administrativos.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"lo-4-2000-85\", \"verdict\": \"VALID\", \"reason\": \"El artículo 62 quinquies.3 de la LO 4/2000 establece que el juez, cuando la medida sea separación preventiva del agresor, deberá acordar su mantenimiento o revocación 'en el plazo más breve posible'. La opción a=1 transcribe literalmente el estándar legal. No se menciona ningún plazo específico en días. La cita es suficiente para justificar la respuesta. Pregunta clara sobre un requisito temporal.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"codigo-penal-661\", \"verdict\": \"VALID\", \"reason\": \"El artículo 329.1 CP estipula que el funcionario será castigado 'además, con la de prisión de seis meses a tres años y la de multa de ocho a veinticuatro meses'. La opción a=0 es exactamente la pena de prisión prescrita. La cita contiene esta pena literalmente. Solo esta opción es correcta. Pregunta sobre cuantía de pena.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"codigo-penal-655\", \"verdict\": \"VALID\", \"reason\": \"El artículo 328 CP en su letra b) establece que cuando el delito de la persona física no tenga prevista pena de más de dos años, la persona jurídica será castigada con 'Multa de seis meses a dos años, o del doble al triple del perjuicio causado si la cantidad resultante fuese más elevada, en el resto de los casos'. La opción a=3 coincide exactamente. La cita es suficiente. Solo esta multa corresponde al supuesto descrito en la pregunta.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"ley-5-2014-40\", \"verdict\": \"VALID\", \"reason\": \"El artículo 21.e) de la Ley 5/2014 de Seguridad Privada obliga a 'Presentar cada año al Ministerio del Interior o al órgano autonómico competente un informe sobre sus actividades y el resumen de las cuentas anuales'. La opción a=2 es la periodicidad única mencionada. La cita contiene esta exigencia. Pregunta sobre requisito de periodicidad, que es material útil para examen.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}, {\"question_id\": \"l39-168\", \"verdict\": \"VALID\", \"reason\": \"El artículo 28.4 de la Ley 39/2015 exige que cuando se solicite excepcionalmente un documento original en formato papel, 'el interesado deberá obtener una copia auténtica, según los requisitos establecidos en el artículo 27, con carácter previo a su presentación electrónica'. La opción a=3 refleja exactamente este requisito temporal. La cita es suficiente sin necesidad de recurrir al artículo 27. Solo este momento es correcto. Pregunta clara sobre requisito procedural.\", \"criteria_checked\": {\"respaldada\": true, \"cita_suficiente\": true, \"unica\": true, \"clara\": true, \"duplicada_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "question_id": "lo-3-2018-60",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto en su párrafo final establece claramente que no será necesaria la consulta a los sistemas de exclusión cuando el afectado haya prestado consentimiento. La opción a=1 se corresponde exactamente con este supuesto. La cita contiene la totalidad de la regla jurídica necesaria para justificar la respuesta. Solo esta opción es correcta según el artículo 23.4.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "rd-240-2007-14",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 3.2 del Real Decreto enumera explícitamente las excepciones al derecho de acceder a actividades laborales: 'exceptuando a los descendientes mayores de veintiún años que vivan a cargo, y a los ascendientes a cargo'. La opción a=2 coincide exactamente con esta excepción. La cita es suficiente para justificar la respuesta sin necesidad de consultar el artículo 2.d). Pregunta clara y específica sobre un requisito normativo.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lecrim-216",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 506.2 de la LECrim establece expresamente qué debe constar en todo caso en la notificación cuando la causa es secreta: 'una sucinta descripción del hecho imputado y de cuál o cuáles de los fines previstos en el artículo 503 se pretende conseguir con la prisión'. La opción a=1 es exactamente este contenido obligatorio. La cita es suficiente. Solo esta opción es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-9-2015-15",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto del artículo 8.2 LOFPN prohíbe la federación o confederación con organizaciones no integradas exclusivamente por Policías Nacionales, 'aunque sí podrán formar parte de organizaciones internacionales de su mismo carácter'. La opción a=0 es la única excepción explícitamente permitida. Las demás opciones (centrales sindicales, Guardia Civil, funcionarios civiles) no aparecen en el artículo como permitidas. Cita suficiente.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "rdl-8-2015-63",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 21.2 del Texto Refundido de la LSS expresa nominativamente que la función liquidatoria se ejercerá 'sin perjuicio de las competencias que tengan atribuidas sobre la materia la Inspección de Trabajo y Seguridad Social'. La opción a=1 es la única organización expresamente mencionada como excepción. La cita contiene de forma íntegra esta competencia. Pregunta específica sobre órganos administrativos.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "lo-4-2000-85",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 62 quinquies.3 de la LO 4/2000 establece que el juez, cuando la medida sea separación preventiva del agresor, deberá acordar su mantenimiento o revocación 'en el plazo más breve posible'. La opción a=1 transcribe literalmente el estándar legal. No se menciona ningún plazo específico en días. La cita es suficiente para justificar la respuesta. Pregunta clara sobre un requisito temporal.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "codigo-penal-661",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 329.1 CP estipula que el funcionario será castigado 'además, con la de prisión de seis meses a tres años y la de multa de ocho a veinticuatro meses'. La opción a=0 es exactamente la pena de prisión prescrita. La cita contiene esta pena literalmente. Solo esta opción es correcta. Pregunta sobre cuantía de pena.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "codigo-penal-655",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 328 CP en su letra b) establece que cuando el delito de la persona física no tenga prevista pena de más de dos años, la persona jurídica será castigada con 'Multa de seis meses a dos años, o del doble al triple del perjuicio causado si la cantidad resultante fuese más elevada, en el resto de los casos'. La opción a=3 coincide exactamente. La cita es suficiente. Solo esta multa corresponde al supuesto descrito en la pregunta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "ley-5-2014-40",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 21.e) de la Ley 5/2014 de Seguridad Privada obliga a 'Presentar cada año al Ministerio del Interior o al órgano autonómico competente un informe sobre sus actividades y el resumen de las cuentas anuales'. La opción a=2 es la periodicidad única mencionada. La cita contiene esta exigencia. Pregunta sobre requisito de periodicidad, que es material útil para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "l39-168",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El artículo 28.4 de la Ley 39/2015 exige que cuando se solicite excepcionalmente un documento original en formato papel, 'el interesado deberá obtener una copia auténtica, según los requisitos establecidos en el artículo 27, con carácter previo a su presentación electrónica'. La opción a=3 refleja exactamente este requisito temporal. La cita es suficiente sin necesidad de recurrir al artículo 27. Solo este momento es correcto. Pregunta clara sobre requisito procedural.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a192ab24ca9b5cd8a.jsonl",
+    "respuesta_sha256": "d1428b19c532eacb91e50ff737de894bbb92ef836c5d660e40fdfb47f510555d"
+   },
+   "registrada_el": "2026-10-02T22:41:40"
+  }
+ ]
+}

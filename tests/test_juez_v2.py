@@ -14,6 +14,14 @@ def items(n=10):
              "cita": "es de un mes desde la notificación", "parecidas": []} for k in range(n)]
 
 
+def ver_activa(i, verdict="VALID", **c):
+    """Veredicto con los criterios de la política ACTIVA (v3 añade cita_suficiente): para preparar/registrar, que exigen la activa."""
+    e = J.espec(P.cargar())
+    crit = dict({k: True for k in e["booleanos"]}, **{e["duplicado"]: ""})
+    crit.update(c)
+    return dict(ver(i, verdict), criteria_checked=crit)
+
+
 def ver(i, verdict="VALID", **c):
     crit = dict(respaldada=True, unica=True, clara=True, duplicada_de="")
     crit.update(c)
@@ -27,6 +35,13 @@ def transcripcion(ruta, mensaje, herramientas=(("Read", {"file_path": "TANDA"}),
             f.write(json.dumps({"type": "assistant", "message": {"role": "assistant", "content": [{"type": "tool_use", "name": nombre, "input": entrada}]}}) + "\n")
         f.write(json.dumps({"type": "assistant", "message": {"role": "assistant", "content": [
             {"type": "tool_use", "name": "SubagentHandback", "input": {"message": mensaje}}]}}) + "\n")
+
+
+class GuardRestoCitado(unittest.TestCase):
+    def test_citar_la_ley_con_el_resto_no_es_respuesta_agregada(self):
+        self.assertIsNone(J.AGREGADAS.search("la persona jurídica será castigada con multa de seis meses a dos años en el resto de los casos"))
+        for t in ("el resto son correctas", "el resto de las preguntas también", "the rest are valid", "todas las preguntas son VALID"):
+            self.assertIsNotNone(J.AGREGADAS.search(t), t)
 
 
 class Guards(unittest.TestCase):
@@ -88,10 +103,10 @@ class Guards(unittest.TestCase):
         d = tempfile.mkdtemp()
         try:
             with mock.patch.object(J, "TRABAJO", d), mock.patch.object(P, "incidencia"):
-                J.preparar("t7", it)
+                J.preparar("t7", it, version=P.registro()["activa"])
                 fichero = J.leer(os.path.join(d, "t7", "evaluacion.json"))["tandas"][0]["fichero"]
                 tr = os.path.join(d, "tr.jsonl")
-                transcripcion(tr, json.dumps([ver(i) for i in it]), (("Read", {"file_path": fichero}), ("Bash", {"command": "python3 juez.py"})))
+                transcripcion(tr, json.dumps([ver_activa(i) for i in it]), (("Read", {"file_path": fichero}), ("Bash", {"command": "python3 juez.py"})))
                 t = J.registrar("t7", "01", tr)
                 self.assertEqual(t["estado"], "RECHAZADA")
                 self.assertIn("JUDGE_INVALID", t["intentos"][-1]["resultado"])
@@ -107,10 +122,10 @@ class Guards(unittest.TestCase):
         try:
             with mock.patch.object(J, "TRABAJO", d), mock.patch.object(P, "incidencia"):
                 it = items()
-                J.preparar("t8", it)
+                J.preparar("t8", it, version=P.registro()["activa"])
                 fichero = J.leer(os.path.join(d, "t8", "evaluacion.json"))["tandas"][0]["fichero"]
                 tr = os.path.join(d, "tr.jsonl")
-                transcripcion(tr, json.dumps([ver(i) for i in it]), (("Read", {"file_path": fichero}),))
+                transcripcion(tr, json.dumps([ver_activa(i) for i in it]), (("Read", {"file_path": fichero}),))
                 self.assertEqual(J.registrar("t8", "01", tr)["estado"], "ACEPTADA")
                 res = J.resultado("t8")
                 self.assertEqual(res["alerta"], "ALL_VALID_REVIEW_REQUIRED")

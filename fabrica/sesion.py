@@ -30,7 +30,7 @@ ABIERTO = os.path.join(DIR, "abierto.json")
 ARCHIVO = os.path.join(R, "fabrica", "estado", "archivo")
 MODELOS = {"generador": "claude-opus-5-5 (sesión de Claude Code)", "juez": "claude-haiku-4-5 (revisor en la sesión)"}
 REDACTOR = {"version": "redactor-sesion-v2", "fichero": os.path.join(R, "fabrica", "prompts", "redactor-sesion-v2.txt")}
-VEREDICTO_CAMPOS = {"r", "respaldada", "unica", "clara", "duplicada_de", "motivo"}
+VEREDICTO_CAMPOS = {"r", "respaldada", "cita_suficiente", "unica", "clara", "duplicada_de", "motivo"}
 
 
 def sha(ruta):
@@ -153,7 +153,7 @@ def validar(a, cfg):
     c = pol["componentes"]
     B.escribir(os.path.join(d, "revision.json"), {"instrucciones": c["sistema"] + c["formato_revision"], "items": items})
     if "prompt_revisor_tanda" in c:  # juez v2: tandas de ≤10 con prompt propio; prompt_juez.txt es el índice de tandas
-        tandas = J.preparar(ab["lote"], [dict(i, question_id=i["r"]) for i in items], version=pol["version"])
+        tandas = J.preparar(ab["lote"], [dict(i, question_id=i["r"]) for i in items], version=pol["version"], sesion=ab.get("session_id"))
         indice = "\n".join(f"tanda {t['tanda']}: {len(t['ids'])} preguntas · prompt {t['fichero'][:-5]}.prompt.txt · sha256 {t['prompt_sha256']}" for t in tandas)
     else:
         indice = P.prompt_revisor(pol, ab["lote"])
@@ -222,7 +222,13 @@ def cerrar(a, cfg):
         if res_j is None:
             bloquear("hay tandas del juez sin aceptar (pendientes o rechazadas por los guards)", "juez_incompleto", lote)
         finales = {v["question_id"]: v["verdict"] for v in res_j["veredictos"]}
-        ver = [dict({k: v["criteria_checked"][k] for k in J.CRITERIOS}, r=v["question_id"], motivo=v["reason"]) for v in res_j["veredictos"]]
+        ev_j = J.leer(os.path.join(J.dir_eval(lote), "evaluacion.json"))
+        prompt_de = {i: t["prompt_sha256"] for t in ev_j["tandas"] for i in t["ids"]}
+        juzgada_el = {i: t.get("registrada_el") for t in ev_j["tandas"] for i in t["ids"]}
+        e = J.espec(pol)
+        crit = list(e["booleanos"]) + [e["duplicado"]]
+        ver = [dict({k: v["criteria_checked"][k] for k in crit}, r=v["question_id"], motivo=v["reason"]) for v in res_j["veredictos"]]
+        J.archivar(lote)  # evidencia versionada ANTES de publicar: Banco.publicar() recalcula el veredicto desde aquí
     else:
         ver = B.leer(os.path.join(d, "veredictos.json"), None)
     if val is None or ver is None:
@@ -257,10 +263,13 @@ def cerrar(a, cfg):
                      "topic_id": f"{h['tema']['oposicion']}#{h['tema']['indice']}", "article": h["art"], "source_document": ley.id,
                      "source_url": ley.url, "source_version": ley.version, "generator": "fabrica-v1-sesion",
                      "generator_model": "claude-opus-5-5", "generator_prompt_version": ab.get("generator_prompt_version"),
-                     "judge": "revisor independiente (subagente de la sesión)", "judge_model": "claude-haiku-4-5",
+                     "judge": "revisor independiente (subagente de la sesión)",
+                     "judge_model": pol["componentes"].get("modelo_juez", "claude-haiku-4-5").split(" ")[0],
                      "judge_policy_version": pol["version"], "judge_policy_sha256": pol["sha256"],
-                     "judge_verdict": resultado_juez(vj) if i in del_juez else "NO_JUZGADA (rechazada por la validación determinista)",
-                     "judge_flags": {k: vj.get(k) for k in ("respaldada", "unica", "clara", "duplicada_de")} if vj else None,
+                     "judge_verdict": (finales.get(r_id) if v2 else resultado_juez(vj)) if i in del_juez else "NO_JUZGADA (rechazada por la validación determinista)",
+                     "judge_flags": {k: vj.get(k) for k in (crit if v2 else ("respaldada", "unica", "clara", "duplicada_de"))} if vj else None,
+                     **({"judge_evaluation": lote, "judge_question_id": r_id, "judge_prompt_sha256": prompt_de.get(r_id),
+                         "judge_session_id": ev_j.get("session_id") or ab.get("session_id"), "judged_at": juzgada_el.get(r_id)} if v2 and i in del_juez else {}),
                      "judge_reason": (vj or {}).get("motivo", ""), "validation_status": est, "created_at": ab.get("fecha"),
                      "validated_at": ahora, "reviewed_at": None, "published_at": ahora if est == "VALID" else None}
             banco.anadir(h["ley"], MO.ficha(q, est, motivos, ley, h["art"], slot, MODELOS, p["lote"], cfg, generador="fabrica-v1-sesion", traza=traza))

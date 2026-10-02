@@ -1,4 +1,5 @@
-"""Juez v2 (juez-sesion-v2): evaluación individual demostrable de cada pregunta.
+"""Juez v2/v3 (juez-sesion-v2 y juez-sesion-v3, mismo mecanismo): evaluación individual demostrable de cada pregunta.
+v3 añade el criterio bloqueante cita_suficiente (declarado en su política) y el veredicto trazable (veredicto_archivado).
 
 Problema que corrige: con juez-sesion-v1 el revisor podía escribir veredictos.json con un script que aprobaba por defecto, sin
 que nada demostrara que cada pregunta se había evaluado. v2 mantiene los MISMOS criterios (respaldada, unica, clara,
@@ -63,11 +64,20 @@ def sha(texto):
     return hashlib.sha256(texto.encode("utf-8")).hexdigest()
 
 
-def esperado(c):
-    """Veredicto que se deduce de los criterios (la misma regla que v1: duplicada → REJECTED; algún criterio falso → REVIEW)."""
-    if c["duplicada_de"]:
+# Criterios de cada versión: v2 (y v1) los de abajo; v3 los declara en su política congelada (componentes.criterios: añade
+# cita_suficiente). La regla es la misma: duplicada → REJECTED; algún booleano falso → REVIEW_REQUIRED; todos true → VALID.
+ESPEC_V2 = {"booleanos": ["respaldada", "unica", "clara"], "duplicado": "duplicada_de"}
+
+
+def espec(pol):
+    return pol["componentes"].get("criterios") or ESPEC_V2
+
+
+def esperado(c, e=ESPEC_V2):
+    """Veredicto que se deduce de los criterios (duplicada → REJECTED; algún criterio falso → REVIEW)."""
+    if c[e["duplicado"]]:
         return "REJECTED"
-    return "VALID" if c["respaldada"] and c["unica"] and c["clara"] else "REVIEW_REQUIRED"
+    return "VALID" if all(c[k] for k in e["booleanos"]) else "REVIEW_REQUIRED"
 
 
 def mas_conservador(*estados):
@@ -95,12 +105,17 @@ def parsear(texto):
 
 
 AGREGADAS = re.compile(r"(?i)\b(todas|todos|totes|tots|all)\s+(las\s+|los\s+|les\s+|els\s+|the\s+)?(preguntas|preguntes|ítems|items|questions)\b"
-                       r"|\b(las|los|les|els)\s+(anteriors?|anteriores)\b|\bel resto\b|\bla resta\b|\bthe rest\b|\bok para todas\b"
+                       r"|\b(las|los|les|els)\s+(anteriors?|anteriores)\b"
+                       # «el resto» solo como valoración del conjunto («el resto son correctas», «el resto de las preguntas»), no al citar
+                       # la ley («… en el resto de los casos»; falso positivo CAL50-v3 tanda 05)
+                       r"|\b(el resto|la resta|the rest)\b(?=\s+(son|están|estan|són|are|también|tambien|igual|ok|correct|v[aá]lid|de\s+(las|los|les|els|the)\s+(preguntas|preguntes|ítems|items|questions)))"
+                       r"|\bok para todas\b"
                        r"|\bv[aá]lid[ao]s? salvo\b")
 
 
-def comprobar(items, respuesta):
+def comprobar(items, respuesta, e=ESPEC_V2):
     """Guards 1:1 y de contenido. items: lista de la tanda. Devuelve los veredictos normalizados o lanza JuezInvalido."""
+    criterios = list(e["booleanos"]) + [e["duplicado"]]
     ids = [i["question_id"] for i in items]
     if len(respuesta) != len(ids):
         raise JuezInvalido("RECUENTO", f"{len(ids)} preguntas enviadas y {len(respuesta)} veredictos recibidos")
@@ -117,8 +132,8 @@ def comprobar(items, respuesta):
         if v["verdict"] not in VEREDICTOS:
             raise JuezInvalido("VEREDICTO", f"{qid}: verdict «{v['verdict']}» no permitido")
         c = v["criteria_checked"]
-        if not isinstance(c, dict) or set(c) != set(CRITERIOS) or not all(isinstance(c[k], bool) for k in CRITERIOS[:3]) \
-                or not isinstance(c["duplicada_de"], str):
+        if not isinstance(c, dict) or set(c) != set(criterios) or not all(isinstance(c[k], bool) for k in e["booleanos"]) \
+                or not isinstance(c[e["duplicado"]], str):
             raise JuezInvalido("CRITERIOS", f"{qid}: criteria_checked incompleto o con tipos incorrectos")
         r = v["reason"]
         if not isinstance(r, str) or len(r.strip()) < MIN_RAZON:
@@ -128,7 +143,7 @@ def comprobar(items, respuesta):
         if r.strip().lower() in razones:
             raise JuezInvalido("RAZON_REPETIDA", f"{qid}: misma razón que otra pregunta de la tanda")
         razones.add(r.strip().lower())
-        final = mas_conservador(v["verdict"], esperado(c))
+        final = mas_conservador(v["verdict"], esperado(c, e))
         out.append({"question_id": qid, "verdict_juez": v["verdict"], "verdict": final, "reason": r.strip(), "criteria_checked": c,
                     "coherente": final == v["verdict"]})
     if vistos != set(ids):
@@ -216,7 +231,12 @@ def prompt_tanda(pol, fichero, n):
     return pol["componentes"]["prompt_revisor_tanda"].replace("{TANDA}", fichero).replace("{N}", str(n))
 
 
-def preparar(nombre, items, version="juez-sesion-v2", raiz=None, tam=None):
+def huella_pregunta(q):
+    """Lo que el juez evalúa de una pregunta: si cambia una coma después del veredicto, ya no es la pregunta juzgada."""
+    return sha(json.dumps({k: q.get(k) for k in ("q", "o", "a", "cita", "art")}, ensure_ascii=False, sort_keys=True))
+
+
+def preparar(nombre, items, version="juez-sesion-v2", raiz=None, tam=None, sesion=None):
     """Reparte los items en tandas de ≤10 y escribe el prompt exacto de cada una desde la política congelada."""
     pol = P.cargar(version)
     tam = tam or pol["componentes"]["mecanismo"]["tamano_tanda"]
@@ -237,10 +257,13 @@ def preparar(nombre, items, version="juez-sesion-v2", raiz=None, tam=None):
         p = prompt_tanda(pol, f, len(lote))
         with open(os.path.join(d, f"tanda-{nn}.prompt.txt"), "w", encoding="utf-8") as fh:
             fh.write(p)
-        tandas.append({"tanda": nn, "ids": [i["question_id"] for i in lote], "fichero": f, "prompt_sha256": sha(p), "estado": "PENDIENTE"})
+        tandas.append({"tanda": nn, "ids": [i["question_id"] for i in lote], "fichero": f, "prompt_sha256": sha(p), "estado": "PENDIENTE",
+                       "huellas": {i["question_id"]: huella_pregunta(i) for i in lote}})
     escribir(os.path.join(d, "items.json"), items)
     escribir(os.path.join(d, "evaluacion.json"), {"evaluacion": nombre, "creada_el": ahora(), "judge_policy_version": pol["version"],
-                                                  "policy_hash": pol["sha256"], "preguntas": len(items), "tandas": tandas})
+                                                  "policy_hash": pol["sha256"], "judge_model": pol["componentes"].get("modelo_juez"),
+                                                  "session_id": sesion or os.environ.get("CLAUDE_CODE_SESSION_ID") or os.environ.get("TL_SESSION_ID"),
+                                                  "preguntas": len(items), "tandas": tandas})
     return tandas
 
 
@@ -251,7 +274,7 @@ def registrar(nombre, nn, transcripcion, raiz=None):
     t = next(x for x in ev["tandas"] if x["tanda"] == nn)
     if t["estado"] == "ACEPTADA":
         raise SystemExit(f"La tanda {nn} ya tiene veredictos aceptados: no se sobrescriben.")
-    P.verificar({"judge_policy_version": ev["judge_policy_version"], "sha256": ev["policy_hash"]}, R, nombre)
+    pol = P.verificar({"judge_policy_version": ev["judge_policy_version"], "sha256": ev["policy_hash"]}, R, nombre)
     items = leer(t["fichero"])["items"]
     llamadas, final = leer_transcripcion(transcripcion)
     evid = dict(evidencia_transcripcion(llamadas, t["fichero"]), tanda=nn, transcripcion=os.path.basename(transcripcion),
@@ -260,7 +283,7 @@ def registrar(nombre, nn, transcripcion, raiz=None):
     try:
         if not evid["ok"]:
             raise JuezInvalido("JUDGE_INVALID", f"herramientas no permitidas en la evaluación: {evid['no_permitidas']}")
-        vers = comprobar(items, parsear(final))
+        vers = comprobar(items, parsear(final), espec(pol))
         t.update(estado="ACEPTADA", veredictos=vers, evidencia=evid, registrada_el=ahora())
         intento["resultado"] = "ACEPTADA"
     except JuezInvalido as e:
@@ -292,6 +315,40 @@ def resultado(nombre, raiz=None):
         if not res["segunda_comprobacion"]["ok"]:
             raise JuezInvalido("ALL_VALID_SIN_EVIDENCIA", f"100 % VALID sin evidencia individual: {res['segunda_comprobacion']}")
     return res
+
+
+def veredicto_archivado(evaluacion, qid, q, archivo=None, raiz=R):
+    """Prueba (para Banco.publicar) de que el VALID de una pregunta sale del juez y no de una edición posterior:
+    evaluación archivada con la política registrada; tanda ACEPTADA; respuesta íntegra con su huella; el veredicto recalculado
+    desde esa respuesta con los guards de su política es VALID; y la pregunta es exactamente la juzgada. Devuelve [] o motivos."""
+    d = os.path.join(archivo or ARCHIVO, evaluacion or "")
+    ev = leer(os.path.join(d, "evaluacion.json")) if evaluacion else None
+    if not ev:
+        return [f"evaluación del juez no archivada ({evaluacion})"]
+    try:
+        e = next(x for x in P.registro(raiz)["versiones"] if x["version"] == ev.get("judge_policy_version"))
+        pol = P.cargar(e["version"], raiz)
+    except (StopIteration, P.PoliticaBloqueada):
+        return [f"política de la evaluación no registrada o alterada ({ev.get('judge_policy_version')})"]
+    if ev.get("policy_hash") != e["sha256"]:
+        return ["huella de la política de la evaluación distinta de la registrada"]
+    t = next((x for x in ev["tandas"] if qid in x.get("ids", [])), None)
+    if not t or t.get("estado") != "ACEPTADA":
+        return [f"{qid} no está en una tanda aceptada de {evaluacion}"]
+    acept = [i for i in t.get("intentos", []) if i.get("resultado") == "ACEPTADA"]
+    if not acept or sha(acept[-1].get("respuesta") or "") != (acept[-1].get("evidencia") or {}).get("respuesta_sha256"):
+        return [f"respuesta del juez ausente o alterada en la tanda {t['tanda']}"]
+    try:
+        vers = {v["question_id"]: v for v in comprobar([{"question_id": i} for i in t["ids"]], parsear(acept[-1]["respuesta"]), espec(pol))}
+    except JuezInvalido as x:
+        return [f"la respuesta archivada no pasa los guards: {x.codigo}"]
+    if vers[qid]["verdict"] != "VALID":
+        return [f"el juez no dio VALID a {qid} ({vers[qid]['verdict']})"]
+    if (next((v for v in t.get("veredictos", []) if v["question_id"] == qid), {}) or {}).get("verdict") != "VALID":
+        return [f"veredicto registrado de {qid} distinto del que devolvió el juez"]
+    if t.get("huellas", {}).get(qid) != huella_pregunta(q):
+        return [f"{qid}: la pregunta no es la que juzgó el juez (cambió después del veredicto)"]
+    return []
 
 
 def publicables(estados):

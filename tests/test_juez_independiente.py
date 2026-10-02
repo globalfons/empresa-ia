@@ -8,6 +8,7 @@ import glob, json, os, shutil, stat, subprocess, sys, tempfile, unittest
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
+sys.path.insert(0, os.path.join(R, "tests"))
 from fabrica import validacion as V, banco as B, motor as MO, politica as P, fuente as F, revision as RV  # noqa: E402
 from tests.test_fabrica import buena, CFG, HAY_BUILD  # noqa: E402
 
@@ -163,7 +164,14 @@ class TestSeparacionDeFunciones(Copia):
         reg = P.registro(self.t); act = reg["activa"]; huella = next(e["sha256"] for e in reg["versiones"] if e["version"] == act)
         traza = {"validation_status": "VALID", "judge_verdict": "VALID", "judge_model": "claude-haiku-4-5",
                  "judge_policy_version": act, "judge_policy_sha256": huella}
-        pid = banco.publicar("constitucion", dict(buena(), art="1", traza=traza))
+        # una traza escrita a mano (sin evaluación archivada del juez) ya no publica con la v3
+        with self.assertRaises(B.Bloqueado):
+            banco.publicar("constitucion", dict(buena(), art="1", traza=traza))
+        # con una evaluación real del juez (archivada) sí
+        import tempfile, juez_simulado as JS
+        q = dict(buena(), art="1")
+        banco.archivo_juez, base = JS.evaluar([dict(q, question_id="t4.0")], tempfile.mkdtemp(), "T4")
+        pid = banco.publicar("constitucion", dict(q, traza=dict(traza, **base, judge_question_id="t4.0")))
         self.assertEqual(pid, f"{banco.prefijo('constitucion')}-{n}")
         # y una REVIEW_REQUIRED aprobada explícitamente por una persona también (vía revisión humana trazable)
         cid = banco.anadir("constitucion", dict(buena(q="Según el artículo 1 de la Constitución, ¿qué valores superiores propugna el Estado?"), art="1",
