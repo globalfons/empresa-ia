@@ -15395,5 +15395,115 @@
    "dia": "2026-10-02",
    "tipo": "OFFICIAL_LIST_PUBLISHED"
   }
+ },
+ "c9674f1ab222465e87526c8943363fec:fuente-caida:analytics_event": {
+  "id": "c9674f1ab222465e87526c8943363fec:fuente-caida:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "fuente-caida",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "c9674f1ab222465e87526c8943363fec",
+    "type": "OFFICIAL_SOURCE_FAILED",
+    "entity_type": "fuente",
+    "entity_id": "policia-nacional",
+    "payload": {
+     "estado": "error",
+     "errores_consecutivos": 5,
+     "error": "HTTP 404 https://www.policia.es/_es/oposiciones.php"
+    },
+    "correlation_id": "c9674f1ab222465e87526c8943363fec"
+   },
+   "importancia": "MEDIUM"
+  },
+  "event_id": "c9674f1ab222465e87526c8943363fec",
+  "status": "done",
+  "priority": 4,
+  "retries": 0,
+  "created_at": "2026-10-02T13:07:31Z",
+  "run_after": "2026-10-02T13:07:31Z",
+  "started_at": "2026-10-02T13:07:31Z",
+  "finished_at": "2026-10-02T13:07:31Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-02",
+   "tipo": "OFFICIAL_SOURCE_FAILED"
+  }
+ },
+ "d9127e249dc0494aa81d08f571d03c13:fuente-caida:analytics_event": {
+  "id": "d9127e249dc0494aa81d08f571d03c13:fuente-caida:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "fuente-caida",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "d9127e249dc0494aa81d08f571d03c13",
+    "type": "OFFICIAL_SOURCE_FAILED",
+    "entity_type": "fuente",
+    "entity_id": "ccaa-dogc",
+    "payload": {
+     "estado": "inaccesible",
+     "errores_consecutivos": 4,
+     "error": "robots.txt no permite https://administraciopublica.gencat.cat/ca/funcio-publica/"
+    },
+    "correlation_id": "d9127e249dc0494aa81d08f571d03c13"
+   },
+   "importancia": "MEDIUM"
+  },
+  "event_id": "d9127e249dc0494aa81d08f571d03c13",
+  "status": "done",
+  "priority": 4,
+  "retries": 0,
+  "created_at": "2026-10-02T13:07:31Z",
+  "run_after": "2026-10-02T13:07:31Z",
+  "started_at": "2026-10-02T13:07:31Z",
+  "finished_at": "2026-10-02T13:07:31Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-02",
+   "tipo": "OFFICIAL_SOURCE_FAILED"
+  }
+ },
+ "1dbddc155c99402ab657763d9f42c38b:publicar-programado:publish_scheduled": {
+  "id": "1dbddc155c99402ab657763d9f42c38b:publicar-programado:publish_scheduled",
+  "type": "publish_scheduled",
+  "data": {
+   "regla": "publicar-programado",
+   "accion": {
+    "accion": "publish_scheduled"
+   },
+   "evento": {
+    "id": "1dbddc155c99402ab657763d9f42c38b",
+    "type": "DAILY_TICK",
+    "entity_type": "calendario",
+    "entity_id": "2026-10-02",
+    "payload": {},
+    "correlation_id": "1dbddc155c99402ab657763d9f42c38b"
+   },
+   "importancia": "LOW"
+  },
+  "event_id": "1dbddc155c99402ab657763d9f42c38b",
+  "status": "done",
+  "priority": 6,
+  "retries": 0,
+  "created_at": "2026-10-02T13:07:31Z",
+  "run_after": "2026-10-02T13:07:31Z",
+  "started_at": "2026-10-02T13:07:31Z",
+  "finished_at": "2026-10-02T13:07:31Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "publicados": [],
+   "pendientes_manual": []
+  }
  }
 }
