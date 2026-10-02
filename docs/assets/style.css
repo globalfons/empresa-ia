@@ -648,7 +648,7 @@ p.acciones { margin: 14px 0 4px; }
 .panel-main .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 16px; }
 .panel-main .card, .panel-main .hero-panel { margin: 0 0 16px; }
 .kpi { padding: 12px 14px; }
-@media (max-width: 980px) { .panel-grid { grid-template-columns: 1fr; } .panel-lado .badges { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
+@media (max-width: 980px) { .panel-grid { grid-template-columns: minmax(0, 1fr); } .panel-lado .badges { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
 @media (max-width: 560px) { .panel-main .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .hero-panel h1 { font-size: clamp(1.5rem, 3vw, 2rem); }
 @media (max-width: 900px) { .ficha { grid-template-columns: minmax(0, 1fr); } }
@@ -657,3 +657,11 @@ p.acciones { margin: 14px 0 4px; }
 .paginas .muted { flex-basis: 100%; }
 .paginas a, .paginas [aria-current] { min-width: 2.2em; padding: 4px 8px; text-align: center; border: 1px solid var(--line, #d9ddd6); border-radius: 6px; }
 .paginas [aria-current] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* Panel · preparación completa (módulos no medibles: checklist y registro manual) */
+.modulo { border-top: 1px solid var(--line); padding: 10px 0; }
+.modulo summary { cursor: pointer; }
+.modulo blockquote { margin: 8px 0; padding: 6px 10px; border-left: 3px solid var(--line); overflow-wrap: anywhere; }
+.checklist { list-style: none; padding: 0; margin: 8px 0; }
+.reg-manual input { max-width: 100%; }
+.weak.cal li > span:first-child { white-space: normal; color: var(--text); font-weight: 400; min-width: 0; flex: 1 1 200px; }

@@ -162,7 +162,7 @@
     if (!ES_OP || !window.TLMotor || !PERFIL || !PERFIL.modulos.length) return "";
     var cal = TLMotor.proximos(PERFIL).slice(0, 4);
     return '<section class="card" id="preparacion"><h2>Preparación completa</h2>' +
-      (cal.length ? '<h3>Próximas fechas</h3><ul class="weak">' + cal.map(function (c) {
+      (cal.length ? '<h3>Próximas fechas</h3><ul class="weak cal">' + cal.map(function (c) {
         return "<li><span><b>" + c.fecha.split("-").reverse().join("/") + "</b> · " + esc(c.hito) + "</span><span>" + (c.caracter === "OFICIAL" ? '<span class="badge-oficial">Oficial</span>' : '<span class="chip grey">Previsión</span>') + " " + (c.dias === 0 ? "hoy" : "en " + c.dias + " días") + "</span></li>";
       }).join("") + "</ul>" : "") +
       PERFIL.modulos.map(function (m) {
