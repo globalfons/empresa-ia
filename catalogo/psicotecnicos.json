@@ -1,0 +1,30 @@
+{
+ "_ayuda": "PsychotechnicalEngine (B6): categorías genéricas y estructura oficial de cada prueba psicotécnica, con cita literal de las bases. Los ejercicios OFFICIAL_EXAM conservan su fuente oficial; los TESTLEY_GENERATED nunca se presentan como reproducción oficial. Sin fórmula oficial verificable no se calcula ninguna puntuación oficial (solo aciertos, errores, tiempo y progreso propios). Motor: web/assets/psicotecnicos.js. Documentación: documentacion/PSYCHOTECHNICAL_ENGINE.md.",
+ "categorias": [
+  {"id": "verbal", "nombre": "Aptitud verbal"},
+  {"id": "numerico", "nombre": "Aptitud numérica"},
+  {"id": "abstracto", "nombre": "Razonamiento abstracto"},
+  {"id": "espacial", "nombre": "Razonamiento espacial"},
+  {"id": "logico", "nombre": "Razonamiento lógico"},
+  {"id": "atencion", "nombre": "Atención"},
+  {"id": "percepcion", "nombre": "Aptitud perceptiva"},
+  {"id": "memoria", "nombre": "Memoria"}
+ ],
+ "pruebas": {
+  "mossos-esquadra": {
+   "parte_oficial": "1a prova · subprova aptitudinal",
+   "fuente": "convocatoria",
+   "categorias": ["abstracto", "espacial", "verbal", "numerico", "percepcion"],
+   "preguntas": 80, "minutos": 35, "opciones": 4, "penalizacion": 0,
+   "citas": [
+    "Consisteix a respondre un qüestionari tipus test de 80 preguntes adreçat a avaluar els processos de raonament i les aptituds intel·lectuals de la persona participant. S'hi avalua el raonament abstracte, el raonament espacial, l'aptitud verbal, l'aptitud numèrica i l'aptitud perceptiva.",
+    "Cada pregunta té quatre alternatives de resposta de les quals només una és correcta. Totes les respostes correctes tenen el mateix valor i les preguntes que es deixin en blanc i les incorrectes no descompten.",
+    "La puntuació d'aquesta subprova es de 0 a 10 punts. Per obtenir la qualificació d'apte s'ha d'obtenir una puntuació mínima de 5 punts."
+   ],
+   "formula_verificable": false,
+   "nota_formula": "Les bases fixen l'escala (0 a 10) i el mínim (5), però no la conversió d'encerts a punts: TestLey no calcula cap puntuació oficial.",
+   "bancos": {"OFFICIAL_EXAM": [], "TESTLEY_GENERATED": []},
+   "estado": "SIN_BANCO_VERIFICADO"
+  }
+ }
+}
