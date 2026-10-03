@@ -43,6 +43,6 @@
 | guia-mossos | 62 | 6 |
 | lo-2-1986 | 6 | 0 |
 
-Estados contados en el ámbito del temario: {'TESTLEY_GENERATED': 103, 'DEPRECATED': 3, 'REVIEW_REQUIRED': 11}.
+Estados contados en el ámbito del temario: {'DEPRECATED': 3, 'TESTLEY_GENERATED': 103, 'REVIEW_REQUIRED': 11}.
 
 Generación: **GENERATION_PAUSED** (fabrica/estado/estado.json). No se ha generado ni publicado ninguna pregunta nueva en Mossos 360.
