@@ -323,7 +323,7 @@ def motor360(oid, o, fuentes, contenido, examen, temas):
                        "modulos_simulables": ["knowledge"] + (["aptitude"] if banco_apt else [])},
         "adaptive_training": {"entradas": ["knowledge"] + (["aptitude"] if banco_apt else []) + (["physical"] if c.get("fisica") else [])},
     }
-    return {"schema": "opposition-engine/1", "call_id": call if c else None, "modulos": {k: m[k] for k in MOTORES}}
+    return {"schema": "opposition-engine/1", "call_id": call if c else None, "idioma": prep.get("idioma_ejercicios"), "modulos": {k: m[k] for k in MOTORES}}
 
 
 def correcciones(guia_reg):

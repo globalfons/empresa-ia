@@ -133,6 +133,10 @@ const OG_IMG = fs.existsSync("web/assets/og-testley.png"), LOGO_IMG = fs.existsS
 // con las alternativas que da cada página (tituloAlt / descAlt, de más corta a más específica).
 // lastmod: fecha real del contenido, nunca posterior al día de la build (algunos datos llevan fecha de mañana por zona horaria)
 const HOY = new Date().toISOString().slice(0, 10);
+// Opposition Engine (catalogo/perfiles/<id>.json → motor360): qué módulos 360 tiene cada oposición
+const MOTOR = {};
+const motorDe = (o) => (o.id in MOTOR ? MOTOR[o.id] : (MOTOR[o.id] = fs.existsSync(`catalogo/perfiles/${o.id}.json`) ? JSON.parse(fs.readFileSync(`catalogo/perfiles/${o.id}.json`, "utf8")).motor360 || null : null));
+const aptitudOf = (o) => { const m = motorDe(o); const a = m && m.modulos.aptitude.oficial; return a && a.verification_status === "OFFICIAL_VERIFIED" ? a : null; };
 function page(route, opts) {
   const lm = opts.lastmod || C.updated;
   pages.push({ route, opts, noindex: opts.noindex, lastmod: lm > HOY ? HOY : lm, title: conMarca(opts.title), description: opts.description });
@@ -726,6 +730,7 @@ ${prep}
 <div id="op-temario">${bloques.map((b, bi) => { const ts = o.temario.map((t, i) => [t, i]).filter(([t]) => t.bloque === b); return `<details class="bloque"${bi === 0 || bloques.length === 1 ? " open" : ""}><summary><span>${esc(b)}</span><small>${ts.length} temas</small></summary><ol class="temario-lista">${ts.map(([t, i]) => `<li><a href="${r}${rutaTema(o, i)}" title="${esc(t.titulo)}"><span class="tl-n">${t.tema}</span><span class="tl-t">${esc(t.titulo)}</span></a><span class="chips">${o.temaInfo[i].nq ? `<span class="tl-q">${o.temaInfo[i].nq} preguntas</span>` : `<span class="tl-q vacia">${t.tipo === "no_legislativo" ? "Sin test" : "En preparación"}</span>`}</span></li>`).join("")}</ol></details>`; }).join("")}</div>
 <p class="muted small">Las leyes de cada tema las asigna TestLey a partir del título oficial: son orientativas. Comprueba siempre las bases de tu convocatoria.</p>` : `<h2>Temario</h2><p class="muted">${badgeVS("OFFICIAL_PENDING_REVIEW")} Temario pendiente de verificación oficial.</p>`}</section>
 ${pend}
+${aptitudOf(o) ? `<section class="card" id="aptitudinal"><h2>Subprueba aptitudinal</h2><p>${aptitudOf(o).preguntas} preguntas en ${aptitudOf(o).minutos} minutos sobre razonamiento abstracto, espacial, aptitud verbal, numérica y perceptiva. Entrena con ejercicios originales de TestLey por aptitud, dificultad, contrarreloj o en modo adaptativo.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/aptitudinal/">Entrenar la aptitudinal</a></p></section>` : ""}
 ${o.examenes.length ? `<section class="card" id="examenes"><div class="of-head"><h2>Exámenes oficiales anteriores</h2><span class="badge-oficial">Fuente oficial</span></div><p>Preguntas y plantilla de respuestas publicadas por la administración. Hazlos tal cual se publicaron, con la respuesta oficial.</p><ul class="of-list">${o.examenes.map((e) => `<li><span><a href="${r}oposiciones/${o.id}/examenes-oficiales/${e.id}/">Examen oficial ${esc(e.convocatoria)}</a> · ${e.preguntes.length} preguntas${e.minuts ? ` · ${e.minuts} min` : ""}</span></li>`).join("")}</ul><p><a class="btn" href="${r}oposiciones/${o.id}/examenes-oficiales/">Ver todos los exámenes oficiales</a></p></section>` : ""}
 <section class="card" id="legislacion"><h2>Legislación</h2><p class="muted small">${leyesOp.filter((n) => PUB[n.id]).length} de ${leyesOp.length} normas con test. ${boletin(o) === "BOE" ? "Textos consolidados del BOE." : "Fuentes oficiales: guia d'estudi de la Generalitat y textos consolidados del BOE."}</p><details class="leyes-det"${leyesOp.length <= 8 ? " open" : ""}><summary>Ver las ${leyesOp.length} normas</summary><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `${n.tipo === "guia_oficial" ? esc(n.nombre) : `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a>`} <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="${esc(n.url || `https://www.boe.es/buscar/act.php?id=${n.id}`)}" rel="noopener">${esc(n.tipo === "guia_oficial" ? "PDF oficial" : n.id)}</a></li>`).join("")}</ul></details></section>
 <section class="card" id="documentacion"><h2>Documentación oficial</h2><ul class="of-list">${Object.values(o.fuentes).map((f) => `<li><span><a href="${esc(f.url)}" rel="noopener">${esc(f.titulo)}</a></span> <span class="muted small">${esc(f.tipo)}, publicado el ${fmtFecha(f.fecha_publicacion)}</span></li>`).join("")}</ul></section>
@@ -790,6 +795,23 @@ for (const o of OPOS) {
     alertas: { fuentes: p.alertas.fuentes, eventos: p.alertas.eventos, recientes: p.alertas.recientes },
     motor360: p.motor360 || null, // Opposition Engine: datos oficiales de preparación por convocatoria (públicos; sin preguntas)
   }));
+}
+// Entrenador aptitudinal (Aptitude Engine): solo para oposiciones con estructura aptitudinal oficial verificada en su perfil
+for (const o of OPOS) {
+  const a = aptitudOf(o);
+  if (!a) continue;
+  page(`oposiciones/${o.id}/aptitudinal/`, {
+    title: titulo("", `Psicotécnicos ${opCorto(o)}: entrenador de la aptitudinal`, ""), lastmod: o.actualizado, wide: true,
+    scripts: ["psicotecnicos.js", "aptitud.js", "aptitud-ui.js"],
+    description: descripcion(`Entrena la subprueba aptitudinal de ${opCorto(o)} (${a.preguntas} preguntas, ${a.minutos} minutos): razonamiento abstracto, espacial, verbal, numérico y perceptivo.`, "Ejercicios originales con solución comprobada, por aptitud, dificultad, contrarreloj o adaptativo."),
+    crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Aptitudinal", `oposiciones/${o.id}/aptitudinal/`]],
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Aptitudinal</span></nav>
+<h1>Subprueba aptitudinal · ${esc(opCorto(o))}</h1>
+<p class="lead">Según las bases de la convocatoria ${esc(a.call_id)}: ${a.preguntas} preguntas de ${a.opciones} opciones en ${a.minutos} minutos; los errores y los blancos no restan y el apto exige ${a.minimo_apte} puntos sobre 10. <span class="badge-oficial">Dato oficial</span></p>
+<blockquote class="cita small">${esc(a.citas[0])}</blockquote>
+<div id="aptitud" class="quiz" data-op="${o.id}" data-idioma="${esc(motorDe(o).idioma || "es")}">Cargando el entrenador…</div>
+<p class="muted small">Fuente: <a href="${esc(a.fuente)}" rel="noopener">${esc(a.documento)}</a>. Los ejercicios son originales de TestLey (no reproducen pruebas oficiales ni material comercial) y su respuesta se calcula y se comprueba automáticamente. ${esc(a.nota || "")}</p>`,
+  });
 }
 // Páginas de exámenes oficiales: índice y una página por examen (los datos van a docs/datos/examen-<oposición>-<id>.json)
 for (const o of OPOS.filter((x) => x.examenes.length)) {

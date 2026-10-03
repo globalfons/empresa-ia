@@ -1,6 +1,8 @@
 {
  "_ayuda": "Datos oficiales de preparación por convocatoria (OppositionProfile → motor360). Cada bloque cita literalmente la fuente de la ficha (catalogo/oposiciones/<id>.json → fuentes); catalogo/perfil.py comprueba cada cita contra el texto guardado y marca el bloque OFFICIAL_VERIFIED u OFFICIAL_PENDING_REVIEW. Nunca añadir un dato sin cita. Una convocatoria nueva = una clave nueva (no se sobrescriben las anteriores).",
  "oposicion": "mossos-esquadra",
+ "idioma_ejercicios": "ca",
+ "_ayuda_idioma": "Idioma de los ejercicios de entrenamiento de TestLey (decisión de producto: la prueba es en catalán). No es un dato oficial.",
  "convocatorias": {
   "46/26": {
    "fuente": "convocatoria",

@@ -65,6 +65,13 @@ const OP = 'mossos-esquadra';
     await ir(`admin/oposiciones/${OP}/quality/`);
     const adm = await texto();
     ok('20 ADMIN · métricas 360', ['coverage', 'question_count', 'official_exam_count', 'review_required', 'source_health', 'last_sync'].every((k) => adm.includes(k)));
+    // 21 APTITUDINAL (Mossos 360 · Fase 1): sesión mixta completa, resultado y progreso por aptitud
+    await ir(`oposiciones/${OP}/`); ok('21a FICHA enlaza el entrenador aptitudinal', await p.locator(`a[href*="oposiciones/${OP}/aptitudinal/"]`).count());
+    await ir(`oposiciones/${OP}/aptitudinal/`); await p.click('[data-modo="mixto"]');
+    for (let i = 0; i < 10; i++) { await p.waitForSelector('.opt:not([disabled])'); await p.locator('.opt:not([disabled])').first().click(); await p.click('[data-next]'); }
+    ok('21b APTITUDINAL · 10 ejercicios y resultado', await p.locator('.result-card').count());
+    const sw = await p.evaluate(() => document.documentElement.scrollWidth); if (sw > w) pasos.push(['sin desbordamiento aptitudinal (resultado)', false, sw]);
+    await p.click('[data-otra]'); ok('21c APTITUDINAL · progreso por aptitud', /%/.test(await p.textContent('#aptitud table')));
     informe.push({ tag, pasos });
     await c.close();
   }

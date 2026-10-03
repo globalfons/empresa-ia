@@ -26,7 +26,9 @@
       "plan_estudio": false,
       "historial_simulacros": false,
       "tutor": false,
-      "alertas": false
+      "alertas": false,
+      "aptitud_completo": false,
+      "aptitud_muestra": 10
     },
     "premium": {
       "nombre": "Pase Opositor",
@@ -38,9 +40,10 @@
       "plan_estudio": true,
       "historial_simulacros": true,
       "tutor": true,
-      "alertas": true
+      "alertas": true,
+      "aptitud_completo": true
     },
-    "_ayuda": "leyes_completas: leyes con todos los modos de test sin Pase. preguntas_muestra: preguntas gratis por ley u oposición. El resto de claves activan secciones (plan_estudio, historial_simulacros, tutor, alertas)."
+    "_ayuda": "leyes_completas: leyes con todos los modos de test sin Pase. preguntas_muestra: preguntas gratis por ley u oposición. El resto de claves activan secciones (plan_estudio, historial_simulacros, tutor, alertas). aptitud_completo/aptitud_muestra: entrenador aptitudinal (sin Pase, sesiones de hasta aptitud_muestra ejercicios en modo mixto o por categoría)."
   },
   "flags": {
     "_ayuda": "Feature flags del Growth OS. Activa cada función cuando su requisito esté listo (ver documentacion/GROWTH-ARCHITECTURE.md).",

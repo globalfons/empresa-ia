@@ -665,3 +665,14 @@ p.acciones { margin: 14px 0 4px; }
 .checklist { list-style: none; padding: 0; margin: 8px 0; }
 .reg-manual input { max-width: 100%; }
 .weak.cal li > span:first-child { white-space: normal; color: var(--text); font-weight: 400; min-width: 0; flex: 1 1 200px; }
+
+/* Entrenador aptitudinal */
+.apt-prompt { margin: 10px 0; }
+.apt-texto { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.05rem; letter-spacing: .04em; overflow-wrap: anywhere; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.apt-fila { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; color: var(--text); }
+.apt-q { font-size: 1.6rem; font-weight: 700; padding: 0 6px; }
+.apt-pares { border-collapse: collapse; font-family: ui-monospace, Menlo, Consolas, monospace; margin: 10px 0; }
+.apt-pares td { border: 1px solid var(--line); padding: 6px 10px; }
+.apt-opts-fig { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+.apt-opts-fig .opt { align-items: center; color: var(--text); }
+.apt-conf { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0; }

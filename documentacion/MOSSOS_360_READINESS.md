@@ -7,11 +7,11 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - [x] **Temario operativo** · 21 temas, `/oposiciones/mossos-esquadra/tema-N/` · `tests/test_perfil.py`
 - [ ] **Knowledge tests operativos** · funcionan (E2E 21/21), pero la cobertura es PARCIAL (99 preguntas; `MOSSOS_360_KNOWLEDGE.md`) y la fábrica está en pausa
 - [x] **Official exams separados** · 290 OFFICIAL_EXAM en su propio banco · `scripts/integridad_banco.py`, `tests/test_mossos.py`
-- [ ] Aptitud verbal · estructura oficial verificada; sin banco (Fase 1)
-- [ ] Aptitud numérica · Fase 1
-- [ ] Aptitud abstracta · Fase 1
-- [ ] Aptitud espacial · Fase 1
-- [ ] Aptitud perceptiva · Fase 1
+- [ ] Aptitud verbal · PARCIAL: series de letras y orden alfabético (`web/assets/aptitud.js`, tests en `tests/js/aptitud.test.mjs`). La verbal semántica (sinónimos, analogías) necesita un banco revisado por personas
+- [x] **Aptitud numérica** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
+- [x] **Aptitud abstracta** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
+- [x] **Aptitud espacial** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
+- [x] **Aptitud perceptiva** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
 - [ ] Competency training · datos oficiales verificados; sin entrenamiento (Fase 2)
 - [ ] Psychometric foundation · Fase 2
 - [ ] Interview trainer · Fase 3
