@@ -1,0 +1,3944 @@
+{
+ "_ayuda": "Contenido de ENTRENAMIENTO de TestLey (no oficial) publicado por fabrica/competencias.py: solo items VALID del juez. Las competencias y su cita oficial están en catalogo/preparacion/<oposición>.json.",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "lotes": [
+  "C00002"
+ ],
+ "competencias": [
+  {
+   "id": "responsabilitat",
+   "explicacion": "Fer-se càrrec de les pròpies tasques i decisions, complir els compromisos i cuidar que la feina estigui ben feta, també quan ningú no ho supervisa.",
+   "preparacion": "Fixa't compromisos petits i verificables (horaris d'estudi, entregues, entrenaments), revisa si els compleixes i, quan fallis, avisa i proposa com reparar-ho.",
+   "comportamientos": [
+    "Complir els terminis acordats o avisar amb antelació si no és possible",
+    "Reconèixer un error propi i proposar com corregir-lo",
+    "Revisar la feina abans de donar-la per acabada",
+    "Tenir cura del material i dels recursos que se'm confien"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-responsabilitat-1",
+     "texto": "Quan m'equivoco en una tasca, ho comunico i busco com arreglar-ho.",
+     "invertido": false
+    },
+    {
+     "id": "aa-responsabilitat-2",
+     "texto": "Si un error meu passa desapercebut, prefereixo no dir-ne res.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Recordes una ocasió en què vas cometre un error a la feina o als estudis? Què vas fer després?",
+    "Quin compromís t'ha costat més de complir i com te'n vas sortir?"
+   ],
+   "relacion_entrevista": "Pot aparèixer quan expliques feines, estudis o voluntariats en què tenies tasques al teu càrrec: com responies dels resultats, dels errors i dels compromisos adquirits.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "cooperacio",
+   "explicacion": "Treballar amb altres persones per a un objectiu comú: compartir informació, ajudar quan cal, acceptar el paper que toca i posar l'interès del grup per davant del propi.",
+   "preparacion": "Participa en activitats de grup (esport, voluntariat, grups d'estudi) i observa com contribueixes: si comparteixes recursos, si ofereixes ajuda i com gestiones els desacords.",
+   "comportamientos": [
+    "Oferir ajuda a un company que va endarrerit",
+    "Compartir informació útil amb la resta de l'equip",
+    "Acceptar decisions de grup encara que no siguin les meves preferides",
+    "Coordinar-me amb altres torns o equips per evitar errors"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-cooperacio-1",
+     "texto": "M'agrada coordinar-me amb els altres per aconseguir un bon resultat de grup.",
+     "invertido": false
+    },
+    {
+     "id": "aa-cooperacio-2",
+     "texto": "Prefereixo fer la meva part sol i no dependre de ningú, encara que el grup se'n ressenti.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Pensa en un equip del qual has format part: quin paper hi tenies i què hi aportaves?",
+    "Explica una situació en què vas haver d'ajudar algú del teu grup encara que no et tocava."
+   ],
+   "relacion_entrevista": "Pot sortir quan parles d'equips esportius, feines amb companys o projectes compartits: com et coordinaves, com resolíeu desacords i què aportaves al grup.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "autonomia",
+   "explicacion": "Actuar per iniciativa pròpia quan la situació ho demana, sense esperar que algú digui què cal fer, però dins dels límits de la pròpia funció i informant qui correspon.",
+   "preparacion": "Practica anticipar-te: identifica petites millores a casa, a la feina o als estudis, proposa-les i porta-les a terme. Aprèn a distingir quan pots decidir i quan cal consultar.",
+   "comportamientos": [
+    "Prendre la iniciativa davant d'un imprevist dins de les meves funcions",
+    "Proposar millores concretes sense esperar que m'ho demanin",
+    "Informar el responsable de les decisions que he pres",
+    "Organitzar-me sense necessitat de supervisió constant"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-autonomia-1",
+     "texto": "Quan veig que cal fer alguna cosa, començo a actuar sense esperar que m'ho diguin.",
+     "invertido": false
+    },
+    {
+     "id": "aa-autonomia-2",
+     "texto": "Davant d'un imprevist, normalment espero que algú altre decideixi què fer.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Recordes una situació en què vas haver de decidir sense poder consultar ningú? Com ho vas fer?",
+    "Quina millora has proposat o aplicat per iniciativa pròpia en algun lloc on has estat?"
+   ],
+   "relacion_entrevista": "Pot aparèixer quan expliques situacions en què vas haver d'actuar sense instruccions: què vas decidir, per què, i com ho vas comunicar després.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "resolucio-problemes",
+   "explicacion": "Analitzar una dificultat, entendre'n les causes, valorar alternatives i triar una solució viable, en lloc de quedar-se bloquejat o actuar a l'atzar.",
+   "preparacion": "Davant d'un problema quotidià, escriu-ne la causa probable, dues o tres alternatives i els pros i contres de cadascuna. Després revisa si la solució triada ha funcionat.",
+   "comportamientos": [
+    "Buscar la causa d'un problema abans d'actuar",
+    "Plantejar més d'una alternativa i valorar-ne les conseqüències",
+    "Prioritzar quan no es pot resoldre tot alhora",
+    "Preparar un pla B davant d'imprevistos"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-resolucio-problemes-1",
+     "texto": "Quan apareix un problema, m'aturo a pensar alternatives abans de decidir.",
+     "invertido": false
+    },
+    {
+     "id": "aa-resolucio-problemes-2",
+     "texto": "Davant d'un contratemps, sovint em bloquejo o actuo sense pensar gaire.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Quin problema complicat has hagut de resoldre recentment? Quines opcions vas considerar?",
+    "Recordes una solució teva que no va funcionar? Què en vas aprendre?"
+   ],
+   "relacion_entrevista": "Pot sortir quan expliques imprevistos de feina, estudis o vida personal: com els vas analitzar, quines opcions vas valorar i quin resultat vas obtenir.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "orientacio-servei",
+   "explicacion": "Posar l'atenció en les necessitats de les persones a qui s'atén, tractar-les amb respecte i amabilitat i buscar respostes útils, fins i tot quan la situació és incòmoda.",
+   "preparacion": "En feines d'atenció al públic, voluntariat o a la vida diària, practica escoltar abans de respondre, comprovar què necessita realment l'altra persona i oferir alternatives.",
+   "comportamientos": [
+    "Escoltar la persona fins entendre què necessita",
+    "Tractar tothom amb el mateix respecte",
+    "Oferir alternatives quan no puc donar el que em demanen",
+    "Comprovar que la persona ha entès la informació"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-orientacio-servei-1",
+     "texto": "M'esforço per entendre què necessita realment la persona que atenc.",
+     "invertido": false
+    },
+    {
+     "id": "aa-orientacio-servei-2",
+     "texto": "Quan algú em demana ajuda en un mal moment, tendeixo a respondre de manera breu per treure-me'l de sobre.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Recordes una persona a qui vas ajudar i que t'ho va agrair especialment? Què vas fer?",
+    "Com vas actuar l'última vegada que vas haver d'atendre algú molest o desconfiat?"
+   ],
+   "relacion_entrevista": "Pot aparèixer quan parles de feines de cara al públic, voluntariats o situacions en què ajudaves altres persones: com les tractaves i què feies quan no podies donar-los el que demanaven.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "adaptabilitat",
+   "explicacion": "Ajustar-se a canvis de tasques, horaris, normes o entorns amb bona disposició, entenent el motiu del canvi i aprenent el que calgui per continuar fent bé la feina.",
+   "preparacion": "Exposa't a situacions noves (horaris diferents, tasques desconegudes, grups nous) i observa com reacciones. Practica preguntar i aprendre ràpid en lloc de resistir-te.",
+   "comportamientos": [
+    "Acceptar canvis de pla mantenint una bona actitud",
+    "Demanar la informació necessària quan canvien les tasques",
+    "Aprendre eines o sistemes nous amb rapidesa",
+    "Reorganitzar-me quan les circumstàncies canvien"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-adaptabilitat-1",
+     "texto": "Quan em canvien els plans a última hora, m'hi adapto sense gaire dificultat.",
+     "invertido": false
+    },
+    {
+     "id": "aa-adaptabilitat-2",
+     "texto": "Em costa molt treballar de manera diferent a com estic acostumat.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Quin canvi important has viscut a la feina, als estudis o a casa i com t'hi vas adaptar?",
+    "Recordes una situació en què et van canviar les tasques sense avís? Què vas fer?"
+   ],
+   "relacion_entrevista": "Pot sortir quan expliques canvis de feina, de ciutat, d'estudis o de responsabilitats: com els vas viure i què vas fer per adaptar-t'hi.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "autocontrol",
+   "explicacion": "Mantenir la calma i actuar amb criteri en situacions de tensió, provocació o pressa, gestionant les pròpies emocions perquè no condicionin la manera de respondre.",
+   "preparacion": "Identifica quines situacions et tensen i assaja respostes: respirar, prendre distància i parlar amb to serè. Els simulacres amb límit de temps i l'esport ajuden a practicar-ho.",
+   "comportamientos": [
+    "Mantenir un to de veu serè davant d'una persona alterada",
+    "No respondre a provocacions",
+    "Prioritzar amb calma quan hi ha molta pressió",
+    "Esperar el moment adequat per expressar el desacord"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-autocontrol-1",
+     "texto": "Quan algú em parla malament, sóc capaç de mantenir un to calmat.",
+     "invertido": false
+    },
+    {
+     "id": "aa-autocontrol-2",
+     "texto": "Sota pressió, sovint responc de manera impulsiva i després me'n penedeixo.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Recordes una situació de molta tensió? Què vas sentir i com vas actuar?",
+    "Quan algú t'ha provocat, què t'ha ajudat a no perdre els nervis?"
+   ],
+   "relacion_entrevista": "Pot aparèixer quan expliques moments de pressió, conflictes o situacions inesperades: com vas reaccionar i què vas fer per mantenir el control.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "autogestio",
+   "explicacion": "Organitzar el propi temps, energia i aprenentatge, reconèixer els punts febles i treballar-los de manera constant per millorar personalment i professionalment.",
+   "preparacion": "Fes-te un pla de preparació amb objectius setmanals, registra'n el seguiment i revisa'l periòdicament. Demana opinions sobre el teu progrés i ajusta el pla segons el que n'aprenguis.",
+   "comportamientos": [
+    "Planificar el temps d'estudi, feina i descans",
+    "Demanar opinions sobre la meva feina i aplicar-les",
+    "Revisar el meu progrés i ajustar el pla",
+    "Buscar formació per cobrir els meus punts febles"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-autogestio-1",
+     "texto": "Reviso periòdicament què puc millorar i em poso objectius per fer-ho.",
+     "invertido": false
+    },
+    {
+     "id": "aa-autogestio-2",
+     "texto": "Quan rebo una crítica sobre la meva feina, tendeixo a ignorar-la.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Quin aspecte teu has millorat els darrers anys i com ho vas aconseguir?",
+    "Com organitzes ara mateix el teu temps entre preparació, feina i descans?"
+   ],
+   "relacion_entrevista": "Pot sortir quan parles de la teva formació, dels teus objectius i de com t'has preparat: què has après dels errors i com t'organitzes per continuar millorant.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "motivacio",
+   "explicacion": "Tenir motius clars i propis per formar part de l'organització, sentir-se identificat amb la seva funció de servei i mantenir l'interès també en les tasques menys vistoses.",
+   "preparacion": "Reflexiona per escrit sobre per què vols aquesta feina, què en coneixes i què hi pots aportar. Informa't sobre la funció de servei públic i contrasta les teves expectatives.",
+   "comportamientos": [
+    "Explicar amb sinceritat els meus motius per voler aquesta feina",
+    "Fer amb cura també les tasques rutinàries",
+    "Interessar-me per aprendre més sobre la funció de servei públic",
+    "Mantenir l'esforç quan els resultats triguen a arribar"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-motivacio-1",
+     "texto": "Tinc clar per què vull fer aquesta feina i sé explicar-ho.",
+     "invertido": false
+    },
+    {
+     "id": "aa-motivacio-2",
+     "texto": "Si trobés una altra feina amb condicions semblants, deixaria la preparació sense pensar-hi gaire.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Quan i per què vas decidir presentar-te a aquest procés?",
+    "Quina experiència teva de servei als altres t'ha fet sentir més satisfet?"
+   ],
+   "relacion_entrevista": "Pot aparèixer quan expliques les teves decisions de formació i feina: quin fil conductor tenen, què t'ha portat fins aquí i què esperes aportar.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "habilitats-socials",
+   "explicacion": "Relacionar-se i comunicar-se de manera clara, respectuosa i adequada a cada persona i situació: escoltar, expressar-se bé i gestionar converses difícils.",
+   "preparacion": "Practica l'escolta activa i les converses difícils: resumeix el que t'han dit abans de respondre, adapta el llenguatge a qui tens davant i fes exposicions orals breus.",
+   "comportamientos": [
+    "Escoltar sense interrompre i resumir el que he entès",
+    "Adaptar el llenguatge a la persona amb qui parlo",
+    "Expressar un desacord amb respecte",
+    "Comunicar males notícies amb claredat i empatia"
+   ],
+   "autoevaluacion": [
+    {
+     "id": "aa-habilitats-socials-1",
+     "texto": "Em resulta fàcil explicar les coses de manera que els altres m'entenguin.",
+     "invertido": false
+    },
+    {
+     "id": "aa-habilitats-socials-2",
+     "texto": "En converses incòmodes, prefereixo evitar el tema o deixar-ho per escrit.",
+     "invertido": true
+    }
+   ],
+   "preguntas_reflexion": [
+    "Recordes una conversa difícil que vas haver de mantenir? Com la vas preparar?",
+    "En quina situació has hagut d'adaptar la manera de parlar a una persona molt diferent de tu?"
+   ],
+   "relacion_entrevista": "Es fa evident en la mateixa conversa: com expliques la teva trajectòria, com escoltes les preguntes i com descrius la relació amb companys, clients o altres persones.",
+   "source_type": "TESTLEY_TRAINING",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "01",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:28:34",
+    "verdict": "VALID"
+   }
+  }
+ ],
+ "escenarios": [
+  {
+   "id": "esc-responsabilitat-1",
+   "competency_id": "responsabilitat",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Treballes de reposador en un supermercat i, deu minuts abans d'acabar el torn, t'adones que has etiquetat amb preus equivocats una prestatgeria sencera. Ningú no ho ha notat.",
+   "contexto": "Feina en un supermercat",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Avisar el responsable i corregir-ho ara o deixar-ho anotat per al torn següent.",
+     "puntos": {
+      "responsabilitat": 2,
+      "orientacio-servei": 2
+     }
+    },
+    {
+     "texto": "Comentar-ho a un company del torn següent perquè ho arregli ell quan arribi.",
+     "puntos": {
+      "responsabilitat": 1,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Marxar a l'hora i corregir-ho demà a primera hora, si me'n recordo.",
+     "puntos": {
+      "responsabilitat": 1,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Deixar-ho així, ja que ningú no se n'ha adonat i no sembla greu.",
+     "puntos": {
+      "responsabilitat": 0,
+      "orientacio-servei": 0
+     }
+    }
+   ],
+   "justificacion": "Assumir l'error i assegurar que es corregeix evita perjudicis als clients i als companys; delegar-ho o ajornar-ho deixa el problema en mans de l'atzar.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-responsabilitat-2",
+   "competency_id": "responsabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "En un treball de grup de la universitat t'has compromès a entregar la teva part dijous, però la setmana d'exàmens t'ha endarrerit i saps que no hi arribaràs a temps.",
+   "contexto": "Estudis universitaris, treball en grup",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Avisar ara el grup, proposar una data realista i compartir una versió provisional.",
+     "puntos": {
+      "responsabilitat": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Entregar dijous el que tingui, encara que estigui incomplet, sense dir res.",
+     "puntos": {
+      "responsabilitat": 1,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Demanar a un company que faci la meva part i compensar-ho més endavant.",
+     "puntos": {
+      "responsabilitat": 0,
+      "cooperacio": 1
+     }
+    },
+    {
+     "texto": "Esperar a dijous i explicar llavors que no he pogut acabar-ho.",
+     "puntos": {
+      "responsabilitat": 0,
+      "cooperacio": 0
+     }
+    }
+   ],
+   "justificacion": "Avisar amb antelació permet al grup reorganitzar-se i mostra compromís; callar o traspassar la tasca trasllada el problema als altres.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-responsabilitat-3",
+   "competency_id": "responsabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Col·labores en un banc d'aliments i et toca comptar les donacions. En revisar els registres veus que el recompte d'ahir, fet per un altre voluntari, no quadra per unes vint caixes.",
+   "contexto": "Voluntariat en un banc d'aliments",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Corregir la xifra en silenci perquè quadri amb el que he comptat jo.",
+     "puntos": {
+      "responsabilitat": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Informar el coordinador i parlar-ne amb el voluntari sense culpar-lo.",
+     "puntos": {
+      "responsabilitat": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Ignorar-ho, perquè el recompte d'ahir no era responsabilitat meva.",
+     "puntos": {
+      "responsabilitat": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Comentar a la resta de voluntaris que l'altre s'ha equivocat.",
+     "puntos": {
+      "responsabilitat": 0,
+      "habilitats-socials": 0
+     }
+    }
+   ],
+   "justificacion": "Una diferència en el recompte afecta tota l'entitat: cal verificar-la, comunicar-la a qui correspon i tractar el company amb respecte, sense amagar ni escampar l'error.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-responsabilitat-4",
+   "competency_id": "responsabilitat",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Durant una pràctica d'inventari a l'acadèmia, en repassar el material que tenies assignat, t'adones que falta un equip de comunicació. Probablement te l'has deixat a l'aula on heu fet l'exercici anterior.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Comunicar-ho de seguida a l'instructor i ajudar a buscar-lo.",
+     "puntos": {
+      "responsabilitat": 2,
+      "autocontrol": 2
+     }
+    },
+    {
+     "texto": "Tornar ràpidament a l'aula a buscar-lo i informar-ne després l'instructor.",
+     "puntos": {
+      "responsabilitat": 2,
+      "autocontrol": 1
+     }
+    },
+    {
+     "texto": "Buscar-lo pel meu compte sense dir res a ningú fins que aparegui.",
+     "puntos": {
+      "responsabilitat": 1,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Signar l'inventari com a complet i buscar-lo l'endemà.",
+     "puntos": {
+      "responsabilitat": 0,
+      "autocontrol": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "justificacion": "Davant la pèrdua de material confiat, el més professional és informar-ne immediatament i col·laborar a recuperar-lo; amagar-ho o falsejar l'inventari és el pitjor.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-responsabilitat-5",
+   "competency_id": "responsabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fas de repartidor i un client no és a casa. L'aplicació et permet marcar el paquet com a lliurat si el deixes a la porta, però el client va demanar expressament que se li entregués en mà.",
+   "contexto": "Feina de repartiment",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Deixar el paquet a la porta i marcar-lo com a lliurat per no endarrerir la ruta.",
+     "puntos": {
+      "responsabilitat": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Trucar al client una sola vegada i, si no contesta, deixar-lo a la porta igualment.",
+     "puntos": {
+      "responsabilitat": 1,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Deixar-lo a un veí sense consultar-ho amb el client.",
+     "puntos": {
+      "responsabilitat": 0,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Respectar la petició: deixar un avís, marcar-lo com a no lliurat i reprogramar.",
+     "puntos": {
+      "responsabilitat": 2,
+      "orientacio-servei": 2
+     }
+    }
+   ],
+   "justificacion": "Respectar el que el client ha demanat i registrar la realitat del lliurament és la manera honesta i fiable de fer la feina, encara que endarrereixi la ruta.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-responsabilitat-6",
+   "competency_id": "responsabilitat",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Entrenes de manera voluntària un equip infantil de bàsquet i vas prometre als pares enviar el calendari de partits abans de divendres. És dijous a la nit i la federació encara no l'ha confirmat.",
+   "contexto": "Esport de base, voluntariat",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Esperar el calendari definitiu i enviar-lo quan arribi, sense avisar.",
+     "puntos": {
+      "responsabilitat": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Enviar unes dates aproximades com si fossin definitives per complir el termini promès als pares.",
+     "puntos": {
+      "responsabilitat": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Escriure als pares, explicar el retard i dir-los quan esperes tenir el calendari definitiu.",
+     "puntos": {
+      "responsabilitat": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Enviar un calendari provisional indicant clarament que encara pot canviar.",
+     "puntos": {
+      "responsabilitat": 2,
+      "habilitats-socials": 1
+     }
+    }
+   ],
+   "orden_recomendado": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "justificacion": "Complir un compromís també vol dir informar quan no es pot complir com estava previst; donar informació falsa per quedar bé és la pitjor opció.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-cooperacio-1",
+   "competency_id": "cooperacio",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Fas de cambrer un dissabte a la nit amb el restaurant ple. Tens les teves taules al dia, però un company de sala s'ha quedat enrere i té diverses taules esperant.",
+   "contexto": "Hostaleria",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Continuar amb les meves taules; cadascú ha de portar la seva zona.",
+     "puntos": {
+      "cooperacio": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Oferir-li ajuda i coordinar-nos perquè cap taula quedi desatesa.",
+     "puntos": {
+      "cooperacio": 2,
+      "orientacio-servei": 2
+     }
+    },
+    {
+     "texto": "Avisar el cap de sala que el company no arriba a tot.",
+     "puntos": {
+      "cooperacio": 1,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Atendre alguna taula seva sense dir-li res perquè no s'ofengui ni es noti.",
+     "puntos": {
+      "cooperacio": 1,
+      "orientacio-servei": 1
+     }
+    }
+   ],
+   "justificacion": "Ajudar i coordinar-se amb el company millora el servei de tot el local; actuar sense comunicar-ho pot generar confusions i deixar-ho córrer perjudica els clients.",
+   "expected_dimensions": [
+    "cooperacio",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-cooperacio-2",
+   "competency_id": "cooperacio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Jugues en un equip de futbol amateur i l'entrenador et demana jugar de defensa durant unes setmanes perquè hi ha lesionats, tot i que la teva posició habitual és a l'atac.",
+   "contexto": "Esport amateur",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Demanar a l'entrenador tornar a l'atac, perquè és on rendeixo més.",
+     "puntos": {
+      "cooperacio": 1,
+      "adaptabilitat": 0
+     }
+    },
+    {
+     "texto": "Jugar-hi, però sense implicar-me gaire perquè no és la meva posició.",
+     "puntos": {
+      "cooperacio": 0,
+      "adaptabilitat": 1
+     }
+    },
+    {
+     "texto": "Acceptar el canvi, preguntar què s'espera de mi i donar el màxim.",
+     "puntos": {
+      "cooperacio": 2,
+      "adaptabilitat": 2
+     }
+    },
+    {
+     "texto": "Acceptar-ho i queixar-me'n als companys després de cada partit.",
+     "puntos": {
+      "cooperacio": 1,
+      "adaptabilitat": 1
+     }
+    }
+   ],
+   "justificacion": "Quan l'equip necessita cobrir una posició, acceptar-la amb implicació i informar-se de què cal fer és la contribució més útil al grup.",
+   "expected_dimensions": [
+    "cooperacio",
+    "adaptabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-cooperacio-3",
+   "competency_id": "cooperacio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Feu un treball de recerca de batxillerat en grup de tres. Un dels companys gairebé no hi participa i l'altre et proposa treure'l del grup i no posar el seu nom al treball.",
+   "contexto": "Estudis de batxillerat",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Fer la seva part entre els dos i posar-hi el seu nom igualment.",
+     "puntos": {
+      "cooperacio": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Donar suport a la proposta de treure'l sense parlar-hi abans.",
+     "puntos": {
+      "cooperacio": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Comunicar-ho al tutor perquè sigui ell qui decideixi què cal fer.",
+     "puntos": {
+      "cooperacio": 1,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Parlar-ne els tres, repartir tasques amb terminis i fer-ne seguiment.",
+     "puntos": {
+      "cooperacio": 2,
+      "habilitats-socials": 2
+     }
+    }
+   ],
+   "justificacion": "Abordar el problema directament amb el company i repartir tasques clares dona l'oportunitat de reconduir la situació abans de prendre decisions que l'excloguin.",
+   "expected_dimensions": [
+    "cooperacio",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-cooperacio-4",
+   "competency_id": "cooperacio",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "En un exercici d'orientació per equips a l'acadèmia, un company comença a prendre totes les decisions pel seu compte i el grup es desorganitza: uns el segueixen i d'altres van per lliure.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Parlar en privat amb el company i demanar-li que consulti el grup abans de decidir.",
+     "puntos": {
+      "cooperacio": 2,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Seguir les seves decisions per no perdre temps, encara que no hi estigui d'acord.",
+     "puntos": {
+      "cooperacio": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Separar-me amb dos companys i fer l'exercici pel nostre compte.",
+     "puntos": {
+      "cooperacio": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Proposar una aturada breu per repartir rols i acordar com decidim entre tots.",
+     "puntos": {
+      "cooperacio": 2,
+      "habilitats-socials": 2
+     }
+    }
+   ],
+   "orden_recomendado": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "justificacion": "Reorganitzar l'equip amb rols i una manera compartida de decidir recupera la cohesió; dividir el grup és l'opció que més perjudica l'objectiu comú.",
+   "expected_dimensions": [
+    "cooperacio",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "02",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:29:08",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-cooperacio-5",
+   "competency_id": "cooperacio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "En un magatzem logístic, el teu torn ha trobat una manera més ràpida d'ordenar les comandes, però el torn de tarda continua amb el sistema antic i en el canvi de torn es produeixen errors.",
+   "contexto": "Magatzem logístic",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Proposar una breu reunió de traspàs per compartir el mètode i acordar un sistema comú.",
+     "puntos": {
+      "cooperacio": 2,
+      "resolucio-problemes": 2
+     }
+    },
+    {
+     "texto": "Continuar amb el nostre mètode; si el torn de tarda s'equivoca, és cosa seva.",
+     "puntos": {
+      "cooperacio": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Deixar una nota explicant el sistema sense parlar-ne amb ningú.",
+     "puntos": {
+      "cooperacio": 1,
+      "resolucio-problemes": 1
+     }
+    },
+    {
+     "texto": "Tornar al sistema antic perquè no hi hagi conflictes entre torns.",
+     "puntos": {
+      "cooperacio": 1,
+      "resolucio-problemes": 0
+     }
+    }
+   ],
+   "justificacion": "Compartir el coneixement i acordar un sistema únic entre torns elimina l'origen dels errors i reforça el treball conjunt.",
+   "expected_dimensions": [
+    "cooperacio",
+    "resolucio-problemes"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-cooperacio-6",
+   "competency_id": "cooperacio",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Coordines l'avituallament d'una cursa solidària. Just quan arriben els primers corredors, el responsable de la zona de sortida et demana dos voluntaris del teu equip perquè li falta gent.",
+   "contexto": "Voluntariat en un esdeveniment esportiu",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Dir-li que no, perquè la meva zona també és important.",
+     "puntos": {
+      "cooperacio": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Valorar amb el meu equip qui pot anar-hi sense deixar l'avituallament descobert.",
+     "puntos": {
+      "cooperacio": 2,
+      "resolucio-problemes": 2
+     }
+    },
+    {
+     "texto": "Cedir-li un voluntari i explicar-li per què ara no en puc cedir més.",
+     "puntos": {
+      "cooperacio": 2,
+      "resolucio-problemes": 1
+     }
+    },
+    {
+     "texto": "Enviar-hi els dos voluntaris sense valorar com quedarà l'avituallament.",
+     "puntos": {
+      "cooperacio": 1,
+      "resolucio-problemes": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "justificacion": "Col·laborar amb altres zones és necessari, però cal fer-ho valorant l'impacte en la pròpia; negar-se sense escoltar és el que menys ajuda l'esdeveniment.",
+   "expected_dimensions": [
+    "cooperacio",
+    "resolucio-problemes"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autonomia-1",
+   "competency_id": "autonomia",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "És el teu primer dia en una botiga de roba. L'encarregada és en una reunió i arriba un transportista amb una entrega de material que ningú no t'ha explicat com s'ha de rebre.",
+   "contexto": "Comerç",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Interrompre la reunió de l'encarregada perquè em digui què he de fer.",
+     "puntos": {
+      "autonomia": 0,
+      "responsabilitat": 1
+     }
+    },
+    {
+     "texto": "Rebre l'entrega, revisar l'albarà i guardar-ho tot en lloc segur fins que torni.",
+     "puntos": {
+      "autonomia": 2,
+      "responsabilitat": 2
+     }
+    },
+    {
+     "texto": "Dir al transportista que torni més tard perquè no sé què fer.",
+     "puntos": {
+      "autonomia": 0,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Col·locar el material a les prestatgeries tal com em sembli.",
+     "puntos": {
+      "autonomia": 1,
+      "responsabilitat": 0
+     }
+    }
+   ],
+   "justificacion": "Fer les accions bàsiques i prudents que la situació permet, sense prendre decisions que no et corresponen, resol l'imprevist i deixa la decisió final a qui toca.",
+   "expected_dimensions": [
+    "autonomia",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autonomia-2",
+   "competency_id": "autonomia",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Preparaves les proves amb un grup d'estudi que s'ha desfet perquè els altres han canviat de plans. A partir d'ara t'hauràs d'organitzar tu sol per continuar avançant.",
+   "contexto": "Preparació personal",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Esperar que algú torni a muntar un grup per continuar estudiant.",
+     "puntos": {
+      "autonomia": 0,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Estudiar quan tingui ganes, sense un pla concret.",
+     "puntos": {
+      "autonomia": 1,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Fer-me un pla setmanal amb objectius i revisar-lo cada diumenge.",
+     "puntos": {
+      "autonomia": 2,
+      "autogestio": 2
+     }
+    },
+    {
+     "texto": "Buscar un altre grup i, mentrestant, aturar l'estudi.",
+     "puntos": {
+      "autonomia": 0,
+      "autogestio": 1
+     }
+    }
+   ],
+   "justificacion": "Fer-se un pla propi i revisar-lo permet continuar avançant sense dependre dels altres; aturar-se a esperar fa perdre temps de preparació.",
+   "expected_dimensions": [
+    "autonomia",
+    "autogestio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autonomia-3",
+   "competency_id": "autonomia",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes d'administratiu i observes que el procediment intern per registrar les factures fa perdre molt de temps cada dia. Tens una idea concreta per simplificar-lo.",
+   "contexto": "Oficina administrativa",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Aplicar el canvi pel meu compte sense consultar-ho amb ningú.",
+     "puntos": {
+      "autonomia": 1,
+      "resolucio-problemes": 1
+     }
+    },
+    {
+     "texto": "Comentar als companys que el procediment és lent, sense proposar res.",
+     "puntos": {
+      "autonomia": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Seguir com sempre; si s'hagués de canviar, ja ho haurien fet.",
+     "puntos": {
+      "autonomia": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Preparar una proposta breu amb l'estalvi de temps i presentar-la al responsable.",
+     "puntos": {
+      "autonomia": 2,
+      "resolucio-problemes": 2
+     }
+    }
+   ],
+   "justificacion": "La iniciativa és més útil quan es converteix en una proposta concreta adreçada a qui pot decidir; canviar-ho sol pot crear problemes a la resta.",
+   "expected_dimensions": [
+    "autonomia",
+    "resolucio-problemes"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autonomia-4",
+   "competency_id": "autonomia",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "En una simulació a l'acadèmia, el monitor que guiava el vostre grup ha hagut d'absentar-se uns minuts i ningú no sap ben bé com continuar la tasca que us havia encarregat.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Decidir jo sol com continuar i dir a la resta del grup què ha de fer cadascú.",
+     "puntos": {
+      "autonomia": 1,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Esperar tots junts, sense fer res, fins que el monitor torni.",
+     "puntos": {
+      "autonomia": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Revisar les instruccions, proposar com seguir i anotar els dubtes per al monitor.",
+     "puntos": {
+      "autonomia": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Continuar jo amb la part que tinc clara i deixar la resta per quan torni.",
+     "puntos": {
+      "autonomia": 2,
+      "cooperacio": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "justificacion": "Prendre la iniciativa a partir de les instruccions rebudes i implicar el grup aprofita el temps; esperar sense fer res és la resposta menys útil.",
+   "expected_dimensions": [
+    "autonomia",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autonomia-5",
+   "competency_id": "autonomia",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Col·labores com a voluntari en un casal d'estiu. Un nen s'ha fet una petita rascada jugant i la monitora responsable és a l'altra punta del pati, ocupada amb un altre grup.",
+   "contexto": "Voluntariat en un casal d'estiu",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Anar a buscar la monitora a l'altra punta del pati, deixant el nen sol una estona.",
+     "puntos": {
+      "autonomia": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Dir al nen que vagi ell mateix a l'altra punta del pati a buscar la monitora.",
+     "puntos": {
+      "autonomia": 1,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Esperar que la monitora s'acosti per veure si cal fer res.",
+     "puntos": {
+      "autonomia": 0,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Curar-lo amb la farmaciola bàsica, calmar-lo i avisar després la monitora.",
+     "puntos": {
+      "autonomia": 2,
+      "orientacio-servei": 2
+     }
+    }
+   ],
+   "justificacion": "Davant d'una cura senzilla, actuar amb els recursos disponibles i informar després la responsable atén el nen sense deixar-lo sol ni endarrerir l'ajuda.",
+   "expected_dimensions": [
+    "autonomia",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autonomia-6",
+   "competency_id": "autonomia",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Fas el torn de nit a la recepció d'un hotel, sense cap superior. Un client baixa a queixar-se que l'aire condicionat de l'habitació no funciona i el tècnic no arriba fins al matí.",
+   "contexto": "Hostaleria, recepció",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Buscar una habitació equivalent lliure, oferir-li el canvi i registrar-ho.",
+     "puntos": {
+      "autonomia": 2,
+      "orientacio-servei": 2
+     }
+    },
+    {
+     "texto": "Oferir-li un ventilador i deixar una nota al tècnic perquè ho revisi al matí.",
+     "puntos": {
+      "autonomia": 1,
+      "orientacio-servei": 2
+     }
+    },
+    {
+     "texto": "Trucar al director a casa perquè decideixi ell què cal fer.",
+     "puntos": {
+      "autonomia": 1,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Dir-li que fins al matí no s'hi pot fer res i que ho comuniqui a la direcció.",
+     "puntos": {
+      "autonomia": 0,
+      "orientacio-servei": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "justificacion": "Buscar una solució dins de les pròpies funcions i deixar-ne constància respon al client i manté informat l'equip; no oferir res és el pitjor servei.",
+   "expected_dimensions": [
+    "autonomia",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-resolucio-problemes-1",
+   "competency_id": "resolucio-problemes",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Toques en un grup de música amateur i, vint minuts abans de començar un concert en una sala petita, el cable de l'amplificador deixa de funcionar.",
+   "contexto": "Activitat musical",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Mantenir la calma, provar el cable de recanvi i preparar un pla B.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "autocontrol": 2
+     }
+    },
+    {
+     "texto": "Anul·lar l'actuació perquè no es pot tocar en aquestes condicions.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Començar igualment sense amplificar i esperar que soni prou bé.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Discutir amb el company que s'encarregava del material.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "autocontrol": 0
+     }
+    }
+   ],
+   "justificacion": "Revisar les alternatives disponibles amb calma i tenir un pla B és la manera més eficaç de salvar l'activitat.",
+   "expected_dimensions": [
+    "resolucio-problemes",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-resolucio-problemes-2",
+   "competency_id": "resolucio-problemes",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes en un centre de jardineria i divendres a la tarda s'espatlla el reg automàtic d'un hivernacle. El tècnic no pot venir fins dilluns i fa molta calor.",
+   "contexto": "Centre de jardineria",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Regar-ho tot abundantment divendres perquè duri fins dilluns.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "responsabilitat": 1
+     }
+    },
+    {
+     "texto": "Organitzar un reg manual per torns el cap de setmana i deixar-ho anotat.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "responsabilitat": 2
+     }
+    },
+    {
+     "texto": "Esperar fins dilluns; potser les plantes aguanten.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Intentar desmuntar el sistema jo mateix sense coneixements.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "responsabilitat": 0
+     }
+    }
+   ],
+   "justificacion": "Una solució provisional organitzada i documentada protegeix les plantes fins que arribi el tècnic, sense riscos innecessaris.",
+   "expected_dimensions": [
+    "resolucio-problemes",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "03",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:11",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-resolucio-problemes-3",
+   "competency_id": "resolucio-problemes",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Formes part de la comissió que organitza la festa de final de curs de l'institut. Una setmana abans, el local llogat us comunica que anul·la la reserva.",
+   "contexto": "Estudis, organització d'activitats",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Anul·lar la festa perquè ja no hi ha temps per a res.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Reservar el primer local disponible que trobi, encara que costi el doble.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Buscar alternatives amb pressupost i decidir-ho amb la comissió en 48 hores.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Demanar idees a tothom pel xat i esperar a veure què surt.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "cooperacio": 1
+     }
+    }
+   ],
+   "justificacion": "Analitzar opcions amb dades i decidir-les amb la comissió en un termini curt combina rapidesa i bon criteri.",
+   "expected_dimensions": [
+    "resolucio-problemes",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-resolucio-problemes-4",
+   "competency_id": "resolucio-problemes",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "En un exercici de planificació a l'acadèmia, el vostre grup ha de cobrir tres punts d'un recorregut d'una activitat pública, però només disposeu de dos equips.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Cobrir-ne dos a l'atzar i esperar noves instruccions.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Prioritzar els punts, proposar torns rotatius i acordar-ho amb l'equip.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Cobrir els dos punts prioritaris i revisar el tercer periòdicament.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "cooperacio": 1
+     }
+    },
+    {
+     "texto": "Dividir cada equip en dues meitats per poder arribar als tres punts alhora.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "cooperacio": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "justificacion": "Quan els recursos no arriben a tot, cal prioritzar amb criteri i buscar fórmules com la rotació; repartir a l'atzar és la pitjor opció.",
+   "expected_dimensions": [
+    "resolucio-problemes",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-resolucio-problemes-5",
+   "competency_id": "resolucio-problemes",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fas atenció al client d'una botiga en línia i, al llarg del mateix matí, diversos clients es queixen que no han rebut el correu de confirmació de la comanda.",
+   "contexto": "Atenció al client en línia",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Respondre cada queixa per separat reenviant a mà la confirmació a cada client.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Dir als clients que revisin la carpeta de correu brossa i tancar el cas com a resolt.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Esperar a veure si el problema es resol sol.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Comprovar si és un error comú, avisar l'equip tècnic i informar els clients.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "orientacio-servei": 2
+     }
+    }
+   ],
+   "justificacion": "Detectar el patró i atacar la causa resol el problema per a tots, mentre que informar els clients manté la confiança.",
+   "expected_dimensions": [
+    "resolucio-problemes",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-resolucio-problemes-6",
+   "competency_id": "resolucio-problemes",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Ets president de la comunitat de veïns i dos veïns discuteixen per l'ús del pati comú: un hi vol fer reunions familiars i l'altre es queixa del soroll. Tots dos et demanen que els donis la raó.",
+   "contexto": "Família i comunitat",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Convocar una reunió de la comunitat perquè es voti una norma d'ús del pati.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Donar la raó al veí que fa més temps que viu a l'edifici.",
+     "puntos": {
+      "resolucio-problemes": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Dir-los que és un tema privat, que no em correspon, i que s'ho arreglin entre ells.",
+     "puntos": {
+      "resolucio-problemes": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Escoltar-los per separat i proposar-los un acord d'horaris d'ús del pati.",
+     "puntos": {
+      "resolucio-problemes": 2,
+      "habilitats-socials": 2
+     }
+    }
+   ],
+   "orden_recomendado": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "justificacion": "Entendre les dues posicions i proposar un acord concret resol el conflicte de fons; desentendre's el deixa créixer.",
+   "expected_dimensions": [
+    "resolucio-problemes",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-orientacio-servei-1",
+   "competency_id": "orientacio-servei",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Fas pràctiques en una biblioteca de barri i una senyora gran et diu que no sap fer servir l'ordinador per demanar cita al centre de salut a través d'internet.",
+   "contexto": "Pràctiques en un servei públic",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Fer-li jo el tràmit ràpidament sense explicar-li res.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Ajudar-la pas a pas perquè ho pugui fer sola.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Donar-li un full d'instruccions impreses i continuar amb la meva feina.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Dir-li que demani ajuda a algun familiar o a un veí que en sàpiga.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "habilitats-socials": 0
+     }
+    }
+   ],
+   "justificacion": "Acompanyar la persona i explicar-li el procés resol la necessitat i li dona eines per a la propera vegada.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-orientacio-servei-2",
+   "competency_id": "orientacio-servei",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes en una oficina de turisme i arriba un visitant molt enfadat perquè l'excursió que havia reservat amb una empresa externa s'ha cancel·lat a última hora.",
+   "contexto": "Atenció al públic, turisme",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Explicar-li que la cancel·lació no és culpa meva.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "autocontrol": 1
+     }
+    },
+    {
+     "texto": "Donar-li el telèfon de l'empresa organitzadora perquè hi reclami i atendre el següent.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Respondre-li amb el mateix to perquè entengui que aquesta no és manera de parlar.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Escoltar-lo, reconèixer la molèstia i oferir-li alternatives concretes.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "autocontrol": 2
+     }
+    }
+   ],
+   "justificacion": "Escoltar i oferir alternatives transforma una queixa en una solució; justificar-se o contestar amb el mateix to agreuja la situació.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-orientacio-servei-3",
+   "competency_id": "orientacio-servei",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fas de socorrista en una piscina d'estiu. Unes famílies es queixen que un grup de joves crida i salta molt a prop dels infants, tot i que no incompleixen cap norma escrita.",
+   "contexto": "Piscina d'estiu",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Dir a les famílies que no puc fer res perquè els joves no incompleixen cap norma.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Advertir els joves que, si continuen, els faré marxar de la piscina.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Suggerir a les famílies que es canviïn de zona, més lluny dels joves.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Parlar amb els joves amb respecte i proposar-los un altre espai.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "habilitats-socials": 2
+     }
+    }
+   ],
+   "justificacion": "Mediar amb respecte entre els usuaris permet que tothom gaudeixi de l'espai; amenaçar o desentendre's no resol les necessitats de ningú.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-orientacio-servei-4",
+   "competency_id": "orientacio-servei",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Col·labores en un menjador social i una persona et demana una ració extra per a un familiar que no pot venir. La norma interna és una ració per persona present.",
+   "contexto": "Voluntariat en un menjador social",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Explicar-li la norma amb empatia i consultar al coordinador si hi ha alguna via.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "responsabilitat": 2
+     }
+    },
+    {
+     "texto": "Explicar-li la norma i informar-la d'altres recursos de la zona.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "responsabilitat": 2
+     }
+    },
+    {
+     "texto": "Donar-li la ració extra d'amagat perquè em sap greu dir-li que no i ningú no ho veurà.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Negar-li la ració extra sense donar-li cap explicació ni alternativa.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "responsabilitat": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "justificacion": "Respectar la norma no impedeix buscar solucions: explicar-la amb empatia i consultar alternatives atén la persona sense actuar d'amagat.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-orientacio-servei-5",
+   "competency_id": "orientacio-servei",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes en una ferreteria i un client necessita una peça que no teniu ni podeu rebre aviat. Saps que una altra botiga del barri la ven.",
+   "contexto": "Comerç",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Dir-li que no la tenim i que torni a preguntar d'aquí a unes setmanes per si ens arriba.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "autonomia": 0
+     }
+    },
+    {
+     "texto": "Dir-li on la pot trobar i oferir-me a encarregar-la si prefereix esperar.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "autonomia": 2
+     }
+    },
+    {
+     "texto": "Vendre-li una peça semblant de les que tenim, encara que no sigui l'adequada.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "autonomia": 1
+     }
+    },
+    {
+     "texto": "Oferir-me a encarregar-la sense comentar-li l'altra opció.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "autonomia": 1
+     }
+    }
+   ],
+   "justificacion": "Prioritzar la necessitat real del client, encara que no comporti una venda immediata, és la resposta més honesta i útil.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "autonomia"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-orientacio-servei-6",
+   "competency_id": "orientacio-servei",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "En un exercici de rol d'atenció a la ciutadania a l'acadèmia, una persona que no entén bé ni el català ni el castellà intenta explicar-te que ha perdut la cartera.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Donar-li un full escrit amb l'adreça i demanar-li que torni acompanyada d'algú.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Repetir-li el mateix més fort fins que ho entengui.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Parlar a poc a poc, fer servir gestos o un traductor i comprovar que m'entén.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Buscar algú proper que parli el seu idioma perquè faci d'intèrpret.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "habilitats-socials": 1
+     }
+    }
+   ],
+   "orden_recomendado": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "justificacion": "Adaptar la comunicació i comprovar la comprensió fa possible una atenció efectiva; alçar la veu no ajuda i pot intimidar.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "04",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:30:46",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-adaptabilitat-1",
+   "competency_id": "adaptabilitat",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Treballes en una cafeteria i l'encarregat anuncia que a partir de dilluns es farà servir un programa de caixa nou que encara no has vist mai.",
+   "contexto": "Hostaleria",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Queixar-me a l'encarregat que el sistema antic funcionava millor i era més senzill.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Esperar a dilluns i aprendre a fer-lo servir sobre la marxa, amb els clients davant.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Demanar a un company que cobri ell a la caixa mentre jo atenc les taules els primers dies.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autogestio": 1
+     }
+    },
+    {
+     "texto": "Demanar formació, practicar abans del torn i preguntar dubtes.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "autogestio": 2
+     }
+    }
+   ],
+   "justificacion": "Preparar-se activament per al canvi redueix errors i estrès el primer dia; resistir-s'hi o evitar-lo no ajuda ni a tu ni a l'equip.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "autogestio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-adaptabilitat-2",
+   "competency_id": "adaptabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fas un semestre d'intercanvi en una altra ciutat i descobreixes que els horaris, el ritme de les classes i la manera de treballar són molt diferents dels que coneixes.",
+   "contexto": "Estudis d'intercanvi",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Observar com funciona, preguntar a companys locals i ajustar-me.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Mantenir la meva manera d'estudiar de sempre encara que aquí no encaixi.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Relacionar-me només amb estudiants del meu país, amb qui m'entenc millor.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Adaptar-me als horaris, però evitar participar a classe per no equivocar-me.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "habilitats-socials": 0
+     }
+    }
+   ],
+   "justificacion": "Observar, preguntar i ajustar-se és la via més ràpida per integrar-se en un entorn nou.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-adaptabilitat-3",
+   "competency_id": "adaptabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "A mitja temporada canvia l'entrenador del teu equip de voleibol i proposa un sistema de joc molt diferent del que fèieu, que de moment us fa perdre partits.",
+   "contexto": "Esport",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Continuar jugant com abans, perquè amb l'altre sistema guanyàvem més partits.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Donar-li una oportunitat, entrenar-lo i plantejar els dubtes.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Criticar el canvi amb els companys al vestidor després de cada derrota.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Acceptar-lo, però sense esforçar-me gaire a entendre'l ni a entrenar-lo.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "cooperacio": 0
+     }
+    }
+   ],
+   "justificacion": "Un canvi de sistema necessita temps i implicació de tothom; donar-li una oportunitat i plantejar els dubtes pel canal adequat és el més constructiu.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-adaptabilitat-4",
+   "competency_id": "adaptabilitat",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Comences una feina temporal en un magatzem per preparar comandes, però el primer dia et diuen que t'han de destinar a fer inventari, una tasca per a la qual no t'havien format.",
+   "contexto": "Logística, feina temporal",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Començar l'inventari i preguntar els dubtes a mesura que surtin.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "responsabilitat": 1
+     }
+    },
+    {
+     "texto": "Fer-lo com pugui sense preguntar res per no molestar els encarregats el primer dia.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Dir que només faré allò per al que m'han contractat.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Acceptar el canvi, demanar les instruccions bàsiques i començar amb cura.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "responsabilitat": 2
+     }
+    }
+   ],
+   "orden_recomendado": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "justificacion": "Acceptar la nova tasca i assegurar-se d'entendre-la abans de començar combina flexibilitat i rigor; negar-s'hi és el menys adequat.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-adaptabilitat-5",
+   "competency_id": "adaptabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "A l'acadèmia, la sessió pràctica que estava prevista a l'exterior es trasllada a l'aula per la pluja i el format canvia completament a última hora.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Proposar ajornar la sessió per fer-la quan millori el temps.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Mostrar el meu malestar perquè s'havia programat d'una altra manera.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Ajustar-me al nou format amb bona actitud i aprofitar la sessió.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "autocontrol": 2
+     }
+    },
+    {
+     "texto": "Participar-hi però amb poc interès, esperant la sessió pràctica.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autocontrol": 1
+     }
+    }
+   ],
+   "justificacion": "Els canvis d'última hora són habituals; adaptar-s'hi amb bona actitud permet aprofitar igualment el temps de formació.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-adaptabilitat-6",
+   "competency_id": "adaptabilitat",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Un familiar gran ha de venir a viure a casa vostra durant uns mesos. Això canvia els horaris i els espais de la casa just quan estàs en plena preparació del procés.",
+   "contexto": "Família",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Deixar d'estudiar fins que la situació s'estabilitzi.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Parlar-ho amb la família i reorganitzar l'horari i l'espai d'estudi.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "autogestio": 2
+     }
+    },
+    {
+     "texto": "Passar a estudiar a primera hora del matí, sense parlar-ho amb ningú.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autogestio": 2
+     }
+    },
+    {
+     "texto": "Mantenir el meu horari i demanar que no facin soroll.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autogestio": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "justificacion": "Reorganitzar-se tenint en compte la nova situació familiar permet continuar la preparació; aturar-la és la resposta que més perjudica.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "autogestio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autocontrol-1",
+   "competency_id": "autocontrol",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Fas atenció telefònica en una empresa de subministraments i un client t'insulta per una factura errònia que no has emès tu.",
+   "contexto": "Atenció telefònica",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Penjar-li el telèfon immediatament perquè no he de tolerar insults.",
+     "puntos": {
+      "autocontrol": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Respondre-li amb el mateix to perquè entengui que m'ha de respectar com a treballador.",
+     "puntos": {
+      "autocontrol": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Mantenir la calma, posar límits amb respecte i centrar-me en la factura.",
+     "puntos": {
+      "autocontrol": 2,
+      "orientacio-servei": 2
+     }
+    },
+    {
+     "texto": "Escoltar en silenci i passar-lo a un altre company.",
+     "puntos": {
+      "autocontrol": 1,
+      "orientacio-servei": 0
+     }
+    }
+   ],
+   "justificacion": "Mantenir la calma i posar límits respectuosos permet reconduir la conversa cap a la solució, sense entrar en l'escalada.",
+   "expected_dimensions": [
+    "autocontrol",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autocontrol-2",
+   "competency_id": "autocontrol",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "En un partit d'handbol, un jugador rival et provoca i et fa comentaris ofensius durant tota la primera part, i l'àrbitre no ho veu.",
+   "contexto": "Esport",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Tornar-li la provocació quan l'àrbitre no miri, perquè vegi que no m'intimida.",
+     "puntos": {
+      "autocontrol": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Queixar-me constantment a l'àrbitre perquè l'acabi sancionant.",
+     "puntos": {
+      "autocontrol": 1,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Demanar el canvi a l'entrenador per no perdre els nervis al camp.",
+     "puntos": {
+      "autocontrol": 1,
+      "cooperacio": 1
+     }
+    },
+    {
+     "texto": "Centrar-me en el joc, no respondre i dir-ho a l'entrenador.",
+     "puntos": {
+      "autocontrol": 2,
+      "cooperacio": 2
+     }
+    }
+   ],
+   "justificacion": "No entrar en la provocació i canalitzar-ho a través de l'entrenador protegeix el rendiment propi i el de l'equip.",
+   "expected_dimensions": [
+    "autocontrol",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autocontrol-3",
+   "competency_id": "autocontrol",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "En un simulacre de prova a l'acadèmia, a mitja prova t'adones que has respost malament tota una pàgina perquè havies llegit malament l'enunciat, i queda poc temps.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Respirar, prioritzar el que puc corregir en el temps que queda i continuar.",
+     "puntos": {
+      "autocontrol": 2,
+      "resolucio-problemes": 2
+     }
+    },
+    {
+     "texto": "Deixar la prova a mitges perquè ja no hi ha res a fer.",
+     "puntos": {
+      "autocontrol": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Intentar corregir-ho tot amb pressa encara que m'equivoqui més en la resta de preguntes.",
+     "puntos": {
+      "autocontrol": 1,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Continuar amb la resta sense tornar enrere ni revisar res.",
+     "puntos": {
+      "autocontrol": 1,
+      "resolucio-problemes": 1
+     }
+    }
+   ],
+   "justificacion": "Recuperar la calma i prioritzar permet aprofitar el temps restant; la precipitació o l'abandonament empitjoren el resultat.",
+   "expected_dimensions": [
+    "autocontrol",
+    "resolucio-problemes"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autocontrol-4",
+   "competency_id": "autocontrol",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Controles els accessos d'un concert a l'aire lliure. A l'entrada hi ha empentes i una persona sense entrada et crida que la deixis passar, mentre altres esperen.",
+   "contexto": "Feina de control d'accessos",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Discutir amb la persona davant de tothom per deixar clar qui decideix aquí.",
+     "puntos": {
+      "autocontrol": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Deixar-la passar per evitar més tensió.",
+     "puntos": {
+      "autocontrol": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Mantenir la calma i explicar amb fermesa i cortesia que cal entrada.",
+     "puntos": {
+      "autocontrol": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Mantenir-me ferm sense entrar en discussió i avisar el responsable.",
+     "puntos": {
+      "autocontrol": 2,
+      "habilitats-socials": 1
+     }
+    }
+   ],
+   "orden_recomendado": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "justificacion": "Fermesa serena i comunicació clara mantenen el control de la situació; cedir a la pressió o entrar en discussió l'empitjoren.",
+   "expected_dimensions": [
+    "autocontrol",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "05",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:31:58",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autocontrol-5",
+   "competency_id": "autocontrol",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes en un taller mecànic i el teu cap et corregeix davant d'un client d'una manera que consideres injusta, perquè l'error no havia estat teu.",
+   "contexto": "Taller mecànic",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Contestar-li en aquell moment, davant del client, per defensar la meva feina.",
+     "puntos": {
+      "autocontrol": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "No respondre davant del client i parlar-ne després en privat.",
+     "puntos": {
+      "autocontrol": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Callar i no tornar a parlar-ne mai més amb el cap, encara que em molesti.",
+     "puntos": {
+      "autocontrol": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Explicar al client, en aquell moment, que el cap s'equivoca i que no va ser cosa meva.",
+     "puntos": {
+      "autocontrol": 0,
+      "habilitats-socials": 0
+     }
+    }
+   ],
+   "justificacion": "Contenir la reacció en públic i aclarir-ho després en privat permet defensar la teva posició sense danyar la relació ni la imatge del taller.",
+   "expected_dimensions": [
+    "autocontrol",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autocontrol-6",
+   "competency_id": "autocontrol",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Ets voluntari al punt d'assistència d'una cursa popular. Diverses persones et demanen ajuda alhora, algunes cridant, i disposes de poc material.",
+   "contexto": "Voluntariat en un esdeveniment",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Atendre primer qui ho necessita més i demanar reforços.",
+     "puntos": {
+      "autocontrol": 2,
+      "resolucio-problemes": 2
+     }
+    },
+    {
+     "texto": "Atendre per ordre d'arribada mentre demano més material.",
+     "puntos": {
+      "autocontrol": 2,
+      "resolucio-problemes": 1
+     }
+    },
+    {
+     "texto": "Atendre primer qui crida més per calmar la situació.",
+     "puntos": {
+      "autocontrol": 1,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Bloquejar-me i esperar que arribi algú amb més experiència.",
+     "puntos": {
+      "autocontrol": 0,
+      "resolucio-problemes": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "justificacion": "Mantenir la calma permet prioritzar segons la necessitat real i activar ajuda; deixar-se arrossegar pel soroll o bloquejar-se resta eficàcia.",
+   "expected_dimensions": [
+    "autocontrol",
+    "resolucio-problemes"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autogestio-1",
+   "competency_id": "autogestio",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Fa tres setmanes que entrenes per a les proves físiques i, malgrat l'esforç, els temps de la cursa de resistència no milloren gens.",
+   "contexto": "Preparació física",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Abandonar aquesta prova i centrar-me en les altres, on tinc més opcions.",
+     "puntos": {
+      "autogestio": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Entrenar el doble cada dia, sense descans, fins que els temps millorin.",
+     "puntos": {
+      "autogestio": 1,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Revisar el pla, registrar els entrenaments i demanar consell.",
+     "puntos": {
+      "autogestio": 2,
+      "resolucio-problemes": 2
+     }
+    },
+    {
+     "texto": "Continuar igual i confiar que la millora acabarà arribant amb el temps.",
+     "puntos": {
+      "autogestio": 1,
+      "resolucio-problemes": 1
+     }
+    }
+   ],
+   "justificacion": "Analitzar el propi progrés i ajustar el pla, amb ajuda si cal, és més eficaç que insistir a cegues o abandonar.",
+   "expected_dimensions": [
+    "autogestio",
+    "resolucio-problemes"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autogestio-2",
+   "competency_id": "autogestio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes a temps parcial mentre prepares el procés i fa unes setmanes que dorms poc, et costa concentrar-te i notes que rendeixes menys en l'estudi.",
+   "contexto": "Feina i estudis",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Prendre més cafè i begudes energètiques per aguantar el ritme de feina i estudi.",
+     "puntos": {
+      "autogestio": 0,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Retallar hores d'estudi a mesura que em faci falta, sense cap pla.",
+     "puntos": {
+      "autogestio": 1,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Demanar a la feina reduir hores, sense valorar abans com m'afectaria.",
+     "puntos": {
+      "autogestio": 0,
+      "responsabilitat": 1
+     }
+    },
+    {
+     "texto": "Revisar com faig servir el temps, fixar descansos i prioritzar.",
+     "puntos": {
+      "autogestio": 2,
+      "responsabilitat": 2
+     }
+    }
+   ],
+   "justificacion": "Gestionar l'energia i el temps de manera planificada és la base per mantenir el rendiment de manera sostenible.",
+   "expected_dimensions": [
+    "autogestio",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autogestio-3",
+   "competency_id": "autogestio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "En un curs de formació en línia, el tutor et retorna un treball que t'havia costat molt amb comentaris força crítics sobre l'estructura i les fonts.",
+   "contexto": "Formació",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Analitzar els comentaris, aclarir dubtes i aplicar-ho al proper treball.",
+     "puntos": {
+      "autogestio": 2,
+      "autocontrol": 2
+     }
+    },
+    {
+     "texto": "Pensar que el tutor no ha entès el treball i no fer cas dels comentaris.",
+     "puntos": {
+      "autogestio": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Acceptar-ho, però desanimar-me i fer el mínim a partir d'ara.",
+     "puntos": {
+      "autogestio": 0,
+      "autocontrol": 1
+     }
+    },
+    {
+     "texto": "Refer el treball sencer tot i que ja està avaluat.",
+     "puntos": {
+      "autogestio": 1,
+      "autocontrol": 0
+     }
+    }
+   ],
+   "justificacion": "Una crítica és una font d'aprenentatge: entendre-la i aplicar-la al següent treball és el que fa progressar.",
+   "expected_dimensions": [
+    "autogestio",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autogestio-4",
+   "competency_id": "autogestio",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Fa mesos que prepares el procés i uns amics et proposen un viatge de deu dies just tres setmanes abans de les proves.",
+   "contexto": "Vida personal i preparació",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Anar-hi sense pensar-hi gaire i deixar l'estudi per més endavant, quan torni del viatge.",
+     "puntos": {
+      "autogestio": 0,
+      "motivacio": 0
+     }
+    },
+    {
+     "texto": "Valorar-ho amb el meu pla i proposar un viatge més curt o en una altra data.",
+     "puntos": {
+      "autogestio": 2,
+      "motivacio": 2
+     }
+    },
+    {
+     "texto": "Anar-hi, però endur-me material i reservar algunes hores per estudiar.",
+     "puntos": {
+      "autogestio": 1,
+      "motivacio": 2
+     }
+    },
+    {
+     "texto": "Anar-hi i recuperar el temps perdut a la tornada.",
+     "puntos": {
+      "autogestio": 1,
+      "motivacio": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "justificacion": "Prendre decisions personals tenint en compte els propis objectius permet equilibrar vida social i preparació sense posar en risc l'esforç fet.",
+   "expected_dimensions": [
+    "autogestio",
+    "motivacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autogestio-5",
+   "competency_id": "autogestio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "A l'associació juvenil on fas voluntariat et proposen coordinar un projecte nou amb deu persones, però no tens experiència gestionant grups.",
+   "contexto": "Voluntariat juvenil",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Rebutjar-ho, perquè no em veig capaç de coordinar tanta gent sense experiència.",
+     "puntos": {
+      "autogestio": 0,
+      "autonomia": 0
+     }
+    },
+    {
+     "texto": "Acceptar-ho i improvisar sobre la marxa, ja aprendré amb la pràctica.",
+     "puntos": {
+      "autogestio": 1,
+      "autonomia": 1
+     }
+    },
+    {
+     "texto": "Acceptar-ho, demanar formació i el suport d'algú amb experiència.",
+     "puntos": {
+      "autogestio": 2,
+      "autonomia": 2
+     }
+    },
+    {
+     "texto": "Acceptar-ho només si algú altre del grup en fa la part més difícil.",
+     "puntos": {
+      "autogestio": 1,
+      "autonomia": 0
+     }
+    }
+   ],
+   "justificacion": "Assumir reptes nous amb un pla d'aprenentatge i suport és la manera de créixer sense comprometre el projecte.",
+   "expected_dimensions": [
+    "autogestio",
+    "autonomia"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-autogestio-6",
+   "competency_id": "autogestio",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Després d'un exercici pràctic a l'acadèmia en què el teu rendiment no ha estat bo, l'instructor us demana fer una autoavaluació per escrit.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Assenyalar els errors principals, però sense un pla concret de millora.",
+     "puntos": {
+      "autogestio": 2,
+      "responsabilitat": 1
+     }
+    },
+    {
+     "texto": "Fer-la ràpid i destacar només el que ha anat bé.",
+     "puntos": {
+      "autogestio": 1,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Atribuir el mal resultat a les condicions de l'exercici, com el temps o el material disponible.",
+     "puntos": {
+      "autogestio": 0,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Identificar amb honestedat què ha fallat, què puc millorar i com ho treballaré.",
+     "puntos": {
+      "autogestio": 2,
+      "responsabilitat": 2
+     }
+    }
+   ],
+   "orden_recomendado": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "justificacion": "Una autoavaluació honesta i amb un pla concret és útil per millorar; justificar-se amb factors externs impedeix aprendre.",
+   "expected_dimensions": [
+    "autogestio",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-motivacio-1",
+   "competency_id": "motivacio",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Fas pràctiques en una entitat de servei a la comunitat i et toca passar tot el matí ordenant i arxivant expedients, una tasca rutinària i poc vistosa.",
+   "contexto": "Pràctiques en una entitat",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Fer-la de pressa per passar a tasques més interessants.",
+     "puntos": {
+      "motivacio": 1,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Fer-la amb cura, entenent que també forma part del servei que oferim.",
+     "puntos": {
+      "motivacio": 2,
+      "responsabilitat": 2
+     }
+    },
+    {
+     "texto": "Demanar que la faci algú altre perquè jo vinc a aprendre altres coses.",
+     "puntos": {
+      "motivacio": 0,
+      "responsabilitat": 0
+     }
+    },
+    {
+     "texto": "Ajornar-la fins que no quedi més remei.",
+     "puntos": {
+      "motivacio": 0,
+      "responsabilitat": 0
+     }
+    }
+   ],
+   "justificacion": "Valorar el sentit de les tasques rutinàries dins del servei global mostra identificació amb la feina i assegura que es fan bé.",
+   "expected_dimensions": [
+    "motivacio",
+    "responsabilitat"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-motivacio-2",
+   "competency_id": "motivacio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Un amic et pregunta per què vols entrar en un cos de servei públic i, abans que responguis, afirma que segur que és només per l'estabilitat laboral.",
+   "contexto": "Entorn personal",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Donar-li la raó, sense més, per no entrar en un debat que no porta enlloc.",
+     "puntos": {
+      "motivacio": 0,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Dir-li que no ho entendria i que no cal parlar-ne més, per tallar el tema.",
+     "puntos": {
+      "motivacio": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Respondre que l'estabilitat és important, com per a tothom, i canviar de tema.",
+     "puntos": {
+      "motivacio": 1,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Explicar-li amb sinceritat els meus motius, també els de servei.",
+     "puntos": {
+      "motivacio": 2,
+      "habilitats-socials": 2
+     }
+    }
+   ],
+   "justificacion": "Saber explicar amb sinceritat i claredat els propis motius reflecteix una motivació pensada i coherent.",
+   "expected_dimensions": [
+    "motivacio",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "06",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:32:33",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-motivacio-3",
+   "competency_id": "motivacio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Tens una feina d'estiu en un càmping i et proposen participar en una formació voluntària de primers auxilis fora de l'horari laboral.",
+   "contexto": "Feina d'estiu",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Rebutjar-ho, perquè no és obligatori ni està remunerat com a hores de feina.",
+     "puntos": {
+      "motivacio": 0,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Apuntar-m'hi només si al final em donen un certificat acreditatiu.",
+     "puntos": {
+      "motivacio": 1,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Dir que sí de moment i decidir l'últim dia si hi vaig o no.",
+     "puntos": {
+      "motivacio": 0,
+      "autogestio": 1
+     }
+    },
+    {
+     "texto": "Apuntar-m'hi, perquè em serà útil per a la feina.",
+     "puntos": {
+      "motivacio": 2,
+      "autogestio": 2
+     }
+    }
+   ],
+   "justificacion": "L'interès per formar-se en allò que permet ajudar millor les persones mostra implicació i ganes de créixer.",
+   "expected_dimensions": [
+    "motivacio",
+    "autogestio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-motivacio-4",
+   "competency_id": "motivacio",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Durant una xerrada a l'acadèmia sobre els valors i la funció de servei de l'organització, uns companys comenten en veu baixa que és una pèrdua de temps.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Seguir atent i després compartir amb ells què m'ha aportat.",
+     "puntos": {
+      "motivacio": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Seguir atent a la xerrada sense entrar en els comentaris dels companys.",
+     "puntos": {
+      "motivacio": 2,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Riure els comentaris per no quedar malament amb el grup de companys.",
+     "puntos": {
+      "motivacio": 0,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Desconnectar també, perquè ja conec el contingut de la xerrada.",
+     "puntos": {
+      "motivacio": 0,
+      "habilitats-socials": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "justificacion": "Mantenir l'interès pels valors de l'organització i compartir-ho de manera constructiva mostra identificació; desconnectar és el menys adequat.",
+   "expected_dimensions": [
+    "motivacio",
+    "habilitats-socials"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-motivacio-5",
+   "competency_id": "motivacio",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fa temps que prepares el procés i un conegut que treballa en un àmbit similar et diu que no paga la pena, perquè la feina és molt exigent i poc reconeguda.",
+   "contexto": "Preparació personal",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Deixar la preparació, perquè potser té raó i no val la pena.",
+     "puntos": {
+      "motivacio": 0,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Contrastar-ho, repensar els meus motius i decidir amb calma.",
+     "puntos": {
+      "motivacio": 2,
+      "autogestio": 2
+     }
+    },
+    {
+     "texto": "Ignorar-ho completament i continuar sense pensar-hi gens.",
+     "puntos": {
+      "motivacio": 1,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Reduir l'estudi mentre decideixo si continuo.",
+     "puntos": {
+      "motivacio": 0,
+      "autogestio": 1
+     }
+    }
+   ],
+   "justificacion": "Contrastar opinions i revisar els propis motius enforteix una motivació realista i sòlida.",
+   "expected_dimensions": [
+    "motivacio",
+    "autogestio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-motivacio-6",
+   "competency_id": "motivacio",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Col·labores en un projecte de millora del barri amb una associació de veïns. La participació és més baixa del que esperàveu i alguns voluntaris volen plegar.",
+   "contexto": "Voluntariat comunitari",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Deixar-ho també, perquè sense gent no té sentit.",
+     "puntos": {
+      "motivacio": 0,
+      "cooperacio": 1
+     }
+    },
+    {
+     "texto": "Criticar davant de tothom els que volen plegar per la seva poca implicació.",
+     "puntos": {
+      "motivacio": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Recordar el sentit del projecte i proposar objectius petits i assumibles.",
+     "puntos": {
+      "motivacio": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Continuar jo amb el projecte encara que la resta del grup ho deixi.",
+     "puntos": {
+      "motivacio": 2,
+      "cooperacio": 1
+     }
+    }
+   ],
+   "orden_recomendado": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "justificacion": "Recuperar el sentit del projecte i plantejar fites assumibles manté la implicació del grup; retreure-ho als companys l'afebleix.",
+   "expected_dimensions": [
+    "motivacio",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-habilitats-socials-1",
+   "competency_id": "habilitats-socials",
+   "formato": "eleccion",
+   "dificultad": 1,
+   "situacion": "Comences a treballar en una oficina on no coneixes ningú. Els companys ja tenen les seves rutines i converses i ningú no s'ha presentat.",
+   "contexto": "Oficina",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Esperar que siguin ells qui s'acostin a mi.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Centrar-me en la meva feina i parlar amb els companys només quan calgui.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "cooperacio": 1
+     }
+    },
+    {
+     "texto": "Presentar-me, interessar-me per la feina de cadascú i oferir ajuda.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Fer bromes de seguida amb molta confiança per caure bé a tothom des del primer dia.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "cooperacio": 0
+     }
+    }
+   ],
+   "justificacion": "Prendre la iniciativa amb respecte i interès per la feina dels altres facilita la integració i la col·laboració futura.",
+   "expected_dimensions": [
+    "habilitats-socials",
+    "cooperacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-habilitats-socials-2",
+   "competency_id": "habilitats-socials",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Comparteixes pis i un dels companys fa molt soroll de matinada, cosa que t'impedeix descansar abans de les jornades d'estudi.",
+   "contexto": "Vida quotidiana",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Deixar-li una nota enganxada a la porta de l'habitació demanant-li silenci.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Queixar-me'n a la resta de companys de pis perquè siguin ells qui li ho diguin.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Picar a la paret cada vegada que faci soroll.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Parlar-hi amb calma, explicar com m'afecta i buscar junts una solució.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "autocontrol": 2
+     }
+    }
+   ],
+   "justificacion": "Una conversa directa i serena, centrada en la solució, és la forma més respectuosa i eficaç d'abordar un conflicte de convivència.",
+   "expected_dimensions": [
+    "habilitats-socials",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-habilitats-socials-3",
+   "competency_id": "habilitats-socials",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fas una exposició oral en un curs de formació i un company et fa una pregunta concreta que no saps respondre.",
+   "contexto": "Formació",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Reconèixer que no ho sé, explicar el que sí sé i oferir-me a buscar-ho.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "autocontrol": 2
+     }
+    },
+    {
+     "texto": "Inventar una resposta perquè no es noti que no ho sé.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "autocontrol": 1
+     }
+    },
+    {
+     "texto": "Respondre que la pregunta no té relació amb el tema.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Dir que ho mirarem després i passar ràpidament a la diapositiva següent sense tornar-hi.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "autocontrol": 0
+     }
+    }
+   ],
+   "justificacion": "Reconèixer amb naturalitat el que no se sap i oferir-se a completar-ho transmet honestedat i genera confiança.",
+   "expected_dimensions": [
+    "habilitats-socials",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-habilitats-socials-4",
+   "competency_id": "habilitats-socials",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "En un exercici de rol de mediació a l'acadèmia, dues persones discuteixen acaloradament per una plaça d'aparcament i us demanen que intervingueu.",
+   "contexto": "Pràctica a l'acadèmia",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Escoltar les dues parts i decidir jo mateix qui té raó en la disputa.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "autocontrol": 1
+     }
+    },
+    {
+     "texto": "Demanar-los que es calmin alçant la veu per sobre d'elles perquè em sentin.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Esperar que ho resolguin elles mateixes sense intervenir-hi.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "autocontrol": 0
+     }
+    },
+    {
+     "texto": "Separar-les amb calma, escoltar-les i proposar una sortida.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "autocontrol": 2
+     }
+    }
+   ],
+   "orden_recomendado": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "justificacion": "Escoltar cada part amb calma i facilitar un acord fa baixar la tensió; alçar la veu o inhibir-se l'augmenten.",
+   "expected_dimensions": [
+    "habilitats-socials",
+    "autocontrol"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-habilitats-socials-5",
+   "competency_id": "habilitats-socials",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes en una botiga d'electrònica i un client et demana consell fent servir termes tècnics que no coneixes.",
+   "contexto": "Comerç",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Fer veure que l'entenc i recomanar-li el producte més venut.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Derivar-lo a un company sense intentar entendre què vol.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "Preguntar-li què vol dir per entendre bé què necessita.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "orientacio-servei": 2
+     }
+    },
+    {
+     "texto": "Respondre-li en termes generals i esperar que en quedi satisfet.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "orientacio-servei": 0
+     }
+    }
+   ],
+   "justificacion": "Preguntar per entendre bé la necessitat és la base d'una comunicació eficaç i d'un bon consell.",
+   "expected_dimensions": [
+    "habilitats-socials",
+    "orientacio-servei"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "esc-habilitats-socials-6",
+   "competency_id": "habilitats-socials",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Coordines un grup de voluntaris d'una entitat ambiental i has de comunicar-los que s'ha cancel·lat l'activitat que havien preparat durant setmanes.",
+   "contexto": "Voluntariat ambiental",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Esperar que s'assabentin per altres vies.",
+     "puntos": {
+      "habilitats-socials": 0,
+      "motivacio": 0
+     }
+    },
+    {
+     "texto": "Explicar-ho en persona, reconèixer l'esforç i proposar com aprofitar-lo.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "motivacio": 2
+     }
+    },
+    {
+     "texto": "Explicar-ho en persona, amb claredat i de manera breu, sense entrar en més detalls.",
+     "puntos": {
+      "habilitats-socials": 2,
+      "motivacio": 1
+     }
+    },
+    {
+     "texto": "Enviar un missatge breu al grup de xat informant de la cancel·lació de l'activitat.",
+     "puntos": {
+      "habilitats-socials": 1,
+      "motivacio": 0
+     }
+    }
+   ],
+   "orden_recomendado": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "justificacion": "Comunicar una mala notícia en persona, amb claredat i reconeixent l'esforç, manté la confiança i la implicació del grup.",
+   "expected_dimensions": [
+    "habilitats-socials",
+    "motivacio"
+   ],
+   "source_type": "TESTLEY_GENERATED",
+   "generated_by": "redactor-competencies-v1 · revisió de longituds (C00002, a partir de C00001)",
+   "verification_status": "VALID",
+   "interview_question_ids": [],
+   "traza": {
+    "lote": "C00002",
+    "evaluacion": "C00002",
+    "tanda": "07",
+    "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+    "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+    "judged_at": "2026-10-03T23:35:20",
+    "verdict": "VALID"
+   }
+  }
+ ],
+ "cola_revision": [],
+ "rechazadas": []
+}

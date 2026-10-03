@@ -137,6 +137,7 @@ const HOY = new Date().toISOString().slice(0, 10);
 const MOTOR = {};
 const motorDe = (o) => (o.id in MOTOR ? MOTOR[o.id] : (MOTOR[o.id] = fs.existsSync(`catalogo/perfiles/${o.id}.json`) ? JSON.parse(fs.readFileSync(`catalogo/perfiles/${o.id}.json`, "utf8")).motor360 || null : null));
 const aptitudOf = (o) => { const m = motorDe(o); const a = m && m.modulos.aptitude.oficial; return a && a.verification_status === "OFFICIAL_VERIFIED" ? a : null; };
+const competenciasOf = (o) => { const m = motorDe(o); const c = m && m.modulos.competency.oficial; return c && c.verification_status === "OFFICIAL_VERIFIED" && fs.existsSync(`catalogo/competencias/${o.id}.json`) ? c : null; };
 function page(route, opts) {
   const lm = opts.lastmod || C.updated;
   pages.push({ route, opts, noindex: opts.noindex, lastmod: lm > HOY ? HOY : lm, title: conMarca(opts.title), description: opts.description });
@@ -731,6 +732,7 @@ ${prep}
 <p class="muted small">Las leyes de cada tema las asigna TestLey a partir del título oficial: son orientativas. Comprueba siempre las bases de tu convocatoria.</p>` : `<h2>Temario</h2><p class="muted">${badgeVS("OFFICIAL_PENDING_REVIEW")} Temario pendiente de verificación oficial.</p>`}</section>
 ${pend}
 ${aptitudOf(o) ? `<section class="card" id="aptitudinal"><h2>Subprueba aptitudinal</h2><p>${aptitudOf(o).preguntas} preguntas en ${aptitudOf(o).minutos} minutos sobre razonamiento abstracto, espacial, aptitud verbal, numérica y perceptiva. Entrena con ejercicios originales de TestLey por aptitud, dificultad, contrarreloj o en modo adaptativo.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/aptitudinal/">Entrenar la aptitudinal</a></p></section>` : ""}
+${competenciasOf(o) ? `<section class="card" id="competencias-psicologia"><h2>Competencias y psicología</h2><p>La 3a prueba evalúa ${competenciasOf(o).lista.length} competencias con un test de competencias y una entrevista. Conoce las competencias oficiales, entrena con situaciones prácticas y compara tu autopercepción.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/competencias/">Competencias y autoconocimiento</a></p></section>` : ""}
 ${o.examenes.length ? `<section class="card" id="examenes"><div class="of-head"><h2>Exámenes oficiales anteriores</h2><span class="badge-oficial">Fuente oficial</span></div><p>Preguntas y plantilla de respuestas publicadas por la administración. Hazlos tal cual se publicaron, con la respuesta oficial.</p><ul class="of-list">${o.examenes.map((e) => `<li><span><a href="${r}oposiciones/${o.id}/examenes-oficiales/${e.id}/">Examen oficial ${esc(e.convocatoria)}</a> · ${e.preguntes.length} preguntas${e.minuts ? ` · ${e.minuts} min` : ""}</span></li>`).join("")}</ul><p><a class="btn" href="${r}oposiciones/${o.id}/examenes-oficiales/">Ver todos los exámenes oficiales</a></p></section>` : ""}
 <section class="card" id="legislacion"><h2>Legislación</h2><p class="muted small">${leyesOp.filter((n) => PUB[n.id]).length} de ${leyesOp.length} normas con test. ${boletin(o) === "BOE" ? "Textos consolidados del BOE." : "Fuentes oficiales: guia d'estudi de la Generalitat y textos consolidados del BOE."}</p><details class="leyes-det"${leyesOp.length <= 8 ? " open" : ""}><summary>Ver las ${leyesOp.length} normas</summary><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `${n.tipo === "guia_oficial" ? esc(n.nombre) : `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a>`} <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="${esc(n.url || `https://www.boe.es/buscar/act.php?id=${n.id}`)}" rel="noopener">${esc(n.tipo === "guia_oficial" ? "PDF oficial" : n.id)}</a></li>`).join("")}</ul></details></section>
 <section class="card" id="documentacion"><h2>Documentación oficial</h2><ul class="of-list">${Object.values(o.fuentes).map((f) => `<li><span><a href="${esc(f.url)}" rel="noopener">${esc(f.titulo)}</a></span> <span class="muted small">${esc(f.tipo)}, publicado el ${fmtFecha(f.fecha_publicacion)}</span></li>`).join("")}</ul></section>
@@ -795,6 +797,29 @@ for (const o of OPOS) {
     alertas: { fuentes: p.alertas.fuentes, eventos: p.alertas.eventos, recientes: p.alertas.recientes },
     motor360: p.motor360 || null, // Opposition Engine: datos oficiales de preparación por convocatoria (públicos; sin preguntas)
   }));
+}
+// Competencias y autoconocimiento (Competency Engine): solo con competencias oficiales verificadas y contenido publicado
+for (const o of OPOS) {
+  const c = competenciasOf(o);
+  if (!c) continue;
+  const pub = JSON.parse(fs.readFileSync(`catalogo/competencias/${o.id}.json`, "utf8"));
+  fs.writeFileSync(path.join(OUT_TMP, "datos", `competencias-${o.id}.json`), JSON.stringify({
+    oposicion: o.id, oficial: { lista: c.lista, clave: c.clave, escala: c.escala, apte: c.apte, citas: c.citas, fuente: c.fuente, documento: c.documento, call_id: c.call_id, verification_status: c.verification_status },
+    competencias: pub.competencias.filter((f) => f.verification_status === "VALID").map(({ traza, ...f }) => f),
+    escenarios: pub.escenarios.filter((e) => e.verification_status === "VALID").map(({ traza, ...e }) => e),
+  }));
+  page(`oposiciones/${o.id}/competencias/`, {
+    title: titulo("", `Competencias ${opCorto(o)}: entrenamiento y autoconocimiento`, ""), lastmod: o.actualizado, wide: true,
+    scripts: ["competencias.js", "competencias-ui.js"],
+    description: descripcion(`Las ${c.lista.length} competencias oficiales de la prueba de adecuación psicoprofesional de ${opCorto(o)}, con situaciones prácticas y un cuestionario de autoconocimiento.`, "Entrenamiento de TestLey, separado de la información oficial."),
+    crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Competencias", `oposiciones/${o.id}/competencias/`]],
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Competencias</span></nav>
+<h1>Competencias y autoconocimiento · ${esc(opCorto(o))}</h1>
+<p class="lead">Según las bases de la convocatoria ${esc(c.call_id)}, la prueba de adecuación psicoprofesional (test de competencias y entrevista) valora ${c.lista.length} competencias de 1 a 10. Para el apto hacen falta ${c.apte.total_minimo} puntos en total y más de ${c.apte.clave_mayor_que} en cada competencia clave. <span class="badge-oficial">Dato oficial</span></p>
+<blockquote class="cita small">${esc(c.citas[0])}</blockquote>
+<div id="competencias" data-op="${o.id}" data-base="${r}">Cargando…</div>
+<p class="muted small">Fuente: <a href="${esc(c.fuente)}" rel="noopener">${esc(c.documento)}</a>. Las explicaciones, los comportamientos observables, las situaciones y el cuestionario son material de entrenamiento de TestLey revisado por un juez independiente. No son criterios del tribunal, no predicen el resultado y no constituyen ninguna evaluación psicológica.</p>`,
+  });
 }
 // Entrenador aptitudinal (Aptitude Engine): solo para oposiciones con estructura aptitudinal oficial verificada en su perfil
 for (const o of OPOS) {

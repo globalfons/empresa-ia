@@ -1,0 +1,1476 @@
+{
+ "lote": "C00001",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "creada_el": "2026-10-03T23:16:48",
+ "judge_prompt": "fabrica/prompts/juez-competencias-v1.txt",
+ "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+ "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+ "candidatas_sha256": "06fa9254404fafb529309102b443b273b5119ec72840e2effc7440af8c36cc23",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ficha-responsabilitat",
+    "ficha-cooperacio",
+    "ficha-autonomia",
+    "ficha-resolucio-problemes",
+    "ficha-orientacio-servei",
+    "ficha-adaptabilitat",
+    "ficha-autocontrol",
+    "ficha-autogestio",
+    "ficha-motivacio",
+    "ficha-habilitats-socials"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-01.json",
+   "prompt_sha256": "32205dc162234dc67564e4ab5cda6455eba3fac593282dc5d5067aa1474d97cf",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ficha-responsabilitat": "4491fa1a02df40a2735b72b5992fc616403420e0cd2e6f3092f43d50d5726b24",
+    "ficha-cooperacio": "ac032d85d89810eeb829df32229028a0c7cd971bb2c1af9575879ee1aa2934e8",
+    "ficha-autonomia": "879446f801035730713293e63e2b8c14821a43ae540d1b6fd46d14a2f6df3e37",
+    "ficha-resolucio-problemes": "aae0536a9e14e87540785d07b31aa5c6841c086f8e213e83fb6351338be071e4",
+    "ficha-orientacio-servei": "ceff41821603d99a16d1c57fbd78ca50ad5d7445fe6c6976de7973dccde44325",
+    "ficha-adaptabilitat": "2919060929792a620806ed2e991698e97d7ccd5b74a174c0a6d395b65194e395",
+    "ficha-autocontrol": "ec1bcbf04e4b5838bfebe35ac7476a8c6aa3f4b26d0d62465edd4636ddbb43b7",
+    "ficha-autogestio": "2d6504ab5defb16430ef3c4af0a477f8398fc9368ccdbf2f6895a0ea49c5fa94",
+    "ficha-motivacio": "6398e7d5bb33f693c812145abc9d34e768550cea705d8376a846cbc80d71a1d0",
+    "ficha-habilitats-socials": "69e85f9af7639593aff3e15e7f137c4cf4bb5db80ee9e5863f8913ca0b40ee7f"
+   },
+   "veredictos": [
+    {
+     "item_id": "ficha-responsabilitat",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Explicación clara en catalán. Los comportamientos (cumplir plazos, reconocer errores, revisar el trabajo, cuidar materiales) describen claramente la responsabilidad. Las afirmaciones de autoevaluación están bien emparejadas: la positiva enfatiza buscar soluciones tras errores, la invertida expresa la tendencia opuesta (no comunicar errores). Sin afirmaciones sobre criterios oficiales ni diagnóstico de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-cooperacio",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto bien estructurado en catalán. Los comportamientos (ofrecer ayuda, compartir información, aceptar decisiones de grupo, coordinarse) son claramente indicadores de trabajo en equipo. Las afirmaciones de autoevaluación: positiva sobre coordinación vs. invertida sobre preferencia de trabajar solo. Coherente internamente, sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-autonomia",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Explicación clara sobre iniciativa y autonomía. Los comportamientos (tomar iniciativa, proponer mejoras, informar al responsable, auto-organizarse) describen directamente la autonomía. Afirmaciones bien invertidas: positiva sobre actuar sin esperar vs. invertida sobre esperar que otros decidan. Sin problemas de consistencia, afirmaciones oficiales o diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-resolucio-problemes",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro y bien redactado. Los comportamientos (buscar causa, plantear alternativas, priorizar, preparar plan B) definen claramente resolución de problemas. Afirmaciones de autoevaluación: positiva sobre pensar alternativas vs. invertida sobre bloqueo e impulsividad. Internamente coherente, sin afirmaciones oficiales ni diagnóstico de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-orientacio-servei",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ficha bien estructurada en catalán. Los comportamientos (escuchar para entender necesidades, tratar con respeto, ofrecer alternativas, verificar comprensión) representan fielmente la orientación de servicio. Afirmaciones: positiva sobre esfuerzo por entender vs. invertida sobre respuestas breves para 'desembarazarse'. Sin afirmaciones oficiales, coherente y realista.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-adaptabilitat",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Explicación clara de adaptabilidad. Los comportamientos (aceptar cambios, pedir información, aprender rápido, reorganizarse) describen directamente la flexibilidad. Afirmaciones inversas correctas: positiva sobre adaptación fácil vs. invertida sobre dificultad con cambios. Internamente consistente, sin afirmaciones sobre criterios oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-autocontrol",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto bien redactado. Los comportamientos (mantener tono sereno, no responder a provocaciones, priorizar bajo presión, esperar el momento) definen el autocontrol frente a la presión. Afirmaciones: positiva sobre mantener calma vs. invertida sobre respuestas impulsivas bajo presión. Gestión de emociones enmarcada como competencia conductual, no como diagnóstico psicológico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-autogestio",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Explicación clara sobre autogestión y desarrollo personal. Los comportamientos (planificar tiempo, pedir opiniones, revisar progreso, buscar formación) describen la competencia directamente. Afirmaciones de autoevaluación: positiva sobre revisión de mejoras vs. invertida sobre ignorar críticas. Coherente, realista, sin afirmaciones oficiales ni diagnóstico de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-motivacio",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ficha bien estructurada en catalán. Los comportamientos (explicar motivos sinceramente, cuidar tareas rutinarias, interesarse por servicio público, mantener esfuerzo) describen motivación e identificación organizacional. Afirmaciones: positiva sobre claridad de motivos vs. invertida sobre abandonar la preparación fácilmente. Sin problemas de coherencia, afirmaciones oficiales o diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-habilitats-socials",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro y bien redactado. Los comportamientos (escuchar sin interrumpir, adaptar lenguaje, expresar desacuerdo respetuosamente, comunicar malas noticias con empatia) representan fielmente habilidades sociales y comunicativas. Afirmaciones: positiva sobre facilidad para explicar vs. invertida sobre evitar conversaciones incómodas. Internamente coherente, sin afirmaciones oficiales ni diagnóstico de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a4f9198d08f59459f.jsonl",
+    "respuesta_sha256": "3d760ca13cf0f7d95030265506e7bc26e56d29c22f17a79ff153de1f85ae2b88"
+   },
+   "registrada_el": "2026-10-03T23:18:04",
+   "intentos": [
+    {
+     "t": "2026-10-03T23:18:04",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a4f9198d08f59459f.jsonl",
+      "respuesta_sha256": "3d760ca13cf0f7d95030265506e7bc26e56d29c22f17a79ff153de1f85ae2b88"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"ficha-responsabilitat\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Explicación clara en catalán. Los comportamientos (cumplir plazos, reconocer errores, revisar el trabajo, cuidar materiales) describen claramente la responsabilidad. Las afirmaciones de autoevaluación están bien emparejadas: la positiva enfatiza buscar soluciones tras errores, la invertida expresa la tendencia opuesta (no comunicar errores). Sin afirmaciones sobre criterios oficiales ni diagnóstico de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-cooperacio\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto bien estructurado en catalán. Los comportamientos (ofrecer ayuda, compartir información, aceptar decisiones de grupo, coordinarse) son claramente indicadores de trabajo en equipo. Las afirmaciones de autoevaluación: positiva sobre coordinación vs. invertida sobre preferencia de trabajar solo. Coherente internamente, sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-autonomia\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Explicación clara sobre iniciativa y autonomía. Los comportamientos (tomar iniciativa, proponer mejoras, informar al responsable, auto-organizarse) describen directamente la autonomía. Afirmaciones bien invertidas: positiva sobre actuar sin esperar vs. invertida sobre esperar que otros decidan. Sin problemas de consistencia, afirmaciones oficiales o diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-resolucio-problemes\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto claro y bien redactado. Los comportamientos (buscar causa, plantear alternativas, priorizar, preparar plan B) definen claramente resolución de problemas. Afirmaciones de autoevaluación: positiva sobre pensar alternativas vs. invertida sobre bloqueo e impulsividad. Internamente coherente, sin afirmaciones oficiales ni diagnóstico de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-orientacio-servei\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Ficha bien estructurada en catalán. Los comportamientos (escuchar para entender necesidades, tratar con respeto, ofrecer alternativas, verificar comprensión) representan fielmente la orientación de servicio. Afirmaciones: positiva sobre esfuerzo por entender vs. invertida sobre respuestas breves para 'desembarazarse'. Sin afirmaciones oficiales, coherente y realista.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-adaptabilitat\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Explicación clara de adaptabilidad. Los comportamientos (aceptar cambios, pedir información, aprender rápido, reorganizarse) describen directamente la flexibilidad. Afirmaciones inversas correctas: positiva sobre adaptación fácil vs. invertida sobre dificultad con cambios. Internamente consistente, sin afirmaciones sobre criterios oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-autocontrol\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto bien redactado. Los comportamientos (mantener tono sereno, no responder a provocaciones, priorizar bajo presión, esperar el momento) definen el autocontrol frente a la presión. Afirmaciones: positiva sobre mantener calma vs. invertida sobre respuestas impulsivas bajo presión. Gestión de emociones enmarcada como competencia conductual, no como diagnóstico psicológico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-autogestio\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Explicación clara sobre autogestión y desarrollo personal. Los comportamientos (planificar tiempo, pedir opiniones, revisar progreso, buscar formación) describen la competencia directamente. Afirmaciones de autoevaluación: positiva sobre revisión de mejoras vs. invertida sobre ignorar críticas. Coherente, realista, sin afirmaciones oficiales ni diagnóstico de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-motivacio\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Ficha bien estructurada en catalán. Los comportamientos (explicar motivos sinceramente, cuidar tareas rutinarias, interesarse por servicio público, mantener esfuerzo) describen motivación e identificación organizacional. Afirmaciones: positiva sobre claridad de motivos vs. invertida sobre abandonar la preparación fácilmente. Sin problemas de coherencia, afirmaciones oficiales o diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ficha-habilitats-socials\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto claro y bien redactado. Los comportamientos (escuchar sin interrumpir, adaptar lenguaje, expresar desacuerdo respetuosamente, comunicar malas noticias con empatia) representan fielmente habilidades sociales y comunicativas. Afirmaciones: positiva sobre facilidad para explicar vs. invertida sobre evitar conversaciones incómodas. Internamente coherente, sin afirmaciones oficiales ni diagnóstico de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "esc-responsabilitat-1",
+    "esc-responsabilitat-2",
+    "esc-responsabilitat-3",
+    "esc-responsabilitat-4",
+    "esc-responsabilitat-5",
+    "esc-responsabilitat-6",
+    "esc-cooperacio-1",
+    "esc-cooperacio-2",
+    "esc-cooperacio-3",
+    "esc-cooperacio-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-02.json",
+   "prompt_sha256": "ed97382408b0573c3f69e2a3e0190a83048d5430d55f52f0461667408900c3a6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-responsabilitat-1": "c8f2aa08481a669003c45974e7fbfe87e2d0acab8917b10be8b4ad428ce4a64c",
+    "esc-responsabilitat-2": "089bcca684310f731c7d065fd9ddc2797dc9929f4ca4034cd6f1f36b1c315712",
+    "esc-responsabilitat-3": "6241932afc9c45889baf31f36518644debb11c860341bd61da8da636366e5bec",
+    "esc-responsabilitat-4": "a3af9c13f1287802446861278f22d75c38b1030f33735b72f506045c760ecf22",
+    "esc-responsabilitat-5": "a9f998f32009186b80e6e05b9aec8ed600986efccf602f957b4c20f0e851d961",
+    "esc-responsabilitat-6": "8a8e7860f0d2cf17c47c318bb7ea0d7f84431617891c27ef245dfc06e392914a",
+    "esc-cooperacio-1": "a2f92912c4cdbae0309b883f58bb8ba157fac37c2288440873c11ccd3f2b427b",
+    "esc-cooperacio-2": "c35fee424c4f549a8651f60c06e3db0ff777062770ffeb3b4df9e51812773435",
+    "esc-cooperacio-3": "c107283aacc798f96cf4343cb56b02496859a6ab609bd5d5d68ea6541bfaa893",
+    "esc-cooperacio-4": "bfcba32e414f1c4b43da452d060499d77cb2ed2bf308e194f4d52aa0eae3317e"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-03T23:18:18",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a26f7bd9a806c441f.jsonl",
+      "respuesta_sha256": "09c685828f9c455115608aeaec893488c19f2cdec3e9ecca18ce83132f9022f6"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"esc-responsabilitat-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherente y realista sobre error en etiquetado de precios. La puntuación es internamente consistente: opción con mayor puntos (2,2) corresponde a asumir responsabilidad y corregir el error. La justificación es clara y defensible: tomar responsabilidad evita daños a clientes. No presenta como criterio oficial, sin diagnóstico. No es duplicado de sus parecidos (son situaciones diferentes aunque comparables).\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario bien redactado sobre compromiso de entrega en trabajo grupal universitario. Internamente consistente: puntuación más alta (2,2) va a la opción de avisar con antelación y proponer fecha realista. Justificación clara y defendible. Entrena responsabilidad y orientación a la calidad. Sin afirmaciones oficiales ni diagnóstico. Diferente de esc-responsabilitat-1 aunque ambos entrenan responsabilidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherente sobre discrepancia en conteo de donaciones en banco de alimentos. Opción recomendada (2,2 puntos) equilibra responsabilidad con habilidades sociales: informar coordinador pero hablar respetuosamente con el voluntario. Dilemma diferente de items anteriores. Entrena responsabilidad profesional sin culpabilizar. Sin elementos de diagnóstico o afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario en formato ranking sobre equipo de comunicación perdido en práctica académica. Orden recomendado [0,1,2,3] es lógico: comunicar inmediatamente al instructor y ayudar a buscar es opción más responsable (2,2). Faltar equipo confiado es situación diferente de las anteriores. Escrito claramente en catalán. Sin afirmaciones oficiales ni diagnósticos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre conflicto entre cumplimiento de ruta y solicitud explícita de cliente (entrega en mano). Opción recomendada (2,2): respetar la petición y dejar aviso es claramente la más ética y profesional. Justificación sólida sobre registrar la realidad del lliurament. Dilemma diferente de anteriores. Entrena responsabilidad genuina y orientación al servicio cliente.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario ranking sobre entrenador voluntario que prometió calendario de partidos. Orden [2,3,0,1] es coherente: opción 2 (comunicar el retardo a padres) tiene máxima puntuación (2,2). Justificación clara: cumplir compromiso incluye informar si no se puede cumplir como se planificó. No cae en falseamiento de información. Sin diagnóstico ni afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre camarero ayudando colega en sábado de restaurante lleno. Opción recomendada (2,2): ofrecer ayuda y coordinarse es claramente la más constructiva. Entrena cooperación real y orientación al servicio. Texto en catalán claro y realista. Sin oficialismo ni diagnóstico. Diferente de escenarios de responsabilidad previos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre futbolista amateur pidiendo cambiar de posición (de ataque a defensa). Opción recomendada (2,2): aceptar, preguntar expectativas y dar máximo es claramente la más cooperativa. Entrena adaptabilidad y cooperación genuina. Dilemma diferente de anteriores. Realista y bien escrito. Sin diagnósticos ni afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre trabajo grupal bachillerato con miembro poco participativo. Opción recomendada (2,2): hablar con los tres, repartir tareas y hacer seguimiento es claramente la más constructiva. Entrena cooperación y habilidades sociales: intenta reconducir antes de excluir. Escrito en catalán claro. Sin diagnósticos ni promesas oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario ranking: ejercicio de orientación grupal donde compañero toma todas decisiones. Orden [3,0,1,2] es coherente: proponer parada para reorganizar con roles compartidos (2,2) es mejor que hablar en privado, seguir pasivamente o dividirse. Entrena cooperación genuina. Catalán claro y realista. Sin diagnósticos o afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "BATCH_REJECTED · RAZON_INSUFICIENTE: esc-responsabilitat-4"
+    },
+    {
+     "t": "2026-10-03T23:18:36",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a26f7bd9a806c441f.jsonl",
+      "respuesta_sha256": "09c685828f9c455115608aeaec893488c19f2cdec3e9ecca18ce83132f9022f6"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"esc-responsabilitat-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherente y realista sobre error en etiquetado de precios. La puntuación es internamente consistente: opción con mayor puntos (2,2) corresponde a asumir responsabilidad y corregir el error. La justificación es clara y defensible: tomar responsabilidad evita daños a clientes. No presenta como criterio oficial, sin diagnóstico. No es duplicado de sus parecidos (son situaciones diferentes aunque comparables).\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario bien redactado sobre compromiso de entrega en trabajo grupal universitario. Internamente consistente: puntuación más alta (2,2) va a la opción de avisar con antelación y proponer fecha realista. Justificación clara y defendible. Entrena responsabilidad y orientación a la calidad. Sin afirmaciones oficiales ni diagnóstico. Diferente de esc-responsabilitat-1 aunque ambos entrenan responsabilidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherente sobre discrepancia en conteo de donaciones en banco de alimentos. Opción recomendada (2,2 puntos) equilibra responsabilidad con habilidades sociales: informar coordinador pero hablar respetuosamente con el voluntario. Dilemma diferente de items anteriores. Entrena responsabilidad profesional sin culpabilizar. Sin elementos de diagnóstico o afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario en formato ranking sobre equipo de comunicación perdido en práctica académica. Orden recomendado [0,1,2,3] es lógico: comunicar inmediatamente al instructor y ayudar a buscar es opción más responsable (2,2). Faltar equipo confiado es situación diferente de las anteriores. Escrito claramente en catalán. Sin afirmaciones oficiales ni diagnósticos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre conflicto entre cumplimiento de ruta y solicitud explícita de cliente (entrega en mano). Opción recomendada (2,2): respetar la petición y dejar aviso es claramente la más ética y profesional. Justificación sólida sobre registrar la realidad del lliurament. Dilemma diferente de anteriores. Entrena responsabilidad genuina y orientación al servicio cliente.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-responsabilitat-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario ranking sobre entrenador voluntario que prometió calendario de partidos. Orden [2,3,0,1] es coherente: opción 2 (comunicar el retardo a padres) tiene máxima puntuación (2,2). Justificación clara: cumplir compromiso incluye informar si no se puede cumplir como se planificó. No cae en falseamiento de información. Sin diagnóstico ni afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre camarero ayudando colega en sábado de restaurante lleno. Opción recomendada (2,2): ofrecer ayuda y coordinarse es claramente la más constructiva. Entrena cooperación real y orientación al servicio. Texto en catalán claro y realista. Sin oficialismo ni diagnóstico. Diferente de escenarios de responsabilidad previos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre futbolista amateur pidiendo cambiar de posición (de ataque a defensa). Opción recomendada (2,2): aceptar, preguntar expectativas y dar máximo es claramente la más cooperativa. Entrena adaptabilidad y cooperación genuina. Dilemma diferente de anteriores. Realista y bien escrito. Sin diagnósticos ni afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario sobre trabajo grupal bachillerato con miembro poco participativo. Opción recomendada (2,2): hablar con los tres, repartir tareas y hacer seguimiento es claramente la más constructiva. Entrena cooperación y habilidades sociales: intenta reconducir antes de excluir. Escrito en catalán claro. Sin diagnósticos ni promesas oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario ranking: ejercicio de orientación grupal donde compañero toma todas decisiones. Orden [3,0,1,2] es coherente: proponer parada para reorganizar con roles compartidos (2,2) es mejor que hablar en privado, seguir pasivamente o dividirse. Entrena cooperación genuina. Catalán claro y realista. Sin diagnósticos o afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "item_id": "esc-responsabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario coherente y realista sobre error en etiquetado de precios. La puntuación es internamente consistente: opción con mayor puntos (2,2) corresponde a asumir responsabilidad y corregir el error. La justificación es clara y defensible: tomar responsabilidad evita daños a clientes. No presenta como criterio oficial, sin diagnóstico. No es duplicado de sus parecidos (son situaciones diferentes aunque comparables).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario bien redactado sobre compromiso de entrega en trabajo grupal universitario. Internamente consistente: puntuación más alta (2,2) va a la opción de avisar con antelación y proponer fecha realista. Justificación clara y defendible. Entrena responsabilidad y orientación a la calidad. Sin afirmaciones oficiales ni diagnóstico. Diferente de esc-responsabilitat-1 aunque ambos entrenan responsabilidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario coherente sobre discrepancia en conteo de donaciones en banco de alimentos. Opción recomendada (2,2 puntos) equilibra responsabilidad con habilidades sociales: informar coordinador pero hablar respetuosamente con el voluntario. Dilemma diferente de items anteriores. Entrena responsabilidad profesional sin culpabilizar. Sin elementos de diagnóstico o afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario en formato ranking sobre equipo de comunicación perdido en práctica académica. Orden recomendado [0,1,2,3] es lógico: comunicar inmediatamente al instructor y ayudar a buscar es opción más responsable (2,2). Faltar equipo confiado es situación diferente de las anteriores. Escrito claramente en catalán. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario sobre conflicto entre cumplimiento de ruta y solicitud explícita de cliente (entrega en mano). Opción recomendada (2,2): respetar la petición y dejar aviso es claramente la más ética y profesional. Justificación sólida sobre registrar la realidad del lliurament. Dilemma diferente de anteriores. Entrena responsabilidad genuina y orientación al servicio cliente.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario ranking sobre entrenador voluntario que prometió calendario de partidos. Orden [2,3,0,1] es coherente: opción 2 (comunicar el retardo a padres) tiene máxima puntuación (2,2). Justificación clara: cumplir compromiso incluye informar si no se puede cumplir como se planificó. No cae en falseamiento de información. Sin diagnóstico ni afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario sobre camarero ayudando colega en sábado de restaurante lleno. Opción recomendada (2,2): ofrecer ayuda y coordinarse es claramente la más constructiva. Entrena cooperación real y orientación al servicio. Texto en catalán claro y realista. Sin oficialismo ni diagnóstico. Diferente de escenarios de responsabilidad previos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario sobre futbolista amateur pidiendo cambiar de posición (de ataque a defensa). Opción recomendada (2,2): aceptar, preguntar expectativas y dar máximo es claramente la más cooperativa. Entrena adaptabilidad y cooperación genuina. Dilemma diferente de anteriores. Realista y bien escrito. Sin diagnósticos ni afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario sobre trabajo grupal bachillerato con miembro poco participativo. Opción recomendada (2,2): hablar con los tres, repartir tareas y hacer seguimiento es claramente la más constructiva. Entrena cooperación y habilidades sociales: intenta reconducir antes de excluir. Escrito en catalán claro. Sin diagnósticos ni promesas oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario ranking: ejercicio de orientación grupal donde compañero toma todas decisiones. Orden [3,0,1,2] es coherente: proponer parada para reorganizar con roles compartidos (2,2) es mejor que hablar en privado, seguir pasivamente o dividirse. Entrena cooperación genuina. Catalán claro y realista. Sin diagnósticos o afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a26f7bd9a806c441f.jsonl",
+    "respuesta_sha256": "09c685828f9c455115608aeaec893488c19f2cdec3e9ecca18ce83132f9022f6"
+   },
+   "registrada_el": "2026-10-03T23:18:36"
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "esc-cooperacio-5",
+    "esc-cooperacio-6",
+    "esc-autonomia-1",
+    "esc-autonomia-2",
+    "esc-autonomia-3",
+    "esc-autonomia-4",
+    "esc-autonomia-5",
+    "esc-autonomia-6",
+    "esc-resolucio-problemes-1",
+    "esc-resolucio-problemes-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-03.json",
+   "prompt_sha256": "df1115fb666f56eafba3b1b7b4e16fe0a841365c9015b1edfe307aa79145b755",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-cooperacio-5": "f4fed88cba6393018eddae48f0ff668235e668a2d25eca78214d746a75ef04d4",
+    "esc-cooperacio-6": "78df19b1f0e1f480558090e8b14d6ea6ac46d1971bf151146fd8f9f356ef14f3",
+    "esc-autonomia-1": "96ebec99d5940ca4467dbc9a5960755b75069e551515d5e20c572eb5d2cfd3fa",
+    "esc-autonomia-2": "1a5dfd41f5e4dabd16ff2dd21dcc4fdd0fd0c5b13f50e1e430be88d4415467ad",
+    "esc-autonomia-3": "8f917a4f01cc2881fe2d8342bb370bf1a598ae1a51e618da946d4c507403b581",
+    "esc-autonomia-4": "278a4061f0fb11c403df02cd53bbc384ce6745b24ee4ceda7262e59fbfc93e7b",
+    "esc-autonomia-5": "1126b0850b2759d42e653f43c00981067121d555c0d80cfb474b81e06297f057",
+    "esc-autonomia-6": "b85470fa57d2b05549f4ac85d5b281d18b9ec6231103db08ec5c2d9d38fb26db",
+    "esc-resolucio-problemes-1": "a4764e689e8b8faf7e20c5b9d44e560cd8eabb40a863a0db82fa2cd243880eb7",
+    "esc-resolucio-problemes-2": "f08ea3d35cec66f98d469f675b2261280218435747a3a6a57d12e226574415f5"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-03T23:19:43",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a6d35a44f82226723.jsonl",
+      "respuesta_sha256": "7eeb3d2be9fcebda0ad2a6f9f9251cd21d3134248a593e3183c09389211677cf"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"esc-cooperacio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherente amb situació realista al magatzem. Els punts (2,2 opció 0) són els més alts i es corresponen clarament amb l'opció recomanada de proposar reunió de coordinació. La justificació explica bé per què és la millor resposta. Text clar en català. Entrena directament la cooperació sense pretensions oficials ni diagnostics psicològics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Ranking coherent amb ordenament lògic: opció 1 (2,2) > opció 2 (2,1) > opció 3 (1,0) > opció 0 (0,0). La justificació explica bé que cal col·laborar però valorant l'impacte propi. Escenari realista d'un event benèfic. Text clar en català, sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario clar i realista del primer dia a una botiga. Opció 1 (2,2) és clarament la millor: rebre l'entrega de manera prudent sense prendre decisions que no corresponen. La justificació explica bé aquesta lògica. Text ben escrit en català. Entrena autonomia appropriate sense riscos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario realista sobre autogestió en preparació personal. Opció 2 (2,2) és la clarament millor: fer pla setmanal i revisar-lo. La justificació és correcta. Text clar en català. No hi ha afirmacions oficials. Entrena autonomia i autogessió de manera apropiadada sense elements problemàtics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherent d'iniciativa en context administratiu. Opció 3 (2,2) és la millor: preparar proposta i presentar-la al responsable. La justificació explica correctament que la iniciativa sense autorització pot crear problemes. Text ben escrit en català. Entrena autonomia bounded per jerarquia.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Ranking coherent en context d'acadèmia. Ordenament [2,3,0,1] és lògic: opció 2 (2,2) prioritza autonomia i cooperació; opció 3 (2,0) autonomia però sense cooperació; opció 0 (1,0) decisió solitària; opció 1 (0,0) inacció. La justificació explica bé que cal prendre iniciativa implicant el grup. Text clar en català.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario realista de voluntariat. Opció 3 (2,2) és la millor: fer primers auxilis bàsics, calmar el nen, avisar monitora. La justificació explica correctament que actuar amb recursos disponibles i informar després és la millor resposta. Text clar en català. Equilibra autonomia amb responsabilitat.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Ranking coherent de context d'hotel de nit sense cap superior. Ordenament [0,1,2,3]: canviar habitació (2,2) > ventilador+nota (1,2) > trucar director (1,0) > no fer res (0,0). Lògica clara: solucions dins de funcions pròpies primer. La justificació explica bé la importància de trobar solucions autònomament. Text en català sense problemes.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-resolucio-problemes-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario realista de música amateur. Opció 0 (2,2) és la millor: mantenir calma, provar cable recanvi, preparar pla B. La justificació explica correctament que revisar alternatives amb calma i tenir pla B és més efectiu. Text clar en català. Entrena resolució de problemes i autocontrol.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-resolucio-problemes-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherent del centre de jardineria. Opció 1 (2,2) és la millor: organitzar reg manual per torns el cap de setmana, documentat. La justificació explica correctament que una solució provisional organitzada protegeix les plantes sense riscos. Text ben escrit en català. Entrena resolució de problemes i responsabilitat.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficials\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "BATCH_REJECTED · CRITERIOS_INCOMPLETOS: esc-resolucio-problemes-2"
+    },
+    {
+     "t": "2026-10-03T23:21:20",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a14fa6a3a869c49a1.jsonl",
+      "respuesta_sha256": "79bd278992ed46b2bfd9f3e88050af03c2234adf6730843e61372c5f2ad39d7c"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"esc-cooperacio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario claro y realista sobre cooperación en cambio de turno. El texto en catalán es coherente y bien escrito. La opción recomendada (reunión de traspaso) obtiene el máximo de puntos (2+2=4) y su justificación es consistente: compartir conocimiento y acordar sistema común elimina errores. La acción recomendada es claramente la más profesional y ética entre las cuatro opciones. Entrena directamente la competencia de cooperación y trabajo en equipo. No contiene afirmaciones sobre criterios oficiales ni diagnóstico psicológico. No es duplicado de los parecidos listados (son situaciones distintas).\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-cooperacio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de ranking sobre cooperación en evento voluntario. Texto claro y bien estructurado en catalán. El orden recomendado [1, 2, 3, 0] corresponde correctamente a los puntos: opción 1 (4 puntos), opción 2 (3 puntos), opción 3 (1 punto), opción 0 (0 puntos). La justificación es consistente: colaborar es necesario pero valorando el impacto propio. El ranking es claramente defendible: evaluar con el equipo es mejor que ceder sin análisis, que es mejor que negarse. Entrena cooperación y resolución de problemas. Sin pretensiones oficiales ni diagnóstico. No duplica ningún parecido (situaciones distintas de cooperación).\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de elección sobre autonomía en primer día de trabajo. Situación realista y bien redactada en catalán. La opción 2 (recibir, verificar y guardar seguro) obtiene máxima puntuación (2+2=4) y su justificación es consistente: hacer acciones prudentes sin decidir lo que no corresponde, resolviendo el imprevisto. Esta opción es claramente la más profesional y autónoma pero responsable entre las alternativas. Entrena autonomía e iniciativa con responsabilidad. Sin afirmaciones sobre criterios oficiales ni diagnóstico. Los parecidos son situaciones distintas (grupo de estudio, procedimiento administrativo, simulación, campamento, recepción de hotel).\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de elección sobre autonomía en preparación personal. Texto claro y realista en catalán. La opción 3 (hacer plan semanal con objetivos y revisión) obtiene máximos puntos (2+2=4) y la justificación es coherente: un plan propio permite avanzar sin depender de otros. Esta opción es claramente la más autónoma y autogestiva frente a esperar pasivamente, estudiar sin plan o buscar otro grupo. Entrena autonomía e iniciativa. Sin reclamos sobre criterios oficiales tribunal ni diagnóstico. No duplica: son situaciones distintas a las listadas en parecidos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de elección sobre iniciativa en procedimiento administrativo. Texto realista y bien redactado en catalán. La opción 4 (preparar propuesta concreta al responsable) alcanza máxima puntuación (2+2=4) y su justificación es consistente: la iniciativa es útil como propuesta concreta al quien decide; cambiar solo crea problemas. Esta opción es claramente más profesional, respetuosa de jerarquías y constructiva que las otras. Entrena autonomía e iniciativa. Sin pretensiones de criterios oficiales ni diagnóstico psicológico. Parecidos son situaciones distintas de autonomía.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de ranking sobre autonomía en simulación académica. Texto coherente y realista en catalán. El orden recomendado [2, 3, 0, 1] corresponde a puntos: opción 2 (4 puntos), opción 3 (2 puntos), opción 0 (1 punto), opción 1 (0 puntos). La justificación es consistente: tomar iniciativa desde las instrucciones e implicar al grupo aprovecha el tiempo; esperar sin hacer nada es lo menos útil. El ranking es claramente defendible: revisar instrucciones+implicar grupo es mejor que continuar solo, mejor que decidir unilateralmente, mejor que esperar. Entrena autonomía y cooperación. Sin afirmaciones oficiales ni diagnóstico. Parecidos son situaciones distintas.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de elección sobre autonomía en voluntariado infantil. Situación realista y clara en catalán. La opción 4 (curar con botiquín básico, calmar, avisar después) obtiene máxima puntuación (2+2=4) y su justificación es coherente: ante cura sencilla, actuar con recursos disponibles e informar después atiende al niño sin dejarlo solo. Esta opción es claramente más autónoma y orientada al servicio que abandonar al niño, dejarle ir solo, o esperar pasivamente. Entrena autonomía e iniciativa. Sin afirmaciones sobre criterios oficiales ni diagnóstico. Parecidos son situaciones distintas de autonomía.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autonomia-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de ranking sobre autonomía en recepción de hotel. Texto realista y bien estructurado en catalán. El orden recomendado [0, 1, 2, 3] corresponde a puntos: opción 0 (4 puntos), opción 1 (3 puntos), opción 2 (1 punto), opción 3 (0 puntos). La justificación es consistente: buscar solución dentro de funciones propias y dejarla registrada responde al cliente y mantiene informado el equipo; no ofrecer nada es el peor servicio. El ranking es claramente defendible: cambiar de habitación es mejor que ofrecer ventilador, mejor que despertar director, mejor que no ayudar. Entrena autonomía y orientación al servicio. Sin afirmaciones oficiales ni diagnóstico. Parecidos son situaciones distintas.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-resolucio-problemes-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de elección sobre resolución de problemas en crisis musical. Texto claro y realista en catalán. La opción 1 (mantener calma, probar cable de repuesto, preparar plan B) obtiene máximos puntos (2+2=4) y su justificación es coherente: revisar alternativas con calma y tener plan B es la manera más eficaz de salvar la actividad. Esta opción es claramente la más profesional y constructiva: controla la crisis, busca soluciones y prepara alternativas. Entrena resolución de problemas y autocontrol. Sin pretensiones de criterios oficiales ni diagnóstico. Parecidos son situaciones distintas de resolución de problemas.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-resolucio-problemes-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de elección sobre resolución de problemas en emergencia de regadío. Texto realista y bien redactado en catalán. La opción 2 (organizar riego manual por turnos y documentarlo) alcanza máxima puntuación (2+2=4) y su justificación es consistente: una solución provisional organizada y documentada protege las plantas sin riesgos innecesarios. Esta opción es claramente más responsable y efectiva que regar abundante sin garantía, esperar a que mueran las plantas, o intentar reparar sin competencia. Entrena resolución de problemas y responsabilidad. Sin afirmaciones oficiales ni diagnóstico. Parecidos son situaciones distintas de resolución de problemas.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "item_id": "esc-cooperacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario claro y realista sobre cooperación en cambio de turno. El texto en catalán es coherente y bien escrito. La opción recomendada (reunión de traspaso) obtiene el máximo de puntos (2+2=4) y su justificación es consistente: compartir conocimiento y acordar sistema común elimina errores. La acción recomendada es claramente la más profesional y ética entre las cuatro opciones. Entrena directamente la competencia de cooperación y trabajo en equipo. No contiene afirmaciones sobre criterios oficiales ni diagnóstico psicológico. No es duplicado de los parecidos listados (son situaciones distintas).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de ranking sobre cooperación en evento voluntario. Texto claro y bien estructurado en catalán. El orden recomendado [1, 2, 3, 0] corresponde correctamente a los puntos: opción 1 (4 puntos), opción 2 (3 puntos), opción 3 (1 punto), opción 0 (0 puntos). La justificación es consistente: colaborar es necesario pero valorando el impacto propio. El ranking es claramente defendible: evaluar con el equipo es mejor que ceder sin análisis, que es mejor que negarse. Entrena cooperación y resolución de problemas. Sin pretensiones oficiales ni diagnóstico. No duplica ningún parecido (situaciones distintas de cooperación).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de elección sobre autonomía en primer día de trabajo. Situación realista y bien redactada en catalán. La opción 2 (recibir, verificar y guardar seguro) obtiene máxima puntuación (2+2=4) y su justificación es consistente: hacer acciones prudentes sin decidir lo que no corresponde, resolviendo el imprevisto. Esta opción es claramente la más profesional y autónoma pero responsable entre las alternativas. Entrena autonomía e iniciativa con responsabilidad. Sin afirmaciones sobre criterios oficiales ni diagnóstico. Los parecidos son situaciones distintas (grupo de estudio, procedimiento administrativo, simulación, campamento, recepción de hotel).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de elección sobre autonomía en preparación personal. Texto claro y realista en catalán. La opción 3 (hacer plan semanal con objetivos y revisión) obtiene máximos puntos (2+2=4) y la justificación es coherente: un plan propio permite avanzar sin depender de otros. Esta opción es claramente la más autónoma y autogestiva frente a esperar pasivamente, estudiar sin plan o buscar otro grupo. Entrena autonomía e iniciativa. Sin reclamos sobre criterios oficiales tribunal ni diagnóstico. No duplica: son situaciones distintas a las listadas en parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de elección sobre iniciativa en procedimiento administrativo. Texto realista y bien redactado en catalán. La opción 4 (preparar propuesta concreta al responsable) alcanza máxima puntuación (2+2=4) y su justificación es consistente: la iniciativa es útil como propuesta concreta al quien decide; cambiar solo crea problemas. Esta opción es claramente más profesional, respetuosa de jerarquías y constructiva que las otras. Entrena autonomía e iniciativa. Sin pretensiones de criterios oficiales ni diagnóstico psicológico. Parecidos son situaciones distintas de autonomía.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de ranking sobre autonomía en simulación académica. Texto coherente y realista en catalán. El orden recomendado [2, 3, 0, 1] corresponde a puntos: opción 2 (4 puntos), opción 3 (2 puntos), opción 0 (1 punto), opción 1 (0 puntos). La justificación es consistente: tomar iniciativa desde las instrucciones e implicar al grupo aprovecha el tiempo; esperar sin hacer nada es lo menos útil. El ranking es claramente defendible: revisar instrucciones+implicar grupo es mejor que continuar solo, mejor que decidir unilateralmente, mejor que esperar. Entrena autonomía y cooperación. Sin afirmaciones oficiales ni diagnóstico. Parecidos son situaciones distintas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de elección sobre autonomía en voluntariado infantil. Situación realista y clara en catalán. La opción 4 (curar con botiquín básico, calmar, avisar después) obtiene máxima puntuación (2+2=4) y su justificación es coherente: ante cura sencilla, actuar con recursos disponibles e informar después atiende al niño sin dejarlo solo. Esta opción es claramente más autónoma y orientada al servicio que abandonar al niño, dejarle ir solo, o esperar pasivamente. Entrena autonomía e iniciativa. Sin afirmaciones sobre criterios oficiales ni diagnóstico. Parecidos son situaciones distintas de autonomía.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de ranking sobre autonomía en recepción de hotel. Texto realista y bien estructurado en catalán. El orden recomendado [0, 1, 2, 3] corresponde a puntos: opción 0 (4 puntos), opción 1 (3 puntos), opción 2 (1 punto), opción 3 (0 puntos). La justificación es consistente: buscar solución dentro de funciones propias y dejarla registrada responde al cliente y mantiene informado el equipo; no ofrecer nada es el peor servicio. El ranking es claramente defendible: cambiar de habitación es mejor que ofrecer ventilador, mejor que despertar director, mejor que no ayudar. Entrena autonomía y orientación al servicio. Sin afirmaciones oficiales ni diagnóstico. Parecidos son situaciones distintas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de elección sobre resolución de problemas en crisis musical. Texto claro y realista en catalán. La opción 1 (mantener calma, probar cable de repuesto, preparar plan B) obtiene máximos puntos (2+2=4) y su justificación es coherente: revisar alternativas con calma y tener plan B es la manera más eficaz de salvar la actividad. Esta opción es claramente la más profesional y constructiva: controla la crisis, busca soluciones y prepara alternativas. Entrena resolución de problemas y autocontrol. Sin pretensiones de criterios oficiales ni diagnóstico. Parecidos son situaciones distintas de resolución de problemas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de elección sobre resolución de problemas en emergencia de regadío. Texto realista y bien redactado en catalán. La opción 2 (organizar riego manual por turnos y documentarlo) alcanza máxima puntuación (2+2=4) y su justificación es consistente: una solución provisional organizada y documentada protege las plantas sin riesgos innecesarios. Esta opción es claramente más responsable y efectiva que regar abundante sin garantía, esperar a que mueran las plantas, o intentar reparar sin competencia. Entrena resolución de problemas y responsabilidad. Sin afirmaciones oficiales ni diagnóstico. Parecidos son situaciones distintas de resolución de problemas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a14fa6a3a869c49a1.jsonl",
+    "respuesta_sha256": "79bd278992ed46b2bfd9f3e88050af03c2234adf6730843e61372c5f2ad39d7c"
+   },
+   "registrada_el": "2026-10-03T23:21:20"
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "esc-resolucio-problemes-3",
+    "esc-resolucio-problemes-4",
+    "esc-resolucio-problemes-5",
+    "esc-resolucio-problemes-6",
+    "esc-orientacio-servei-1",
+    "esc-orientacio-servei-2",
+    "esc-orientacio-servei-3",
+    "esc-orientacio-servei-4",
+    "esc-orientacio-servei-5",
+    "esc-orientacio-servei-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-04.json",
+   "prompt_sha256": "00208675882ae5de57b00b03d626f7aa6e401a9a78c50dcbd69f9b9fc124072f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-resolucio-problemes-3": "7b9098df0547b54c448751513cebec87f2f144d80757da80e978aab600f9e0c1",
+    "esc-resolucio-problemes-4": "8dcb29522888b5cd0686fa73c5145c91e55ea0faac8010e7e1bb5775c0f93a7b",
+    "esc-resolucio-problemes-5": "4dce5f85902151ba46880d6f9b04df97822313258d0f89186582e1d6cf9ec9b7",
+    "esc-resolucio-problemes-6": "cbe86939cabb785563ff49855785598bb92d1bec081e8ccf3f59d451f535dd3e",
+    "esc-orientacio-servei-1": "23c05129891c3d145fb5bc41e23b444e5ab8ecb92aa51c13eced4a44eee1fc5e",
+    "esc-orientacio-servei-2": "21b8a7ece9c6884f72b3416426dc7adf0749d8b6cd449f307b08bcc0d4135331",
+    "esc-orientacio-servei-3": "9a639a5088a2db5c77be24a7591370eb6d0335b2d34813f082239541af70d996",
+    "esc-orientacio-servei-4": "0e7cba22c1fe266f38a3889e60c683006db4ddcf5ba850d73fe2930db2379c58",
+    "esc-orientacio-servei-5": "82f4ea075737d4c2819b5eb09fa136f63861fc3bfc4ec7e749356748d5e1b169",
+    "esc-orientacio-servei-6": "0e05757db337ebe7bf108b5c62cf9dd0c82138dd4c3af8d72a5dfc53e7eb2d07"
+   },
+   "veredictos": [
+    {
+     "item_id": "esc-resolucio-problemes-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text és coherent en català, la situació realista i el repartiment de punts intern consistent. L'opció recomanada (buscar alternatives amb pressupost i decidir-ho amb la comissió en 48 hores) és clarament la més professional i constructiva entre les alternatives. Entrena efectivament la competència de resolució de problemes. No presenta afirmacions oficials, no diagnostica personalitat i no és duplicada d'altres items.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario clar amb ordre de ranking que coincideix perfectament amb la suma de punts (4-3-1-0). La justificació ('prioritzar amb criteri i buscar rotacions') descriu exactament per què l'ordre és correcte. Entrena resolució de problemes i cooperació. Cap afirmació oficial, sense diagnòstic, no és duplicat.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situació realista de servei al client. L'opció 4 (detectar patró, alertar tècnics, informar clients) és objectivament superior: resol la causa, no només símptomes. Els punts (2+2=4) reflecteixen aquesta superioritat. Entrena resolució de problemes i orientació de servei. Sense afirmacions oficials, sense diagnòstic, sense duplicats.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de conflicte veïnal ben construït. L'ordre recomanat [3,0,1,2] coincideix amb punts (4-3-1-0). L'opció més adequada (escoltar ambdues parts, proposar acord d'horaris) és mediació respectuosa versus refús de participar, favoritisme o vot sense debat. Entrena resolució de problemes i habilitats socials. Cap afirmació oficial ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situació clara: ajudar una senyora gran a fer una tasca online a la biblioteca. L'opció recomanada (acompanyar-la pas a pas) és objectivament millor que fer-ho sense explicació, donar instruccions escritas, o derivar a família. Els punts (2+2) reflecteixen aquesta superioritat. Entrena orientació de servei i habilitats socials. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Client enfadat per cancel·lació d'excursió. L'opció 4 (escoltar, reconèixer molèstia, oferir alternatives) és clarament la millor resposta de servei: transforma la queixa en solució. Els punts (2+2=4) la destaquen. Entrena orientació de servei i autocontrol. Sense afirmacions oficials, sense diagnòstic, sense duplicats.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situació de piscina: joves fan soroll sense violar normes escrites. L'opció 4 (parlar respectuosament als joves, proposar espai més adequat) és mediació que satisfà ambdues parts, superior a refusar, amenaçar o reubicar només un grup. Els punts (2+2) són coherents. Entrena orientació de servei i habilitats socials. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Voluntari en menjador social: persona demana ració extra per a familiar absent. L'ordre [0,1,2,3] coincideix perfectament amb punts (4-3-1-0). L'opció més adequada (explicar norma amb empatia, consultar coordinador) respecta normes mentre busca solucions, evitant actuar d'amagat. Entrena orientació de servei i responsabilitat. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Client a ferreteria necessita peça que no tenim ni rebem aviat. L'opció 2 (dir on trobar-la, oferir encarregar-la) és superior: prioritza la necessitat real del client sobre venda immediata, és honesta i útil. Els punts (2+2=4) reflecteixen aquesta claredat. Entrena orientació de servei i autonomia. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Rol d'atenció a ciutadania: persona amb pocs catala/castellà perdut cartera. L'ordre [2,3,0,1] coincideix amb punts (4-3-1-0). L'opció més adequada (parlar lentament, gestos, traductor, verificar comprensió) adapta la comunicació; alçar la veu és pitjor opció. Entrena orientació de servei i habilitats socials. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a2a173805daa0d345.jsonl",
+    "respuesta_sha256": "7eaea90b1ab08985e95a96c78efc179c4280b87387a01ea565c4621a5b7f4e77"
+   },
+   "registrada_el": "2026-10-03T23:20:25",
+   "intentos": [
+    {
+     "t": "2026-10-03T23:20:25",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a2a173805daa0d345.jsonl",
+      "respuesta_sha256": "7eaea90b1ab08985e95a96c78efc179c4280b87387a01ea565c4621a5b7f4e77"
+     },
+     "respuesta": "[{\"item_id\": \"esc-resolucio-problemes-3\", \"verdict\": \"VALID\", \"reason\": \"El text és coherent en català, la situació realista i el repartiment de punts intern consistent. L'opció recomanada (buscar alternatives amb pressupost i decidir-ho amb la comissió en 48 hores) és clarament la més professional i constructiva entre les alternatives. Entrena efectivament la competència de resolució de problemes. No presenta afirmacions oficials, no diagnostica personalitat i no és duplicada d'altres items.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-resolucio-problemes-4\", \"verdict\": \"VALID\", \"reason\": \"Escenario clar amb ordre de ranking que coincideix perfectament amb la suma de punts (4-3-1-0). La justificació ('prioritzar amb criteri i buscar rotacions') descriu exactament per què l'ordre és correcte. Entrena resolució de problemes i cooperació. Cap afirmació oficial, sense diagnòstic, no és duplicat.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-resolucio-problemes-5\", \"verdict\": \"VALID\", \"reason\": \"Situació realista de servei al client. L'opció 4 (detectar patró, alertar tècnics, informar clients) és objectivament superior: resol la causa, no només símptomes. Els punts (2+2=4) reflecteixen aquesta superioritat. Entrena resolució de problemes i orientació de servei. Sense afirmacions oficials, sense diagnòstic, sense duplicats.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-resolucio-problemes-6\", \"verdict\": \"VALID\", \"reason\": \"Escenario de conflicte veïnal ben construït. L'ordre recomanat [3,0,1,2] coincideix amb punts (4-3-1-0). L'opció més adequada (escoltar ambdues parts, proposar acord d'horaris) és mediació respectuosa versus refús de participar, favoritisme o vot sense debat. Entrena resolució de problemes i habilitats socials. Cap afirmació oficial ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-orientacio-servei-1\", \"verdict\": \"VALID\", \"reason\": \"Situació clara: ajudar una senyora gran a fer una tasca online a la biblioteca. L'opció recomanada (acompanyar-la pas a pas) és objectivament millor que fer-ho sense explicació, donar instruccions escritas, o derivar a família. Els punts (2+2) reflecteixen aquesta superioritat. Entrena orientació de servei i habilitats socials. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-orientacio-servei-2\", \"verdict\": \"VALID\", \"reason\": \"Client enfadat per cancel·lació d'excursió. L'opció 4 (escoltar, reconèixer molèstia, oferir alternatives) és clarament la millor resposta de servei: transforma la queixa en solució. Els punts (2+2=4) la destaquen. Entrena orientació de servei i autocontrol. Sense afirmacions oficials, sense diagnòstic, sense duplicats.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-orientacio-servei-3\", \"verdict\": \"VALID\", \"reason\": \"Situació de piscina: joves fan soroll sense violar normes escrites. L'opció 4 (parlar respectuosament als joves, proposar espai més adequat) és mediació que satisfà ambdues parts, superior a refusar, amenaçar o reubicar només un grup. Els punts (2+2) són coherents. Entrena orientació de servei i habilitats socials. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-orientacio-servei-4\", \"verdict\": \"VALID\", \"reason\": \"Voluntari en menjador social: persona demana ració extra per a familiar absent. L'ordre [0,1,2,3] coincideix perfectament amb punts (4-3-1-0). L'opció més adequada (explicar norma amb empatia, consultar coordinador) respecta normes mentre busca solucions, evitant actuar d'amagat. Entrena orientació de servei i responsabilitat. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-orientacio-servei-5\", \"verdict\": \"VALID\", \"reason\": \"Client a ferreteria necessita peça que no tenim ni rebem aviat. L'opció 2 (dir on trobar-la, oferir encarregar-la) és superior: prioritza la necessitat real del client sobre venda immediata, és honesta i útil. Els punts (2+2=4) reflecteixen aquesta claredat. Entrena orientació de servei i autonomia. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"esc-orientacio-servei-6\", \"verdict\": \"VALID\", \"reason\": \"Rol d'atenció a ciutadania: persona amb pocs catala/castellà perdut cartera. L'ordre [2,3,0,1] coincideix amb punts (4-3-1-0). L'opció més adequada (parlar lentament, gestos, traductor, verificar comprensió) adapta la comunicació; alçar la veu és pitjor opció. Entrena orientació de servei i habilitats socials. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "esc-adaptabilitat-1",
+    "esc-adaptabilitat-2",
+    "esc-adaptabilitat-3",
+    "esc-adaptabilitat-4",
+    "esc-adaptabilitat-5",
+    "esc-adaptabilitat-6",
+    "esc-autocontrol-1",
+    "esc-autocontrol-2",
+    "esc-autocontrol-3",
+    "esc-autocontrol-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-05.json",
+   "prompt_sha256": "52df7c72e452283f9b67f326de411a90836bceb3c8d0dcedc7a290aaf6cb1048",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-adaptabilitat-1": "ae81c63a029ee800d15f40d678f1f03e26d2aa12602c34f1eabc318e45bee094",
+    "esc-adaptabilitat-2": "0dc6c886104ccc9b085084c1564ea437b748f07e2e23728f30e57de78605eb7c",
+    "esc-adaptabilitat-3": "5cb0580b48ad6337f97bfc8d1bb530d730aef63a4ea7b2e12a4aed84e5575379",
+    "esc-adaptabilitat-4": "1d1c10ece887eda2f9b921e829965cc3a3dc52220f6f0fd12210cb07aedd5341",
+    "esc-adaptabilitat-5": "661f45e2a26b83eb9382199a0735fc3e8c8aad0240c5f78683aab7bbe7ed7af3",
+    "esc-adaptabilitat-6": "81374bf5cd4bd6503f78706a2a4f18e501c5f3bd87f2a67b9b28b9dfa090650f",
+    "esc-autocontrol-1": "4d361445d474ffe7c23f2aafd834e481204ff2eef8b6d8ce445ff03132a9a414",
+    "esc-autocontrol-2": "cc93ec1b81ce2bc2f369258f38bf6e2826709316f767ce199ceb6276b98d54b5",
+    "esc-autocontrol-3": "b36ab82ff0b2c328ed1df94fcaf232b8a269f9563350602861aaf6c28db4130c",
+    "esc-autocontrol-4": "cf10ef445c70c1fa1e811cf728cc49e9495b62df7bde58212488d55f64de77b1"
+   },
+   "veredictos": [
+    {
+     "item_id": "esc-adaptabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario coherente y bien escrito en catalán. La opción recomendada (solicitar formación, practicar y preguntar) tiene la puntuación más alta (2+2=4) y es claramente el enfoque más profesional. Entrena adaptabilidad y autogestión. No reclama criterios oficiales ni diagnostica.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario claro y realista. La opción recomendada (observar, preguntar a compañeros locales, ajustarse) tiene la puntuación más alta (2+2=4) y es el mejor enfoque para integración. Entrena adaptabilidad y habilidades sociales de forma coherente.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario deportivo bien contextualizado. La opción recomendada (dar oportunidad al sistema, entrenarlo, plantear dudas) alcanza 2+2=4 puntos. Es el enfoque más constructivo para cambios sistémicos. La justificación es coherente con la competencia entrenada.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de ranking coherente. El orden recomendado [3,0,1,2] corresponde exactamente a las puntuaciones (4,3,1,0). Aceptar la nueva tarea asegurándose de entenderla es claramente el enfoque más profesional. Entrena adaptabilidad y responsabilidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario realista de cambio de última hora en académia. La opción de ajustarse con buena actitud (2+2=4 puntos) es claramente recomendable. La justificación es pertinente: cambios de última hora son frecuentes en trabajo policial. Entrena adaptabilidad y autocontrol.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de ranking sobre gestión familiar durante preparación. El orden [1,2,3,0] coincide con puntuaciones (4,3,1,0). Hablar con la familia y reorganizarse es la respuesta más adaptativa. Bien contextualizado para candidatos a Mossos. No contiene afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario laboral realista de atencion al cliente hostil. La opción recomendada (mantener calma, poner límites respetuosos) suma 2+2=4 puntos. Es el enfoque más profesional para trabajos de atención y directamente relevante para labor policial. Sin elementos diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario deportivo con provocación sostenida. La opción recomendada (centrarse en el juego, no responder, reportar al entrenador) suma 2+2=4 puntos y previene escalada. Claramente defendible. Entrena autocontrol y cooperación sin diagnosis de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de presión en examen con error detectado a mitad de prueba. La opción de respirar y priorizar (2+2=4) es coherente con la justificación. Es claramente la respuesta más efectiva. Entrena autocontrol y resolución de problemas sin elementos diagnósticos problemáticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de ranking: control de accesos a concierto con persona sin entrada. El orden [2,3,0,1] corresponde a puntuaciones (4,3,1,0). Explicar con calma y firmeza es claramente más profesional que discutir o ceder. Muy relevante para trabajo de Mossos. Sin diagnósticos ni afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a6105797cc0fcc653.jsonl",
+    "respuesta_sha256": "26dc4c8695bca9fd58fabafccfbc918fc88b1715c8b273be886a2cc9c6398041"
+   },
+   "registrada_el": "2026-10-03T23:21:50",
+   "intentos": [
+    {
+     "t": "2026-10-03T23:21:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a6105797cc0fcc653.jsonl",
+      "respuesta_sha256": "26dc4c8695bca9fd58fabafccfbc918fc88b1715c8b273be886a2cc9c6398041"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"esc-adaptabilitat-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario coherente y bien escrito en catalán. La opción recomendada (solicitar formación, practicar y preguntar) tiene la puntuación más alta (2+2=4) y es claramente el enfoque más profesional. Entrena adaptabilidad y autogestión. No reclama criterios oficiales ni diagnostica.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-adaptabilitat-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario claro y realista. La opción recomendada (observar, preguntar a compañeros locales, ajustarse) tiene la puntuación más alta (2+2=4) y es el mejor enfoque para integración. Entrena adaptabilidad y habilidades sociales de forma coherente.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-adaptabilitat-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario deportivo bien contextualizado. La opción recomendada (dar oportunidad al sistema, entrenarlo, plantear dudas) alcanza 2+2=4 puntos. Es el enfoque más constructivo para cambios sistémicos. La justificación es coherente con la competencia entrenada.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-adaptabilitat-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de ranking coherente. El orden recomendado [3,0,1,2] corresponde exactamente a las puntuaciones (4,3,1,0). Aceptar la nueva tarea asegurándose de entenderla es claramente el enfoque más profesional. Entrena adaptabilidad y responsabilidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-adaptabilitat-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario realista de cambio de última hora en académia. La opción de ajustarse con buena actitud (2+2=4 puntos) es claramente recomendable. La justificación es pertinente: cambios de última hora son frecuentes en trabajo policial. Entrena adaptabilidad y autocontrol.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-adaptabilitat-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de ranking sobre gestión familiar durante preparación. El orden [1,2,3,0] coincide con puntuaciones (4,3,1,0). Hablar con la familia y reorganizarse es la respuesta más adaptativa. Bien contextualizado para candidatos a Mossos. No contiene afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autocontrol-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario laboral realista de atencion al cliente hostil. La opción recomendada (mantener calma, poner límites respetuosos) suma 2+2=4 puntos. Es el enfoque más profesional para trabajos de atención y directamente relevante para labor policial. Sin elementos diagnósticos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autocontrol-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario deportivo con provocación sostenida. La opción recomendada (centrarse en el juego, no responder, reportar al entrenador) suma 2+2=4 puntos y previene escalada. Claramente defendible. Entrena autocontrol y cooperación sin diagnosis de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autocontrol-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de presión en examen con error detectado a mitad de prueba. La opción de respirar y priorizar (2+2=4) es coherente con la justificación. Es claramente la respuesta más efectiva. Entrena autocontrol y resolución de problemas sin elementos diagnósticos problemáticos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autocontrol-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de ranking: control de accesos a concierto con persona sin entrada. El orden [2,3,0,1] corresponde a puntuaciones (4,3,1,0). Explicar con calma y firmeza es claramente más profesional que discutir o ceder. Muy relevante para trabajo de Mossos. Sin diagnósticos ni afirmaciones oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "06",
+   "ids": [
+    "esc-autocontrol-5",
+    "esc-autocontrol-6",
+    "esc-autogestio-1",
+    "esc-autogestio-2",
+    "esc-autogestio-3",
+    "esc-autogestio-4",
+    "esc-autogestio-5",
+    "esc-autogestio-6",
+    "esc-motivacio-1",
+    "esc-motivacio-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-06.json",
+   "prompt_sha256": "43cc4d29a889c2429276faf9817b2694bf3a0c6498bdbfa76b8d82d20e908ae7",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-autocontrol-5": "9566b754db0b7d14e9988d0e067cac9aa8ce93db3edb3bbca445b2c912c41f65",
+    "esc-autocontrol-6": "352829a87bb25a55ad44b64acaea227434e95ddff6a25cf4919b6c65268792fe",
+    "esc-autogestio-1": "243d5fa496f9fdd3ec1975b86e8cd6d20edf59a805344da9dc4c232bd46fb15b",
+    "esc-autogestio-2": "b57b988451539753150cdef42bdbfcb8e9a2a7ac9dafd6e2f9fcf54fb8894fb1",
+    "esc-autogestio-3": "0aa09431e0f3ebc44cb61dba4526ca3ec2472d2971ae4164f1feb9508e11de18",
+    "esc-autogestio-4": "cd6790c99c0ac26c3fd2a703b5f0c8c5df2abefa44cb0d72b19bb7840b496cc0",
+    "esc-autogestio-5": "7bf4812ddfc2297095188e7b61f4c899ee45f16578b4e009a0ab0f1fe80c6f19",
+    "esc-autogestio-6": "d1f330d0dd23a34b56be56bff76f4f870ba4cf0bc569caef28f93ced00b718d3",
+    "esc-motivacio-1": "ec3866b1915305df14889476b8426ed2afd5a4ad775f33e4f87049aaec34387f",
+    "esc-motivacio-2": "c5aff4ebe8edc369cea81872bc175963fa340f6a97b7723be1dc8635124453f4"
+   },
+   "veredictos": [
+    {
+     "item_id": "esc-autocontrol-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El escenario presenta una situación laboral realista y coherente. La opción recomendada (responder en privado) es claramente la más profesional y ética: preserva la relación y la imagen de la empresa sin sacrificar la defensa personal. Los puntos atribuidos (opción 2 con 2+2=4) coinciden perfectamente con la justificación. No hay afirmaciones sobre criterios oficiales ni diagnósticos psicológicos. El texto está bien redactado en catalán.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario realista de gestión de crisis (puesto de asistencia de voluntariado). El orden recomendado [0,1,2,3] coincide exactamente con los totales de puntos (4,3,1,0). La opción prioritaria (atender por necesidad, solicitar refuerzos) es claramente la más eficaz y profesional para situaciones de emergencia. No contiene afirmaciones sobre criterios oficiales ni diagnósticos de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista de meseta de entrenamiento. La opción 3 (revisar plan, registrar, pedir consejo) obtiene máxima puntuación (2+2=4) y refleja perfectamente la justificación sobre análisis y ajuste planificado. Es claramente la más efectiva para el desarrollo personal frente al abandono o la insistencia ciega. Redacción clara en catalán, sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Dilema realista de compatibilidad trabajo-estudios con cansancio. La opción 4 (revisar uso del tiempo, establecer descansos, priorizar) obtiene puntuación máxima (2+2=4) y encarna la gestión sostenible de energía y tiempo descrita en la justificación. Claramente la más responsable y efectiva. Sin afirmaciones sobre criterios tribunales ni etiquetas diagnósticas de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de recepción de crítica académica. La opción 1 (analizar, aclarar, aplicar) suma 2+2=4 puntos y refleja la justificación sobre crítica como fuente de aprendizaje. Es claramente la más profesional y orientada al desarrollo. Situación coherente y bien redactada; no hay diagnósticos ni pretensiones de criterios oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conflicto realista entre vida social y objetivos de preparación. El orden recomendado [1,2,3,0] coincide exactamente con puntos totales (4,3,1,0). La opción prioritaria (evaluar contra plan, proponer alternativa) es claramente la más prudente y alineada con objetivos. Coherencia interna perfecta. Sin afirmaciones sobre criterios oficiales ni diagnósticos de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista de asumir nuevo liderazgo sin experiencia previa. La opción 3 (aceptar con formación y mentoring) suma 2+2=4 y representa el enfoque descrito en justificación: crecimiento con gestión de riesgos. Claramente superior al rechazo, improvisación o delegación de responsabilidad. Texto coherente en catalán sin criterios oficiales ni etiquetas diagnósticas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de autoevaluación tras desempeño bajo en práctica académica. El orden recomendado [3,0,1,2] coincide perfectamente con totales de puntos (4,3,1,0). La opción prioritaria (identificar honestamente errores y plan de mejora) es claramente la más responsable y efectiva para el aprendizaje. Coherencia interna perfecta; sin afirmaciones sobre criterios oficiales ni diagnósticos psicológicos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista de tarea rutinaria en prácticas de servicio comunitario. La opción 2 (realizar con cuidado, entendiendo que es parte del servicio) obtiene puntuación máxima (2+2=4) y encarna la justificación sobre valorar tareas rutinarias como parte de la identificación organizacional. Claramente la mejor opción. Coherente, bien redactada, sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de defensa de motivación para servicio público ante escepticismo de amigo. La opción 4 (explicar con sinceridad motivos incluyendo servicio) suma 2+2=4 puntos y refleja la justificación sobre explicar motivación pensada y coherente. Es claramente la más auténtica y comunicativa. Redacción clara en catalán, sin afirmaciones sobre criterios tribunales ni diagnósticos de personalidad.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "06",
+    "transcripcion": "agent-a23fe452f3d534848.jsonl",
+    "respuesta_sha256": "787eda91140a3eef10b69fa844fbfd330256be067a4636bfc000755007020d74"
+   },
+   "registrada_el": "2026-10-03T23:23:01",
+   "intentos": [
+    {
+     "t": "2026-10-03T23:23:01",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-a23fe452f3d534848.jsonl",
+      "respuesta_sha256": "787eda91140a3eef10b69fa844fbfd330256be067a4636bfc000755007020d74"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"esc-autocontrol-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El escenario presenta una situación laboral realista y coherente. La opción recomendada (responder en privado) es claramente la más profesional y ética: preserva la relación y la imagen de la empresa sin sacrificar la defensa personal. Los puntos atribuidos (opción 2 con 2+2=4) coinciden perfectamente con la justificación. No hay afirmaciones sobre criterios oficiales ni diagnósticos psicológicos. El texto está bien redactado en catalán.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autocontrol-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario realista de gestión de crisis (puesto de asistencia de voluntariado). El orden recomendado [0,1,2,3] coincide exactamente con los totales de puntos (4,3,1,0). La opción prioritaria (atender por necesidad, solicitar refuerzos) es claramente la más eficaz y profesional para situaciones de emergencia. No contiene afirmaciones sobre criterios oficiales ni diagnósticos de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autogestio-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Situación realista de meseta de entrenamiento. La opción 3 (revisar plan, registrar, pedir consejo) obtiene máxima puntuación (2+2=4) y refleja perfectamente la justificación sobre análisis y ajuste planificado. Es claramente la más efectiva para el desarrollo personal frente al abandono o la insistencia ciega. Redacción clara en catalán, sin afirmaciones oficiales ni diagnósticos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autogestio-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Dilema realista de compatibilidad trabajo-estudios con cansancio. La opción 4 (revisar uso del tiempo, establecer descansos, priorizar) obtiene puntuación máxima (2+2=4) y encarna la gestión sostenible de energía y tiempo descrita en la justificación. Claramente la más responsable y efectiva. Sin afirmaciones sobre criterios tribunales ni etiquetas diagnósticas de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autogestio-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de recepción de crítica académica. La opción 1 (analizar, aclarar, aplicar) suma 2+2=4 puntos y refleja la justificación sobre crítica como fuente de aprendizaje. Es claramente la más profesional y orientada al desarrollo. Situación coherente y bien redactada; no hay diagnósticos ni pretensiones de criterios oficiales.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autogestio-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Conflicto realista entre vida social y objetivos de preparación. El orden recomendado [1,2,3,0] coincide exactamente con puntos totales (4,3,1,0). La opción prioritaria (evaluar contra plan, proponer alternativa) es claramente la más prudente y alineada con objetivos. Coherencia interna perfecta. Sin afirmaciones sobre criterios oficiales ni diagnósticos de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autogestio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Situación realista de asumir nuevo liderazgo sin experiencia previa. La opción 3 (aceptar con formación y mentoring) suma 2+2=4 y representa el enfoque descrito en justificación: crecimiento con gestión de riesgos. Claramente superior al rechazo, improvisación o delegación de responsabilidad. Texto coherente en catalán sin criterios oficiales ni etiquetas diagnósticas.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-autogestio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de autoevaluación tras desempeño bajo en práctica académica. El orden recomendado [3,0,1,2] coincide perfectamente con totales de puntos (4,3,1,0). La opción prioritaria (identificar honestamente errores y plan de mejora) es claramente la más responsable y efectiva para el aprendizaje. Coherencia interna perfecta; sin afirmaciones sobre criterios oficiales ni diagnósticos psicológicos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-motivacio-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Situación realista de tarea rutinaria en prácticas de servicio comunitario. La opción 2 (realizar con cuidado, entendiendo que es parte del servicio) obtiene puntuación máxima (2+2=4) y encarna la justificación sobre valorar tareas rutinarias como parte de la identificación organizacional. Claramente la mejor opción. Coherente, bien redactada, sin afirmaciones oficiales ni diagnósticos.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"esc-motivacio-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Escenario de defensa de motivación para servicio público ante escepticismo de amigo. La opción 4 (explicar con sinceridad motivos incluyendo servicio) suma 2+2=4 puntos y refleja la justificación sobre explicar motivación pensada y coherente. Es claramente la más auténtica y comunicativa. Redacción clara en catalán, sin afirmaciones sobre criterios tribunales ni diagnósticos de personalidad.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"clave_defendible\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "07",
+   "ids": [
+    "esc-motivacio-3",
+    "esc-motivacio-4",
+    "esc-motivacio-5",
+    "esc-motivacio-6",
+    "esc-habilitats-socials-1",
+    "esc-habilitats-socials-2",
+    "esc-habilitats-socials-3",
+    "esc-habilitats-socials-4",
+    "esc-habilitats-socials-5",
+    "esc-habilitats-socials-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00001/tanda-07.json",
+   "prompt_sha256": "0829495033f58e200b4f45b1e973a1e6c7bce1c185ab9399671908c5f17a9272",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-motivacio-3": "83e68b47025f65c0822bd65b3f2f92fae330f6e804580e57c1947940605926e6",
+    "esc-motivacio-4": "501bb5c9434891e75845949431d8c34ee73f28882a582c2a7335e3f8a606c1b6",
+    "esc-motivacio-5": "31f3d0306cd1fc58a4b75ad08a476076b063f7edebd9a408e754e880f22c37af",
+    "esc-motivacio-6": "8dfbd481622ced80ccd914714f8167124ac67b633bafa566453ebe1ae37d0364",
+    "esc-habilitats-socials-1": "63f2caa2f73e4d24015da474fb8b8e9cdbc36f8566e783ecbbf7589299851a9d",
+    "esc-habilitats-socials-2": "8441f23d1ca4dd23fab1e3ce2746fb574cd4c3f4f58ef00f3fafdbe708e7ded0",
+    "esc-habilitats-socials-3": "b28665df3e3f77a868d81f1adda9e5f20f2f4f486ad6fb07efe631342c4f4ab7",
+    "esc-habilitats-socials-4": "46051c843d9da0840b2e45b2b9dcba187578f0730925b9b052bf4cccc9f9b7a1",
+    "esc-habilitats-socials-5": "b3f6d27bf0ac2c4d30c68a54dd7a94a56b91345114c33ee06dbb32b5a4a23d1b",
+    "esc-habilitats-socials-6": "98ecb8dd758897c677a6cc0b7c55b6708dad3d75195c97de8d96b4861038d2c2"
+   },
+   "veredictos": [
+    {
+     "item_id": "esc-motivacio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario coherente sobre oferta de formació voluntaria. El texto és claro en català, la situació realista, i els punts (2,2) de l'opció recomanada superen els altres. La recomendació d'apuntar-se per obtenir coneixements útils és clarament la més motivada i defensible. No presenta afirmacions oficials ni diagnòstics, i forma part del bloc de competencia sobre motivació.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking coherente sobre resposta a comentaris negatius en xerrada d'acadèmia. L'ordre [0,1,2,3] es correspon amb els punts (4,3,1,0). La recomanació de mantenir l'interès i compartir-ho constructivament és clarament més professional que desconnectar. Text ben escrit en català, sense afirmacions oficials ni diagnostics.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario sobre com reaccionar a descoratjament d'un conegut. L'opció recomanada (contrastar i repensar els motius amb calma) score (2,2), la més alta. Clarament defensible com a resposta més madura i reflexiva. Competencia sobre motivació ben enfocada, sense afirmacions sobre criteris del tribunal ni diagnostics de personalitat.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking sobre gestió de projecte amb participació decaient. L'ordre [2,3,0,1] reflecteix correctament els punts totals (4,3,1,0). Recuperar el sentit del projecte amb fites assumibles és clarament més constructiu que abandonar o criticar. Entena bé la competencia de motivació i cooperació, sense afirmacions oficials ni diagnostics.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Integració en oficina nova. L'opció (2,2) de presentar-se i interessar-se pels altres és clarament superior a esperar, aïllar-se o fer bromes. Scenario realista i coherent, respon bé la competencia de habilitats socials, sense afirmacions oficials ni diagnostics de personalitat.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conflicte de convivència per soroll. L'opció recomanada (2,2) de parlar amb calma i buscar solució conjunta és clarament la forma més respectuosa i eficaç. Text coherent en català, situació realista de convivència. Competencia bien adreçada, sense afirmacions oficials ni diagnostics.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Presentació sense poder respondre pregunta. Recomanació (2,2) de reconèixer honnestament la limitació i oferir-se a buscar resposta és la més professional. Text clar, situació realista de formació, coherent. Entrena habilitats de comunicació, sense afirmacions sobre criteris oficials ni diagnostics.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Mediació en rol-play entre dues persones en disputa. Ranking [3,0,1,2] es correspon correctament amb punts (4,3,1,0). Separar, escoltar i facilitar acord és clarament la millor tècnica de mediació. Scenario de pràctica realista, competencia sobre habilitats socials ben enfocada, sense afirmacions oficials.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Consell a client que utilitza termes tècnics desconeguts. L'opció (2,2) de demanar aclariment per entendre bé la necessitat és la més professional i orientada al servei. Scenario realista de comerç, text coherent en català. Competencia de comunicació i orientació al servei ben adreçada, sense afirmacions oficials ni diagnostics.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Comunicació de cancel·lació a voluntaris. Ranking [1,2,3,0] reflecteix correctament punts (4,3,1,0). Explicar en persona, reconèixer esforç i proposar reaprofitament és clarament la forma més responsable i respectuosa de comunicar mala notícia. Competencia de comunicació i motivació ben enfocada, sense afirmacions oficials ni diagnostics.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "07",
+    "transcripcion": "agent-a81bab00da32f191c.jsonl",
+    "respuesta_sha256": "7fb882edcb9ad8162d4d876f7aec2902ff3f57e0e4e90a16aa2073dbd618f870"
+   },
+   "registrada_el": "2026-10-03T23:23:26",
+   "intentos": [
+    {
+     "t": "2026-10-03T23:23:26",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "07",
+      "transcripcion": "agent-a81bab00da32f191c.jsonl",
+      "respuesta_sha256": "7fb882edcb9ad8162d4d876f7aec2902ff3f57e0e4e90a16aa2073dbd618f870"
+     },
+     "respuesta": "[\n  {\"item_id\": \"esc-motivacio-3\", \"verdict\": \"VALID\", \"reason\": \"Escenario coherente sobre oferta de formació voluntaria. El texto és claro en català, la situació realista, i els punts (2,2) de l'opció recomanada superen els altres. La recomendació d'apuntar-se per obtenir coneixements útils és clarament la més motivada i defensible. No presenta afirmacions oficials ni diagnòstics, i forma part del bloc de competencia sobre motivació.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-motivacio-4\", \"verdict\": \"VALID\", \"reason\": \"Ranking coherente sobre resposta a comentaris negatius en xerrada d'acadèmia. L'ordre [0,1,2,3] es correspon amb els punts (4,3,1,0). La recomanació de mantenir l'interès i compartir-ho constructivament és clarament més professional que desconnectar. Text ben escrit en català, sense afirmacions oficials ni diagnostics.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-motivacio-5\", \"verdict\": \"VALID\", \"reason\": \"Escenario sobre com reaccionar a descoratjament d'un conegut. L'opció recomanada (contrastar i repensar els motius amb calma) score (2,2), la més alta. Clarament defensible com a resposta més madura i reflexiva. Competencia sobre motivació ben enfocada, sense afirmacions sobre criteris del tribunal ni diagnostics de personalitat.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-motivacio-6\", \"verdict\": \"VALID\", \"reason\": \"Ranking sobre gestió de projecte amb participació decaient. L'ordre [2,3,0,1] reflecteix correctament els punts totals (4,3,1,0). Recuperar el sentit del projecte amb fites assumibles és clarament més constructiu que abandonar o criticar. Entena bé la competencia de motivació i cooperació, sense afirmacions oficials ni diagnostics.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-habilitats-socials-1\", \"verdict\": \"VALID\", \"reason\": \"Integració en oficina nova. L'opció (2,2) de presentar-se i interessar-se pels altres és clarament superior a esperar, aïllar-se o fer bromes. Scenario realista i coherent, respon bé la competencia de habilitats socials, sense afirmacions oficials ni diagnostics de personalitat.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-habilitats-socials-2\", \"verdict\": \"VALID\", \"reason\": \"Conflicte de convivència per soroll. L'opció recomanada (2,2) de parlar amb calma i buscar solució conjunta és clarament la forma més respectuosa i eficaç. Text coherent en català, situació realista de convivència. Competencia bien adreçada, sense afirmacions oficials ni diagnostics.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-habilitats-socials-3\", \"verdict\": \"VALID\", \"reason\": \"Presentació sense poder respondre pregunta. Recomanació (2,2) de reconèixer honnestament la limitació i oferir-se a buscar resposta és la més professional. Text clar, situació realista de formació, coherent. Entrena habilitats de comunicació, sense afirmacions sobre criteris oficials ni diagnostics.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-habilitats-socials-4\", \"verdict\": \"VALID\", \"reason\": \"Mediació en rol-play entre dues persones en disputa. Ranking [3,0,1,2] es correspon correctament amb punts (4,3,1,0). Separar, escoltar i facilitar acord és clarament la millor tècnica de mediació. Scenario de pràctica realista, competencia sobre habilitats socials ben enfocada, sense afirmacions oficials.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-habilitats-socials-5\", \"verdict\": \"VALID\", \"reason\": \"Consell a client que utilitza termes tècnics desconeguts. L'opció (2,2) de demanar aclariment per entendre bé la necessitat és la més professional i orientada al servei. Scenario realista de comerç, text coherent en català. Competencia de comunicació i orientació al servei ben adreçada, sense afirmacions oficials ni diagnostics.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}},\n  {\"item_id\": \"esc-habilitats-socials-6\", \"verdict\": \"VALID\", \"reason\": \"Comunicació de cancel·lació a voluntaris. Ranking [1,2,3,0] reflecteix correctament punts (4,3,1,0). Explicar en persona, reconèixer esforç i proposar reaprofitament és clarament la forma més responsable i respectuosa de comunicar mala notícia. Competencia de comunicació i motivació ben enfocada, sense afirmacions oficials ni diagnostics.\", \"criteria_checked\": {\"coherente\": true, \"clave_defendible\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

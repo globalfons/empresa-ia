@@ -48,5 +48,12 @@
   "detalle": "La deduplicación se limitaba al mismo apartado; la pregunta 3.0 (C.5.IF, Idees força) repetía guia-mossos-51 (C.5.2) y el juez no la recibía como parecida. Detectado en la auditoría previa al juicio.",
   "accion": "Se detuvieron los dos jueces antes de que entregaran veredicto (nada registrado; su razonamiento parcial estaba a la vista: tanda 02 consideraba 2.0 trivial). Banco.existentes deduplica X.n.IF con los apartados X.n.m (fabrica.banco.afin, test en tests/test_mossos.py), se repitió validar (re-preparación sin intentos) y se relanzaron los jueces con los mismos prompts. Política y criterios sin cambios.",
   "politica": "juez-sesion-v3"
+ },
+ {
+  "fecha": "2026-10-03",
+  "tipo": "guard_falso_positivo",
+  "lote": "C00001",
+  "detalle": "Juez de competencias, tanda 02: el guard de valoraciones agregadas rechazó «situación diferente de las anteriores» (comparación para deduplicar, no un veredicto de grupo).",
+  "accion": "fabrica.competencias.agregada excluye las comparaciones (test); se registra de nuevo la MISMA respuesta del juez. Prompt y criterios sin cambios."
  }
 ]

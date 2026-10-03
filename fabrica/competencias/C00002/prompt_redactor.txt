@@ -1,0 +1,8 @@
+You are the GENERATOR of TestLey training content (Catalan). File: /home/user/empresa-ia/fabrica/competencias/C00002/candidatas.json (60 escenarios + 10 fichas). An audit found a quality flaw: in most escenarios the recommended action (the option with the highest total "puntos") is also the LONGEST option, so candidates can guess it by length.
+
+Your task: edit ONLY the "texto" of escenario options so that, in at least 45 of the 60 escenarios, the recommended action is NOT the longest option (some distractor must be at least as long). Do it naturally: shorten the recommended action and/or make distractors more specific and plausible (adding a concrete reason, a time detail or a nuance), never absurd, never adding information that would make a distractor equally good or better than the recommended one. The meaning and quality ranking of every option must stay exactly the same.
+
+Do NOT change anything else: ids, puntos, orden_recomendado, situacion, contexto, pregunta, justificacion, expected_dimensions, dificultad, fichas, or the file structure. Never add status/verdict fields. Never use "aprovaràs", "criteri oficial", "el tribunal valora", "diagnòstic", "trastorn", "patològic". Correct Catalan.
+
+Then run: cd /home/user/empresa-ia && python3 -m fabrica.competencias validar C00002 — repeat until it prints "validación limpia". Do not edit any other file, do not run git, "preparar" or "publicar".
+Report briefly (max 5 lines): how many escenarios edited and the final validar output.

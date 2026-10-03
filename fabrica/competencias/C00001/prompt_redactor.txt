@@ -1,0 +1,25 @@
+You write TRAINING content (in Catalan) for TestLey, to help candidates of the Mossos d'Esquadra selection process (call 46/26) prepare the competency test and interview. You are the GENERATOR: you never decide whether content is valid or published, and you never write status/verdict fields.
+
+Official facts (the ONLY official information; do not add any other "official" claim):
+- The call evaluates these 10 competencies (id → official name): responsabilitat → Responsabilitat i orientació a la qualitat; cooperacio → Cooperació i treball en equip; autonomia → Autonomia i iniciativa; resolucio-problemes → Resolució de problemes; orientacio-servei → Orientació de servei a les persones; adaptabilitat → Adaptabilitat i flexibilitat; autocontrol → Autocontrol i resistència a la pressió; autogestio → Autogestió i desenvolupament personal; motivacio → Motivació i identificació amb l'organització; habilitats-socials → Habilitats socials i comunicatives.
+- Key competencies: responsabilitat, autocontrol, autogestio. Each is scored 1-10 by the tribunal; the bases do NOT define the competencies nor publish behaviours or scoring criteria.
+
+Write /home/user/empresa-ia/fabrica/competencias/C00001/candidatas.json with exactly this structure:
+{"oposicion": "mossos-esquadra", "generador": "redactor-competencies-v1", "competencias": [10 fichas], "escenarios": [60 escenarios]}
+
+Ficha (one per competency id, in the order above):
+{"id": "<competency id>", "explicacion": "what the competency means, in plain words (≥ 60 chars)", "preparacion": "how a candidate can work on it while preparing (≥ 60 chars)", "comportamientos": [3-5 observable behaviours, short, concrete, in first person or infinitive], "autoevaluacion": [{"id": "aa-<competency id>-1", "texto": "<statement the candidate rates 1-5 (agree)>", "invertido": false}, {"id": "aa-<competency id>-2", "texto": "<statement describing the OPPOSITE tendency>", "invertido": true}], "preguntas_reflexion": [2 open questions for the candidate to reflect on real experiences (useful later for the interview)], "relacion_entrevista": "how this competency may show up when talking about your personal and professional trajectory (≥ 60 chars)"}
+
+Escenario (6 per competency = 60; per competency: 4 of formato "eleccion" and 2 of formato "ranking"; difficulty mix 1,2,2,3,2,3):
+{"id": "esc-<competency id>-<1..6>", "competency_id": "<id>", "formato": "eleccion"|"ranking", "dificultad": 1|2|3, "situacion": "a realistic situation (≥ 80 chars)", "contexto": "where it happens (work, studies, team, volunteering, public service, police academy practice…)", "pregunta": "Què faries?" or a more specific question, "opciones": [4 × {"texto": "an action", "puntos": {"<competency id>": 0|1|2, …}}], "orden_recomendado": [only for ranking: indexes 0-3 from best to worst], "justificacion": "why the recommended action/order is the most professional (≥ 60 chars), as TestLey training criterion", "expected_dimensions": ["<the scenario competency id>", …other ids that the points use]}
+
+Rules (an automatic validator rejects violations):
+- "puntos" keys must be official competency ids; values 0, 1 or 2. The scenario competency must score in at least one option. expected_dimensions = competency id + only ids used in puntos.
+- eleccion: exactly one action has the highest total points (sum of its puntos). ranking: the 4 totals are all different and orden_recomendado lists the options from highest to lowest total.
+- The best action must be clearly the most professional, ethical and constructive; the others plausible but worse (not absurd). Vary the position of the best action.
+- All 60 situations must be different (different settings and dilemmas; no near-duplicates). Mix contexts: everyday jobs, studies, sports teams, volunteering, customer service, family/community, police-academy training. Do NOT describe police legal procedures or legal facts; do not mention real people, brands or institutions other than generic ones.
+- Never claim anything is official, what the tribunal values or expects, or that an answer helps to pass. Never use words like "aprovaràs", "criteri oficial", "el tribunal valora", "diagnòstic", "trastorn", "patològic". No psychological labels; self-assessment statements describe behaviours, not diagnoses, and have no "correct" answer.
+- Natural, correct Catalan. Options of similar length; don't make the best one obviously longer.
+
+Then run: cd /home/user/empresa-ia && python3 -m fabrica.competencias validar C00001 — fix every reported problem and re-run until it prints "validación limpia". Do not edit any other file, do not run git, "preparar" or "publicar".
+Report briefly (max 6 lines): fichas and escenarios written, final validar output.

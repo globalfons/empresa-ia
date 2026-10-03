@@ -12,8 +12,8 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - [x] **Aptitud abstracta** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
 - [x] **Aptitud espacial** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
 - [x] **Aptitud perceptiva** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
-- [ ] Competency training · datos oficiales verificados; sin entrenamiento (Fase 2)
-- [ ] Psychometric foundation · Fase 2
+- [x] **Competency training** · 10 competencias oficiales (cita, fuente, 46/26) + 10 fichas y 60 situaciones TestLey publicadas solo como VALID del juez independiente (`fabrica/competencias.py`, `catalogo/competencias/mossos-esquadra.json`, lote C00002) · `/oposiciones/mossos-esquadra/competencias/` · `tests/test_competencias.py`, `tests/js/competencias.test.mjs`, E2E 22a–22e en 375 px y escritorio
+- [x] **Psychometric foundation** · cuestionario de autopercepción (20 ítems, pares invertidos, consistencia, evolución) como SELF_ASSESSMENT separado de OBJECTIVE_SCORE, sin respuestas correctas ni diagnóstico (`web/assets/competencias.js`) · tests JS · E2E 22d
 - [ ] Interview trainer · Fase 3
 - [ ] Physical tracker · barems oficiales verificados; sin registro de marcas (Fase 4)
 - [ ] Catalan information · datos verificados en el perfil; sin vista para el usuario (Fase 6)

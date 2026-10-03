@@ -676,3 +676,18 @@ p.acciones { margin: 14px 0 4px; }
 .apt-opts-fig { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
 .apt-opts-fig .opt { align-items: center; color: var(--text); }
 .apt-conf { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0; }
+
+/* Competencias y autoconocimiento */
+.comp-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 14px; }
+.comp-tabs .btn { padding: 8px 12px; }
+.comp-ficha summary { cursor: pointer; padding: 4px 0; }
+.comp-oficial, .comp-testley { border-left: 3px solid var(--line); padding: 4px 0 4px 12px; margin: 10px 0; }
+.comp-oficial { border-color: var(--ok); }
+.comp-testley { border-color: var(--accent); }
+.comp-item { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
+.comp-item legend { padding: 0 4px; }
+.comp-likert { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; }
+.comp-likert label { display: inline-flex; align-items: center; gap: 4px; min-height: 32px; }
+.comp-barra { display: inline-block; width: 90px; max-width: 40vw; height: 8px; border-radius: 6px; background: var(--line); vertical-align: middle; overflow: hidden; }
+.comp-barra span { display: block; height: 100%; background: var(--accent); }
+.comp-situacion { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }

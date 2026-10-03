@@ -72,6 +72,20 @@ const OP = 'mossos-esquadra';
     ok('21b APTITUDINAL · 10 ejercicios y resultado', await p.locator('.result-card').count());
     const sw = await p.evaluate(() => document.documentElement.scrollWidth); if (sw > w) pasos.push(['sin desbordamiento aptitudinal (resultado)', false, sw]);
     await p.click('[data-otra]'); ok('21c APTITUDINAL · progreso por aptitud', /%/.test(await p.textContent('#aptitud table')));
+    // 22 COMPETENCIAS (Mossos 360 · Fase 2): oficial frente a entrenamiento, una situación, autoconocimiento y progreso
+    await ir(`oposiciones/${OP}/`); ok('22a FICHA enlaza competencias y autoconocimiento', await p.locator(`a[href*="oposiciones/${OP}/competencias/"]`).count());
+    await ir(`oposiciones/${OP}/competencias/`); await p.waitForSelector('.comp-ficha');
+    ok('22b COMPETENCIAS · 10 oficiales con «Información oficial» y «Entrenamiento TestLey»', (await p.locator('.comp-ficha').count()) === 10 && (await p.locator('.comp-ficha .comp-oficial').count()) === 10 && (await p.locator('.comp-ficha .comp-testley').count()) === 10);
+    await p.click('[data-tab="entreno"]'); await p.click('[data-empezar]'); await p.waitForSelector('.opt');
+    const rank = /Ordena/.test(await p.textContent('.quiz-head'));
+    for (let k = 0; k < (rank ? 4 : 1); k++) await p.locator('.opt:not([disabled])').first().click();
+    ok('22c ENTRENAMIENTO · puntuación de entrenamiento con clave TestLey', /clave TestLey/.test(await p.textContent('.result-card')));
+    await p.click('[data-tab="auto"]'); await p.waitForSelector('[data-cuest]');
+    for (const nm of await p.$$eval('[data-cuest] input[type=radio][value="4"]', (xs) => xs.map((x) => x.name))) await p.check(`input[name="${nm}"][value="4"]`);
+    await p.click('[data-cuest] button[type=submit]');
+    ok('22d AUTOCONOCIMIENTO · autopercepción sin nota ni diagnóstico', /SELF_ASSESSMENT/.test(await texto()) && /ni un diagnóstico/.test(await texto()));
+    await p.click('[data-tab="progreso"]'); ok('22e PROGRESO · entrenamiento y autopercepción separados', /Autopercepción/.test(await texto()) && /1 situaciones resueltas/.test(await texto()));
+    const sw2 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw2 > w) pasos.push(['sin desbordamiento competencias', false, sw2]);
     informe.push({ tag, pasos });
     await c.close();
   }
