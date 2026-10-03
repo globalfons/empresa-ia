@@ -8,7 +8,7 @@
  "territorio": "Cataluña",
  "grupo": "C1",
  "categoria": "policia",
- "generado": "2026-10-02",
+ "generado": "2026-10-03",
  "ficha_actualizada": "2026-10-01",
  "convocatoria": {
   "actual": {
@@ -132,7 +132,7 @@
  },
  "contenido": {
   "OFFICIAL_EXAM": 290,
-  "TESTLEY_GENERATED": 87,
+  "TESTLEY_GENERATED": 103,
   "REVIEW_REQUIRED": 11,
   "DEPRECATED": 3,
   "OUTDATED": 0,
@@ -2906,7 +2906,7 @@
     {
      "ley": "guia-mossos",
      "art": "C.2.3",
-     "preguntas": 0
+     "preguntas": 1
     },
     {
      "ley": "guia-mossos",
@@ -2922,7 +2922,7 @@
     {
      "ley": "guia-mossos",
      "art": "C.2.6",
-     "preguntas": 0
+     "preguntas": 1
     },
     {
      "ley": "guia-mossos",
@@ -2939,19 +2939,19 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 3,
+    "TESTLEY_GENERATED": 5,
     "OFFICIAL_EXAM": 35,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 1,
-    "2": 2
+    "1": 2,
+    "2": 3
    },
    "tipos": {
-    "competencias": 1,
-    "literal": 1,
+    "competencias": 2,
+    "literal": 2,
     "negativa": 1
    },
    "ultima_actualizacion": "2026-10-02",
@@ -3072,12 +3072,12 @@
     {
      "ley": "guia-mossos",
      "art": "C.3.4",
-     "preguntas": 5
+     "preguntas": 6
     },
     {
      "ley": "guia-mossos",
      "art": "C.3.5",
-     "preguntas": 0
+     "preguntas": 6
     },
     {
      "ley": "guia-mossos",
@@ -3089,22 +3089,24 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 5,
+    "TESTLEY_GENERATED": 12,
     "OFFICIAL_EXAM": 25,
     "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 2,
-    "2": 3
+    "1": 4,
+    "2": 8
    },
    "tipos": {
-    "aplicacion": 1,
-    "competencias": 1,
-    "conceptual": 1,
-    "literal": 1,
-    "organos": 1
+    "aplicacion": 2,
+    "competencias": 2,
+    "conceptual": 2,
+    "literal": 2,
+    "negativa": 1,
+    "organos": 2,
+    "procedimiento": 1
    },
    "ultima_actualizacion": "2026-10-02",
    "cambios_recientes": []
@@ -3370,32 +3372,34 @@
     {
      "ley": "guia-mossos",
      "art": "C.5.3",
-     "preguntas": 0
+     "preguntas": 6
     },
     {
      "ley": "guia-mossos",
      "art": "C.5.IF",
-     "preguntas": 0
+     "preguntas": 1
     }
    ],
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 5,
+    "TESTLEY_GENERATED": 12,
     "OFFICIAL_EXAM": 4,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 2,
-    "2": 3
+    "1": 5,
+    "2": 7
    },
    "tipos": {
-    "aplicacion": 1,
-    "conceptual": 1,
-    "literal": 1,
-    "organos": 1,
+    "aplicacion": 2,
+    "competencias": 1,
+    "conceptual": 2,
+    "literal": 2,
+    "negativa": 1,
+    "organos": 3,
     "requisitos": 1
    },
    "ultima_actualizacion": "2026-10-01",
@@ -4677,13 +4681,13 @@
  "pendientes": [
   {
    "campo": "temario_area_D",
-   "motivo": "L'àmbit D (coneixement de l'entorn polític, econòmic i social: a) Catalunya, b) Estat espanyol) no té text oficial de referència: ni la guia d'estudi ni el temari del DOGC en fixen el contingut. Fonts oficials alternatives possibles (Idescat, INE, webs institucionals del Parlament i del Govern) són dades d'actualitat que canvien: no es pot estructurar sense afirmar fets no verificats a data de l'examen. OFFICIAL_PENDING_REVIEW: és un buit de FONT, no de generació; no s'hi generen preguntes.",
+   "motivo": "L'àmbit D (coneixement de l'entorn polític, econòmic i social: a) Catalunya, b) Estat espanyol) no té text oficial de referència: ni la guia d'estudi ni el temari del DOGC en fixen el contingut. Fonts oficials alternatives possibles (Idescat, INE, webs institucionals del Parlament i del Govern) són dades d'actualitat que canvien: no es pot estructurar sense afirmar fets no verificats a data de l'examen. Queda pendent d'una font oficial: no s'hi generen preguntes.",
    "estado_fuente": "OFFICIAL_PENDING_REVIEW",
    "tipo_gap": "FUENTE"
   },
   {
    "campo": "legislacion_catalana",
-   "motivo": "Llei 10/1994, Llei 16/1991 i Llei 4/2003: FOUND_OFFICIAL_NON_CONSOLIDATED (2026-10-02). El text consolidat del BOE consta com a «Desactualizado» i el Portal Jurídic de Catalunya declara que els seus textos consolidats «no tenen caràcter oficial». Sense text consolidat oficial i vigent no s'incorpora cap text ni es generen preguntes que en depenguin (OFFICIAL_PENDING_REVIEW). Els temes C.3 i C.4 s'estudien amb la guia oficial. Comprovació reproduïble: python3 ingesta/leyes_catalanas.py",
+   "motivo": "Llei 10/1994, Llei 16/1991 i Llei 4/2003: trobades en fonts oficials, però sense text consolidat oficial vigent (comprovat el 2026-10-02). El text consolidat del BOE consta com a «Desactualizado» i el Portal Jurídic de Catalunya declara que els seus textos consolidats «no tenen caràcter oficial». Sense text consolidat oficial i vigent no s'incorpora cap text ni es generen preguntes que en depenguin. Els temes C.3 i C.4 s'estudien amb la guia oficial.",
    "fuente_prevista": "https://portaljuridic.gencat.cat/"
   },
   {

@@ -13,6 +13,12 @@
   "citation_errors": 0,
   "source_errors": 0,
   "security_incidents": 0,
+  "process_incidents": 0,
+  "audit_findings": {
+   "CRITICAL": 0,
+   "MAJOR": 0,
+   "MINOR": 1
+  },
   "en_cola_revision": 0,
   "judge_policy_version": "juez-sesion-v3",
   "validation_rate": 100.0,
@@ -22,5 +28,37 @@
   "duplicate_rate": 0.0,
   "anomalia": null,
   "decision": "OK_SIGUIENTE_TANDA"
+ },
+ {
+  "lote": "S00020",
+  "fecha": "2026-10-02T23:07:23",
+  "planificadas": 20,
+  "generated": 16,
+  "validated": 16,
+  "judge_valid": 16,
+  "review_required": 0,
+  "rejected": 0,
+  "published": 16,
+  "duplicate": 1,
+  "citation_errors": 0,
+  "source_errors": 0,
+  "security_incidents": 0,
+  "process_incidents": 1,
+  "audit_findings": {
+   "CRITICAL": 0,
+   "MAJOR": 0,
+   "MINOR": 2
+  },
+  "en_cola_revision": 0,
+  "judge_policy_version": "juez-sesion-v3",
+  "validation_rate": 100.0,
+  "publication_rate": 100.0,
+  "review_rate": 0.0,
+  "reject_rate": 0.0,
+  "duplicate_rate": 6.2,
+  "anomalia": [
+   "defecto del circuito detectado en el lote (corregido; se revisa antes de la siguiente tanda)"
+  ],
+  "decision": "PAUSE_GENERATION"
  }
 ]

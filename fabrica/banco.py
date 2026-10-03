@@ -51,6 +51,15 @@ def leer(ruta, defecto):
 EXAMENES_OFICIALES = {"guia-mossos": os.path.join("datos", "examens-oficials", "mossos-esquadra.json")}
 
 
+def afin(a, n):
+    """Mismo artículo; o, en la guía, las «Idees força» de un tema (X.n.IF) frente a sus apartados (X.n.m): resumen los
+    mismos hechos, así que se deduplican entre sí."""
+    if a == n:
+        return True
+    a, n = str(a), str(n)
+    return (a.endswith(".IF") or n.endswith(".IF")) and a.split(".")[:2] == n.split(".")[:2]
+
+
 class Banco:
     def __init__(self, raiz=R):
         self.raiz = raiz
@@ -79,8 +88,8 @@ class Banco:
         """Todas las preguntas del artículo (banco no retirado + cola entera + preguntas de exámenes oficiales del mismo
         apartado): base de la deduplicación. Las oficiales solo se comparan; no cuentan como cobertura ni se tocan."""
         self.cargar(slug)
-        return [q for q in self.qs[slug] if q["art"] == n and q.get("verification_status") not in RETIRADAS] + \
-               [q for q in self.cola[slug] if q["art"] == n] + self.oficiales(slug, n)
+        return [q for q in self.qs[slug] if afin(q["art"], n) and q.get("verification_status") not in RETIRADAS] + \
+               [q for q in self.cola[slug] if afin(q["art"], n)] + self.oficiales(slug, n)
 
     def oficiales(self, slug, n):
         f = EXAMENES_OFICIALES.get(slug)

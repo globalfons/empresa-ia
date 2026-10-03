@@ -679,13 +679,13 @@
  "pendientes": [
   {
    "campo": "temario_area_D",
-   "motivo": "L'àmbit D (coneixement de l'entorn polític, econòmic i social: a) Catalunya, b) Estat espanyol) no té text oficial de referència: ni la guia d'estudi ni el temari del DOGC en fixen el contingut. Fonts oficials alternatives possibles (Idescat, INE, webs institucionals del Parlament i del Govern) són dades d'actualitat que canvien: no es pot estructurar sense afirmar fets no verificats a data de l'examen. OFFICIAL_PENDING_REVIEW: és un buit de FONT, no de generació; no s'hi generen preguntes.",
+   "motivo": "L'àmbit D (coneixement de l'entorn polític, econòmic i social: a) Catalunya, b) Estat espanyol) no té text oficial de referència: ni la guia d'estudi ni el temari del DOGC en fixen el contingut. Fonts oficials alternatives possibles (Idescat, INE, webs institucionals del Parlament i del Govern) són dades d'actualitat que canvien: no es pot estructurar sense afirmar fets no verificats a data de l'examen. Queda pendent d'una font oficial: no s'hi generen preguntes.",
    "estado_fuente": "OFFICIAL_PENDING_REVIEW",
    "tipo_gap": "FUENTE"
   },
   {
    "campo": "legislacion_catalana",
-   "motivo": "Llei 10/1994, Llei 16/1991 i Llei 4/2003: FOUND_OFFICIAL_NON_CONSOLIDATED (2026-10-02). El text consolidat del BOE consta com a «Desactualizado» i el Portal Jurídic de Catalunya declara que els seus textos consolidats «no tenen caràcter oficial». Sense text consolidat oficial i vigent no s'incorpora cap text ni es generen preguntes que en depenguin (OFFICIAL_PENDING_REVIEW). Els temes C.3 i C.4 s'estudien amb la guia oficial. Comprovació reproduïble: python3 ingesta/leyes_catalanas.py",
+   "motivo": "Llei 10/1994, Llei 16/1991 i Llei 4/2003: trobades en fonts oficials, però sense text consolidat oficial vigent (comprovat el 2026-10-02). El text consolidat del BOE consta com a «Desactualizado» i el Portal Jurídic de Catalunya declara que els seus textos consolidats «no tenen caràcter oficial». Sense text consolidat oficial i vigent no s'incorpora cap text ni es generen preguntes que en depenguin. Els temes C.3 i C.4 s'estudien amb la guia oficial.",
    "fuente_prevista": "https://portaljuridic.gencat.cat/"
   },
   {

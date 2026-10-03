@@ -40,5 +40,13 @@
   "tipo": "guard_falso_positivo",
   "lote": "CAL50-v3",
   "detalle": "CAL50-v3 tanda 05 rechazada por el patrón de respuestas agregadas: la razón de codigo-penal-655 cita la ley («… en el resto de los casos»). Se acota el patrón «el resto» a valoraciones del conjunto (test añadido) y se vuelve a registrar la MISMA respuesta del juez, sin cambios."
+ },
+ {
+  "fecha": "2026-10-02",
+  "lote": "S00020",
+  "tipo": "deduplicacion_incompleta",
+  "detalle": "La deduplicación se limitaba al mismo apartado; la pregunta 3.0 (C.5.IF, Idees força) repetía guia-mossos-51 (C.5.2) y el juez no la recibía como parecida. Detectado en la auditoría previa al juicio.",
+  "accion": "Se detuvieron los dos jueces antes de que entregaran veredicto (nada registrado; su razonamiento parcial estaba a la vista: tanda 02 consideraba 2.0 trivial). Banco.existentes deduplica X.n.IF con los apartados X.n.m (fabrica.banco.afin, test en tests/test_mossos.py), se repitió validar (re-preparación sin intentos) y se relanzaron los jueces con los mismos prompts. Política y criterios sin cambios.",
+  "politica": "juez-sesion-v3"
  }
 ]

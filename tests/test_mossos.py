@@ -278,6 +278,13 @@ class Fabrica(unittest.TestCase):
         self.assertIn(q["id"], ids)
         self.assertEqual(B.Banco().cuenta("guia-mossos", "ZZZ"), 0)
 
+    def test_idees_forca_se_deduplican_con_los_apartados_del_tema(self):
+        # S00020: una pregunta de C.5.IF repetía guia-mossos-51 (C.5.2) y el juez no la recibió como parecida
+        from fabrica import banco as B
+        self.assertTrue(B.afin("C.5.2", "C.5.IF") and B.afin("C.5.IF", "C.5.2") and B.afin("38", "38"))
+        self.assertFalse(B.afin("C.4.2", "C.5.IF") or B.afin("C.5.1", "C.5.2") or B.afin("3", "4"))
+        self.assertIn("guia-mossos-51", [x.get("id") for x in B.Banco().existentes("guia-mossos", "C.5.IF")])
+
 
 if __name__ == "__main__":
     unittest.main()

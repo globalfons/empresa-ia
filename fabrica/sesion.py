@@ -136,6 +136,11 @@ def slots_desde_cobertura(oposicion, codigos, n, fuentes):
     perfil = PF.leer(f"catalogo/perfiles/{oposicion}.json") or PF.construir(oposicion)
     temas = {t["id"]: (i, t) for i, t in enumerate(perfil["temario"])}
     nec = COB.analizar(oposicion, perfil, fuentes)
+    # apartados en los que el redactor ya no encontró nada evaluable (cierre de un lote anterior): no se vuelven a pedir
+    omitidos = {k for k, v in B.leer(MO.ESTADO, {}).get("omitidos", {}).items() if v >= 1}
+    for x in nec["necesidades"]:
+        x["articulos"] = [a for a in x["articulos"] if a.replace(":", "|", 1) not in omitidos]
+    nec["necesidades"] = [x for x in nec["necesidades"] if x["articulos"]]
     unidades = {}
     for c in codigos:
         # dentro del tema se rota entre sus necesidades (una de cada tipo/dificultad por vuelta): no se llena con las fáciles

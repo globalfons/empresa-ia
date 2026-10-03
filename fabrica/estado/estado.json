@@ -516,9 +516,43 @@
     "veredictos": "b4b6e4a343969c0bfb3edbe0f0b8a22d4caa13a5e8d7fc437d06a2fa4bac1fbb",
     "prompt_juez": "b96c2c6b908c67b1255840fd71438005c5aefb01de3b1a3deed73b86a075797f"
    }
+  },
+  {
+   "id": "S00020",
+   "fecha": "2026-10-02T23:07:23",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 6,
+   "generadas": 16,
+   "VALID": 16,
+   "REVIEW_REQUIRED": 0,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v3",
+   "judge_policy_sha256": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "df2efc9a728c70103b4a7148bd7c3190929bd4cc2000f05b410e5c80a92246f7",
+    "revision": "8ac7d931bb8f277d2fb3f50c644a88b43d09cc0c7bb3a04722eab3929c79c414",
+    "veredictos": "76a50c5eab12eb25fcde9d9e52a1fd835e68de3dccd9949b0bdcdab12e87c5ba",
+    "prompt_juez": "c9601a2217ff565e432099cb22cd3c1408316323d5450ec6468342ba996c2707"
+   }
   }
  ],
- "pausa": null,
+ "pausa": {
+  "estado": "GENERATION_PAUSED",
+  "motivo": "Métricas del lote S00020: defecto del circuito detectado en el lote (corregido; se revisa antes de la siguiente tanda). Revisar fabrica/estado/metricas-lotes.json y auditoria-lotes.json antes de reanudar (--reanudar).",
+  "lote": "S00020",
+  "fecha": "2026-10-02"
+ },
  "omitidos": {
   "lo-4-2015|24": 2,
   "guia-mossos|C.2.2": 1
