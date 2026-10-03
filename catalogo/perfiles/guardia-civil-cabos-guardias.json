@@ -8,7 +8,7 @@
  "territorio": "España",
  "grupo": "",
  "categoria": "guardia-civil",
- "generado": "2026-10-02",
+ "generado": "2026-10-03",
  "ficha_actualizada": "2026-09-30",
  "convocatoria": {
   "actual": {
@@ -552,5 +552,87 @@
    "motivo": "El lugar, fecha y hora de las pruebas los anuncia el Tribunal de Selección en la web oficial de la Guardia Civil.",
    "fuente_prevista": "https://web.guardiacivil.es/es/tramites/ingresos/ingresocuerpo/"
   }
- ]
+ ],
+ "motor360": {
+  "schema": "opposition-engine/1",
+  "call_id": null,
+  "modulos": {
+   "knowledge": {
+    "oficial": {
+     "temas": 0,
+     "fuente": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-9982"
+    },
+    "contenido": {
+     "OFFICIAL_EXAM": 0,
+     "TESTLEY_GENERATED": 0,
+     "REVIEW_REQUIRED": 0
+    },
+    "entrenable": false
+   },
+   "aptitude": {
+    "oficial": null,
+    "contenido": {
+     "ejercicios": 0,
+     "estado": "SIN_BANCO"
+    },
+    "entrenable": false
+   },
+   "psychometric": {
+    "oficial": null,
+    "contenido": {
+     "estado": "SIN_CONTENIDO"
+    },
+    "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.",
+    "entrenable": false
+   },
+   "competency": {
+    "oficial": null,
+    "contenido": {
+     "estado": "SIN_CONTENIDO"
+    },
+    "entrenable": false
+   },
+   "interview": {
+    "oficial": null,
+    "contenido": {
+     "estado": "SIN_CONTENIDO"
+    },
+    "entrenable": false
+   },
+   "physical": {
+    "oficial": null,
+    "entrenable": false
+   },
+   "language": {
+    "oficial": {
+     "catala": null,
+     "idiomas_voluntarios": null
+    },
+    "entrenable": false
+   },
+   "medical_information": {
+    "oficial": null,
+    "solo_informativo": true,
+    "entrenable": false
+   },
+   "simulation": {
+    "oficial": {
+     "conocimientos": {
+      "preguntas": 100,
+      "minutos": 60,
+      "penalizacion": 0.3333333333333333
+     }
+    },
+    "modulos_simulables": [
+     "knowledge"
+    ]
+   },
+   "adaptive_training": {
+    "entradas": [
+     "knowledge"
+    ]
+   }
+  }
+ },
+ "eventos_por_cambio": []
 }

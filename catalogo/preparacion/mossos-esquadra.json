@@ -1,0 +1,324 @@
+{
+ "_ayuda": "Datos oficiales de preparación por convocatoria (OppositionProfile → motor360). Cada bloque cita literalmente la fuente de la ficha (catalogo/oposiciones/<id>.json → fuentes); catalogo/perfil.py comprueba cada cita contra el texto guardado y marca el bloque OFFICIAL_VERIFIED u OFFICIAL_PENDING_REVIEW. Nunca añadir un dato sin cita. Una convocatoria nueva = una clave nueva (no se sobrescriben las anteriores).",
+ "oposicion": "mossos-esquadra",
+ "convocatorias": {
+  "46/26": {
+   "fuente": "convocatoria",
+   "aptitud": {
+    "preguntas": 80,
+    "minutos": 35,
+    "opciones": 4,
+    "penalizacion": 0,
+    "escala": [
+     0,
+     10
+    ],
+    "minimo_apte": 5,
+    "categorias": [
+     "abstracto",
+     "espacial",
+     "verbal",
+     "numerico",
+     "perceptivo"
+    ],
+    "citas": [
+     "Consisteix a respondre un qüestionari tipus test de 80 preguntes adreçat a avaluar els processos de raonament i les aptituds intel·lectuals de la persona participant. S'hi avalua el raonament abstracte, el raonament espacial, l'aptitud verbal, l'aptitud numèrica i l'aptitud perceptiva.",
+     "Totes les respostes correctes tenen el mateix valor i les preguntes que es deixin en blanc i les incorrectes no descompten.",
+     "El temps per fer aquesta subprova és de 35 minuts.",
+     "Per obtenir la qualificació d'apte s'ha d'obtenir una puntuació mínima de 5 punts."
+    ],
+    "nota": "Las bases no publican la conversión de aciertos a puntos: TestLey no calcula una nota oficial aptitudinal."
+   },
+   "fisica": {
+    "pruebas": [
+     {
+      "id": "circuit-agilitat",
+      "nombre": "Circuit d'agilitat",
+      "unidad": "segons",
+      "mejor": "menor",
+      "intentos": 2,
+      "barem": "CA",
+      "cita": "Valoració de l'exercici: se'n fan dos intents, no consecutius, i el resultat vàlid és el millor temps (en segons i dècimes)."
+     },
+     {
+      "id": "pressio-banc",
+      "nombre": "Pressió sobre banc",
+      "unidad": "repeticions",
+      "mejor": "mayor",
+      "intentos": 1,
+      "barem": "PB",
+      "carga_kg": {
+       "homes": 40,
+       "dones": 25
+      },
+      "tiempo_max_s": 45,
+      "cita": "Ha d'aixecar el pes, de 40 kg per als homes i de 25 kg per a les dones, el nombre més elevat de repeticions possible en un temps màxim de 45 segons."
+     },
+     {
+      "id": "cursa-llancadora",
+      "nombre": "Cursa de llançadora",
+      "unidad": "períodes (paliers)",
+      "mejor": "mayor",
+      "intentos": 1,
+      "barem": "CL",
+      "cita": "Valoració de l'exercici: se'n fa un sol intent, i es registra el número de l'últim període o  palier  anunciat pel magnetòfon."
+     }
+    ],
+    "barems": {
+     "homes": {
+      "CA": [
+       ">21,5",
+       "21,5",
+       "20,4",
+       "19,9",
+       "19,4",
+       "18,9",
+       "18,4",
+       "17,8",
+       "17,3",
+       "16,8",
+       "<16,3"
+      ],
+      "PB": [
+       "<24",
+       "24,0",
+       "27,0",
+       "28,0",
+       "30,0",
+       "31,0",
+       "33,0",
+       "34,0",
+       "36,0",
+       "39,0",
+       ">42"
+      ],
+      "CL": [
+       "<6,5",
+       "6,5",
+       "7,5",
+       "8,0",
+       "8,5",
+       "9,0",
+       "9,5",
+       "10,5",
+       "11,0",
+       "12,0",
+       "12,5"
+      ]
+     },
+     "dones": {
+      "CA": [
+       ">25,5",
+       "25,5",
+       "24,4",
+       "23,7",
+       "23,0",
+       "22,3",
+       "21,6",
+       "20,9",
+       "20,2",
+       "19,5",
+       "<18,9"
+      ],
+      "PB": [
+       "<10",
+       "10,0",
+       "13,0",
+       "16,0",
+       "18,0",
+       "20,0",
+       "22,0",
+       "24,0",
+       "27,0",
+       "30,0",
+       ">34"
+      ],
+      "CL": [
+       "<3,5",
+       "3,5",
+       "4,5",
+       "5,0",
+       "6,0",
+       "6,5",
+       "7,0",
+       "7,5",
+       "8,0",
+       "9,0",
+       "10,0"
+      ]
+     }
+    },
+    "categorias": [
+     "homes",
+     "dones"
+    ],
+    "ponderacion": {
+     "circuit-agilitat": 33.33,
+     "pressio-banc": 33.33,
+     "cursa-llancadora": 33.33
+    },
+    "minimo_por_ejercicio": 1,
+    "minimo_total": 5,
+    "escala": [
+     0,
+     10
+    ],
+    "interpretacion_barem": "Las bases publican puntos de corte (P = 0…10). TestLey asigna a una marca la puntuación del último corte alcanzado (tiempo ≤ corte en el circuito; repeticiones o períodos ≥ corte), con los extremos «<» y «>» literales del barem. Es una lectura de la tabla, no una nota oficial: la nota la pone el tribunal.",
+    "citas": [
+     "Els percentatges de puntuació dels exercicis físics sobre el total de la prova física són els següents: 33,33 % per al circuit d'agilitat, 33,33 % per a l'exercici de pressió sobre banc i 33,33 % per a la cursa de llançadora.",
+     "Els participants han de fer els tres exercicis físics i en cadascun han d'aconseguir una puntuació mínima d'1 punt.",
+     "Qualificació de la prova: la puntuació de la prova física és de 0 a 10 punts. Per superar-la s'ha d'obtenir una puntuació mínima de 5 punts.",
+     "P = puntuació; CA = circuit d'agilitat, en segons; PB = pressió sobre banc, en repeticions; CL = cursa de llançadora, en períodes o  paliers ."
+    ]
+   },
+   "competencias": {
+    "lista": [
+     {
+      "id": "responsabilitat",
+      "nombre": "Responsabilitat i orientació a la qualitat"
+     },
+     {
+      "id": "cooperacio",
+      "nombre": "Cooperació i treball en equip"
+     },
+     {
+      "id": "autonomia",
+      "nombre": "Autonomia i iniciativa"
+     },
+     {
+      "id": "resolucio-problemes",
+      "nombre": "Resolució de problemes"
+     },
+     {
+      "id": "orientacio-servei",
+      "nombre": "Orientació de servei a les persones"
+     },
+     {
+      "id": "adaptabilitat",
+      "nombre": "Adaptabilitat i flexibilitat"
+     },
+     {
+      "id": "autocontrol",
+      "nombre": "Autocontrol i resistència a la pressió"
+     },
+     {
+      "id": "autogestio",
+      "nombre": "Autogestió i desenvolupament personal"
+     },
+     {
+      "id": "motivacio",
+      "nombre": "Motivació i identificació amb l'organització"
+     },
+     {
+      "id": "habilitats-socials",
+      "nombre": "Habilitats socials i comunicatives"
+     }
+    ],
+    "clave": [
+     "responsabilitat",
+     "autocontrol",
+     "autogestio"
+    ],
+    "escala": [
+     1,
+     10
+    ],
+    "apte": {
+     "total_minimo": 50,
+     "clave_mayor_que": 3
+    },
+    "citas": [
+     "Es valoren les competències següents: responsabilitat i orientació a la qualitat, cooperació i treball en equip, autonomia i iniciativa, resolució de problemes, orientació de servei a les persones, adaptabilitat i flexibilitat, autocontrol i resistència a la pressió, autogestió i desenvolupament personal, motivació i identificació amb l'organització i habilitats socials i comunicatives.",
+     "Les competències clau són: responsabilitat i orientació a la qualitat, autocontrol i resistència a la pressió, autogestió i desenvolupament personal.",
+     "Cada competència es valora d'1 a 10 punts.",
+     "1. Obtenir una puntuació total igual o superior a 50 punts.",
+     "2. Obtenir una puntuació superior a 3 punts en les competències clau."
+    ],
+    "nota": "Las bases enumeran las competencias, pero no definen sus comportamientos observables: las descripciones y ejercicios de TestLey son contenido de entrenamiento, no oficial."
+   },
+   "adecuacion": {
+    "partes": [
+     "test de competències",
+     "entrevista"
+    ],
+    "resultado": "apte/no apte",
+    "documentacion": [
+     "informe de vida laboral (INSS) y cuestionario de currículum e intereses, el día del test",
+     "fotografía tamaño carnet, el día de la entrevista"
+    ],
+    "citas": [
+     "La prova d'adequació psicoprofessional consisteix en la realització d'un test de competències i d'una entrevista per avaluar el grau d'adequació a les competències corresponents a la categoria de mosso/a.",
+     "En cap cas l'avaluació del resultat de l'entrevista està condicionada o vinculada de manera exclusiva al test de competències, el qual constitueix un element previ per orientar, si es considera convenient, el contingut d'aquesta.",
+     "En l'entrevista s'obté informació en relació amb el desenvolupament personal i professional per objectivar la presència o absència de comportaments associats a les competències d'aquesta categoria.",
+     "La qualificació de la prova d'adequació psicoprofessional és d'apte o no apte i s'obté a partir de la integració de la informació obtinguda del test de competències i de l'entrevista.",
+     "El dia de la realització del test de competències s'ha de lliurar un informe de la vida laboral emès per l'Institut Nacional de la Seguretat Social i emplenar un qüestionari sobre aspectes relacionats amb el  curriculum vitae  i els interessos professionals",
+     "El dia de la realització de l'entrevista s'ha de lliurar una fotografia actual en format carnet."
+    ]
+   },
+   "catala": {
+    "requisito": "Nivell de suficiència de català (C1), equivalent o superior",
+    "exencion": "Acreditar C1 o equivalent (o haver-lo superat en altres processos de la mateixa oferta) en el termini de deu dies hàbils indicat a la base 6.1.4.1",
+    "prueba": {
+     "partes": [
+      {
+       "parte": 1,
+       "contenido": "Redacció d'un text de 180 paraules com a mínim i cinc blocs de preguntes sintàctiques i de comprensió",
+       "minutos": 90
+      },
+      {
+       "parte": 2,
+       "contenido": "Lectura en veu alta i conversa",
+       "minutos": 10
+      }
+     ],
+     "resultado": "apte/no apte",
+     "minimo_pct": 70
+    },
+    "citas": [
+     "Els participants han de posseir els coneixements de nivell de suficiència de català (C1), equivalent o superior",
+     "Primera part: s'hi avaluen el domini de l'expressió escrita mitjançant la redacció d'un text de 180 paraules, com a mínim, i els coneixements pràctics de llengua per mitjà de cinc blocs de preguntes sobre coneixements sintàctics i de comprensió de llengua catalana",
+     "Segona part: consisteix en la lectura en veu alta d'un text i una conversa sobre temes proposats a fi d'avaluar l'expressió oral.",
+     "Aquesta prova té una durada màxima d'1 hora i 30 minuts per a la primera part i de 10 minuts per a la segona part.",
+     "Per superar-la s'ha d'obtenir la qualificació d'apte, per a la qual cosa s'ha d'obtenir una puntuació total mínima del 70 %.",
+     "La realització d'aquesta prova és de caràcter obligatori i eliminatori per a les persones que no n'estiguin exemptes."
+    ]
+   },
+   "idiomas_voluntarios": {
+    "preguntas_por_idioma": 6,
+    "max_idiomas": 2,
+    "puntos_por_idioma": 1.5,
+    "maximo": 3,
+    "citas": [
+     "Els participants, després d'haver escoltat una gravació en l'idioma o idiomes escollits, han de respondre sis preguntes de cada un d'aquests idiomes.",
+     "Es pot optar per respondre, com a màxim, dos d'aquests idiomes.",
+     "Cada idioma es valora de 0 a 1,5 punts."
+    ]
+   },
+   "medica": {
+    "capitulos": [
+     "Aparell circulatori",
+     "Aparell respiratori",
+     "Aparell genitourinari",
+     "Aparell digestiu",
+     "Sistema hematopoètic",
+     "Aparell locomotor",
+     "Trastorns psiquiàtrics",
+     "Trastorns del sistema nerviós",
+     "Sistema endocrí",
+     "Ulls i visió",
+     "Otorrinolaringologia",
+     "Pell, fàneres i glàndules exocrines",
+     "Sang i òrgans hematopoètics",
+     "Altres"
+    ],
+    "anexo": "Annex 3 · Causes d'exclusió per manca d'aptitud psicofísica",
+    "aviso": "Información oficial de consulta. TestLey no evalúa ni determina la aptitud médica: la decide el tribunal con sus pruebas médicas.",
+    "citas": [
+     "Consisteix a realitzar les proves mèdiques necessàries per comprovar que els participants tenen l'aptitud psicofísica necessària per desenvolupar la tasca policial i no estan inclosos en cap de les causes d'exclusió indicades a l'annex 3.",
+     "Causes d'exclusió per manca d'aptitud psicofísica",
+     "Comporta l'exclusió de la convocatòria el fet de tenir tatuatges amb un contingut contrari als principis, valors i competències establerts en el Codi d'ètica de la Policia de Catalunya (Acord GOV/25/2015, de 24 de febrer)."
+    ]
+   }
+  }
+ }
+}

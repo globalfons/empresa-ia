@@ -105,6 +105,18 @@ test("build: perfil para el navegador sin preguntas ni respuestas y simulacro co
   assert.equal(sim.evitar_repetidas, true);
 });
 
+test("build: el perfil del navegador lleva el Opposition Engine con datos oficiales por convocatoria", () => {
+  const m = JSON.parse(fs.readFileSync(`docs/datos/perfil-${OP}.json`, "utf8")).motor360;
+  assert.equal(m.schema, "opposition-engine/1");
+  assert.equal(m.call_id, "46/26");
+  for (const k of ["knowledge", "aptitude", "psychometric", "competency", "interview", "physical", "language", "medical_information", "simulation", "adaptive_training"]) assert.ok(m.modulos[k], k);
+  const f = m.modulos.physical.oficial;
+  assert.equal(f.verification_status, "OFFICIAL_VERIFIED");
+  assert.equal(f.barems.homes.CA.length, 11);
+  assert.equal(m.modulos.competency.oficial.lista.length, 10);
+  assert.ok(!/"qs"|"preguntes"|"o":\[/.test(JSON.stringify(m)));
+});
+
 test("landing y admin: CTA «Preparar Mossos», seguir 46/26 y métricas 360", () => {
   const html = fs.readFileSync(`docs/oposiciones/${OP}/index.html`, "utf8");
   assert.match(html, /data-cta="Preparar Mossos"/);

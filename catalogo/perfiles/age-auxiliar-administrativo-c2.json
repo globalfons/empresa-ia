@@ -8,7 +8,7 @@
  "territorio": "España",
  "grupo": "C2",
  "categoria": "administracion-estado",
- "generado": "2026-10-02",
+ "generado": "2026-10-03",
  "ficha_actualizada": "2026-09-29",
  "convocatoria": {
   "actual": {
@@ -5489,5 +5489,86 @@
    "fuente_prevista": "https://eur-lex.europa.eu/"
   }
  ],
+ "motor360": {
+  "schema": "opposition-engine/1",
+  "call_id": null,
+  "modulos": {
+   "knowledge": {
+    "oficial": {
+     "temas": 28,
+     "fuente": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-26262"
+    },
+    "contenido": {
+     "OFFICIAL_EXAM": 0,
+     "TESTLEY_GENERATED": 1491,
+     "REVIEW_REQUIRED": 28
+    },
+    "entrenable": true
+   },
+   "aptitude": {
+    "oficial": null,
+    "contenido": {
+     "ejercicios": 0,
+     "estado": "SIN_BANCO"
+    },
+    "entrenable": false
+   },
+   "psychometric": {
+    "oficial": null,
+    "contenido": {
+     "estado": "SIN_CONTENIDO"
+    },
+    "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.",
+    "entrenable": false
+   },
+   "competency": {
+    "oficial": null,
+    "contenido": {
+     "estado": "SIN_CONTENIDO"
+    },
+    "entrenable": false
+   },
+   "interview": {
+    "oficial": null,
+    "contenido": {
+     "estado": "SIN_CONTENIDO"
+    },
+    "entrenable": false
+   },
+   "physical": {
+    "oficial": null,
+    "entrenable": false
+   },
+   "language": {
+    "oficial": {
+     "catala": null,
+     "idiomas_voluntarios": null
+    },
+    "entrenable": false
+   },
+   "medical_information": {
+    "oficial": null,
+    "solo_informativo": true,
+    "entrenable": false
+   },
+   "simulation": {
+    "oficial": {
+     "conocimientos": {
+      "preguntas": 30,
+      "minutos": 25,
+      "penalizacion": 0.3333333333333333
+     }
+    },
+    "modulos_simulables": [
+     "knowledge"
+    ]
+   },
+   "adaptive_training": {
+    "entradas": [
+     "knowledge"
+    ]
+   }
+  }
+ },
  "eventos_por_cambio": []
 }

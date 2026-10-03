@@ -788,6 +788,7 @@ for (const o of OPOS) {
       datos_oficiales: Object.fromEntries(Object.entries(m.datos_oficiales || {}).map(([k, d]) => [k, { valor: d.valor, cita: d.cita || null, fuente: d.fuente ? { url: d.fuente.source_url, documento: d.fuente.source_document } : null }])) })),
     calendario: p.calendario.map((c) => ({ fecha: c.fecha, hito: c.hito, tipo: c.tipo, caracter: c.caracter, fuente: c.fuente && c.fuente.source_url })),
     alertas: { fuentes: p.alertas.fuentes, eventos: p.alertas.eventos, recientes: p.alertas.recientes },
+    motor360: p.motor360 || null, // Opposition Engine: datos oficiales de preparación por convocatoria (públicos; sin preguntas)
   }));
 }
 // Páginas de exámenes oficiales: índice y una página por examen (los datos van a docs/datos/examen-<oposición>-<id>.json)

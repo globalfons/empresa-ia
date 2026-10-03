@@ -266,7 +266,64 @@ def construir(oid, banco=None, reg=None, hoy=None):
                     "eventos": list(EVENTOS), "recientes": novedades(oid)},
         "pendientes": o.get("pendientes", []),
     }
+    perfil["motor360"] = motor360(oid, o, fuentes, perfil["contenido"], perfil["examen"], temas)
     return perfil
+
+
+# Opposition Engine: módulos genéricos de preparación. Los datos de cada oposición vienen de su ficha y de
+# catalogo/preparacion/<id>.json (por convocatoria); aquí solo está la lista de motores, sin datos de ninguna oposición.
+MOTORES = ("knowledge", "aptitude", "psychometric", "competency", "interview", "physical", "language", "medical_information",
+           "simulation", "adaptive_training")
+
+
+def _norm(t):
+    return " ".join(str(t).replace("\u2019", "'").split())
+
+
+def verificar_bloque(bloque, texto):
+    """OFFICIAL_VERIFIED si todas las citas del bloque (y de sus pruebas) aparecen literalmente en el texto oficial guardado."""
+    citas = list(bloque.get("citas") or []) + [x["cita"] for x in bloque.get("pruebas") or [] if isinstance(x, dict) and x.get("cita")]
+    faltan = [c for c in citas if _norm(c) not in texto] if texto else citas
+    return {"verification_status": "OFFICIAL_VERIFIED" if citas and not faltan else "OFFICIAL_PENDING_REVIEW",
+            "citas": citas, "citas_no_encontradas": faltan}
+
+
+def motor360(oid, o, fuentes, contenido, examen, temas):
+    """OppositionProfile → motores: qué necesita cada módulo, con qué datos oficiales (por convocatoria) y qué contenido hay."""
+    prep = leer(f"catalogo/preparacion/{oid}.json", {}) or {}
+    call = o.get("convocatoria_registro")
+    c = (prep.get("convocatorias") or {}).get(call) or {}
+    fu = fuentes.get(c.get("fuente")) or {}
+    texto = _norm(open(os.path.join(R, fu["texto"]), encoding="utf-8").read()) if fu.get("texto") and os.path.exists(os.path.join(R, fu["texto"])) else ""
+
+    def oficial(clave):
+        b = c.get(clave)
+        if not b:
+            return None
+        return dict({k: v for k, v in b.items() if k != "citas"}, **verificar_bloque(b, texto), fuente=fu.get("source_url"),
+                    documento=fu.get("source_document"), call_id=call)
+
+    psico = (leer("catalogo/psicotecnicos.json", {}).get("pruebas") or {}).get(oid) or {}
+    banco_apt = sum(len(v) for v in (psico.get("bancos") or {}).values())
+    sim = (examen or {}).get("simulacro") or {}
+    m = {
+        "knowledge": {"oficial": {"temas": len(temas), "fuente": (fuentes.get(o["temario"].get("fuente")) or {}).get("source_url")},
+                      "contenido": {k: contenido.get(k, 0) for k in ("OFFICIAL_EXAM", "TESTLEY_GENERATED", "REVIEW_REQUIRED")},
+                      "entrenable": bool(contenido.get("TESTLEY_GENERATED") or contenido.get("OFFICIAL_EXAM"))},
+        "aptitude": {"oficial": oficial("aptitud"), "contenido": {"ejercicios": banco_apt, "estado": psico.get("estado") or "SIN_BANCO"},
+                     "entrenable": banco_apt > 0},
+        "psychometric": {"oficial": oficial("adecuacion"), "contenido": {"estado": "SIN_CONTENIDO"},
+                         "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.", "entrenable": False},
+        "competency": {"oficial": oficial("competencias"), "contenido": {"estado": "SIN_CONTENIDO"}, "entrenable": False},
+        "interview": {"oficial": oficial("adecuacion"), "contenido": {"estado": "SIN_CONTENIDO"}, "entrenable": False},
+        "physical": {"oficial": oficial("fisica"), "entrenable": bool(c.get("fisica"))},
+        "language": {"oficial": {"catala": oficial("catala"), "idiomas_voluntarios": oficial("idiomas_voluntarios")}, "entrenable": False},
+        "medical_information": {"oficial": oficial("medica"), "solo_informativo": True, "entrenable": False},
+        "simulation": {"oficial": {"conocimientos": {k: sim.get(k) for k in ("preguntas", "minutos", "penalizacion")} if sim else None},
+                       "modulos_simulables": ["knowledge"] + (["aptitude"] if banco_apt else [])},
+        "adaptive_training": {"entradas": ["knowledge"] + (["aptitude"] if banco_apt else []) + (["physical"] if c.get("fisica") else [])},
+    }
+    return {"schema": "opposition-engine/1", "call_id": call if c else None, "modulos": {k: m[k] for k in MOTORES}}
 
 
 def correcciones(guia_reg):

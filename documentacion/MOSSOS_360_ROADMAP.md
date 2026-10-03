@@ -1,0 +1,17 @@
+# Mossos 360 · roadmap (ajustado a lo que ya existe)
+
+| Fase | Contenido | Estado |
+|---|---|---|
+| **0** | Auditoría; datos oficiales por convocatoria (`catalogo/preparacion/mossos-esquadra.json`: aptitud, física con barems, competencias, adecuación, català, idiomas, médica), verificados contra las bases; `motor360` en el perfil y en el navegador; informe de cobertura real (`MOSSOS_360_KNOWLEDGE.md`) | **DONE** |
+| 1 | **Aptitude Engine**: esquema `AptitudeExercise` (con `stimulus`); generadores deterministas originales para numérico, abstracto, espacial y perceptivo, con solución calculada; validador de solubilidad y unicidad; verbal por la puerta de revisión; página de entrenamiento con modos por categoría, dificultad, mixto, contrarreloj y adaptativo; métricas de precisión, velocidad y errores recurrentes | Siguiente |
+| 2 | Competency + Psychometric: fichas de entrenamiento de las 10 competencias oficiales (contenido TESTLEY_TRAINING, no oficial), autoevaluación e historial; motor de cuestionarios con escalas y consistencia, sin respuestas correctas ni diagnósticos | Pendiente |
+| 3 | Interview Engine: `InterviewSession` y escenarios por tipo; análisis con rúbrica determinista (claridad, estructura, concreción, evidencias, contradicciones, reflexión, competencias), fortalezas, riesgos y cómo mejorar; IA opcional con la función `tutor` cuando esté desplegada | Pendiente |
+| 4 | Physical Training Engine: registro de marcas, puntuación según el barem de la convocatoria (`call_id`), mejor marca, evolución, objetivo, proximidad al mínimo y recomendaciones | Pendiente |
+| 5 | Simulation + Adaptive: `SimulationProfile` (conocimientos y aptitudinal reproducibles; entrevista como práctica); `TLMotor.hoy()` con todos los módulos y días hasta la prueba | Pendiente |
+| 6 | Dashboard/UX: centro Mossos 360 en `/oposiciones/mossos-esquadra/` (la URL canónica; no se crea `/mossos-desquadra/`) y panel con barras solo desde métricas reales | Pendiente |
+| 7 | Hardening: gates premium por configuración (`config.json → planes`), revisión de seguridad, QA a 375 px, `MOSSOS_360_READINESS.md` con evidencia | Pendiente |
+
+Fábricas: cada tipo de contenido tiene su circuito GENERATE → VALIDATE → JUDGE/REVIEW → PUBLISH, y el generador nunca fija su estado:
+- **Preguntas:** la fábrica actual.
+- **Aptitud:** generadores deterministas con verificación computacional; los verbales pasan por revisión.
+- **Escenarios de entrevista y ejercicios de competencias:** contenido de entrenamiento que pasa por revisión humana antes de publicarse.
