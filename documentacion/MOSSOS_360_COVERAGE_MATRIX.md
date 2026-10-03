@@ -20,15 +20,15 @@ Generado de `catalogo/perfiles/mossos-esquadra.json` (2026-10-03) y `documentaci
 | B.7 | L'organització territorial de l'Estat | PARCIAL | 2 | 30 | 56 | 8 | 1 | 0 | 0/1/1 | 7 | 0 | — |
 | B.8 | La Unió Europea | PARCIAL | 3 | 30 | 30 | 12 | 0 | 0 | 1/2/0 | 2 | 1 | — |
 | C.1 | Les competències de la Generalitat en matèria de | PARCIAL | 1 | 8 | 8 | 7 | 0 | 1 | 0/1/0 | 1 | 1 | — |
-| C.2 | El Departament d'Interior | PARCIAL | 5 | 30 | 38 | 35 | 0 | 0 | 2/3/0 | 2 | 2 | — |
+| C.2 | El Departament d'Interior | PARCIAL | 4 | 30 | 38 | 35 | 1 | 0 | 1/3/0 | 3 | 2 | — |
 | C.3 | La coordinació policial | PARCIAL | 12 | 20 | 20 | 25 | 3 | 0 | 4/8/0 | 0 | 4 | Llei 4/2003, de 7 d'abri |
 | C.4 | El marc legal de la seguretat | PARCIAL | 6 | 20 | 20 | 15 | 0 | 0 | 0/0/0 | 1 | 3 | Llei 10/1994, d'11 de ju, Llei 16/1991, de 10 de j |
-| C.5 | El Codi deontològic policial | PARCIAL | 12 | 26 | 26 | 4 | 0 | 0 | 5/7/0 | 0 | 0 | — |
+| C.5 | El Codi deontològic policial | PARCIAL | 9 | 26 | 26 | 4 | 2 | 1 | 4/5/0 | 1 | 0 | — |
 | D | Coneixement de l'entorn polític, econòmic i soci | SIN_FUENTE_OFICIAL | 0 | 0 | 0 | 0 | 0 | 0 | 0/0/0 | 0 | 0 | — |
 
 ## Necesidades concretas (fábrica GENERATION_PAUSED: no se genera nada)
 
-Total: **456 preguntas** en 185 necesidades. Primeras 25 por prioridad:
+Total: **460 preguntas** en 185 necesidades. Primeras 25 por prioridad:
 
 - 3 preguntas de tipo literal (dificultad 1) del tema B.5 sobre los apartados B.5.1, B.5.2, B.5.3
 - 3 preguntas de tipo órganos (dificultad 1) del tema B.5 sobre los apartados B.5.1, B.5.2, B.5.3

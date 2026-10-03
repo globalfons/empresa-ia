@@ -1,0 +1,673 @@
+{
+ "fecha": "2026-10-03",
+ "lote": "S00018",
+ "estado": "CERRADO_SIN_PUBLICAR",
+ "metodo": "fabrica.auditoria_calidad.candidatas (independiente del juez) contra el banco servido tras la auditoría de S00019/S00020 + exámenes oficiales",
+ "resumen": {
+  "DUPLICADO": 7,
+  "SIN_DUPLICADO": 47,
+  "SOSPECHA_REVISION": 5
+ },
+ "publicables_si_se_autoriza": 44,
+ "cruce_con_veredicto_v3_informativo": {
+  "DUPLICADO|VALID": 6,
+  "SIN_DUPLICADO|VALID": 44,
+  "DUPLICADO|REJECTED": 1,
+  "SIN_DUPLICADO|REVIEW_REQUIRED": 3,
+  "SOSPECHA_REVISION|VALID": 5
+ },
+ "falsos_negativos_deduplicacion_original": [
+  "S00018-3.0",
+  "S00018-5.2",
+  "S00018-11.0",
+  "S00018-20.1"
+ ],
+ "resultado": [
+  {
+   "question_id": "S00018-0.0",
+   "art": "C.5.1",
+   "duplicado_de": [
+    "guia-mossos-43"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 1.0,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": "guia-mossos-43",
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-0.1",
+   "art": "C.5.1",
+   "duplicado_de": [
+    "guia-mossos-45"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 1.0,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": "guia-mossos-45",
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-0.2",
+   "art": "C.5.1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-1.0",
+   "art": "1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-2.0",
+   "art": "B.5.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-2.1",
+   "art": "B.5.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-2.2",
+   "art": "B.5.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-3.0",
+   "art": "A.1.2",
+   "duplicado_de": [
+    "mx46-002-19-6"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 1.0,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-3.1",
+   "art": "A.1.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-3.2",
+   "art": "A.1.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-4.0",
+   "art": "A.6.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-4.1",
+   "art": "A.6.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-4.2",
+   "art": "A.6.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-5.0",
+   "art": "C.3.4",
+   "duplicado_de": [],
+   "sospechas": [
+    "mx46-23-2"
+   ],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 0.57,
+     "enunciado": 0.1,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SOSPECHA_REVISION"
+  },
+  {
+   "question_id": "S00018-5.1",
+   "art": "C.3.4",
+   "duplicado_de": [],
+   "sospechas": [
+    "guia-mossos-49"
+   ],
+   "similitud": [
+    {
+     "respuesta": 0.6,
+     "hecho": 1.0,
+     "enunciado": 0.12,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SOSPECHA_REVISION"
+  },
+  {
+   "question_id": "S00018-5.2",
+   "art": "C.3.4",
+   "duplicado_de": [
+    "guia-mossos-48"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 0.43,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-6.0",
+   "art": "A.2.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-6.1",
+   "art": "A.2.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-6.2",
+   "art": "A.2.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-8.0",
+   "art": "B.4.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-8.1",
+   "art": "B.4.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-8.2",
+   "art": "B.4.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-9.0",
+   "art": "B.7.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-9.1",
+   "art": "B.7.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-9.2",
+   "art": "B.7.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-10.0",
+   "art": "A.7.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-10.1",
+   "art": "A.7.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-10.2",
+   "art": "A.7.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-11.0",
+   "art": "A.5.2",
+   "duplicado_de": [
+    "mx46-24-15",
+    "mx46-17-16"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 0.33,
+     "ambito": "apartado"
+    },
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 0.6,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-11.1",
+   "art": "A.5.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-11.2",
+   "art": "A.5.2",
+   "duplicado_de": [],
+   "sospechas": [
+    "mx46-24-5"
+   ],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 0.44,
+     "enunciado": 0.0,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SOSPECHA_REVISION"
+  },
+  {
+   "question_id": "S00018-12.0",
+   "art": "B.2.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-12.1",
+   "art": "B.2.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-12.2",
+   "art": "B.2.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-13.0",
+   "art": "A.3.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-13.1",
+   "art": "A.3.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-13.2",
+   "art": "A.3.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-14.0",
+   "art": "A.4.2",
+   "duplicado_de": [],
+   "sospechas": [
+    "mx46-23-8"
+   ],
+   "similitud": [
+    {
+     "respuesta": 0.5,
+     "hecho": 0.5,
+     "enunciado": 0.14,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SOSPECHA_REVISION"
+  },
+  {
+   "question_id": "S00018-14.1",
+   "art": "A.4.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-14.2",
+   "art": "A.4.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-15.0",
+   "art": "B.6.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-15.1",
+   "art": "B.6.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-15.2",
+   "art": "B.6.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-16.0",
+   "art": "B.8.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-16.1",
+   "art": "B.8.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-16.2",
+   "art": "B.8.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-17.0",
+   "art": "C.1.IF",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-17.1",
+   "art": "C.1.IF",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-17.2",
+   "art": "C.1.IF",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-18.0",
+   "art": "C.4.1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-18.1",
+   "art": "C.4.1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-18.2",
+   "art": "C.4.1",
+   "duplicado_de": [],
+   "sospechas": [
+    "mx46-22-21"
+   ],
+   "similitud": [
+    {
+     "respuesta": 0.67,
+     "hecho": 1.0,
+     "enunciado": 0.12,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SOSPECHA_REVISION"
+  },
+  {
+   "question_id": "S00018-19.0",
+   "art": "B.3.1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-19.1",
+   "art": "B.3.1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-19.2",
+   "art": "B.3.1",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-20.0",
+   "art": "C.5.2",
+   "duplicado_de": [
+    "guia-mossos-51"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 1.0,
+     "hecho": 1.0,
+     "enunciado": 1.0,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": "guia-mossos-51",
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-20.1",
+   "art": "C.5.2",
+   "duplicado_de": [
+    "guia-mossos-52"
+   ],
+   "sospechas": [],
+   "similitud": [
+    {
+     "respuesta": 0.78,
+     "hecho": 1.0,
+     "enunciado": 1.0,
+     "ambito": "apartado"
+    }
+   ],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "DUPLICADO"
+  },
+  {
+   "question_id": "S00018-20.2",
+   "art": "C.5.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  },
+  {
+   "question_id": "S00018-21.0",
+   "art": "B.1.2",
+   "duplicado_de": [],
+   "sospechas": [],
+   "similitud": [],
+   "deduplicacion_original_fabrica": null,
+   "clasificacion": "SIN_DUPLICADO"
+  }
+ ]
+}

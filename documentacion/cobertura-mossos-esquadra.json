@@ -645,17 +645,17 @@
    "apartados_sin_fuente": 2,
    "objetivo": 30,
    "capacidad": 38,
-   "actuales": 5,
-   "falta": 25,
+   "actuales": 4,
+   "falta": 26,
    "OFFICIAL_EXAM": 35,
-   "REVIEW_REQUIRED": 0,
+   "REVIEW_REQUIRED": 1,
    "dificultad": {
-    "1": 2,
+    "1": 1,
     "2": 3,
     "3": 0
    },
    "tipos": {
-    "literal": 2,
+    "literal": 1,
     "negativa": 1,
     "competencias": 2
    },
@@ -667,6 +667,7 @@
    ],
    "articulos_sin_preguntas": [
     "C.2.2",
+    "C.2.3",
     "C.2.IF"
    ],
    "articulos_sobreexplotados": [],
@@ -765,29 +766,31 @@
    "apartados_sin_fuente": 0,
    "objetivo": 26,
    "capacidad": 26,
-   "actuales": 12,
-   "falta": 14,
+   "actuales": 9,
+   "falta": 17,
    "OFFICIAL_EXAM": 4,
-   "REVIEW_REQUIRED": 0,
+   "REVIEW_REQUIRED": 2,
    "dificultad": {
-    "1": 5,
-    "2": 7,
+    "1": 4,
+    "2": 5,
     "3": 0
    },
    "tipos": {
     "literal": 2,
-    "aplicacion": 2,
     "conceptual": 2,
-    "organos": 3,
+    "organos": 2,
     "requisitos": 1,
     "competencias": 1,
     "negativa": 1
    },
    "tipos_minimos_ausentes": [
+    "aplicacion",
     "dificil",
     "caso_practico"
    ],
-   "articulos_sin_preguntas": [],
+   "articulos_sin_preguntas": [
+    "C.5.IF"
+   ],
    "articulos_sobreexplotados": [],
    "apartados_bloqueados": [],
    "leyes_pendientes": []
@@ -1578,6 +1581,152 @@
    "revision_humana": false,
    "texto": "3 preguntas de tipo difícil (dificultad 3) del tema A.6 sobre los apartados A.6.2, A.6.3, A.6.4",
    "prioridad": 95.8
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "literal",
+   "dificultad": 1,
+   "n": 4,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.IF",
+    "guia-mossos:C.2.5"
+   ],
+   "revision_humana": false,
+   "texto": "4 preguntas de tipo literal (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF, C.2.5",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "organos",
+   "dificultad": 1,
+   "n": 4,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.IF",
+    "guia-mossos:C.2.5"
+   ],
+   "revision_humana": false,
+   "texto": "4 preguntas de tipo órganos (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF, C.2.5",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "aplicacion",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "competencias",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.2.IF",
+    "guia-mossos:C.2.5"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "conceptual",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "negativa",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.3",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "procedimiento",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.2 sobre los apartados C.2.3, C.2.IF",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "requisitos",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.2.IF",
+    "guia-mossos:C.2.5"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "caso_practico",
+   "dificultad": 3,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.IF"
+   ],
+   "revision_humana": true,
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "dificil",
+   "dificultad": 3,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.2.2",
+    "guia-mossos:C.2.3",
+    "guia-mossos:C.2.IF"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF",
+   "prioridad": 95.4
   },
   {
    "tema": "A.7",
@@ -2768,151 +2917,6 @@
    "prioridad": 92.8
   },
   {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "literal",
-   "dificultad": 1,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo literal (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.IF, C.2.5",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "organos",
-   "dificultad": 1,
-   "n": 4,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5",
-    "guia-mossos:C.2.6"
-   ],
-   "revision_humana": false,
-   "texto": "4 preguntas de tipo órganos (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.IF, C.2.5, C.2.6",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "aplicacion",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.IF",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "competencias",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "conceptual",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.IF",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "negativa",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.2 sobre los apartados C.2.2, C.2.IF",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "procedimiento",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "requisitos",
-   "dificultad": 2,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "caso_practico",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.IF, C.2.5",
-   "prioridad": 92.1
-  },
-  {
-   "tema": "C.2",
-   "titulo": "El Departament d'Interior",
-   "tipo": "dificil",
-   "dificultad": 3,
-   "n": 3,
-   "articulos": [
-    "guia-mossos:C.2.2",
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
-   ],
-   "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.IF, C.2.5",
-   "prioridad": 92.1
-  },
-  {
    "tema": "A.3",
    "titulo": "Història de la policia a Catalunya",
    "tipo": "literal",
@@ -3267,33 +3271,35 @@
    ],
    "revision_humana": false,
    "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.5 sobre los apartados C.5.IF, C.5.2",
-   "prioridad": 54.8
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
    "titulo": "El Codi deontològic policial",
    "tipo": "organos",
    "dificultad": 1,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.5.IF"
+    "guia-mossos:C.5.IF",
+    "guia-mossos:C.5.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo órganos (dificultad 1) del tema C.5 sobre el apartado C.5.IF",
-   "prioridad": 54.8
+   "texto": "2 preguntas de tipo órganos (dificultad 1) del tema C.5 sobre los apartados C.5.IF, C.5.2",
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
    "titulo": "El Codi deontològic policial",
    "tipo": "aplicacion",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.5.IF"
+    "guia-mossos:C.5.IF",
+    "guia-mossos:C.5.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo aplicación (dificultad 2) del tema C.5 sobre el apartado C.5.IF",
-   "prioridad": 54.8
+   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.5 sobre los apartados C.5.IF, C.5.2",
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
@@ -3307,7 +3313,7 @@
    ],
    "revision_humana": false,
    "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.5 sobre los apartados C.5.2, C.5.3",
-   "prioridad": 54.8
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
@@ -3320,20 +3326,21 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema C.5 sobre el apartado C.5.IF",
-   "prioridad": 54.8
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
    "titulo": "El Codi deontològic policial",
    "tipo": "negativa",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.5.IF"
+    "guia-mossos:C.5.IF",
+    "guia-mossos:C.5.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.5 sobre el apartado C.5.IF",
-   "prioridad": 54.8
+   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.5 sobre los apartados C.5.IF, C.5.2",
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
@@ -3346,7 +3353,7 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo requisitos (dificultad 2) del tema C.5 sobre el apartado C.5.1",
-   "prioridad": 54.8
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
@@ -3361,7 +3368,7 @@
    ],
    "revision_humana": true,
    "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.5 sobre los apartados C.5.IF, C.5.2, C.5.1",
-   "prioridad": 54.8
+   "prioridad": 66.4
   },
   {
    "tema": "C.5",
@@ -3375,7 +3382,7 @@
    ],
    "revision_humana": false,
    "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.5 sobre los apartados C.5.IF, C.5.2",
-   "prioridad": 54.8
+   "prioridad": 66.4
   },
   {
    "tema": "C.3",
@@ -3466,7 +3473,7 @@
    "apartados": []
   }
  ],
- "total_necesario": 456,
+ "total_necesario": 460,
  "gaps_fuente": [
   "D",
   "B.8 (1 apartados)",

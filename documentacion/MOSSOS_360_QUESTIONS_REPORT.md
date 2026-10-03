@@ -3,9 +3,9 @@
 | Contenido | Preguntas | Se sirve | Nota |
 |---|---|---|---|
 | OFFICIAL_EXAM | 290 | sí, solo en «exámenes oficiales» | literales del organismo; banco separado |
-| TESTLEY_GENERATED | 103 | sí | publicadas tras la puerta `Banco.publicar()` |
-| REVIEW_REQUIRED | 11 | no | cola humana (6 del lote S00017; S00018 sigue archivado sin cerrar ni publicar) |
-| DEPRECATED | 3 | no | retiradas |
+| TESTLEY_GENERATED | 99 | sí | publicadas tras la puerta `Banco.publicar()` |
+| REVIEW_REQUIRED | 14 | no | cola humana (6 del lote S00017; S00018 sigue archivado sin cerrar ni publicar) |
+| DEPRECATED | 4 | no | retiradas |
 | OUTDATED | 0 | no | desfasadas |
 
 ## TESTLEY_GENERATED por tipo y dificultad
@@ -14,10 +14,10 @@
 |---|---|
 | sin_tipo | 41 |
 | conceptual | 12 |
-| literal | 11 |
-| aplicacion | 8 |
-| organos | 8 |
+| literal | 10 |
+| organos | 7 |
 | competencias | 7 |
+| aplicacion | 6 |
 | negativa | 5 |
 | requisitos | 2 |
 | dificil | 2 |
@@ -29,8 +29,8 @@
 
 | Dificultad | Preguntas |
 |---|---|
-| 1 | 29 |
-| 2 | 49 |
+| 1 | 27 |
+| 2 | 47 |
 | 3 | 2 |
 | ? | 23 |
 
@@ -40,9 +40,9 @@
 |---|---|---|
 | constitucion | 35 | 0 |
 | eac-2006 | 0 | 0 |
-| guia-mossos | 62 | 6 |
+| guia-mossos | 58 | 6 |
 | lo-2-1986 | 6 | 0 |
 
-Estados contados en el ámbito del temario: {'DEPRECATED': 3, 'TESTLEY_GENERATED': 103, 'REVIEW_REQUIRED': 11}.
+Estados contados en el ámbito del temario: {'TESTLEY_GENERATED': 99, 'DEPRECATED': 4, 'REVIEW_REQUIRED': 14}.
 
 Generación: **GENERATION_PAUSED** (fabrica/estado/estado.json). No se ha generado ni publicado ninguna pregunta nueva en Mossos 360.
