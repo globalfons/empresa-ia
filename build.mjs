@@ -138,6 +138,7 @@ const MOTOR = {};
 const motorDe = (o) => (o.id in MOTOR ? MOTOR[o.id] : (MOTOR[o.id] = fs.existsSync(`catalogo/perfiles/${o.id}.json`) ? JSON.parse(fs.readFileSync(`catalogo/perfiles/${o.id}.json`, "utf8")).motor360 || null : null));
 const aptitudOf = (o) => { const m = motorDe(o); const a = m && m.modulos.aptitude.oficial; return a && a.verification_status === "OFFICIAL_VERIFIED" ? a : null; };
 const competenciasOf = (o) => { const m = motorDe(o); const c = m && m.modulos.competency.oficial; return c && c.verification_status === "OFFICIAL_VERIFIED" && fs.existsSync(`catalogo/competencias/${o.id}.json`) ? c : null; };
+const entrevistaOf = (o) => { const m = motorDe(o); const c = m && m.modulos.interview.oficial; return c && c.verification_status === "OFFICIAL_VERIFIED" && competenciasOf(o) && fs.existsSync(`catalogo/entrevista/${o.id}.json`) ? c : null; };
 function page(route, opts) {
   const lm = opts.lastmod || C.updated;
   pages.push({ route, opts, noindex: opts.noindex, lastmod: lm > HOY ? HOY : lm, title: conMarca(opts.title), description: opts.description });
@@ -733,6 +734,7 @@ ${prep}
 ${pend}
 ${aptitudOf(o) ? `<section class="card" id="aptitudinal"><h2>Subprueba aptitudinal</h2><p>${aptitudOf(o).preguntas} preguntas en ${aptitudOf(o).minutos} minutos sobre razonamiento abstracto, espacial, aptitud verbal, numérica y perceptiva. Entrena con ejercicios originales de TestLey por aptitud, dificultad, contrarreloj o en modo adaptativo.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/aptitudinal/">Entrenar la aptitudinal</a></p></section>` : ""}
 ${competenciasOf(o) ? `<section class="card" id="competencias-psicologia"><h2>Competencias y psicología</h2><p>La 3a prueba evalúa ${competenciasOf(o).lista.length} competencias con un test de competencias y una entrevista. Conoce las competencias oficiales, entrena con situaciones prácticas y compara tu autopercepción.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/competencias/">Competencias y autoconocimiento</a></p></section>` : ""}
+${entrevistaOf(o) ? `<section class="card" id="entrevista"><h2>Entrevista</h2><p>Practica la entrevista de la prueba de adecuación psicoprofesional: responde por escrito a situaciones y preguntas de entrenamiento, recibe un análisis por competencias y revisa tu evolución.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/entrevista/">Entrenar la entrevista</a></p></section>` : ""}
 ${o.examenes.length ? `<section class="card" id="examenes"><div class="of-head"><h2>Exámenes oficiales anteriores</h2><span class="badge-oficial">Fuente oficial</span></div><p>Preguntas y plantilla de respuestas publicadas por la administración. Hazlos tal cual se publicaron, con la respuesta oficial.</p><ul class="of-list">${o.examenes.map((e) => `<li><span><a href="${r}oposiciones/${o.id}/examenes-oficiales/${e.id}/">Examen oficial ${esc(e.convocatoria)}</a> · ${e.preguntes.length} preguntas${e.minuts ? ` · ${e.minuts} min` : ""}</span></li>`).join("")}</ul><p><a class="btn" href="${r}oposiciones/${o.id}/examenes-oficiales/">Ver todos los exámenes oficiales</a></p></section>` : ""}
 <section class="card" id="legislacion"><h2>Legislación</h2><p class="muted small">${leyesOp.filter((n) => PUB[n.id]).length} de ${leyesOp.length} normas con test. ${boletin(o) === "BOE" ? "Textos consolidados del BOE." : "Fuentes oficiales: guia d'estudi de la Generalitat y textos consolidados del BOE."}</p><details class="leyes-det"${leyesOp.length <= 8 ? " open" : ""}><summary>Ver las ${leyesOp.length} normas</summary><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `${n.tipo === "guia_oficial" ? esc(n.nombre) : `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a>`} <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="${esc(n.url || `https://www.boe.es/buscar/act.php?id=${n.id}`)}" rel="noopener">${esc(n.tipo === "guia_oficial" ? "PDF oficial" : n.id)}</a></li>`).join("")}</ul></details></section>
 <section class="card" id="documentacion"><h2>Documentación oficial</h2><ul class="of-list">${Object.values(o.fuentes).map((f) => `<li><span><a href="${esc(f.url)}" rel="noopener">${esc(f.titulo)}</a></span> <span class="muted small">${esc(f.tipo)}, publicado el ${fmtFecha(f.fecha_publicacion)}</span></li>`).join("")}</ul></section>
@@ -798,6 +800,30 @@ for (const o of OPOS) {
     motor360: p.motor360 || null, // Opposition Engine: datos oficiales de preparación por convocatoria (públicos; sin preguntas)
   }));
 }
+// Entrenador de entrevista (Interview Engine): solo con la prueba oficial verificada y escenarios publicados
+for (const o of OPOS) {
+  const a = entrevistaOf(o);
+  if (!a) continue;
+  const c = competenciasOf(o);
+  const pub = JSON.parse(fs.readFileSync(`catalogo/entrevista/${o.id}.json`, "utf8"));
+  fs.writeFileSync(path.join(OUT_TMP, "datos", `entrevista-${o.id}.json`), JSON.stringify({
+    oposicion: o.id, call_id: a.call_id, competencias: c.lista.map((x) => ({ ...x, clave: c.clave.includes(x.id) })),
+    oficial: { citas: a.citas, fuente: a.fuente, documento: a.documento, verification_status: a.verification_status },
+    escenarios: pub.escenarios.filter((e) => e.verification_status === "VALID").map(({ traza, generated_by, ...e }) => e),
+  }));
+  page(`oposiciones/${o.id}/entrevista/`, {
+    title: titulo("", `Entrevista ${opCorto(o)}: entrenador por competencias`, ""), lastmod: o.actualizado, wide: true,
+    scripts: ["tutor.js", "entrevista.js", "entrevista-ui.js"],
+    description: descripcion(`Practica la entrevista de la prueba de adecuación psicoprofesional de ${opCorto(o)} con situaciones y preguntas por competencias.`, "Análisis orientativo de tus respuestas, fortalezas, puntos de mejora y evolución."),
+    crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Entrevista", `oposiciones/${o.id}/entrevista/`]],
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Entrevista</span></nav>
+<h1>Entrenador de entrevista · ${esc(opCorto(o))}</h1>
+<p class="lead">Según las bases de la convocatoria ${esc(a.call_id)}, la prueba de adecuación psicoprofesional combina un test de competencias y una entrevista sobre tu desarrollo personal y profesional, y su resultado es apto o no apto. <span class="badge-oficial">Dato oficial</span></p>
+<blockquote class="cita small">${esc(a.citas[2])}</blockquote>
+<div id="entrevista" data-op="${o.id}" data-base="${r}">Cargando…</div>
+<p class="muted small">Fuente: <a href="${esc(a.fuente)}" rel="noopener">${esc(a.documento)}</a>. Las situaciones, las preguntas, los indicadores y el análisis son material de entrenamiento de TestLey revisado por un juez independiente: no son preguntas ni criterios del tribunal. El análisis aplica criterios de entrenamiento de TestLey (claridad, concreción, estructura, reflexión y relación con la pregunta): no hay una única respuesta correcta y no predice el resultado. Relacionado: <a href="${r}oposiciones/${o.id}/competencias/">competencias y autoconocimiento</a>.</p>`,
+  });
+}
 // Competencias y autoconocimiento (Competency Engine): solo con competencias oficiales verificadas y contenido publicado
 for (const o of OPOS) {
   const c = competenciasOf(o);
@@ -818,6 +844,7 @@ for (const o of OPOS) {
 <p class="lead">Según las bases de la convocatoria ${esc(c.call_id)}, la prueba de adecuación psicoprofesional (test de competencias y entrevista) valora ${c.lista.length} competencias de 1 a 10. Para el apto hacen falta ${c.apte.total_minimo} puntos en total y más de ${c.apte.clave_mayor_que} en cada competencia clave. <span class="badge-oficial">Dato oficial</span></p>
 <blockquote class="cita small">${esc(c.citas[0])}</blockquote>
 <div id="competencias" data-op="${o.id}" data-base="${r}">Cargando…</div>
+${entrevistaOf(o) ? `<p><a class="btn" href="${r}oposiciones/${o.id}/entrevista/">Practicar la entrevista</a></p>` : ""}
 <p class="muted small">Fuente: <a href="${esc(c.fuente)}" rel="noopener">${esc(c.documento)}</a>. Las explicaciones, los comportamientos observables, las situaciones y el cuestionario son material de entrenamiento de TestLey revisado por un juez independiente. No son criterios del tribunal, no predicen el resultado y no constituyen ninguna evaluación psicológica.</p>`,
   });
 }

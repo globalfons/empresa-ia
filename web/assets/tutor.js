@@ -21,7 +21,7 @@
   }
   function pintarRespuesta(box, j) {
     var fuentes = (j.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '">' + esc(f.titulo) + "</a>"; }).join(" · ");
-    box.innerHTML = '<div class="tutor-resp">' + AVISO + "<div>" + esc(j.texto || "").replace(/\n/g, "<br>") + "</div>" + (fuentes ? '<p class="muted small">Fuentes: ' + fuentes + "</p>" : "") + "</div>";
+    box.innerHTML = '<div class="tutor-resp">' + (j.aviso ? '<p class="ia-aviso"><span class="badge-ia">IA</span> ' + esc(j.aviso) + "</p>" : AVISO) + "<div>" + esc(j.texto || "").replace(/\n/g, "<br>") + "</div>" + (fuentes ? '<p class="muted small">Fuentes: ' + fuentes + "</p>" : "") + "</div>";
   }
   function ejecutar(box, cuerpo) {
     var r = requisitos();
@@ -34,5 +34,7 @@
     explicar: function (p, cont) { var box = document.createElement("div"); cont.appendChild(box); p.modo = "explicar"; ejecutar(box, p); },
     duda: function (texto, ctx, box) { ejecutar(box, { modo: "duda", texto: texto, oposicion: ctx && ctx.oposicion, ley: ctx && ctx.ley, art: ctx && ctx.art }); },
     recomendar: function (resumen, box) { ejecutar(box, { modo: "recomendar", resumen: resumen }); },
+    // Entrevista (Fase 3): p = {oposicion, escenario, respuesta}. El escenario lo lee la función de la web publicada.
+    entrevista: function (p, box) { ejecutar(box, { modo: "entrevista", oposicion: p.oposicion, escenario: p.escenario, respuesta: p.respuesta }); },
   };
 })();

@@ -218,21 +218,23 @@ def agregada(razon):
     return False
 
 
-def comprobar(items, respuesta):
+def comprobar(items, respuesta, criterios=None):
     """Guards 1:1 (mismo esquema que el juez de preguntas): ids exactos y en orden, motivo propio, criterios completos y
     veredicto coherente con los criterios; ninguna valoración agregada."""
+    criterios = criterios or CRITERIOS
+    espec = {"booleanos": criterios, "duplicado": "duplicado_de"}
     ids = [i["item_id"] for i in items]
     if len(respuesta) != len(ids) or [r.get("item_id") for r in respuesta] != ids:
         raise J.JuezInvalido("IDS_NO_COINCIDEN", f"esperados {ids}")
     out = []
     for i, r in zip(items, respuesta):
         c = r.get("criteria_checked") or {}
-        if set(c) != set(CRITERIOS) | {"duplicado_de"} or any(not isinstance(c[k], bool) for k in CRITERIOS):
+        if set(c) != set(criterios) | {"duplicado_de"} or any(not isinstance(c[k], bool) for k in criterios):
             raise J.JuezInvalido("CRITERIOS_INCOMPLETOS", i["item_id"])
         razon = r.get("reason") or ""
         if len(razon) < 30 or agregada(razon):
             raise J.JuezInvalido("RAZON_INSUFICIENTE", i["item_id"])
-        dedu = J.esperado(c, ESPEC)
+        dedu = J.esperado(c, espec)
         if r.get("verdict") not in ("VALID", "REVIEW_REQUIRED", "REJECTED"):
             raise J.JuezInvalido("VEREDICTO_DESCONOCIDO", i["item_id"])
         out.append({"item_id": i["item_id"], "verdict_juez": r["verdict"], "verdict": J.mas_conservador(r["verdict"], dedu),
@@ -240,24 +242,26 @@ def comprobar(items, respuesta):
     return out
 
 
-def registrar(lote, nn, transcripcion):
-    d = os.path.join(TRABAJO, lote)
+def registrar(lote, nn, transcripcion, trabajo=None, prompt=None, criterios=None, modelo=None):
+    """Registra la respuesta de un juez (genérico: lo reutiliza fabrica/entrevista.py con su carpeta, prompt y criterios).
+    `modelo`: si el juez de esta tanda no es el modelo por defecto del lote (p. ej. tras varios rechazos del guard), queda en la traza."""
+    d = os.path.join(trabajo or TRABAJO, lote)
     ev = J.leer(os.path.join(d, "evaluacion.json"))
     t = next(x for x in ev["tandas"] if x["tanda"] == nn)
     if t["estado"] == "ACEPTADA":
         raise SystemExit(f"La tanda {nn} ya está aceptada: los veredictos no se sobrescriben.")
-    if J.sha(open(PROMPT, encoding="utf-8").read()) != ev["judge_prompt_sha256"]:
+    if J.sha(open(prompt or PROMPT, encoding="utf-8").read()) != ev["judge_prompt_sha256"]:
         raise SystemExit("El prompt del juez cambió después de preparar el lote: evaluación inválida.")
     items = J.leer(t["fichero"])["items"]
     if {i["item_id"]: huella(i) for i in items} != t["huellas"]:
         raise SystemExit("La tanda cambió después de prepararla: evaluación inválida.")
     llamadas, final = J.leer_transcripcion(transcripcion)
     evid = dict(J.evidencia_transcripcion(llamadas, t["fichero"]), tanda=nn, transcripcion=os.path.basename(transcripcion), respuesta_sha256=J.sha(final or ""))
-    intento = {"t": ahora(), "evidencia": evid, "respuesta": final}
+    intento = {"t": ahora(), "evidencia": evid, "respuesta": final, "judge_model": modelo or ev["judge_model"]}
     try:
         if not evid["ok"]:
             raise J.JuezInvalido("JUDGE_INVALID", f"herramientas no permitidas: {evid['no_permitidas']}")
-        t.update(estado="ACEPTADA", veredictos=comprobar(items, J.parsear(final)), evidencia=evid, registrada_el=ahora())
+        t.update(estado="ACEPTADA", veredictos=comprobar(items, J.parsear(final), criterios), evidencia=evid, registrada_el=ahora(), judge_model=modelo or ev["judge_model"])
         intento["resultado"] = "ACEPTADA"
     except J.JuezInvalido as e:
         t["estado"] = "RECHAZADA"

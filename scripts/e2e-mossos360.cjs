@@ -86,6 +86,34 @@ const OP = 'mossos-esquadra';
     ok('22d AUTOCONOCIMIENTO · autopercepción sin nota ni diagnóstico', /SELF_ASSESSMENT/.test(await texto()) && /ni un diagnóstico/.test(await texto()));
     await p.click('[data-tab="progreso"]'); ok('22e PROGRESO · entrenamiento y autopercepción separados', /Autopercepción/.test(await texto()) && /1 situaciones resueltas/.test(await texto()));
     const sw2 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw2 > w) pasos.push(['sin desbordamiento competencias', false, sw2]);
+    // 23 ENTREVISTA (Mossos 360 · Fase 3): respuesta escrita → análisis de entrenamiento → informe de sesión → métricas
+    ok('23a COMPETENCIAS enlaza el entrenador de entrevista', await p.locator(`a[href*="oposiciones/${OP}/entrevista/"]`).count());
+    await ir(`oposiciones/${OP}/`); ok('23b FICHA enlaza la entrevista', await p.locator(`a[href*="oposiciones/${OP}/entrevista/"]`).count());
+    await ir(`oposiciones/${OP}/entrevista/`); await p.waitForSelector('[data-modo]');
+    ok('23c ENTREVISTA · 4 modos y métricas sin datos inventados', (await p.locator('[data-modo]').count()) === 4 && /0 sesiones · 0\/10 competencias/.test(await texto()) && /sin datos suficientes/.test(await texto()));
+    await p.selectOption('[data-comp]', 'autocontrol'); await p.click('[data-modo="practica"]'); await p.waitForSelector('#ent-resp');
+    const RESP = "Una vegada, quan treballava en una botiga l'any 2023, un client es va enfadar molt. Primer vaig respirar i vaig mantenir la calma, després el vaig escoltar i li vaig explicar les opcions perquè entengués què podíem fer. Al final es va resoldre i vaig aprendre que escoltar abans de respondre ajuda a rebaixar la tensió.";
+    let analizadas = 0;
+    for (let k = 0; k < 3; k++) {
+      if (!(await p.locator('#ent-resp').count())) break;
+      await p.fill('#ent-resp', RESP); await p.click('[data-analizar]'); await p.waitForSelector('.result-card');
+      if (k === 0) {
+        const t = await texto();
+        ok('23d ANÁLISIS · dimensiones, Qué funciona / Qué falta / Cómo mejorar', /Claridad/.test(t) && /Qué funciona/.test(t) && /Qué falta/.test(t) && /Cómo mejorar/.test(t));
+        ok('23e ANÁLISIS · criterios TestLey, no del tribunal, sin predicción', /criterios TestLey/.test(t) && /No es la valoración del tribunal/.test(t) && !/probabilidad de aprobar/i.test(t.replace(/ni probabilidad de aprobar/gi, '')));
+        ok('23f IA · dependiente del Tutor IA (no activo)', /cuando se active el Tutor IA/.test(t));
+        await p.locator('details.card summary').click(); await p.locator('[data-ind]').first().check();
+        const sw3 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw3 > w) pasos.push(['sin desbordamiento entrevista (análisis)', false, sw3]);
+      }
+      analizadas++; await p.click('[data-next]');
+    }
+    await p.waitForSelector('[data-otra]'); const inf = await texto();
+    ok('23g INFORME DE SESIÓN · 3 preguntas, competencias y autoevaluación aparte', analizadas === 3 && /Informe de la sesión/.test(inf) && /3 preguntas/.test(inf) && /Autoevaluación \(aparte de la puntuación\)/.test(inf));
+    const sesEnt = await p.evaluate(() => JSON.parse(localStorage.getItem('testley:entrevista:v1') || '{}'));
+    ok('23h PERSISTENCIA · InterviewSession guardada', (sesEnt.sesiones || []).length === 1 && sesEnt.sesiones[0].answers[0].answer.type === 'text' && sesEnt.sesiones[0].evaluations[0].tipo === 'INTERVIEW_OBJECTIVE_TRAINING_SCORE');
+    await p.click('[data-otra]'); await p.waitForSelector('[data-modo]');
+    ok('23i MÉTRICAS · 1 sesión y competencias trabajadas (principal y secundarias)', /1 sesiones · [1-9]\/10 competencias/.test(await texto()));
+    const sw4 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw4 > w) pasos.push(['sin desbordamiento entrevista', false, sw4]);
     informe.push({ tag, pasos });
     await c.close();
   }

@@ -1,0 +1,18 @@
+You write TRAINING content (in Catalan) for TestLey: interview practice scenarios for candidates of the Mossos d'Esquadra selection process (call 46/26). You are the GENERATOR: you never decide whether content is valid or published and never write status/verdict fields.
+
+Official facts (the ONLY official information; add no other "official" claim): the interview gathers information about the candidate's personal and professional development to observe behaviours associated with these 10 competencies (id → official name): responsabilitat → Responsabilitat i orientació a la qualitat; cooperacio → Cooperació i treball en equip; autonomia → Autonomia i iniciativa; resolucio-problemes → Resolució de problemes; orientacio-servei → Orientació de servei a les persones; adaptabilitat → Adaptabilitat i flexibilitat; autocontrol → Autocontrol i resistència a la pressió; autogestio → Autogestió i desenvolupament personal; motivacio → Motivació i identificació amb l'organització; habilitats-socials → Habilitats socials i comunicatives. There are NO official questions, model answers or scoring criteria.
+
+Write /home/user/empresa-ia/fabrica/entrevista/E00001/candidatas.json:
+{"oposicion": "mossos-esquadra", "generador": "redactor-entrevista-v1", "escenarios": [60 scenarios]}
+
+6 scenarios per competency (competency_ids[0] = that competency), in the competency order above. Per competency: 4 "conductual" and 2 "situacional"; difficulties 1,2,2,3,2,3. Scenario:
+{"id": "ent-<competency id>-<1..6>", "competency_ids": ["<main id>", optionally 1-2 more official ids], "tipo": "conductual"|"situacional", "categoria": one of conflicte, pressio, error, lideratge, equip, iniciativa, atencio, adaptacio, decisio, motivacio, aprenentatge, comunicacio, critica, trajectoria, "dificultad": 1|2|3, "contexto": "short setting", "situacion": "≥ 60 chars: for conductual, the kind of experience being asked about; for situacional, a concrete realistic situation", "pregunta": "open interview question ending in '?', 20-220 chars (conductual: «Explica'm una situació en què…»; situacional: «Què faries si…» / «Com ho gestionaries…»)", "indicadores": [3-5 short orientative signs of a well-explained answer, 15-140 chars each, e.g. «Descriu una situació concreta i el teu paper», «Explica què vas fer i per què», «Indica el resultat i què en vas aprendre»; adapt them to the competency and question], "errores_frecuentes": [2-3 common mistakes, e.g. «Respondre en abstracte sense cap exemple»], "repregunta": "a follow-up question ending in '?'"}
+
+Rules (an automatic validator rejects violations):
+- Diversify categories and contexts (work, studies, sport, volunteering, customer service, family/community, police-academy practice). All 60 questions must be different; no near-duplicates.
+- Never describe real police procedures or legal facts; nothing presented as official, as what the tribunal values/expects, or as a way to pass. Never write "resposta correcta", "resposta model", "aprovaries", "criteri oficial", "el tribunal valora", "diagnòstic", "trastorn", "patològic".
+- Indicators guide reflection; they must not dictate one specific answer nor be long model answers.
+- Natural, correct Catalan.
+
+Then run: cd /home/user/empresa-ia && python3 -m fabrica.entrevista validar E00001 — fix every problem and re-run until it prints "validación limpia". Do not edit any other file, do not run git, "preparar" or "publicar".
+Report briefly (max 5 lines): scenarios written and the final validar output.

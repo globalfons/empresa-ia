@@ -1,0 +1,1426 @@
+{
+ "lote": "E00001",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "creada_el": "2026-10-04T00:30:34",
+ "judge_prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+ "candidatas_sha256": "363b9c6feef8164a83ee4d7ba1f3eb3d4d16e8f3fff1aa2f366bc37f04765eac",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ent-responsabilitat-1",
+    "ent-responsabilitat-2",
+    "ent-responsabilitat-3",
+    "ent-responsabilitat-4",
+    "ent-responsabilitat-5",
+    "ent-responsabilitat-6",
+    "ent-cooperacio-1",
+    "ent-cooperacio-2",
+    "ent-cooperacio-3",
+    "ent-cooperacio-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-01.json",
+   "prompt_sha256": "382404a5bf2763e603f779f4cd86e73e67d5f3f0ac3a2ae87549ffa581f13abb",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-responsabilitat-1": "46a6e839e951aed3ec8b1826d60b4c8a3303a76381b862e2f0dccbb314327ca0",
+    "ent-responsabilitat-2": "8e8f3a95df3737a894922b0a2ecabf245da80f36461f5ffc566511774b5f51bb",
+    "ent-responsabilitat-3": "a262848b0ae1887603632819765643b72da8a463b3eba1ec88b39070f78fa59f",
+    "ent-responsabilitat-4": "e3e9014f1ff416900d16aa92ed0c8ac0635f934912a2cbcf9cad8e7a9541a06c",
+    "ent-responsabilitat-5": "a07cc80314e4d8816f93fd23f51bfe00eb6ba44e4e4147ea5cea0475727f5b6f",
+    "ent-responsabilitat-6": "1dd02c3fbb2bce7fb9f01ea5e7358ab65d34668c42ebacabf0973a0f47eff46c",
+    "ent-cooperacio-1": "799f7d2ffbdba5059e3f38800dbcb9865378998fee714890e8de4a09938daf34",
+    "ent-cooperacio-2": "a10377719792972f96e0a159a63151cff767db56c01c56620268f468746c734e",
+    "ent-cooperacio-3": "33f8d5c7c7d42367fdc653baf33328ebcf6260340781cfbf169a5282a64c2e21",
+    "ent-cooperacio-4": "ba5570d9959108759f438fe0d998390d3e37d409331ac5f3a2f87dda42f1f38e"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-responsabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre error en trabajo de fin de semana en supermercado. Pregunta abierta (conductual) que invita a explicar experiencia real. Indicadores pertinentes (error concreto, comunicación, corrección, aprendizaje) sin dictar respuesta única. Competencia relevante (responsabilidad y calidad) bien reflejada en la pregunta. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre revisión cuidadosa de trabajo académico. Pregunta abierta (conductual) que invita a explicar esfuerzo extra por calidad. Indicadores pertinentes (trabajo concreto, nivel de calidad buscado, pasos de revisión, resultado) sin dictar respuesta. Competencias relevantes (responsabilidad, autogestión) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre compromiso mantenido en equipo de club deportivo. Pregunta abierta (conductual) que invita a explicar cómo mantuvieron responsabilidad. Indicadores pertinentes (compromiso adquirido, cómo actuó, resultado para grupo) sin dictar respuesta única. Competencias relevantes (responsabilidad, cooperación) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre dilema entre rapidez y normas en almacén. Pregunta abierta (conductual) que invita a explicar decisión y razonamiento bajo presión. Indicadores pertinentes (dilema, argumentos, consecuencias, aprendizaje) bien estructurados sin dictar respuesta. Competencias relevantes (responsabilidad, autocontrol bajo presión) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre material compartido incompleto durante práctica en academia. Pregunta situacional abierta que invita a explicar cómo actuaría. Indicadores pertinentes (abordaje del problema, comunicación, prevención) sin dictar respuesta. Contexto realista de práctica académica (no describe procedimientos reales policiales). Competencia relevante (responsabilidad y calidad) bien reflejada. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre información errónea dada a cliente en tienda electrónica. Pregunta situacional abierta que invita a explicar cómo gestionaría el error. Indicadores pertinentes (impacto en cliente, contacto, explicación a responsable, corrección) sin dictar respuesta única. Competencias relevantes (responsabilidad, servicio al cliente) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre trabajo en equipo en proyecto universitario. Pregunta abierta (conductual) que invita a explicar aportación personal en objetivo común. Indicadores pertinentes (objetivo, composición, papel concreto, coordinación, resultado) sin dictar respuesta. Competencia relevante (cooperación y trabajo en equipo) bien reflejada en pregunta y seguimiento. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre desacuerdos en grupo de voluntariado. Pregunta abierta (conductual) que invita a explicar cómo contribuyó a que grupo continuara funcionando. Indicadores pertinentes (origen del desacuedo, acciones concretas, relaciones después) sin dictar respuesta única. Competencias relevantes (cooperación, habilidades comunicativas) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre apoyo a compañeros saturados en cocina de restaurante. Pregunta abierta (conductual) que invita a explicar cómo dejó tareas propias para ayudar. Indicadores pertinentes (necesidad del apoyo, organización propia, efecto en equipo) sin dictar respuesta. Competencias relevantes (cooperación, adaptabilidad) bien reflejadas en pregunta y seguimiento. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro en catalán sobre crítica constructiva en equipo de remo. Pregunta abierta (conductual) que invita a explicar cómo crítica ayudó a mejorar y papel en esto. Indicadores pertinentes (contexto y origen, recepción y canalización, cambios concretos, reflexión sobre reacción) sin dictar respuesta. Competencias relevantes (cooperación, responsabilidad y calidad) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a91b59910209750f8.jsonl",
+    "respuesta_sha256": "209fca424ad203a61067671ab2875ee4e1005c90f1191dfe1206af980ed1c007"
+   },
+   "registrada_el": "2026-10-04T00:33:41",
+   "intentos": [
+    {
+     "t": "2026-10-04T00:33:41",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a91b59910209750f8.jsonl",
+      "respuesta_sha256": "209fca424ad203a61067671ab2875ee4e1005c90f1191dfe1206af980ed1c007"
+     },
+     "respuesta": "[{\"item_id\": \"ent-responsabilitat-1\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre error en trabajo de fin de semana en supermercado. Pregunta abierta (conductual) que invita a explicar experiencia real. Indicadores pertinentes (error concreto, comunicación, corrección, aprendizaje) sin dictar respuesta única. Competencia relevante (responsabilidad y calidad) bien reflejada en la pregunta. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-responsabilitat-2\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre revisión cuidadosa de trabajo académico. Pregunta abierta (conductual) que invita a explicar esfuerzo extra por calidad. Indicadores pertinentes (trabajo concreto, nivel de calidad buscado, pasos de revisión, resultado) sin dictar respuesta. Competencias relevantes (responsabilidad, autogestión) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-responsabilitat-3\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre compromiso mantenido en equipo de club deportivo. Pregunta abierta (conductual) que invita a explicar cómo mantuvieron responsabilidad. Indicadores pertinentes (compromiso adquirido, cómo actuó, resultado para grupo) sin dictar respuesta única. Competencias relevantes (responsabilidad, cooperación) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-responsabilitat-4\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre dilema entre rapidez y normas en almacén. Pregunta abierta (conductual) que invita a explicar decisión y razonamiento bajo presión. Indicadores pertinentes (dilema, argumentos, consecuencias, aprendizaje) bien estructurados sin dictar respuesta. Competencias relevantes (responsabilidad, autocontrol bajo presión) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-responsabilitat-5\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre material compartido incompleto durante práctica en academia. Pregunta situacional abierta que invita a explicar cómo actuaría. Indicadores pertinentes (abordaje del problema, comunicación, prevención) sin dictar respuesta. Contexto realista de práctica académica (no describe procedimientos reales policiales). Competencia relevante (responsabilidad y calidad) bien reflejada. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-responsabilitat-6\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre información errónea dada a cliente en tienda electrónica. Pregunta situacional abierta que invita a explicar cómo gestionaría el error. Indicadores pertinentes (impacto en cliente, contacto, explicación a responsable, corrección) sin dictar respuesta única. Competencias relevantes (responsabilidad, servicio al cliente) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-cooperacio-1\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre trabajo en equipo en proyecto universitario. Pregunta abierta (conductual) que invita a explicar aportación personal en objetivo común. Indicadores pertinentes (objetivo, composición, papel concreto, coordinación, resultado) sin dictar respuesta. Competencia relevante (cooperación y trabajo en equipo) bien reflejada en pregunta y seguimiento. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-cooperacio-2\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre desacuerdos en grupo de voluntariado. Pregunta abierta (conductual) que invita a explicar cómo contribuyó a que grupo continuara funcionando. Indicadores pertinentes (origen del desacuedo, acciones concretas, relaciones después) sin dictar respuesta única. Competencias relevantes (cooperación, habilidades comunicativas) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-cooperacio-3\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre apoyo a compañeros saturados en cocina de restaurante. Pregunta abierta (conductual) que invita a explicar cómo dejó tareas propias para ayudar. Indicadores pertinentes (necesidad del apoyo, organización propia, efecto en equipo) sin dictar respuesta. Competencias relevantes (cooperación, adaptabilidad) bien reflejadas en pregunta y seguimiento. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-cooperacio-4\", \"verdict\": \"VALID\", \"reason\": \"Texto claro en catalán sobre crítica constructiva en equipo de remo. Pregunta abierta (conductual) que invita a explicar cómo crítica ayudó a mejorar y papel en esto. Indicadores pertinentes (contexto y origen, recepción y canalización, cambios concretos, reflexión sobre reacción) sin dictar respuesta. Competencias relevantes (cooperación, responsabilidad y calidad) bien reflejadas. Sin afirmaciones oficiales ni diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "ent-cooperacio-5",
+    "ent-cooperacio-6",
+    "ent-autonomia-1",
+    "ent-autonomia-2",
+    "ent-autonomia-3",
+    "ent-autonomia-4",
+    "ent-autonomia-5",
+    "ent-autonomia-6",
+    "ent-resolucio-problemes-1",
+    "ent-resolucio-problemes-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-02.json",
+   "prompt_sha256": "3ba111fec3f2db378bc51053e78c7e84aeaf959a06b0144dcd893a152e53d75b",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-cooperacio-5": "365f7f7e9b2de2a55436493daa34121392c2e39eba304d0977d06647e4a4ad39",
+    "ent-cooperacio-6": "a42913098f4b945a20b5ca37cfda01cd8b9b395ed469b0aa5df40f024c79e167",
+    "ent-autonomia-1": "1c33657637d5728f49b4b5879271cad25346ae0fa3c047a58a854fd27dde7716",
+    "ent-autonomia-2": "7386d10d0e7b7b1776fa58f3550cdd61b4f8b7482e84a26971e0d33f9dba3486",
+    "ent-autonomia-3": "1e0885031d7485885854f02fdafaba6883eab6f3e1847a9c329cee5b293a1c39",
+    "ent-autonomia-4": "fd1034a935e06806a5cbfb6eaff01fb6fc09cad034985cf166c77b60c933be7a",
+    "ent-autonomia-5": "3271a322c02914680cec8f8eddef27744cfa17869ed3c1f069eac4a26ee10612",
+    "ent-autonomia-6": "3b8d65992efc0df576f3ce069078011213e8d1497ba7fb47a770a12adbcc8d61",
+    "ent-resolucio-problemes-1": "8f3bda3c96b09734998f3dd65b1b01091f513e8457e954eae018826cfb705632",
+    "ent-resolucio-problemes-2": "acbdf78b2e526abf53896f312a23043507075009c741b358a875582d70ed487c"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-04T00:33:41",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a31d5c8e7fe57c455.jsonl",
+      "respuesta_sha256": "0afad2b5b612a7e7d7916caa762f78c1f5d9f37c3908c831f4df593d1651bcc4"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"ent-cooperacio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item presenta una situació plausible d'acadèmia, pregunta clara i oberta sobre com integrar un company al marge. Els indicadors són raonable (detectar motiu, proposar integració, considerar efecte grupal). No presents afirmacions oficials ni diagnòstics. El text és coherent en català i les parecidos són sobre temes de treball en equip però pregunten aspectes diferents.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-cooperacio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Situació realista de projecte comunitari amb conflicte entre dos membres. Pregunta oberta sobre gestió de conflicte sota pressió temporal. Indicadors coherents i pertinents (prioritzar objectiu comú, escoltar parts, proposar solució, saber quan implicar altres). Text coherent en català sense afirmacions oficials ni diagnòstics de personalitat.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual clara sobre iniciativa en millora sense encarrec. Situació plausible de feina/acadèmia. Indicadors pertinents (detectar millora, com plantejar i dur a terme, resultat). Pregunta oberta que permet respostes diverses. Text coherent sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre decisió sense consulta. Context de monitor de colònies és plausible. Indicadors coherents (per què no era possible consultar, opcions valorades, decisió i comunicació posterior). Pregunta oberta que no dictamina resposta única. Adequadament redactat sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre organització de tasca llarga sense supervisió constant. Context de preparació d'oposicions és realista. Indicadors pertinents (com planificar, seguiment de progrés, superar moments baixos). Pregunta oberta que evita generalitats. Text coherent en català sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre actuació davant imprevist no previst en instruccions. Context de recepcionista d'hotel és plausible. Indicadors coherents i exigents (concretar imprevist i límits, explicar com decidir fins on actuar, resultat i comunicació, reflexió). Pregunta oberta sense dictaminar resposta. Text coherent sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta situacional sobre millora d'eficiència en feina nova. Context de oficina d'atenció ciutadana és realista. Indicadors pertinents (informar-se, com plantejar proposta, considerar reacció veterans). Pregunta oberta sobre diplomàcia i iniciativa. Text coherent en català sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta situacional sobre gestió de problema urgent en esdeveniment sense poder contactar responsable. Context de voluntariat en cursa popular és plausible. Indicadors coherents (valorar urgència i riscos, mesures dins possibilitats, informar decisions, saber què no fer). Pregunta oberta sobre gestió de crisi. Text coherent sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficials\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-resolucio-problemes-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre resolució de problema analitzant causes. Context de botiga de bicicletes és plausible. Indicadors pertinents (descriure problema, explicar identificació de causes, indicar solució i resultat). Pregunta oberta sobre metodologia de resolució. Text coherent en català sense afirmacions oficials ni diagnòstics.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-resolucio-problemes-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre solució ràpida sota pressió. Context de cambrer en festival és realista. Indicadors coherents (descriure problema i pressió, explicar priorització, valorar resultat). Pregunta oberta sobre resolució ràpida. Text coherent sense afirmacions oficials ni diagnòstics de personalitat.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "BATCH_REJECTED · CRITERIOS_INCOMPLETOS: ent-autonomia-6"
+    },
+    {
+     "t": "2026-10-04T00:35:36",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-ad85765ead902cf4e.jsonl",
+      "respuesta_sha256": "b7c72f59a449b214108320830b6960540c595c4ab6b2623d12aaa6fa3dbbdde1"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"ent-cooperacio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta clara i oberta sobre un exercici pràctic a l'acadèmia (plausible). Els indicadors són pertinents (detectar causa, integrar, considerar efecte grupal). Cap afirmació oficial ni diagnòstic. Els parecidos són situacions diferents de teamwork.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-cooperacio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta oberta sobre conflicte en projecte comunitari. Quatre indicadors ben calibrats (prioritzar objectiu, escoltar parts, desbloquejar, valorar implicació). Errors eviten posicionament ràpid i inacció. Cap afirmació oficial. Parecidos són escenaris de teamwork diferents.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual clara sobre iniciativa de millora sense encarrec. Context de missatgeria és plausible. Tres indicadors concrets (què detectar, com executar, resultat). Errors identifiquen resposta mancat de rigor. Cap diagnòstic.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre decisió sense consulta. Context de monitor de colònies és plausible. Tres indicadors lògics (per què no consultar, opcions, decisió i comunicació). Errors eviten exageració i negació de dubtes. Cap diagnòstic.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre autoorganització en estudi llarg (oposicions). Indicadors són concrets (planificació, seguiment, superar baixades). Errors eviten descripció idealitzada o generalitats. La competència secundària d'autogestió és pertinent. Cap diagnòstic.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre imprevist al rol (recepcionista d'hotel). Quatre indicadors escalonen resposta nuançada (concretar imprevist i límits, decidir fins on actuar, resultat i comunicació, reflexió). Errors eviten tant desbordament com paralització. Cap diagnòstic.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta situacional sobre eficiència en feina nova (oficina de ciutadania). Tres indicadors són sensats (informar-se prèviament, plantejar a qui, reacció veterans). Errors eviten sobrepassament i silenci. Cap afirmació oficial. No diagnòstic.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autonomia-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta situacional sobre problema urgent en voluntariat esportiu (falta d'aigua). Quatre indicadors ben calibrats (valorar urgència, mesures disponibles, informar decisions, límits sense autorització). Errors eviten inacció i decisions arriscades. Cap diagnòstic.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-resolucio-problemes-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre anàlisi de causes (botiga de bicicletes). Tres indicadors són concrets (problema, causes, solució i resultat). Error evita solució sense anàlisi. Errors identifiquen manca de rigor. Cap diagnòstic. Situació plausible.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-resolucio-problemes-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Pregunta conductual sobre solució ràpida sota pressió (cambrer festival). Tres indicadors contextualitzen pressió (problema i urgència, prioritzar accions, resultat). Errors eviten focus en pressió sense solució i atribució a sort. Cap diagnòstic. Situació plausible.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "item_id": "ent-cooperacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta clara i oberta sobre un exercici pràctic a l'acadèmia (plausible). Els indicadors són pertinents (detectar causa, integrar, considerar efecte grupal). Cap afirmació oficial ni diagnòstic. Els parecidos són situacions diferents de teamwork.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta oberta sobre conflicte en projecte comunitari. Quatre indicadors ben calibrats (prioritzar objectiu, escoltar parts, desbloquejar, valorar implicació). Errors eviten posicionament ràpid i inacció. Cap afirmació oficial. Parecidos són escenaris de teamwork diferents.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual clara sobre iniciativa de millora sense encarrec. Context de missatgeria és plausible. Tres indicadors concrets (què detectar, com executar, resultat). Errors identifiquen resposta mancat de rigor. Cap diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre decisió sense consulta. Context de monitor de colònies és plausible. Tres indicadors lògics (per què no consultar, opcions, decisió i comunicació). Errors eviten exageració i negació de dubtes. Cap diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre autoorganització en estudi llarg (oposicions). Indicadors són concrets (planificació, seguiment, superar baixades). Errors eviten descripció idealitzada o generalitats. La competència secundària d'autogestió és pertinent. Cap diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre imprevist al rol (recepcionista d'hotel). Quatre indicadors escalonen resposta nuançada (concretar imprevist i límits, decidir fins on actuar, resultat i comunicació, reflexió). Errors eviten tant desbordament com paralització. Cap diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta situacional sobre eficiència en feina nova (oficina de ciutadania). Tres indicadors són sensats (informar-se prèviament, plantejar a qui, reacció veterans). Errors eviten sobrepassament i silenci. Cap afirmació oficial. No diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta situacional sobre problema urgent en voluntariat esportiu (falta d'aigua). Quatre indicadors ben calibrats (valorar urgència, mesures disponibles, informar decisions, límits sense autorització). Errors eviten inacció i decisions arriscades. Cap diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre anàlisi de causes (botiga de bicicletes). Tres indicadors són concrets (problema, causes, solució i resultat). Error evita solució sense anàlisi. Errors identifiquen manca de rigor. Cap diagnòstic. Situació plausible.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre solució ràpida sota pressió (cambrer festival). Tres indicadors contextualitzen pressió (problema i urgència, prioritzar accions, resultat). Errors eviten focus en pressió sense solució i atribució a sort. Cap diagnòstic. Situació plausible.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-ad85765ead902cf4e.jsonl",
+    "respuesta_sha256": "b7c72f59a449b214108320830b6960540c595c4ab6b2623d12aaa6fa3dbbdde1"
+   },
+   "registrada_el": "2026-10-04T00:35:36"
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "ent-resolucio-problemes-3",
+    "ent-resolucio-problemes-4",
+    "ent-resolucio-problemes-5",
+    "ent-resolucio-problemes-6",
+    "ent-orientacio-servei-1",
+    "ent-orientacio-servei-2",
+    "ent-orientacio-servei-3",
+    "ent-orientacio-servei-4",
+    "ent-orientacio-servei-5",
+    "ent-orientacio-servei-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-03.json",
+   "prompt_sha256": "33104b6eba44f965555e48d08b6ffd254d7da9c7301e8271a32c9d71e3703d2f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-resolucio-problemes-3": "72d0716dd60a52cdab1bacb458328e10a46e4549c2a860aef7343e327b7d9320",
+    "ent-resolucio-problemes-4": "350268ae6e3e26eeec0be0dca1a989787e006a52e2e626809d1132e0c206dba8",
+    "ent-resolucio-problemes-5": "663f4bfdf20e7d958c4cd83739a41fe8bc7bad44b028c4b90bfa7dc0816e50d4",
+    "ent-resolucio-problemes-6": "6f14af9f52ba1389a08495ec06ae3235411608c2b9cdf96e4c2a223ea194bf6d",
+    "ent-orientacio-servei-1": "7d3c6f3239813d9b09f1a6d6daf8774d80e89765535d25c49bb3cc7ad3473138",
+    "ent-orientacio-servei-2": "83040d735491462bbe36aad724eb3940c51f4ce7c705e06a2765b76278ec993b",
+    "ent-orientacio-servei-3": "fc4f6ebfc4ec7962bf52172df8bb4c594731a232943313cd8d78e7dd98b2e847",
+    "ent-orientacio-servei-4": "480ef6715959bcc83e82005c4a4ecacf7aa55af9c1389a3e5282ac3d905f693b",
+    "ent-orientacio-servei-5": "c76e8a75c8662f744f9cf1773407bdc00d6bef6884f6f20dbbe1711aba94d4fb",
+    "ent-orientacio-servei-6": "f6a7ac721cde0715d1ff082400331d896048c7331f525900837302cb704efdf3"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-resolucio-problemes-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Item es coherent, realista (projecte d'estudis), pregunta oberta sobre experiència grupal. Indicadors raonables que no dicten una única resposta. Demostra competències de resolució i cooperació. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Text clar, coherent. Situació plausible (organització viatge). Pregunta oberta sobre com el candidat va reaccionar a fracàs. Indicadors raonables (solució inicial, detecció, replanificació, aprenentatge). Competències de resolució i adaptabilitat ben mostrades. Cap afirmació oficial ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Item coherent, clar. Context d'exercici simulat a acadèmia (pràctica, no procediment real). Pregunta situacional oberta. Indicadors pertinents (organitzar info, preguntes clarificadores, evitar conclusions precipitades). Demostra resolució de problemes. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Coherent i consistent. Context d'atenció telefònica (plausible). Pregunta situacional oberta. Indicadors raonables (entendre necessitat, recerca solucions, informar usuari, alternatives). Competències de resolució i servei ben reflectides. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Text clar i coherent. Context de botiga (molt plausible). Pregunta oberta sobre detectar necessitats més profundes. Indicadors pertinents (qui, demanda inicial, detecció necessitat real, accions, resposta). Orientació servei ben demostrada. Cap afirmació oficial ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Coherent i consistent. Context de taquilla centre esportiu (plausible). Pregunta oberta sobre gestió de persona molesta. Indicadors raonables (motiu malestar, manteniment calma, ofertes, resultat). Demostra servei i autocontrol. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Text clar, coherent. Context de voluntariat amb gent gran (molt plausible). Pregunta oberta sobre adaptació comunicativa. Indicadors pertinents (dificultats comunicació, recursos, verificació comprensió). Competències de servei i comunicació ben mostrades. Cap afirmació oficial ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Coherent i consistent. Context d'agència viatges (plausible). Pregunta oberta sobre denegar petició mantenint respecte. Indicadors raonables (per què denegar, comunicació, alternativa, reacció). Demostra servei i responsabilitat. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Text clar, coherent. Context de punt informació fira (plausible). Pregunta situacional oberta sobre equilibri de demandes. Indicadors pertinents (equilibri necessitats, adreçament a parts, suports). Orinetació servei ben demostrada. Cap afirmació oficial ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Coherent i consistent. Context de recepció centre salut (plausible). Pregunta situacional oberta sobre queixa pública. Indicadors raonables (escoltar sense defensiva, aclarir marge, vies apropiades, considerar altres presents). Competències de servei i adaptabilitat ben reflectides. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a5711b49382dfb556.jsonl",
+    "respuesta_sha256": "c4e3e0807e1e192665d7f906a4b11ba19dc56dcc29a17a49f5603bfb813bdf6a"
+   },
+   "registrada_el": "2026-10-04T00:35:36",
+   "intentos": [
+    {
+     "t": "2026-10-04T00:35:36",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a5711b49382dfb556.jsonl",
+      "respuesta_sha256": "c4e3e0807e1e192665d7f906a4b11ba19dc56dcc29a17a49f5603bfb813bdf6a"
+     },
+     "respuesta": "[{\"item_id\": \"ent-resolucio-problemes-3\", \"verdict\": \"VALID\", \"reason\": \"Item es coherent, realista (projecte d'estudis), pregunta oberta sobre experiència grupal. Indicadors raonables que no dicten una única resposta. Demostra competències de resolució i cooperació. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-resolucio-problemes-4\", \"verdict\": \"VALID\", \"reason\": \"Text clar, coherent. Situació plausible (organització viatge). Pregunta oberta sobre com el candidat va reaccionar a fracàs. Indicadors raonables (solució inicial, detecció, replanificació, aprenentatge). Competències de resolució i adaptabilitat ben mostrades. Cap afirmació oficial ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-resolucio-problemes-5\", \"verdict\": \"VALID\", \"reason\": \"Item coherent, clar. Context d'exercici simulat a acadèmia (pràctica, no procediment real). Pregunta situacional oberta. Indicadors pertinents (organitzar info, preguntes clarificadores, evitar conclusions precipitades). Demostra resolució de problemes. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-resolucio-problemes-6\", \"verdict\": \"VALID\", \"reason\": \"Coherent i consistent. Context d'atenció telefònica (plausible). Pregunta situacional oberta. Indicadors raonables (entendre necessitat, recerca solucions, informar usuari, alternatives). Competències de resolució i servei ben reflectides. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-orientacio-servei-1\", \"verdict\": \"VALID\", \"reason\": \"Text clar i coherent. Context de botiga (molt plausible). Pregunta oberta sobre detectar necessitats més profundes. Indicadors pertinents (qui, demanda inicial, detecció necessitat real, accions, resposta). Orientació servei ben demostrada. Cap afirmació oficial ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-orientacio-servei-2\", \"verdict\": \"VALID\", \"reason\": \"Coherent i consistent. Context de taquilla centre esportiu (plausible). Pregunta oberta sobre gestió de persona molesta. Indicadors raonables (motiu malestar, manteniment calma, ofertes, resultat). Demostra servei i autocontrol. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-orientacio-servei-3\", \"verdict\": \"VALID\", \"reason\": \"Text clar, coherent. Context de voluntariat amb gent gran (molt plausible). Pregunta oberta sobre adaptació comunicativa. Indicadors pertinents (dificultats comunicació, recursos, verificació comprensió). Competències de servei i comunicació ben mostrades. Cap afirmació oficial ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-orientacio-servei-4\", \"verdict\": \"VALID\", \"reason\": \"Coherent i consistent. Context d'agència viatges (plausible). Pregunta oberta sobre denegar petició mantenint respecte. Indicadors raonables (per què denegar, comunicació, alternativa, reacció). Demostra servei i responsabilitat. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-orientacio-servei-5\", \"verdict\": \"VALID\", \"reason\": \"Text clar, coherent. Context de punt informació fira (plausible). Pregunta situacional oberta sobre equilibri de demandes. Indicadors pertinents (equilibri necessitats, adreçament a parts, suports). Orinetació servei ben demostrada. Cap afirmació oficial ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-orientacio-servei-6\", \"verdict\": \"VALID\", \"reason\": \"Coherent i consistent. Context de recepció centre salut (plausible). Pregunta situacional oberta sobre queixa pública. Indicadors raonables (escoltar sense defensiva, aclarir marge, vies apropiades, considerar altres presents). Competències de servei i adaptabilitat ben reflectides. Sense afirmacions oficials ni diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "ent-adaptabilitat-1",
+    "ent-adaptabilitat-2",
+    "ent-adaptabilitat-3",
+    "ent-adaptabilitat-4",
+    "ent-adaptabilitat-5",
+    "ent-adaptabilitat-6",
+    "ent-autocontrol-1",
+    "ent-autocontrol-2",
+    "ent-autocontrol-3",
+    "ent-autocontrol-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-04.json",
+   "prompt_sha256": "65c077926a3a8af4d826db1f432371c1c65693b6e648f1dc83490e64952dd7c6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-adaptabilitat-1": "412c3451d39b98475a89527851d2ba46eaf3042f29bac6dfd99a3b759671295c",
+    "ent-adaptabilitat-2": "f020564cae39c1eefbe6f6e7f3573d5913842f3aa985f41c7d822b0d49c3ec6c",
+    "ent-adaptabilitat-3": "74b5d7b7c285278d60d62f28c737d13c7a4a246356329827609ef0e535eee935",
+    "ent-adaptabilitat-4": "ec83a22d28ecda352360c3af265bf54a4d180dd2a060f81c918595f58cf464b4",
+    "ent-adaptabilitat-5": "7d3f640140fb0f508f168cfe1e8d8640952a40b61db6010a93fdf49fa396dc2e",
+    "ent-adaptabilitat-6": "d834ab2ffa601209613642d0d8f511c9f4dbfffd448b1520ac00882b214c59f7",
+    "ent-autocontrol-1": "dd6e99a02d070d5a6803e5e7135525df58a9557207fe115090e195cb30e6e201",
+    "ent-autocontrol-2": "652cef0e2fb3ba315f85c6cbde3789644ec705fbab0c540618c6a3562e3d51b4",
+    "ent-autocontrol-3": "028062d741c4f60d62b0deff383022690acc7ee51492e03244c73ea54edd1d80",
+    "ent-autocontrol-4": "d59649fe382b0dbc03339196d5f8ae4cb36eff563356273b5f5ffd71385cc1a0"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-adaptabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto está coherente en catalán, la situación de cambio de trabajo es plausible sin describir procedimientos policiales reales. La pregunta es abierta e invita a experiencias personales. Los indicadores son razonables y no dictan respuesta única. La competencia de adaptabilidad es claramente relevante. No hay afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro y bien estructurado. Situación de aprendizaje rápido en empresa de servicios informáticos es plausible y no describe procedimientos policiales. Pregunta abierta sobre aprendizaje. Indicadores razonables y no prescriptivos. Competencias de adaptabilidad y autogestión son pertinentes. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Estructura coherente, situación de rol diferente en equipo de fútbol sala es plausible y no describe procedimientos policiales. Pregunta abierta invita reflexión sobre gestión de decepción y aportación. Indicadores son signos razonables de respuesta completa sin dictar una única respuesta. Competencias de adaptabilidad y trabajo en equipo son pertinentes.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto coherente, situación de estancia en el extranjero es plausible sin describir procedimientos policiales reales. Pregunta abierta sobre adaptación a entorno cultural diferente. Indicadores incluyen reflexión sobre prejuicios y son razonables sin ser prescriptivos. Competencias de adaptabilidad y habilidades sociales son pertinentes.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Estructura coherente, situación de prácticas en academia de policía es plausible como escenario educativo sin describir procedimientos policiales reales. Pregunta situacional abierta sobre gestión de cambio inesperado. Indicadores son razonables y no prescriptivos. Competencia de adaptabilidad es pertinente. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto coherente y bien estructurado, situación de turnos en residencia con cambios de calendario es plausible sin procedimientos policiales reales. Pregunta abierta sobre gestión de equilibrio y presión laboral-personal. Indicadores cubren múltiples aspectos sin ser prescriptivos. Competencias de adaptabilidad y resolución de problemas son pertinentes.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto coherente y claro en catalán, situación de gasolinera nocturna es plausible sin procedimientos policiales. Pregunta abierta invita a explicar experiencia de mantener calma bajo presión. Indicadores son razonables y no dictan respuesta única. Competencia de autocontrol es claramente relevante. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Estructura coherente, situación de crítica injusta en telemarketing es plausible sin procedimientos policiales. Pregunta abierta sobre reacción emocional y gestión del control. Indicadores son signos razonables de respuesta equilibrada sin ser prescriptivos. Competencias de autocontrol y habilidades sociales son pertinentes. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto coherente, situación de época de exámenes universitarios es plausible sin procedimientos policiales. Pregunta abierta sobre gestión de estrés bajo múltiples exigencias. Indicadores son razonables abarcando estrategias y autorreflexión sin dictar respuesta. Competencias de autocontrol y autogestión son pertinentes. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Estructura coherente y bien desarrollada, situación de árbitro de baloncesto en categorías menores es plausible sin procedimientos policiales reales. Pregunta abierta sobre mantener decisión bajo presión. Indicadores incluyen reflexión crítica sobre decisión sin ser prescriptivos. Competencias de autocontrol y responsabilidad son pertinentes. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a410d4926f8143ac4.jsonl",
+    "respuesta_sha256": "7f4f3c95caf19824e3eb44181ee890662b5eff6dcfc6976a41708b8bf7feb6dc"
+   },
+   "registrada_el": "2026-10-04T02:53:47",
+   "intentos": [
+    {
+     "t": "2026-10-04T02:53:47",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a410d4926f8143ac4.jsonl",
+      "respuesta_sha256": "7f4f3c95caf19824e3eb44181ee890662b5eff6dcfc6976a41708b8bf7feb6dc"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"ent-adaptabilitat-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"El texto está coherente en catalán, la situación de cambio de trabajo es plausible sin describir procedimientos policiales reales. La pregunta es abierta e invita a experiencias personales. Los indicadores son razonables y no dictan respuesta única. La competencia de adaptabilidad es claramente relevante. No hay afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-adaptabilitat-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto claro y bien estructurado. Situación de aprendizaje rápido en empresa de servicios informáticos es plausible y no describe procedimientos policiales. Pregunta abierta sobre aprendizaje. Indicadores razonables y no prescriptivos. Competencias de adaptabilidad y autogestión son pertinentes. Sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-adaptabilitat-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Estructura coherente, situación de rol diferente en equipo de fútbol sala es plausible y no describe procedimientos policiales. Pregunta abierta invita reflexión sobre gestión de decepción y aportación. Indicadores son signos razonables de respuesta completa sin dictar una única respuesta. Competencias de adaptabilidad y trabajo en equipo son pertinentes.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-adaptabilitat-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto coherente, situación de estancia en el extranjero es plausible sin describir procedimientos policiales reales. Pregunta abierta sobre adaptación a entorno cultural diferente. Indicadores incluyen reflexión sobre prejuicios y son razonables sin ser prescriptivos. Competencias de adaptabilidad y habilidades sociales son pertinentes.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-adaptabilitat-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Estructura coherente, situación de prácticas en academia de policía es plausible como escenario educativo sin describir procedimientos policiales reales. Pregunta situacional abierta sobre gestión de cambio inesperado. Indicadores son razonables y no prescriptivos. Competencia de adaptabilidad es pertinente. Sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-adaptabilitat-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto coherente y bien estructurado, situación de turnos en residencia con cambios de calendario es plausible sin procedimientos policiales reales. Pregunta abierta sobre gestión de equilibrio y presión laboral-personal. Indicadores cubren múltiples aspectos sin ser prescriptivos. Competencias de adaptabilidad y resolución de problemas son pertinentes.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autocontrol-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto coherente y claro en catalán, situación de gasolinera nocturna es plausible sin procedimientos policiales. Pregunta abierta invita a explicar experiencia de mantener calma bajo presión. Indicadores son razonables y no dictan respuesta única. Competencia de autocontrol es claramente relevante. Sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autocontrol-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Estructura coherente, situación de crítica injusta en telemarketing es plausible sin procedimientos policiales. Pregunta abierta sobre reacción emocional y gestión del control. Indicadores son signos razonables de respuesta equilibrada sin ser prescriptivos. Competencias de autocontrol y habilidades sociales son pertinentes. Sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autocontrol-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Texto coherente, situación de época de exámenes universitarios es plausible sin procedimientos policiales. Pregunta abierta sobre gestión de estrés bajo múltiples exigencias. Indicadores son razonables abarcando estrategias y autorreflexión sin dictar respuesta. Competencias de autocontrol y autogestión son pertinentes. Sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-autocontrol-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Estructura coherente y bien desarrollada, situación de árbitro de baloncesto en categorías menores es plausible sin procedimientos policiales reales. Pregunta abierta sobre mantener decisión bajo presión. Indicadores incluyen reflexión crítica sobre decisión sin ser prescriptivos. Competencias de autocontrol y responsabilidad son pertinentes. Sin afirmaciones oficiales ni diagnóstico.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinentes\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "ent-autocontrol-5",
+    "ent-autocontrol-6",
+    "ent-autogestio-1",
+    "ent-autogestio-2",
+    "ent-autogestio-3",
+    "ent-autogestio-4",
+    "ent-autogestio-5",
+    "ent-autogestio-6",
+    "ent-motivacio-1",
+    "ent-motivacio-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-05.json",
+   "prompt_sha256": "ac43f1be315c35bbb6fc031b43f7cbed149494a9820167d83d8c27c2d17efb38",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-autocontrol-5": "a12583e3af6a45d9a2d3264eb962cda931482789acdd551daf30baeb69a2f699",
+    "ent-autocontrol-6": "a3c2e88547c693564ffa07dbbadbd2ce54ab5200aeb7607d7ab7df93e1628691",
+    "ent-autogestio-1": "92a4df90415360ad15750e3e124da1429722a97169e20fd5d046831201d1f613",
+    "ent-autogestio-2": "c6214904f658ff55c520907f5002a1c7599f1382a0696a5ed90ecc7863da67e6",
+    "ent-autogestio-3": "a120bbb713e8baa3ab32744cda12457a68c579f3393ea0acc20606026bdf6a12",
+    "ent-autogestio-4": "13f35b9e050c785a109a9ba24bb0ee8a237d2e9d03c811596c5d3b3130c6f5a5",
+    "ent-autogestio-5": "483baeff9030fb0452f4e61c8ad277eb7aacb5ec96c9687d058e9cef462798b8",
+    "ent-autogestio-6": "04b47252d908a846f46d61c195f013f28107fe7ca521870e2fbb29a95ed2f693",
+    "ent-motivacio-1": "56f57a3b9645ee5c4867ca7119a235c4234c0b220ae28e7bf800588ff83d1af0",
+    "ent-motivacio-2": "d8bff5a20e0865d3ab668ea1807000594347e21a82ca089bca5d6b4bf3a36570"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-autocontrol-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta clara sobre gestión de provocación en ejercicio de rol de academia. Los indicadores son pertinentes y no prescriben una respuesta única. Competencia relevante (autocontrol) bien representada. No contiene afirmaciones oficiales, diagnósticos ni es un duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (socorrista en piscina) con pregunta abierta sobre manejo de múltiples incidentes bajo presión. Indicadores pertinentes y bien graduados (priorizar, mantener calma, organizar ayuda, reflexionar). Competencias relevantes. Estructura coherente y sin problemas formales.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre formación autodidacta es coherente y realista. Indicadores bien diseñados (motivación, compatibilidad, aplicación). No hay afirmaciones oficiales. Pregunta abierta que permite respuestas diversas. Competencia (autogestión) claramente evaluable.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre recibir crítica y mejorar en contexto laboral (comercial) es realista y abierta. Indicadores pertinentes (descrir debilidad, plan de mejora, verificación). Los errores frecuentes son informativos sin ser prescriptivos. Competencias relevantes evaluables.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre compatibilizar obligaciones múltiples es realista (estudiante con trabajo) y bien estructurada. Indicadores pertinentes (obligaciones, herramientas de organización, renuncias). Pregunta abierta que evita respuestas triviales. Sin problemas formales.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre objetivo personal exigente con cuatro indicadores substanciales (definición, planificación, superación de dificultades, reflexión). Contexto realista (trayectoria deportiva). Pregunta abierta. Competencias (autogestión, motivación) bien representadas sin ser prescriptivas.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta situacional sobre fracaso en prueba académica es realista y abierta. Indicadores pertinentes (analizar causas, buscar orientación, plan de mejora). Contexto de academia es plausible. No contiene diagnósticos ni afirmaciones oficiales. Competencia (autogestión) bien evaluable.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta situacional sobre decisión entre estabilidad y formación exigente es realista y abierta. Cuatro indicadores bien balanceados (factores, impacto ambiental, seguimiento, riesgos) sin ser prescriptivos. Competencias relevantes (autogestión, adaptabilidad). Estructura coherente y sin afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre experiencia que influyó en interés por servicio público es realista y abierta. Indicadores pertinentes (describir experiencia, influencia en decisión, relación con acciones posteriores). Evita tópicos. Competencia (motivación) bien representada sin diagnósticos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre investigación del puesto de trabajo es realista en contexto de preparación selectiva. Indicadores pertinentes (fuentes consultadas, descubrimientos, impacto en motivación). Pregunta abierta. Competencias (motivación, autogestión) bien evaluables sin afirmaciones oficiales.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-aeaf6f78294371c75.jsonl",
+    "respuesta_sha256": "778c0131bae6b9552238dfd3c4b99ad7189ae45f050d767f1150f545da94e40a"
+   },
+   "registrada_el": "2026-10-04T02:54:07",
+   "intentos": [
+    {
+     "t": "2026-10-04T02:54:07",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-aeaf6f78294371c75.jsonl",
+      "respuesta_sha256": "778c0131bae6b9552238dfd3c4b99ad7189ae45f050d767f1150f545da94e40a"
+     },
+     "respuesta": "[{\"item_id\": \"ent-autocontrol-5\", \"verdict\": \"VALID\", \"reason\": \"Pregunta clara sobre gestión de provocación en ejercicio de rol de academia. Los indicadores son pertinentes y no prescriben una respuesta única. Competencia relevante (autocontrol) bien representada. No contiene afirmaciones oficiales, diagnósticos ni es un duplicado.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autocontrol-6\", \"verdict\": \"VALID\", \"reason\": \"Situación realista (socorrista en piscina) con pregunta abierta sobre manejo de múltiples incidentes bajo presión. Indicadores pertinentes y bien graduados (priorizar, mantener calma, organizar ayuda, reflexionar). Competencias relevantes. Estructura coherente y sin problemas formales.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autogestio-1\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre formación autodidacta es coherente y realista. Indicadores bien diseñados (motivación, compatibilidad, aplicación). No hay afirmaciones oficiales. Pregunta abierta que permite respuestas diversas. Competencia (autogestión) claramente evaluable.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autogestio-2\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre recibir crítica y mejorar en contexto laboral (comercial) es realista y abierta. Indicadores pertinentes (descrir debilidad, plan de mejora, verificación). Los errores frecuentes son informativos sin ser prescriptivos. Competencias relevantes evaluables.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autogestio-3\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre compatibilizar obligaciones múltiples es realista (estudiante con trabajo) y bien estructurada. Indicadores pertinentes (obligaciones, herramientas de organización, renuncias). Pregunta abierta que evita respuestas triviales. Sin problemas formales.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autogestio-4\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre objetivo personal exigente con cuatro indicadores substanciales (definición, planificación, superación de dificultades, reflexión). Contexto realista (trayectoria deportiva). Pregunta abierta. Competencias (autogestión, motivación) bien representadas sin ser prescriptivas.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autogestio-5\", \"verdict\": \"VALID\", \"reason\": \"Pregunta situacional sobre fracaso en prueba académica es realista y abierta. Indicadores pertinentes (analizar causas, buscar orientación, plan de mejora). Contexto de academia es plausible. No contiene diagnósticos ni afirmaciones oficiales. Competencia (autogestión) bien evaluable.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-autogestio-6\", \"verdict\": \"VALID\", \"reason\": \"Pregunta situacional sobre decisión entre estabilidad y formación exigente es realista y abierta. Cuatro indicadores bien balanceados (factores, impacto ambiental, seguimiento, riesgos) sin ser prescriptivos. Competencias relevantes (autogestión, adaptabilidad). Estructura coherente y sin afirmaciones oficiales.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-motivacio-1\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre experiencia que influyó en interés por servicio público es realista y abierta. Indicadores pertinentes (describir experiencia, influencia en decisión, relación con acciones posteriores). Evita tópicos. Competencia (motivación) bien representada sin diagnósticos.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-motivacio-2\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre investigación del puesto de trabajo es realista en contexto de preparación selectiva. Indicadores pertinentes (fuentes consultadas, descubrimientos, impacto en motivación). Pregunta abierta. Competencias (motivación, autogestión) bien evaluables sin afirmaciones oficiales.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinentes\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "06",
+   "ids": [
+    "ent-motivacio-3",
+    "ent-motivacio-4",
+    "ent-motivacio-5",
+    "ent-motivacio-6",
+    "ent-habilitats-socials-1",
+    "ent-habilitats-socials-2",
+    "ent-habilitats-socials-3",
+    "ent-habilitats-socials-4",
+    "ent-habilitats-socials-5",
+    "ent-habilitats-socials-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-06.json",
+   "prompt_sha256": "791fb167a28e441e88d06aea3ba5a0513584c46d3be3ec216daed049d1cd8c18",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-motivacio-3": "495fdd02fb7703aad066b07f75c8c0bc39d229e64a37288ad0932e409f266016",
+    "ent-motivacio-4": "685c4036a8a4c93bfbfed2d57a781684820559df8bf2d3bd14433d6fa3280337",
+    "ent-motivacio-5": "995f974520f9570ffdbf32bcc60bdd5ab4dc21ce65ba0297c8b8e4348d83a5fd",
+    "ent-motivacio-6": "67e5fecb8a7f47e8832c4a76cd09fb0ca1465375c4207c6616e1a45985aaefe2",
+    "ent-habilitats-socials-1": "1a10bed064dea2e259f596f1d1b1388262ab17bf029d732113541f8ff67d1e47",
+    "ent-habilitats-socials-2": "2e68a9a13a6e4c04af4bcdfeb32f4487c6fc969bcb952b272d1340d46e26da96",
+    "ent-habilitats-socials-3": "49fdc5d7c858cf221b4606bd12355a7e85e5ba7c2878621ff617615295719247",
+    "ent-habilitats-socials-4": "c8a046542ca1fbe6b4948a6f4c8b563bee0bd27dbaa5e928909cac5ff02cd81a",
+    "ent-habilitats-socials-5": "0a423ef8ddc3a7057db515d4c1982fea2d7b24a1ffd4595456ea77243b897837",
+    "ent-habilitats-socials-6": "24fcb791aae881cfc7e285e83b230f0cccdf324eff2c769a959e30f1a8b16bd0"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-04T02:55:04",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-a903c927e39442b4c.jsonl",
+      "respuesta_sha256": "b6bcafc83f31686016ca4149ffd345134bc1c6b4b7a4ccd278c0417231d99913"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"ent-motivacio-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item is coherent in Catalan with internal consistency. Scenario is realistic (community volunteering, not real police procedures). Question is open, inviting personal experience about motivation. Indicators are reasonable and don't dictate a single answer. Question directly addresses the stated competencies (motivation and service orientation). No official claims presented as tribunal expectations. No personality or mental health diagnosis.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-motivacio-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Clear Catalan text, internally consistent. Scenario is realistic (prior attempts, career disappointment). Question is open, asking for behavioral example of overcoming failure. Four indicators are reasonable and don't prescribe one answer. Question relevant to stated competencies (motivation and stress resistance). No official claims or criteria expectations stated. No personality diagnosis.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-motivacio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Well-written Catalan, internally consistent. Scenario is realistic (family concern about dangerous job). Question is open situational question, not yes/no. Three indicators are reasonable without dictating answers. Question addresses stated competency (motivation with organizational identification). No official tribunal expectations or criteria stated. No personality or mental health labels.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-motivacio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Clear Catalan, internally consistent. Scenario is realistic (routine work less stimulating than expected). Question is open situational hypothetical. Four indicators are reasonable and don't prescribe one answer. Question addresses stated competencies (motivation and adaptability). No official claims or tribunal expectations. No diagnosis of personality or mental health.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Clear Catalan text, internally consistent. Scenario is realistic (classroom presentation). Question is open behavioral question, not yes/no. Three indicators about context, preparation, and reflection are reasonable. Question shows communication competency. No official claims or scoring criteria stated. No personality or mental health diagnosis.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Well-written Catalan, internally consistent. Scenario is realistic (work setting mediation). Question is open behavioral question about helping others communicate. Three indicators about mediation process are reasonable. Question addresses communication and teamwork competencies. No official expectations or criteria stated. No personality or mental health diagnosis.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Clear Catalan, internally consistent. Scenario is realistic (shared housing conflict). Question is open behavioral question about assertive conversation. Three indicators about topic, timing, and outcomes are reasonable. Question addresses communication and stress resistance competencies. No official claims or tribunal standards. No personality or mental health labels.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Clear Catalan text, internally consistent. Scenario is realistic (youth association mediation). Question is open behavioral question about persuasion. Four indicators about listening and maintaining change are reasonable. Question addresses communication and service orientation. No official criteria or tribunal expectations stated. No personality or mental health diagnosis.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Well-written Catalan, internally consistent. Scenario is realistic (academy practice, which is explicitly acceptable context). Question is open situational question about understanding. Three indicators about climate, ordering conversation, and verification are reasonable. Question addresses communication competency. No official claims or tribunal standards. No personality or mental health diagnosis.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Clear Catalan, internally consistent. Scenario is realistic (volunteer group coordination). Question is open situational question about communicating unpopular change. Four indicators about preparation, reactions, involvement, and listening are reasonable. Question addresses communication and teamwork competencies. No official expectations stated. No personality or mental health labels.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "BATCH_REJECTED · CRITERIOS_INCOMPLETOS: ent-motivacio-3"
+    },
+    {
+     "t": "2026-10-04T02:56:25",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-a05690d696ac2c7f6.jsonl",
+      "respuesta_sha256": "9980abec42d8552aab84f1b0584e0486907fc36d03883970faf138149931a2db"
+     },
+     "respuesta": "[{\"item_id\": \"ent-motivacio-3\", \"verdict\": \"VALID\", \"reason\": \"Pregunta clara i oberta sobre experiència de voluntariat comunitari. Indicadors pertinents (activitat, aportació personal, connexió amb motivació) i errors freqüents ben definits. Situació realista, sense diagnòstics ni afirmacions oficials. Competències de motivació i servei ben alineades.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-motivacio-4\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre decepció en camí professional. Indicadors ben elaborats (descripció, anàlisi, manteniment objectiu, reflexió sobre canvis). Realista i específic. Cap diagnòstic de personalitat ni criteria oficial. Distint d'altres ítems de motivació.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-motivacio-5\", \"verdict\": \"VALID\", \"reason\": \"Pregunta situacional sobre justificació de decisió a familiar. Indicadors considerats (motius personals, preocupacions, visió realista). Contexto realista de familiar qüestionant. Sense afirmacions oficials ni diagnòstics. Pregunta oberta que permet respostes diverses.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-motivacio-6\", \"verdict\": \"VALID\", \"reason\": \"Pregunta situacional sobre adaptació a rutina menys estimulant. Indicadors ben estructurats (revisió expectatives, estratègia motivació, oportunitats aprenentatge, valoració tasques rutinàries). Realista per experiència laboral. Pertinent a motivació i flexibilitat.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-habilitats-socials-1\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre presentació pública. Indicadors clars (context, preparació, resultado). Situació plausible en context acadèmic. Pregunta oberta sense respostes trivials. Competència de comunicació ben demostrada.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-habilitats-socials-2\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre mediació entre dues persones. Indicadors pertinents (motius desacord, accions mediació, resultat). Contexto realista d'empresa de reformes. Sense diagnòstics. Competències de comunicació i treball equip ben alineades.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-habilitats-socials-3\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre conversa difícil assertiva. Indicadors ben definits (tema delicat, moment/paraules, reacció/relació). Situació realista de convivència. Pregunta oberta. Competències de comunicació i autocontrol demostrades. Cap diagnòstic.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-habilitats-socials-4\", \"verdict\": \"VALID\", \"reason\": \"Pregunta conductual sobre persuasió de grup. Indicadors complets (posició inicial, escolta, arguments, manteniment canvi). Contexto realista d'associació juvenil. Pregunta oberta sense criteris officials. Competències de comunicació i servei ben demostrades.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-habilitats-socials-5\", \"verdict\": \"VALID\", \"reason\": \"Pregunta situacional sobre gestió de persona nerviosa. Indicadors adequats (clima confiança, ordenar conversa, verificar comprensió). Contexto realista de pràctiques acadèmia policia. Pregunta oberta. Sense afirmacions oficials ni diagnòstics. Competència de comunicació pertinent.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}, {\"item_id\": \"ent-habilitats-socials-6\", \"verdict\": \"VALID\", \"reason\": \"Pregunta situacional sobre comunicació de canvi poc popular a voluntaris. Indicadors ben estructurats (preparació missatge, gestió reaccions, manteniment implicació, escolta propostes). Situació realista. Pregunta oberta. Sense diagnòstics. Competències de comunicació i treball equip ben alineades.\", \"criteria_checked\": {\"coherente\": true, \"realista\": true, \"pregunta_abierta\": true, \"indicadores_pertinents\": true, \"relevante\": true, \"sin_afirmaciones_oficiales\": true, \"sin_diagnostico\": true, \"duplicado_de\": \"\"}}]",
+     "resultado": "BATCH_REJECTED · CRITERIOS_INCOMPLETOS: ent-motivacio-3"
+    },
+    {
+     "t": "2026-10-04T02:58:01",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-ac2a0eba8cb9a4529.jsonl",
+      "respuesta_sha256": "eb75203af4093debd82bedd9922a9ec7586f53dff8bc75f19b56b620d76f35e6"
+     },
+     "respuesta": "[\n  {\n    \"item_id\": \"ent-motivacio-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item sobre experiència de voluntariat en servei a la comunitat. Text coherent en català. Pregunta oberta sobre motivació personal que permet respostes variades. Indicadors raonables (descripció de l'activitat, aportació personal, connexió amb motivació actual). Situació realista i pertinent per mostrar motivació i orientació de servei.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-motivacio-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item sobre gestió de decepció en camí professional. Text ben escrit i consistent. Pregunta oberta conductual sobre resiliència. Indicadors coherents (descripció del fracàs, anàlisi posterior, manteniment de l'objectiu, reflexió sobre canvis). Situació realista (intents anteriors en processos selectius) i relevant per mostrar motivació, autocontrol i resistència.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-motivacio-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item situacional sobre resposta a qüestionaments de la família. Pregunta oberta que no és trivial. Indicadors pertinents (motius personals, consideració de preocupacions, visió realista). Context plausible (conversa amb familiar). No présenta afirmacions officials ni diagnòstics de personalitat.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-motivacio-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item situacional sobre adaptació a rutina menys estimulant. Pregunta oberta sobre estratègies de motivació. Indicadors raonables (revisió d'expectatives, manteniment de motivació, cerca de noves oportunitats, valor de les tasques rutinàries). Situació realista en primers anys de feina. Relevant per mostrar motivació i adaptabilitat.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-1\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item conductual sobre presentació oral. Pregunta oberta sobre preparació i resultat. Indicadors coherents (context, preparació, resultat). Context realista (presentació a classe). Els errors freqüents assenyalen pitfalls comuns sense dictar resposta correcta. Relevant per comunicació.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-2\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item conductual sobre mediació entre dues persones. Pregunta oberta sobre facilitació de comunicació. Indicadors pertinents (raó del malentès, accions de mediació, resultat). Context realista (feina en empresa). Relevant per habilitats de comunicació i cooperació.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-3\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item conductual sobre conversació incòmoda. Pregunta oberta sobre assertivitat. Indicadors raonables (descripció del tema delicat, elecció de moment i paraules, reacció i relació resultant). Context realista (convivència). Els errors freqüents diferencien evitació de resolució assertiva. Relevant per comunicació i autocontrol.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-4\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item conductual sobre persuasió de grup. Pregunta oberta sobre canvi d'opinió. Indicadors pertinents (posició inicial, escolta, arguments, manteniment del canvi). Context realista (mediació en associació). L'error sobre imposar vs convèncer clarifica límits. Relevant per comunicació i orientació de servei.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-5\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item situacional sobre atenció a persona nerviosa desordenada. Pregunta oberta sobre gestió de comunicació. Indicadors coherents (clima de confiança, ordenació amb preguntes, verificació de comprensió). Context altament realista (pràctica d'acadèmia de policia). Relevant per habilitats comunicatives.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  },\n  {\n    \"item_id\": \"ent-habilitats-socials-6\",\n    \"verdict\": \"VALID\",\n    \"reason\": \"Item situacional sobre comunicació de canvi poc popular a un grup. Pregunta oberta sobre lideratge. Indicadors raonables (preparació del missatge, gestió de reaccions, manteniment d'implicació, escolta de propostes). Context realista (coordinació de voluntaris). Els errors freqüents eviten la relació directa. Relevant per comunicació i cooperació.\",\n    \"criteria_checked\": {\n      \"coherente\": true,\n      \"realista\": true,\n      \"pregunta_abierta\": true,\n      \"indicadores_pertinents\": true,\n      \"relevante\": true,\n      \"sin_afirmaciones_oficiales\": true,\n      \"sin_diagnostico\": true,\n      \"duplicado_de\": \"\"\n    }\n  }\n]",
+     "resultado": "BATCH_REJECTED · CRITERIOS_INCOMPLETOS: ent-motivacio-3"
+    },
+    {
+     "t": "2026-10-04T02:59:12",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-acf5b5ea1344b65ab.jsonl",
+      "respuesta_sha256": "530902b5dc7d8718bd672418cbc87a54bae441a931a4a0e9301094e05f1f62af"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-motivacio-3\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual abierta sobre una actividad de servicio a la comunidad y lo que motivó a seguir; los tres indicadores (rol, aportación personal, conexión con la motivación actual) son signos razonables de una buena explicación y no dictan una respuesta. Los errores y la repregunta encajan. Contexto de voluntariado realista, sin procedimientos policiales ni afirmaciones oficiales ni diagnósticos. Difiere de motivacio-1 (experiencia que influyó en el interés) y del resto, así que no es duplicado. Leve desajuste entre 'protecció civil' y 'servei a la comunitat' genérico, no suficiente para bajar la coherencia.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-4\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre una decepción en el camino profesional y qué hizo continuar; admite respuestas muy distintas. Indicadores (descripción, análisis, motivo para mantener el objetivo, cambios) razonables y la repregunta hipotética encaja. Resiliencia vinculada a autocontrol y motivación de forma aceptable. Sin afirmaciones oficiales ni diagnóstico. No duplica ninguna de las otras preguntas de la familia (motivación inicial, información, servicio, familia, rutina).\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-5\",\"verdict\":\"VALID\",\"reason\":\"Situacional plausible (familiar que cuestiona la decisión por considerarla sacrificada y peligrosa), sin describir procedimientos policiales reales. Pregunta abierta con varias vías de respuesta buenas; indicadores (motivos personales, considerar la preocupación ajena, visión realista) razonables y no prescriptivos; errores y repregunta coherentes. Mide bien la motivación e identificación. Sin afirmaciones oficiales ni etiquetas. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-6\",\"verdict\":\"VALID\",\"reason\":\"Situacional abierta sobre rutina menos estimulante de lo esperado; permite respuestas diversas. Los cuatro indicadores (revisar expectativas, mantener motivación, aprendizaje, sentido de lo rutinario) son razonables y no marcan una única respuesta. Errores y repregunta (diez años) coherentes. Permite mostrar adaptabilidad y motivación sin citar procedimientos reales. Sin afirmaciones oficiales ni diagnóstico. No duplicado de motivacio-4 ni motivacio-5.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta conductual abierta, realista (presentación oral en clase) y relevante para habilidades comunicativas, sin duplicados. Problema en los errores frecuentes: 'Dir que parlar en públic no et costa gens' penaliza una respuesta que puede ser perfectamente sincera y buena, lo que resulta arbitrario y empuja a una respuesta concreta (admitir dificultad). Por eso los indicadores/errores no se consideran plenamente pertinentes y se requiere revisión.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta conductual realista (mediar entre dos personas en una empresa de reformes) y abierta, sin duplicado. Incoherencia interna: la repregunta ('Què vas fer per mantenir una posició neutral?') presupone neutralidad, algo que ni la pregunta ni los indicadores piden y que no siempre es lo adecuado al ayudar a comunicar. Además la pregunta es una orden ('Explica'm...') cerrada con signo de interrogación, defecto de redacción. Indicadores y errores por lo demás razonables.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-3\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual abierta sobre plantear un tema incómodo en un piso compartido; situación cotidiana y realista. Indicadores (tema, momento y palabras, reacción y relación) razonables y no dictan una única solución; los errores (evitar el tema, confundir asertividad con agresividad) son pertinentes. Repregunta coherente. Encaja con habilidades sociales y autocontrol. Sin afirmaciones oficiales ni diagnóstico. No duplicado de las otras preguntas de comunicación.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Texto coherente, realista (asociación juvenil), abierto y con indicadores razonables (posición inicial, escucha, argumentos, mantenimiento del cambio); sin afirmaciones oficiales ni diagnóstico y sin duplicado. Duda de relevancia: la pregunta sobre convencer a un grupo permite mostrar habilidades comunicativas, pero apenas deja demostrar la segunda competencia listada, 'Orientació de servei a les persones'; ante la duda se marca false y se pide revisar la competencia asignada o reformular la pregunta.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":false,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-5\",\"verdict\":\"VALID\",\"reason\":\"Situacional en práctica de atención a la ciudadanía en la academia (contexto permitido), sin procedimientos policiales ni hechos legales concretos. Pregunta abierta sobre cómo entender a una persona nerviosa y desordenada; indicadores (clima de confianza, ordenar con preguntas, comprobar comprensión) razonables como signos de buena respuesta, errores evidentes pero pertinentes, repregunta sobre señales no verbales coherente. Relevante para habilidades comunicativas. Sin afirmaciones oficiales ni diagnóstico; no duplica a los otros ítems de la familia.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-6\",\"verdict\":\"VALID\",\"reason\":\"Situacional realista (coordinar voluntarios y comunicar un cambio de planes impopular), abierta y con varias formas válidas de responder. Cuatro indicadores razonables (preparar el mensaje, gestionar reacciones, mantener implicación, margen para propuestas) sin dictar una única solución; errores y repregunta (alguien abandona el grupo) coherentes. Permite mostrar comunicación y cooperación. Sin afirmaciones oficiales ni diagnóstico. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda; tras 3 rechazos del guard de claves con haiku)",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "item_id": "ent-motivacio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual abierta sobre una actividad de servicio a la comunidad y lo que motivó a seguir; los tres indicadores (rol, aportación personal, conexión con la motivación actual) son signos razonables de una buena explicación y no dictan una respuesta. Los errores y la repregunta encajan. Contexto de voluntariado realista, sin procedimientos policiales ni afirmaciones oficiales ni diagnósticos. Difiere de motivacio-1 (experiencia que influyó en el interés) y del resto, así que no es duplicado. Leve desajuste entre 'protecció civil' y 'servei a la comunitat' genérico, no suficiente para bajar la coherencia.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre una decepción en el camino profesional y qué hizo continuar; admite respuestas muy distintas. Indicadores (descripción, análisis, motivo para mantener el objetivo, cambios) razonables y la repregunta hipotética encaja. Resiliencia vinculada a autocontrol y motivación de forma aceptable. Sin afirmaciones oficiales ni diagnóstico. No duplica ninguna de las otras preguntas de la familia (motivación inicial, información, servicio, familia, rutina).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional plausible (familiar que cuestiona la decisión por considerarla sacrificada y peligrosa), sin describir procedimientos policiales reales. Pregunta abierta con varias vías de respuesta buenas; indicadores (motivos personales, considerar la preocupación ajena, visión realista) razonables y no prescriptivos; errores y repregunta coherentes. Mide bien la motivación e identificación. Sin afirmaciones oficiales ni etiquetas. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional abierta sobre rutina menos estimulante de lo esperado; permite respuestas diversas. Los cuatro indicadores (revisar expectativas, mantener motivación, aprendizaje, sentido de lo rutinario) son razonables y no marcan una única respuesta. Errores y repregunta (diez años) coherentes. Permite mostrar adaptabilidad y motivación sin citar procedimientos reales. Sin afirmaciones oficiales ni diagnóstico. No duplicado de motivacio-4 ni motivacio-5.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta conductual abierta, realista (presentación oral en clase) y relevante para habilidades comunicativas, sin duplicados. Problema en los errores frecuentes: 'Dir que parlar en públic no et costa gens' penaliza una respuesta que puede ser perfectamente sincera y buena, lo que resulta arbitrario y empuja a una respuesta concreta (admitir dificultad). Por eso los indicadores/errores no se consideran plenamente pertinentes y se requiere revisión.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta conductual realista (mediar entre dos personas en una empresa de reformes) y abierta, sin duplicado. Incoherencia interna: la repregunta ('Què vas fer per mantenir una posició neutral?') presupone neutralidad, algo que ni la pregunta ni los indicadores piden y que no siempre es lo adecuado al ayudar a comunicar. Además la pregunta es una orden ('Explica'm...') cerrada con signo de interrogación, defecto de redacción. Indicadores y errores por lo demás razonables.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual abierta sobre plantear un tema incómodo en un piso compartido; situación cotidiana y realista. Indicadores (tema, momento y palabras, reacción y relación) razonables y no dictan una única solución; los errores (evitar el tema, confundir asertividad con agresividad) son pertinentes. Repregunta coherente. Encaja con habilidades sociales y autocontrol. Sin afirmaciones oficiales ni diagnóstico. No duplicado de las otras preguntas de comunicación.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Texto coherente, realista (asociación juvenil), abierto y con indicadores razonables (posición inicial, escucha, argumentos, mantenimiento del cambio); sin afirmaciones oficiales ni diagnóstico y sin duplicado. Duda de relevancia: la pregunta sobre convencer a un grupo permite mostrar habilidades comunicativas, pero apenas deja demostrar la segunda competencia listada, 'Orientació de servei a les persones'; ante la duda se marca false y se pide revisar la competencia asignada o reformular la pregunta.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": false,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional en práctica de atención a la ciudadanía en la academia (contexto permitido), sin procedimientos policiales ni hechos legales concretos. Pregunta abierta sobre cómo entender a una persona nerviosa y desordenada; indicadores (clima de confianza, ordenar con preguntas, comprobar comprensión) razonables como signos de buena respuesta, errores evidentes pero pertinentes, repregunta sobre señales no verbales coherente. Relevante para habilidades comunicativas. Sin afirmaciones oficiales ni diagnóstico; no duplica a los otros ítems de la familia.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional realista (coordinar voluntarios y comunicar un cambio de planes impopular), abierta y con varias formas válidas de responder. Cuatro indicadores razonables (preparar el mensaje, gestionar reacciones, mantener implicación, margen para propuestas) sin dictar una única solución; errores y repregunta (alguien abandona el grupo) coherentes. Permite mostrar comunicación y cooperación. Sin afirmaciones oficiales ni diagnóstico. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "06",
+    "transcripcion": "agent-acf5b5ea1344b65ab.jsonl",
+    "respuesta_sha256": "530902b5dc7d8718bd672418cbc87a54bae441a931a4a0e9301094e05f1f62af"
+   },
+   "registrada_el": "2026-10-04T02:59:12",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda; tras 3 rechazos del guard de claves con haiku)"
+  }
+ ]
+}
