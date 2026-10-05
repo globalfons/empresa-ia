@@ -132,7 +132,7 @@
  },
  "contenido": {
   "OFFICIAL_EXAM": 290,
-  "TESTLEY_GENERATED": 99,
+  "TESTLEY_GENERATED": 109,
   "REVIEW_REQUIRED": 14,
   "DEPRECATED": 4,
   "OUTDATED": 0,
@@ -1775,7 +1775,12 @@
     "literal": 1
    },
    "ultima_actualizacion": "2026-10-02",
-   "cambios_recientes": []
+   "cambios_recientes": [
+    {
+     "apartat": "A.7.IF",
+     "tipo": "APARTAT_CANVIAT"
+    }
+   ]
   },
   {
    "id": "B.1",
@@ -1852,7 +1857,7 @@
     {
      "ley": "guia-mossos",
      "art": "B.1.2",
-     "preguntas": 0
+     "preguntas": 3
     },
     {
      "ley": "guia-mossos",
@@ -1878,19 +1883,20 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 2,
+    "TESTLEY_GENERATED": 5,
     "OFFICIAL_EXAM": 6,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 1,
+    "1": 4,
     "2": 1
    },
    "tipos": {
     "conceptual": 1,
-    "organos": 1
+    "literal": 2,
+    "organos": 2
    },
    "ultima_actualizacion": "2026-10-02",
    "cambios_recientes": []
@@ -2413,7 +2419,7 @@
     {
      "ley": "guia-mossos",
      "art": "B.5.1",
-     "preguntas": 0
+     "preguntas": 4
     },
     {
      "ley": "guia-mossos",
@@ -2436,17 +2442,25 @@
      "preguntas": 0
     }
    ],
-   "cobertura": "SIN_PREGUNTAS",
+   "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 0,
+    "TESTLEY_GENERATED": 4,
     "OFFICIAL_EXAM": 5,
     "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
-   "dificultad": {},
-   "tipos": {},
+   "dificultad": {
+    "1": 3,
+    "2": 1
+   },
+   "tipos": {
+    "aplicacion": 1,
+    "literal": 1,
+    "organos": 1,
+    "plazos": 1
+   },
    "ultima_actualizacion": "2026-10-02",
    "cambios_recientes": []
   },
@@ -2722,7 +2736,6 @@
     {
      "ley": "guia-mossos",
      "art": "B.8.IF",
-     "excluido": true,
      "preguntas": 0
     }
    ],
@@ -2758,6 +2771,10 @@
      "estado": "aplicada",
      "fuente": "https://mossos.gencat.cat/web/.content/home/01_els_mossos_desquadra/ingres-cos/Escala-bAsica/convocatoria-46-26/Esmenes-edicio-PDF-guia-estudi-setembre-2026.pdf",
      "fecha": "2026-09"
+    },
+    {
+     "apartat": "B.8.IF",
+     "tipo": "APARTAT_CANVIAT"
     }
    ]
   },
@@ -2815,8 +2832,7 @@
     {
      "ley": "guia-mossos",
      "art": "C.1.2",
-     "excluido": true,
-     "preguntas": 0
+     "preguntas": 3
     },
     {
      "ley": "guia-mossos",
@@ -2827,17 +2843,21 @@
    "cobertura": "PARCIAL",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 1,
+    "TESTLEY_GENERATED": 4,
     "OFFICIAL_EXAM": 7,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 1,
     "OUTDATED": 0
    },
    "dificultad": {
-    "2": 1
+    "1": 2,
+    "2": 2
    },
    "tipos": {
-    "excepcion": 1
+    "aplicacion": 1,
+    "excepcion": 1,
+    "literal": 1,
+    "organos": 1
    },
    "ultima_actualizacion": "2026-10-02",
    "cambios_recientes": []
@@ -2911,7 +2931,6 @@
     {
      "ley": "guia-mossos",
      "art": "C.2.4",
-     "excluido": true,
      "preguntas": 0
     },
     {
@@ -2927,7 +2946,6 @@
     {
      "ley": "guia-mossos",
      "art": "C.2.7",
-     "excluido": true,
      "preguntas": 0
     },
     {
@@ -3054,19 +3072,16 @@
     {
      "ley": "guia-mossos",
      "art": "C.3.1",
-     "excluido": true,
      "preguntas": 0
     },
     {
      "ley": "guia-mossos",
      "art": "C.3.2",
-     "excluido": true,
      "preguntas": 0
     },
     {
      "ley": "guia-mossos",
      "art": "C.3.3",
-     "excluido": true,
      "preguntas": 0
     },
     {
@@ -3082,7 +3097,6 @@
     {
      "ley": "guia-mossos",
      "art": "C.3.IF",
-     "excluido": true,
      "preguntas": 0
     }
    ],
@@ -3273,19 +3287,16 @@
     {
      "ley": "guia-mossos",
      "art": "C.4.2",
-     "excluido": true,
      "preguntas": 0
     },
     {
      "ley": "guia-mossos",
      "art": "C.4.3",
-     "excluido": true,
      "preguntas": 0
     },
     {
      "ley": "guia-mossos",
      "art": "C.4.IF",
-     "excluido": true,
      "preguntas": 0
     },
     {
@@ -3447,8 +3458,8 @@
    "source_url": "https://mossos.gencat.cat/web/.content/home/01_els_mossos_desquadra/ingres-cos/Escala-bAsica/convocatoria-46-26/Guia_Mossos_Edicio_Juny_2026.pdf",
    "source_document": "Guia d'estudi per accedir a la categoria de mosso/a del Cos de Mossos d'Esquadra. Edició juny 2026 (1a edició, ISBN 979-13-87889-34-0)",
    "published_at": "2026-06",
-   "retrieved_at": "2026-10-01T19:31:50+00:00",
-   "verified_at": "2026-10-01",
+   "retrieved_at": "2026-10-05T22:59:25+00:00",
+   "verified_at": "2026-10-05",
    "verification_status": "OFFICIAL_VERIFIED",
    "sha256": "efd111a107f8744b597bb30c38d7a703d7231149bca7b013d612ef11de57aad4"
   },
@@ -4706,7 +4717,7 @@
     },
     "contenido": {
      "OFFICIAL_EXAM": 290,
-     "TESTLEY_GENERATED": 99,
+     "TESTLEY_GENERATED": 109,
      "REVIEW_REQUIRED": 14
     },
     "entrenable": true
@@ -4767,7 +4778,9 @@
        ],
        "verbal": [
         "serie_letras",
-        "orden_alfabetico"
+        "orden_alfabetico",
+        "anagrama",
+        "codificacion"
        ]
       },
       "dificultades": [
@@ -4805,7 +4818,7 @@
      "call_id": "46/26"
     },
     "contenido": {
-     "items_autoevaluacion": 20,
+     "items_autoevaluacion": 18,
      "source_type": "TESTLEY_TRAINING"
     },
     "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.",
@@ -4883,8 +4896,8 @@
      "call_id": "46/26"
     },
     "contenido": {
-     "escenarios_valid": 60,
-     "review_required": 0,
+     "escenarios_valid": 45,
+     "review_required": 16,
      "source_type": "TESTLEY_GENERATED"
     },
     "entrenable": true

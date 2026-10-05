@@ -214,6 +214,11 @@ def trocear_guia(pdf):
                 actual = {"n": f"{t}.IF", "titulo": "Idees força", "lineas": []}
                 secciones.append(actual)
                 continue
+            # la página índice del bloque siguiente («índex: àmbit …») no pertenece al último tema del bloque anterior
+            # (defecto detectado en B.8.IF, que arrastraba el índice del àmbit C)
+            if re.match(r"(?i)^índex\s*:\s*àmbit", s):
+                actual = None
+                continue
             if actual is not None:
                 actual["lineas"].append(l)
         for sec in secciones:

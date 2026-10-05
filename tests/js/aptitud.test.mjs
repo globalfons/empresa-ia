@@ -40,6 +40,18 @@ test("respuestas correctas comprobadas con cálculo independiente del generador"
       assert.ok(per, e.id);
       assert.equal(corr(e).charCodeAt(0) - 65, L[4] + d[4 % per]);
     }
+    if (e.subtype === "anagrama") {
+      const ord = (w) => [...w].sort().join(""), base = ord(e.stimulus.texto);
+      assert.equal(e.options.filter((o) => ord(o) === base).length, 1, e.id);
+      assert.equal(ord(corr(e)), base);
+    }
+    if (e.subtype === "codificacion") {
+      const [, a, b, w] = e.prompt.match(/«([A-Z]+)» se codifica como «([A-Z]+)», ¿cómo se codifica «([A-Z]+)»/);
+      const d = [...a].map((c, i) => (b.charCodeAt(i) - c.charCodeAt(0) + 26) % 26);
+      const per = [1, 2].find((p) => d.every((v, i) => v === d[i % p]));
+      assert.ok(per, e.id);
+      assert.equal(corr(e), [...w].map((c, i) => String.fromCharCode(65 + (c.charCodeAt(0) - 65 + d[i % per]) % 26)).join(""));
+    }
     if (e.subtype === "orden_alfabetico") { const ws = e.stimulus.texto.split(", ").sort(); const p = +e.prompt.match(/posición (\d+)/)[1]; assert.equal(corr(e), ws[p - 1]); }
     if (e.subtype === "rotacion") {
       const v = +e.prompt.match(/(\d+)°/)[1] / 90; let g = e.stimulus.cuadricula;
@@ -106,4 +118,14 @@ test("build: entrenador solo donde hay estructura aptitudinal oficial; gate por 
   assert.match(fs.readFileSync("docs/oposiciones/mossos-esquadra/index.html", "utf8"), /aptitudinal\/">Entrenar la aptitudinal/);
   const cfg = JSON.parse(fs.readFileSync("config.json", "utf8")).planes;
   assert.equal(cfg.free.aptitud_completo, false); assert.equal(cfg.free.aptitud_muestra, 10); assert.equal(cfg.premium.aptitud_completo, true);
+});
+
+test("aptitud verbal semántica: banco HUMAN_REVIEW, nunca generado ni servido", () => {
+  const b = JSON.parse(fs.readFileSync("catalogo/aptitud/verbal-semantica-mossos-esquadra.json", "utf8"));
+  assert.equal(b.estado, "HUMAN_REVIEW"); assert.equal(b.verification_status, "REVIEW_REQUIRED");
+  assert.equal(b.publicable, false); assert.equal(b.servido_en_web, false);
+  for (const it of b.items) assert.ok(it.human_review && it.human_review.aprobado_por, "ítem sin aprobación humana");
+  assert.deepEqual([...A.SUBTIPOS.verbal], b.analisis_cobertura.cubierto_por_calculo); // el motor solo genera lo calculable
+  for (const f of ["sinonimos", "antonimos", "analogias", "vocabulario", "comprension_lectora"]) assert.ok(!A.SUBTIPOS.verbal.includes(f), f);
+  if (fs.existsSync("docs")) assert.ok(!fs.existsSync("docs/datos/verbal-semantica-mossos-esquadra.json"));
 });

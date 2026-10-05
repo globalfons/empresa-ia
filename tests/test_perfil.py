@@ -91,7 +91,8 @@ class Mossos(unittest.TestCase):
         for l in pend:
             self.assertEqual(l["verification_status"], "OFFICIAL_PENDING_REVIEW")
             self.assertIn(" ".join(l["cita"].split()), texto(l["fuente"]))
-        self.assertTrue(all(a.get("excluido") for a in temas["C.4"]["articulos"] if a["art"] in ("C.4.2", "C.4.3")))
+        # el texto de la guia de C.4.2/C.4.3 es fuente (decisión 2026-10-05); las leyes citadas siguen pendientes (arriba)
+        self.assertFalse(any(a.get("excluido") for a in temas["C.4"]["articulos"] if a["art"] in ("C.4.2", "C.4.3")))
 
     def test_esmenes_original_correccion_y_valor_vigente(self):
         cs = self.p["guia"]["correcciones"]

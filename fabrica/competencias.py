@@ -12,7 +12,7 @@ ENTRENAMIENTO de TestLey: nunca criterio ni baremo del tribunal.
   python3 -m fabrica.competencias registrar <lote> <nn> <transcripción.jsonl>
   python3 -m fabrica.competencias publicar <lote>                    → catalogo/competencias/<oposición>.json (solo VALID)
 """
-import datetime, itertools, json, os, re, sys
+import collections, datetime, itertools, json, os, re, sys
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
@@ -21,6 +21,7 @@ from fabrica import juez_v2 as J  # noqa: E402
 TRABAJO = os.path.join(R, "fabrica", "competencias")
 DESTINO = os.path.join(R, "catalogo", "competencias")
 PROMPT = os.path.join(R, "fabrica", "prompts", "juez-competencias-v1.txt")
+POLITICAS = os.path.join(R, "fabrica", "politica_juez", "competencias")
 TAM = 10
 FORMATOS = ("eleccion", "ranking")
 RESERVADOS = {"verdict", "verification_status", "status", "estado", "published", "publicado", "confidence", "veredicto", "judge"}
@@ -200,7 +201,8 @@ def preparar(lote):
         tandas.append({"tanda": nn, "ids": [i["item_id"] for i in items[k:k + TAM]], "fichero": f, "prompt_sha256": J.sha(pt), "estado": "PENDIENTE",
                        "huellas": {i["item_id"]: huella(i) for i in items[k:k + TAM]}})
     ev = {"lote": lote, "oposicion": cand["oposicion"], "call_id": ofi.get("call_id"), "creada_el": ahora(), "judge_prompt": os.path.relpath(PROMPT, R),
-          "judge_prompt_sha256": J.sha(prompt), "judge_model": "claude-haiku-4-5 (subagente de la sesión, solo lectura de su tanda)",
+          "judge_prompt_sha256": J.sha(prompt), "politica": politica()["version"],
+          "judge_model": f"claude-{politica().get('modelo_referencia') or 'haiku-4-5'} (subagente de la sesión, solo lectura de su tanda)",
           "candidatas_sha256": J.sha(json.dumps(cand, ensure_ascii=False, sort_keys=True)), "tandas": tandas}
     J.escribir(os.path.join(d, "evaluacion.json"), ev)
     return ev
@@ -272,6 +274,72 @@ def registrar(lote, nn, transcripcion, trabajo=None, prompt=None, criterios=None
     return t
 
 
+# ---------------------------------------------------------------- política versionada y rondas (compartido con fabrica/entrevista.py)
+def politica_de(directorio, criterios, version=None):
+    """Política del juez: comprueba la huella del fichero de la versión, la del prompt congelado y que los criterios sean los del código."""
+    reg = J.leer(os.path.join(directorio, "registro.json"))
+    e = next((x for x in reg["versiones"] if x["version"] == (version or reg["activa"])), None)
+    if not e:
+        raise SystemExit(f"Política del juez desconocida: {version}")
+    ruta = os.path.join(R, e["fichero"])
+    if J.sha(open(ruta, encoding="utf-8").read()) != e["sha256"]:
+        raise SystemExit(f"POLÍTICA BLOQUEADA: {e['fichero']} no coincide con su huella registrada. No se publica nada.")
+    p = J.leer(ruta)
+    if J.sha(open(os.path.join(R, p["prompt"]), encoding="utf-8").read()) != p["prompt_sha256"] or p["criterios"] != criterios:
+        raise SystemExit("POLÍTICA BLOQUEADA: el prompt o los criterios del juez no son los congelados en la política.")
+    return dict(p, sha256=e["sha256"])
+
+
+def rondas_de(trabajo, lote):
+    """Ficheros de evaluación del lote: la ronda 1 (evaluacion.json) y las reevaluaciones (evaluacion-<ronda>.json)."""
+    d = os.path.join(trabajo, lote)
+    return ["evaluacion.json"] + sorted(f for f in os.listdir(d) if f.startswith("evaluacion-") and f.endswith(".json"))
+
+
+def reevaluar_de(trabajo, lote, ronda, pol, tandas=None):
+    """Nueva ronda sobre las MISMAS tandas (ficheros, huellas y prompt) con el modelo de referencia de la política. No toca rondas anteriores."""
+    d = os.path.join(trabajo, lote)
+    base = J.leer(os.path.join(d, "evaluacion.json"))
+    f = os.path.join(d, f"evaluacion-{ronda}.json")
+    if os.path.exists(f):
+        raise SystemExit(f"La ronda {ronda} ya existe: no se sobrescribe.")
+    ev = {k: base[k] for k in ("lote", "oposicion", "call_id", "judge_prompt", "judge_prompt_sha256", "candidatas_sha256")}
+    ev.update(ronda=ronda, creada_el=ahora(), politica=pol["version"], politica_sha256=pol["sha256"],
+              judge_model=f"claude-{pol['modelo_referencia']} (subagente de la sesión, solo lectura de su tanda)",
+              tandas=[{k: t[k] for k in ("tanda", "ids", "fichero", "prompt_sha256", "huellas")} | {"estado": "PENDIENTE"}
+                      for t in base["tandas"] if not tandas or t["tanda"] in tandas])
+    J.escribir(f, ev)
+    return ev
+
+
+def combinar_de(trabajo, lote, pol):
+    """Veredicto por ítem: todos los veredictos ACEPTADOS de todas las rondas; VALID solo con un VALID del modelo de referencia y ningún
+    veredicto aceptado más conservador; cualquier REJECTED aceptado gana. Sin veredicto → REVIEW_REQUIRED."""
+    d, por = os.path.join(trabajo, lote), collections.defaultdict(list)
+    for f in rondas_de(trabajo, lote):
+        ev = J.leer(os.path.join(d, f))
+        for t in ev["tandas"]:
+            if t.get("estado") == "ACEPTADA":
+                for v in t["veredictos"]:
+                    por[v["item_id"]].append({"ronda": f, "tanda": t["tanda"], "modelo": t.get("judge_model", ev["judge_model"]),
+                                              "verdict": v["verdict"], "judged_at": t.get("registrada_el")})
+    ref = (pol.get("modelo_referencia") or "").lower()
+    out = {}
+    for i, vs in por.items():
+        peor = J.mas_conservador(*[v["verdict"] for v in vs])
+        con_ref = not ref or any(ref in v["modelo"].lower() for v in vs)
+        out[i] = {"verdict": "REJECTED" if peor == "REJECTED" else "VALID" if peor == "VALID" and con_ref else "REVIEW_REQUIRED", "veredictos": vs}
+    return out
+
+
+def politica(version=None):
+    return politica_de(POLITICAS, CRITERIOS, version)
+
+
+def reevaluar(lote, ronda, tandas=None):
+    return reevaluar_de(TRABAJO, lote, ronda, politica(), tandas)
+
+
 def veredictos(ev):
     """Veredicto de cada item solo desde tandas aceptadas; sin veredicto → REVIEW_REQUIRED (nunca VALID por defecto)."""
     v = {}
@@ -292,10 +360,11 @@ def publicar(lote):
     ofi = oficiales(cand["oposicion"])
     if any(validar(cand, ofi).values()):
         raise SystemExit("La validación determinista ya no está limpia: no se publica nada.")
-    ver = veredictos(ev)
-    por_tanda = {i: t for t in ev["tandas"] for i in t["ids"]}
-    traza = lambda i: {"lote": lote, "evaluacion": ev["lote"], "tanda": por_tanda[i]["tanda"], "judge_prompt_sha256": ev["judge_prompt_sha256"],
-                       "judge_model": ev["judge_model"], "judged_at": por_tanda[i].get("registrada_el"), "verdict": ver[i]}
+    pol = politica()
+    comb = combinar_de(TRABAJO, lote, pol)
+    ver = {i: comb.get(i, {}).get("verdict", "REVIEW_REQUIRED") for t in ev["tandas"] for i in t["ids"]}
+    traza = lambda i: {"lote": lote, "politica": pol["version"], "politica_sha256": pol["sha256"], "judge_prompt_sha256": ev["judge_prompt_sha256"],
+                       "veredictos": comb[i]["veredictos"], "verdict": ver[i]}
     fichas = [dict(f, source_type="TESTLEY_TRAINING", verification_status="VALID", traza=traza(f"ficha-{f['id']}"))
               for f in cand["competencias"] if ver.get(f"ficha-{f['id']}") == "VALID"]
     esc = [dict(e, source_type="TESTLEY_GENERATED", generated_by=cand.get("generador"), verification_status="VALID", interview_question_ids=[], traza=traza(e["id"]))
@@ -308,7 +377,7 @@ def publicar(lote):
            "oposicion": cand["oposicion"], "call_id": ofi.get("call_id"), "lotes": sorted(set(previo.get("lotes", [])) | {lote}),
            "competencias": fichas, "escenarios": esc, "cola_revision": revision, "rechazadas": rechazadas}
     J.escribir(destino, pub)
-    res = {"lote": lote, "publicadas_fichas": len(fichas), "publicados_escenarios": len(esc), "review_required": revision, "rejected": rechazadas, "fecha": ahora()}
+    res = {"lote": lote, "politica": pol["version"], "publicadas_fichas": len(fichas), "publicados_escenarios": len(esc), "review_required": revision, "rejected": rechazadas, "fecha": ahora()}
     J.escribir(os.path.join(d, "resultado.json"), res)
     return res
 
@@ -327,8 +396,12 @@ def main(argv=None):
         ev = preparar(a[1])
         for t in ev["tandas"]:
             print(f"tanda {t['tanda']}: {len(t['ids'])} items · prompt {os.path.join(TRABAJO, a[1], 'tanda-' + t['tanda'] + '.prompt.txt')}")
+    elif a[0] == "reevaluar":
+        ev = reevaluar(a[1], a[2], a[3].split(",") if len(a) > 3 else None)
+        print(f"ronda {a[2]}: {len(ev['tandas'])} tandas · {ev['judge_model']} · política {ev['politica']}")
     elif a[0] == "registrar":
-        t = registrar(a[1], a[2], a[3])
+        ronda = a[5] if len(a) > 5 else None
+        t = registrar(a[1], a[2], a[3], modelo=a[4] if len(a) > 4 and a[4] else None, evaluacion=f"evaluacion-{ronda}.json" if ronda else "evaluacion.json")
         print(a[1], a[2], t["estado"], t["intentos"][-1]["resultado"])
     elif a[0] == "publicar":
         print(json.dumps(publicar(a[1]), ensure_ascii=False))

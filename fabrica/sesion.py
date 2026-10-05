@@ -146,6 +146,11 @@ def slots_desde_cobertura(oposicion, codigos, n, fuentes):
         # dentro del tema se rota entre sus necesidades (una de cada tipo/dificultad por vuelta): no se llena con las fáciles
         pendientes = [[(x["tipo"], x["dificultad"], x["articulos"][j % len(x["articulos"])]) for j in range(x["n"])]
                       for x in nec["necesidades"] if x["tema"] == c]
+        # orden de las necesidades alternando dificultades (1, 2, 3, 1, 2…): un lote corto no se queda solo con las fáciles
+        por_dif = collections.defaultdict(list)
+        for p in pendientes:
+            por_dif[p[0][1]].append(p)
+        pendientes = [g[i] for i in range(max(map(len, por_dif.values()), default=0)) for _, g in sorted(por_dif.items()) if i < len(g)]
         cola = []
         while any(pendientes):
             for p in pendientes:

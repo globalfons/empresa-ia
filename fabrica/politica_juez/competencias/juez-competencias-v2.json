@@ -1,0 +1,25 @@
+{
+ "version": "juez-competencias-v2",
+ "prompt": "fabrica/prompts/juez-competencias-v1.txt",
+ "prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+ "criterios": [
+  "coherente",
+  "clave_defendible",
+  "relevante",
+  "sin_afirmaciones_oficiales",
+  "sin_diagnostico"
+ ],
+ "duplicado": "duplicado_de",
+ "guards": [
+  "solo Read sobre su tanda",
+  "JSON estricto 1:1 con ids en orden",
+  "claves de criterios exactas",
+  "motivo propio ≥ 30 caracteres",
+  "sin valoraciones agregadas",
+  "veredicto = el más conservador entre el del juez y el deducido de sus criterios"
+ ],
+ "tanda_max": 10,
+ "modelo_referencia": "sonnet",
+ "regla_publicacion": "VALID solo si existe un veredicto ACEPTADO del modelo de referencia (Sonnet) que es VALID y ningún otro veredicto aceptado del mismo ítem, de cualquier ronda o modelo, es más conservador; cualquier REJECTED gana; resto → REVIEW_REQUIRED. Candidatas idénticas a las juzgadas y validación limpia.",
+ "motivo": "Recalibración tras la del juez de entrevista (Haiku 50/50 VALID frente a Sonnet 35/50): mismo prompt y mismos criterios, solo cambia el modelo de referencia y la combinación (más conservadora)."
+}

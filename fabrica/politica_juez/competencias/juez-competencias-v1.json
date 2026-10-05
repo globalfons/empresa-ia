@@ -1,0 +1,25 @@
+{
+ "version": "juez-competencias-v1",
+ "prompt": "fabrica/prompts/juez-competencias-v1.txt",
+ "prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+ "criterios": [
+  "coherente",
+  "clave_defendible",
+  "relevante",
+  "sin_afirmaciones_oficiales",
+  "sin_diagnostico"
+ ],
+ "duplicado": "duplicado_de",
+ "guards": [
+  "solo Read sobre su tanda",
+  "JSON estricto 1:1 con ids en orden",
+  "claves de criterios exactas",
+  "motivo propio ≥ 30 caracteres",
+  "sin valoraciones agregadas",
+  "veredicto = el más conservador entre el del juez y el deducido de sus criterios"
+ ],
+ "tanda_max": 10,
+ "modelo_referencia": null,
+ "regla_publicacion": "VALID de la tanda aceptada (ronda única); candidatas idénticas a las juzgadas y validación limpia.",
+ "nota": "Política con la que se juzgó C00002 (jueces Haiku). Histórica."
+}

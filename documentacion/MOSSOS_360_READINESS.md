@@ -27,3 +27,15 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - [ ] Security review · Fase 7
 - [ ] Premium gates · B1 pendiente del despliegue del propietario (`PREMIUM_DEPLOYMENT.md`)
 - [x] **Source traceability** · cada bloque con citas, `fuente`, `documento`, `call_id` y `verification_status`
+
+## Actualización 2026-10-05 · desbloqueo de prioridades P0 (sin Physical Engine)
+
+- **Fuentes**: B.8 y C.1–C.4 desbloqueados como fuente de la fábrica. Para B.8 se corrigió el troceado del PDF oficial (la página del índice del bloque siguiente ya no se pega al último tema). C.1–C.4 se basan solo en el texto de la Guia d'estudi oficial. Las leyes 4/2003, 10/1994 y 16/1991 siguen OFFICIAL_PENDING_REVIEW: no se incorporan. La decisión está en `catalogo/oposiciones/mossos-esquadra.json → fuentes_decisiones`. **D sigue bloqueado** porque no hay documento oficial de referencia (`fuentes_bloqueadas`).
+- **Conocimientos**: política `juez-sesion-v4` (v3 con Sonnet como juez, mismos criterios).
+  - S00021: 10 VALID publicadas (B.1.2 ×3, B.5.1 ×4, C.1.2 ×3).
+  - S00022: el juez dio 10/10 VALID, pero la segunda comprobación ALL_VALID_SIN_EVIDENCIA lo retuvo sin publicar. Las razones de 1.0 y 4.0 están en castellano sobre preguntas en catalán y no comparten vocabulario con ellas. No se relajó el guard ni se volvió a juzgar. Queda pendiente de decisión humana (`fabrica/estado/retenidos/S00022/`).
+  - La fábrica vuelve a estar en GENERATION_PAUSED.
+- **Competencias**: política `juez-competencias-v2` (Sonnet de referencia, criterios y prompt sin cambios). Se hizo una ronda nueva sin sobrescribir la de Haiku. Resultado: 45 escenarios y 9 fichas VALID; 16 ítems en REVIEW_REQUIRED (`cola_revision`).
+- **Aptitud verbal**: se añaden `anagrama` y `codificacion`, deterministas y verificados por cálculo. Los formatos semánticos van a un banco HUMAN_REVIEW vacío (`catalogo/aptitud/verbal-semantica-mossos-esquadra.json`) que nunca se sirve.
+- **Entrevista**: sin más volumen; los REVIEW_REQUIRED siguen pendientes.
+- **Physical Engine**: no iniciado.

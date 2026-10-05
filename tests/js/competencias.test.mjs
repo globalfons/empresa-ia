@@ -86,7 +86,14 @@ test("progreso y contrato adaptativo: strength solo desde OBJECTIVE_SCORE; la au
 test("contenido publicado y build: solo VALID, sin afirmaciones oficiales y página con datos sin trazas internas", { skip: !fs.existsSync("catalogo/competencias/mossos-esquadra.json") }, () => {
   const pub = JSON.parse(fs.readFileSync("catalogo/competencias/mossos-esquadra.json", "utf8"));
   const ids = new Set(PREP.lista.map((c) => c.id));
-  assert.ok(pub.escenarios.length >= 50, "50-100 escenarios publicados");
+  // juez-competencias-v2 (Sonnet de referencia) dejó 45 VALID y pasó 16 a REVIEW_REQUIRED: no se regenera volumen para compensar
+  assert.ok(pub.escenarios.length >= 45, "≥45 escenarios publicados");
+  for (const e of pub.escenarios) {
+    assert.equal(e.traza.politica, "juez-competencias-v2", e.id);
+    assert.ok(e.traza.veredictos.some((v) => /sonnet/i.test(v.modelo) && v.verdict === "VALID"), e.id); // VALID solo con la referencia
+    assert.ok(e.traza.veredictos.every((v) => v.verdict === "VALID"), e.id); // ningún veredicto aceptado más conservador
+  }
+  assert.ok(!pub.escenarios.some((e) => pub.cola_revision.includes(e.id)));
   for (const c of ids) assert.ok(pub.escenarios.filter((e) => e.competency_id === c).length >= 4, c);
   assert.ok(pub.escenarios.every((e) => ids.has(e.competency_id) && e.verification_status === "VALID" && e.source_type === "TESTLEY_GENERATED"));
   assert.ok(!/aprovar[àa]s|criteri oficial|el tribunal valora|diagn[òo]stic|trastorn/i.test(JSON.stringify(pub.escenarios.concat(pub.competencias))));

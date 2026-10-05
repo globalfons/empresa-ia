@@ -11,7 +11,7 @@ from fabrica import juez_v2 as J, politica as P, motor as MO, banco as B  # noqa
 sys.path.insert(0, os.path.join(R, "scripts"))
 import integridad_banco as IB  # noqa: E402
 
-V3 = "juez-sesion-v3"
+V3 = "juez-sesion-v4"  # activa: v3 con el juez de referencia Sonnet (mismos criterios); v3 queda histórica
 
 
 def items(n):
@@ -37,10 +37,15 @@ class Politica(unittest.TestCase):
     def test_v3_versionada_activa_y_v2_intacta(self):
         reg = P.registro()
         self.assertEqual(reg["activa"], V3)
-        e2 = next(e for e in reg["versiones"] if e["version"] == "juez-sesion-v2")
-        self.assertEqual(P.huella(os.path.join(R, e2["fichero"])), e2["sha256"], "v2 sin modificar")
-        self.assertEqual(e2["estado"], "historica")
+        for h in ("juez-sesion-v2", "juez-sesion-v3"):
+            e2 = next(e for e in reg["versiones"] if e["version"] == h)
+            self.assertEqual(P.huella(os.path.join(R, e2["fichero"])), e2["sha256"], f"{h} sin modificar")
+            self.assertEqual(e2["estado"], "historica")
         c = P.cargar(V3)["componentes"]
+        c3 = P.cargar("juez-sesion-v3")["componentes"]
+        self.assertEqual({k: v for k, v in c.items() if k != "modelo_juez"}, {k: v for k, v in c3.items() if k != "modelo_juez"},
+                         "v4 solo cambia el modelo del juez: criterios, mecanismo y prompt idénticos a v3")
+        self.assertIn("sonnet", json.dumps(c["modelo_juez"]).lower())
         self.assertEqual(c["criterios"]["booleanos"], ["respaldada", "cita_suficiente", "unica", "clara"])
         self.assertEqual(c["mecanismo"]["tamano_tanda"], 10)
         self.assertTrue(c["mecanismo"]["veredicto_trazable"])
@@ -83,7 +88,7 @@ class Mecanismo(unittest.TestCase):
         J.registrar("v3b", "01", self.tr(t, resp(it)))
         ev = J.leer(os.path.join(self.d, "v3b", "evaluacion.json"))
         self.assertEqual((ev["judge_policy_version"], ev["policy_hash"], ev["session_id"]), (V3, P.cargar(V3)["sha256"], "ses-xyz"))
-        self.assertTrue(ev["judge_model"].startswith("claude-haiku-4-5"))
+        self.assertTrue(ev["judge_model"])
         ta = ev["tandas"][0]
         self.assertEqual(len(ta["prompt_sha256"]), 64)
         self.assertTrue(ta["registrada_el"])

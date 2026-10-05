@@ -31,3 +31,7 @@ Ejercicios **originales** de TestLey (`source_type: TESTLEY_GENERATED`). Ningún
 
 ## Modos
 Por categoría, por dificultad, mixto, contrarreloj y adaptativo. El adaptativo usa una regla explicable: sube de nivel tras 2 aciertos seguidos, baja tras un fallo y elige primero la aptitud sin datos y después la de menor acierto.
+
+## Aptitud verbal (2026-10-05)
+- **Generados por cálculo**: `serie_letras`, `orden_alfabetico`, `anagrama` (cadena al azar y una única permutación correcta) y `codificacion` (desplazamiento fijo o alterno, cíclico en 26 letras). `verificar()` los recalcula y los tests los comprueban con un cálculo independiente.
+- **Formatos semánticos** (vocabulario, sinónimos, antónimos, analogías, comprensión lectora): no se generan automáticamente. Van al banco `catalogo/aptitud/verbal-semantica-mossos-esquadra.json` (HUMAN_REVIEW, `publicable: false`, sin ítems), que requiere aprobación humana.

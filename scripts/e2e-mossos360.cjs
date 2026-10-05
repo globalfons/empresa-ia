@@ -75,7 +75,9 @@ const OP = 'mossos-esquadra';
     // 22 COMPETENCIAS (Mossos 360 · Fase 2): oficial frente a entrenamiento, una situación, autoconocimiento y progreso
     await ir(`oposiciones/${OP}/`); ok('22a FICHA enlaza competencias y autoconocimiento', await p.locator(`a[href*="oposiciones/${OP}/competencias/"]`).count());
     await ir(`oposiciones/${OP}/competencias/`); await p.waitForSelector('.comp-ficha');
-    ok('22b COMPETENCIAS · 10 oficiales con «Información oficial» y «Entrenamiento TestLey»', (await p.locator('.comp-ficha').count()) === 10 && (await p.locator('.comp-ficha .comp-oficial').count()) === 10 && (await p.locator('.comp-ficha .comp-testley').count()) === 10);
+    // «Entrenamiento TestLey» solo en las fichas publicadas (VALID); las que están en REVIEW_REQUIRED muestran el aviso de revisión
+    const fichasTL = JSON.parse(fs.readFileSync(path.join(RAIZ, 'catalogo/competencias/mossos-esquadra.json'), 'utf8')).competencias.length;
+    ok('22b COMPETENCIAS · 10 oficiales con «Información oficial» y «Entrenamiento TestLey» o aviso de revisión', (await p.locator('.comp-ficha').count()) === 10 && (await p.locator('.comp-ficha .comp-oficial').count()) === 10 && (await p.locator('.comp-ficha .comp-testley').count()) === fichasTL && (await p.locator('.comp-ficha').filter({ hasText: 'pendiente de revisión' }).count()) === 10 - fichasTL, fichasTL);
     await p.click('[data-tab="entreno"]'); await p.click('[data-empezar]'); await p.waitForSelector('.opt');
     const rank = /Ordena/.test(await p.textContent('.quiz-head'));
     for (let k = 0; k < (rank ? 4 : 1); k++) await p.locator('.opt:not([disabled])').first().click();

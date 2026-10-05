@@ -1,6 +1,6 @@
 {
  "_ayuda": "Registro de versiones de la política del juez (solo se añaden entradas; los ficheros de versión son de solo lectura y nunca se reescriben). La huella sha256 es la del fichero de la versión. Ver fabrica/politica.py.",
- "activa": "juez-sesion-v3",
+ "activa": "juez-sesion-v4",
  "versiones": [
   {
    "version": "juez-sesion-v0.1",
@@ -157,12 +157,23 @@
    "version": "juez-sesion-v3",
    "fichero": "fabrica/politica_juez/juez-sesion-v3.json",
    "sha256": "5192da5ce77226481513369b1e24469f894069c24e3d77e826ec90d0f0e608c9",
-   "estado": "activa",
+   "estado": "historica",
    "primer_uso": null,
    "lotes": [],
    "origen": "nueva versión creada por orquestador de la sesión con autorización explícita del usuario (2026-10-02)",
    "nota": "Autorizada por el usuario (cierre Mossos 360, B2). Mismo mecanismo que v2; cambios de criterio de JUDGE_V2_DEFECTS.md: nuevo criterio bloqueante cita_suficiente (D1, D2) y trivialidad explícita en clara (D3). Metadatos (D4) fuera: no bloquean y añadirían datos al juez. Veredicto trazable: Banco.publicar() lo recalcula desde la respuesta archivada.",
    "creada_el": "2026-10-02T22:31:30"
+  },
+  {
+   "version": "juez-sesion-v4",
+   "fichero": "fabrica/politica_juez/juez-sesion-v4.json",
+   "sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "estado": "activa",
+   "primer_uso": null,
+   "lotes": [],
+   "origen": "nueva versión creada por operador de la sesión (consolidación Mossos 360)",
+   "nota": "Igual que juez-sesion-v3 (mismos prompts, criterios, guards y mecanismo); solo cambia el modelo del juez a Sonnet. Motivo: calibraciones de entrevista (Haiku 50/50 VALID frente a Sonnet 35/50) y de competencias, y auditoría de S00019/S00020 (100 % VALID de Haiku con hallazgos posteriores del operador). No relaja ningún criterio.",
+   "creada_el": "2026-10-05T23:02:48"
   }
  ]
 }

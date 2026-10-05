@@ -77,3 +77,8 @@ Cada escenario y cada perfil llevan `competency_id` e `interview_question_ids` (
   - 2 tandas rechazadas por los guards (clave de criterio mal escrita) y repetidas con jueces nuevos;
   - 1 falso positivo del guard de valoraciones agregadas («diferente de las anteriores» al deduplicar), acotado con un test, con la misma respuesta registrada de nuevo (`fabrica/estado/incidencias-politica.json`).
 - Límite honesto: el juez de competencias aprobó el 100 % en los dos lotes. La calidad se apoya en el validador determinista y en la auditoría independiente; antes de escalar el volumen conviene una revisión humana de una muestra.
+
+## Política del juez versionada (2026-10-05)
+`fabrica/politica_juez/competencias/` (registro + versiones inmutables). La versión activa es `juez-competencias-v2`: el modelo de referencia es Sonnet; los criterios y el prompt son los mismos que en v1 (sha 08bce888…).
+- `python3 -m fabrica.competencias reevaluar <lote> <ronda>` crea una ronda nueva (`evaluacion-<ronda>.json`) y nunca sobrescribe las anteriores.
+- Regla de combinación: VALID solo si el modelo de referencia dio VALID y ningún veredicto aceptado es más conservador; cualquier REJECTED gana; los dudosos van a REVIEW_REQUIRED.

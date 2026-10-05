@@ -146,41 +146,17 @@ def preparar(lote):
 
 
 def politica(version=None):
-    """Política del juez de entrevista: comprueba la huella del fichero de la versión y la del prompt congelado."""
-    reg = J.leer(os.path.join(POLITICAS, "registro.json"))
-    e = next((x for x in reg["versiones"] if x["version"] == (version or reg["activa"])), None)
-    if not e:
-        raise SystemExit(f"Política del juez de entrevista desconocida: {version}")
-    ruta = os.path.join(R, e["fichero"])
-    if J.sha(open(ruta, encoding="utf-8").read()) != e["sha256"]:
-        raise SystemExit(f"POLÍTICA BLOQUEADA: {e['fichero']} no coincide con su huella registrada. No se publica nada.")
-    p = J.leer(ruta)
-    if J.sha(open(os.path.join(R, p["prompt"]), encoding="utf-8").read()) != p["prompt_sha256"] or p["criterios"] != CRITERIOS:
-        raise SystemExit("POLÍTICA BLOQUEADA: el prompt o los criterios del juez no son los congelados en la política.")
-    return dict(p, sha256=e["sha256"])
+    """Política del juez de entrevista (fabrica.competencias.politica_de: huellas de la versión y del prompt congelado)."""
+    return C.politica_de(POLITICAS, CRITERIOS, version)
 
 
 def rondas(lote):
-    """Ficheros de evaluación del lote: la ronda 1 (evaluacion.json) y las reevaluaciones (evaluacion-<ronda>.json)."""
-    d = os.path.join(TRABAJO, lote)
-    return ["evaluacion.json"] + sorted(f for f in os.listdir(d) if f.startswith("evaluacion-") and f.endswith(".json"))
+    return C.rondas_de(TRABAJO, lote)
 
 
 def reevaluar(lote, ronda, tandas=None):
-    """Nueva ronda de juicio sobre las MISMAS tandas (mismos ficheros, huellas y prompt) con el modelo de referencia de la
-    política activa. No toca la ronda 1 ni ningún veredicto anterior: la combinación la hace la puerta (publicar)."""
-    d, pol = os.path.join(TRABAJO, lote), politica()
-    base = J.leer(os.path.join(d, "evaluacion.json"))
-    f = os.path.join(d, f"evaluacion-{ronda}.json")
-    if os.path.exists(f):
-        raise SystemExit(f"La ronda {ronda} ya existe: no se sobrescribe.")
-    ev = {k: base[k] for k in ("lote", "oposicion", "call_id", "judge_prompt", "judge_prompt_sha256", "candidatas_sha256")}
-    ev.update(ronda=ronda, creada_el=C.ahora(), politica=pol["version"], politica_sha256=pol["sha256"],
-              judge_model=f"claude-{pol['modelo_referencia']} (subagente de la sesión, solo lectura de su tanda)",
-              tandas=[{k: t[k] for k in ("tanda", "ids", "fichero", "prompt_sha256", "huellas")} | {"estado": "PENDIENTE"}
-                      for t in base["tandas"] if not tandas or t["tanda"] in tandas])
-    J.escribir(f, ev)
-    return ev
+    """Nueva ronda de juicio sobre las MISMAS tandas con el modelo de referencia de la política activa (no toca rondas anteriores)."""
+    return C.reevaluar_de(TRABAJO, lote, ronda, politica(), tandas)
 
 
 def registrar(lote, nn, transcripcion, modelo=None, ronda=None):
@@ -189,23 +165,7 @@ def registrar(lote, nn, transcripcion, modelo=None, ronda=None):
 
 
 def combinar(lote, pol):
-    """Veredicto final por ítem según la política: todos los veredictos ACEPTADOS de todas las rondas, VALID solo con un VALID
-    del modelo de referencia y ningún veredicto aceptado más conservador; cualquier REJECTED aceptado gana."""
-    d, por = os.path.join(TRABAJO, lote), collections.defaultdict(list)
-    for f in rondas(lote):
-        ev = J.leer(os.path.join(d, f))
-        for t in ev["tandas"]:
-            if t.get("estado") == "ACEPTADA":
-                for v in t["veredictos"]:
-                    por[v["item_id"]].append({"ronda": f, "tanda": t["tanda"], "modelo": t.get("judge_model", ev["judge_model"]),
-                                              "verdict": v["verdict"], "judged_at": t.get("registrada_el")})
-    ref = (pol.get("modelo_referencia") or "").lower()
-    out = {}
-    for i, vs in por.items():
-        peor = J.mas_conservador(*[v["verdict"] for v in vs])
-        con_ref = not ref or any(ref in v["modelo"].lower() for v in vs)
-        out[i] = {"verdict": "REJECTED" if peor == "REJECTED" else "VALID" if peor == "VALID" and con_ref else "REVIEW_REQUIRED", "veredictos": vs}
-    return out
+    return C.combinar_de(TRABAJO, lote, pol)
 
 
 def puerta(lote):

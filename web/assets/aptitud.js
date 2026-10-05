@@ -8,19 +8,26 @@
   var GEN = "testley-aptitud-v1";
   var CATEGORIAS = ["verbal", "numerico", "abstracto", "espacial", "perceptivo"];
   var SUBTIPOS = { numerico: ["serie", "porcentaje", "proporcion"], abstracto: ["serie_figuras"], espacial: ["rotacion"],
-    perceptivo: ["pares_identicos", "contar_simbolo"], verbal: ["serie_letras", "orden_alfabetico"] };
+    perceptivo: ["pares_identicos", "contar_simbolo"], verbal: ["serie_letras", "orden_alfabetico", "anagrama", "codificacion"] };
+  // Verbal: solo formatos con respuesta verificable por cálculo (letras, orden, anagramas, codificación). Los formatos semánticos
+  // (vocabulario, sinónimos, antónimos, analogías, comprensión) necesitan criterio lingüístico humano: banco aparte en revisión
+  // (catalogo/aptitud/verbal-semantica-<oposición>.json, HUMAN_REVIEW), nunca generado ni servido automáticamente.
   var SEG_OFICIAL = Math.round((35 * 60) / 80); // ritmo de la subprueba oficial de Mossos: 80 preguntas en 35 min
   var T = {
     ca: { serie: "Quin nombre continua la sèrie?", pct: function (p, n) { return "Quant és el " + p + " % de " + n + "?"; },
       prop: function (a, b, c) { return "Si " + a + " unitats costen " + b + " €, quant costen " + c + " unitats?"; },
       fig: "Quina figura continua la sèrie?", rot: function (g) { return "Quina figura és la de l'esquerra girada " + g + "° en sentit horari?"; },
       pares: "Quantes parelles són exactament iguals?", contar: function (s) { return "Quantes vegades apareix el símbol «" + s + "»?"; },
-      letras: "Quina lletra continua la sèrie?", orden: function (p) { return "Si ordenes alfabèticament aquestes paraules, quina queda en la posició " + p + "?"; } },
+      letras: "Quina lletra continua la sèrie?", orden: function (p) { return "Si ordenes alfabèticament aquestes paraules, quina queda en la posició " + p + "?"; },
+      anagrama: function (w) { return "Quina opció té exactament les mateixes lletres que «" + w + "», en un altre ordre?"; },
+      codigo: function (a, b, w) { return "Si «" + a + "» es codifica com «" + b + "», com es codifica «" + w + "»?"; } },
     es: { serie: "¿Qué número continúa la serie?", pct: function (p, n) { return "¿Cuánto es el " + p + " % de " + n + "?"; },
       prop: function (a, b, c) { return "Si " + a + " unidades cuestan " + b + " €, ¿cuánto cuestan " + c + " unidades?"; },
       fig: "¿Qué figura continúa la serie?", rot: function (g) { return "¿Qué figura es la de la izquierda girada " + g + "° en sentido horario?"; },
       pares: "¿Cuántas parejas son exactamente iguales?", contar: function (s) { return "¿Cuántas veces aparece el símbolo «" + s + "»?"; },
-      letras: "¿Qué letra continúa la serie?", orden: function (p) { return "Si ordenas alfabéticamente estas palabras, ¿cuál queda en la posición " + p + "?"; } },
+      letras: "¿Qué letra continúa la serie?", orden: function (p) { return "Si ordenas alfabéticamente estas palabras, ¿cuál queda en la posición " + p + "?"; },
+      anagrama: function (w) { return "¿Qué opción tiene exactamente las mismas letras que «" + w + "», en otro orden?"; },
+      codigo: function (a, b, w) { return "Si «" + a + "» se codifica como «" + b + "», ¿cómo se codifica «" + w + "»?"; } },
   };
   // Léxico neutro sin acentos (el orden alfabético no depende de reglas de colación)
   var PALABRAS = ["arbre", "barca", "camisa", "dona", "escala", "farola", "gat", "hora", "illa", "llapis", "mapa", "nota", "ocell", "porta",
@@ -149,6 +156,36 @@
       return op && { prompt: t.letras, stimulus: { tipo: "texto", texto: s.slice(0, 5).map(function (k) { return ABC[k]; }).join(" · ") + " · ?" }, options: op.o, a: op.a,
         explanation: "Los saltos en el abecedario (26 letras, sin Ñ ni Ç) son de " + pasos.join(", ") + (pasos.length > 1 ? " de forma cíclica" : "") + (baja ? ", hacia atrás" : "") + ". Sigue la " + ok + "." };
     }
+    if (sub === "anagrama") {
+      // Cadena de letras al azar (no depende de una lista de palabras: variedad ilimitada y sin juicio léxico).
+      // Correcta: una permutación de la cadena. Distractores: permutaciones con una letra cambiada (otro multiconjunto de letras).
+      var lon = dif === 1 ? [4, 4] : dif === 2 ? [5, 6] : [7, 8], w = "";
+      for (var li = ent(r, lon[0], lon[1]); w.length < li;) w += ABC[ent(r, 0, 25)];
+      var clave = w.split("").sort().join(""), ok3 = w, n = 0;
+      while ((ok3 === w) && n++ < 20) ok3 = barajar(r, w.split("")).join("");
+      var dist = [];
+      for (var q = 0; q < 30 && dist.length < 6; q++) {
+        var p = w.split(""), j = ent(r, 0, p.length - 1), nl = ABC[ent(r, 0, 25)];
+        if (nl === p[j]) continue;
+        p[j] = nl;
+        var dd = barajar(r, p).join("");
+        if (dd.split("").sort().join("") !== clave) dist.push(dd);
+      }
+      var op3 = ok3 !== w && opciones(r, ok3, dist);
+      return op3 && { prompt: t.anagrama(w), stimulus: { tipo: "texto", texto: w }, options: op3.o, a: op3.a,
+        explanation: "«" + ok3 + "» usa exactamente las letras de «" + w + "» (" + clave.split("").join(" ") + "); las demás cambian alguna letra." };
+    }
+    if (sub === "codificacion") {
+      // Desplazamiento fijo en el abecedario de 26 letras (dif. 3: desplazamientos alternos); distractores con otro desplazamiento o una letra mal
+      var sh = dif === 1 ? [1] : dif === 2 ? [elegir(r, [2, 3, -1, -2])] : [ent(r, 1, 3), -ent(r, 1, 3)];
+      var enc = function (x, d) { return x.split("").map(function (c, i) { return ABC[(ABC.indexOf(c) + d[i % d.length] + 26) % 26]; }).join(""); };
+      var cort = PALABRAS.filter(function (x) { return x.length >= 3 && x.length <= 7; }), pw = barajar(r, cort);
+      var ej = pw[0].toUpperCase(), wq = pw[1].toUpperCase(), ok4 = enc(wq, sh);
+      var mal = ok4.split(""), mj = ent(r, 0, mal.length - 1); mal[mj] = ABC[(ABC.indexOf(mal[mj]) + 1) % 26];
+      var op4 = opciones(r, ok4, [enc(wq, sh.map(function (d) { return d + 1; })), enc(wq, sh.map(function (d) { return d - 1; })), mal.join(""), enc(wq, sh.map(function (d) { return -d; }))]);
+      return op4 && { prompt: t.codigo(ej, enc(ej, sh), wq), stimulus: { tipo: "texto", texto: ej + " → " + enc(ej, sh) }, options: op4.o, a: op4.a,
+        explanation: "Cada letra se desplaza " + sh.map(function (d) { return (d > 0 ? "+" : "") + d; }).join(" y ") + (sh.length > 1 ? " posiciones de forma alterna" : " posiciones") + " en el abecedario (26 letras, cíclico): «" + wq + "» → «" + ok4 + "»." };
+    }
     var k = 3 + dif, ws = barajar(r, PALABRAS).slice(0, k + 1), pos = ent(r, 2, k), orden = ws.slice().sort();
     var ok2 = orden[pos - 1], op2 = opciones(r, ok2, barajar(r, ws.filter(function (w) { return w !== ok2; })));
     return op2 && { prompt: t.orden(pos), stimulus: { tipo: "texto", texto: ws.join(", ") }, options: op2.o, a: op2.a, explanation: "Orden alfabético: " + orden.join(", ") + "." };
@@ -182,6 +219,11 @@
     if (ks.length !== 4 || ks.some(function (k, i) { return ks.indexOf(k) !== i; })) p.push("opciones repetidas o distintas de 4");
     if (!(e.correct_answer >= 0 && e.correct_answer < 4)) p.push("respuesta fuera de rango");
     if (e.source_type !== "TESTLEY_GENERATED" || e.reproduccion_oficial) p.push("un ejercicio de TestLey no puede presentarse como oficial");
+    if (e.subtype === "anagrama") {
+      var ord = function (x) { return String(x).split("").sort().join(""); }, base = ord(e.stimulus.texto);
+      var ana = (e.options || []).filter(function (o) { return ord(o) === base && o !== e.stimulus.texto; });
+      if (ana.length !== 1 || ord(e.options[e.correct_answer]) !== base) p.push("el anagrama no es único");
+    }
     if (e.category === "espacial") {
       var g = e.stimulus.cuadricula, giradas = [1, 2, 3].map(function (v) { return JSON.stringify(rotar(g, v)); });
       var correctas = ks.filter(function (k) { return giradas.indexOf(k) >= 0 && k === JSON.stringify(rotar(g, (+e.prompt.match(/(\d+)°/)[1]) / 90)); });

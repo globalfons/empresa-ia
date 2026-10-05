@@ -1,6 +1,6 @@
 {
  "oposicion": "mossos-esquadra",
- "generado": "2026-10-03",
+ "generado": "2026-10-05",
  "objetivo_tema": 30,
  "distribucion_dificultad": {
   "1": 0.3,
@@ -567,9 +567,9 @@
    "tema": "B.8",
    "titulo": "La Unió Europea",
    "tipo_gap": "GENERACION",
-   "apartados_sin_fuente": 1,
+   "apartados_sin_fuente": 0,
    "objetivo": 30,
-   "capacidad": 30,
+   "capacidad": 39,
    "actuales": 3,
    "falta": 27,
    "OFFICIAL_EXAM": 12,
@@ -594,23 +594,22 @@
    ],
    "articulos_sin_preguntas": [
     "B.8.2",
-    "B.8.3"
-   ],
-   "articulos_sobreexplotados": [],
-   "apartados_bloqueados": [
+    "B.8.3",
     "B.8.IF"
    ],
+   "articulos_sobreexplotados": [],
+   "apartados_bloqueados": [],
    "leyes_pendientes": []
   },
   {
    "tema": "C.1",
    "titulo": "Les competències de la Generalitat en matèria de seguretat",
    "tipo_gap": "GENERACION",
-   "apartados_sin_fuente": 1,
-   "objetivo": 8,
-   "capacidad": 8,
+   "apartados_sin_fuente": 0,
+   "objetivo": 18,
+   "capacidad": 18,
    "actuales": 1,
-   "falta": 7,
+   "falta": 17,
    "OFFICIAL_EXAM": 7,
    "REVIEW_REQUIRED": 0,
    "dificultad": {
@@ -630,21 +629,20 @@
     "caso_practico"
    ],
    "articulos_sin_preguntas": [
+    "C.1.2",
     "C.1.IF"
    ],
    "articulos_sobreexplotados": [],
-   "apartados_bloqueados": [
-    "C.1.2"
-   ],
+   "apartados_bloqueados": [],
    "leyes_pendientes": []
   },
   {
    "tema": "C.2",
    "titulo": "El Departament d'Interior",
    "tipo_gap": "GENERACION",
-   "apartados_sin_fuente": 2,
+   "apartados_sin_fuente": 0,
    "objetivo": 30,
-   "capacidad": 38,
+   "capacidad": 58,
    "actuales": 4,
    "falta": 26,
    "OFFICIAL_EXAM": 35,
@@ -668,24 +666,23 @@
    "articulos_sin_preguntas": [
     "C.2.2",
     "C.2.3",
+    "C.2.4",
+    "C.2.7",
     "C.2.IF"
    ],
    "articulos_sobreexplotados": [],
-   "apartados_bloqueados": [
-    "C.2.4",
-    "C.2.7"
-   ],
+   "apartados_bloqueados": [],
    "leyes_pendientes": []
   },
   {
    "tema": "C.3",
    "titulo": "La coordinació policial",
    "tipo_gap": "GENERACION",
-   "apartados_sin_fuente": 4,
-   "objetivo": 20,
-   "capacidad": 20,
+   "apartados_sin_fuente": 0,
+   "objetivo": 30,
+   "capacidad": 60,
    "actuales": 12,
-   "falta": 8,
+   "falta": 18,
    "OFFICIAL_EXAM": 25,
    "REVIEW_REQUIRED": 3,
    "dificultad": {
@@ -706,14 +703,14 @@
     "dificil",
     "caso_practico"
    ],
-   "articulos_sin_preguntas": [],
-   "articulos_sobreexplotados": [],
-   "apartados_bloqueados": [
+   "articulos_sin_preguntas": [
     "C.3.1",
     "C.3.2",
     "C.3.3",
     "C.3.IF"
    ],
+   "articulos_sobreexplotados": [],
+   "apartados_bloqueados": [],
    "leyes_pendientes": [
     "Llei 4/2003, de 7 d'abril, d'ordenació del sistema de seguretat pública de Catalunya"
    ]
@@ -722,11 +719,11 @@
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo_gap": "GENERACION",
-   "apartados_sin_fuente": 3,
-   "objetivo": 20,
-   "capacidad": 20,
+   "apartados_sin_fuente": 0,
+   "objetivo": 30,
+   "capacidad": 50,
    "actuales": 6,
-   "falta": 14,
+   "falta": 24,
    "OFFICIAL_EXAM": 15,
    "REVIEW_REQUIRED": 0,
    "dificultad": {
@@ -746,14 +743,15 @@
     "caso_practico"
    ],
    "articulos_sin_preguntas": [
-    "C.4.1"
-   ],
-   "articulos_sobreexplotados": [],
-   "apartados_bloqueados": [
+    "C.4.1",
     "C.4.2",
     "C.4.3",
     "C.4.IF"
    ],
+   "articulos_sobreexplotados": [
+    "5"
+   ],
+   "apartados_bloqueados": [],
    "leyes_pendientes": [
     "Llei 10/1994, d'11 de juliol, de la Policia de la Generalitat – Mossos d'Esquadra",
     "Llei 16/1991, de 10 de juliol, de les policies locals de Catalunya"
@@ -1414,6 +1412,142 @@
    "prioridad": 96.8
   },
   {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "literal",
+   "dificultad": 1,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.1.2",
+    "guia-mossos:C.1.IF",
+    "guia-mossos:C.1.1"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo literal (dificultad 1) del tema C.1 sobre los apartados C.1.2, C.1.IF, C.1.1",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "organos",
+   "dificultad": 1,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.1.2"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo órganos (dificultad 1) del tema C.1 sobre el apartado C.1.2",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "aplicacion",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.1.2",
+    "guia-mossos:C.1.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.1 sobre los apartados C.1.2, C.1.IF",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "competencias",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.1.2"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo competencias (dificultad 2) del tema C.1 sobre el apartado C.1.2",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "conceptual",
+   "dificultad": 2,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.1.2",
+    "guia-mossos:C.1.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.1 sobre los apartados C.1.2, C.1.IF",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "excepcion",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.1.1"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo excepción (dificultad 2) del tema C.1 sobre el apartado C.1.1",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "negativa",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.1.2"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.1 sobre el apartado C.1.2",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "procedimiento",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.1.2"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo procedimiento (dificultad 2) del tema C.1 sobre el apartado C.1.2",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "caso_practico",
+   "dificultad": 3,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.1.2",
+    "guia-mossos:C.1.IF"
+   ],
+   "revision_humana": true,
+   "texto": "2 preguntas de tipo caso práctico (dificultad 3) del tema C.1 sobre los apartados C.1.2, C.1.IF",
+   "prioridad": 96.2
+  },
+  {
+   "tema": "C.1",
+   "titulo": "Les competències de la Generalitat en matèria de seguretat",
+   "tipo": "dificil",
+   "dificultad": 3,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.1.2",
+    "guia-mossos:C.1.IF"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.1 sobre los apartados C.1.2, C.1.IF",
+   "prioridad": 96.2
+  },
+  {
    "tema": "A.6",
    "titulo": "Entorn social a Catalunya",
    "tipo": "literal",
@@ -1587,15 +1721,13 @@
    "titulo": "El Departament d'Interior",
    "tipo": "literal",
    "dificultad": 1,
-   "n": 4,
+   "n": 2,
    "articulos": [
     "guia-mossos:C.2.2",
-    "guia-mossos:C.2.3",
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
+    "guia-mossos:C.2.3"
    ],
    "revision_humana": false,
-   "texto": "4 preguntas de tipo literal (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF, C.2.5",
+   "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3",
    "prioridad": 95.4
   },
   {
@@ -1603,15 +1735,28 @@
    "titulo": "El Departament d'Interior",
    "tipo": "organos",
    "dificultad": 1,
-   "n": 4,
+   "n": 3,
    "articulos": [
     "guia-mossos:C.2.2",
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
+    "guia-mossos:C.2.4"
    ],
    "revision_humana": false,
-   "texto": "4 preguntas de tipo órganos (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF, C.2.5",
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.4",
+   "prioridad": 95.4
+  },
+  {
+   "tema": "C.2",
+   "titulo": "El Departament d'Interior",
+   "tipo": "plazos",
+   "dificultad": 1,
+   "n": 3,
+   "articulos": [
+    "guia-mossos:C.2.4",
+    "guia-mossos:C.2.7"
+   ],
+   "revision_humana": false,
+   "texto": "3 preguntas de tipo plazos (dificultad 1) del tema C.2 sobre los apartados C.2.4, C.2.7",
    "prioridad": 95.4
   },
   {
@@ -1635,11 +1780,11 @@
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
+    "guia-mossos:C.2.4",
+    "guia-mossos:C.2.7"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
+   "texto": "2 preguntas de tipo competencias (dificultad 2) del tema C.2 sobre los apartados C.2.4, C.2.7",
    "prioridad": 95.4
   },
   {
@@ -1678,10 +1823,10 @@
    "n": 2,
    "articulos": [
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.IF"
+    "guia-mossos:C.2.4"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.2 sobre los apartados C.2.3, C.2.IF",
+   "texto": "2 preguntas de tipo procedimiento (dificultad 2) del tema C.2 sobre los apartados C.2.3, C.2.4",
    "prioridad": 95.4
   },
   {
@@ -1691,11 +1836,11 @@
    "dificultad": 2,
    "n": 2,
    "articulos": [
-    "guia-mossos:C.2.IF",
-    "guia-mossos:C.2.5"
+    "guia-mossos:C.2.4",
+    "guia-mossos:C.2.IF"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.2 sobre los apartados C.2.IF, C.2.5",
+   "texto": "2 preguntas de tipo requisitos (dificultad 2) del tema C.2 sobre los apartados C.2.4, C.2.IF",
    "prioridad": 95.4
   },
   {
@@ -1707,10 +1852,10 @@
    "articulos": [
     "guia-mossos:C.2.2",
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.IF"
+    "guia-mossos:C.2.4"
    ],
    "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF",
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.4",
    "prioridad": 95.4
   },
   {
@@ -1722,10 +1867,10 @@
    "articulos": [
     "guia-mossos:C.2.2",
     "guia-mossos:C.2.3",
-    "guia-mossos:C.2.IF"
+    "guia-mossos:C.2.4"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.IF",
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.2 sobre los apartados C.2.2, C.2.3, C.2.4",
    "prioridad": 95.4
   },
   {
@@ -2621,10 +2766,10 @@
    "articulos": [
     "guia-mossos:B.8.2",
     "guia-mossos:B.8.3",
-    "guia-mossos:B.8.1"
+    "guia-mossos:B.8.IF"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo literal (dificultad 1) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.1",
+   "texto": "3 preguntas de tipo literal (dificultad 1) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.IF",
    "prioridad": 93.0
   },
   {
@@ -2636,10 +2781,10 @@
    "articulos": [
     "guia-mossos:B.8.2",
     "guia-mossos:B.8.3",
-    "guia-mossos:B.8.1"
+    "guia-mossos:B.8.IF"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.1",
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.IF",
    "prioridad": 93.0
   },
   {
@@ -2664,10 +2809,10 @@
    "articulos": [
     "guia-mossos:B.8.2",
     "guia-mossos:B.8.3",
-    "guia-mossos:B.8.1"
+    "guia-mossos:B.8.IF"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.1",
+   "texto": "3 preguntas de tipo aplicación (dificultad 2) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.IF",
    "prioridad": 93.0
   },
   {
@@ -2748,10 +2893,10 @@
    "articulos": [
     "guia-mossos:B.8.2",
     "guia-mossos:B.8.3",
-    "guia-mossos:B.8.1"
+    "guia-mossos:B.8.IF"
    ],
    "revision_humana": true,
-   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.1",
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.IF",
    "prioridad": 93.0
   },
   {
@@ -2763,10 +2908,10 @@
    "articulos": [
     "guia-mossos:B.8.2",
     "guia-mossos:B.8.3",
-    "guia-mossos:B.8.1"
+    "guia-mossos:B.8.IF"
    ],
    "revision_humana": false,
-   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.1",
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema B.8 sobre los apartados B.8.2, B.8.3, B.8.IF",
    "prioridad": 93.0
   },
   {
@@ -3036,136 +3181,63 @@
    "prioridad": 91.8
   },
   {
-   "tema": "C.1",
-   "titulo": "Les competències de la Generalitat en matèria de seguretat",
-   "tipo": "literal",
-   "dificultad": 1,
-   "n": 2,
-   "articulos": [
-    "guia-mossos:C.1.IF",
-    "guia-mossos:C.1.1"
-   ],
-   "revision_humana": false,
-   "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.1 sobre los apartados C.1.IF, C.1.1",
-   "prioridad": 89.2
-  },
-  {
-   "tema": "C.1",
-   "titulo": "Les competències de la Generalitat en matèria de seguretat",
-   "tipo": "aplicacion",
-   "dificultad": 2,
-   "n": 1,
-   "articulos": [
-    "guia-mossos:C.1.IF"
-   ],
-   "revision_humana": false,
-   "texto": "1 pregunta de tipo aplicación (dificultad 2) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 89.2
-  },
-  {
-   "tema": "C.1",
-   "titulo": "Les competències de la Generalitat en matèria de seguretat",
-   "tipo": "conceptual",
-   "dificultad": 2,
-   "n": 1,
-   "articulos": [
-    "guia-mossos:C.1.IF"
-   ],
-   "revision_humana": false,
-   "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 89.2
-  },
-  {
-   "tema": "C.1",
-   "titulo": "Les competències de la Generalitat en matèria de seguretat",
-   "tipo": "negativa",
-   "dificultad": 2,
-   "n": 1,
-   "articulos": [
-    "guia-mossos:C.1.IF"
-   ],
-   "revision_humana": false,
-   "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 89.2
-  },
-  {
-   "tema": "C.1",
-   "titulo": "Les competències de la Generalitat en matèria de seguretat",
-   "tipo": "caso_practico",
-   "dificultad": 3,
-   "n": 1,
-   "articulos": [
-    "guia-mossos:C.1.IF"
-   ],
-   "revision_humana": true,
-   "texto": "1 pregunta de tipo caso práctico (dificultad 3) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 89.2
-  },
-  {
-   "tema": "C.1",
-   "titulo": "Les competències de la Generalitat en matèria de seguretat",
-   "tipo": "dificil",
-   "dificultad": 3,
-   "n": 1,
-   "articulos": [
-    "guia-mossos:C.1.IF"
-   ],
-   "revision_humana": false,
-   "texto": "1 pregunta de tipo difícil (dificultad 3) del tema C.1 sobre el apartado C.1.IF",
-   "prioridad": 89.2
-  },
-  {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "literal",
    "dificultad": 1,
-   "n": 2,
+   "n": 4,
    "articulos": [
     "guia-mossos:C.4.1",
-    "lo-2-1986:5"
+    "guia-mossos:C.4.2",
+    "guia-mossos:C.4.3",
+    "guia-mossos:C.4.IF"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.4 sobre los apartados C.4.1, 5",
-   "prioridad": 73.8
+   "texto": "4 preguntas de tipo literal (dificultad 1) del tema C.4 sobre los apartados C.4.1, C.4.2, C.4.3, C.4.IF",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "organos",
    "dificultad": 1,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:C.4.1"
+    "guia-mossos:C.4.1",
+    "guia-mossos:C.4.2",
+    "guia-mossos:C.4.3"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo órganos (dificultad 1) del tema C.4 sobre el apartado C.4.1",
-   "prioridad": 73.8
+   "texto": "3 preguntas de tipo órganos (dificultad 1) del tema C.4 sobre los apartados C.4.1, C.4.2, C.4.3",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "aplicacion",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.4.1"
+    "guia-mossos:C.4.1",
+    "guia-mossos:C.4.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo aplicación (dificultad 2) del tema C.4 sobre el apartado C.4.1",
-   "prioridad": 73.8
+   "texto": "2 preguntas de tipo aplicación (dificultad 2) del tema C.4 sobre los apartados C.4.1, C.4.2",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "comparativa",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
+    "guia-mossos:C.4.IF",
     "lo-2-1986:5"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo comparativa (dificultad 2) del tema C.4 sobre el apartado 5",
-   "prioridad": 73.8
+   "texto": "2 preguntas de tipo comparativa (dificultad 2) del tema C.4 sobre los apartados C.4.IF, 5",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
@@ -3178,20 +3250,21 @@
    ],
    "revision_humana": false,
    "texto": "1 pregunta de tipo competencias (dificultad 2) del tema C.4 sobre el apartado C.4.1",
-   "prioridad": 73.8
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "conceptual",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.4.1"
+    "guia-mossos:C.4.1",
+    "guia-mossos:C.4.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema C.4 sobre el apartado C.4.1",
-   "prioridad": 73.8
+   "texto": "2 preguntas de tipo conceptual (dificultad 2) del tema C.4 sobre los apartados C.4.1, C.4.2",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
@@ -3200,24 +3273,25 @@
    "dificultad": 2,
    "n": 1,
    "articulos": [
-    "lo-2-1986:5"
+    "guia-mossos:C.4.3"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo excepción (dificultad 2) del tema C.4 sobre el apartado 5",
-   "prioridad": 73.8
+   "texto": "1 pregunta de tipo excepción (dificultad 2) del tema C.4 sobre el apartado C.4.3",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "negativa",
    "dificultad": 2,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.4.1"
+    "guia-mossos:C.4.1",
+    "guia-mossos:C.4.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.4 sobre el apartado C.4.1",
-   "prioridad": 73.8
+   "texto": "2 preguntas de tipo negativa (dificultad 2) del tema C.4 sobre los apartados C.4.1, C.4.2",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
@@ -3226,38 +3300,53 @@
    "dificultad": 2,
    "n": 1,
    "articulos": [
-    "lo-2-1986:5"
+    "guia-mossos:C.4.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo procedimiento (dificultad 2) del tema C.4 sobre el apartado 5",
-   "prioridad": 73.8
+   "texto": "1 pregunta de tipo procedimiento (dificultad 2) del tema C.4 sobre el apartado C.4.2",
+   "prioridad": 83.8
+  },
+  {
+   "tema": "C.4",
+   "titulo": "El marc legal de la seguretat",
+   "tipo": "requisitos",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.4.1"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo requisitos (dificultad 2) del tema C.4 sobre el apartado C.4.1",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "caso_practico",
    "dificultad": 3,
-   "n": 2,
+   "n": 3,
    "articulos": [
     "guia-mossos:C.4.1",
-    "lo-2-1986:5"
+    "guia-mossos:C.4.2",
+    "guia-mossos:C.4.3"
    ],
    "revision_humana": true,
-   "texto": "2 preguntas de tipo caso práctico (dificultad 3) del tema C.4 sobre los apartados C.4.1, 5",
-   "prioridad": 73.8
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.4 sobre los apartados C.4.1, C.4.2, C.4.3",
+   "prioridad": 83.8
   },
   {
    "tema": "C.4",
    "titulo": "El marc legal de la seguretat",
    "tipo": "dificil",
    "dificultad": 3,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.4.1"
+    "guia-mossos:C.4.1",
+    "guia-mossos:C.4.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo difícil (dificultad 3) del tema C.4 sobre el apartado C.4.1",
-   "prioridad": 73.8
+   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.4 sobre los apartados C.4.1, C.4.2",
+   "prioridad": 83.8
   },
   {
    "tema": "C.5",
@@ -3389,13 +3478,14 @@
    "titulo": "La coordinació policial",
    "tipo": "literal",
    "dificultad": 1,
-   "n": 1,
+   "n": 2,
    "articulos": [
-    "guia-mossos:C.3.4"
+    "guia-mossos:C.3.1",
+    "guia-mossos:C.3.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo literal (dificultad 1) del tema C.3 sobre el apartado C.3.4",
-   "prioridad": 46.2
+   "texto": "2 preguntas de tipo literal (dificultad 1) del tema C.3 sobre los apartados C.3.1, C.3.2",
+   "prioridad": 66.2
   },
   {
    "tema": "C.3",
@@ -3404,11 +3494,76 @@
    "dificultad": 1,
    "n": 1,
    "articulos": [
-    "guia-mossos:C.3.4"
+    "guia-mossos:C.3.1"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo órganos (dificultad 1) del tema C.3 sobre el apartado C.3.4",
-   "prioridad": 46.2
+   "texto": "1 pregunta de tipo órganos (dificultad 1) del tema C.3 sobre el apartado C.3.1",
+   "prioridad": 66.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "plazos",
+   "dificultad": 1,
+   "n": 2,
+   "articulos": [
+    "guia-mossos:C.3.2"
+   ],
+   "revision_humana": false,
+   "texto": "2 preguntas de tipo plazos (dificultad 1) del tema C.3 sobre el apartado C.3.2",
+   "prioridad": 66.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "aplicacion",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.1"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo aplicación (dificultad 2) del tema C.3 sobre el apartado C.3.1",
+   "prioridad": 66.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "comparativa",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.IF"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo comparativa (dificultad 2) del tema C.3 sobre el apartado C.3.IF",
+   "prioridad": 66.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "competencias",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.1"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo competencias (dificultad 2) del tema C.3 sobre el apartado C.3.1",
+   "prioridad": 66.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "conceptual",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.1"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo conceptual (dificultad 2) del tema C.3 sobre el apartado C.3.1",
+   "prioridad": 66.2
   },
   {
    "tema": "C.3",
@@ -3417,11 +3572,11 @@
    "dificultad": 2,
    "n": 1,
    "articulos": [
-    "guia-mossos:C.3.4"
+    "guia-mossos:C.3.1"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.3 sobre el apartado C.3.4",
-   "prioridad": 46.2
+   "texto": "1 pregunta de tipo negativa (dificultad 2) del tema C.3 sobre el apartado C.3.1",
+   "prioridad": 66.2
   },
   {
    "tema": "C.3",
@@ -3430,39 +3585,54 @@
    "dificultad": 2,
    "n": 1,
    "articulos": [
-    "guia-mossos:C.3.4"
+    "guia-mossos:C.3.2"
    ],
    "revision_humana": false,
-   "texto": "1 pregunta de tipo procedimiento (dificultad 2) del tema C.3 sobre el apartado C.3.4",
-   "prioridad": 46.2
+   "texto": "1 pregunta de tipo procedimiento (dificultad 2) del tema C.3 sobre el apartado C.3.2",
+   "prioridad": 66.2
+  },
+  {
+   "tema": "C.3",
+   "titulo": "La coordinació policial",
+   "tipo": "requisitos",
+   "dificultad": 2,
+   "n": 1,
+   "articulos": [
+    "guia-mossos:C.3.1"
+   ],
+   "revision_humana": false,
+   "texto": "1 pregunta de tipo requisitos (dificultad 2) del tema C.3 sobre el apartado C.3.1",
+   "prioridad": 66.2
   },
   {
    "tema": "C.3",
    "titulo": "La coordinació policial",
    "tipo": "caso_practico",
    "dificultad": 3,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:C.3.1",
+    "guia-mossos:C.3.2",
+    "guia-mossos:C.3.3"
    ],
    "revision_humana": true,
-   "texto": "2 preguntas de tipo caso práctico (dificultad 3) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 46.2
+   "texto": "3 preguntas de tipo caso práctico (dificultad 3) del tema C.3 sobre los apartados C.3.1, C.3.2, C.3.3",
+   "prioridad": 66.2
   },
   {
    "tema": "C.3",
    "titulo": "La coordinació policial",
    "tipo": "dificil",
    "dificultad": 3,
-   "n": 2,
+   "n": 3,
    "articulos": [
-    "guia-mossos:C.3.4",
-    "guia-mossos:C.3.5"
+    "guia-mossos:C.3.1",
+    "guia-mossos:C.3.2",
+    "guia-mossos:C.3.3"
    ],
    "revision_humana": false,
-   "texto": "2 preguntas de tipo difícil (dificultad 3) del tema C.3 sobre los apartados C.3.4, C.3.5",
-   "prioridad": 46.2
+   "texto": "3 preguntas de tipo difícil (dificultad 3) del tema C.3 sobre los apartados C.3.1, C.3.2, C.3.3",
+   "prioridad": 66.2
   }
  ],
  "bloqueados": [
@@ -3473,13 +3643,8 @@
    "apartados": []
   }
  ],
- "total_necesario": 460,
+ "total_necesario": 490,
  "gaps_fuente": [
-  "D",
-  "B.8 (1 apartados)",
-  "C.1 (1 apartados)",
-  "C.2 (2 apartados)",
-  "C.3 (4 apartados)",
-  "C.4 (3 apartados)"
+  "D"
  ]
 }

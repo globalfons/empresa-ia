@@ -8,9 +8,9 @@ Estados: **OFFICIAL_EXAM** = pregunta de un examen oficial · **OFFICIAL_VERIFIE
 
 | área | contenido servido | en revisión | retirado | oficial |
 |---|---|---|---|---|
-| Conocimientos | 99 TestLey | 14 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
-| Aptitud | generadores: 9 formatos × 3 dificultades | 0 | 0 | estructura (80 preguntas, 35 min); sin ejercicios oficiales |
-| Competencias | 60 situaciones + 10 fichas | 0 | 0 | 10 nombres de competencias |
+| Conocimientos | 109 TestLey | 14 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
+| Aptitud | generadores: 11 formatos × 3 dificultades | 0 | 0 | estructura (80 preguntas, 35 min); sin ejercicios oficiales |
+| Competencias | 45 situaciones + 9 fichas | 15 | 0 | 10 nombres de competencias |
 | Entrevista | 56 escenarios | 29 | 0 | objeto de la entrevista y 10 competencias |
 | Idiomas | 0 | 0 | 0 | requisito C1, estructura de la prueba e idiomas voluntarios |
 | Física | — (Fase 4) | 0 | 0 | 3 pruebas con barems verificados |
@@ -28,18 +28,18 @@ Formato oficial del simulacro: 30 preguntas, 35 min, penalización 0.25. Peso de
 | A.5 Marc geogràfic de Catalunya | 7 (7) | 3 | 0 | 0 | 12 / 0 / 0 | 4.7% | 60 | 15 | 12 | P1 |
 | A.6 Entorn social a Catalunya | 6 (6) | 2 | 1 | 0 | 9 / 1 / 0 | 3.9% | 60 | 12 | 10 | P1 |
 | A.7 Les tecnologies de la informació e | 7 (7) | 2 | 1 | 0 | 8 / 0 / 0 | 3.1% | 66 | 14 | 12 | P1 |
-| B.1 L'Estatut d'autonomia de Catalunya | 6 (6) | 2 | 1 | 0 | 4 / 2 / 0 | 2.3% | 53 | 12 | 10 | P0 |
+| B.1 L'Estatut d'autonomia de Catalunya | 6 (6) | 5 | 1 | 0 | 4 / 2 / 0 | 2.3% | 53 | 12 | 7 | P0 |
 | B.2 Les institucions polítiques de Cat | 6 (6) | 2 | 0 | 1 | 20 / 0 / 0 | 7.8% | 58 | 24 | 22 | P1 |
 | B.3 L'ordenament jurídic de l'Estat | 32 (32) | 35 | 0 | 0 | 11 / 0 / 0 | 4.3% | 101 | 64 | 29 | P2 |
 | B.4 Els drets humans i els drets const | 9 (9) | 3 | 0 | 0 | 11 / 1 / 0 | 4.7% | 85 | 18 | 15 | P1 |
-| B.5 Les institucions polítiques de l'E | 5 (5) | 0 | 3 | 0 | 5 / 0 / 0 | 1.9% | 45 | 10 | 10 | P0 |
+| B.5 Les institucions polítiques de l'E | 5 (5) | 4 | 3 | 0 | 5 / 0 / 0 | 1.9% | 45 | 10 | 6 | P0 |
 | B.6 Els òrgans jurisdiccionals. Poder  | 5 (5) | 3 | 0 | 0 | 11 / 0 / 0 | 4.3% | 46 | 13 | 10 | P1 |
 | B.7 L'organització territorial de l'Es | 8 (8) | 2 | 1 | 0 | 8 / 0 / 0 | 3.1% | 56 | 16 | 14 | P1 |
-| B.8 La Unió Europea | 4 (3) | 3 | 0 | 0 | 11 / 1 / 0 | 4.7% | 30 | 15 | 12 | P1 |
-| C.1 Les competències de la Generalitat | 3 (2) | 1 | 0 | 1 | 6 / 1 / 0 | 2.7% | 8 | 8 | 7 | P0 |
-| C.2 El Departament d'Interior | 8 (6) | 4 | 1 | 0 | 23 / 9 / 3 | 13.6% | 38 | 38 | 34 | P1 |
-| C.3 La coordinació policial | 6 (2) | 12 | 3 | 0 | 22 / 3 / 0 | 9.7% | 20 | 20 | 8 | P2 |
-| C.4 El marc legal de la seguretat | 5 (2) | 6 | 0 | 0 | 14 / 1 / 0 | 5.8% | 20 | 18 | 12 | P1 |
+| B.8 La Unió Europea | 4 (4) | 3 | 0 | 0 | 11 / 1 / 0 | 4.7% | 39 | 15 | 12 | P1 |
+| C.1 Les competències de la Generalitat | 3 (3) | 4 | 0 | 1 | 6 / 1 / 0 | 2.7% | 18 | 9 | 5 | P1 |
+| C.2 El Departament d'Interior | 8 (8) | 4 | 1 | 0 | 23 / 9 / 3 | 13.6% | 58 | 41 | 37 | P1 |
+| C.3 La coordinació policial | 6 (6) | 12 | 3 | 0 | 22 / 3 / 0 | 9.7% | 60 | 30 | 18 | P1 |
+| C.4 El marc legal de la seguretat | 5 (5) | 6 | 0 | 0 | 14 / 1 / 0 | 5.8% | 50 | 18 | 12 | P1 |
 | C.5 El Codi deontològic policial | 4 (4) | 9 | 2 | 1 | 4 / 0 / 0 | 1.6% | 26 | 8 | 0 | P3 |
 | D Coneixement de l'entorn polític, e | 0 (0) | 0 | 0 | 0 | 0 / 0 / 0 | 0.0% | 0 | 0 | 0 | P1 |
 
@@ -54,18 +54,18 @@ Formato oficial del simulacro: 30 preguntas, 35 min, penalización 0.25. Peso de
 | A.5 | A.5.2, A.5.3, A.5.4, A.5.5, A.5.6, A.5.IF | — | — | — | literal, conceptual, caso_practico |
 | A.6 | A.6.2, A.6.3, A.6.4, A.6.5, A.6.IF | — | — | — | literal, aplicacion, negativa, dificil, caso_practico |
 | A.7 | A.7.2, A.7.3, A.7.4, A.7.5, A.7.6, A.7.IF | — | — | — | conceptual, aplicacion, negativa, dificil, caso_practico |
-| B.1 | B.1.2, B.1.3, B.1.4, B.1.5, B.1.IF | — | — | — | literal, aplicacion, negativa, dificil, caso_practico |
+| B.1 | B.1.3, B.1.4, B.1.5, B.1.IF | — | — | — | aplicacion, negativa, dificil, caso_practico |
 | B.2 | B.2.2, B.2.3, B.2.4, B.2.5, B.2.IF | — | — | — | literal, conceptual, aplicacion, dificil, caso_practico |
-| B.3 | B.3.1, B.3.2, B.3.3, B.3.4, B.3.5, B.3.6, B.3.IF, 83, 84, 88, 89, 92 | — | 1, 2, 3, 7, 8, 9, 95, 96 | sí: 35% del banco TestLey frente a 4% del examen | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
+| B.3 | B.3.1, B.3.2, B.3.3, B.3.4, B.3.5, B.3.6, B.3.IF, 83, 84, 88, 89, 92 | — | 1, 2, 3, 7, 8, 9, 95, 96 | sí: 32% del banco TestLey frente a 4% del examen | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
 | B.4 | B.4.2, B.4.3, B.4.4, B.4.5, B.4.6, B.4.7, B.4.8, B.4.IF | — | — | — | negativa, dificil, caso_practico |
-| B.5 | B.5.1, B.5.2, B.5.3, B.5.4, B.5.IF | — | — | — | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
+| B.5 | B.5.2, B.5.3, B.5.4, B.5.IF | — | — | — | conceptual, negativa, dificil, caso_practico |
 | B.6 | B.6.2, B.6.3, B.6.4, B.6.IF | — | — | — | literal, conceptual, negativa, dificil, caso_practico |
 | B.7 | B.7.2, B.7.3, B.7.4, B.7.5, B.7.6, B.7.7, B.7.IF | — | — | — | literal, aplicacion, negativa, caso_practico |
-| B.8 | B.8.2, B.8.3 | B.8.IF | — | — | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
-| C.1 | C.1.IF | C.1.2 | — | — | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
-| C.2 | C.2.2, C.2.3, C.2.IF | C.2.4, C.2.7 | — | — | conceptual, aplicacion, dificil, caso_practico |
-| C.3 | — | C.3.1, C.3.2, C.3.3, C.3.IF | — | — | dificil, caso_practico |
-| C.4 | C.4.1 | C.4.2, C.4.3, C.4.IF | — | — | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
+| B.8 | B.8.2, B.8.3, B.8.IF | — | — | — | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
+| C.1 | C.1.IF | — | — | — | conceptual, negativa, dificil, caso_practico |
+| C.2 | C.2.2, C.2.3, C.2.4, C.2.7, C.2.IF | — | — | — | conceptual, aplicacion, dificil, caso_practico |
+| C.3 | C.3.1, C.3.2, C.3.3, C.3.IF | — | — | — | dificil, caso_practico |
+| C.4 | C.4.1, C.4.2, C.4.3, C.4.IF | — | 5 | — | literal, conceptual, aplicacion, negativa, dificil, caso_practico |
 | C.5 | C.5.IF | — | — | — | aplicacion, dificil, caso_practico |
 | D | — | — | — | — | — |
 
@@ -77,7 +77,7 @@ Oficial (OFFICIAL_VERIFIED): 80 preguntas, 35 min, sin penalización, mínimo 5;
 |---|---|---|---|---|---|---|---|
 | abstract | serie_figuras | 1-3 | 0 | 1818 | 0 | un solo formato de ejercicio | P2 |
 | spatial | rotacion | 1-3 | 0 | 1685 | 0 | un solo formato de ejercicio | P2 |
-| verbal | serie_letras, orden_alfabetico | 1-3 | 0 | 1249 | 0 | solo formatos formales (series de letras, orden alfabético): sin vocabulario, sinónimos, antónimos, analogías ni comprensión; las bases solo dicen «aptitud verbal», no publican formatos | P1 |
+| verbal | serie_letras, orden_alfabetico, anagrama, codificacion | 1-3 | 0 | 1249 | 0 | solo formatos formales (series de letras, orden alfabético): sin vocabulario, sinónimos, antónimos, analogías ni comprensión; las bases solo dicen «aptitud verbal», no publican formatos | P1 |
 | numerical | serie, porcentaje, proporcion | 1-3 | 0 | 1022 | 0 | — | P3 |
 | perceptive | pares_identicos, contar_simbolo | 1-3 | 0 | 2000 | 0 | — | P3 |
 
@@ -87,16 +87,16 @@ Lotes publicados: C00002 · modelos del juez: claude-haiku-4-5 · **requiere rec
 
 | competencia oficial | ficha VALID | situaciones | VALID | REVIEW | formatos | ítems de autoevaluación | objetivo | faltan |
 |---|---|---|---|---|---|---|---|---|
-| Responsabilitat i orientació a la qualitat | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
+| Responsabilitat i orientació a la qualitat | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
 | Cooperació i treball en equip | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Autonomia i iniciativa | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Resolució de problemes | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Orientació de servei a les persones | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Adaptabilitat i flexibilitat | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Autocontrol i resistència a la pressió | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Autogestió i desenvolupament personal | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Motivació i identificació amb l'organització | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Habilitats socials i comunicatives | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
+| Autonomia i iniciativa | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
+| Resolució de problemes | 1 | 4 | 4 | 2 | {'eleccion': 4} | 2 | 6 | 2 |
+| Orientació de servei a les persones | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
+| Adaptabilitat i flexibilitat | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
+| Autocontrol i resistència a la pressió | 1 | 5 | 5 | 1 | {'eleccion': 4, 'ranking': 1} | 2 | 6 | 1 |
+| Autogestió i desenvolupament personal | 1 | 5 | 5 | 1 | {'eleccion': 4, 'ranking': 1} | 2 | 6 | 1 |
+| Motivació i identificació amb l'organització | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
+| Habilitats socials i comunicatives | 0 | 5 | 5 | 1 | {'eleccion': 4, 'ranking': 1} | 0 | 6 | 1 |
 
 ## 4. Interview
 
@@ -142,7 +142,7 @@ Lo que necesitará la Fase 4: registro de marcas por prueba e intento; puntuaci�
 
 ## 7. Simulations
 
-- Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **0** (limitan: B.5, B.2, A.1, C.2, A.2); mezclando TestLey y oficiales: 6; sin respetar el reparto: 12. Objetivo: 10.
+- Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **0** (limitan: B.2, A.1, C.2, A.2, A.4); mezclando TestLey y oficiales: 6; sin respetar el reparto: 12. Objetivo: 10.
 - Aptitud: práctica cronometrada al ritmo oficial con ejercicios generados (ilimitada); NO es una réplica de la subprueba: las bases no publican el reparto por aptitudes y la verbal es parcial.
 - Entrevista: 5 simulaciones completas sin repetir escenario (limitan: responsabilitat, adaptabilitat, motivacio, habilitats-socials); objetivo 6.
 - Primera prueba completa: no disponible: combinaría conocimientos (simulable), aptitudinal (solo práctica) e idiomas (sin contenido).
@@ -163,35 +163,35 @@ Cómo se calcula cada objetivo:
 | KNOWLEDGE | A.5 Marc geogràfic de Catalunya | 3 | 3 | 0 | 12 | 15 | 12 | P1 |
 | KNOWLEDGE | A.6 Entorn social a Catalunya | 3 | 2 | 1 | 9 | 12 | 10 | P1 |
 | KNOWLEDGE | A.7 Les tecnologies de la informació en el | 3 | 2 | 1 | 8 | 14 | 12 | P1 |
-| KNOWLEDGE | B.1 L'Estatut d'autonomia de Catalunya (EA | 3 | 2 | 1 | 4 | 12 | 10 | P0 |
+| KNOWLEDGE | B.1 L'Estatut d'autonomia de Catalunya (EA | 6 | 5 | 1 | 4 | 12 | 7 | P0 |
 | KNOWLEDGE | B.2 Les institucions polítiques de Catalun | 3 | 2 | 0 | 20 | 24 | 22 | P1 |
 | KNOWLEDGE | B.3 L'ordenament jurídic de l'Estat | 35 | 35 | 0 | 11 | 64 | 29 | P2 |
 | KNOWLEDGE | B.4 Els drets humans i els drets constituc | 3 | 3 | 0 | 11 | 18 | 15 | P1 |
-| KNOWLEDGE | B.5 Les institucions polítiques de l'Estat | 3 | 0 | 3 | 5 | 10 | 10 | P0 |
+| KNOWLEDGE | B.5 Les institucions polítiques de l'Estat | 7 | 4 | 3 | 5 | 10 | 6 | P0 |
 | KNOWLEDGE | B.6 Els òrgans jurisdiccionals. Poder judi | 3 | 3 | 0 | 11 | 13 | 10 | P1 |
 | KNOWLEDGE | B.7 L'organització territorial de l'Estat | 3 | 2 | 1 | 8 | 16 | 14 | P1 |
 | KNOWLEDGE | B.8 La Unió Europea | 3 | 3 | 0 | 11 | 15 | 12 | P1 |
-| KNOWLEDGE | C.1 Les competències de la Generalitat en  | 2 | 1 | 0 | 6 | 8 | 7 | P0 |
-| KNOWLEDGE | C.2 El Departament d'Interior | 5 | 4 | 1 | 23 | 38 | 34 | P1 |
-| KNOWLEDGE | C.3 La coordinació policial | 15 | 12 | 3 | 22 | 20 | 8 | P2 |
+| KNOWLEDGE | C.1 Les competències de la Generalitat en  | 5 | 4 | 0 | 6 | 9 | 5 | P1 |
+| KNOWLEDGE | C.2 El Departament d'Interior | 5 | 4 | 1 | 23 | 41 | 37 | P1 |
+| KNOWLEDGE | C.3 La coordinació policial | 15 | 12 | 3 | 22 | 30 | 18 | P1 |
 | KNOWLEDGE | C.4 El marc legal de la seguretat | 6 | 6 | 0 | 14 | 18 | 12 | P1 |
 | KNOWLEDGE | C.5 El Codi deontològic policial | 12 | 9 | 2 | 4 | 8 | 0 | P3 |
 | KNOWLEDGE | D Coneixement de l'entorn polític, econò | 0 | 0 | 0 | 0 | 0 | 0 | P1 |
 | APTITUDE | abstract | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
 | APTITUDE | spatial | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
-| APTITUDE | verbal | 2 | 2 | 0 | 0 | formatos semánticos | solo formatos formales (series de letras, orden alfabético): sin vocabulario, sinónimos, antónimos, analogías ni comprensión; las bases solo dicen «aptitud verbal», no publican formatos | P1 |
+| APTITUDE | verbal | 4 | 4 | 0 | 0 | formatos semánticos | solo formatos formales (series de letras, orden alfabético): sin vocabulario, sinónimos, antónimos, analogías ni comprensión; las bases solo dicen «aptitud verbal», no publican formatos | P1 |
 | APTITUDE | numerical | 3 | 3 | 0 | 0 | formatos | — | P3 |
 | APTITUDE | perceptive | 2 | 2 | 0 | 0 | formatos | — | P3 |
-| COMPETENCIES | responsabilitat | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
+| COMPETENCIES | responsabilitat | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
 | COMPETENCIES | cooperacio | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | autonomia | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | resolucio-problemes | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | orientacio-servei | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | adaptabilitat | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | autocontrol | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | autogestio | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | motivacio | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | habilitats-socials | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
+| COMPETENCIES | autonomia | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
+| COMPETENCIES | resolucio-problemes | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
+| COMPETENCIES | orientacio-servei | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
+| COMPETENCIES | adaptabilitat | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
+| COMPETENCIES | autocontrol | 5 | 5 | 1 | nombre | 6 | 1 | P1 |
+| COMPETENCIES | autogestio | 5 | 5 | 1 | nombre | 6 | 1 | P1 |
+| COMPETENCIES | motivacio | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
+| COMPETENCIES | habilitats-socials | 5 | 5 | 1 | nombre | 6 | 1 | P1 |
 | INTERVIEW | responsabilitat | 12 | 5 | 5 | nombre | 6 | 1 | P1 |
 | INTERVIEW | cooperacio | 7 | 6 | 1 | nombre | 6 | 0 | P3 |
 | INTERVIEW | autonomia | 10 | 6 | 2 | nombre | 6 | 0 | P3 |
@@ -210,6 +210,5 @@ Cómo se calcula cada objetivo:
 
 - KNOWLEDGE B.1 L'Estatut d'autonomia de Catalunya (EA: menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema
 - KNOWLEDGE B.5 Les institucions polítiques de l'Estat: menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema
-- KNOWLEDGE C.1 Les competències de la Generalitat en : menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema
 
 

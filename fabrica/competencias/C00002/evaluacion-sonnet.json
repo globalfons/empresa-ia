@@ -1,0 +1,1457 @@
+{
+ "lote": "C00002",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "judge_prompt": "fabrica/prompts/juez-competencias-v1.txt",
+ "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+ "candidatas_sha256": "10201257fe25425e1d8188a0b1c2c5dd90f98eea85bc9fe0c30701bf395a586d",
+ "ronda": "sonnet",
+ "creada_el": "2026-10-05T23:01:08",
+ "politica": "juez-competencias-v2",
+ "politica_sha256": "eb84d1a0320906b22436254dfdea68c4eb1ca8d6f9ed0a7ab9cd206876e357ac",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ficha-responsabilitat",
+    "ficha-cooperacio",
+    "ficha-autonomia",
+    "ficha-resolucio-problemes",
+    "ficha-orientacio-servei",
+    "ficha-adaptabilitat",
+    "ficha-autocontrol",
+    "ficha-autogestio",
+    "ficha-motivacio",
+    "ficha-habilitats-socials"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-01.json",
+   "prompt_sha256": "e29d1830d7de10c9ea0e29a764bcf207fa403ede566f4f0b6a5d20b56d62182d",
+   "huellas": {
+    "ficha-responsabilitat": "4491fa1a02df40a2735b72b5992fc616403420e0cd2e6f3092f43d50d5726b24",
+    "ficha-cooperacio": "ac032d85d89810eeb829df32229028a0c7cd971bb2c1af9575879ee1aa2934e8",
+    "ficha-autonomia": "879446f801035730713293e63e2b8c14821a43ae540d1b6fd46d14a2f6df3e37",
+    "ficha-resolucio-problemes": "aae0536a9e14e87540785d07b31aa5c6841c086f8e213e83fb6351338be071e4",
+    "ficha-orientacio-servei": "ceff41821603d99a16d1c57fbd78ca50ad5d7445fe6c6976de7973dccde44325",
+    "ficha-adaptabilitat": "2919060929792a620806ed2e991698e97d7ccd5b74a174c0a6d395b65194e395",
+    "ficha-autocontrol": "ec1bcbf04e4b5838bfebe35ac7476a8c6aa3f4b26d0d62465edd4636ddbb43b7",
+    "ficha-autogestio": "2d6504ab5defb16430ef3c4af0a477f8398fc9368ccdbf2f6895a0ea49c5fa94",
+    "ficha-motivacio": "6398e7d5bb33f693c812145abc9d34e768550cea705d8376a846cbc80d71a1d0",
+    "ficha-habilitats-socials": "69e85f9af7639593aff3e15e7f137c4cf4bb5db80ee9e5863f8913ca0b40ee7f"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "ficha-responsabilitat",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Definició clara i coherent amb la competència. Els quatre comportaments (complir terminis o avisar, reconèixer errors, revisar la feina, cuidar el material) són observables i propis de responsabilitat i qualitat. L'ítem invertit (preferir callar un error propi que passa desapercebut) expressa la tendència contrària a l'ítem directe. Cap frase presenta el contingut com a criteri oficial ni promet aprovar: 'Pot aparèixer' és prudent. No diagnostica ni etiqueta personalitat.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-cooperacio",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Els comportaments (oferir ajuda, compartir informació, acceptar decisions de grup, coordinar-se amb altres torns) descriuen bé la cooperació. L'ítem invertit (fer la pròpia part sol encara que el grup se'n ressenti) és clarament l'oposat de l'ítem directe i no és ambigu. Redacció correcta en català i sense afirmacions oficials ni etiquetatge psicològic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-autonomia",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La definició equilibra iniciativa i límits de la funció ('informant qui correspon'), cosa que evita fomentar l'actuació temerària. Els comportaments inclouen informar el responsable, i això és coherent. L'ítem invertit (esperar que algú altre decideixi davant d'un imprevist) expressa la tendència contrària. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-resolucio-problemes",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Els comportaments (buscar la causa, valorar alternatives, prioritzar, pla B) descriuen la resolució de problemes. L'ítem invertit és l'oposat de l'ítem directe, tot i que és una mica doble ('em bloquejo o actuo sense pensar'); no n'invalida l'ús perquè ambdues opcions són contràries a analitzar alternatives. Redacció clara, sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-orientacio-servei",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Els comportaments (escoltar, tractar tothom amb el mateix respecte, oferir alternatives, comprovar que s'ha entès) corresponen a l'orientació de servei. L'ítem invertit (respondre breument per treure's algú de sobre) és l'oposat de l'ítem directe. Text coherent, sense afirmacions oficials ni etiquetatge de personalitat.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-adaptabilitat",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La definició i els comportaments (acceptar canvis, demanar informació, aprendre sistemes nous, reorganitzar-se) són propis d'adaptabilitat. L'ítem invertit (costar treballar de manera diferent a l'habitual) és l'oposat de l'ítem directe. Sense referències oficials ni diagnòstic; redacció correcta.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-autocontrol",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Els comportaments (to serè, no respondre a provocacions, prioritzar amb calma, esperar el moment per al desacord) descriuen l'autocontrol sota pressió. L'ítem invertit (respondre impulsivament sota pressió i penedir-se'n) és l'oposat de l'ítem directe i descriu conducta, no un trastorn ni un tret; no hi ha etiquetes clíniques. Preparació pràctica i prudent; sense afirmacions oficials.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-autogestio",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Els comportaments (planificar, demanar opinions, revisar el progrés, buscar formació) són coherents amb l'autogestió i el desenvolupament personal. L'ítem invertit (ignorar les crítiques) expressa la tendència contrària a demanar i aplicar opinions, tot i que no és l'oposat literal de l'ítem directe (que parla de revisar què millorar). Es considera acceptable perquè ambdós es mouen dins la mateixa competència. Sense afirmacions oficials ni diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-motivacio",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La fitxa treballa motius propis, coneixement de la funció de servei públic i constància, i això és pertinent per a 'identificació amb l'organització'. Els comportaments, inclosa la sinceritat en explicar els motius, eviten induir respostes ensajades. L'ítem invertit (deixar la preparació davant d'una altra feina semblant) expressa baixa vinculació i és l'oposat de l'ítem directe. No presenta contingut com a criteri oficial ni promet res; sense diagnòstic.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ficha-habilitats-socials",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Els comportaments (escolta activa, adaptar el llenguatge, desacord respectuós, males notícies amb empatia) són correctes. El problema és l'autoavaluació: l'ítem invertit penalitza 'deixar-ho per escrit' en converses incòmodes, però comunicar per escrit pot ser una opció legítima i professional, de manera que l'ítem no expressa amb claredat la tendència contrària. A més, l'ítem directe parla de facilitat per explicar-se i l'invertit d'evitar converses, de manera que no són oposats i mesuren coses diferents. Cal reformular l'ítem invertit, per exemple només 'evito les converses incòmodes'. La resta de criteris (relació amb la competència, absència d'afirmacions oficials i de diagnòstic) és correcta; 'Es fa evident en la mateixa conversa' és assertiu però no oficial.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a66bf6407c577d7a3.jsonl",
+    "respuesta_sha256": "9069bed8d9f51a86f7a7a27f550aa5a953b4e14b93a86624ef67badbc98c3343"
+   },
+   "registrada_el": "2026-10-05T23:02:19",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:02:19",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a66bf6407c577d7a3.jsonl",
+      "respuesta_sha256": "9069bed8d9f51a86f7a7a27f550aa5a953b4e14b93a86624ef67badbc98c3343"
+     },
+     "respuesta": "[\n{\"item_id\":\"ficha-responsabilitat\",\"verdict\":\"VALID\",\"reason\":\"Definició clara i coherent amb la competència. Els quatre comportaments (complir terminis o avisar, reconèixer errors, revisar la feina, cuidar el material) són observables i propis de responsabilitat i qualitat. L'ítem invertit (preferir callar un error propi que passa desapercebut) expressa la tendència contrària a l'ítem directe. Cap frase presenta el contingut com a criteri oficial ni promet aprovar: 'Pot aparèixer' és prudent. No diagnostica ni etiqueta personalitat.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-cooperacio\",\"verdict\":\"VALID\",\"reason\":\"Els comportaments (oferir ajuda, compartir informació, acceptar decisions de grup, coordinar-se amb altres torns) descriuen bé la cooperació. L'ítem invertit (fer la pròpia part sol encara que el grup se'n ressenti) és clarament l'oposat de l'ítem directe i no és ambigu. Redacció correcta en català i sense afirmacions oficials ni etiquetatge psicològic.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-autonomia\",\"verdict\":\"VALID\",\"reason\":\"La definició equilibra iniciativa i límits de la funció ('informant qui correspon'), cosa que evita fomentar l'actuació temerària. Els comportaments inclouen informar el responsable, i això és coherent. L'ítem invertit (esperar que algú altre decideixi davant d'un imprevist) expressa la tendència contrària. Sense afirmacions oficials ni diagnòstic.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-resolucio-problemes\",\"verdict\":\"VALID\",\"reason\":\"Els comportaments (buscar la causa, valorar alternatives, prioritzar, pla B) descriuen la resolució de problemes. L'ítem invertit és l'oposat de l'ítem directe, tot i que és una mica doble ('em bloquejo o actuo sense pensar'); no n'invalida l'ús perquè ambdues opcions són contràries a analitzar alternatives. Redacció clara, sense afirmacions oficials ni diagnòstic.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-orientacio-servei\",\"verdict\":\"VALID\",\"reason\":\"Els comportaments (escoltar, tractar tothom amb el mateix respecte, oferir alternatives, comprovar que s'ha entès) corresponen a l'orientació de servei. L'ítem invertit (respondre breument per treure's algú de sobre) és l'oposat de l'ítem directe. Text coherent, sense afirmacions oficials ni etiquetatge de personalitat.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-adaptabilitat\",\"verdict\":\"VALID\",\"reason\":\"La definició i els comportaments (acceptar canvis, demanar informació, aprendre sistemes nous, reorganitzar-se) són propis d'adaptabilitat. L'ítem invertit (costar treballar de manera diferent a l'habitual) és l'oposat de l'ítem directe. Sense referències oficials ni diagnòstic; redacció correcta.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-autocontrol\",\"verdict\":\"VALID\",\"reason\":\"Els comportaments (to serè, no respondre a provocacions, prioritzar amb calma, esperar el moment per al desacord) descriuen l'autocontrol sota pressió. L'ítem invertit (respondre impulsivament sota pressió i penedir-se'n) és l'oposat de l'ítem directe i descriu conducta, no un trastorn ni un tret; no hi ha etiquetes clíniques. Preparació pràctica i prudent; sense afirmacions oficials.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-autogestio\",\"verdict\":\"VALID\",\"reason\":\"Els comportaments (planificar, demanar opinions, revisar el progrés, buscar formació) són coherents amb l'autogestió i el desenvolupament personal. L'ítem invertit (ignorar les crítiques) expressa la tendència contrària a demanar i aplicar opinions, tot i que no és l'oposat literal de l'ítem directe (que parla de revisar què millorar). Es considera acceptable perquè ambdós es mouen dins la mateixa competència. Sense afirmacions oficials ni diagnòstic.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-motivacio\",\"verdict\":\"VALID\",\"reason\":\"La fitxa treballa motius propis, coneixement de la funció de servei públic i constància, i això és pertinent per a 'identificació amb l'organització'. Els comportaments, inclosa la sinceritat en explicar els motius, eviten induir respostes ensajades. L'ítem invertit (deixar la preparació davant d'una altra feina semblant) expressa baixa vinculació i és l'oposat de l'ítem directe. No presenta contingut com a criteri oficial ni promet res; sense diagnòstic.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ficha-habilitats-socials\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Els comportaments (escolta activa, adaptar el llenguatge, desacord respectuós, males notícies amb empatia) són correctes. El problema és l'autoavaluació: l'ítem invertit penalitza 'deixar-ho per escrit' en converses incòmodes, però comunicar per escrit pot ser una opció legítima i professional, de manera que l'ítem no expressa amb claredat la tendència contrària. A més, l'ítem directe parla de facilitat per explicar-se i l'invertit d'evitar converses, de manera que no són oposats i mesuren coses diferents. Cal reformular l'ítem invertit, per exemple només 'evito les converses incòmodes'. La resta de criteris (relació amb la competència, absència d'afirmacions oficials i de diagnòstic) és correcta; 'Es fa evident en la mateixa conversa' és assertiu però no oficial.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "esc-responsabilitat-1",
+    "esc-responsabilitat-2",
+    "esc-responsabilitat-3",
+    "esc-responsabilitat-4",
+    "esc-responsabilitat-5",
+    "esc-responsabilitat-6",
+    "esc-cooperacio-1",
+    "esc-cooperacio-2",
+    "esc-cooperacio-3",
+    "esc-cooperacio-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-02.json",
+   "prompt_sha256": "2a5cad71b14df44f2f8c5f69c0efa96d96ef80ac4e6bb4f1dcc7f50202f7aac4",
+   "huellas": {
+    "esc-responsabilitat-1": "c8f2aa08481a669003c45974e7fbfe87e2d0acab8917b10be8b4ad428ce4a64c",
+    "esc-responsabilitat-2": "089bcca684310f731c7d065fd9ddc2797dc9929f4ca4034cd6f1f36b1c315712",
+    "esc-responsabilitat-3": "6241932afc9c45889baf31f36518644debb11c860341bd61da8da636366e5bec",
+    "esc-responsabilitat-4": "a3af9c13f1287802446861278f22d75c38b1030f33735b72f506045c760ecf22",
+    "esc-responsabilitat-5": "bed722ebcbd8cc8b29e4e72589b9dee44f60df3de7d7c4670db11d453e768f55",
+    "esc-responsabilitat-6": "06e29ebc2eb574f7d7015e7610ffaf8554e3c329ab526c3125b41f1e6fca29b4",
+    "esc-cooperacio-1": "3d2f2f51124274c2d8b9992d1ac5593560e588216e6d26279f9e542452bd88ce",
+    "esc-cooperacio-2": "ae58803feecbc2455ce621bcb5971b2cec0db285007a307d32faf5bcb21b3bc2",
+    "esc-cooperacio-3": "c107283aacc798f96cf4343cb56b02496859a6ab609bd5d5d68ea6541bfaa893",
+    "esc-cooperacio-4": "8447a13a09e53980fa5aeafb772aaabf72a764a6a5a368cefb6cc4c2fa68c263"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "esc-responsabilitat-1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La opción recomendada (A) mezcla dos acciones de calidad distinta ('corregir-ho ara o deixar-ho anotat per al torn següent'), de modo que la clave no es unívoca: corregirlo ya y dejarlo para otro turno no son equivalentes y la segunda se parece a la opción B (pasar el problema al compañero), que puntúa solo 1 punto menos. La clara mejor acción sería avisar y corregirlo en el momento. Los puntos en 'orientacio-servei' son aceptables. Trabaja la responsabilidad (asumir un error propio no detectado), no se presenta como criterio oficial ni hay diagnóstico. Los 'parecidos' son otras situaciones distintas, no duplicados. Se debe reescribir la opción A para que sea una sola acción.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (retraso por exámenes en un trabajo de grupo) y texto claro en catalán. La opción A (avisar ya, proponer fecha realista y compartir versión provisional) es claramente la más profesional y las otras trasladan el problema al grupo o lo ocultan; los puntos (2/2, 1/0, 0/1, 0/0) coinciden con la justificación. Entrena responsabilidad (cumplir o renegociar compromisos), con cooperación como dimensión secundaria razonable. No hay afirmaciones oficiales ni diagnóstico. No es esencialmente igual a ninguna otra situación listada.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Dilema claro y realista (descuadre de 20 cajas en un recuento ajeno). La opción B (informar al coordinador y hablar con el voluntario sin culparlo) es la más ética y constructiva; corregir en silencio altera registros, ignorar o difundir el error es peor. Los puntos coinciden con la justificación (reserva menor: dar 1 punto de responsabilidad a modificar la cifra en silencio es generoso, pero no altera la clave). Trabaja responsabilidad/calidad e integridad de los registros. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking coherente: el orden [0,1,2,3] concuerda con los puntos (2/2, 2/1, 1/0, 0/0) y con la justificación. Informar de inmediato al instructor y ayudar a buscar el equipo es mejor que ir a buscarlo y avisar después (aunque la diferencia es pequeña, informar primero es lo correcto con material confiado), buscar en secreto es peor y firmar el inventario como completo es falsear, lo peor. Entrena responsabilidad (material asignado, transparencia). La dimensión 'autocontrol' es algo forzada pero no desvía la competencia. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista y bien redactada. La opción D (respetar la petición, dejar aviso, marcar como no entregado y reprogramar) es claramente la más honesta y fiable; marcar como entregado sin serlo es falsear, llamar una vez y dejarlo igualmente o dejarlo a un vecino sin consultar incumplen lo pedido. Puntos coherentes con la justificación. Relevante para responsabilidad y calidad del trabajo. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-6",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El orden recomendado [2,3,0,1] es dudoso en su cabeza: escribir a los padres explicando el retraso (2) y enviar un calendario provisional claramente marcado (3) son ambas buenas y difícilmente se puede afirmar que una sea claramente mejor; además la federación aún no ha confirmado nada, por lo que no queda claro con qué datos se haría un calendario provisional. La diferencia de puntos (solo en habilidades sociales) no sostiene con firmeza esa jerarquía. El final del orden (callar antes que dar información falsa) sí es defendible. Texto claro y relevante para responsabilidad; sin afirmaciones oficiales ni diagnóstico; no duplica otro escenario.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (restaurante lleno, compañero desbordado) y bien redactada. Ofrecer ayuda y coordinarse (B) es claramente la mejor: ignorarlo, delatarlo al jefe de sala o ayudar en silencio son inferiores, y los puntos concuerdan con la justificación. Trabaja cooperación y trabajo en equipo directamente. Sin afirmaciones oficiales ni diagnóstico. Los 'parecidos' plantean otros dilemas (cambio de posición, compañero pasivo, etc.), no es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Dilema claro: aceptar un cambio de posición por necesidad del equipo. La opción C (aceptar, preguntar qué se espera y dar el máximo) es claramente la más constructiva; pedir volver, jugar sin implicarse o quejarse a los compañeros son peores y los puntos lo reflejan. Relevante para cooperación (anteponer el objetivo del equipo) con adaptabilidad como dimensión secundaria. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún escenario parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Dilema realista de trabajo en grupo con un compañero que no participa. Hablarlo los tres, repartir tareas con plazos y hacer seguimiento (D) es la opción más constructiva y da oportunidad de reconducir; escalar al tutor sin diálogo previo es prematuro (1/1), cargar con su parte o excluirlo sin hablar son peores. Puntos y justificación coherentes. Trabaja cooperación y comunicación. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de los otros escenarios listados.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking coherente: [3,0,1,2] concuerda con los puntos (2/2, 2/1, 1/0, 0/0) y la justificación. Proponer una pausa breve para repartir roles y acordar cómo decidir resuelve el desorden de todo el grupo, mientras que hablar en privado solo aborda al compañero; seguir sin acuerdo es pasivo y dividir el grupo es lo más dañino. La diferencia entre 3 y 0 es matizable pero defendible. Relevante para cooperación y cohesión de equipo. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a3954bbf4275d4929.jsonl",
+    "respuesta_sha256": "b1b0be72aaace619fe94825e336cde3358c0eafe9d1e4e25e8b309e75a9516bc"
+   },
+   "registrada_el": "2026-10-05T23:02:31",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:02:31",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a3954bbf4275d4929.jsonl",
+      "respuesta_sha256": "b1b0be72aaace619fe94825e336cde3358c0eafe9d1e4e25e8b309e75a9516bc"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-responsabilitat-1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La opción recomendada (A) mezcla dos acciones de calidad distinta ('corregir-ho ara o deixar-ho anotat per al torn següent'), de modo que la clave no es unívoca: corregirlo ya y dejarlo para otro turno no son equivalentes y la segunda se parece a la opción B (pasar el problema al compañero), que puntúa solo 1 punto menos. La clara mejor acción sería avisar y corregirlo en el momento. Los puntos en 'orientacio-servei' son aceptables. Trabaja la responsabilidad (asumir un error propio no detectado), no se presenta como criterio oficial ni hay diagnóstico. Los 'parecidos' son otras situaciones distintas, no duplicados. Se debe reescribir la opción A para que sea una sola acción.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-responsabilitat-2\",\"verdict\":\"VALID\",\"reason\":\"Situación realista (retraso por exámenes en un trabajo de grupo) y texto claro en catalán. La opción A (avisar ya, proponer fecha realista y compartir versión provisional) es claramente la más profesional y las otras trasladan el problema al grupo o lo ocultan; los puntos (2/2, 1/0, 0/1, 0/0) coinciden con la justificación. Entrena responsabilidad (cumplir o renegociar compromisos), con cooperación como dimensión secundaria razonable. No hay afirmaciones oficiales ni diagnóstico. No es esencialmente igual a ninguna otra situación listada.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-responsabilitat-3\",\"verdict\":\"VALID\",\"reason\":\"Dilema claro y realista (descuadre de 20 cajas en un recuento ajeno). La opción B (informar al coordinador y hablar con el voluntario sin culparlo) es la más ética y constructiva; corregir en silencio altera registros, ignorar o difundir el error es peor. Los puntos coinciden con la justificación (reserva menor: dar 1 punto de responsabilidad a modificar la cifra en silencio es generoso, pero no altera la clave). Trabaja responsabilidad/calidad e integridad de los registros. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-responsabilitat-4\",\"verdict\":\"VALID\",\"reason\":\"Ranking coherente: el orden [0,1,2,3] concuerda con los puntos (2/2, 2/1, 1/0, 0/0) y con la justificación. Informar de inmediato al instructor y ayudar a buscar el equipo es mejor que ir a buscarlo y avisar después (aunque la diferencia es pequeña, informar primero es lo correcto con material confiado), buscar en secreto es peor y firmar el inventario como completo es falsear, lo peor. Entrena responsabilidad (material asignado, transparencia). La dimensión 'autocontrol' es algo forzada pero no desvía la competencia. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-responsabilitat-5\",\"verdict\":\"VALID\",\"reason\":\"Situación realista y bien redactada. La opción D (respetar la petición, dejar aviso, marcar como no entregado y reprogramar) es claramente la más honesta y fiable; marcar como entregado sin serlo es falsear, llamar una vez y dejarlo igualmente o dejarlo a un vecino sin consultar incumplen lo pedido. Puntos coherentes con la justificación. Relevante para responsabilidad y calidad del trabajo. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-responsabilitat-6\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El orden recomendado [2,3,0,1] es dudoso en su cabeza: escribir a los padres explicando el retraso (2) y enviar un calendario provisional claramente marcado (3) son ambas buenas y difícilmente se puede afirmar que una sea claramente mejor; además la federación aún no ha confirmado nada, por lo que no queda claro con qué datos se haría un calendario provisional. La diferencia de puntos (solo en habilidades sociales) no sostiene con firmeza esa jerarquía. El final del orden (callar antes que dar información falsa) sí es defendible. Texto claro y relevante para responsabilidad; sin afirmaciones oficiales ni diagnóstico; no duplica otro escenario.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-cooperacio-1\",\"verdict\":\"VALID\",\"reason\":\"Situación realista (restaurante lleno, compañero desbordado) y bien redactada. Ofrecer ayuda y coordinarse (B) es claramente la mejor: ignorarlo, delatarlo al jefe de sala o ayudar en silencio son inferiores, y los puntos concuerdan con la justificación. Trabaja cooperación y trabajo en equipo directamente. Sin afirmaciones oficiales ni diagnóstico. Los 'parecidos' plantean otros dilemas (cambio de posición, compañero pasivo, etc.), no es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-cooperacio-2\",\"verdict\":\"VALID\",\"reason\":\"Dilema claro: aceptar un cambio de posición por necesidad del equipo. La opción C (aceptar, preguntar qué se espera y dar el máximo) es claramente la más constructiva; pedir volver, jugar sin implicarse o quejarse a los compañeros son peores y los puntos lo reflejan. Relevante para cooperación (anteponer el objetivo del equipo) con adaptabilidad como dimensión secundaria. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún escenario parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-cooperacio-3\",\"verdict\":\"VALID\",\"reason\":\"Dilema realista de trabajo en grupo con un compañero que no participa. Hablarlo los tres, repartir tareas con plazos y hacer seguimiento (D) es la opción más constructiva y da oportunidad de reconducir; escalar al tutor sin diálogo previo es prematuro (1/1), cargar con su parte o excluirlo sin hablar son peores. Puntos y justificación coherentes. Trabaja cooperación y comunicación. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de los otros escenarios listados.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-cooperacio-4\",\"verdict\":\"VALID\",\"reason\":\"Ranking coherente: [3,0,1,2] concuerda con los puntos (2/2, 2/1, 1/0, 0/0) y la justificación. Proponer una pausa breve para repartir roles y acordar cómo decidir resuelve el desorden de todo el grupo, mientras que hablar en privado solo aborda al compañero; seguir sin acuerdo es pasivo y dividir el grupo es lo más dañino. La diferencia entre 3 y 0 es matizable pero defendible. Relevante para cooperación y cohesión de equipo. Sin afirmaciones oficiales ni diagnóstico. No duplica otro escenario.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "esc-cooperacio-5",
+    "esc-cooperacio-6",
+    "esc-autonomia-1",
+    "esc-autonomia-2",
+    "esc-autonomia-3",
+    "esc-autonomia-4",
+    "esc-autonomia-5",
+    "esc-autonomia-6",
+    "esc-resolucio-problemes-1",
+    "esc-resolucio-problemes-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-03.json",
+   "prompt_sha256": "de3a36c53de13442da4b3a5bd2b6eec0cf99b392a7b7bf2e561898e905b62a1d",
+   "huellas": {
+    "esc-cooperacio-5": "f4fed88cba6393018eddae48f0ff668235e668a2d25eca78214d746a75ef04d4",
+    "esc-cooperacio-6": "78df19b1f0e1f480558090e8b14d6ea6ac46d1971bf151146fd8f9f356ef14f3",
+    "esc-autonomia-1": "96ebec99d5940ca4467dbc9a5960755b75069e551515d5e20c572eb5d2cfd3fa",
+    "esc-autonomia-2": "1a5dfd41f5e4dabd16ff2dd21dcc4fdd0fd0c5b13f50e1e430be88d4415467ad",
+    "esc-autonomia-3": "8f917a4f01cc2881fe2d8342bb370bf1a598ae1a51e618da946d4c507403b581",
+    "esc-autonomia-4": "278a4061f0fb11c403df02cd53bbc384ce6745b24ee4ceda7262e59fbfc93e7b",
+    "esc-autonomia-5": "3b73407c3ae8456e46bf2db9b62d311d85ad33e3e5b9e4885c40ed391acd4742",
+    "esc-autonomia-6": "9195464d25f35013a46ee40f5f428a49924866a5fed1d3e9eaf5b5e7fe094594",
+    "esc-resolucio-problemes-1": "a4764e689e8b8faf7e20c5b9d44e560cd8eabb40a863a0db82fa2cd243880eb7",
+    "esc-resolucio-problemes-2": "f08ea3d35cec66f98d469f675b2261280218435747a3a6a57d12e226574415f5"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "esc-cooperacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro y realista en catalán. La opción 1 (reunión breve de traspaso y sistema común) es la única que ataca el origen de los errores y es claramente la mejor. Las demás son peores (ignorar, nota sin hablar, volver atrás sin resolver). Los puntos (2/2, 0/0, 1/1, 1/0) cuadran con la justificación. Entrena cooperación y resolución de problemas. No hay afirmaciones oficiales ni diagnóstico. Ningún parecido presenta la misma situación (camarero, fútbol, trabajo de recerca, orientación, cursa solidaria).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-cooperacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking [1,2,3,0] coherente con los puntos (4, 3, 1, 0) y con la justificación. Valorar con el equipo quién puede ir sin dejar la zona descubierta es lo más profesional. Ceder uno y explicarlo es buena segunda opción. Enviar dos sin valorar es peor, y negarse sin escuchar es lo peor. El orden es defendible. Entrena cooperación entre zonas y resolución de problemas. No hay afirmaciones oficiales ni diagnóstico. Los parecidos son situaciones distintas (el de la cursa solidaria es este mismo ítem, no un duplicado).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (primer día, encargada en reunión, entrega sin instrucciones). Recibir, revisar el albarán y guardar con seguridad hasta que vuelva la encargada es prudente. Es autónomo sin decidir lo que no corresponde. Las alternativas son claramente peores (interrumpir la reunión, rechazar al transportista, colocar a su criterio). Puntos coherentes con la justificación. Relevante para autonomía y responsabilidad. Sin afirmaciones oficiales ni diagnóstico. No duplica ninguno de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro. Hacerse un plan semanal con objetivos y revisión es la acción más constructiva y autónoma. Esperar a otro grupo, estudiar sin plan o parar mientras se busca grupo son claramente peores. Puntos (2/2, 1/0, 0/0, 0/1) coherentes. Entrena autonomía y autogestión. Menciona 'proves' sin presentarlas como criterio oficial. Sin diagnóstico. Situación distinta de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Dilema claro: iniciativa frente a cambiar un procedimiento por cuenta propia. Preparar una propuesta breve con el ahorro de tiempo y presentarla al responsable es la mejor opción. Cambiarlo solo puede afectar a otros, y las opciones pasivas son peores. Puntos y justificación coherentes. Relevante para autonomía e iniciativa y resolución de problemas. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La primera posición (revisar instrucciones, proponer cómo seguir y anotar dudas) es clara y los puntos son consistentes con el orden [2,3,0,1]. El orden intermedio es discutible. Se coloca 'continuar yo con mi parte y dejar el resto' (autonomía 2, cooperación 0, ignora al grupo desorganizado) por encima de 'decidir yo solo y repartir tareas', que al menos mantiene al grupo organizado, aunque de forma impositiva. Además, dar órdenes a los compañeros sin autoridad en una simulación y esperar sin hacer nada no son tan fáciles de separar de forma inequívoca. Ante la duda, la clave completa no es claramente defendible. Relevante para autonomía y cooperación. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-5",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Texto claro y puntos coherentes con la justificación. La opción recomendada es discutible: un voluntario trata a un menor por su cuenta con el botiquín y avisa a la responsable solo después. En un casal con menores, lo prudente suele ser quedarse con el niño, atenderlo en lo básico y avisar o hacer llegar el aviso a la responsable de inmediato, o seguir el protocolo. Enseña a actuar sin autorización previa en un contexto sensible (posibles alergias a antisépticos, responsabilidad sobre menores), así que la clave no es claramente la más profesional. Tampoco hay una opción intermedia que combine atender y avisar a la vez. Relevante para autonomía y orientación al servicio. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autonomia-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (recepción nocturna sin superior, aire acondicionado averiado). Ranking [0,1,2,3] coherente con los puntos (4, 3, 1, 0) y con la justificación. Cambiar de habitación equivalente y registrarlo resuelve el problema dentro de las propias funciones. El ventilador y la nota es una alternativa aceptable pero inferior. Llamar al director a casa por algo resoluble es peor, y no ofrecer nada es lo peor. El orden es defendible. Entrena autonomía y orientación al servicio. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Texto claro y realista (cable del amplificador veinte minutos antes del concierto). Mantener la calma, probar el cable de recambio y preparar un plan B es la mejor opción. Cancelar, tocar sin amplificar o discutir con el compañero son peores. Puntos (2/2, 0/0, 1/0, 0/0) coherentes con la justificación. Entrena resolución de problemas y autocontrol. Sin afirmaciones oficiales ni diagnóstico. Situaciones distintas de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación clara (reg averiado en el invernadero, técnico hasta el lunes, calor). Organizar un riego manual por turnos el fin de semana y dejarlo anotado es la solución provisional más responsable y eficaz. Regar en exceso, esperar o desmontar sin conocimientos son peores. Puntos y justificación coherentes. Relevante para resolución de problemas y responsabilidad. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a11caa919ec5936f2.jsonl",
+    "respuesta_sha256": "85ed2c00923776f470d870ea72fcfed903d53239032e05c700a1d46f8262222f"
+   },
+   "registrada_el": "2026-10-05T23:03:12",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:03:12",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a11caa919ec5936f2.jsonl",
+      "respuesta_sha256": "85ed2c00923776f470d870ea72fcfed903d53239032e05c700a1d46f8262222f"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-cooperacio-5\",\"verdict\":\"VALID\",\"reason\":\"Texto claro y realista en catalán. La opción 1 (reunión breve de traspaso y sistema común) es la única que ataca el origen de los errores y es claramente la mejor. Las demás son peores (ignorar, nota sin hablar, volver atrás sin resolver). Los puntos (2/2, 0/0, 1/1, 1/0) cuadran con la justificación. Entrena cooperación y resolución de problemas. No hay afirmaciones oficiales ni diagnóstico. Ningún parecido presenta la misma situación (camarero, fútbol, trabajo de recerca, orientación, cursa solidaria).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-cooperacio-6\",\"verdict\":\"VALID\",\"reason\":\"Ranking [1,2,3,0] coherente con los puntos (4, 3, 1, 0) y con la justificación. Valorar con el equipo quién puede ir sin dejar la zona descubierta es lo más profesional. Ceder uno y explicarlo es buena segunda opción. Enviar dos sin valorar es peor, y negarse sin escuchar es lo peor. El orden es defendible. Entrena cooperación entre zonas y resolución de problemas. No hay afirmaciones oficiales ni diagnóstico. Los parecidos son situaciones distintas (el de la cursa solidaria es este mismo ítem, no un duplicado).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autonomia-1\",\"verdict\":\"VALID\",\"reason\":\"Situación realista (primer día, encargada en reunión, entrega sin instrucciones). Recibir, revisar el albarán y guardar con seguridad hasta que vuelva la encargada es prudente. Es autónomo sin decidir lo que no corresponde. Las alternativas son claramente peores (interrumpir la reunión, rechazar al transportista, colocar a su criterio). Puntos coherentes con la justificación. Relevante para autonomía y responsabilidad. Sin afirmaciones oficiales ni diagnóstico. No duplica ninguno de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autonomia-2\",\"verdict\":\"VALID\",\"reason\":\"Texto claro. Hacerse un plan semanal con objetivos y revisión es la acción más constructiva y autónoma. Esperar a otro grupo, estudiar sin plan o parar mientras se busca grupo son claramente peores. Puntos (2/2, 1/0, 0/0, 0/1) coherentes. Entrena autonomía y autogestión. Menciona 'proves' sin presentarlas como criterio oficial. Sin diagnóstico. Situación distinta de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autonomia-3\",\"verdict\":\"VALID\",\"reason\":\"Dilema claro: iniciativa frente a cambiar un procedimiento por cuenta propia. Preparar una propuesta breve con el ahorro de tiempo y presentarla al responsable es la mejor opción. Cambiarlo solo puede afectar a otros, y las opciones pasivas son peores. Puntos y justificación coherentes. Relevante para autonomía e iniciativa y resolución de problemas. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autonomia-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La primera posición (revisar instrucciones, proponer cómo seguir y anotar dudas) es clara y los puntos son consistentes con el orden [2,3,0,1]. El orden intermedio es discutible. Se coloca 'continuar yo con mi parte y dejar el resto' (autonomía 2, cooperación 0, ignora al grupo desorganizado) por encima de 'decidir yo solo y repartir tareas', que al menos mantiene al grupo organizado, aunque de forma impositiva. Además, dar órdenes a los compañeros sin autoridad en una simulación y esperar sin hacer nada no son tan fáciles de separar de forma inequívoca. Ante la duda, la clave completa no es claramente defendible. Relevante para autonomía y cooperación. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autonomia-5\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Texto claro y puntos coherentes con la justificación. La opción recomendada es discutible: un voluntario trata a un menor por su cuenta con el botiquín y avisa a la responsable solo después. En un casal con menores, lo prudente suele ser quedarse con el niño, atenderlo en lo básico y avisar o hacer llegar el aviso a la responsable de inmediato, o seguir el protocolo. Enseña a actuar sin autorización previa en un contexto sensible (posibles alergias a antisépticos, responsabilidad sobre menores), así que la clave no es claramente la más profesional. Tampoco hay una opción intermedia que combine atender y avisar a la vez. Relevante para autonomía y orientación al servicio. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autonomia-6\",\"verdict\":\"VALID\",\"reason\":\"Situación realista (recepción nocturna sin superior, aire acondicionado averiado). Ranking [0,1,2,3] coherente con los puntos (4, 3, 1, 0) y con la justificación. Cambiar de habitación equivalente y registrarlo resuelve el problema dentro de las propias funciones. El ventilador y la nota es una alternativa aceptable pero inferior. Llamar al director a casa por algo resoluble es peor, y no ofrecer nada es lo peor. El orden es defendible. Entrena autonomía y orientación al servicio. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-resolucio-problemes-1\",\"verdict\":\"VALID\",\"reason\":\"Texto claro y realista (cable del amplificador veinte minutos antes del concierto). Mantener la calma, probar el cable de recambio y preparar un plan B es la mejor opción. Cancelar, tocar sin amplificar o discutir con el compañero son peores. Puntos (2/2, 0/0, 1/0, 0/0) coherentes con la justificación. Entrena resolución de problemas y autocontrol. Sin afirmaciones oficiales ni diagnóstico. Situaciones distintas de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-resolucio-problemes-2\",\"verdict\":\"VALID\",\"reason\":\"Situación clara (reg averiado en el invernadero, técnico hasta el lunes, calor). Organizar un riego manual por turnos el fin de semana y dejarlo anotado es la solución provisional más responsable y eficaz. Regar en exceso, esperar o desmontar sin conocimientos son peores. Puntos y justificación coherentes. Relevante para resolución de problemas y responsabilidad. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "esc-resolucio-problemes-3",
+    "esc-resolucio-problemes-4",
+    "esc-resolucio-problemes-5",
+    "esc-resolucio-problemes-6",
+    "esc-orientacio-servei-1",
+    "esc-orientacio-servei-2",
+    "esc-orientacio-servei-3",
+    "esc-orientacio-servei-4",
+    "esc-orientacio-servei-5",
+    "esc-orientacio-servei-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-04.json",
+   "prompt_sha256": "2360457e2740d2b8ef2482c162c74ab0626e7ef810e180cbed4840b5dfcb745c",
+   "huellas": {
+    "esc-resolucio-problemes-3": "7b9098df0547b54c448751513cebec87f2f144d80757da80e978aab600f9e0c1",
+    "esc-resolucio-problemes-4": "444d1f83bcb9ff05b679eaa22d3c3d7be90304f6151730374abc637d09f3edcc",
+    "esc-resolucio-problemes-5": "c8ef1afb0e3bbee104c8161b7ff2b851a462c47eab6ed654d7f8deb11cd6452a",
+    "esc-resolucio-problemes-6": "bf6e40f60ee6464eeaf8b7c2ebd367d63f3e910c33908d1f5fe7403687bd4d4c",
+    "esc-orientacio-servei-1": "2fabe754d826837c15d62a4bbbb3debaa660a48aaf7e029a5ad48eb433481eeb",
+    "esc-orientacio-servei-2": "12b4e0cfc5f9ca86690e40272322771161fb3121a85bef0ddc4798ec96775c19",
+    "esc-orientacio-servei-3": "58fdb70169a0d3a842dffbffd4df76c3e627c43c8dc7be036059def22722e402",
+    "esc-orientacio-servei-4": "951efe5f5bc8bd81111022231c81bdfb3a59284f563f2121c796ac25b7716074",
+    "esc-orientacio-servei-5": "6fefd459749d992833709a0b2aaaf2d31769be9059df3b8172c3427045661575",
+    "esc-orientacio-servei-6": "7d5c5d9a2365d719e21b165be1664b068f7fef91d89d1f76a887ea675f5a3b6a"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "esc-resolucio-problemes-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (se anula el local una semana antes). La opción 3 (buscar alternativas con presupuesto y decidir con la comisión en 48 h) es la más sensata. Las otras son claramente peores: anular, reservar sin mirar el coste, o esperar pasivamente en el chat. Puntos y justificación coinciden. Entrena resolución de problemas con una dimensión de cooperación coherente. Sin lenguaje oficial ni diagnóstico. Ninguna situación de 'parecidos' es la misma.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El orden recomendado [1,2,3,0] es discutible en su tramo final. La justificación solo defiende que 'a l'atzar' es lo peor. Dividir cada equipo en dos deja los tres puntos infradotados, lo que es un riesgo real en una actividad pública, y no es claramente mejor que cubrir dos y pedir instrucciones. Además, las opciones 1 y 2 son muy próximas. El texto es claro y la competencia es relevante. No hay afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista de atención al cliente en línea. La opción 4 (comprobar si es un error común, avisar al equipo técnico e informar a los clientes) ataca la causa y mantiene informados a los clientes. Reenviar a mano (1 punto) y mandar a revisar el correo no deseado (0 puntos) son parciales o insuficientes, y esperar es claramente peor. Puntos y justificación coinciden. Trabaja resolución de problemas con una dimensión de servicio coherente. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-resolucio-problemes-6",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Escuchar por separado y proponer un acuerdo de horarios (opción 3) es una clave defendible como mejor opción. El orden completo [3,0,1,2] es discutible. Dar la razón a un vecino por antigüedad es una decisión arbitraria y parcial, éticamente peor que desentenderse, pero se ordena por encima de ello, con 1 punto de resolución. En un contexto de formación policial la imparcialidad es clave. Además, en el rol de presidente, 'no me corresponde' es muy poco profesional pero no es una arbitrariedad. Redacción clara y sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista en una biblioteca. Ayudar paso a paso para que pueda hacerlo sola (opción 2) es claramente la mejor: resuelve la necesidad y le da autonomía. Hacerle el trámite sin explicar, dar un folleto o derivarla a un familiar son inferiores, y ninguna es igual de buena. Puntos y justificación coinciden. Es relevante para la orientación de servicio. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación creíble. Escuchar, reconocer el malestar y ofrecer alternativas concretas (opción 4) es la mejor. Justificarse, derivar sin más y responder con el mismo tono son claramente peores. La dimensión de autocontrol encaja con el contexto y los puntos coinciden con la justificación. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista de mediación entre usuarios sin infracción formal. Hablar con los jóvenes con respeto y proponerles otro espacio (opción 4) es la opción más constructiva, y es mejor que decir que no se puede hacer nada, amenazar o trasladar solo a las familias. Aceptable aunque no perfecta, porque proponer otro espacio podría ser algo excluyente. Puntos y justificación coinciden. Es relevante para orientación de servicio con habilidades sociales. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Las dos primeras posiciones son defendibles (explicar la norma con empatía y consultar al coordinador, o explicarla e informar de otros recursos). El orden completo [0,1,2,3] es discutible: colocar el saltarse la norma 'a escondidas' (opción 2) por encima de negar sin explicación contradice la integridad y la transparencia que se entrenan, y es una irregularidad deliberada y encubierta. También es incoherente que la opción 2 reciba 1 punto en orientación de servicio con 0 en responsabilidad, igual que una opción de servicio mínimo. Redacción clara. No hay afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-5",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La clave (opción 2: indicar dónde encontrarla y ofrecerse a encargarla) es defendible y honesta. Pero la dimensión 'autonomia' no encaja: se le asigna 2 puntos a una opción cuyo valor es la orientación al cliente y la honestidad, y la justificación no menciona nada de autonomía. Los puntos de esa dimensión no están respaldados por el texto. Redacción y relevancia de servicio correctas. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación de rol realista con barrera lingüística. El orden [2,3,0,1] es defendible: adaptar la comunicación y comprobar la comprensión, luego buscar un intérprete, luego dar un papel y derivar, y por último repetir más fuerte, que es lo peor. La justificación coincide con los puntos. La opción 3 podría plantear algún matiz de confidencialidad, pero no altera el orden. Relevante para orientación de servicio. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a2c46c1d2927e1a65.jsonl",
+    "respuesta_sha256": "fda14702756988f0191b454367e3a9f3ed91ec19d9492a284e259ed7b5ea02a6"
+   },
+   "registrada_el": "2026-10-05T23:03:24",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:03:24",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a2c46c1d2927e1a65.jsonl",
+      "respuesta_sha256": "fda14702756988f0191b454367e3a9f3ed91ec19d9492a284e259ed7b5ea02a6"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-resolucio-problemes-3\",\"verdict\":\"VALID\",\"reason\":\"Situación realista (se anula el local una semana antes). La opción 3 (buscar alternativas con presupuesto y decidir con la comisión en 48 h) es la más sensata. Las otras son claramente peores: anular, reservar sin mirar el coste, o esperar pasivamente en el chat. Puntos y justificación coinciden. Entrena resolución de problemas con una dimensión de cooperación coherente. Sin lenguaje oficial ni diagnóstico. Ninguna situación de 'parecidos' es la misma.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-resolucio-problemes-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El orden recomendado [1,2,3,0] es discutible en su tramo final. La justificación solo defiende que 'a l'atzar' es lo peor. Dividir cada equipo en dos deja los tres puntos infradotados, lo que es un riesgo real en una actividad pública, y no es claramente mejor que cubrir dos y pedir instrucciones. Además, las opciones 1 y 2 son muy próximas. El texto es claro y la competencia es relevante. No hay afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-resolucio-problemes-5\",\"verdict\":\"VALID\",\"reason\":\"Situación realista de atención al cliente en línea. La opción 4 (comprobar si es un error común, avisar al equipo técnico e informar a los clientes) ataca la causa y mantiene informados a los clientes. Reenviar a mano (1 punto) y mandar a revisar el correo no deseado (0 puntos) son parciales o insuficientes, y esperar es claramente peor. Puntos y justificación coinciden. Trabaja resolución de problemas con una dimensión de servicio coherente. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-resolucio-problemes-6\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Escuchar por separado y proponer un acuerdo de horarios (opción 3) es una clave defendible como mejor opción. El orden completo [3,0,1,2] es discutible. Dar la razón a un vecino por antigüedad es una decisión arbitraria y parcial, éticamente peor que desentenderse, pero se ordena por encima de ello, con 1 punto de resolución. En un contexto de formación policial la imparcialidad es clave. Además, en el rol de presidente, 'no me corresponde' es muy poco profesional pero no es una arbitrariedad. Redacción clara y sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-1\",\"verdict\":\"VALID\",\"reason\":\"Situación realista en una biblioteca. Ayudar paso a paso para que pueda hacerlo sola (opción 2) es claramente la mejor: resuelve la necesidad y le da autonomía. Hacerle el trámite sin explicar, dar un folleto o derivarla a un familiar son inferiores, y ninguna es igual de buena. Puntos y justificación coinciden. Es relevante para la orientación de servicio. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-2\",\"verdict\":\"VALID\",\"reason\":\"Situación creíble. Escuchar, reconocer el malestar y ofrecer alternativas concretas (opción 4) es la mejor. Justificarse, derivar sin más y responder con el mismo tono son claramente peores. La dimensión de autocontrol encaja con el contexto y los puntos coinciden con la justificación. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-3\",\"verdict\":\"VALID\",\"reason\":\"Situación realista de mediación entre usuarios sin infracción formal. Hablar con los jóvenes con respeto y proponerles otro espacio (opción 4) es la opción más constructiva, y es mejor que decir que no se puede hacer nada, amenazar o trasladar solo a las familias. Aceptable aunque no perfecta, porque proponer otro espacio podría ser algo excluyente. Puntos y justificación coinciden. Es relevante para orientación de servicio con habilidades sociales. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Las dos primeras posiciones son defendibles (explicar la norma con empatía y consultar al coordinador, o explicarla e informar de otros recursos). El orden completo [0,1,2,3] es discutible: colocar el saltarse la norma 'a escondidas' (opción 2) por encima de negar sin explicación contradice la integridad y la transparencia que se entrenan, y es una irregularidad deliberada y encubierta. También es incoherente que la opción 2 reciba 1 punto en orientación de servicio con 0 en responsabilidad, igual que una opción de servicio mínimo. Redacción clara. No hay afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-5\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La clave (opción 2: indicar dónde encontrarla y ofrecerse a encargarla) es defendible y honesta. Pero la dimensión 'autonomia' no encaja: se le asigna 2 puntos a una opción cuyo valor es la orientación al cliente y la honestidad, y la justificación no menciona nada de autonomía. Los puntos de esa dimensión no están respaldados por el texto. Redacción y relevancia de servicio correctas. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-6\",\"verdict\":\"VALID\",\"reason\":\"Situación de rol realista con barrera lingüística. El orden [2,3,0,1] es defendible: adaptar la comunicación y comprobar la comprensión, luego buscar un intérprete, luego dar un papel y derivar, y por último repetir más fuerte, que es lo peor. La justificación coincide con los puntos. La opción 3 podría plantear algún matiz de confidencialidad, pero no altera el orden. Relevante para orientación de servicio. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "esc-adaptabilitat-1",
+    "esc-adaptabilitat-2",
+    "esc-adaptabilitat-3",
+    "esc-adaptabilitat-4",
+    "esc-adaptabilitat-5",
+    "esc-adaptabilitat-6",
+    "esc-autocontrol-1",
+    "esc-autocontrol-2",
+    "esc-autocontrol-3",
+    "esc-autocontrol-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-05.json",
+   "prompt_sha256": "a08e786abac063e6172fe785c8daef751236deaa2bcccb4ff7c3a44f03478246",
+   "huellas": {
+    "esc-adaptabilitat-1": "beb65a13d3fb3516125e5bc883e673e90e65cc8a5234a730027071f4e295f225",
+    "esc-adaptabilitat-2": "6734705707f816e3eb3dec2e3e31e5e55094275b4ac780554fbdca172bff9e7f",
+    "esc-adaptabilitat-3": "9ebc1f12e403a8316d2096094017a8971a7ee078d46428574020370cd90b6bf6",
+    "esc-adaptabilitat-4": "4bc718a87f4340f9a0578cc49fb56b6f47b8365a8b8e6e13c27bbba4aaad0d1a",
+    "esc-adaptabilitat-5": "661f45e2a26b83eb9382199a0735fc3e8c8aad0240c5f78683aab7bbe7ed7af3",
+    "esc-adaptabilitat-6": "81374bf5cd4bd6503f78706a2a4f18e501c5f3bd87f2a67b9b28b9dfa090650f",
+    "esc-autocontrol-1": "8c7304fce338b2c55e6c5a292cce5d40bca0259f40ea2580307d3c24b8fbf2f1",
+    "esc-autocontrol-2": "6c8b2c4eef04abb4797980a7e5f72b0f068b10dd44fb6fd9fa9805be7e3ba615",
+    "esc-autocontrol-3": "59c1b553d41405b2a88820cf6ec61da151ad6c301f7d42483d503e4167049628",
+    "esc-autocontrol-4": "7beea38266091a755fc142f8f79e891ccb110965fc2810775e372a844953efd6"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "esc-adaptabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de eleccion claro y realista (cambio de programa de caja). La opcion 4 (pedir formacion, practicar antes del turno y preguntar dudas) es la mas proactiva y profesional, y tiene 2+2 puntos, coherente con la justificacion. La opcion 3 (que un companero cobre) transfiere el problema y la opcion 2 (aprender con clientes delante) es peor, asi que no hay otra igual de buena. Entrena adaptabilidad. No hay afirmaciones oficiales ni diagnostico. Ninguno de los 'parecidos' repite la situacion.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacion de intercambio bien planteada y coherente. Observar, preguntar a locales y ajustarse (2+2) es claramente la mejor opcion. Mantener el metodo propio, aislarse con compatriotas y evitar participar son opciones debiles y bien graduadas (0, 0, 1). Trabaja adaptabilidad con un componente social razonable. Sin lenguaje oficial ni diagnostico. Situacion distinta de los 'parecidos'.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-3",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Falla la coherencia textual. La opcion recomendada dice 'Donar-li una oportunitat, entrenar-lo i plantejar els dubtes', y 'entrenar-lo' significa entrenar al entrenador, lo cual no tiene sentido. Deberia decir 'entrenar amb el nou sistema'. La justificacion habla de plantear dudas 'pel canal adequat', matiz que la opcion no recoge. La clave es defendible en el fondo, y la competencia, la ausencia de afirmaciones oficiales y la ausencia de diagnostico estan bien. Hay que corregir la redaccion antes de aprobar.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Ranking [3,0,1,2] poco defendible. La opcion 4 (aceptar, pedir instrucciones basicas y empezar con cuidado) y la opcion 1 (empezar y preguntar las dudas segun surjan) son practicamente equivalentes: ambas aceptan la tarea y preguntan. La diferencia de orden (2/2 frente a 2/1) es arbitraria. Ademas, hacer un inventario sin formacion y 'preguntar sobre la marcha' puede generar errores, y no se distingue claramente cual es mejor. Las posiciones 3 y 4 (no preguntar y negarse) si son defendibles. Relevante, sin afirmaciones oficiales ni diagnostico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Cambio de formato por lluvia en la academia, realista y bien escrito. Ajustarse con buena actitud y aprovechar la sesion (2+2) es claramente lo mejor. Proponer aplazar (1), mostrar malestar (0) y participar sin interes (1+1) son inferiores y los puntos son coherentes con la justificacion. Entrena adaptabilidad y autocontrol. Sin afirmaciones oficiales ni diagnostico. No duplica a los demas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking [1,2,3,0] coherente con los puntos (4, 3, 1, 0) y con la justificacion. Hablar con la familia y reorganizar horario y espacio es lo mas constructivo. Pasar a estudiar de madrugada por cuenta propia es adaptativo aunque unilateral. Mantener el horario pidiendo silencio es rigido, y dejar de estudiar es lo peor. El orden es defendible. Entrena adaptabilidad y autogestion. Sin afirmaciones oficiales ni diagnostico. Situacion distinta de los demas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Cliente que insulta por una factura erronea, situacion realista y bien redactada. Mantener la calma, poner limites con respeto y centrarse en la factura (2+2) es claramente la mejor opcion. Colgar y responder en el mismo tono son malas y puntuan 0. Pasar al cliente a otro companero es una evasion parcial (1/0). Entrena autocontrol. Sin afirmaciones oficiales ni diagnostico. No duplica a los demas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Provocacion en un partido de balonmano, situacion realista. Centrarse en el juego, no responder y comunicarselo al entrenador (2+2) es la opcion mas madura. Pedir el cambio (1/1) es una huida aceptable pero inferior. Quejarse constantemente al arbitro y devolver la provocacion son peores. Puntos coherentes con la justificacion. Entrena autocontrol. Sin afirmaciones oficiales ni diagnostico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Error de lectura en un simulacro con poco tiempo, escenario claro. Respirar, priorizar lo corregible y continuar (2+2) es la mejor respuesta. Abandonar, corregir todo con prisa o seguir sin revisar son inferiores y estan bien graduadas. Trabaja autocontrol bajo presion con un componente de resolucion de problemas pertinente. Sin afirmaciones oficiales ni diagnostico. No duplica a los demas.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Clave de ranking discutible. Las opciones 3 (calma, explicar con firmeza y cortesia que hace falta entrada) y 4 (mantenerse firme sin discutir y avisar al responsable) son ambas muy profesionales. Avisar al responsable ante empujones y gente alterada podria ser igual o mas adecuado, por lo que el orden 3>4 no esta claro. Ademas, colocar 'discutir en publico' (puntua 1 en autocontrol) por encima de 'dejarla pasar' es opinable, ya que ceder incumple la funcion de control y perjudica a quienes esperan. El texto es claro y relevante, y no hay afirmaciones oficiales ni diagnostico.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-ad90d7f51884f18f7.jsonl",
+    "respuesta_sha256": "f61ccd9cc895ab57a6aecc6875df79233f92f4cc9e4898824b24c42d050e2617"
+   },
+   "registrada_el": "2026-10-05T23:04:06",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:04:06",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-ad90d7f51884f18f7.jsonl",
+      "respuesta_sha256": "f61ccd9cc895ab57a6aecc6875df79233f92f4cc9e4898824b24c42d050e2617"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-adaptabilitat-1\",\"verdict\":\"VALID\",\"reason\":\"Escenario de eleccion claro y realista (cambio de programa de caja). La opcion 4 (pedir formacion, practicar antes del turno y preguntar dudas) es la mas proactiva y profesional, y tiene 2+2 puntos, coherente con la justificacion. La opcion 3 (que un companero cobre) transfiere el problema y la opcion 2 (aprender con clientes delante) es peor, asi que no hay otra igual de buena. Entrena adaptabilidad. No hay afirmaciones oficiales ni diagnostico. Ninguno de los 'parecidos' repite la situacion.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-2\",\"verdict\":\"VALID\",\"reason\":\"Situacion de intercambio bien planteada y coherente. Observar, preguntar a locales y ajustarse (2+2) es claramente la mejor opcion. Mantener el metodo propio, aislarse con compatriotas y evitar participar son opciones debiles y bien graduadas (0, 0, 1). Trabaja adaptabilidad con un componente social razonable. Sin lenguaje oficial ni diagnostico. Situacion distinta de los 'parecidos'.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-3\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Falla la coherencia textual. La opcion recomendada dice 'Donar-li una oportunitat, entrenar-lo i plantejar els dubtes', y 'entrenar-lo' significa entrenar al entrenador, lo cual no tiene sentido. Deberia decir 'entrenar amb el nou sistema'. La justificacion habla de plantear dudas 'pel canal adequat', matiz que la opcion no recoge. La clave es defendible en el fondo, y la competencia, la ausencia de afirmaciones oficiales y la ausencia de diagnostico estan bien. Hay que corregir la redaccion antes de aprobar.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Ranking [3,0,1,2] poco defendible. La opcion 4 (aceptar, pedir instrucciones basicas y empezar con cuidado) y la opcion 1 (empezar y preguntar las dudas segun surjan) son practicamente equivalentes: ambas aceptan la tarea y preguntan. La diferencia de orden (2/2 frente a 2/1) es arbitraria. Ademas, hacer un inventario sin formacion y 'preguntar sobre la marcha' puede generar errores, y no se distingue claramente cual es mejor. Las posiciones 3 y 4 (no preguntar y negarse) si son defendibles. Relevante, sin afirmaciones oficiales ni diagnostico.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-5\",\"verdict\":\"VALID\",\"reason\":\"Cambio de formato por lluvia en la academia, realista y bien escrito. Ajustarse con buena actitud y aprovechar la sesion (2+2) es claramente lo mejor. Proponer aplazar (1), mostrar malestar (0) y participar sin interes (1+1) son inferiores y los puntos son coherentes con la justificacion. Entrena adaptabilidad y autocontrol. Sin afirmaciones oficiales ni diagnostico. No duplica a los demas.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-6\",\"verdict\":\"VALID\",\"reason\":\"Ranking [1,2,3,0] coherente con los puntos (4, 3, 1, 0) y con la justificacion. Hablar con la familia y reorganizar horario y espacio es lo mas constructivo. Pasar a estudiar de madrugada por cuenta propia es adaptativo aunque unilateral. Mantener el horario pidiendo silencio es rigido, y dejar de estudiar es lo peor. El orden es defendible. Entrena adaptabilidad y autogestion. Sin afirmaciones oficiales ni diagnostico. Situacion distinta de los demas.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autocontrol-1\",\"verdict\":\"VALID\",\"reason\":\"Cliente que insulta por una factura erronea, situacion realista y bien redactada. Mantener la calma, poner limites con respeto y centrarse en la factura (2+2) es claramente la mejor opcion. Colgar y responder en el mismo tono son malas y puntuan 0. Pasar al cliente a otro companero es una evasion parcial (1/0). Entrena autocontrol. Sin afirmaciones oficiales ni diagnostico. No duplica a los demas.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autocontrol-2\",\"verdict\":\"VALID\",\"reason\":\"Provocacion en un partido de balonmano, situacion realista. Centrarse en el juego, no responder y comunicarselo al entrenador (2+2) es la opcion mas madura. Pedir el cambio (1/1) es una huida aceptable pero inferior. Quejarse constantemente al arbitro y devolver la provocacion son peores. Puntos coherentes con la justificacion. Entrena autocontrol. Sin afirmaciones oficiales ni diagnostico.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autocontrol-3\",\"verdict\":\"VALID\",\"reason\":\"Error de lectura en un simulacro con poco tiempo, escenario claro. Respirar, priorizar lo corregible y continuar (2+2) es la mejor respuesta. Abandonar, corregir todo con prisa o seguir sin revisar son inferiores y estan bien graduadas. Trabaja autocontrol bajo presion con un componente de resolucion de problemas pertinente. Sin afirmaciones oficiales ni diagnostico. No duplica a los demas.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autocontrol-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Clave de ranking discutible. Las opciones 3 (calma, explicar con firmeza y cortesia que hace falta entrada) y 4 (mantenerse firme sin discutir y avisar al responsable) son ambas muy profesionales. Avisar al responsable ante empujones y gente alterada podria ser igual o mas adecuado, por lo que el orden 3>4 no esta claro. Ademas, colocar 'discutir en publico' (puntua 1 en autocontrol) por encima de 'dejarla pasar' es opinable, ya que ceder incumple la funcion de control y perjudica a quienes esperan. El texto es claro y relevante, y no hay afirmaciones oficiales ni diagnostico.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "06",
+   "ids": [
+    "esc-autocontrol-5",
+    "esc-autocontrol-6",
+    "esc-autogestio-1",
+    "esc-autogestio-2",
+    "esc-autogestio-3",
+    "esc-autogestio-4",
+    "esc-autogestio-5",
+    "esc-autogestio-6",
+    "esc-motivacio-1",
+    "esc-motivacio-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-06.json",
+   "prompt_sha256": "ac4f8b7ddbde97432b5d9d194856ba0c82683a5f0ba639021e6ac12823ad5203",
+   "huellas": {
+    "esc-autocontrol-5": "8163026c6c5af1bc82228d19b2cca9af15ba7a68ec33e0b3f6f42ba64f761842",
+    "esc-autocontrol-6": "352829a87bb25a55ad44b64acaea227434e95ddff6a25cf4919b6c65268792fe",
+    "esc-autogestio-1": "0a8d6499e19e7451747884252d7ac1921532eb8c43d6454f0d9a8bc4a3f16ab3",
+    "esc-autogestio-2": "3f0dfa0270491f32e0f269f0873335ac3c32b84fc1f34dc729052889b01b7fd1",
+    "esc-autogestio-3": "0aa09431e0f3ebc44cb61dba4526ca3ec2472d2971ae4164f1feb9508e11de18",
+    "esc-autogestio-4": "dbadb3bb70afbeaf0fc682c187f2cc648c993ce854552a37f79bd4a80605abd1",
+    "esc-autogestio-5": "3511f53f6830ad06348090c6027dfd8d78a0e2345373b6d1f2575bb421928f16",
+    "esc-autogestio-6": "1f5e4ed820b1256c2b190b5aae39b3c0480a6857b03f12ec6272a8e8812472df",
+    "esc-motivacio-1": "ec3866b1915305df14889476b8426ed2afd5a4ad775f33e4f87049aaec34387f",
+    "esc-motivacio-2": "a1e2f30f2cd444941de0313c428d4736e78173792878be9563fecfbd283eace9"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "esc-autocontrol-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de eleccion claro y realista en catalan. La opcion 2 (no responder delante del cliente y hablar en privado) tiene 2+2 y es la mas profesional; la 3 (callar para siempre) es claramente peor y las opciones 1 y 4 exponen al jefe ante el cliente. Los puntos concuerdan con la justificacion. Entrena el autocontrol ante una correccion injusta. No hay afirmaciones oficiales ni diagnostico. Ninguno de los parecidos repite este dilema (jefe/cliente en taller).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autocontrol-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking [0,1,2,3] coherente con los puntos (4, 3, 1, 0) y con la justificacion: atender por necesidad real y pedir refuerzos, luego orden de llegada con peticion de material, luego atender al que mas grita, y por ultimo bloquearse. El orden es defendible, con una pequena concesion a la dimension de resolucion de problemas. Entrena mantener la calma bajo presion. Sin afirmaciones oficiales ni diagnostico. Situacion distinta de los parecidos (no hay otro con multiples afectados).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La opcion 3 (revisar el plan, registrar entrenamientos y pedir consejo) es claramente la mejor frente a abandonar, sobreentrenar sin descanso o esperar sin cambios; los puntos (2/2) coinciden con la justificacion. Texto claro y realista, relevante para autogestion (analizar el propio progreso). Sin afirmaciones oficiales ni diagnostico. No repite ninguna situacion de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La opcion 4 (revisar el uso del tiempo, fijar descansos y priorizar) es la unica que aborda la causa de forma planificada y sostenible; las demas son parches (cafeina), recortes sin plan o decisiones sin valorar. Puntos y justificacion coherentes. Trabaja autogestion de energia y tiempo. Sin afirmaciones oficiales ni diagnostico (no etiqueta el cansancio). Dilema distinto al de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Recibir una critica del tutor: la opcion 1 (analizar comentarios, aclarar dudas y aplicarlos al siguiente trabajo) es claramente la mas constructiva; ignorar, desanimarse o rehacer un trabajo ya evaluado son peores. Puntos coherentes con la justificacion. Relevante para autogestion y desarrollo personal (aprender del feedback). Sin afirmaciones oficiales ni diagnostico. No duplica ningun parecido (el esc-autogestio-6 trata de autoevaluacion, no de recibir una critica externa).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El orden recomendado [1,2,3,0] es discutible en su parte baja: las opciones 0 (ir y dejar el estudio para la vuelta) y 3 (ir y recuperar el tiempo a la vuelta) son practicamente la misma conducta, y la diferencia de puntos (autogestio 0 vs 1) no esta justificada en el texto. Ademas, el orden entre 1 y 2 depende de la lectura del contexto. La opcion 1 es la mas razonable, pero el ranking completo no es claramente defendible y hay ambiguedad entre opciones. La dimension motivacion encaja solo de forma tangencial. Sin afirmaciones oficiales ni diagnostico; sin duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La opcion 3 (aceptar el reto pidiendo formacion y apoyo de alguien con experiencia) es claramente la mas profesional frente a rechazar por inseguridad, improvisar o delegar lo dificil. Puntos y justificacion coherentes. Entrena asumir retos nuevos con un plan de aprendizaje (desarrollo personal). Sin afirmaciones oficiales ni diagnostico. Situacion distinta a los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-autogestio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking [3,0,1,2] coherente con los puntos (4, 3, 1, 0) y con la justificacion: autoevaluacion honesta con plan de mejora; luego errores sin plan; luego solo lo positivo; por ultimo atribuirlo a factores externos. Orden claro y defendible, sin opciones equivalentes. Relevante para autogestion y desarrollo personal. Sin afirmaciones oficiales ni diagnostico. No se solapa con esc-autogestio-3 (aqui el rendimiento propio y la autoevaluacion, alli el feedback ajeno).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La opcion 2 (hacer la tarea rutinaria con cuidado entendiendo que forma parte del servicio) es claramente la mejor; hacerla deprisa, delegarla o aplazarla son peores. Puntos coherentes con la justificacion. Relevante para motivacion e identificacion con la organizacion (dar sentido a lo rutinario). Sin afirmaciones oficiales ni diagnostico. Dilema distinto al de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ante la afirmacion de un amigo sobre la estabilidad laboral, explicar con sinceridad los propios motivos, tambien los de servicio, es la opcion mas constructiva y honesta; darle la razon sin mas, cortar el tema o esquivarlo la superan solo parcialmente. Puntos y justificacion coherentes. Trabaja la motivacion reflexionada e identificacion con el servicio publico sin presentarlo como criterio oficial ni prometer nada. Sin diagnostico. No duplica esc-motivacio-5 (aqui es un amigo que presume un motivo, alli un conocido que desanima).",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "06",
+    "transcripcion": "agent-a17df835e6bcdd24a.jsonl",
+    "respuesta_sha256": "ddaa0c5009256a81b2ea020f0ad84758022cd36770bb47adce3d5b204badabce"
+   },
+   "registrada_el": "2026-10-05T23:04:06",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:04:06",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "06",
+      "transcripcion": "agent-a17df835e6bcdd24a.jsonl",
+      "respuesta_sha256": "ddaa0c5009256a81b2ea020f0ad84758022cd36770bb47adce3d5b204badabce"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-autocontrol-5\",\"verdict\":\"VALID\",\"reason\":\"Escenario de eleccion claro y realista en catalan. La opcion 2 (no responder delante del cliente y hablar en privado) tiene 2+2 y es la mas profesional; la 3 (callar para siempre) es claramente peor y las opciones 1 y 4 exponen al jefe ante el cliente. Los puntos concuerdan con la justificacion. Entrena el autocontrol ante una correccion injusta. No hay afirmaciones oficiales ni diagnostico. Ninguno de los parecidos repite este dilema (jefe/cliente en taller).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autocontrol-6\",\"verdict\":\"VALID\",\"reason\":\"Ranking [0,1,2,3] coherente con los puntos (4, 3, 1, 0) y con la justificacion: atender por necesidad real y pedir refuerzos, luego orden de llegada con peticion de material, luego atender al que mas grita, y por ultimo bloquearse. El orden es defendible, con una pequena concesion a la dimension de resolucion de problemas. Entrena mantener la calma bajo presion. Sin afirmaciones oficiales ni diagnostico. Situacion distinta de los parecidos (no hay otro con multiples afectados).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autogestio-1\",\"verdict\":\"VALID\",\"reason\":\"La opcion 3 (revisar el plan, registrar entrenamientos y pedir consejo) es claramente la mejor frente a abandonar, sobreentrenar sin descanso o esperar sin cambios; los puntos (2/2) coinciden con la justificacion. Texto claro y realista, relevante para autogestion (analizar el propio progreso). Sin afirmaciones oficiales ni diagnostico. No repite ninguna situacion de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autogestio-2\",\"verdict\":\"VALID\",\"reason\":\"La opcion 4 (revisar el uso del tiempo, fijar descansos y priorizar) es la unica que aborda la causa de forma planificada y sostenible; las demas son parches (cafeina), recortes sin plan o decisiones sin valorar. Puntos y justificacion coherentes. Trabaja autogestion de energia y tiempo. Sin afirmaciones oficiales ni diagnostico (no etiqueta el cansancio). Dilema distinto al de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autogestio-3\",\"verdict\":\"VALID\",\"reason\":\"Recibir una critica del tutor: la opcion 1 (analizar comentarios, aclarar dudas y aplicarlos al siguiente trabajo) es claramente la mas constructiva; ignorar, desanimarse o rehacer un trabajo ya evaluado son peores. Puntos coherentes con la justificacion. Relevante para autogestion y desarrollo personal (aprender del feedback). Sin afirmaciones oficiales ni diagnostico. No duplica ningun parecido (el esc-autogestio-6 trata de autoevaluacion, no de recibir una critica externa).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autogestio-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El orden recomendado [1,2,3,0] es discutible en su parte baja: las opciones 0 (ir y dejar el estudio para la vuelta) y 3 (ir y recuperar el tiempo a la vuelta) son practicamente la misma conducta, y la diferencia de puntos (autogestio 0 vs 1) no esta justificada en el texto. Ademas, el orden entre 1 y 2 depende de la lectura del contexto. La opcion 1 es la mas razonable, pero el ranking completo no es claramente defendible y hay ambiguedad entre opciones. La dimension motivacion encaja solo de forma tangencial. Sin afirmaciones oficiales ni diagnostico; sin duplicado.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autogestio-5\",\"verdict\":\"VALID\",\"reason\":\"La opcion 3 (aceptar el reto pidiendo formacion y apoyo de alguien con experiencia) es claramente la mas profesional frente a rechazar por inseguridad, improvisar o delegar lo dificil. Puntos y justificacion coherentes. Entrena asumir retos nuevos con un plan de aprendizaje (desarrollo personal). Sin afirmaciones oficiales ni diagnostico. Situacion distinta a los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-autogestio-6\",\"verdict\":\"VALID\",\"reason\":\"Ranking [3,0,1,2] coherente con los puntos (4, 3, 1, 0) y con la justificacion: autoevaluacion honesta con plan de mejora; luego errores sin plan; luego solo lo positivo; por ultimo atribuirlo a factores externos. Orden claro y defendible, sin opciones equivalentes. Relevante para autogestion y desarrollo personal. Sin afirmaciones oficiales ni diagnostico. No se solapa con esc-autogestio-3 (aqui el rendimiento propio y la autoevaluacion, alli el feedback ajeno).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-motivacio-1\",\"verdict\":\"VALID\",\"reason\":\"La opcion 2 (hacer la tarea rutinaria con cuidado entendiendo que forma parte del servicio) es claramente la mejor; hacerla deprisa, delegarla o aplazarla son peores. Puntos coherentes con la justificacion. Relevante para motivacion e identificacion con la organizacion (dar sentido a lo rutinario). Sin afirmaciones oficiales ni diagnostico. Dilema distinto al de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-motivacio-2\",\"verdict\":\"VALID\",\"reason\":\"Ante la afirmacion de un amigo sobre la estabilidad laboral, explicar con sinceridad los propios motivos, tambien los de servicio, es la opcion mas constructiva y honesta; darle la razon sin mas, cortar el tema o esquivarlo la superan solo parcialmente. Puntos y justificacion coherentes. Trabaja la motivacion reflexionada e identificacion con el servicio publico sin presentarlo como criterio oficial ni prometer nada. Sin diagnostico. No duplica esc-motivacio-5 (aqui es un amigo que presume un motivo, alli un conocido que desanima).\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "07",
+   "ids": [
+    "esc-motivacio-3",
+    "esc-motivacio-4",
+    "esc-motivacio-5",
+    "esc-motivacio-6",
+    "esc-habilitats-socials-1",
+    "esc-habilitats-socials-2",
+    "esc-habilitats-socials-3",
+    "esc-habilitats-socials-4",
+    "esc-habilitats-socials-5",
+    "esc-habilitats-socials-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00002/tanda-07.json",
+   "prompt_sha256": "15a4082d7c2c70378bad33c7ccaa7282830f7289b825cd9e1a45d85b35bc0219",
+   "huellas": {
+    "esc-motivacio-3": "3bc890b0fee24d6741779788e0add1a3c21c41811e2755bd93e39ec0eebf94a7",
+    "esc-motivacio-4": "b2da110d6e864414bb86fd11ee3031f8be1c67bf808938fcebccc208ee75dc2e",
+    "esc-motivacio-5": "31f3d0306cd1fc58a4b75ad08a476076b063f7edebd9a408e754e880f22c37af",
+    "esc-motivacio-6": "dfe4abd0df5dccc2d445a530ce080a595d89095d8d5070114bf37534f71a4590",
+    "esc-habilitats-socials-1": "814193ce45b7590c0a5b11af61c471b7b0b59ddf9a54b4ec02dae051b132352b",
+    "esc-habilitats-socials-2": "272cfdf8e718be586d1af6d9496000a12fd498b7717997e96a8e9e463acfe73e",
+    "esc-habilitats-socials-3": "1fd8fad55a96ea4903307a0dd5fa29f4f1e1b5ad4c1a97905979f59acd79023e",
+    "esc-habilitats-socials-4": "42033ffd1966d5323923700999e074a3d01e067dd9b835686c9acabae6acbe65",
+    "esc-habilitats-socials-5": "b3f6d27bf0ac2c4d30c68a54dd7a94a56b91345114c33ee06dbb32b5a4a23d1b",
+    "esc-habilitats-socials-6": "e61402cdb2d09be8e055f36ce4423f573e5a01bc0a9c77ed7518189ca02a4144"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "esc-motivacio-3",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La opción recomendada (apuntarse porque será útil para la feina) es razonable y puntúa más, pero la justificación habla de 'ajudar millor les persones', que no aparece en el escenario ni en la opción: hay desajuste entre texto y justificación. El contexto es un trabajo de verano en un camping, así que trabaja más la iniciativa y el desarrollo propio que la identificación con la organización. Rechazar una formación voluntaria no remunerada es una postura legítima y no queda tan penalizada con claridad. No hay afirmaciones oficiales ni diagnóstico. No es duplicado de ninguno de los parecidos, que presentan otras situaciones.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": true,
+      "relevante": false,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Los puntos y el orden [0,1,2,3] coinciden con la justificación y el escenario trabaja la motivación. Pero el ranking de las dos últimas opciones es discutible: reírse de los comentarios que desprecian los valores de la organización para encajar (posición 3) es arguably peor que desconectar (posición 4), porque implica adherirse activamente a la burla, y aquí se puntúa mejor por habilidades sociales. Además, 'compartir con ellos qué me ha aportado' puede resultar forzado. Al haber duda sobre la clave del orden, se marca clave_defendible=false. No hay afirmaciones oficiales ni diagnóstico, ni duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista (un conocido desanima al opositor). La opción recomendada, contrastar, repensar los motivos y decidir con calma, es claramente la más madura, y ninguna otra es igual de buena: abandonar es impulsivo, ignorar todo es rígido, reducir el estudio es evasivo. Puntos (4/1/0/1) coherentes con la justificación. Entrena motivación realista y autogestión, no otra competencia. Sin lenguaje oficial ni diagnóstico. Escenario distinto de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-motivacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Orden [2,3,0,1] coherente con los puntos (4,3,1,0) y con la justificación. Recordar el sentido del proyecto y proponer metas pequeñas es la actuación más constructiva; continuar solo es perseverante pero menos cooperativo; abandonar y criticar en público son claramente peores, y 'dejarlo' es mejor que criticar. Mantener la implicación en un proyecto colectivo es motivación y cooperación. Sin afirmaciones oficiales ni diagnóstico. Situación diferente de las demás.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario realista de incorporación a una oficina. Presentarse, interesarse por el trabajo de cada uno y ofrecer ayuda es claramente la opción más proactiva y respetuosa; esperar, aislarse o bromear en exceso son inferiores sin ser equivalentes. Puntos coherentes con la justificación. Trabaja comunicación e iniciativa social. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conflicto de convivencia realista. Hablar con calma, explicar cómo afecta y buscar una solución conjunta es la opción más asertiva; la nota, quejarse a terceros y golpear la pared son claramente peores, y ninguna iguala a la recomendada. Puntos y justificación coherentes. Entrena comunicación asertiva y autocontrol. Sin afirmaciones oficiales ni diagnóstico. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación creíble en una exposición oral. Reconocer que no se sabe, explicar lo que sí se sabe y ofrecerse a buscarlo es la respuesta más honesta y profesional; inventar, desviar la pregunta o prometer sin cumplir son claramente inferiores. Puntos y justificación coherentes. Trabaja comunicación y gestión de la presión. Sin afirmaciones oficiales ni diagnóstico. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Hay incoherencia: en un ejercicio de mediación, 'decidir yo mismo quién tiene razón' recibe 2 puntos en habilitats socials, igual que la opción recomendada, y se coloca en segunda posición, cuando un mediador no debería arbitrar ni imponer su veredicto. El orden entre alzar la voz (3ª) e inhibirse (4ª) también es discutible, porque alzar la voz escala el conflicto activamente. La clave de la primera posición es defendible, pero el resto del orden y los puntos no. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación realista en comercio. Preguntar al cliente qué quiere decir para entender su necesidad es claramente lo más profesional; fingir entender o recomendar lo más vendido es engañoso, y derivar sin intentar entender o responder en genérico son pasivos. Puntos y justificación coherentes. Entrena comunicación (escucha y preguntas) con orientación al servicio como secundaria. Sin afirmaciones oficiales ni diagnóstico. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-habilitats-socials-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Orden [1,2,3,0] coherente con los puntos (4,3,1,0) y la justificación. Comunicar la cancelación en persona, reconocer el esfuerzo y proponer cómo aprovecharlo es lo mejor; en persona y breve es algo peor por menos empatía; el mensaje de chat es impersonal y dejar que se enteren por otras vías es lo peor. El orden es defendible y la primera opción no tiene rival igual. Trabaja comunicar malas noticias con empatía. Sin afirmaciones oficiales ni diagnóstico. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "07",
+    "transcripcion": "agent-a8d2dd86c53b907f2.jsonl",
+    "respuesta_sha256": "80b9185da68f867a0383b263ced7a9d12fc6a216b01d9abddf15b5bcaf724562"
+   },
+   "registrada_el": "2026-10-05T23:05:32",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T23:05:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "07",
+      "transcripcion": "agent-a8d2dd86c53b907f2.jsonl",
+      "respuesta_sha256": "80b9185da68f867a0383b263ced7a9d12fc6a216b01d9abddf15b5bcaf724562"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-motivacio-3\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La opción recomendada (apuntarse porque será útil para la feina) es razonable y puntúa más, pero la justificación habla de 'ajudar millor les persones', que no aparece en el escenario ni en la opción: hay desajuste entre texto y justificación. El contexto es un trabajo de verano en un camping, así que trabaja más la iniciativa y el desarrollo propio que la identificación con la organización. Rechazar una formación voluntaria no remunerada es una postura legítima y no queda tan penalizada con claridad. No hay afirmaciones oficiales ni diagnóstico. No es duplicado de ninguno de los parecidos, que presentan otras situaciones.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":true,\"relevante\":false,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-motivacio-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Los puntos y el orden [0,1,2,3] coinciden con la justificación y el escenario trabaja la motivación. Pero el ranking de las dos últimas opciones es discutible: reírse de los comentarios que desprecian los valores de la organización para encajar (posición 3) es arguably peor que desconectar (posición 4), porque implica adherirse activamente a la burla, y aquí se puntúa mejor por habilidades sociales. Además, 'compartir con ellos qué me ha aportado' puede resultar forzado. Al haber duda sobre la clave del orden, se marca clave_defendible=false. No hay afirmaciones oficiales ni diagnóstico, ni duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-motivacio-5\",\"verdict\":\"VALID\",\"reason\":\"Situación realista (un conocido desanima al opositor). La opción recomendada, contrastar, repensar los motivos y decidir con calma, es claramente la más madura, y ninguna otra es igual de buena: abandonar es impulsivo, ignorar todo es rígido, reducir el estudio es evasivo. Puntos (4/1/0/1) coherentes con la justificación. Entrena motivación realista y autogestión, no otra competencia. Sin lenguaje oficial ni diagnóstico. Escenario distinto de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-motivacio-6\",\"verdict\":\"VALID\",\"reason\":\"Orden [2,3,0,1] coherente con los puntos (4,3,1,0) y con la justificación. Recordar el sentido del proyecto y proponer metas pequeñas es la actuación más constructiva; continuar solo es perseverante pero menos cooperativo; abandonar y criticar en público son claramente peores, y 'dejarlo' es mejor que criticar. Mantener la implicación en un proyecto colectivo es motivación y cooperación. Sin afirmaciones oficiales ni diagnóstico. Situación diferente de las demás.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-habilitats-socials-1\",\"verdict\":\"VALID\",\"reason\":\"Escenario realista de incorporación a una oficina. Presentarse, interesarse por el trabajo de cada uno y ofrecer ayuda es claramente la opción más proactiva y respetuosa; esperar, aislarse o bromear en exceso son inferiores sin ser equivalentes. Puntos coherentes con la justificación. Trabaja comunicación e iniciativa social. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-habilitats-socials-2\",\"verdict\":\"VALID\",\"reason\":\"Conflicto de convivencia realista. Hablar con calma, explicar cómo afecta y buscar una solución conjunta es la opción más asertiva; la nota, quejarse a terceros y golpear la pared son claramente peores, y ninguna iguala a la recomendada. Puntos y justificación coherentes. Entrena comunicación asertiva y autocontrol. Sin afirmaciones oficiales ni diagnóstico. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-habilitats-socials-3\",\"verdict\":\"VALID\",\"reason\":\"Situación creíble en una exposición oral. Reconocer que no se sabe, explicar lo que sí se sabe y ofrecerse a buscarlo es la respuesta más honesta y profesional; inventar, desviar la pregunta o prometer sin cumplir son claramente inferiores. Puntos y justificación coherentes. Trabaja comunicación y gestión de la presión. Sin afirmaciones oficiales ni diagnóstico. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-habilitats-socials-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Hay incoherencia: en un ejercicio de mediación, 'decidir yo mismo quién tiene razón' recibe 2 puntos en habilitats socials, igual que la opción recomendada, y se coloca en segunda posición, cuando un mediador no debería arbitrar ni imponer su veredicto. El orden entre alzar la voz (3ª) e inhibirse (4ª) también es discutible, porque alzar la voz escala el conflicto activamente. La clave de la primera posición es defendible, pero el resto del orden y los puntos no. Sin afirmaciones oficiales ni diagnóstico. No es duplicado.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-habilitats-socials-5\",\"verdict\":\"VALID\",\"reason\":\"Situación realista en comercio. Preguntar al cliente qué quiere decir para entender su necesidad es claramente lo más profesional; fingir entender o recomendar lo más vendido es engañoso, y derivar sin intentar entender o responder en genérico son pasivos. Puntos y justificación coherentes. Entrena comunicación (escucha y preguntas) con orientación al servicio como secundaria. Sin afirmaciones oficiales ni diagnóstico. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-habilitats-socials-6\",\"verdict\":\"VALID\",\"reason\":\"Orden [1,2,3,0] coherente con los puntos (4,3,1,0) y la justificación. Comunicar la cancelación en persona, reconocer el esfuerzo y proponer cómo aprovecharlo es lo mejor; en persona y breve es algo peor por menos empatía; el mensaje de chat es impersonal y dejar que se enteren por otras vías es lo peor. El orden es defendible y la primera opción no tiene rival igual. Trabaja comunicar malas noticias con empatía. Sin afirmaciones oficiales ni diagnóstico. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

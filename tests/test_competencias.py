@@ -223,3 +223,59 @@ class Publicado(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PoliticaVersionada(unittest.TestCase):
+    """juez-competencias-v2: Sonnet como referencia, mismos criterios, rondas nuevas sin tocar las anteriores."""
+
+    def test_v2_activa_con_referencia_sonnet_y_v1_historica_intacta(self):
+        reg = json.load(open(os.path.join(C.POLITICAS, "registro.json"), encoding="utf-8"))
+        self.assertEqual(reg["activa"], "juez-competencias-v2")
+        p2, p1 = C.politica(), C.politica("juez-competencias-v1")
+        self.assertIn("sonnet", p2["modelo_referencia"])
+        self.assertEqual(p2["criterios"], p1["criterios"])  # no se cambian criterios para subir VALID
+        self.assertEqual(p2["prompt_sha256"], p1["prompt_sha256"])
+
+    def test_politica_manipulada_bloquea(self):
+        d = tempfile.mkdtemp(); self.addCleanup(shutil.rmtree, d, True)
+        shutil.copytree(C.POLITICAS, os.path.join(d, "p"))
+        f = os.path.join(d, "p", "juez-competencias-v2.json")
+        with open(f, "a", encoding="utf-8") as h:
+            h.write(" ")
+        reg = json.load(open(os.path.join(d, "p", "registro.json"), encoding="utf-8"))
+        for e in reg["versiones"]:
+            e["fichero"] = os.path.relpath(os.path.join(d, "p", os.path.basename(e["fichero"])), R)
+        json.dump(reg, open(os.path.join(d, "p", "registro.json"), "w"))
+        with self.assertRaises(SystemExit):
+            C.politica_de(os.path.join(d, "p"), C.CRITERIOS)
+        with self.assertRaises(SystemExit):
+            C.politica_de(C.POLITICAS, C.CRITERIOS + ["otro"])
+
+    def _lote(self, d, rondas):
+        os.makedirs(os.path.join(d, "L"))
+        for f, modelo, vs in rondas:
+            json.dump({"judge_model": modelo, "tandas": [{"tanda": "01", "estado": "ACEPTADA", "registrada_el": "t",
+                                                          "veredictos": [{"item_id": i, "verdict": v} for i, v in vs.items()]}]},
+                      open(os.path.join(d, "L", f), "w"))
+
+    def test_combinacion_conservadora_y_solo_valid_con_la_referencia(self):
+        d = tempfile.mkdtemp(); self.addCleanup(shutil.rmtree, d, True)
+        self._lote(d, [("evaluacion.json", "claude-haiku-4-5", {"a": "VALID", "b": "VALID", "c": "REVIEW_REQUIRED", "d": "VALID", "e": "REJECTED"}),
+                       ("evaluacion-sonnet.json", "claude-sonnet-4-5", {"a": "VALID", "b": "REVIEW_REQUIRED", "c": "VALID", "e": "VALID"})])
+        r = C.combinar_de(d, "L", {"modelo_referencia": "sonnet"})
+        self.assertEqual({i: x["verdict"] for i, x in r.items()},
+                         {"a": "VALID", "b": "REVIEW_REQUIRED", "c": "REVIEW_REQUIRED", "d": "REVIEW_REQUIRED", "e": "REJECTED"})
+        self.assertEqual(len(r["a"]["veredictos"]), 2)  # se conservan los veredictos históricos
+
+    def test_reevaluar_no_sobrescribe_rondas(self):
+        d = tempfile.mkdtemp(); self.addCleanup(shutil.rmtree, d, True)
+        os.makedirs(os.path.join(d, "L"))
+        base = {k: "x" for k in ("lote", "oposicion", "call_id", "judge_prompt", "judge_prompt_sha256", "candidatas_sha256")}
+        base["tandas"] = [{"tanda": "01", "ids": [], "fichero": "f", "prompt_sha256": "p", "huellas": {}, "estado": "ACEPTADA", "veredictos": []}]
+        json.dump(base, open(os.path.join(d, "L", "evaluacion.json"), "w"))
+        pol = {"version": "v2", "sha256": "s", "modelo_referencia": "sonnet-4-5"}
+        ev = C.reevaluar_de(d, "L", "sonnet", pol)
+        self.assertEqual(ev["tandas"][0]["estado"], "PENDIENTE")
+        self.assertEqual(json.load(open(os.path.join(d, "L", "evaluacion.json")))["tandas"][0]["estado"], "ACEPTADA")
+        with self.assertRaises(SystemExit):
+            C.reevaluar_de(d, "L", "sonnet", pol)

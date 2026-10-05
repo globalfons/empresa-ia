@@ -1,0 +1,27 @@
+{
+ "oposicion": "mossos-esquadra",
+ "category": "verbal",
+ "estado": "HUMAN_REVIEW",
+ "verification_status": "REVIEW_REQUIRED",
+ "source_type": "TESTLEY_TRAINING",
+ "publicable": false,
+ "servido_en_web": false,
+ "actualizado": "2026-10-05",
+ "motivo": "La subprueba aptitudinal oficial incluye aptitud verbal, pero sus formatos semánticos (vocabulario, sinónimos, antónimos, analogías y comprensión lectora) no tienen una respuesta calculable: dependen de juicio lingüístico (polisemia, registro, matices, variantes catalán/castellano). Por eso NO se generan automáticamente ni se publican. Cualquier ítem de este banco debe redactarlo o aprobarlo una persona antes de publicarse.",
+ "analisis_cobertura": {
+  "cubierto_por_calculo": ["serie_letras", "orden_alfabetico", "anagrama", "codificacion"],
+  "falta_y_requiere_revision_humana": [
+   {"formato": "vocabulario", "por_que": "La definición correcta de una palabra puede depender del contexto y del diccionario de referencia (DIEC2 / DLE)."},
+   {"formato": "sinonimos", "por_que": "La sinonimia es parcial: varias opciones pueden ser aceptables según el contexto."},
+   {"formato": "antonimos", "por_que": "Mismo problema que los sinónimos: puede haber más de un antónimo aceptable."},
+   {"formato": "analogias", "por_que": "La relación entre términos admite varias lecturas; la unicidad no se puede comprobar con un cálculo."},
+   {"formato": "comprension_lectora", "por_que": "Requiere textos originales y preguntas cuya única respuesta revise una persona."}
+  ]
+ },
+ "requisitos_publicacion": [
+  "Redactado o aprobado por una persona (human_review.aprobado_por y fecha), con la referencia normativa usada (DIEC2 para el catalán, DLE para el castellano).",
+  "Una única respuesta defendible; las dudosas se quedan en REVIEW_REQUIRED.",
+  "Nunca se presenta como ejercicio oficial (source_type TESTLEY_TRAINING)."
+ ],
+ "items": []
+}

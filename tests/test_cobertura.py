@@ -1,6 +1,6 @@
 """CoverageEngine (Mossos 360 · Fases 8-9): necesidades concretas por tema, sin generar nada.
 Uso: python3 -m unittest tests.test_cobertura"""
-import collections, os, sys, unittest
+import re, collections, os, sys, unittest
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, R)
@@ -29,7 +29,8 @@ class Cobertura(unittest.TestCase):
         excluidos = {f"guia-mossos:{a}" for t in r["temas"] for a in t["apartados_bloqueados"]}
         pedidos = {a for n in r["necesidades"] for a in n["articulos"]}
         self.assertFalse(pedidos & excluidos)
-        self.assertNotIn("guia-mossos:C.4.2", pedidos)
+        self.assertFalse([a for a in pedidos if re.search(r"10/1994|4/2003|16/1991|llei-(4-2003|10-1994|16-1991)", a)],
+                         "las leyes catalanas sin texto oficial verificado nunca son fuente")
         self.assertTrue(any(b["tema"] == "D" for b in r["bloqueados"]))
         self.assertFalse([n for n in r["necesidades"] if n["tema"] == "D"])
 
@@ -88,6 +89,6 @@ class PlanControlado(unittest.TestCase):
             self.assertEqual(len(s["pedidas"]), s["k"])
             for p in s["pedidas"]:
                 self.assertIn((s["n"].rsplit(".", 1)[0], p["tipo"], p["dif"]), nec)
-            self.assertNotIn(s["n"], {"C.3.1", "C.3.2", "C.3.3", "C.3.IF", "C.2.4", "C.2.7"}, "nunca apartados sin fuente verificada")
+            self.assertNotIn(s["n"].split(".")[0], {"D"}, "nunca temas sin fuente oficial")
         difs = collections.Counter(p["dif"] for s in sl for p in s["pedidas"])
         self.assertLess(difs[1], 15 * 0.5, f"no se llena con preguntas fáciles: {difs}")

@@ -545,13 +545,42 @@
     "veredictos": "76a50c5eab12eb25fcde9d9e52a1fd835e68de3dccd9949b0bdcdab12e87c5ba",
     "prompt_juez": "c9601a2217ff565e432099cb22cd3c1408316323d5450ec6468342ba996c2707"
    }
+  },
+  {
+   "id": "S00021",
+   "fecha": "2026-10-05T23:05:46",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 3,
+   "generadas": 10,
+   "VALID": 10,
+   "REVIEW_REQUIRED": 0,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "0beac138793cdfd6469138abc30f024f19218c5513371602c55a5618d5e9bcc3",
+    "revision": "fa872ae5496e78ddf7b9b542a621911f6dea7703e48cef69e587afdb50828601",
+    "veredictos": "ff809faecf06d2f91bf0816048499394a6d198ace74bc621f6ad4983c7874234",
+    "prompt_juez": "9368dd6a676b0c97b6dab7f8998a6a74a0e0c3f88f85651920bc7925fd5b6a02"
+   }
   }
  ],
  "pausa": {
   "estado": "GENERATION_PAUSED",
-  "motivo": "Métricas del lote S00020: defecto del circuito detectado en el lote (corregido; se revisa antes de la siguiente tanda). Revisar fabrica/estado/metricas-lotes.json y auditoria-lotes.json antes de reanudar (--reanudar).",
-  "lote": "S00020",
-  "fecha": "2026-10-02"
+  "motivo": "P0 B.1/B.5/C.1: S00021 publicado (10 VALID). S00022 retenido sin publicar: el juez dio 10/10 VALID pero la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó razones no específicas (1.0, 4.0; razones en castellano sobre preguntas en catalán). No se relaja el guard ni se rejuzga (sin judge shopping): requiere decisión humana. El resto de generación requiere autorización explícita. Reanudar con --reanudar.",
+  "lote": "S00022",
+  "fecha": "2026-10-05"
  },
  "omitidos": {
   "lo-4-2015|24": 2,
@@ -578,6 +607,13 @@
    "lote": "S00018",
    "fecha": "2026-10-02",
    "levantada": "2026-10-02"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "Métricas del lote S00020: defecto del circuito detectado en el lote (corregido; se revisa antes de la siguiente tanda). Revisar fabrica/estado/metricas-lotes.json y auditoria-lotes.json antes de reanudar (--reanudar).",
+   "lote": "S00020",
+   "fecha": "2026-10-02",
+   "levantada": "2026-10-05"
   }
  ]
 }

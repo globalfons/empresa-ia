@@ -694,25 +694,7 @@
   }
  ],
  "solo_ambito": true,
- "fabrica_excluir": [
-  {
-   "ley": "guia-mossos",
-   "arts": [
-    "B.8.IF",
-    "C.1.2",
-    "C.2.4",
-    "C.2.7",
-    "C.3.1",
-    "C.3.2",
-    "C.3.3",
-    "C.3.IF",
-    "C.4.2",
-    "C.4.3",
-    "C.4.IF"
-   ],
-   "motivo": "Apartats de la guia que citen o desenvolupen la Llei 10/1994, la Llei 4/2003 o la Llei 16/1991, sense text consolidat oficial verificat al repositori (OFFICIAL_PENDING_REVIEW). B.8.IF conté a més text de l'índex del bloc C (defecte d'extracció del PDF). No s'hi generen preguntes fins que s'incorpori la font oficial."
-  }
- ],
+ "fabrica_excluir": [],
  "preparacion_modulos": [
   {
    "modulo": "conocimientos",
@@ -778,6 +760,35 @@
     "calendario",
     "calendario_aviso"
    ]
+  }
+ ],
+ "fuentes_decisiones": [
+  {
+   "fecha": "2026-10-05",
+   "ley": "guia-mossos",
+   "arts": [
+    "B.8.IF",
+    "C.1.2",
+    "C.2.4",
+    "C.2.7",
+    "C.3.1",
+    "C.3.2",
+    "C.3.3",
+    "C.3.IF",
+    "C.4.2",
+    "C.4.3",
+    "C.4.IF"
+   ],
+   "exclusion_anterior": "Apartats de la guia que citen o desenvolupen la Llei 10/1994, la Llei 4/2003 o la Llei 16/1991, sense text consolidat oficial verificat al repositori (OFFICIAL_PENDING_REVIEW). B.8.IF conté a més text de l'índex del bloc C (defecte d'extracció del PDF). No s'hi generen preguntes fins que s'incorpori la font oficial.",
+   "decision": "Desbloqueados como fuente de la fábrica. B.8.IF (y A.7.IF): el defecto de extracción se corrigió en ingesta/gencat.py (la página «índex: àmbit …» del bloque siguiente ya no se pega al último tema) y se regeneró desde el PDF oficial; registro de cambios en datos/fuentes-gencat.json. C.1.2-C.4.IF: el texto de esos apartados es la Guia d'estudi oficial (OFFICIAL_VERIFIED, edició juny 2026 amb les esmenes oficials de setembre 2026), que és el material oficial de la prova de coneixements; les preguntes només es poden basar en el text de la guia i citar-lo literalment. Les lleis 4/2003, 10/1994 i 16/1991 continuen OFFICIAL_PENDING_REVIEW (sense text consolidat oficial vigent): no s'incorporen ni es generen preguntes directament sobre el seu articulat (datos/fuentes-leyes-catalanas.json)."
+  }
+ ],
+ "fuentes_bloqueadas": [
+  {
+   "tema": "D",
+   "titulo": "Coneixement de l'entorn polític, econòmic i social (a) Catalunya, b) Estat espanyol, c) Internacional)",
+   "motivo": "El temari oficial (DOGC núm. 7382) no fixa cap document de referència i la Guia d'estudi 2026 només cobreix els àmbits A, B i C: no hi ha font oficial verificable sobre la qual generar preguntes. Bloquejat fins que l'administració publiqui material o es defineixi una font oficial.",
+   "fecha": "2026-10-05"
   }
  ]
 }
