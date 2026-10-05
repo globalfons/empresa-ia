@@ -29,12 +29,14 @@ const LEYES = JSON.parse(fs.readFileSync("catalogo/normas.json", "utf8")).map((n
   };
   // id guardado en cada pregunta (datos/ids-congelados.json, fabrica/congelar_ids.py); el posicional solo como respaldo
   L.qs.forEach((q, i) => (q.id = q.id || (PREFIJO[n.slug] || n.slug) + "-" + i));
-  // Estados de la pregunta: VALID (sin campo) · REVIEW_REQUIRED (su artículo cambió; se publica y se revisa) · OUTDATED (la cita ya no está en la ley vigente) · DEPRECATED (retirada a mano)
+  // Estados de la pregunta: VALID (sin campo) · REVIEW_REQUIRED (su artículo cambió; NO se sirve hasta revisarla) · OUTDATED (la cita ya no está en la ley vigente) · DEPRECATED (retirada a mano)
   L.desfasadas = L.qs.filter((q) => ["DEPRECATED", "OUTDATED"].includes(q.verification_status)); // no se publican (datos/vigilar_leyes.py, revisar_vigencia.py)
   L.revisar = L.qs.filter((q) => q.verification_status === "REVIEW_REQUIRED");
   // REVIEW_REQUIRED_REEVALUATION: publicada antes y en reevaluación con el juez v2 (fabrica/reevaluacion.py) → no se sirve; conserva su id
   L.reevaluacion = L.qs.filter((q) => q.verification_status === "REVIEW_REQUIRED_REEVALUATION");
-  L.qs = L.qs.filter((q) => !["DEPRECATED", "OUTDATED", "REVIEW_REQUIRED_REEVALUATION"].includes(q.verification_status));
+  // REVIEW_REQUIRED (p. ej. su artículo cambió en el BOE) tampoco se sirve hasta que una persona la revise: queda en la lista
+  // «revisar» del panel de calidad (regla: nada en revisión se publica sin aprobación humana; scripts/integridad_banco.py lo comprueba)
+  L.qs = L.qs.filter((q) => !["DEPRECATED", "OUTDATED", "REVIEW_REQUIRED", "REVIEW_REQUIRED_REEVALUATION"].includes(q.verification_status));
   return L;
 });
 const PUBLICADAS = LEYES.filter((L) => L.qs.length && L.arts.length);
