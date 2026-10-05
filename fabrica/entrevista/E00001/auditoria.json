@@ -2,12 +2,62 @@
  "_ayuda": "Auditoría independiente del lote E00001 (revisión del orquestador, posterior al juez). Solo retiene escenarios con duda (→ REVIEW_REQUIRED, no se publican); no puede aprobar nada. Revisado: similitud (Jaccard máx. 0,31 entre preguntas), preguntas obvias, sesgo de longitud (no aplica: no hay opciones), realismo y criterios arbitrarios.",
  "fecha": "2026-10-04",
  "retener": {
-  "ent-autogestio-3": "Solapa con ent-autocontrol-3: ambas piden una época con muchas obligaciones/exigencias a la vez; cambia solo el foco (tiempo frente a estrés). Duda de duplicado → revisión humana.",
-  "ent-resolucio-problemes-5": "Contrastar versiones contradictorias de dos personas sobre un mismo hecho se acerca a un procedimiento de investigación policial; duda de realismo para un candidato → revisión humana."
+  "ent-resolucio-problemes-5": "Contrastar versiones contradictorias de dos personas sobre un mismo hecho se acerca a un procedimiento de investigación policial; duda de realismo para un candidato → revisión humana.",
+  "ent-responsabilitat-2": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-responsabilitat-3": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-cooperacio-3": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-autonomia-1": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-resolucio-problemes-2": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-resolucio-problemes-3": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-orientacio-servei-1": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-orientacio-servei-3": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-adaptabilitat-2": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-adaptabilitat-4": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-autocontrol-4": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-motivacio-1": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-motivacio-2": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-motivacio-4": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote.",
+  "ent-habilitats-socials-2": "Regla determinista v2 (fabrica/entrevista.py → IMPERATIVA): pregunta imperativa terminada en «?» sin interrogativa propia. El juez de referencia la señaló como defecto de coherencia en 9 escenarios y la dejó pasar en otros; para no publicar de forma inconsistente se aplica la regla a todo el lote."
  },
  "observaciones": [
   "Distribución: 6 escenarios por competencia principal (4 conductuales y 2 situacionales), 14 categorías, dificultad 1/2/3 = 10/30/20.",
   "Las preguntas conductuales en forma «Explica'm…?» terminan en interrogante aunque son imperativas: estilo aceptable en una entrevista oral, no se retienen.",
   "Los escenarios situacionales en «Pràctiques a l'acadèmia de policia» son hipotéticos y no describen procedimientos reales (salvo ent-resolucio-problemes-5, retenido)."
+ ],
+ "historial": [
+  {
+   "fecha": "2026-10-05",
+   "accion": "retirar retención",
+   "id": "ent-autogestio-3",
+   "motivo": "Resolución objetiva con las reglas vigentes: el detector de duplicados no lo marca (Jaccard 0,24 con ent-autocontrol-3; umbral 0,45), la competencia principal es distinta (autogestión: organización del tiempo; autocontrol: gestión del estrés) y el juez de referencia (Sonnet, política v2) y el juez Haiku dan VALID tras analizar los parecidos. La auditoría no aprueba: solo retira su duda; el VALID es del juez."
+  },
+  {
+   "fecha": "2026-10-05",
+   "accion": "mantener retención",
+   "id": "ent-resolucio-problemes-5",
+   "motivo": "El juez de referencia lo da VALID, pero el mismo juez penaliza el contexto «pràctiques a l'acadèmia» en ent-responsabilitat-5 por poco realista para un candidato en selección: la duda de realismo no se resuelve objetivamente. Se sustituye por una versión corregida en el lote E00002."
+  },
+  {
+   "fecha": "2026-10-05",
+   "accion": "retener por regla v2",
+   "ids": [
+    "ent-responsabilitat-2",
+    "ent-responsabilitat-3",
+    "ent-cooperacio-3",
+    "ent-autonomia-1",
+    "ent-resolucio-problemes-2",
+    "ent-resolucio-problemes-3",
+    "ent-orientacio-servei-1",
+    "ent-orientacio-servei-3",
+    "ent-adaptabilitat-2",
+    "ent-adaptabilitat-4",
+    "ent-autocontrol-4",
+    "ent-motivacio-1",
+    "ent-motivacio-2",
+    "ent-motivacio-4",
+    "ent-habilitats-socials-2"
+   ],
+   "motivo": "aplicación uniforme de la regla determinista de imperativas a E00001 (solo retiene)"
+  }
  ]
 }

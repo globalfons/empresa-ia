@@ -1,0 +1,27 @@
+{
+ "version": "juez-entrevista-v1",
+ "prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "criterios": [
+  "coherente",
+  "realista",
+  "pregunta_abierta",
+  "indicadores_pertinentes",
+  "relevante",
+  "sin_afirmaciones_oficiales",
+  "sin_diagnostico"
+ ],
+ "duplicado": "duplicado_de",
+ "guards": [
+  "solo Read sobre su tanda",
+  "JSON estricto 1:1 con ids en orden",
+  "claves de criterios exactas",
+  "motivo propio ≥ 30 caracteres",
+  "sin valoraciones agregadas",
+  "veredicto = el más conservador entre el del juez y el deducido de sus criterios"
+ ],
+ "tanda_max": 10,
+ "modelo_referencia": null,
+ "regla_publicacion": "VALID si la tanda está aceptada, el veredicto es VALID, las candidatas son idénticas a las juzgadas, la validación determinista está limpia y la auditoría del lote no lo retiene.",
+ "nota": "Política con la que se juzgó la ronda 1 de E00001 (jueces Haiku; tanda 06 con Sonnet tras 3 rechazos del guard). Histórica."
+}

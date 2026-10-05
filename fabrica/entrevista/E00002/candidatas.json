@@ -1,0 +1,461 @@
+{
+ "oposicion": "mossos-esquadra",
+ "generador": "redactor de corrección (subagente de la sesión) a partir de los motivos del juez de referencia y de la auditoría de E00001",
+ "reglas": 2,
+ "tipo_lote": "correccion",
+ "escenarios": [
+  {
+   "id": "ent-adaptabilitat-7",
+   "sustituye": "ent-adaptabilitat-2",
+   "competency_ids": [
+    "adaptabilitat",
+    "autogestio"
+   ],
+   "tipo": "conductual",
+   "categoria": "aprenentatge",
+   "dificultad": 2,
+   "contexto": "Feina en una empresa de serveis informàtics",
+   "situacion": "Una empresa de serveis informàtics canvia l'eina de treball de l'equip i cal aprendre-la en pocs dies per no endarrerir els encàrrecs en curs.",
+   "pregunta": "Explica'm una situació en què vas haver d'aprendre una eina o un mètode nou en pocs dies per poder seguir treballant. Com ho vas fer?",
+   "indicadores": [
+    "Concreta què vas haver d'aprendre i quin marge de temps tenies",
+    "Descriu com t'ho vas organitzar per aprendre-ho",
+    "Explica com va afectar la teva feina i què en vas treure"
+   ],
+   "errores_frecuentes": [
+    "Quedar-se en generalitats sense dir què es va aprendre",
+    "Explicar només el resultat sense el procés seguit"
+   ],
+   "repregunta": "Què t'ha servit d'aquella experiència quan has hagut d'aprendre altres coses?"
+  },
+  {
+   "id": "ent-adaptabilitat-8",
+   "sustituye": "ent-adaptabilitat-4",
+   "competency_ids": [
+    "adaptabilitat",
+    "habilitats-socials"
+   ],
+   "tipo": "conductual",
+   "categoria": "adaptacio",
+   "dificultad": 3,
+   "contexto": "Estada d'estudis a l'estranger",
+   "situacion": "Durant una estada d'estudis o de feina a l'estranger, cal conviure amb persones d'una cultura amb costums, horaris i maneres de comunicar-se diferents de les habituals.",
+   "pregunta": "Explica'm una situació en què vas conviure o treballar en un entorn amb costums molt diferents dels teus. Com t'hi vas adaptar?",
+   "indicadores": [
+    "Descriu quines diferències concretes hi havia",
+    "Explica què vas canviar i què vas mantenir de la teva manera de fer",
+    "Indica com et vas relacionar amb les persones de l'entorn",
+    "Explica què en vas treure de l'experiència"
+   ],
+   "errores_frecuentes": [
+    "Descriure l'experiència només com un viatge turístic",
+    "Generalitzar sobre tota una cultura sense exemples concrets"
+   ],
+   "repregunta": "Quina situació concreta d'aquella experiència recordes més i per què?"
+  },
+  {
+   "id": "ent-autocontrol-7",
+   "sustituye": "ent-autocontrol-1",
+   "competency_ids": [
+    "autocontrol"
+   ],
+   "tipo": "conductual",
+   "categoria": "pressio",
+   "dificultad": 1,
+   "contexto": "Feina en una benzinera de nit",
+   "situacion": "Treballant de nit en una benzinera, un client arriba alterat perquè la targeta no li funciona i darrere seu s'ha format una petita cua de gent que espera.",
+   "pregunta": "Explica'm una situació tensa que vas viure en una feina d'atenció a clients. Com vas mantenir la calma i què et va ajudar?",
+   "indicadores": [
+    "Descriu la situació i el nivell de tensió que hi havia",
+    "Explica què vas notar en tu i com ho vas gestionar",
+    "Indica com vas actuar i quin va ser el resultat"
+   ],
+   "errores_frecuentes": [
+    "No explicar cap recurs o estratègia concreta",
+    "Descriure la situació sense dir com vas actuar"
+   ],
+   "repregunta": "En quines altres situacions has fet servir allò que et va ajudar aquella vegada?"
+  },
+  {
+   "id": "ent-autocontrol-8",
+   "sustituye": "ent-autocontrol-4",
+   "competency_ids": [
+    "autocontrol",
+    "responsabilitat"
+   ],
+   "tipo": "conductual",
+   "categoria": "conflicte",
+   "dificultad": 3,
+   "contexto": "Àrbitre de bàsquet en categories inferiors",
+   "situacion": "Arbitrant un partit de bàsquet de categories inferiors, es pren una decisió i diverses persones de la banqueta i de la graderia protesten alhora.",
+   "pregunta": "Explica'm una situació en què vas mantenir una decisió tot i les protestes de diverses persones alhora. Com ho vas viure?",
+   "indicadores": [
+    "Descriu la decisió i com van reaccionar les persones",
+    "Explica com vas gestionar la pressió del moment",
+    "Indica per què vas mantenir la decisió",
+    "Explica com va continuar la situació després"
+   ],
+   "errores_frecuentes": [
+    "Confondre fermesa amb tossudesa",
+    "No explicar com ho vas viure ni com ho vas gestionar"
+   ],
+   "repregunta": "Quines circumstàncies t'haurien portat a reconsiderar aquella decisió?"
+  },
+  {
+   "id": "ent-autogestio-7",
+   "sustituye": "ent-autogestio-1",
+   "competency_ids": [
+    "autogestio"
+   ],
+   "tipo": "conductual",
+   "categoria": "aprenentatge",
+   "dificultad": 1,
+   "contexto": "Aprenentatge d'una llengua pel compte propi",
+   "situacion": "Una persona decideix aprendre una llengua nova amb aplicacions i vídeos a les estones lliures, sense cap professor que li marqui el ritme ni les tasques.",
+   "pregunta": "Quin aprenentatge vas impulsar tu mateix, sense que ningú t'ho exigís, i com t'ho vas organitzar per anar avançant?",
+   "indicadores": [
+    "Explica què volies aprendre i per què",
+    "Descriu com vas planificar el temps i els recursos",
+    "Indica quins progressos vas notar i què en vas fer"
+   ],
+   "errores_frecuentes": [
+    "Enumerar activitats sense explicar què se'n va aprendre",
+    "No dir com vas mantenir el ritme al llarg del temps"
+   ],
+   "repregunta": "Com vas decidir quins recursos feies servir i quins deixaves de banda?"
+  },
+  {
+   "id": "ent-autogestio-8",
+   "sustituye": "ent-autogestio-2",
+   "competency_ids": [
+    "autogestio",
+    "autocontrol"
+   ],
+   "tipo": "conductual",
+   "categoria": "critica",
+   "dificultad": 2,
+   "contexto": "Feina de comercial",
+   "situacion": "En una feina de comercial, un responsable o un company t'indica que hi ha un aspecte de la teva manera de treballar que convé millorar.",
+   "pregunta": "Explica'm una situació en què et van assenyalar un punt a millorar. Com vas reaccionar en aquell moment i què vas fer després?",
+   "indicadores": [
+    "Descriu què et van dir i com ho vas rebre",
+    "Explica com vas gestionar la teva reacció en aquell moment",
+    "Descriu les accions que vas fer per millorar",
+    "Indica com vas comprovar els progressos"
+   ],
+   "errores_frecuentes": [
+    "Presentar un punt feble que en realitat és una virtut",
+    "Explicar la millora sense dir res de la reacció inicial"
+   ],
+   "repregunta": "Com et va servir aquella retroacció en feines posteriors?"
+  },
+  {
+   "id": "ent-autogestio-9",
+   "sustituye": "ent-autogestio-4",
+   "competency_ids": [
+    "autogestio"
+   ],
+   "tipo": "conductual",
+   "categoria": "trajectoria",
+   "dificultad": 3,
+   "contexto": "Trajectòria esportiva",
+   "situacion": "En la trajectòria esportiva, una persona es fixa un objectiu exigent a mitjà termini, com millorar una marca o preparar una prova, i ha de sostenir l'esforç durant mesos.",
+   "pregunta": "Explica'm un objectiu personal exigent que et vas marcar. Com vas mantenir l'esforç al llarg del temps?",
+   "indicadores": [
+    "Descriu l'objectiu i per què era important per a tu",
+    "Explica com vas planificar i fer el seguiment",
+    "Indica com vas afrontar els moments difícils",
+    "Explica què en vas treure, tant si vas assolir l'objectiu com si el vas reorientar"
+   ],
+   "errores_frecuentes": [
+    "Explicar només el resultat final sense el procés",
+    "Triar un objectiu sense cap dificultat real"
+   ],
+   "repregunta": "Què faries diferent si haguessis de començar de nou aquell objectiu?"
+  },
+  {
+   "id": "ent-autonomia-7",
+   "sustituye": "ent-autonomia-1",
+   "competency_ids": [
+    "autonomia"
+   ],
+   "tipo": "conductual",
+   "categoria": "iniciativa",
+   "dificultad": 1,
+   "contexto": "Feina en una empresa de missatgeria",
+   "situacion": "En una empresa de missatgeria, una persona detecta que una part de la feina diària es podria fer d'una manera més àgil, sense que ningú li hagi encarregat canviar-ho.",
+   "pregunta": "Explica'm una situació en què vas millorar alguna cosa per iniciativa pròpia, sense que ningú t'ho hagués demanat. Com ho vas fer?",
+   "indicadores": [
+    "Descriu què vas detectar que es podia millorar",
+    "Explica com vas plantejar i dur a terme la millora",
+    "Indica el resultat i com el van rebre els altres"
+   ],
+   "errores_frecuentes": [
+    "Quedar-se en la idea sense explicar què es va fer",
+    "Explicar el resultat sense descriure la teva aportació"
+   ],
+   "repregunta": "Com vas fer saber la teva iniciativa als responsables o als companys?"
+  },
+  {
+   "id": "ent-autonomia-8",
+   "sustituye": "ent-autonomia-2",
+   "competency_ids": [
+    "autonomia",
+    "resolucio-problemes"
+   ],
+   "tipo": "conductual",
+   "categoria": "decisio",
+   "dificultad": 2,
+   "contexto": "Monitor de colònies d'estiu",
+   "situacion": "Durant unes colònies d'estiu, sorgeix un imprevist amb els infants en un moment en què el monitor no pot localitzar ningú de l'equip per consultar-ho.",
+   "pregunta": "Quina decisió important vas haver de prendre tu sol en un moment en què no podies consultar ningú, i com la vas prendre?",
+   "indicadores": [
+    "Explica per què no era possible consultar ningú",
+    "Descriu les opcions que vas valorar",
+    "Indica què vas decidir i com en vas informar després"
+   ],
+   "errores_frecuentes": [
+    "Descriure la decisió sense explicar en què et vas basar",
+    "Explicar només el resultat sense el procés"
+   ],
+   "repregunta": "Quina informació t'hauria agradat tenir en aquell moment?"
+  },
+  {
+   "id": "ent-habilitats-socials-7",
+   "sustituye": "ent-habilitats-socials-1",
+   "competency_ids": [
+    "habilitats-socials"
+   ],
+   "tipo": "conductual",
+   "categoria": "comunicacio",
+   "dificultad": 1,
+   "contexto": "Voluntariat en un esplai",
+   "situacion": "En un esplai, cal explicar les normes d'un joc nou a un grup d'infants de diferents edats abans de començar l'activitat, perquè tothom pugui participar.",
+   "pregunta": "Explica'm una vegada que vas haver d'explicar alguna cosa a diverses persones alhora. Com et vas assegurar que t'entenien?",
+   "indicadores": [
+    "Descriu qui formava el grup i què havies d'explicar",
+    "Explica com vas estructurar el missatge",
+    "Indica com vas comprovar la comprensió i què en vas treure"
+   ],
+   "errores_frecuentes": [
+    "No explicar cap preparació ni cap recurs concret",
+    "Descriure només el resultat sense el context"
+   ],
+   "repregunta": "Què vas ajustar mentre parlaves en veure com reaccionava el grup?"
+  },
+  {
+   "id": "ent-habilitats-socials-8",
+   "sustituye": "ent-habilitats-socials-2",
+   "competency_ids": [
+    "habilitats-socials",
+    "cooperacio"
+   ],
+   "tipo": "conductual",
+   "categoria": "comunicacio",
+   "dificultad": 2,
+   "contexto": "Feina en una empresa de reformes",
+   "situacion": "En una obra de reformes, dues persones de l'equip tenen una manera diferent d'entendre una tasca i deixen de comunicar-se bé, cosa que alenteix la feina.",
+   "pregunta": "Explica'm una situació en què vas ajudar dues persones que no s'entenien a comunicar-se millor. Què vas fer?",
+   "indicadores": [
+    "Descriu per què no s'entenien",
+    "Explica què vas fer per facilitar la comunicació",
+    "Indica el resultat de la teva intervenció"
+   ],
+   "errores_frecuentes": [
+    "Descriure el desacord sense explicar la pròpia intervenció",
+    "No concretar cap acció"
+   ],
+   "repregunta": "Com vas saber que la comunicació entre elles havia millorat?"
+  },
+  {
+   "id": "ent-habilitats-socials-9",
+   "sustituye": "ent-habilitats-socials-4",
+   "competency_ids": [
+    "habilitats-socials"
+   ],
+   "tipo": "conductual",
+   "categoria": "comunicacio",
+   "dificultad": 3,
+   "contexto": "Mediació en una associació juvenil",
+   "situacion": "En una associació juvenil, un grup de persones té una opinió ben assentada sobre una decisió i algú intenta que la reconsiderin amb arguments i escolta.",
+   "pregunta": "Explica'm una situació en què vas intentar convèncer un grup de persones de canviar d'opinió. Com ho vas fer?",
+   "indicadores": [
+    "Descriu la posició inicial del grup",
+    "Explica com vas escoltar les seves raons",
+    "Indica els arguments que vas fer servir",
+    "Indica què va passar després de la teva intervenció"
+   ],
+   "errores_frecuentes": [
+    "Confondre convèncer amb imposar",
+    "No mostrar cap escolta de les altres opinions"
+   ],
+   "repregunta": "Com et vas assabentar de com havia rebut el grup els teus arguments?"
+  },
+  {
+   "id": "ent-orientacio-servei-7",
+   "sustituye": "ent-orientacio-servei-1",
+   "competency_ids": [
+    "orientacio-servei"
+   ],
+   "tipo": "conductual",
+   "categoria": "atencio",
+   "dificultad": 1,
+   "contexto": "Dependent en una botiga de roba",
+   "situacion": "En una botiga de roba, un client demana una peça concreta, però parlant amb ell es veu que en realitat necessita una altra cosa per a una ocasió determinada.",
+   "pregunta": "Explica'm una situació en què vas ajudar un client a resoldre una necessitat que anava més enllà del que et demanava. Què vas fer?",
+   "indicadores": [
+    "Descriu qui era la persona i què demanava",
+    "Explica com vas detectar la necessitat real",
+    "Indica què vas fer i com va respondre la persona"
+   ],
+   "errores_frecuentes": [
+    "Descriure un tracte correcte però sense cap esforç especial",
+    "Generalitzar sobre com t'agrada ajudar la gent"
+   ],
+   "repregunta": "Com vas comprovar que la persona havia quedat satisfeta amb l'ajuda?"
+  },
+  {
+   "id": "ent-orientacio-servei-8",
+   "sustituye": "ent-orientacio-servei-3",
+   "competency_ids": [
+    "orientacio-servei",
+    "habilitats-socials"
+   ],
+   "tipo": "conductual",
+   "categoria": "comunicacio",
+   "dificultad": 2,
+   "contexto": "Atenció en una biblioteca de barri",
+   "situacion": "A la biblioteca d'un barri, una persona recent arribada demana ajuda per fer un tràmit en línia i té dificultats amb la llengua i amb l'ordinador.",
+   "pregunta": "Descriu una situació en què vas atendre algú que tenia dificultats per entendre una informació. Què vas fer perquè la comprengués?",
+   "indicadores": [
+    "Descriu les dificultats de comunicació que hi havia",
+    "Explica quins recursos vas fer servir",
+    "Indica com vas comprovar que t'havia entès"
+   ],
+   "errores_frecuentes": [
+    "Descriure-ho sense cap estratègia concreta",
+    "No explicar què va canviar en la teva manera de comunicar"
+   ],
+   "repregunta": "Què vas fer diferent amb la següent persona que et va demanar ajuda?"
+  },
+  {
+   "id": "ent-resolucio-problemes-7",
+   "sustituye": "ent-resolucio-problemes-2",
+   "competency_ids": [
+    "resolucio-problemes",
+    "autocontrol"
+   ],
+   "tipo": "conductual",
+   "categoria": "pressio",
+   "dificultad": 2,
+   "contexto": "Feina de cambrer en un festival",
+   "situacion": "Treballant de cambrer en un festival ple de gent, sorgeix un problema inesperat, com la falta de producte o una comanda barrejada, i el temps per respondre és molt curt.",
+   "pregunta": "Explica'm una situació en què vas haver de trobar una solució ràpida a un problema enmig de molta pressió. Com ho vas fer?",
+   "indicadores": [
+    "Descriu el problema i la pressió del moment",
+    "Explica com vas prioritzar les accions",
+    "Indica el resultat i què en vas treure"
+   ],
+   "errores_frecuentes": [
+    "Descriure la pressió sense explicar què es va fer",
+    "Atribuir el resultat només a la sort"
+   ],
+   "repregunta": "Com vas valorar si la solució que vas aplicar era prou bona?"
+  },
+  {
+   "id": "ent-resolucio-problemes-8",
+   "sustituye": "ent-resolucio-problemes-3",
+   "competency_ids": [
+    "resolucio-problemes",
+    "cooperacio"
+   ],
+   "tipo": "conductual",
+   "categoria": "equip",
+   "dificultad": 2,
+   "contexto": "Projecte final de cicle formatiu",
+   "situacion": "En el projecte final d'un cicle formatiu, el grup es queda aturat davant d'un problema tècnic i hi ha idees diferents sobre com resoldre'l.",
+   "pregunta": "Explica'm una situació en què un grup estava encallat davant d'un problema. Què vas aportar tu per trobar-hi una sortida?",
+   "indicadores": [
+    "Explica per què el grup s'havia encallat",
+    "Descriu com vas recollir i combinar idees",
+    "Indica la solució acordada i com es va aplicar"
+   ],
+   "errores_frecuentes": [
+    "Atribuir-se tot el mèrit de la solució",
+    "No explicar el procés per arribar a l'acord"
+   ],
+   "repregunta": "Com es va decidir quines idees s'aplicaven i quines no?"
+  },
+  {
+   "id": "ent-resolucio-problemes-9",
+   "sustituye": "ent-resolucio-problemes-5",
+   "competency_ids": [
+    "resolucio-problemes"
+   ],
+   "tipo": "situacional",
+   "categoria": "atencio",
+   "dificultad": 2,
+   "contexto": "Voluntariat en una associació de veïns",
+   "situacion": "Organitzes una festa de barri amb dues persones de l'associació. Cadascuna et diu una cosa diferent sobre qui havia de reservar el material i a quina hora, i queda poc temps per tenir-ho tot a punt.",
+   "pregunta": "Com ho gestionaries si dues persones del grup et donessin informacions diferents sobre un mateix tema i haguessis d'avançar igualment?",
+   "indicadores": [
+    "Explica com ordenaries la informació disponible",
+    "Descriu com contrastaries les dades per decidir",
+    "Considera com avançaries tenint en compte el temps disponible"
+   ],
+   "errores_frecuentes": [
+    "Donar per bona la primera informació sense contrastar-la",
+    "Decidir segons l'afinitat personal"
+   ],
+   "repregunta": "Com explicaries al grup què has pogut comprovar i què queda pendent?"
+  },
+  {
+   "id": "ent-responsabilitat-7",
+   "sustituye": "ent-responsabilitat-5",
+   "competency_ids": [
+    "responsabilitat"
+   ],
+   "tipo": "situacional",
+   "categoria": "atencio",
+   "dificultad": 2,
+   "contexto": "Club esportiu de barri",
+   "situacion": "En acabar un entrenament al club on col·labores, veus que el material compartit, com pilotes i con, ha quedat incomplet per un descuit d'un company, i d'aquí a poca estona arriba un altre grup.",
+   "pregunta": "Què faries si, en acabar un entrenament, veiessis que el material compartit ha quedat incomplet per un descuit d'un company?",
+   "indicadores": [
+    "Explica quina prioritat donaries i per què",
+    "Valora diferents opcions i justifica la que triaries",
+    "Considera l'efecte de la teva decisió sobre el company i el grup que ve"
+   ],
+   "errores_frecuentes": [
+    "Decidir sense pensar en el grup que ha d'utilitzar el material",
+    "Quedar-se només en què no és responsabilitat pròpia"
+   ],
+   "repregunta": "Com canviaria la teva decisió si no tinguessis temps de resoldre-ho abans que arribés el grup?"
+  },
+  {
+   "id": "ent-responsabilitat-8",
+   "sustituye": "ent-responsabilitat-6",
+   "competency_ids": [
+    "responsabilitat",
+    "orientacio-servei"
+   ],
+   "tipo": "situacional",
+   "categoria": "error",
+   "dificultad": 3,
+   "contexto": "Atenció al client en una botiga d'electrònica",
+   "situacion": "En una botiga d'electrònica descobreixes que fa uns dies vas donar informació equivocada sobre la garantia a un client habitual. El responsable és fora una setmana i un company opina que, com que el client no ho ha notat, no cal remoure res.",
+   "pregunta": "Com decidiries què fer en aquesta situació i quins factors tindries en compte?",
+   "indicadores": [
+    "Valora les conseqüències per al client i per a la botiga",
+    "Compara diferents opcions i justifica la que triaries",
+    "Considera com tractaries l'opinió del company",
+    "Explica com assumiries la part de responsabilitat pròpia"
+   ],
+   "errores_frecuentes": [
+    "Decidir pensant només en l'efecte sobre la pròpia imatge",
+    "Parlar de principis generals sense aplicar-los al cas"
+   ],
+   "repregunta": "Què canviaria en la teva decisió si l'error pogués suposar un cost econòmic per al client?"
+  }
+ ]
+}

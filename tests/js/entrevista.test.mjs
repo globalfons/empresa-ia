@@ -113,7 +113,7 @@ test("build: página de entrevista, datos sin trazas, enlaces desde la oposició
   const web = JSON.parse(fs.readFileSync("docs/datos/entrevista-mossos-esquadra.json", "utf8"));
   assert.equal(web.competencias.length, 10);
   assert.equal(web.oficial.verification_status, "OFFICIAL_VERIFIED");
-  assert.ok(web.escenarios.length >= 50);
+  for (const c of web.competencias) assert.ok(web.escenarios.filter((e) => e.competency_ids[0] === c.id).length >= 3, c.id); // modo práctica
   for (const e of web.escenarios) {
     assert.equal(e.verification_status, "VALID"); assert.equal(e.source_type, "TESTLEY_TRAINING");
     assert.ok(!("traza" in e) && !("generated_by" in e));

@@ -8,7 +8,7 @@
  "territorio": "Cataluña",
  "grupo": "C1",
  "categoria": "policia",
- "generado": "2026-10-03",
+ "generado": "2026-10-05",
  "ficha_actualizada": "2026-10-01",
  "convocatoria": {
   "actual": {
@@ -3522,7 +3522,7 @@
     "preguntas": 80,
     "minutos": 35,
     "en_simulacro": false,
-    "motivo": "Psicotècnics (raonament abstracte, espacial, verbal, numèric i perceptiu): TestLey encara no en té preguntes verificades.",
+    "motivo": "Psicotècnics (raonament abstracte, espacial, verbal, numèric i perceptiu): TestLey en té un entrenador propi (exercicis generats i verificats per càlcul, amb la verbal parcial), no una reproducció de la subprova oficial.",
     "cita": "Consisteix a respondre un qüestionari tipus test de 80 preguntes adreçat a avaluar els processos de raonament i les aptituds intel·lectuals de la persona participant.",
     "fuente": "convocatoria"
    },
@@ -4744,9 +4744,40 @@
     },
     "contenido": {
      "ejercicios": 0,
-     "estado": "SIN_BANCO_VERIFICADO"
+     "estado": "SIN_BANCO_VERIFICADO",
+     "generador": {
+      "fichero": "web/assets/aptitud.js",
+      "verification_status": "VERIFIED_BY_COMPUTATION",
+      "source_type": "TESTLEY_GENERATED",
+      "subtipos": {
+       "numerico": [
+        "serie",
+        "porcentaje",
+        "proporcion"
+       ],
+       "abstracto": [
+        "serie_figuras"
+       ],
+       "espacial": [
+        "rotacion"
+       ],
+       "perceptivo": [
+        "pares_identicos",
+        "contar_simbolo"
+       ],
+       "verbal": [
+        "serie_letras",
+        "orden_alfabetico"
+       ]
+      },
+      "dificultades": [
+       1,
+       2,
+       3
+      ]
+     }
     },
-    "entrenable": false
+    "entrenable": true
    },
    "psychometric": {
     "oficial": {
@@ -4774,10 +4805,11 @@
      "call_id": "46/26"
     },
     "contenido": {
-     "estado": "SIN_CONTENIDO"
+     "items_autoevaluacion": 20,
+     "source_type": "TESTLEY_TRAINING"
     },
     "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.",
-    "entrenable": false
+    "entrenable": true
    },
    "competency": {
     "oficial": {
@@ -4851,9 +4883,11 @@
      "call_id": "46/26"
     },
     "contenido": {
-     "estado": "SIN_CONTENIDO"
+     "escenarios_valid": 60,
+     "review_required": 0,
+     "source_type": "TESTLEY_GENERATED"
     },
-    "entrenable": false
+    "entrenable": true
    },
    "interview": {
     "oficial": {
@@ -4881,9 +4915,11 @@
      "call_id": "46/26"
     },
     "contenido": {
-     "estado": "SIN_CONTENIDO"
+     "escenarios_valid": 56,
+     "review_required": 29,
+     "source_type": "TESTLEY_TRAINING"
     },
-    "entrenable": false
+    "entrenable": true
    },
    "physical": {
     "oficial": {

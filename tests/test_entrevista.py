@@ -57,6 +57,15 @@ class Validador(unittest.TestCase):
         c = candidatas(); c["escenarios"][1]["situacion"], c["escenarios"][1]["pregunta"] = c["escenarios"][0]["situacion"], c["escenarios"][0]["pregunta"]
         self.assertTrue(any("casi idéntico" in p for p in mal(c, c["escenarios"][1]["id"])))
 
+    def test_reglas_v2_imperativa_con_interrogante(self):
+        c = candidatas(); e = c["escenarios"][0]
+        e["pregunta"] = "Explica'm una situació en què vas cometre un error en una tasca de la qual eres responsable?"
+        self.assertFalse(any("imperativa" in p for p in mal(c, e["id"])))  # lotes antiguos: sin la regla
+        c["reglas"] = 2
+        self.assertTrue(any("imperativa" in p for p in mal(c, e["id"])))
+        e["pregunta"] = "Explica'm una situació en què vas cometre un error en una tasca. Com el vas gestionar?"
+        self.assertFalse(any("imperativa" in p for p in mal(c, e["id"])))
+
     def test_indicadores_orientativos_acotados(self):
         c = candidatas(); c["escenarios"][0]["indicadores"] = ["Explica el context de la situació"]
         self.assertTrue(any("indicadores" in p for p in mal(c, c["escenarios"][0]["id"])))
@@ -93,13 +102,57 @@ class Circuito(unittest.TestCase):
             x.stop()
         shutil.rmtree(self.t)
 
-    def juzgar(self, override=None):
-        ev = E.preparar("L1")
+    def juzgar(self, override=None, modelo=None, lote="L1", ronda=None):
+        ev = E.reevaluar(lote, ronda) if ronda else E.preparar(lote)
         for t in ev["tandas"]:
-            tr = os.path.join(self.t, f"tr-{t['tanda']}.jsonl")
+            tr = os.path.join(self.t, f"tr-{lote}-{ronda}-{t['tanda']}.jsonl")
             transcripcion(tr, t["fichero"], respuesta(C.J.leer(t["fichero"])["items"], override))
-            E.registrar("L1", t["tanda"], tr)
+            E.registrar(lote, t["tanda"], tr, modelo, ronda)
         return ev
+
+    def test_politica_v2_sin_veredicto_del_modelo_de_referencia_no_publica(self):
+        self.juzgar(modelo="claude-haiku-4-5 (test)")
+        r = E.publicar("L1")
+        self.assertEqual((r["publicados"], len(r["review_required"]), r["politica"]), (0, 60, "juez-entrevista-v2"))
+
+    def test_reevaluacion_con_referencia_combina_de_forma_conservadora(self):
+        self.juzgar({"ent-autonomia-1": {"realista": False}}, modelo="claude-haiku-4-5 (test)")
+        self.juzgar({"ent-cooperacio-1": {"relevante": False}, "ent-motivacio-2": {"duplicado_de": "ent-motivacio-1"}}, ronda="sonnet")
+        r = E.publicar("L1")
+        self.assertEqual(r["publicados"], 57)  # haiku REVIEW gana a sonnet VALID; sonnet REVIEW y REJECTED también
+        self.assertEqual(r["review_required"], ["ent-autonomia-1", "ent-cooperacio-1"]); self.assertEqual(r["rejected"], ["ent-motivacio-2"])
+        e = next(x for x in C.J.leer(os.path.join(self.t, "pub", "mossos-esquadra.json"))["escenarios"] if x["id"] == "ent-responsabilitat-1")
+        self.assertEqual(sorted(v["ronda"] for v in e["traza"]["veredictos"]), ["evaluacion-sonnet.json", "evaluacion.json"])
+        with self.assertRaises(SystemExit):
+            E.reevaluar("L1", "sonnet")  # una ronda nunca se sobrescribe
+
+    def test_politica_o_prompt_alterados_bloquean(self):
+        tmp = os.path.join(self.t, "pol"); shutil.copytree(E.POLITICAS, tmp)
+        with mock.patch.object(E, "POLITICAS", tmp):
+            E.politica()
+            v2 = os.path.join(R, C.J.leer(os.path.join(tmp, "registro.json"))["versiones"][1]["fichero"])
+            reg = C.J.leer(os.path.join(tmp, "registro.json")); reg["versiones"][1]["sha256"] = "0" * 64
+            C.J.escribir(os.path.join(tmp, "registro.json"), reg)
+            with self.assertRaises(SystemExit):
+                E.politica()
+        self.assertTrue(os.path.exists(v2))
+
+    def test_lote_de_complemento_no_repite_ni_borra_lo_publicado(self):
+        self.juzgar()
+        E.publicar("L1")
+        base = candidatas()["escenarios"]
+        nuevo = dict(base[0], id="ent-responsabilitat-9", situacion="Experiència en un taller mecànic on vas haver de revisar comandes urgents abans de lliurar-les a clients esperant.",
+                     pregunta="Com vas comprovar el teu propi treball abans de donar-lo per acabat quan anaves just de temps?")
+        copia = dict(base[1], id="ent-responsabilitat-10")
+        os.makedirs(os.path.join(self.t, "L2"))
+        C.J.escribir(os.path.join(self.t, "L2", "candidatas.json"), {"oposicion": "mossos-esquadra", "generador": "test", "escenarios": [nuevo, copia]})
+        with self.assertRaises(SystemExit):
+            E.preparar("L2")  # la copia de un escenario de L1 se detecta entre lotes
+        C.J.escribir(os.path.join(self.t, "L2", "candidatas.json"), {"oposicion": "mossos-esquadra", "generador": "test", "escenarios": [nuevo]})
+        self.juzgar(lote="L2")
+        r = E.publicar("L2")
+        pub = C.J.leer(os.path.join(self.t, "pub", "mossos-esquadra.json"))
+        self.assertEqual((r["publicados"], len(pub["escenarios"]), pub["lotes"]), (1, 61, ["L1", "L2"]))
 
     def test_tandas_sin_metadatos_y_prompt_congelado(self):
         ev = E.preparar("L1")
@@ -152,11 +205,18 @@ class Publicado(unittest.TestCase):
     @unittest.skipUnless(os.path.exists(F), "sin publicar")
     def test_publicado_solo_valid_y_coherente_con_el_juicio(self):
         pub = C.J.leer(self.F)
-        ev = C.J.leer(os.path.join(R, "fabrica", "entrevista", "E00001", "evaluacion.json"))
-        ver = C.veredictos(ev)
-        self.assertGreaterEqual(len(pub["escenarios"]), 50)
+        pol = E.politica()
+        ver = {i: v["verdict"] for l in pub["lotes"] for i, v in E.combinar(l, pol).items()}
+        retenidos = {i for l in pub["lotes"] if os.path.exists(os.path.join(E.TRABAJO, l, "auditoria.json"))
+                     for i in C.J.leer(os.path.join(E.TRABAJO, l, "auditoria.json")).get("retener", {})}
+        # invariante de servicio: las 10 competencias con al menos 3 escenarios VALID (modo práctica)
+        por = {c: sum(1 for e in pub["escenarios"] if e["competency_ids"][0] == c) for c in IDS}
+        self.assertTrue(all(n >= 3 for n in por.values()), por)
         for e in pub["escenarios"]:
             self.assertEqual(ver[e["id"]], "VALID", e["id"])
+            self.assertNotIn(e["id"], retenidos)
+            self.assertEqual(e["traza"]["politica"], pol["version"])
+            self.assertTrue(any(pol["modelo_referencia"] in v["modelo"] for v in e["traza"]["veredictos"]), e["id"])
             self.assertEqual(e["source_type"], "TESTLEY_TRAINING")
             self.assertTrue(set(e["competency_ids"]) <= set(IDS))
         self.assertEqual({e["competency_ids"][0] for e in pub["escenarios"]}, set(IDS))

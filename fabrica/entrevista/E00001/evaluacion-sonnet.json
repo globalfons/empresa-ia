@@ -1,0 +1,1145 @@
+{
+ "lote": "E00001",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "judge_prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "candidatas_sha256": "363b9c6feef8164a83ee4d7ba1f3eb3d4d16e8f3fff1aa2f366bc37f04765eac",
+ "ronda": "sonnet",
+ "creada_el": "2026-10-04T22:34:37",
+ "politica": "juez-entrevista-v2",
+ "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ent-responsabilitat-1",
+    "ent-responsabilitat-2",
+    "ent-responsabilitat-3",
+    "ent-responsabilitat-4",
+    "ent-responsabilitat-5",
+    "ent-responsabilitat-6",
+    "ent-cooperacio-1",
+    "ent-cooperacio-2",
+    "ent-cooperacio-3",
+    "ent-cooperacio-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-01.json",
+   "prompt_sha256": "382404a5bf2763e603f779f4cd86e73e67d5f3f0ac3a2ae87549ffa581f13abb",
+   "huellas": {
+    "ent-responsabilitat-1": "46a6e839e951aed3ec8b1826d60b4c8a3303a76381b862e2f0dccbb314327ca0",
+    "ent-responsabilitat-2": "8e8f3a95df3737a894922b0a2ecabf245da80f36461f5ffc566511774b5f51bb",
+    "ent-responsabilitat-3": "a262848b0ae1887603632819765643b72da8a463b3eba1ec88b39070f78fa59f",
+    "ent-responsabilitat-4": "e3e9014f1ff416900d16aa92ed0c8ac0635f934912a2cbcf9cad8e7a9541a06c",
+    "ent-responsabilitat-5": "a07cc80314e4d8816f93fd23f51bfe00eb6ba44e4e4147ea5cea0475727f5b6f",
+    "ent-responsabilitat-6": "1dd02c3fbb2bce7fb9f01ea5e7358ab65d34668c42ebacabf0973a0f47eff46c",
+    "ent-cooperacio-1": "799f7d2ffbdba5059e3f38800dbcb9865378998fee714890e8de4a09938daf34",
+    "ent-cooperacio-2": "a10377719792972f96e0a159a63151cff767db56c01c56620268f468746c734e",
+    "ent-cooperacio-3": "33f8d5c7c7d42367fdc653baf33328ebcf6260340781cfbf169a5282a64c2e21",
+    "ent-cooperacio-4": "ba5570d9959108759f438fe0d998390d3e37d409331ac5f3a2f87dda42f1f38e"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "ent-responsabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual clara sobre un error propio en una tarea asignada, en un contexto plausible (supermercat). Indicadores (error concreto, comunicación, corrección y aprendizaje) razonables y no dictan una única respuesta; errores frecuentes y repregunta encajan. Sin afirmaciones oficiales ni diagnóstico. No es duplicado: ent-responsabilitat-6 es situacional y sobre otro caso concreto.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual sobre revisar un trabajo con esmero sin que nadie lo exija, en contexto de FP. Indicadores (qué trabajo, pasos de revisión, resultado) razonables y abiertos; la repregunta sobre el criterio de cuánto revisar encaja con Autogestió. Defecto menor: la pregunta es imperativa pero acaba con signo de interrogación. No dicta respuesta, no hay afirmaciones oficiales ni diagnóstico, y no duplica a los otros ítems de la serie.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual sobre mantener un compromiso grupal cuando otros fallan, en club deportivo amateur (plausible). Permite mostrar responsabilidad y cooperación. Indicadores (compromiso adquirido, actuación, resultado) no arbitrarios; los errores frecuentes (criticar sin decir qué hiciste, presentarse como único trabajador) son coherentes. Repregunta pertinente. Sin afirmaciones oficiales ni diagnóstico; no duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual sobre elegir entre rapidez y cumplir normas, en almacén logístico (plausible, sin procedimientos policiales). Indicadores (dilema, argumentos, consecuencias, aprendizaje) razonables; los errores frecuentes avisan de respuestas idealizadas, lo que mitiga que la opción 'correcta' sea obvia, y al pedir experiencia real hay varias formas válidas de responder. Competencia secundaria (presión) bien reflejada. Sin afirmaciones oficiales ni diagnóstico; no duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-5",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Situacional con respuesta bastante evidente (resolver el problema, avisar). Los indicadores presuponen una vía concreta (comunicarlo al compañero y a los responsables) y el error 'denunciar sin hablar antes' dicta un orden único de actuación, lo que limita la pluralidad de respuestas buenas. Además el contexto 'prácticas en la academia de policía' es dudoso para un candidato que aún está en selección y roza lo institucional; conviene un contexto genérico. Sin afirmaciones oficiales ni diagnóstico; no es duplicado de ent-responsabilitat-6 (error ajeno frente a error propio).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": false,
+      "pregunta_abierta": false,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-6",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Situación plausible (tienda de electrónica, garantía) y sin procedimientos policiales, pero la pregunta es casi trivial: cualquier candidato dirá que avisaría al cliente y al responsable. Los indicadores ('cómo y cuándo contactarías con él', 'cómo lo explicarías al responsable') dictan prácticamente una única respuesta correcta y el error 'esperar que no se dé cuenta' es obvio. Relevante para responsabilidad y servicio, sin afirmaciones oficiales ni diagnóstico. No se rechaza como duplicado de ent-responsabilitat-1 porque es hipotética y sobre un caso distinto, pero debe reformularse para admitir dilemas reales.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": false,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual genérica y clara sobre un trabajo en equipo universitario y la aportación personal. Indicadores (objetivo y equipo, rol propio, coordinación y resultado) son señales razonables de una respuesta bien explicada y no dictan contenido; los errores (hablar siempre en plural, sin resultado) y la repregunta encajan. Relevante para Cooperació. Sin afirmaciones oficiales ni diagnóstico; no duplicado de los demás de cooperación.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual sobre un desacuerdo en un grupo de voluntarios (banco de alimentos), plausible. Permite mostrar cooperación y habilidades comunicativas. Indicadores (origen objetivo, acciones propias, estado de la relación) razonables; errores (sólo desde el propio punto de vista, negar haber vivido desacuerdos) y repregunta coherentes. Sin afirmaciones oficiales ni diagnóstico. No duplica ent-cooperacio-6, que es situacional y sobre un bloqueo concreto con fecha clave.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual sobre apoyar a compañeros saturados en equipo de cocina, contexto muy plausible. Indicadores (por qué hacía falta, cómo organizó sus tareas, efecto en el equipo) razonables y abiertos; encajan con Cooperació y Adaptabilitat. La repregunta sobre cuándo ayudar o interferir es pertinente. Sin afirmaciones oficiales ni diagnóstico; no duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conductual sobre una crítica entre compañeros que ayudó a mejorar, en equipo de remo (plausible). Indicadores (contexto, cómo se canalizó, cambios concretos, aprendizaje de la propia reacción) razonables y sin dictar una respuesta única. Defecto menor: la repregunta sobre cómo prefiere recibir críticas es de preferencia y no de experiencia pasada, pero sigue siendo coherente con el tema. Sin afirmaciones oficiales ni diagnóstico; no duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-ab490805751bc6587.jsonl",
+    "respuesta_sha256": "589f099b1097d209946437fc90399ebe0c6c447ec86655131e8a374098b71cfb"
+   },
+   "registrada_el": "2026-10-04T22:35:44",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-04T22:35:44",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-ab490805751bc6587.jsonl",
+      "respuesta_sha256": "589f099b1097d209946437fc90399ebe0c6c447ec86655131e8a374098b71cfb"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-responsabilitat-1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual clara sobre un error propio en una tarea asignada, en un contexto plausible (supermercat). Indicadores (error concreto, comunicación, corrección y aprendizaje) razonables y no dictan una única respuesta; errores frecuentes y repregunta encajan. Sin afirmaciones oficiales ni diagnóstico. No es duplicado: ent-responsabilitat-6 es situacional y sobre otro caso concreto.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-2\",\"verdict\":\"VALID\",\"reason\":\"Conductual sobre revisar un trabajo con esmero sin que nadie lo exija, en contexto de FP. Indicadores (qué trabajo, pasos de revisión, resultado) razonables y abiertos; la repregunta sobre el criterio de cuánto revisar encaja con Autogestió. Defecto menor: la pregunta es imperativa pero acaba con signo de interrogación. No dicta respuesta, no hay afirmaciones oficiales ni diagnóstico, y no duplica a los otros ítems de la serie.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-3\",\"verdict\":\"VALID\",\"reason\":\"Conductual sobre mantener un compromiso grupal cuando otros fallan, en club deportivo amateur (plausible). Permite mostrar responsabilidad y cooperación. Indicadores (compromiso adquirido, actuación, resultado) no arbitrarios; los errores frecuentes (criticar sin decir qué hiciste, presentarse como único trabajador) son coherentes. Repregunta pertinente. Sin afirmaciones oficiales ni diagnóstico; no duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-4\",\"verdict\":\"VALID\",\"reason\":\"Conductual sobre elegir entre rapidez y cumplir normas, en almacén logístico (plausible, sin procedimientos policiales). Indicadores (dilema, argumentos, consecuencias, aprendizaje) razonables; los errores frecuentes avisan de respuestas idealizadas, lo que mitiga que la opción 'correcta' sea obvia, y al pedir experiencia real hay varias formas válidas de responder. Competencia secundaria (presión) bien reflejada. Sin afirmaciones oficiales ni diagnóstico; no duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-5\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Situacional con respuesta bastante evidente (resolver el problema, avisar). Los indicadores presuponen una vía concreta (comunicarlo al compañero y a los responsables) y el error 'denunciar sin hablar antes' dicta un orden único de actuación, lo que limita la pluralidad de respuestas buenas. Además el contexto 'prácticas en la academia de policía' es dudoso para un candidato que aún está en selección y roza lo institucional; conviene un contexto genérico. Sin afirmaciones oficiales ni diagnóstico; no es duplicado de ent-responsabilitat-6 (error ajeno frente a error propio).\",\"criteria_checked\":{\"coherente\":true,\"realista\":false,\"pregunta_abierta\":false,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-6\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Situación plausible (tienda de electrónica, garantía) y sin procedimientos policiales, pero la pregunta es casi trivial: cualquier candidato dirá que avisaría al cliente y al responsable. Los indicadores ('cómo y cuándo contactarías con él', 'cómo lo explicarías al responsable') dictan prácticamente una única respuesta correcta y el error 'esperar que no se dé cuenta' es obvio. Relevante para responsabilidad y servicio, sin afirmaciones oficiales ni diagnóstico. No se rechaza como duplicado de ent-responsabilitat-1 porque es hipotética y sobre un caso distinto, pero debe reformularse para admitir dilemas reales.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":false,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-cooperacio-1\",\"verdict\":\"VALID\",\"reason\":\"Conductual genérica y clara sobre un trabajo en equipo universitario y la aportación personal. Indicadores (objetivo y equipo, rol propio, coordinación y resultado) son señales razonables de una respuesta bien explicada y no dictan contenido; los errores (hablar siempre en plural, sin resultado) y la repregunta encajan. Relevante para Cooperació. Sin afirmaciones oficiales ni diagnóstico; no duplicado de los demás de cooperación.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-cooperacio-2\",\"verdict\":\"VALID\",\"reason\":\"Conductual sobre un desacuerdo en un grupo de voluntarios (banco de alimentos), plausible. Permite mostrar cooperación y habilidades comunicativas. Indicadores (origen objetivo, acciones propias, estado de la relación) razonables; errores (sólo desde el propio punto de vista, negar haber vivido desacuerdos) y repregunta coherentes. Sin afirmaciones oficiales ni diagnóstico. No duplica ent-cooperacio-6, que es situacional y sobre un bloqueo concreto con fecha clave.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-cooperacio-3\",\"verdict\":\"VALID\",\"reason\":\"Conductual sobre apoyar a compañeros saturados en equipo de cocina, contexto muy plausible. Indicadores (por qué hacía falta, cómo organizó sus tareas, efecto en el equipo) razonables y abiertos; encajan con Cooperació y Adaptabilitat. La repregunta sobre cuándo ayudar o interferir es pertinente. Sin afirmaciones oficiales ni diagnóstico; no duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-cooperacio-4\",\"verdict\":\"VALID\",\"reason\":\"Conductual sobre una crítica entre compañeros que ayudó a mejorar, en equipo de remo (plausible). Indicadores (contexto, cómo se canalizó, cambios concretos, aprendizaje de la propia reacción) razonables y sin dictar una respuesta única. Defecto menor: la repregunta sobre cómo prefiere recibir críticas es de preferencia y no de experiencia pasada, pero sigue siendo coherente con el tema. Sin afirmaciones oficiales ni diagnóstico; no duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "ent-cooperacio-5",
+    "ent-cooperacio-6",
+    "ent-autonomia-1",
+    "ent-autonomia-2",
+    "ent-autonomia-3",
+    "ent-autonomia-4",
+    "ent-autonomia-5",
+    "ent-autonomia-6",
+    "ent-resolucio-problemes-1",
+    "ent-resolucio-problemes-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-02.json",
+   "prompt_sha256": "3ba111fec3f2db378bc51053e78c7e84aeaf959a06b0144dcd893a152e53d75b",
+   "huellas": {
+    "ent-cooperacio-5": "365f7f7e9b2de2a55436493daa34121392c2e39eba304d0977d06647e4a4ad39",
+    "ent-cooperacio-6": "a42913098f4b945a20b5ca37cfda01cd8b9b395ed469b0aa5df40f024c79e167",
+    "ent-autonomia-1": "1c33657637d5728f49b4b5879271cad25346ae0fa3c047a58a854fd27dde7716",
+    "ent-autonomia-2": "7386d10d0e7b7b1776fa58f3550cdd61b4f8b7482e84a26971e0d33f9dba3486",
+    "ent-autonomia-3": "1e0885031d7485885854f02fdafaba6883eab6f3e1847a9c329cee5b293a1c39",
+    "ent-autonomia-4": "fd1034a935e06806a5cbfb6eaff01fb6fc09cad034985cf166c77b60c933be7a",
+    "ent-autonomia-5": "3271a322c02914680cec8f8eddef27744cfa17869ed3c1f069eac4a26ee10612",
+    "ent-autonomia-6": "3b8d65992efc0df576f3ce069078011213e8d1497ba7fb47a770a12adbcc8d61",
+    "ent-resolucio-problemes-1": "8f3bda3c96b09734998f3dd65b1b01091f513e8457e954eae018826cfb705632",
+    "ent-resolucio-problemes-2": "acbdf78b2e526abf53896f312a23043507075009c741b358a875582d70ed487c"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "ent-cooperacio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación plausible (práctica en grupo en la academia, sin procedimientos policiales reales). La pregunta situacional es abierta y admite respuestas distintas (detectar el motivo, integrar, hablar con el compañero), y la repregunta sobre el rechazo a participar añade matices. Indicadores y errores encajan con la pregunta, sin criterios oficiales ni diagnóstico. 'Més reservat' es una descripción neutra, no una etiqueta. No es duplicado de ninguno de los parecidos (los otros son conductuales o tratan otros conflictos).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Conflicto entre dos miembros de una asociación vecinal a pocos días de una actividad: plausible y sin hechos legales. Pregunta situacional abierta con varias vías válidas (escuchar, mediar, implicar a un tercero). Indicadores razonables (objetivo común, escuchar a ambos, desbloquear, saber cuándo escalar) y errores coherentes. Cooperación se ve claramente; el autocontrol bajo presión se muestra de forma más indirecta pero aceptable. Se parece a ent-cooperacio-2 (desacuerdo en un grupo), pero ese es conductual y este plantea un rol de mediador ante un bloqueo con fecha límite, así que no es una duplicidad real.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Contenido válido: experiencia en una empresa de mensajería, pregunta conductual abierta e indicadores adecuados (qué detectó, qué hizo, resultado), sin carácter oficial ni diagnóstico. Fallo de redacción: la pregunta es una oración imperativa ('Explica'm una situació...') que termina con signo de interrogación, lo que la hace incorrecta en catalán. Por exigencia de calidad de texto marco coherente=false y pasa a revisión. No es duplicada de ninguno de los parecidos.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Situación de monitor de colonias realista; pregunta conductual abierta; indicadores (por qué no podía consultar, opciones valoradas, decisión e información posterior) son pertinentes y no dictan una respuesta. Autonomía y resolución de problemas se pueden mostrar. Defecto de redacción: imperativo 'Explica'm...' cerrado con '?', incorrecto en catalán, por lo que coherente=false. Comparte espacio con ent-autonomia-4 y ent-autonomia-6, pero se distingue por centrarse en la decisión sin posibilidad de consulta; no es duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Experiencia de preparación de oposiciones (estudio largo) plausible, sin procedimientos policiales. Pregunta conductual abierta con puntos de vista variados (planificación, seguimiento, bajones). Indicadores razonables y no oficiales; errores (plan ideal sin dificultades, generalidades) coherentes; repregunta sobre cambios del plan encaja. Muestra autonomía y autogestión. No diagnostica ni promete resultados. No duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Recepcionista de hotel ante un imprevisto fuera de las instrucciones: realista. Pregunta conductual con redacción correcta (termina con '?', pero es una interrogativa real 'Què vas fer?'). Indicadores (límites del rol, hasta dónde actuar, comunicación, reflexión) son sensatos y no dictan una única respuesta; los errores (extralimitarse o paralizarse) son coherentes. Permite mostrar autonomía y responsabilidad. Se solapa en parte con ent-autonomia-2, pero el eje aquí es actuar dentro de las atribuciones, no decidir sin poder consultar; no es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Nueva incorporación a una oficina de atención ciudadana que detecta un procedimiento ineficiente: situación creíble y genérica (no policial). Pregunta situacional abierta (informarse, proponer, tener en cuenta a los veteranos) con indicadores razonables y errores coherentes (cambiar sin consultar / callar). La repregunta sobre el rechazo de la propuesta añade profundidad. Evalúa iniciativa sin afirmaciones oficiales ni diagnóstico. Es la versión situacional de ent-autonomia-1 pero con foco en la prudencia como recién llegado; no se considera duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Voluntario en una carrera popular sin agua en un avituallamiento y responsable ilocalizable: plausible y no policial. Pregunta situacional con varias respuestas válidas; los indicadores (valorar urgencia, medidas dentro de sus posibilidades, informar después, límites) son razonables y no dictan una solución concreta. Errores coherentes y repregunta útil. Autonomía y resolución de problemas se pueden mostrar. Sin afirmaciones oficiales ni diagnóstico. Se parece a ent-autonomia-2 (decidir sin consultar) pero es situacional y en un contexto distinto; no es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Tienda de bicicletas: contexto cotidiano y creíble. Pregunta conductual bien redactada (termina en punto como corresponde a una oración imperativa más una interrogativa 'Quins passos vas seguir?'), abierta y centrada en el análisis de causas. Indicadores (problema, causas, solución y resultado) son pertinentes y generales; errores y repregunta (alternativas descartadas) coherentes. Mide resolución de problemas sin carácter oficial ni diagnóstico. No duplicado de los parecidos, que tratan presión, bloqueo grupal, fallo de solución, versiones contradictorias y casos sin procedimiento.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Camarero en un festival con mucha presión: realista. Pregunta conductual abierta, indicadores pertinentes (problema y presión, priorización, valoración del resultado) y errores coherentes; permite ver resolución de problemas y manejo de la presión. Defecto de redacción: imperativo 'Explica'm...' acabado con signo de interrogación, incorrecto en catalán, por lo que coherente=false. No es duplicado de ent-resolucio-problemes-1 ni de los demás, que se centran en análisis de causas, grupo encallado o fallo de la primera solución.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a3ee2418c7d377c77.jsonl",
+    "respuesta_sha256": "571a71533a5dc0e8681cbb9c14c79281a0b8ad132be23537f1526cc72a68c4ec"
+   },
+   "registrada_el": "2026-10-04T22:35:44",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-04T22:35:44",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a3ee2418c7d377c77.jsonl",
+      "respuesta_sha256": "571a71533a5dc0e8681cbb9c14c79281a0b8ad132be23537f1526cc72a68c4ec"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-cooperacio-5\",\"verdict\":\"VALID\",\"reason\":\"Situación plausible (práctica en grupo en la academia, sin procedimientos policiales reales). La pregunta situacional es abierta y admite respuestas distintas (detectar el motivo, integrar, hablar con el compañero), y la repregunta sobre el rechazo a participar añade matices. Indicadores y errores encajan con la pregunta, sin criterios oficiales ni diagnóstico. 'Més reservat' es una descripción neutra, no una etiqueta. No es duplicado de ninguno de los parecidos (los otros son conductuales o tratan otros conflictos).\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-cooperacio-6\",\"verdict\":\"VALID\",\"reason\":\"Conflicto entre dos miembros de una asociación vecinal a pocos días de una actividad: plausible y sin hechos legales. Pregunta situacional abierta con varias vías válidas (escuchar, mediar, implicar a un tercero). Indicadores razonables (objetivo común, escuchar a ambos, desbloquear, saber cuándo escalar) y errores coherentes. Cooperación se ve claramente; el autocontrol bajo presión se muestra de forma más indirecta pero aceptable. Se parece a ent-cooperacio-2 (desacuerdo en un grupo), pero ese es conductual y este plantea un rol de mediador ante un bloqueo con fecha límite, así que no es una duplicidad real.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Contenido válido: experiencia en una empresa de mensajería, pregunta conductual abierta e indicadores adecuados (qué detectó, qué hizo, resultado), sin carácter oficial ni diagnóstico. Fallo de redacción: la pregunta es una oración imperativa ('Explica'm una situació...') que termina con signo de interrogación, lo que la hace incorrecta en catalán. Por exigencia de calidad de texto marco coherente=false y pasa a revisión. No es duplicada de ninguno de los parecidos.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Situación de monitor de colonias realista; pregunta conductual abierta; indicadores (por qué no podía consultar, opciones valoradas, decisión e información posterior) son pertinentes y no dictan una respuesta. Autonomía y resolución de problemas se pueden mostrar. Defecto de redacción: imperativo 'Explica'm...' cerrado con '?', incorrecto en catalán, por lo que coherente=false. Comparte espacio con ent-autonomia-4 y ent-autonomia-6, pero se distingue por centrarse en la decisión sin posibilidad de consulta; no es duplicado.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-3\",\"verdict\":\"VALID\",\"reason\":\"Experiencia de preparación de oposiciones (estudio largo) plausible, sin procedimientos policiales. Pregunta conductual abierta con puntos de vista variados (planificación, seguimiento, bajones). Indicadores razonables y no oficiales; errores (plan ideal sin dificultades, generalidades) coherentes; repregunta sobre cambios del plan encaja. Muestra autonomía y autogestión. No diagnostica ni promete resultados. No duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-4\",\"verdict\":\"VALID\",\"reason\":\"Recepcionista de hotel ante un imprevisto fuera de las instrucciones: realista. Pregunta conductual con redacción correcta (termina con '?', pero es una interrogativa real 'Què vas fer?'). Indicadores (límites del rol, hasta dónde actuar, comunicación, reflexión) son sensatos y no dictan una única respuesta; los errores (extralimitarse o paralizarse) son coherentes. Permite mostrar autonomía y responsabilidad. Se solapa en parte con ent-autonomia-2, pero el eje aquí es actuar dentro de las atribuciones, no decidir sin poder consultar; no es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-5\",\"verdict\":\"VALID\",\"reason\":\"Nueva incorporación a una oficina de atención ciudadana que detecta un procedimiento ineficiente: situación creíble y genérica (no policial). Pregunta situacional abierta (informarse, proponer, tener en cuenta a los veteranos) con indicadores razonables y errores coherentes (cambiar sin consultar / callar). La repregunta sobre el rechazo de la propuesta añade profundidad. Evalúa iniciativa sin afirmaciones oficiales ni diagnóstico. Es la versión situacional de ent-autonomia-1 pero con foco en la prudencia como recién llegado; no se considera duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-6\",\"verdict\":\"VALID\",\"reason\":\"Voluntario en una carrera popular sin agua en un avituallamiento y responsable ilocalizable: plausible y no policial. Pregunta situacional con varias respuestas válidas; los indicadores (valorar urgencia, medidas dentro de sus posibilidades, informar después, límites) son razonables y no dictan una solución concreta. Errores coherentes y repregunta útil. Autonomía y resolución de problemas se pueden mostrar. Sin afirmaciones oficiales ni diagnóstico. Se parece a ent-autonomia-2 (decidir sin consultar) pero es situacional y en un contexto distinto; no es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-1\",\"verdict\":\"VALID\",\"reason\":\"Tienda de bicicletas: contexto cotidiano y creíble. Pregunta conductual bien redactada (termina en punto como corresponde a una oración imperativa más una interrogativa 'Quins passos vas seguir?'), abierta y centrada en el análisis de causas. Indicadores (problema, causas, solución y resultado) son pertinentes y generales; errores y repregunta (alternativas descartadas) coherentes. Mide resolución de problemas sin carácter oficial ni diagnóstico. No duplicado de los parecidos, que tratan presión, bloqueo grupal, fallo de solución, versiones contradictorias y casos sin procedimiento.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Camarero en un festival con mucha presión: realista. Pregunta conductual abierta, indicadores pertinentes (problema y presión, priorización, valoración del resultado) y errores coherentes; permite ver resolución de problemas y manejo de la presión. Defecto de redacción: imperativo 'Explica'm...' acabado con signo de interrogación, incorrecto en catalán, por lo que coherente=false. No es duplicado de ent-resolucio-problemes-1 ni de los demás, que se centran en análisis de causas, grupo encallado o fallo de la primera solución.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "ent-resolucio-problemes-3",
+    "ent-resolucio-problemes-4",
+    "ent-resolucio-problemes-5",
+    "ent-resolucio-problemes-6",
+    "ent-orientacio-servei-1",
+    "ent-orientacio-servei-2",
+    "ent-orientacio-servei-3",
+    "ent-orientacio-servei-4",
+    "ent-orientacio-servei-5",
+    "ent-orientacio-servei-6"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-03.json",
+   "prompt_sha256": "33104b6eba44f965555e48d08b6ffd254d7da9c7301e8271a32c9d71e3703d2f",
+   "huellas": {
+    "ent-resolucio-problemes-3": "72d0716dd60a52cdab1bacb458328e10a46e4549c2a860aef7343e327b7d9320",
+    "ent-resolucio-problemes-4": "350268ae6e3e26eeec0be0dca1a989787e006a52e2e626809d1132e0c206dba8",
+    "ent-resolucio-problemes-5": "663f4bfdf20e7d958c4cd83739a41fe8bc7bad44b028c4b90bfa7dc0816e50d4",
+    "ent-resolucio-problemes-6": "6f14af9f52ba1389a08495ec06ae3235411608c2b9cdf96e4c2a223ea194bf6d",
+    "ent-orientacio-servei-1": "7d3c6f3239813d9b09f1a6d6daf8774d80e89765535d25c49bb3cc7ad3473138",
+    "ent-orientacio-servei-2": "83040d735491462bbe36aad724eb3940c51f4ce7c705e06a2765b76278ec993b",
+    "ent-orientacio-servei-3": "fc4f6ebfc4ec7962bf52172df8bb4c594731a232943313cd8d78e7dd98b2e847",
+    "ent-orientacio-servei-4": "480ef6715959bcc83e82005c4a4ecacf7aa55af9c1389a3e5282ac3d905f693b",
+    "ent-orientacio-servei-5": "c76e8a75c8662f744f9cf1773407bdc00d6bef6884f6f20dbbe1711aba94d4fb",
+    "ent-orientacio-servei-6": "f6a7ac721cde0715d1ff082400331d896048c7331f525900837302cb704efdf3"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "ent-resolucio-problemes-3",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Situación realista (proyecto de ciclo formativo) y pregunta conductual abierta que permite mostrar resolución de problemas y cooperación. Indicadores razonables y sin criterios oficiales, y la repregunta sobre las ideas descartadas encaja. Problema de redacción: la pregunta es una oración imperativa ('Explica'm una situació...') cerrada con signo de interrogación, lo que la deja mal formada en catalán. Con criterio exigente marco coherente=false. No es duplicado de ningún parecido: cada uno trata un ángulo distinto del problema.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre la primera solución que falló, en un viaje de fin de curso (plausible). Permite ver resolución de problemas y adaptabilidad. Los indicadores (solución inicial, detección del fallo, replanteamiento, aprendizaje) son señales razonables y no dictan una respuesta. Los errores y la repregunta encajan. No hay afirmaciones oficiales ni diagnóstico. Se distingue claramente de los demás 'parecidos' (análisis de causas, presión, grupo bloqueado, etc.).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta situacional en un ejercicio de simulación de la academia, que sirve de práctica y no describe procedimientos policiales reales ni hechos legales. Admite varias buenas respuestas: ordenar la información, repreguntar, evitar conclusiones precipitadas. Los indicadores son razonables, los errores (creer la primera versión, tomar partido por afinidad) son coherentes y la repregunta sobre comunicar lo aclarado encaja. Sin afirmaciones oficiales ni diagnóstico. Es un caso distinto de los demás parecidos, que son conductuales o de otro tipo de problema.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación plausible de atención telefónica de una compañía de suministros, sin contenido policial. La pregunta situacional es abierta y permite mostrar resolución de problemas y orientación al servicio. Indicadores razonables (entender la necesidad, a quién recurrir, mantener informado al usuario, alternativas provisionales) sin dictar una única solución. Errores y repregunta sobre la frustración encajan. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Contexto realista (dependiente de tienda de ropa) y pregunta conductual abierta que permite mostrar orientación de servicio. Indicadores razonables y sin criterios oficiales. Falla la redacción: la pregunta es una oración imperativa ('Explica'm una situació...') terminada en '?', lo que no es correcto en catalán. Marco coherente=false por exigencia. No duplica ningún parecido: ni la persona molesta, ni adaptar el lenguaje, ni denegar una petición.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Taquilla de un centro deportivo municipal: contexto plausible. Pregunta conductual abierta sobre atender a una persona muy molesta. Permite mostrar orientación de servicio y autocontrol. Indicadores razonables (motivo del malestar, mantener calma y respeto, qué ofreció y cómo acabó) sin dictar una respuesta. Los errores y la repregunta sobre perder la paciencia son coherentes y no diagnostican. Sin afirmaciones oficiales. No duplica a los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-3",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Voluntariado con gente mayor: situación realista. La pregunta es abierta y permite mostrar habilidades comunicativas y orientación de servicio; los indicadores (dificultades, recursos, comprobar la comprensión) son razonables. Falla la redacción: oración imperativa ('Explica'm una situació...') cerrada con '?', incorrecta en catalán. Además la situación mezcla gente mayor y personas que no hablan la lengua, un poco más amplio que la pregunta. Marco coherente=false. No es duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Agencia de viajes: contexto plausible. Pregunta conductual abierta sobre denegar una petición cuidando el trato; permite mostrar orientación de servicio y responsabilidad. Indicadores razonables (motivo, cómo se comunicó, alternativa, reacción) sin dictar una única respuesta. Errores (saltarse normas, negativa seca) y repregunta sobre la incomodidad coherentes. Sin afirmaciones oficiales ni diagnóstico. No duplica a los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Punto de información de una feria: situación plausible. Pregunta situacional abierta con tensión real entre dos necesidades, con varias formas válidas de responder. Indicadores razonables (equilibrar, dirigirse a la persona y a la cola, pedir apoyo) y errores coherentes (despachar rápido, ignorar la cola). La repregunta sobre explicar la espera encaja. Sin afirmaciones oficiales ni diagnóstico. No duplica a los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Recepción de un centro de salud: situación verosímil sin procedimientos policiales. Pregunta situacional abierta que permite mostrar orientación de servicio y adaptabilidad. Indicadores razonables (escucha sin ponerse a la defensiva, aclarar el margen de actuación, vía de queja, efecto sobre los presentes) sin dictar una única respuesta. Errores coherentes. La repregunta sobre cómo se sentiría es reflexiva y no diagnostica. Sin afirmaciones oficiales. No duplica a los parecidos.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-afd52fef5eb28fbba.jsonl",
+    "respuesta_sha256": "73cd4e30134ad0c4b6b8fe356c8a5ea0188120acbed0cca29722ca3f405e3588"
+   },
+   "registrada_el": "2026-10-04T22:37:01",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-04T22:37:01",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-afd52fef5eb28fbba.jsonl",
+      "respuesta_sha256": "73cd4e30134ad0c4b6b8fe356c8a5ea0188120acbed0cca29722ca3f405e3588"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-resolucio-problemes-3\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Situación realista (proyecto de ciclo formativo) y pregunta conductual abierta que permite mostrar resolución de problemas y cooperación. Indicadores razonables y sin criterios oficiales, y la repregunta sobre las ideas descartadas encaja. Problema de redacción: la pregunta es una oración imperativa ('Explica'm una situació...') cerrada con signo de interrogación, lo que la deja mal formada en catalán. Con criterio exigente marco coherente=false. No es duplicado de ningún parecido: cada uno trata un ángulo distinto del problema.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-4\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre la primera solución que falló, en un viaje de fin de curso (plausible). Permite ver resolución de problemas y adaptabilidad. Los indicadores (solución inicial, detección del fallo, replanteamiento, aprendizaje) son señales razonables y no dictan una respuesta. Los errores y la repregunta encajan. No hay afirmaciones oficiales ni diagnóstico. Se distingue claramente de los demás 'parecidos' (análisis de causas, presión, grupo bloqueado, etc.).\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-5\",\"verdict\":\"VALID\",\"reason\":\"Pregunta situacional en un ejercicio de simulación de la academia, que sirve de práctica y no describe procedimientos policiales reales ni hechos legales. Admite varias buenas respuestas: ordenar la información, repreguntar, evitar conclusiones precipitadas. Los indicadores son razonables, los errores (creer la primera versión, tomar partido por afinidad) son coherentes y la repregunta sobre comunicar lo aclarado encaja. Sin afirmaciones oficiales ni diagnóstico. Es un caso distinto de los demás parecidos, que son conductuales o de otro tipo de problema.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-6\",\"verdict\":\"VALID\",\"reason\":\"Situación plausible de atención telefónica de una compañía de suministros, sin contenido policial. La pregunta situacional es abierta y permite mostrar resolución de problemas y orientación al servicio. Indicadores razonables (entender la necesidad, a quién recurrir, mantener informado al usuario, alternativas provisionales) sin dictar una única solución. Errores y repregunta sobre la frustración encajan. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Contexto realista (dependiente de tienda de ropa) y pregunta conductual abierta que permite mostrar orientación de servicio. Indicadores razonables y sin criterios oficiales. Falla la redacción: la pregunta es una oración imperativa ('Explica'm una situació...') terminada en '?', lo que no es correcto en catalán. Marco coherente=false por exigencia. No duplica ningún parecido: ni la persona molesta, ni adaptar el lenguaje, ni denegar una petición.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-2\",\"verdict\":\"VALID\",\"reason\":\"Taquilla de un centro deportivo municipal: contexto plausible. Pregunta conductual abierta sobre atender a una persona muy molesta. Permite mostrar orientación de servicio y autocontrol. Indicadores razonables (motivo del malestar, mantener calma y respeto, qué ofreció y cómo acabó) sin dictar una respuesta. Los errores y la repregunta sobre perder la paciencia son coherentes y no diagnostican. Sin afirmaciones oficiales. No duplica a los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-3\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Voluntariado con gente mayor: situación realista. La pregunta es abierta y permite mostrar habilidades comunicativas y orientación de servicio; los indicadores (dificultades, recursos, comprobar la comprensión) son razonables. Falla la redacción: oración imperativa ('Explica'm una situació...') cerrada con '?', incorrecta en catalán. Además la situación mezcla gente mayor y personas que no hablan la lengua, un poco más amplio que la pregunta. Marco coherente=false. No es duplicado.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-4\",\"verdict\":\"VALID\",\"reason\":\"Agencia de viajes: contexto plausible. Pregunta conductual abierta sobre denegar una petición cuidando el trato; permite mostrar orientación de servicio y responsabilidad. Indicadores razonables (motivo, cómo se comunicó, alternativa, reacción) sin dictar una única respuesta. Errores (saltarse normas, negativa seca) y repregunta sobre la incomodidad coherentes. Sin afirmaciones oficiales ni diagnóstico. No duplica a los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-5\",\"verdict\":\"VALID\",\"reason\":\"Punto de información de una feria: situación plausible. Pregunta situacional abierta con tensión real entre dos necesidades, con varias formas válidas de responder. Indicadores razonables (equilibrar, dirigirse a la persona y a la cola, pedir apoyo) y errores coherentes (despachar rápido, ignorar la cola). La repregunta sobre explicar la espera encaja. Sin afirmaciones oficiales ni diagnóstico. No duplica a los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-6\",\"verdict\":\"VALID\",\"reason\":\"Recepción de un centro de salud: situación verosímil sin procedimientos policiales. Pregunta situacional abierta que permite mostrar orientación de servicio y adaptabilidad. Indicadores razonables (escucha sin ponerse a la defensiva, aclarar el margen de actuación, vía de queja, efecto sobre los presentes) sin dictar una única respuesta. Errores coherentes. La repregunta sobre cómo se sentiría es reflexiva y no diagnostica. Sin afirmaciones oficiales. No duplica a los parecidos.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "ent-adaptabilitat-1",
+    "ent-adaptabilitat-2",
+    "ent-adaptabilitat-3",
+    "ent-adaptabilitat-4",
+    "ent-adaptabilitat-5",
+    "ent-adaptabilitat-6",
+    "ent-autocontrol-1",
+    "ent-autocontrol-2",
+    "ent-autocontrol-3",
+    "ent-autocontrol-4"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-04.json",
+   "prompt_sha256": "65c077926a3a8af4d826db1f432371c1c65693b6e648f1dc83490e64952dd7c6",
+   "huellas": {
+    "ent-adaptabilitat-1": "412c3451d39b98475a89527851d2ba46eaf3042f29bac6dfd99a3b759671295c",
+    "ent-adaptabilitat-2": "f020564cae39c1eefbe6f6e7f3573d5913842f3aa985f41c7d822b0d49c3ec6c",
+    "ent-adaptabilitat-3": "74b5d7b7c285278d60d62f28c737d13c7a4a246356329827609ef0e535eee935",
+    "ent-adaptabilitat-4": "ec83a22d28ecda352360c3af265bf54a4d180dd2a060f81c918595f58cf464b4",
+    "ent-adaptabilitat-5": "7d3f640140fb0f508f168cfe1e8d8640952a40b61db6010a93fdf49fa396dc2e",
+    "ent-adaptabilitat-6": "d834ab2ffa601209613642d0d8f511c9f4dbfffd448b1520ac00882b214c59f7",
+    "ent-autocontrol-1": "dd6e99a02d070d5a6803e5e7135525df58a9557207fe115090e195cb30e6e201",
+    "ent-autocontrol-2": "652cef0e2fb3ba315f85c6cbde3789644ec705fbab0c540618c6a3562e3d51b4",
+    "ent-autocontrol-3": "028062d741c4f60d62b0deff383022690acc7ee51492e03244c73ea54edd1d80",
+    "ent-autocontrol-4": "d59649fe382b0dbc03339196d5f8ae4cb36eff563356273b5f5ffd71385cc1a0"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "ent-adaptabilitat-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual abierta y bien redactada, situación plausible (cambio de funciones u horario en restauración). Indicadores (describir el cambio, qué hizo, cómo se sintió después) razonables y sin dictar una respuesta única; errores frecuentes y repregunta encajan con la pregunta. No hay afirmaciones oficiales ni diagnóstico. Competencia principal bien evidenciable. No es duplicado: los 'parecidos' tratan otros aspectos (aprender algo nuevo, rol, cultura, situacionales).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Contenido adecuado (aprender algo nuevo con poco tiempo en una empresa informática; indicadores de qué, método, tiempo y resultado son pertinentes; relevante para adaptabilidad y autogestión). Pero la pregunta es una oración imperativa ('Explica'm...') cerrada con signo de interrogación, un error de puntuación/redacción en catalán; por exigencia se marca coherente=false. No es duplicado de ninguna otra pregunta del lote.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación creíble (rol distinto en un equipo de fútbol sala), pregunta conductual abierta con buena redacción. Indicadores (rol esperado vs asignado, gestión de la decepción, aportación) son signos razonables de una respuesta bien explicada y no dictan una única solución. Errores y repregunta coherentes. Permite mostrar adaptabilidad y cooperación. Sin lenguaje oficial ni diagnóstico. No duplica a los demás.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Dos problemas. La pregunta imperativa termina con signo de interrogación (error de puntuación). Además, el cuarto indicador ('Reflexiona sobre els prejudicis que vas revisar') presupone que el candidato tenía prejuicios y los revisó, lo que dirige la respuesta y no es un signo neutro de buena respuesta. La situación (estancia en el extranjero) es realista y relevante, y no es duplicado de otro ítem.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta situacional abierta y bien redactada, en un contexto de prácticas en la academia que no describe procedimientos policiales reales ni hechos legales. Indicadores (primera reacción, reorganizar, aprovechar lo preparado) razonables y no dictan una respuesta única; errores y repregunta (ayudar a un compañero bloqueado) encajan. Evidencia adaptabilidad. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún 'parecido'.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional plausible (turnos en una residencia con cambios por bajas). Pregunta abierta con varias respuestas válidas; indicadores (equilibrio obligaciones/vida personal, hablar con responsables, organización ante incertidumbre, límites razonables) pertinentes y no unívocos. Errores (aceptar todo sin expresar necesidades / negarse rígidamente) y repregunta (si se mantiene meses) coherentes. Permite mostrar adaptabilidad y resolución de problemas. Sin lenguaje oficial ni diagnóstico. No duplica a adaptabilitat-1, que es conductual y de otro enfoque.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Situación realista (gasolinera de noche) y pregunta conductual abierta con indicadores razonables. Sin embargo, el error frecuente 'Negar haver sentit cap nervi' es una formulación incorrecta/forzada en catalán (debería ser 'cap nerviosisme' o similar), por lo que se marca coherente=false por exigencia. Repregunta aceptable. Sin afirmaciones oficiales ni diagnóstico. No es duplicado: las otras preguntas tratan crítica injusta, sobrecarga, protestas, rol-play y simultaneidad.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación creíble (telemarketing, crítica injusta) y pregunta conductual abierta. Indicadores (crítica y contexto, primera emoción, respuesta y consecuencias) son signos razonables de una buena explicación; errores frecuentes y repregunta (utilidad de la crítica) coherentes sin dictar una única respuesta. Permite mostrar autocontrol y comunicación. No hay afirmaciones oficiales ni diagnóstico. Distinto de autocontrol-1 (mantener la calma en general).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Época de exámenes universitarios: contexto plausible. Pregunta conductual abierta, bien redactada. Indicadores (exigencias, estrategias, resultado y mejora) pertinentes y no dictan una solución; errores y repregunta (señales de llegar al límite) coherentes. Relevante para autocontrol/resistencia a la presión y autogestión. Sin afirmaciones oficiales ni diagnóstico. No duplica a los demás.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Contexto realista (árbitro de baloncesto en categorías inferiores), indicadores y errores pertinentes (fermeza vs terquedad, impacto emocional) y buena relevancia. El único fallo es la redacción: la pregunta imperativa 'Explica'm...' acaba con signo de interrogación, error de puntuación en catalán; por exigencia coherente=false. No es duplicado de otro ítem del lote.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a6440ef8c2af7bc3a.jsonl",
+    "respuesta_sha256": "81f4ef6a9eaba2ca92c09342ad90b8fa5f92452e3dbd6b9b1d26e297247dc5aa"
+   },
+   "registrada_el": "2026-10-04T22:37:01",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-04T22:37:01",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a6440ef8c2af7bc3a.jsonl",
+      "respuesta_sha256": "81f4ef6a9eaba2ca92c09342ad90b8fa5f92452e3dbd6b9b1d26e297247dc5aa"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-adaptabilitat-1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual abierta y bien redactada, situación plausible (cambio de funciones u horario en restauración). Indicadores (describir el cambio, qué hizo, cómo se sintió después) razonables y sin dictar una respuesta única; errores frecuentes y repregunta encajan con la pregunta. No hay afirmaciones oficiales ni diagnóstico. Competencia principal bien evidenciable. No es duplicado: los 'parecidos' tratan otros aspectos (aprender algo nuevo, rol, cultura, situacionales).\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Contenido adecuado (aprender algo nuevo con poco tiempo en una empresa informática; indicadores de qué, método, tiempo y resultado son pertinentes; relevante para adaptabilidad y autogestión). Pero la pregunta es una oración imperativa ('Explica'm...') cerrada con signo de interrogación, un error de puntuación/redacción en catalán; por exigencia se marca coherente=false. No es duplicado de ninguna otra pregunta del lote.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-3\",\"verdict\":\"VALID\",\"reason\":\"Situación creíble (rol distinto en un equipo de fútbol sala), pregunta conductual abierta con buena redacción. Indicadores (rol esperado vs asignado, gestión de la decepción, aportación) son signos razonables de una respuesta bien explicada y no dictan una única solución. Errores y repregunta coherentes. Permite mostrar adaptabilidad y cooperación. Sin lenguaje oficial ni diagnóstico. No duplica a los demás.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Dos problemas. La pregunta imperativa termina con signo de interrogación (error de puntuación). Además, el cuarto indicador ('Reflexiona sobre els prejudicis que vas revisar') presupone que el candidato tenía prejuicios y los revisó, lo que dirige la respuesta y no es un signo neutro de buena respuesta. La situación (estancia en el extranjero) es realista y relevante, y no es duplicado de otro ítem.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-5\",\"verdict\":\"VALID\",\"reason\":\"Pregunta situacional abierta y bien redactada, en un contexto de prácticas en la academia que no describe procedimientos policiales reales ni hechos legales. Indicadores (primera reacción, reorganizar, aprovechar lo preparado) razonables y no dictan una respuesta única; errores y repregunta (ayudar a un compañero bloqueado) encajan. Evidencia adaptabilidad. Sin afirmaciones oficiales ni diagnóstico. No duplica ningún 'parecido'.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-6\",\"verdict\":\"VALID\",\"reason\":\"Situacional plausible (turnos en una residencia con cambios por bajas). Pregunta abierta con varias respuestas válidas; indicadores (equilibrio obligaciones/vida personal, hablar con responsables, organización ante incertidumbre, límites razonables) pertinentes y no unívocos. Errores (aceptar todo sin expresar necesidades / negarse rígidamente) y repregunta (si se mantiene meses) coherentes. Permite mostrar adaptabilidad y resolución de problemas. Sin lenguaje oficial ni diagnóstico. No duplica a adaptabilitat-1, que es conductual y de otro enfoque.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Situación realista (gasolinera de noche) y pregunta conductual abierta con indicadores razonables. Sin embargo, el error frecuente 'Negar haver sentit cap nervi' es una formulación incorrecta/forzada en catalán (debería ser 'cap nerviosisme' o similar), por lo que se marca coherente=false por exigencia. Repregunta aceptable. Sin afirmaciones oficiales ni diagnóstico. No es duplicado: las otras preguntas tratan crítica injusta, sobrecarga, protestas, rol-play y simultaneidad.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-2\",\"verdict\":\"VALID\",\"reason\":\"Situación creíble (telemarketing, crítica injusta) y pregunta conductual abierta. Indicadores (crítica y contexto, primera emoción, respuesta y consecuencias) son signos razonables de una buena explicación; errores frecuentes y repregunta (utilidad de la crítica) coherentes sin dictar una única respuesta. Permite mostrar autocontrol y comunicación. No hay afirmaciones oficiales ni diagnóstico. Distinto de autocontrol-1 (mantener la calma en general).\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-3\",\"verdict\":\"VALID\",\"reason\":\"Época de exámenes universitarios: contexto plausible. Pregunta conductual abierta, bien redactada. Indicadores (exigencias, estrategias, resultado y mejora) pertinentes y no dictan una solución; errores y repregunta (señales de llegar al límite) coherentes. Relevante para autocontrol/resistencia a la presión y autogestión. Sin afirmaciones oficiales ni diagnóstico. No duplica a los demás.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Contexto realista (árbitro de baloncesto en categorías inferiores), indicadores y errores pertinentes (fermeza vs terquedad, impacto emocional) y buena relevancia. El único fallo es la redacción: la pregunta imperativa 'Explica'm...' acaba con signo de interrogación, error de puntuación en catalán; por exigencia coherente=false. No es duplicado de otro ítem del lote.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "ent-autocontrol-5",
+    "ent-autocontrol-6",
+    "ent-autogestio-1",
+    "ent-autogestio-2",
+    "ent-autogestio-3",
+    "ent-autogestio-4",
+    "ent-autogestio-5",
+    "ent-autogestio-6",
+    "ent-motivacio-1",
+    "ent-motivacio-2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00001/tanda-05.json",
+   "prompt_sha256": "ac43f1be315c35bbb6fc031b43f7cbed149494a9820167d83d8c27c2d17efb38",
+   "huellas": {
+    "ent-autocontrol-5": "a12583e3af6a45d9a2d3264eb962cda931482789acdd551daf30baeb69a2f699",
+    "ent-autocontrol-6": "a3c2e88547c693564ffa07dbbadbd2ce54ab5200aeb7607d7ab7df93e1628691",
+    "ent-autogestio-1": "92a4df90415360ad15750e3e124da1429722a97169e20fd5d046831201d1f613",
+    "ent-autogestio-2": "c6214904f658ff55c520907f5002a1c7599f1382a0696a5ed90ecc7863da67e6",
+    "ent-autogestio-3": "a120bbb713e8baa3ab32744cda12457a68c579f3393ea0acc20606026bdf6a12",
+    "ent-autogestio-4": "13f35b9e050c785a109a9ba24bb0ee8a237d2e9d03c811596c5d3b3130c6f5a5",
+    "ent-autogestio-5": "483baeff9030fb0452f4e61c8ad277eb7aacb5ec96c9687d058e9cef462798b8",
+    "ent-autogestio-6": "04b47252d908a846f46d61c195f013f28107fe7ca521870e2fbb29a95ed2f693",
+    "ent-motivacio-1": "56f57a3b9645ee5c4867ca7119a235c4234c0b220ae28e7bf800588ff83d1af0",
+    "ent-motivacio-2": "d8bff5a20e0865d3ab668ea1807000594347e21a82ca089bca5d6b4bf3a36570"
+   },
+   "estado": "ACEPTADA",
+   "veredictos": [
+    {
+     "item_id": "ent-autocontrol-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional con rol-play en la academia, plausible y sin procedimientos policiales reales ni hechos legales. La pregunta es abierta (admite estrategias distintas: autorregulación, reconducir, qué hacer si no mejora). Los tres indicadores encajan con la pregunta y no dictan una única respuesta. Los errores frecuentes y la repregunta (cómo se sentiría y lo gestionaría) son coherentes, sin diagnóstico ni afirmaciones oficiales. No repite a ningún 'parecido': los otros son conductuales o de otra situación (crítica injusta, sobrecarga, protestas múltiples, dos incidentes).",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación creíble de socorrista con afluencia y dos incidentes menores a la vez. La pregunta situacional es abierta y permite priorizar y pedir ayuda de formas distintas. Los cuatro indicadores (priorizar, calma, pedir ayuda, informar después) son razonables y no dictan una respuesta única. Los errores y la repregunta sobre la revisión posterior son coherentes. Permite mostrar autocontrol y resolución de problemas. No es duplicado de autocontrol-4, que trata de mantener una decisión ante protestas. No hay afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La pregunta es abierta, realista y relevante para autogestión (formación por iniciativa propia). El problema es de coherencia: la pregunta pide motivación y qué sacó de la formación, pero el segundo indicador ('cómo la compaginaste con otras obligaciones') no se deriva de la pregunta y solapa con ent-autogestio-3, que trata justo de compaginar obligaciones. El resto de indicadores y errores son adecuados. No hay duplicado claro, ni afirmaciones oficiales ni diagnóstico. Hay que ajustar los indicadores o la pregunta.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta conductual abierta y realista (feedback sobre un punto débil en un trabajo comercial), con indicadores sensatos (punto débil, plan, comprobación de progreso) y errores razonables. Dudas sobre la relevancia: la competencia secundaria 'Autocontrol y resistencia a la presión' casi no puede mostrarse, porque la pregunta se centra en el plan de mejora y no en cómo reaccionó ante la crítica ni en la gestión emocional. La repregunta 'Quin punt feble estàs treballant actualment?' invita a una autoetiqueta, aunque sin llegar a diagnóstico. Se marca relevante=false por la competencia secundaria; conviene reformular para incluir la reacción ante la crítica.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": false,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Experiencia común (estudios, trabajo parcial, familia) y plausible. La pregunta conductual es abierta y admite métodos de organización muy distintos. Los indicadores (obligaciones, herramientas, renuncias) son razonables y no dictan una respuesta. Los errores (organización perfecta sin renuncias, solo esfuerzo sin método) y la repregunta sobre qué dejó de hacer son coherentes. Muestra autogestión y responsabilidad. No coincide con ningún 'parecido' (formación, feedback, objetivo, prueba, decisión laboral). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta abierta y realista (objetivo exigente, contexto deportivo), con indicadores adecuados (objetivo, planificación, superar dificultades, reflexión) y errores coherentes. Fallo de relevancia: la competencia secundaria 'Motivación e identificación con la organización' no puede mostrarse con un objetivo personal genérico. Nada en la pregunta ni en los indicadores conecta con el servicio público o la organización, así que solo se evalúa autogestión/perseverancia. Conviene cambiar la competencia secundaria o reorientar la pregunta. Sin afirmaciones oficiales ni diagnóstico, y sin duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": false,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situacional plausible de práctica en la academia (resultado bajo en una prueba intermedia) sin procedimientos policiales reales. La pregunta es abierta: admite enfoques distintos de análisis, apoyo y plan. Los indicadores (analizar causas, pedir orientación, plan realista) son razonables y no dictan una respuesta. Los errores (compararse con compañeros, restar importancia) y la repregunta sobre la motivación son coherentes. Es relevante para autogestión y desarrollo personal. No duplica ninguna de las otras preguntas (aprendizaje tras un fallo en tiempo real, no feedback pasado). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-6",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Dilema vital realista (trabajo estable frente a formación exigente con menos ingresos). La pregunta es abierta y admite decisiones distintas igualmente defendibles. Los cuatro indicadores (factores, impacto en el entorno, seguimiento, riesgos) evalúan el razonamiento sin dictar la opción correcta. Los errores (impulso, ignorar a los afectados) y la repregunta sobre qué le haría replantear son coherentes. Muestra autogestión y flexibilidad ante el cambio. No es duplicado de ent-autogestio-1 (conductual sobre una formación ya hecha). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual personal sobre una experiencia que influyó en el interés por el servicio a la ciudadanía. Es abierta, ya que cada candidato tiene una vivencia distinta, y realista. Los indicadores (experiencia concreta, influencia en la decisión, acciones posteriores) son signos razonables de una buena respuesta. Los errores (tópicos sin vivencia, hablar solo de estabilidad) son pertinentes y la repregunta es coherente. Es relevante para motivación e identificación. Se distingue de motivacio-3 (actividad de servicio concreta) y de motivacio-2 (informarse sobre la profesión). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual abierta sobre cómo se informó el candidato sobre la profesión y qué descubrió. Es realista (preparación del proceso selectivo) y no describe procedimientos reales. Los indicadores (fuentes, descubrimientos, efecto en la motivación) son razonables y no dictan una respuesta. Los errores (generalidades, imagen idealizada) y la repregunta sobre qué le costará más son coherentes. Permite mostrar motivación realista y autogestión (iniciativa de informarse). No duplica motivacio-1 (experiencia vital que despertó el interés) ni motivacio-3. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a0925bc381c95a420.jsonl",
+    "respuesta_sha256": "b5b65f011914a2d51a7eabf38b1893a96b3f5421fdba88c32bdecda871ef2e88"
+   },
+   "registrada_el": "2026-10-05T22:22:51",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T22:22:51",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a0925bc381c95a420.jsonl",
+      "respuesta_sha256": "b5b65f011914a2d51a7eabf38b1893a96b3f5421fdba88c32bdecda871ef2e88"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-autocontrol-5\",\"verdict\":\"VALID\",\"reason\":\"Situacional con rol-play en la academia, plausible y sin procedimientos policiales reales ni hechos legales. La pregunta es abierta (admite estrategias distintas: autorregulación, reconducir, qué hacer si no mejora). Los tres indicadores encajan con la pregunta y no dictan una única respuesta. Los errores frecuentes y la repregunta (cómo se sentiría y lo gestionaría) son coherentes, sin diagnóstico ni afirmaciones oficiales. No repite a ningún 'parecido': los otros son conductuales o de otra situación (crítica injusta, sobrecarga, protestas múltiples, dos incidentes).\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-6\",\"verdict\":\"VALID\",\"reason\":\"Situación creíble de socorrista con afluencia y dos incidentes menores a la vez. La pregunta situacional es abierta y permite priorizar y pedir ayuda de formas distintas. Los cuatro indicadores (priorizar, calma, pedir ayuda, informar después) son razonables y no dictan una respuesta única. Los errores y la repregunta sobre la revisión posterior son coherentes. Permite mostrar autocontrol y resolución de problemas. No es duplicado de autocontrol-4, que trata de mantener una decisión ante protestas. No hay afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La pregunta es abierta, realista y relevante para autogestión (formación por iniciativa propia). El problema es de coherencia: la pregunta pide motivación y qué sacó de la formación, pero el segundo indicador ('cómo la compaginaste con otras obligaciones') no se deriva de la pregunta y solapa con ent-autogestio-3, que trata justo de compaginar obligaciones. El resto de indicadores y errores son adecuados. No hay duplicado claro, ni afirmaciones oficiales ni diagnóstico. Hay que ajustar los indicadores o la pregunta.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta conductual abierta y realista (feedback sobre un punto débil en un trabajo comercial), con indicadores sensatos (punto débil, plan, comprobación de progreso) y errores razonables. Dudas sobre la relevancia: la competencia secundaria 'Autocontrol y resistencia a la presión' casi no puede mostrarse, porque la pregunta se centra en el plan de mejora y no en cómo reaccionó ante la crítica ni en la gestión emocional. La repregunta 'Quin punt feble estàs treballant actualment?' invita a una autoetiqueta, aunque sin llegar a diagnóstico. Se marca relevante=false por la competencia secundaria; conviene reformular para incluir la reacción ante la crítica.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":false,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-3\",\"verdict\":\"VALID\",\"reason\":\"Experiencia común (estudios, trabajo parcial, familia) y plausible. La pregunta conductual es abierta y admite métodos de organización muy distintos. Los indicadores (obligaciones, herramientas, renuncias) son razonables y no dictan una respuesta. Los errores (organización perfecta sin renuncias, solo esfuerzo sin método) y la repregunta sobre qué dejó de hacer son coherentes. Muestra autogestión y responsabilidad. No coincide con ningún 'parecido' (formación, feedback, objetivo, prueba, decisión laboral). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta abierta y realista (objetivo exigente, contexto deportivo), con indicadores adecuados (objetivo, planificación, superar dificultades, reflexión) y errores coherentes. Fallo de relevancia: la competencia secundaria 'Motivación e identificación con la organización' no puede mostrarse con un objetivo personal genérico. Nada en la pregunta ni en los indicadores conecta con el servicio público o la organización, así que solo se evalúa autogestión/perseverancia. Conviene cambiar la competencia secundaria o reorientar la pregunta. Sin afirmaciones oficiales ni diagnóstico, y sin duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":false,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-5\",\"verdict\":\"VALID\",\"reason\":\"Situacional plausible de práctica en la academia (resultado bajo en una prueba intermedia) sin procedimientos policiales reales. La pregunta es abierta: admite enfoques distintos de análisis, apoyo y plan. Los indicadores (analizar causas, pedir orientación, plan realista) son razonables y no dictan una respuesta. Los errores (compararse con compañeros, restar importancia) y la repregunta sobre la motivación son coherentes. Es relevante para autogestión y desarrollo personal. No duplica ninguna de las otras preguntas (aprendizaje tras un fallo en tiempo real, no feedback pasado). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-6\",\"verdict\":\"VALID\",\"reason\":\"Dilema vital realista (trabajo estable frente a formación exigente con menos ingresos). La pregunta es abierta y admite decisiones distintas igualmente defendibles. Los cuatro indicadores (factores, impacto en el entorno, seguimiento, riesgos) evalúan el razonamiento sin dictar la opción correcta. Los errores (impulso, ignorar a los afectados) y la repregunta sobre qué le haría replantear son coherentes. Muestra autogestión y flexibilidad ante el cambio. No es duplicado de ent-autogestio-1 (conductual sobre una formación ya hecha). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual personal sobre una experiencia que influyó en el interés por el servicio a la ciudadanía. Es abierta, ya que cada candidato tiene una vivencia distinta, y realista. Los indicadores (experiencia concreta, influencia en la decisión, acciones posteriores) son signos razonables de una buena respuesta. Los errores (tópicos sin vivencia, hablar solo de estabilidad) son pertinentes y la repregunta es coherente. Es relevante para motivación e identificación. Se distingue de motivacio-3 (actividad de servicio concreta) y de motivacio-2 (informarse sobre la profesión). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual abierta sobre cómo se informó el candidato sobre la profesión y qué descubrió. Es realista (preparación del proceso selectivo) y no describe procedimientos reales. Los indicadores (fuentes, descubrimientos, efecto en la motivación) son razonables y no dictan una respuesta. Los errores (generalidades, imagen idealizada) y la repregunta sobre qué le costará más son coherentes. Permite mostrar motivación realista y autogestión (iniciativa de informarse). No duplica motivacio-1 (experiencia vital que despertó el interés) ni motivacio-3. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

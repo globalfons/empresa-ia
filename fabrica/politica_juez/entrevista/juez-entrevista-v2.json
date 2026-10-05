@@ -1,0 +1,27 @@
+{
+ "version": "juez-entrevista-v2",
+ "prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "criterios": [
+  "coherente",
+  "realista",
+  "pregunta_abierta",
+  "indicadores_pertinentes",
+  "relevante",
+  "sin_afirmaciones_oficiales",
+  "sin_diagnostico"
+ ],
+ "duplicado": "duplicado_de",
+ "guards": [
+  "solo Read sobre su tanda",
+  "JSON estricto 1:1 con ids en orden",
+  "claves de criterios exactas",
+  "motivo propio ≥ 30 caracteres",
+  "sin valoraciones agregadas",
+  "veredicto = el más conservador entre el del juez y el deducido de sus criterios"
+ ],
+ "tanda_max": 10,
+ "modelo_referencia": "sonnet",
+ "regla_publicacion": "VALID solo si (1) existe al menos un veredicto ACEPTADO del modelo de referencia (Sonnet) y es VALID, (2) ningún otro veredicto aceptado del mismo ítem, de cualquier ronda o modelo, es más conservador (REVIEW_REQUIRED o REJECTED), (3) candidatas idénticas a las juzgadas, (4) validación determinista limpia y (5) la auditoría del lote no lo retiene. Cualquier REJECTED aceptado → REJECTED. En el resto de casos → REVIEW_REQUIRED.",
+ "motivo": "Calibración tras E00001: Haiku aprobó 50/50 y no detectó defectos que Sonnet sí señaló (un error frecuente que penaliza una respuesta sincera, una repregunta que presupone una actitud, una competencia secundaria no evaluable); además Haiku escribió mal claves de criterio 4 veces (se catalaniza). El prompt y los criterios NO cambian: cambia solo el modelo de referencia y la regla de combinación, que es estrictamente más conservadora."
+}

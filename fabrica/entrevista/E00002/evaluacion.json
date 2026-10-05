@@ -1,0 +1,448 @@
+{
+ "lote": "E00002",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "creada_el": "2026-10-05T22:29:00",
+ "judge_prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "politica": "juez-entrevista-v2",
+ "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "candidatas_sha256": "bcb802df1e885ed7850c6975d242ad85f82a8aede8bcbc2adc483414f8308381",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ent-adaptabilitat-7",
+    "ent-adaptabilitat-8",
+    "ent-autocontrol-7",
+    "ent-autocontrol-8",
+    "ent-autogestio-7",
+    "ent-autogestio-8",
+    "ent-autogestio-9",
+    "ent-autonomia-7",
+    "ent-autonomia-8",
+    "ent-habilitats-socials-7"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00002/tanda-01.json",
+   "prompt_sha256": "39821fdf82598ba7ef261f05faad6c4e8e6a7334b156ab9255c8a4d65d275033",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-adaptabilitat-7": "b1e4704ec70876940c5f672c4ce95717ed1cfdb7ce223688d879bee50709a4a9",
+    "ent-adaptabilitat-8": "35351729876bfbe78499a53ec9c6f4a41d699b9330206b2ff331ae45f39e1dc5",
+    "ent-autocontrol-7": "0f58f16cc818b175763047014738a60b51904803e033dd4787bfe5e56b12ff9b",
+    "ent-autocontrol-8": "d1f134ffd08ecffdcb11cf40e42f4edafb52bceef805ae328d66183709842ad8",
+    "ent-autogestio-7": "edfe3351ec59cc890e53308daf1a526ae1b0abde146021480f12cc04299b6aed",
+    "ent-autogestio-8": "0cbec47849f1ddc91af45aef22aefdcff374d060d20d2eaf74c35b3d1c9d871b",
+    "ent-autogestio-9": "f6f823e86a29bc96fde64a9dc7fc9e82f75920480297f36c00d3057bf09bf9c1",
+    "ent-autonomia-7": "8c67c3e308cd223605737d0566d6b0144a7dfae19316bd161335c0cd94c1fab4",
+    "ent-autonomia-8": "46ead5312ec48608158a81a423c0d84d5b0f4206cf0061fe9c3b5f775b81a343",
+    "ent-habilitats-socials-7": "b7db8820d2355e8df0fcd7ee8b86387900a984b56bc73f16e93aeb0287805c4d"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-adaptabilitat-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (aprender una herramienta o método nuevo en pocos días para seguir trabajando) es esencialmente la misma que ent-adaptabilitat-2 (aprender algo nuevo en poco tiempo para continuar con el trabajo), con el mismo tipo de situación. Por lo demás el texto es coherente, realista, abierto, con indicadores razonables, sin afirmaciones oficiales ni diagnóstico, pero el duplicado obliga al rechazo.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-adaptabilitat-2"
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta sobre convivir o trabajar en un entorno con costumbres muy diferentes es prácticamente literal a ent-adaptabilitat-4 (solo cambia el cierre 'Com t'hi vas adaptar?'). El resto de criterios se cumple (estancia en el extranjero plausible, indicadores concretos, sin diagnóstico ni afirmaciones oficiales), pero es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-adaptabilitat-4"
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (situación tensa en atención al cliente, cómo mantuviste la calma y qué te ayudó) es esencialmente la de ent-autocontrol-1 (situación tensa en que mantuviste la calma, qué te ayudó); el contexto de gasolinera solo concreta el escenario. Texto coherente, realista y sin diagnóstico ni afirmaciones oficiales, pero duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autocontrol-1"
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (mantener una decisión pese a las protestas de varias personas a la vez) coincide casi palabra por palabra con ent-autocontrol-4; el contexto de árbitro de baloncesto no cambia el tipo de situación. Indicadores y errores son razonables, pero es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autocontrol-4"
+     }
+    },
+    {
+     "item_id": "ent-autogestio-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Preguntar por un aprendizaje impulsado por uno mismo sin que nadie lo exigiera y cómo se organizó es esencialmente lo mismo que ent-autogestio-1 (formación decidida por cuenta propia para mejorar). Texto coherente y sin problemas de diagnóstico u oficialidad, pero duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autogestio-1"
+     }
+    },
+    {
+     "item_id": "ent-autogestio-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (te señalaron un punto a mejorar, cómo reaccionaste y qué hiciste después) es esencialmente la de ent-autogestio-2 (te señalaron un punto débil y trabajaste para mejorarlo). El texto es coherente y adecuado en lo demás, pero hay duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autogestio-2"
+     }
+    },
+    {
+     "item_id": "ent-autogestio-9",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta es idéntica palabra por palabra a ent-autogestio-4 (objetivo personal exigente y cómo mantuviste el esfuerzo). Aunque el contexto deportivo es plausible y los indicadores adecuados, es un duplicado exacto.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autogestio-4"
+     }
+    },
+    {
+     "item_id": "ent-autonomia-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (mejorar algo por iniciativa propia sin que nadie lo pidiera) es prácticamente idéntica a ent-autonomia-1. El contexto de mensajería solo concreta el escenario. Resto de criterios correctos, pero duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autonomia-1"
+     }
+    },
+    {
+     "item_id": "ent-autonomia-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (decisión importante tomada solo, sin poder consultar a nadie, y cómo se tomó) es esencialmente la de ent-autonomia-2. El contexto de colonias de verano es plausible y los indicadores razonables, pero se trata de un duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-autonomia-2"
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Explicar algo a varias personas a la vez y asegurarse de que te entendían es esencialmente el mismo tipo de situación que ent-habilitats-socials-1 (hablar ante un grupo, preparación y resultado); ambas piden la misma experiencia de comunicación ante un grupo. Texto coherente, realista (esplai) y sin problemas de diagnóstico u oficialidad, pero en la duda se marca duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-habilitats-socials-1"
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-aeceb28a05f3fef3b.jsonl",
+    "respuesta_sha256": "e001abab1a5f06c98ed72b906d3a2f5e9efc69c78de21bf2d82b0bc692831c3f"
+   },
+   "registrada_el": "2026-10-05T22:30:47",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T22:30:47",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-aeceb28a05f3fef3b.jsonl",
+      "respuesta_sha256": "e001abab1a5f06c98ed72b906d3a2f5e9efc69c78de21bf2d82b0bc692831c3f"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-adaptabilitat-7\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (aprender una herramienta o método nuevo en pocos días para seguir trabajando) es esencialmente la misma que ent-adaptabilitat-2 (aprender algo nuevo en poco tiempo para continuar con el trabajo), con el mismo tipo de situación. Por lo demás el texto es coherente, realista, abierto, con indicadores razonables, sin afirmaciones oficiales ni diagnóstico, pero el duplicado obliga al rechazo.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-adaptabilitat-2\"}},\n{\"item_id\":\"ent-adaptabilitat-8\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta sobre convivir o trabajar en un entorno con costumbres muy diferentes es prácticamente literal a ent-adaptabilitat-4 (solo cambia el cierre 'Com t'hi vas adaptar?'). El resto de criterios se cumple (estancia en el extranjero plausible, indicadores concretos, sin diagnóstico ni afirmaciones oficiales), pero es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-adaptabilitat-4\"}},\n{\"item_id\":\"ent-autocontrol-7\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (situación tensa en atención al cliente, cómo mantuviste la calma y qué te ayudó) es esencialmente la de ent-autocontrol-1 (situación tensa en que mantuviste la calma, qué te ayudó); el contexto de gasolinera solo concreta el escenario. Texto coherente, realista y sin diagnóstico ni afirmaciones oficiales, pero duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autocontrol-1\"}},\n{\"item_id\":\"ent-autocontrol-8\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (mantener una decisión pese a las protestas de varias personas a la vez) coincide casi palabra por palabra con ent-autocontrol-4; el contexto de árbitro de baloncesto no cambia el tipo de situación. Indicadores y errores son razonables, pero es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autocontrol-4\"}},\n{\"item_id\":\"ent-autogestio-7\",\"verdict\":\"REJECTED\",\"reason\":\"Preguntar por un aprendizaje impulsado por uno mismo sin que nadie lo exigiera y cómo se organizó es esencialmente lo mismo que ent-autogestio-1 (formación decidida por cuenta propia para mejorar). Texto coherente y sin problemas de diagnóstico u oficialidad, pero duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autogestio-1\"}},\n{\"item_id\":\"ent-autogestio-8\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (te señalaron un punto a mejorar, cómo reaccionaste y qué hiciste después) es esencialmente la de ent-autogestio-2 (te señalaron un punto débil y trabajaste para mejorarlo). El texto es coherente y adecuado en lo demás, pero hay duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autogestio-2\"}},\n{\"item_id\":\"ent-autogestio-9\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta es idéntica palabra por palabra a ent-autogestio-4 (objetivo personal exigente y cómo mantuviste el esfuerzo). Aunque el contexto deportivo es plausible y los indicadores adecuados, es un duplicado exacto.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autogestio-4\"}},\n{\"item_id\":\"ent-autonomia-7\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (mejorar algo por iniciativa propia sin que nadie lo pidiera) es prácticamente idéntica a ent-autonomia-1. El contexto de mensajería solo concreta el escenario. Resto de criterios correctos, pero duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autonomia-1\"}},\n{\"item_id\":\"ent-autonomia-8\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (decisión importante tomada solo, sin poder consultar a nadie, y cómo se tomó) es esencialmente la de ent-autonomia-2. El contexto de colonias de verano es plausible y los indicadores razonables, pero se trata de un duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-autonomia-2\"}},\n{\"item_id\":\"ent-habilitats-socials-7\",\"verdict\":\"REJECTED\",\"reason\":\"Explicar algo a varias personas a la vez y asegurarse de que te entendían es esencialmente el mismo tipo de situación que ent-habilitats-socials-1 (hablar ante un grupo, preparación y resultado); ambas piden la misma experiencia de comunicación ante un grupo. Texto coherente, realista (esplai) y sin problemas de diagnóstico u oficialidad, pero en la duda se marca duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-habilitats-socials-1\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "ent-habilitats-socials-8",
+    "ent-habilitats-socials-9",
+    "ent-orientacio-servei-7",
+    "ent-orientacio-servei-8",
+    "ent-resolucio-problemes-7",
+    "ent-resolucio-problemes-8",
+    "ent-resolucio-problemes-9",
+    "ent-responsabilitat-7",
+    "ent-responsabilitat-8"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00002/tanda-02.json",
+   "prompt_sha256": "aa52e9ba5164ee2660caf449037fa301e4f7616aefd7b996aa9f702c93ad836d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-habilitats-socials-8": "b010e0a0c996da9c43260f56d75c7220ace730c0045c35ff510595b3eac164a8",
+    "ent-habilitats-socials-9": "6c00a0bf85c17957a07335d152a78d63cacea0f1a2569beb1d911c2eb1f51e6f",
+    "ent-orientacio-servei-7": "f1cf7ee06082c777ea7b550ab60d8d29f582377fe03d1ee0bebec5b16df40f05",
+    "ent-orientacio-servei-8": "6cacd380f838aa2ea032e5471e11600310fbbfb75613c739e3ae6da0e00ac51c",
+    "ent-resolucio-problemes-7": "20eed700b0b03831828c41f1d2abdc0eaa8a85bfc79f1a6ae515b6cae3661ad0",
+    "ent-resolucio-problemes-8": "4a13505dd5228ba78d1b38eb2a47fd3c04b634e82ea0565e516347e78f43c182",
+    "ent-resolucio-problemes-9": "3566600d704f2823173c65e56ac039ffeca84fc9f661d80dba257b6e8b9b71e2",
+    "ent-responsabilitat-7": "24129ad20ab322f964305b3a2c33bf43d65729e5329e6fc5ab6727c27e2e1502",
+    "ent-responsabilitat-8": "4c22f4c3c4d70216896a151f91c25e69c35c8d1810d9be3eae4ea87ece49d0ba"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-habilitats-socials-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Texto claro y coherente: situación de obra, pregunta conductual abierta, indicadores razonables (causa, acción, resultado) y repregunta adecuada. Sin afirmaciones oficiales ni diagnóstico. Pero la pregunta es esencialmente idéntica a ent-habilitats-socials-2 (ayudar a dos personas que no se entendían a comunicarse mejor), así que se rechaza por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-habilitats-socials-2"
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-9",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La pregunta (convencer a un grupo de cambiar de opinión) es prácticamente la misma que ent-habilitats-socials-4; solo cambia 'vas aconseguir' por 'vas intentar'. Además hay incoherencias: el contexto dice 'Mediació' pero la pregunta es de persuasión, y la situación ('algú intenta que la reconsiderin') está redactada en tercera persona y de forma vaga. Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-habilitats-socials-4"
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Item bien construido (tienda de ropa, indicadores sensatos, repregunta coherente, sin afirmaciones oficiales ni diagnóstico), pero la pregunta es casi literalmente la de ent-orientacio-servei-1 (ayudar a resolver una necesidad que iba más allá de lo pedido). Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-orientacio-servei-1"
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Situación de biblioteca plausible, indicadores y repregunta correctos, sin afirmaciones oficiales ni diagnóstico. Sin embargo la pregunta (atender a alguien con dificultades para entender una información y qué hiciste para que la comprendiera) es esencialmente la de ent-orientacio-servei-3 (adaptar la forma de hablar para que entienda la información). Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-orientacio-servei-3"
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Escenario de camarero en festival realista y texto coherente, con indicadores razonables (problema, priorización, resultado y aprendizaje). Pero la pregunta es la misma que ent-resolucio-problemes-2 (solución rápida a un problema bajo mucha presión). Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-resolucio-problemes-2"
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Proyecto de ciclo formativo plausible, indicadores y errores coherentes, sin afirmaciones oficiales ni diagnóstico. La pregunta (grupo encallado ante un problema, qué aportaste) es esencialmente la de ent-resolucio-problemes-3. Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-resolucio-problemes-3"
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-9",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Situacional en voluntariado de barrio, realista y coherente, con indicadores razonables (ordenar información, contrastar, tiempo). Pero plantea lo mismo que ent-resolucio-problemes-5 (versiones contradictorias de dos personas sobre un mismo hecho y cómo gestionarlo); solo cambia el contexto. Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-resolucio-problemes-5"
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-7",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Pregunta casi idéntica a ent-responsabilitat-5 (material compartido incompleto por un descuido de un compañero), solo cambia entrenamiento por práctica. Además hay un error de redacción en la situación ('pilotes i con' en lugar de 'cons'), lo que resta coherencia. Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-responsabilitat-5"
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-8",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "Situación de tienda de electrónica con error sobre la garantía, indicadores razonables y sin afirmaciones oficiales ni diagnóstico. Sin embargo es el mismo caso que ent-responsabilitat-6 (haber dado información equivocada a un cliente que aún no lo sabe). Además la pregunta ('aquesta situació') depende del contexto y es poco autónoma. Rechazado por duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": "ent-responsabilitat-6"
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a0ad8a019c235ef78.jsonl",
+    "respuesta_sha256": "dcf7c4066bc0bdd9e361f32c720a0ee117235fda99d3fd85c7f29c75d633f463"
+   },
+   "registrada_el": "2026-10-05T22:30:47",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T22:30:47",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a0ad8a019c235ef78.jsonl",
+      "respuesta_sha256": "dcf7c4066bc0bdd9e361f32c720a0ee117235fda99d3fd85c7f29c75d633f463"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-habilitats-socials-8\",\"verdict\":\"REJECTED\",\"reason\":\"Texto claro y coherente: situación de obra, pregunta conductual abierta, indicadores razonables (causa, acción, resultado) y repregunta adecuada. Sin afirmaciones oficiales ni diagnóstico. Pero la pregunta es esencialmente idéntica a ent-habilitats-socials-2 (ayudar a dos personas que no se entendían a comunicarse mejor), así que se rechaza por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-habilitats-socials-2\"}},\n{\"item_id\":\"ent-habilitats-socials-9\",\"verdict\":\"REJECTED\",\"reason\":\"La pregunta (convencer a un grupo de cambiar de opinión) es prácticamente la misma que ent-habilitats-socials-4; solo cambia 'vas aconseguir' por 'vas intentar'. Además hay incoherencias: el contexto dice 'Mediació' pero la pregunta es de persuasión, y la situación ('algú intenta que la reconsiderin') está redactada en tercera persona y de forma vaga. Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-habilitats-socials-4\"}},\n{\"item_id\":\"ent-orientacio-servei-7\",\"verdict\":\"REJECTED\",\"reason\":\"Item bien construido (tienda de ropa, indicadores sensatos, repregunta coherente, sin afirmaciones oficiales ni diagnóstico), pero la pregunta es casi literalmente la de ent-orientacio-servei-1 (ayudar a resolver una necesidad que iba más allá de lo pedido). Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-orientacio-servei-1\"}},\n{\"item_id\":\"ent-orientacio-servei-8\",\"verdict\":\"REJECTED\",\"reason\":\"Situación de biblioteca plausible, indicadores y repregunta correctos, sin afirmaciones oficiales ni diagnóstico. Sin embargo la pregunta (atender a alguien con dificultades para entender una información y qué hiciste para que la comprendiera) es esencialmente la de ent-orientacio-servei-3 (adaptar la forma de hablar para que entienda la información). Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-orientacio-servei-3\"}},\n{\"item_id\":\"ent-resolucio-problemes-7\",\"verdict\":\"REJECTED\",\"reason\":\"Escenario de camarero en festival realista y texto coherente, con indicadores razonables (problema, priorización, resultado y aprendizaje). Pero la pregunta es la misma que ent-resolucio-problemes-2 (solución rápida a un problema bajo mucha presión). Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-resolucio-problemes-2\"}},\n{\"item_id\":\"ent-resolucio-problemes-8\",\"verdict\":\"REJECTED\",\"reason\":\"Proyecto de ciclo formativo plausible, indicadores y errores coherentes, sin afirmaciones oficiales ni diagnóstico. La pregunta (grupo encallado ante un problema, qué aportaste) es esencialmente la de ent-resolucio-problemes-3. Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-resolucio-problemes-3\"}},\n{\"item_id\":\"ent-resolucio-problemes-9\",\"verdict\":\"REJECTED\",\"reason\":\"Situacional en voluntariado de barrio, realista y coherente, con indicadores razonables (ordenar información, contrastar, tiempo). Pero plantea lo mismo que ent-resolucio-problemes-5 (versiones contradictorias de dos personas sobre un mismo hecho y cómo gestionarlo); solo cambia el contexto. Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-resolucio-problemes-5\"}},\n{\"item_id\":\"ent-responsabilitat-7\",\"verdict\":\"REJECTED\",\"reason\":\"Pregunta casi idéntica a ent-responsabilitat-5 (material compartido incompleto por un descuido de un compañero), solo cambia entrenamiento por práctica. Además hay un error de redacción en la situación ('pilotes i con' en lugar de 'cons'), lo que resta coherencia. Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-responsabilitat-5\"}},\n{\"item_id\":\"ent-responsabilitat-8\",\"verdict\":\"REJECTED\",\"reason\":\"Situación de tienda de electrónica con error sobre la garantía, indicadores razonables y sin afirmaciones oficiales ni diagnóstico. Sin embargo es el mismo caso que ent-responsabilitat-6 (haber dado información equivocada a un cliente que aún no lo sabe). Además la pregunta ('aquesta situació') depende del contexto y es poco autónoma. Rechazado por duplicado.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"ent-responsabilitat-6\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

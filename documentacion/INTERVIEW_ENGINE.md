@@ -99,10 +99,46 @@ Local: `localStorage["testley:entrevista:v1"] = {sesiones: [InterviewSession…]
 2. Redactar un lote (`fabrica/entrevista/<lote>/candidatas.json`), `python3 -m fabrica.entrevista validar|preparar <lote>`, jueces independientes, `registrar`, `publicar`.
 3. `npm run build`: la página y la tarjeta aparecen solas.
 
-## Contenido publicado (lote E00001)
+## Política del juez (versionada) y calibración
 
-- **60 candidatos** (redactor independiente): 6 por competencia principal (4 conductuales + 2 situacionales), 14 categorías, dificultad 1/2/3 = 10/30/20, 40 con una competencia secundaria. Validación determinista limpia.
-- **Juicio** en 6 tandas de 10. Tandas 01–05: juez Haiku, aceptadas (02 en el segundo intento). Tanda 06: tres jueces Haiku rechazados por el guard (escribían la clave `indicadores_pertinents`, en catalán); el cuarto intento, con **el mismo prompt congelado** y un modelo superior (Sonnet), se aceptó y el modelo queda en la traza de esa tanda (`judge_model`). El guard no se relajó.
-- **Auditoría del lote** (`fabrica/entrevista/E00001/auditoria.json`, solo puede retener): similitud entre preguntas (Jaccard máx. 0,31; ningún duplicado), preguntas obvias, realismo y criterios arbitrarios. El sesgo por longitud de opciones no aplica: no hay opciones. Retenidos: `ent-autogestio-3` (solapa con `ent-autocontrol-3`) y `ent-resolucio-problemes-5` (contrastar versiones de un hecho se acerca a un procedimiento de investigación).
-- **Resultado:** **55 VALID publicados**, 5 en REVIEW_REQUIRED (`ent-habilitats-socials-1`, `-2`, `-4` del juez; los 2 retenidos por la auditoría) y 0 REJECTED. Por competencia principal: 6 en 7 competencias, 5 en resolución de problemas y autogestión, 3 en habilidades sociales.
-- **Observación de calibración:** los jueces Haiku aprobaron 50/50 y el juez Sonnet 7/10, con motivos razonables (un error frecuente que penaliza una respuesta sincera, una repregunta que presupone neutralidad, una competencia secundaria poco evaluable). Antes de ampliar el banco conviene recalibrar el juez (o rejuzgar las tandas 01–05 con el modelo superior). Hasta entonces el contenido publicado es VALID según el circuito vigente.
+Política en `fabrica/politica_juez/entrevista/` (registro con huella sha256 de cada versión; `fabrica.entrevista.politica()` bloquea si el fichero
+de la política o el prompt congelado no coinciden con su huella, o si los criterios no son los del código):
+
+| versión | prompt | modelo de referencia | regla de publicación |
+|---|---|---|---|
+| `juez-entrevista-v1` (histórica) | `juez-entrevista-v1.txt` | — | VALID de la tanda aceptada, sin retención de la auditoría |
+| `juez-entrevista-v2` (activa) | `juez-entrevista-v1.txt` (el mismo, congelado) | **Sonnet** | VALID solo con un VALID **aceptado del modelo de referencia** y **ningún** veredicto aceptado más conservador de cualquier ronda o modelo; cualquier REJECTED gana; sin retención de la auditoría |
+
+Los criterios NO cambiaron: la v2 solo fija el modelo de referencia y una combinación estrictamente más conservadora. Las rondas no se
+sobrescriben: una reevaluación es un fichero nuevo (`evaluacion-<ronda>.json`, `python3 -m fabrica.entrevista reevaluar <lote> <ronda>`).
+
+**Calibración (E00001, 50 escenarios juzgados por los dos modelos):** Haiku 50/50 VALID; Sonnet 35/50 VALID y 15 REVIEW_REQUIRED. Criterios en que
+Sonnet dice `false` y Haiku `true`: coherente 11 · indicadores_pertinentes 3 · pregunta_abierta 2 · relevante 2 · realista 1. Causas:
+1. Haiku no detecta defectos de redacción ni de diseño (imperativas «Explica'm…» acabadas en «?», indicadores que presuponen algo del candidato,
+   competencias secundarias que la pregunta no permite mostrar, preguntas casi obvias) y aprueba en bloque; además escribió mal las claves de
+   criterio 4 veces (las «catalaniza»), siempre detectado por el guard.
+2. Sonnet es más estricto pero no del todo consistente: marcó la imperativa con «?» como defecto en 9 escenarios y la dejó pasar en otros 6.
+   Por eso se convirtió en **regla determinista** (`IMPERATIVA`, reglas v2): se aplica a todo lote nuevo (`"reglas": 2`) y, para E00001, la
+   auditoría retiene de forma uniforme los 15 escenarios que la incumplen (la auditoría solo puede retener).
+
+## Lotes y resultado
+
+| lote | qué es | candidatos | VALID publicados | REVIEW_REQUIRED | REJECTED |
+|---|---|---|---|---|---|
+| E00001 | lote inicial (60; 6 por competencia) | 60 | 35 | 25 | 0 |
+| E00002 | corrección de los 19 en revisión | 19 | 0 | 0 | 19 |
+| E00003 | escenarios NUEVOS para los huecos calculados por `fabrica.cobertura360` | 25 | 21 | 4 | 0 |
+| **total** | | **104** | **56** | **29** | **19** |
+
+- **Los 5 REVIEW_REQUIRED iniciales:** `ent-autogestio-3` → VALID por el flujo oficial (VALID del juez de referencia y de Haiku; el detector de
+  duplicados no lo marca: Jaccard 0,24 < 0,45; la auditoría retira su duda con el motivo registrado en `auditoria.json → historial`).
+  `ent-resolucio-problemes-5` sigue retenido (duda de realismo no resoluble objetivamente). `ent-habilitats-socials-1`, `-2`, `-4` siguen en
+  REVIEW_REQUIRED (defectos de contenido señalados por el juez de referencia).
+- **E00002 fracasó por diseño y se registra tal cual:** la «corrección» mantenía la misma pregunta que el original, y el juez la rechazó
+  correctamente como duplicado del original (que ve entre los parecidos). No se ha rejuzgado en otro contexto para obtener VALID. Lección:
+  un ítem en revisión no se «arregla» reescribiéndolo; se sustituye por un escenario genuinamente distinto (E00003).
+- **Detección entre lotes:** el validador compara cada lote con los candidatos de todos los lotes anteriores (mismo umbral) y el juez recibe sus
+  preguntas como parecidos; `publicar` reconstruye el catálogo pasando todos los lotes por la puerta.
+- **Por competencia (VALID):** 6 en cooperació, autonomia, resolució de problemes, orientació de servei, autocontrol y autogestió; 5 en
+  responsabilitat, adaptabilitat, motivació y habilitats socials (las 10 ≥ 5; el modo práctica usa 3). Huecos restantes: tanda
+  `MOSSOS-INTERVIEW-001` de `MOSSOS_360_CONTENT_GENERATION_PLAN.md`.

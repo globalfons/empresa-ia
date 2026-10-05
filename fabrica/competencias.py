@@ -242,11 +242,12 @@ def comprobar(items, respuesta, criterios=None):
     return out
 
 
-def registrar(lote, nn, transcripcion, trabajo=None, prompt=None, criterios=None, modelo=None):
+def registrar(lote, nn, transcripcion, trabajo=None, prompt=None, criterios=None, modelo=None, evaluacion="evaluacion.json"):
     """Registra la respuesta de un juez (genérico: lo reutiliza fabrica/entrevista.py con su carpeta, prompt y criterios).
-    `modelo`: si el juez de esta tanda no es el modelo por defecto del lote (p. ej. tras varios rechazos del guard), queda en la traza."""
+    `modelo`: si el juez de esta tanda no es el modelo por defecto del lote (p. ej. tras varios rechazos del guard), queda en la traza.
+    `evaluacion`: fichero de la ronda (evaluacion.json o una reevaluación evaluacion-<ronda>.json); nunca se sobrescribe otra ronda."""
     d = os.path.join(trabajo or TRABAJO, lote)
-    ev = J.leer(os.path.join(d, "evaluacion.json"))
+    ev = J.leer(os.path.join(d, evaluacion))
     t = next(x for x in ev["tandas"] if x["tanda"] == nn)
     if t["estado"] == "ACEPTADA":
         raise SystemExit(f"La tanda {nn} ya está aceptada: los veredictos no se sobrescriben.")
@@ -267,7 +268,7 @@ def registrar(lote, nn, transcripcion, trabajo=None, prompt=None, criterios=None
         t["estado"] = "RECHAZADA"
         intento["resultado"] = f"BATCH_REJECTED · {e.codigo}: {e.detalle}"
     t.setdefault("intentos", []).append(intento)
-    J.escribir(os.path.join(d, "evaluacion.json"), ev)
+    J.escribir(os.path.join(d, evaluacion), ev)
     return t
 
 

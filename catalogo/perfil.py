@@ -303,6 +303,12 @@ def motor360(oid, o, fuentes, contenido, examen, temas):
         return dict({k: v for k, v in b.items() if k != "citas"}, **verificar_bloque(b, texto), fuente=fu.get("source_url"),
                     documento=fu.get("source_document"), call_id=call)
 
+    comp_pub = leer(f"catalogo/competencias/{oid}.json", {}) or {}
+    ent_pub = leer(f"catalogo/entrevista/{oid}.json", {}) or {}
+    n_esc = sum(1 for e in comp_pub.get("escenarios", []) if e.get("verification_status") == "VALID")
+    n_ent = sum(1 for e in ent_pub.get("escenarios", []) if e.get("verification_status") == "VALID")
+    n_auto = sum(len(f.get("autoevaluacion") or []) for f in comp_pub.get("competencias", []) if f.get("verification_status") == "VALID")
+    gen_apt = generador_aptitud() if c.get("aptitud") else None
     psico = (leer("catalogo/psicotecnicos.json", {}).get("pruebas") or {}).get(oid) or {}
     banco_apt = sum(len(v) for v in (psico.get("bancos") or {}).values())
     sim = (examen or {}).get("simulacro") or {}
@@ -310,12 +316,14 @@ def motor360(oid, o, fuentes, contenido, examen, temas):
         "knowledge": {"oficial": {"temas": len(temas), "fuente": (fuentes.get(o["temario"].get("fuente")) or {}).get("source_url")},
                       "contenido": {k: contenido.get(k, 0) for k in ("OFFICIAL_EXAM", "TESTLEY_GENERATED", "REVIEW_REQUIRED")},
                       "entrenable": bool(contenido.get("TESTLEY_GENERATED") or contenido.get("OFFICIAL_EXAM"))},
-        "aptitude": {"oficial": oficial("aptitud"), "contenido": {"ejercicios": banco_apt, "estado": psico.get("estado") or "SIN_BANCO"},
-                     "entrenable": banco_apt > 0},
-        "psychometric": {"oficial": oficial("adecuacion"), "contenido": {"estado": "SIN_CONTENIDO"},
-                         "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.", "entrenable": False},
-        "competency": {"oficial": oficial("competencias"), "contenido": {"estado": "SIN_CONTENIDO"}, "entrenable": False},
-        "interview": {"oficial": oficial("adecuacion"), "contenido": {"estado": "SIN_CONTENIDO"}, "entrenable": False},
+        "aptitude": {"oficial": oficial("aptitud"), "contenido": {"ejercicios": banco_apt, "estado": psico.get("estado") or "SIN_BANCO", "generador": gen_apt},
+                     "entrenable": banco_apt > 0 or bool(gen_apt)},
+        "psychometric": {"oficial": oficial("adecuacion"), "contenido": {"items_autoevaluacion": n_auto, "source_type": "TESTLEY_TRAINING"} if n_auto else {"estado": "SIN_CONTENIDO"},
+                         "nota": "Formación y autoconocimiento: sin respuestas correctas ni diagnósticos.", "entrenable": n_auto > 0},
+        "competency": {"oficial": oficial("competencias"), "contenido": {"escenarios_valid": n_esc, "review_required": len(comp_pub.get("cola_revision") or []),
+                       "source_type": "TESTLEY_GENERATED"} if comp_pub else {"estado": "SIN_CONTENIDO"}, "entrenable": n_esc > 0},
+        "interview": {"oficial": oficial("adecuacion"), "contenido": {"escenarios_valid": n_ent, "review_required": len(ent_pub.get("cola_revision") or []),
+                      "source_type": "TESTLEY_TRAINING"} if ent_pub else {"estado": "SIN_CONTENIDO"}, "entrenable": n_ent > 0},
         "physical": {"oficial": oficial("fisica"), "entrenable": bool(c.get("fisica"))},
         "language": {"oficial": {"catala": oficial("catala"), "idiomas_voluntarios": oficial("idiomas_voluntarios")}, "entrenable": False},
         "medical_information": {"oficial": oficial("medica"), "solo_informativo": True, "entrenable": False},
@@ -324,6 +332,18 @@ def motor360(oid, o, fuentes, contenido, examen, temas):
         "adaptive_training": {"entradas": ["knowledge"] + (["aptitude"] if banco_apt else []) + (["physical"] if c.get("fisica") else [])},
     }
     return {"schema": "opposition-engine/1", "call_id": call if c else None, "idioma": prep.get("idioma_ejercicios"), "modulos": {k: m[k] for k in MOTORES}}
+
+
+def generador_aptitud():
+    """Generadores deterministas del Aptitude Engine (web/assets/aptitud.js → SUBTIPOS): ejercicios TESTLEY_GENERATED verificados por
+    cálculo (no un banco ni una reproducción oficial). Se lee del propio código para no declarar a mano lo que existe."""
+    ruta = os.path.join(R, "web", "assets", "aptitud.js")
+    if not os.path.exists(ruta):
+        return None
+    m = re.search(r"var SUBTIPOS = \{(.*?)\};", open(ruta, encoding="utf-8").read(), re.S)
+    subt = {k: re.findall(r'"([a-z_]+)"', v) for k, v in re.findall(r"(\w+): \[([^\]]*)\]", m.group(1))} if m else {}
+    return {"fichero": "web/assets/aptitud.js", "verification_status": "VERIFIED_BY_COMPUTATION", "source_type": "TESTLEY_GENERATED",
+            "subtipos": subt, "dificultades": [1, 2, 3]} if subt else None
 
 
 def correcciones(guia_reg):

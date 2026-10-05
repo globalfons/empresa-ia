@@ -1,0 +1,602 @@
+{
+ "lote": "E00003",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "creada_el": "2026-10-05T22:34:32",
+ "judge_prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "politica": "juez-entrevista-v2",
+ "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "candidatas_sha256": "aaee35d9c5d8b0d4026b4d1ffd0b85039b3c9892b096ce72ab08861f41b5816d",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ent-responsabilitat-9",
+    "ent-responsabilitat-10",
+    "ent-autonomia-9",
+    "ent-autonomia-10",
+    "ent-resolucio-problemes-10",
+    "ent-resolucio-problemes-11",
+    "ent-resolucio-problemes-12",
+    "ent-orientacio-servei-9",
+    "ent-orientacio-servei-10",
+    "ent-adaptabilitat-9"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00003/tanda-01.json",
+   "prompt_sha256": "2414a069a8a5f630ebcc56a36500f108a5ed4c8b23479ccc0f8542844d71bf32",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-responsabilitat-9": "9fdc9a31349b1eba4e0f28ba722d72c70eec8899ffd8a460ddc09258ce513fc7",
+    "ent-responsabilitat-10": "2d52aacc2ecdef5980df6bf294d809e705ed0656a54c5959081f2c19e955e9c1",
+    "ent-autonomia-9": "c45b771bef86e16cdb8fbba4a7a75ba2b12b4160e18afb623bbf93b222072a3a",
+    "ent-autonomia-10": "1fd501b23f25221ed45e795ed43a2f65ff1bcd7c79afd10a22f3da787c4efe71",
+    "ent-resolucio-problemes-10": "8f17fce5fc9be30ea3c40cce0939eeceab122c701ca4900679f596b7dc6cf144",
+    "ent-resolucio-problemes-11": "693e4838aa42cc0e01e51941eeedb1c7b2cf2748fabdd2b1b6a7a28a695efd5d",
+    "ent-resolucio-problemes-12": "abd744acf81926fb8fb7d07c707ba3118ce79d79a6c4f19d1f6d74d6b006ce41",
+    "ent-orientacio-servei-9": "e3988beb6c6ca45e00561b9c4c851fa07cd8475b824e52d05cb4e29fdb7e7ab0",
+    "ent-orientacio-servei-10": "b17b245bf3deca5f4088e676d11fdf3e830d12113334e24ddcf698776ae79cc3",
+    "ent-adaptabilitat-9": "e3837b55a1cb3517f9917cfbc71c38c28de7284e8961a01d380a8c0a269b0fbf"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-responsabilitat-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación plausible de trabajo (cierre de gimnasio) sin procedimientos policiales. Pregunta situacional abierta con tensión real entre seguridad y presión del compañero, con varias respuestas válidas. Indicadores (valorar riesgo, acción concreta, dejar constancia, gestionar el desacuerdo), errores frecuentes y repregunta son coherentes con la pregunta. Encaja con Responsabilitat i qualitat. No hay afirmaciones oficiales ni diagnóstico. No es duplicado: ent-responsabilitat-5 y -7 tratan de material incompleto, no de un riesgo de seguridad.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-10",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Situación realista (revista de una asociación) y pregunta abierta con un dilema genuino entre calidad y plazo. Es relevante para Responsabilitat y Autogestió. El problema está en el indicador 4, 'Assumeix la seva part en la situació', que presupone que el candidato es culpable del apuro y orienta hacia un tipo concreto de respuesta, por lo que no es un indicador neutro. La pregunta es además algo redundante respecto a la situación. No es duplicado de ningún parecido. Sin afirmaciones oficiales ni diagnóstico. Se pide revisión del indicador 4.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre empezar una actividad sin formación y aprender por cuenta propia. Es abierta, muy personal y admite muchas respuestas buenas. Los indicadores (situación concreta, recursos, cómo comprobaba su trabajo, reflexión) son razonables y no dictan una respuesta. Los errores y la repregunta encajan. La situación es genérica y no menciona la imprenta del contexto, pero no hay contradicción. Es relevante para Autonomia i iniciativa. Sin afirmaciones oficiales ni diagnóstico. No es duplicado: ent-autonomia-4 trata de un imprevisto no previsto en las instrucciones y -1 y -7 de iniciativa de mejora.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autonomia-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre decidir entre resolver algo solo o consultarlo. Es abierta y no hay una única respuesta correcta. Los indicadores (qué estaba en juego, criterios, límites de la responsabilidad, aprendizaje) son pertinentes y no dictan decisión. Los errores y la repregunta son coherentes. Combina bien Autonomia y Responsabilitat. No es duplicado de ent-autonomia-2 (decisión sin poder consultar a nadie) ni de ent-autonomia-4 (imprevisto no recogido en las instrucciones): aquí el eje es el criterio para decidir si consultar o no. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación plausible y concreta (torneo escolar que pierde la mitad de las pistas) con restricciones claras y sin contenido policial. Pregunta situacional abierta con varias soluciones válidas (horarios, otras sedes, formatos). Los indicadores (analizar límites, comparar alternativas, comunicar a los afectados, comprobar viabilidad) son razonables y no dictan una solución. Los errores y la repregunta son coherentes. Es relevante para Resolució de problemes. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de ningún parecido, que son conductuales o de otros escenarios.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre elegir entre soluciones imperfectas. Es abierta y admite respuestas buenas muy distintas. Los indicadores (opciones consideradas, comparación de pros y contras, información u opiniones buscadas, resultado) son razonables y no dictan una respuesta. Los errores y la repregunta sobre los inconvenientes de la opción elegida encajan. Es relevante para Resolució de problemes. No es duplicado: ent-resolucio-problemes-1 va de analizar causas y -4 de una primera solución que falla. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-resolucio-problemes-12",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre detectar un problema antes de que ocurra, con contexto plausible (montaje de un campamento de escoltas). Es abierta, personal y admite muchos ejemplos. Los indicadores (señal detectada, valoración del riesgo, acciones, reflexión sobre qué habría pasado) son razonables. El error 'explicar un problema ya producido' es pertinente. Es relevante para Resolució de problemes y Autonomia (anticipación e iniciativa). La repregunta y un indicador suponen que había otras personas implicadas, pero es un matiz menor. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de ningún parecido.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre una necesidad que no se pudo resolver al momento y su seguimiento, en una tienda de informática de barrio. Es abierta y personal. Los indicadores (necesidad, información a la persona, seguimiento hasta el cierre, resultado para la persona atendida) son razonables y no dictan una respuesta. Los errores y la repregunta sobre que la persona no se sintiera olvidada son coherentes. Combina bien Orientació de servei y Responsabilitat. No es duplicado de ent-orientacio-servei-1 (ayuda más allá de lo pedido) ni de -4 (denegar una petición). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-orientacio-servei-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre detectar que alguien necesita ayuda sin pedirla, en un voluntariado en un comedor social (contexto plausible). Es abierta y personal. Los indicadores (señales, aproximación respetuosa, ayuda ofrecida o derivación, reacción de la persona) son razonables y no dictan una respuesta. Los errores y la repregunta sobre los límites de la intervención son coherentes. Es relevante para Orientació de servei a les persones. No es duplicado de ent-orientacio-servei-1 (ayudar con una necesidad ya planteada que va más allá de lo pedido): aquí el eje es la detección proactiva. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-9",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta conductual abierta sobre dejar la propia manera de hacer algo por otra, con contexto plausible (campaña de recogida de fruta) y relevante para Adaptabilitat. Pero la situación ('encara que d'entrada no ens convenci'), el indicador 2 ('com es va sentir amb el canvi') y el error 'amagar els dubtes o resistències inicials' presuponen que el candidato tuvo resistencia o dudas. Esto orienta la respuesta hacia un patrón concreto y penaliza a quien se adaptó sin dudas, y el indicador sobre emociones roza un juicio personal. Se pide neutralizar esa presunción. No es duplicado de ent-adaptabilitat-1 (cambio importante no elegido) ni de -2 y -7 (aprender algo nuevo). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a73643dabc5478c27.jsonl",
+    "respuesta_sha256": "6e9aec7d65ed50c569748a844dc7c5025e58a0c3ef06681e70a59fce84c1ca77"
+   },
+   "registrada_el": "2026-10-05T22:35:42",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T22:35:42",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a73643dabc5478c27.jsonl",
+      "respuesta_sha256": "6e9aec7d65ed50c569748a844dc7c5025e58a0c3ef06681e70a59fce84c1ca77"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-responsabilitat-9\",\"verdict\":\"VALID\",\"reason\":\"Situación plausible de trabajo (cierre de gimnasio) sin procedimientos policiales. Pregunta situacional abierta con tensión real entre seguridad y presión del compañero, con varias respuestas válidas. Indicadores (valorar riesgo, acción concreta, dejar constancia, gestionar el desacuerdo), errores frecuentes y repregunta son coherentes con la pregunta. Encaja con Responsabilitat i qualitat. No hay afirmaciones oficiales ni diagnóstico. No es duplicado: ent-responsabilitat-5 y -7 tratan de material incompleto, no de un riesgo de seguridad.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-10\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Situación realista (revista de una asociación) y pregunta abierta con un dilema genuino entre calidad y plazo. Es relevante para Responsabilitat y Autogestió. El problema está en el indicador 4, 'Assumeix la seva part en la situació', que presupone que el candidato es culpable del apuro y orienta hacia un tipo concreto de respuesta, por lo que no es un indicador neutro. La pregunta es además algo redundante respecto a la situación. No es duplicado de ningún parecido. Sin afirmaciones oficiales ni diagnóstico. Se pide revisión del indicador 4.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-9\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre empezar una actividad sin formación y aprender por cuenta propia. Es abierta, muy personal y admite muchas respuestas buenas. Los indicadores (situación concreta, recursos, cómo comprobaba su trabajo, reflexión) son razonables y no dictan una respuesta. Los errores y la repregunta encajan. La situación es genérica y no menciona la imprenta del contexto, pero no hay contradicción. Es relevante para Autonomia i iniciativa. Sin afirmaciones oficiales ni diagnóstico. No es duplicado: ent-autonomia-4 trata de un imprevisto no previsto en las instrucciones y -1 y -7 de iniciativa de mejora.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autonomia-10\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre decidir entre resolver algo solo o consultarlo. Es abierta y no hay una única respuesta correcta. Los indicadores (qué estaba en juego, criterios, límites de la responsabilidad, aprendizaje) son pertinentes y no dictan decisión. Los errores y la repregunta son coherentes. Combina bien Autonomia y Responsabilitat. No es duplicado de ent-autonomia-2 (decisión sin poder consultar a nadie) ni de ent-autonomia-4 (imprevisto no recogido en las instrucciones): aquí el eje es el criterio para decidir si consultar o no. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-10\",\"verdict\":\"VALID\",\"reason\":\"Situación plausible y concreta (torneo escolar que pierde la mitad de las pistas) con restricciones claras y sin contenido policial. Pregunta situacional abierta con varias soluciones válidas (horarios, otras sedes, formatos). Los indicadores (analizar límites, comparar alternativas, comunicar a los afectados, comprobar viabilidad) son razonables y no dictan una solución. Los errores y la repregunta son coherentes. Es relevante para Resolució de problemes. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de ningún parecido, que son conductuales o de otros escenarios.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-11\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre elegir entre soluciones imperfectas. Es abierta y admite respuestas buenas muy distintas. Los indicadores (opciones consideradas, comparación de pros y contras, información u opiniones buscadas, resultado) son razonables y no dictan una respuesta. Los errores y la repregunta sobre los inconvenientes de la opción elegida encajan. Es relevante para Resolució de problemes. No es duplicado: ent-resolucio-problemes-1 va de analizar causas y -4 de una primera solución que falla. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-resolucio-problemes-12\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre detectar un problema antes de que ocurra, con contexto plausible (montaje de un campamento de escoltas). Es abierta, personal y admite muchos ejemplos. Los indicadores (señal detectada, valoración del riesgo, acciones, reflexión sobre qué habría pasado) son razonables. El error 'explicar un problema ya producido' es pertinente. Es relevante para Resolució de problemes y Autonomia (anticipación e iniciativa). La repregunta y un indicador suponen que había otras personas implicadas, pero es un matiz menor. Sin afirmaciones oficiales ni diagnóstico. No es duplicado de ningún parecido.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-9\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre una necesidad que no se pudo resolver al momento y su seguimiento, en una tienda de informática de barrio. Es abierta y personal. Los indicadores (necesidad, información a la persona, seguimiento hasta el cierre, resultado para la persona atendida) son razonables y no dictan una respuesta. Los errores y la repregunta sobre que la persona no se sintiera olvidada son coherentes. Combina bien Orientació de servei y Responsabilitat. No es duplicado de ent-orientacio-servei-1 (ayuda más allá de lo pedido) ni de -4 (denegar una petición). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-orientacio-servei-10\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre detectar que alguien necesita ayuda sin pedirla, en un voluntariado en un comedor social (contexto plausible). Es abierta y personal. Los indicadores (señales, aproximación respetuosa, ayuda ofrecida o derivación, reacción de la persona) son razonables y no dictan una respuesta. Los errores y la repregunta sobre los límites de la intervención son coherentes. Es relevante para Orientació de servei a les persones. No es duplicado de ent-orientacio-servei-1 (ayudar con una necesidad ya planteada que va más allá de lo pedido): aquí el eje es la detección proactiva. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-9\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta conductual abierta sobre dejar la propia manera de hacer algo por otra, con contexto plausible (campaña de recogida de fruta) y relevante para Adaptabilitat. Pero la situación ('encara que d'entrada no ens convenci'), el indicador 2 ('com es va sentir amb el canvi') y el error 'amagar els dubtes o resistències inicials' presuponen que el candidato tuvo resistencia o dudas. Esto orienta la respuesta hacia un patrón concreto y penaliza a quien se adaptó sin dudas, y el indicador sobre emociones roza un juicio personal. Se pide neutralizar esa presunción. No es duplicado de ent-adaptabilitat-1 (cambio importante no elegido) ni de -2 y -7 (aprender algo nuevo). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "ent-adaptabilitat-10",
+    "ent-autocontrol-9",
+    "ent-autocontrol-10",
+    "ent-autogestio-10",
+    "ent-autogestio-11",
+    "ent-autogestio-12",
+    "ent-habilitats-socials-10",
+    "ent-habilitats-socials-11",
+    "ent-habilitats-socials-12",
+    "ent-responsabilitat-11"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00003/tanda-02.json",
+   "prompt_sha256": "7fee7b8aae9914921a26de4b4cce9c12fafd49671f8b8b136bf3f770ed189b99",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-adaptabilitat-10": "1dcfabab49ba12f42d0476839a86992e73ab465847e9640bb08775b489bd5988",
+    "ent-autocontrol-9": "aa05efe63981dfbc82ee83fde9cdd5dd4bc8c4d05f91ae769a5f3d3d9b9c46d8",
+    "ent-autocontrol-10": "2cb582608eaa67ecfaaa089dfd6238cd09bbca87646801a07aa4f700ae995523",
+    "ent-autogestio-10": "57f937fa80711c549c665e866b316463ea599548b104a60bf66f58e36c24aba3",
+    "ent-autogestio-11": "9e135c9f1ee4f7fac2b73b2683c18cc36245362ad997424a5f0c30fefbb07107",
+    "ent-autogestio-12": "9826ec305515ba774ec6d86c11c7ab54b8c50463d2e324aa2009c83805d41f0a",
+    "ent-habilitats-socials-10": "0538e2abeeb473f23a662271defc21bc56ca8e5b0f6d4f3b6d0d8ce17428bc75",
+    "ent-habilitats-socials-11": "72d98769e92476d9ca426c5f44850fd4c0f183441aa22938a52d0c8c5c6a2c0f",
+    "ent-habilitats-socials-12": "9f5e68fa5a093ed0070c67cfcd261561687164c1f46fc54269dc067aa1cc27df",
+    "ent-responsabilitat-11": "a9c603da64e6d1f88d1b787aecce5b9ad6835d83b2f56f057267f43fd3c370d9"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-adaptabilitat-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre treballar amb algú d'estil molt diferent. El català és clar i hi ha coherència entre pregunta, indicadors (diferències, dificultats, acords, aprenentatge), errors i repregunta. El context de jardineria és plausible i no hi ha procediments policials. La pregunta és oberta i es pot respondre bé de maneres diferents. Permet mostrar adaptabilitat i cooperació. No hi ha afirmacions oficials ni diagnòstics. Cap parecido pregunta el mateix: adaptabilitat-1 a -9 tracten de canvis, aprenentatge nou, rols o costums, no de l'estil d'una altra persona.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre gestionar la frustració quan alguna cosa surt malament en un moment important. Els indicadors (moment, emoció, recuperació de la concentració, efecte en el resultat) i la repregunta encaixen. La competició d'atletisme és plausible. És oberta i admet respostes bones diferents. Encaixa amb autocontrol i resistència a la pressió. No hi ha afirmacions oficials ni diagnòstics. No duplica els parecidos: autocontrol-1 parla de mantenir la calma en una situació tensa, un enfocament diferent. Els indicadors no dicten una única resposta.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autocontrol-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre una ocasió en què va perdre la paciència i què en va aprendre. Els indicadors (desencadenant, reacció sense minimitzar, reparació, aprenentatge) i els errors (culpar els altres, no explicar l'aprenentatge) són coherents. La cafeteria amb molta afluència és plausible. Admet respostes molt diverses i permet mostrar autocontrol i autogestió. No etiqueta la personalitat ni la salut mental. Cap parecido és el mateix: autocontrol-1 i -8 tracten de mantenir la calma o la decisió, no de reconèixer una pèrdua de control. No hi ha afirmacions oficials.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre haver assumit més compromisos dels que es podien atendre en un voluntariat juvenil. Els indicadors (detecció, priorització, comunicació, mesura preventiva) són raonables i coherents amb la repregunta. L'escenari és plausible. És oberta i es pot respondre bé de maneres diferents. Permet mostrar autogestió. El parecido autogestio-3 (compaginar obligacions) demana organitzar el temps, no adonar-se de la sobrecàrrega i rectificar, així que no és duplicat. No hi ha afirmacions oficials ni diagnòstics. L'indicador de comunicar-ho a les persones afectades és raonable i no obliga a una sola resposta.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre haver demanat feedback sobre la pròpia feina i què se'n va fer. La situació, els indicadors (per què, a qui, com es va plantejar, què es va aplicar, efecte) i l'error de confondre-ho amb una crítica rebuda són coherents. La llibreria és plausible. És oberta i permet autogestió i habilitats comunicatives. No és duplicat: autogestio-2 i -8 parlen de rebre una crítica assenyalada per altri, mentre aquí és el candidat qui la demana. No hi ha afirmacions oficials ni diagnòstics.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-autogestio-12",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre un hàbit propi que es va decidir canviar. Els indicadors (hàbit i motiu, estratègies, dificultats i recaigudes, estat actual) són coherents amb la repregunta sobre els dies difícils. Els estudis a distància són un context plausible. És oberta, no trivial i admet molts hàbits i vies. Permet mostrar autogestió i desenvolupament personal. No hi ha afirmacions oficials ni diagnòstics. Cap parecido és equivalent: autogestio-4 i -9 parlen d'un objectiu exigent, no d'un hàbit canviat.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre integrar-se en un grup on no coneixia ningú. La colla castellera és un context plausible i comunitari. Els indicadors (relacions inicials, accions concretes, observació de dinàmiques, dificultat) i els errors són coherents amb la repregunta. És oberta i es pot respondre bé de maneres diferents. Permet mostrar habilitats socials i adaptabilitat. Cap parecido pregunta el mateix: habilitats-socials-1 a -12 tracten de parlar en públic, mediar, convèncer, negociar o malentesos. No hi ha afirmacions oficials ni diagnòstics.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre un missatge malinterpretat, com es va detectar i com es va aclarir. El context d'una penya de festa major i els xats de grup és molt plausible. Els indicadors (intenció vs. recepció, detecció, aclariment i canal, canvi posterior) i la repregunta de reescriure el missatge encaixen. És oberta i no dicta una resposta única. Mostra habilitats comunicatives. Cap parecido és el mateix: habilitats-socials-7 tracta d'explicar a diverses persones, i no de reparar un malentès. No hi ha afirmacions oficials ni diagnòstics.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-12",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La pregunta conductual sobre negociar amb algú que volia una cosa diferent és clara, realista (mercat de segona mà) i relevant per a habilitats socials. No és duplicat: habilitats-socials-4 i -9 tracten de convèncer un grup, no de negociar. Tanmateix, la situació i els indicadors presuposen un únic model de negociació. La situació diu 'intentant que totes dues parts quedin satisfetes', l'indicador demana valorar 'el resultat per a totes dues parts' i l'error penalitza considerar èxit guanyar la pròpia posició. Això orienta cap a una resposta concreta, i una negociació pot ser bona sense ser guanya-guanya. Per això indicadores_pertinentes es marca fals i cal revisar la redacció. No hi ha afirmacions oficials ni diagnòstics.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre una ocasió en què algú va confiar una cosa important i com es va respondre a aquesta confiança. La cura dels fills dels veïns és un context familiar i comunitari plausible. Els indicadors (què es va confiar, accions concretes, imprevists, resultat) i la repregunta sobre dificultats són coherents. L'error de triar una situació sense responsabilitat real és raonable. És oberta i es pot respondre bé de maneres diferents. Permet mostrar responsabilitat. Els parecidos tracten d'errors, esforç extra, normes o escenaris situacionals, no de la confiança rebuda. No hi ha afirmacions oficials ni diagnòstics.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a97ea24c3f9f5c119.jsonl",
+    "respuesta_sha256": "87d64eeebf7486c02b9d1962036c114d3db2a6caf0f7b887cb02baede8f0343d"
+   },
+   "registrada_el": "2026-10-05T22:35:30",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T22:35:30",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a97ea24c3f9f5c119.jsonl",
+      "respuesta_sha256": "87d64eeebf7486c02b9d1962036c114d3db2a6caf0f7b887cb02baede8f0343d"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-adaptabilitat-10\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre treballar amb algú d'estil molt diferent. El català és clar i hi ha coherència entre pregunta, indicadors (diferències, dificultats, acords, aprenentatge), errors i repregunta. El context de jardineria és plausible i no hi ha procediments policials. La pregunta és oberta i es pot respondre bé de maneres diferents. Permet mostrar adaptabilitat i cooperació. No hi ha afirmacions oficials ni diagnòstics. Cap parecido pregunta el mateix: adaptabilitat-1 a -9 tracten de canvis, aprenentatge nou, rols o costums, no de l'estil d'una altra persona.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-9\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre gestionar la frustració quan alguna cosa surt malament en un moment important. Els indicadors (moment, emoció, recuperació de la concentració, efecte en el resultat) i la repregunta encaixen. La competició d'atletisme és plausible. És oberta i admet respostes bones diferents. Encaixa amb autocontrol i resistència a la pressió. No hi ha afirmacions oficials ni diagnòstics. No duplica els parecidos: autocontrol-1 parla de mantenir la calma en una situació tensa, un enfocament diferent. Els indicadors no dicten una única resposta.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autocontrol-10\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre una ocasió en què va perdre la paciència i què en va aprendre. Els indicadors (desencadenant, reacció sense minimitzar, reparació, aprenentatge) i els errors (culpar els altres, no explicar l'aprenentatge) són coherents. La cafeteria amb molta afluència és plausible. Admet respostes molt diverses i permet mostrar autocontrol i autogestió. No etiqueta la personalitat ni la salut mental. Cap parecido és el mateix: autocontrol-1 i -8 tracten de mantenir la calma o la decisió, no de reconèixer una pèrdua de control. No hi ha afirmacions oficials.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-10\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre haver assumit més compromisos dels que es podien atendre en un voluntariat juvenil. Els indicadors (detecció, priorització, comunicació, mesura preventiva) són raonables i coherents amb la repregunta. L'escenari és plausible. És oberta i es pot respondre bé de maneres diferents. Permet mostrar autogestió. El parecido autogestio-3 (compaginar obligacions) demana organitzar el temps, no adonar-se de la sobrecàrrega i rectificar, així que no és duplicat. No hi ha afirmacions oficials ni diagnòstics. L'indicador de comunicar-ho a les persones afectades és raonable i no obliga a una sola resposta.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-11\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre haver demanat feedback sobre la pròpia feina i què se'n va fer. La situació, els indicadors (per què, a qui, com es va plantejar, què es va aplicar, efecte) i l'error de confondre-ho amb una crítica rebuda són coherents. La llibreria és plausible. És oberta i permet autogestió i habilitats comunicatives. No és duplicat: autogestio-2 i -8 parlen de rebre una crítica assenyalada per altri, mentre aquí és el candidat qui la demana. No hi ha afirmacions oficials ni diagnòstics.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-autogestio-12\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre un hàbit propi que es va decidir canviar. Els indicadors (hàbit i motiu, estratègies, dificultats i recaigudes, estat actual) són coherents amb la repregunta sobre els dies difícils. Els estudis a distància són un context plausible. És oberta, no trivial i admet molts hàbits i vies. Permet mostrar autogestió i desenvolupament personal. No hi ha afirmacions oficials ni diagnòstics. Cap parecido és equivalent: autogestio-4 i -9 parlen d'un objectiu exigent, no d'un hàbit canviat.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-10\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre integrar-se en un grup on no coneixia ningú. La colla castellera és un context plausible i comunitari. Els indicadors (relacions inicials, accions concretes, observació de dinàmiques, dificultat) i els errors són coherents amb la repregunta. És oberta i es pot respondre bé de maneres diferents. Permet mostrar habilitats socials i adaptabilitat. Cap parecido pregunta el mateix: habilitats-socials-1 a -12 tracten de parlar en públic, mediar, convèncer, negociar o malentesos. No hi ha afirmacions oficials ni diagnòstics.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-11\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre un missatge malinterpretat, com es va detectar i com es va aclarir. El context d'una penya de festa major i els xats de grup és molt plausible. Els indicadors (intenció vs. recepció, detecció, aclariment i canal, canvi posterior) i la repregunta de reescriure el missatge encaixen. És oberta i no dicta una resposta única. Mostra habilitats comunicatives. Cap parecido és el mateix: habilitats-socials-7 tracta d'explicar a diverses persones, i no de reparar un malentès. No hi ha afirmacions oficials ni diagnòstics.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-12\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La pregunta conductual sobre negociar amb algú que volia una cosa diferent és clara, realista (mercat de segona mà) i relevant per a habilitats socials. No és duplicat: habilitats-socials-4 i -9 tracten de convèncer un grup, no de negociar. Tanmateix, la situació i els indicadors presuposen un únic model de negociació. La situació diu 'intentant que totes dues parts quedin satisfetes', l'indicador demana valorar 'el resultat per a totes dues parts' i l'error penalitza considerar èxit guanyar la pròpia posició. Això orienta cap a una resposta concreta, i una negociació pot ser bona sense ser guanya-guanya. Per això indicadores_pertinentes es marca fals i cal revisar la redacció. No hi ha afirmacions oficials ni diagnòstics.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-11\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre una ocasió en què algú va confiar una cosa important i com es va respondre a aquesta confiança. La cura dels fills dels veïns és un context familiar i comunitari plausible. Els indicadors (què es va confiar, accions concretes, imprevists, resultat) i la repregunta sobre dificultats són coherents. L'error de triar una situació sense responsabilitat real és raonable. És oberta i es pot respondre bé de maneres diferents. Permet mostrar responsabilitat. Els parecidos tracten d'errors, esforç extra, normes o escenaris situacionals, no de la confiança rebuda. No hi ha afirmacions oficials ni diagnòstics.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "ent-responsabilitat-12",
+    "ent-motivacio-7",
+    "ent-motivacio-8",
+    "ent-motivacio-9",
+    "ent-cooperacio-7"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00003/tanda-03.json",
+   "prompt_sha256": "0e85989a777bd07987923da2774cffa405575186df59f264a69cf2d052cb42a0",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-responsabilitat-12": "2c137f28f2eefc21b62f09af65329539031d030098ef6a3f0e8ab41fab5512a3",
+    "ent-motivacio-7": "816d950559f60e8eae52f39bf2792d92fde96243b1de465ddf0df0ffcf547090",
+    "ent-motivacio-8": "57f5f009ae26a3cd919ff776a2fb40fef8c44c1bca2d68fc04f09a7c8ca7c9d1",
+    "ent-motivacio-9": "36920fcd1b3cda65c194e1b71079a7b788d601a16a750716c7c774dbb0f9c5dc",
+    "ent-cooperacio-7": "717026908459ba8dfccbc479a6641d0fde9afdd1acfabb52fbf1402efb11725b"
+   },
+   "veredictos": [
+    {
+     "item_id": "ent-responsabilitat-12",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre el traspàs d'una responsabilitat, ambientada en una tresoreria d'estudiants (context plausible, sense procediments policials). Pregunta, indicadors (estat de la feina, documentació, comprovar que s'ha entès, valoració), errors i repregunta són coherents entre ells. Admet respostes bones de maneres diferents. Els indicadors són signes raonables d'una resposta ben explicada i no es presenten com a criteris oficials. Encaixa amb responsabilitat i continuïtat de la feina, i amb cooperació en el relleu a una altra persona. No hi ha cap afirmació oficial ni diagnòstic. No és duplicat: responsabilitat-11 va de la confiança rebuda, responsabilitat-1 d'un error, i responsabilitat-5 i -7 són situacionals sobre material.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-7",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre identificació amb un grup (club d'handbol, context realista). Els indicadors (paper, valors compartits, acció concreta, què li va aportar) són raonables i no dicten una resposta. La repregunta sobre normes difícils d'acceptar lliga amb la situació, que esmenta objectius i normes. Mesura bé la motivació i la identificació amb l'organització. No hi ha afirmacions oficials ni etiquetes de personalitat. No és duplicat: motivacio-8 pregunta per la feina més motivadora i motivacio-3 per una activitat de servei comunitari, que són enfocaments diferents.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-8",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre la feina o activitat més motivadora, amb context de feines d'estiu, plausible. Els indicadors (descripció, aspectes motivadors, comparació amb altres experiències, relació amb allò que busca) són coherents i no dicten una resposta. Els errors (motius genèrics, no comparar) encaixen amb la pregunta. La repregunta sobre els moments durs és acceptable. Permet mostrar la motivació. Cap afirmació oficial ni diagnòstic. No és duplicat de cap parecido: motivacio-7 va d'identificació amb un grup, motivacio-9 d'expectatives incomplertes i motivacio-3 d'una activitat de servei. Per a la repregunta es podria matisar l'enllaç amb la pregunta principal, però no és un defecte greu.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-9",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La situació (pràctiques en una empresa d'esdeveniments) és realista i la pregunta és oberta. Hi ha incoherència: l'últim indicador, 'Reflexiona sobre com s'informa ara abans d'iniciar un projecte', no respon a la pregunta (com va afectar la motivació). Introdueix un comportament concret que no es demana i que s'acosta a motivacio-2, sobre informar-se de la feina. És un indicador arbitrari i una mica prescriptiu. A més, la competència secundària d'adaptabilitat només es tocaria si el candidat explica què va fer després, i la pregunta no ho demana explícitament; només ho cobreixen un error freqüent i la repregunta. No és duplicat de cap parecido. Cal revisar i reformular l'indicador i potser la pregunta perquè inclogui l'adaptació.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-cooperacio-7",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre dependència i coordinació entre equips, ambientada en el muntatge d'escenaris per a concerts, plausible i sense procediments policials. Indicadors (dependència, informació i terminis compartits, resolució d'un desajust, valoració del conjunt) raonables i no dicten una resposta. Els errors (centrar-se només en la seva tasca, culpar l'altre equip) i la repregunta sobre l'aprenentatge són coherents. Encaixa amb cooperació i treball en equip. No hi ha cap afirmació oficial ni diagnòstic. No és duplicat: cooperacio-1 va d'un objectiu comú, cooperacio-2 d'un desacord i cooperacio-6 d'un enfrontament entre companys. El focus en dependència entre equips és diferent.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-ab954cd4154dd23b0.jsonl",
+    "respuesta_sha256": "7e78deace5bc763c9d64c54384fffb53b126d277e9470873282f32b5d9d88af6"
+   },
+   "registrada_el": "2026-10-05T22:36:17",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+   "intentos": [
+    {
+     "t": "2026-10-05T22:36:17",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-ab954cd4154dd23b0.jsonl",
+      "respuesta_sha256": "7e78deace5bc763c9d64c54384fffb53b126d277e9470873282f32b5d9d88af6"
+     },
+     "respuesta": "[{\"item_id\":\"ent-responsabilitat-12\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre el traspàs d'una responsabilitat, ambientada en una tresoreria d'estudiants (context plausible, sense procediments policials). Pregunta, indicadors (estat de la feina, documentació, comprovar que s'ha entès, valoració), errors i repregunta són coherents entre ells. Admet respostes bones de maneres diferents. Els indicadors són signes raonables d'una resposta ben explicada i no es presenten com a criteris oficials. Encaixa amb responsabilitat i continuïtat de la feina, i amb cooperació en el relleu a una altra persona. No hi ha cap afirmació oficial ni diagnòstic. No és duplicat: responsabilitat-11 va de la confiança rebuda, responsabilitat-1 d'un error, i responsabilitat-5 i -7 són situacionals sobre material.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},{\"item_id\":\"ent-motivacio-7\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre identificació amb un grup (club d'handbol, context realista). Els indicadors (paper, valors compartits, acció concreta, què li va aportar) són raonables i no dicten una resposta. La repregunta sobre normes difícils d'acceptar lliga amb la situació, que esmenta objectius i normes. Mesura bé la motivació i la identificació amb l'organització. No hi ha afirmacions oficials ni etiquetes de personalitat. No és duplicat: motivacio-8 pregunta per la feina més motivadora i motivacio-3 per una activitat de servei comunitari, que són enfocaments diferents.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},{\"item_id\":\"ent-motivacio-8\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre la feina o activitat més motivadora, amb context de feines d'estiu, plausible. Els indicadors (descripció, aspectes motivadors, comparació amb altres experiències, relació amb allò que busca) són coherents i no dicten una resposta. Els errors (motius genèrics, no comparar) encaixen amb la pregunta. La repregunta sobre els moments durs és acceptable. Permet mostrar la motivació. Cap afirmació oficial ni diagnòstic. No és duplicat de cap parecido: motivacio-7 va d'identificació amb un grup, motivacio-9 d'expectatives incomplertes i motivacio-3 d'una activitat de servei. Per a la repregunta es podria matisar l'enllaç amb la pregunta principal, però no és un defecte greu.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},{\"item_id\":\"ent-motivacio-9\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La situació (pràctiques en una empresa d'esdeveniments) és realista i la pregunta és oberta. Hi ha incoherència: l'últim indicador, 'Reflexiona sobre com s'informa ara abans d'iniciar un projecte', no respon a la pregunta (com va afectar la motivació). Introdueix un comportament concret que no es demana i que s'acosta a motivacio-2, sobre informar-se de la feina. És un indicador arbitrari i una mica prescriptiu. A més, la competència secundària d'adaptabilitat només es tocaria si el candidat explica què va fer després, i la pregunta no ho demana explícitament; només ho cobreixen un error freqüent i la repregunta. No és duplicat de cap parecido. Cal revisar i reformular l'indicador i potser la pregunta perquè inclogui l'adaptació.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},{\"item_id\":\"ent-cooperacio-7\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre dependència i coordinació entre equips, ambientada en el muntatge d'escenaris per a concerts, plausible i sense procediments policials. Indicadors (dependència, informació i terminis compartits, resolució d'un desajust, valoració del conjunt) raonables i no dicten una resposta. Els errors (centrar-se només en la seva tasca, culpar l'altre equip) i la repregunta sobre l'aprenentatge són coherents. Encaixa amb cooperació i treball en equip. No hi ha cap afirmació oficial ni diagnòstic. No és duplicat: cooperacio-1 va d'un objectiu comú, cooperacio-2 d'un desacord i cooperacio-6 d'un enfrontament entre companys. El focus en dependència entre equips és diferent.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

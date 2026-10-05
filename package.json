@@ -14,7 +14,9 @@
     "test:sql": "TL_PG=\"${TL_PG:--h /tmp -p 5499 -U postgres}\" python3 -W ignore -m unittest tests.test_sql",
     "test": "npm run lint && npm run validar && npm run test:py && npm run build && npm run test:js",
     "crecimiento": "python3 -m crecimiento.orquestador",
-    "fabrica": "python3 -m fabrica.motor"
+    "fabrica": "python3 -m fabrica.motor",
+    "cobertura360": "python3 -m fabrica.cobertura360 informe mossos-esquadra",
+    "siguientes-tandas": "python3 -m fabrica.cobertura360 siguientes mossos-esquadra --n 5"
   },
   "engines": {
     "node": ">=20"
