@@ -320,6 +320,21 @@ class LoteRetenido(unittest.TestCase):
                 self.assertNotEqual(q.get("lote"), "S00022", f)
                 self.assertNotIn(q.get("q"), textos, f)
 
+    def test_todos_los_lotes_retenidos_sin_publicar(self):
+        e = json.load(open(os.path.join(R, "fabrica", "estado", "estado.json"), encoding="utf-8"))
+        publicados = [x["id"] for x in e["lotes"]]
+        bancos = [q for f in glob.glob(os.path.join(R, "datos", "preguntas-*.json")) + glob.glob(os.path.join(R, "datos", "candidatas", "*.json"))
+                  for q in json.load(open(f, encoding="utf-8"))]
+        for r in e["lotes_retenidos"]:
+            d = json.load(open(os.path.join(R, r["evidencia"]), encoding="utf-8"))
+            self.assertIn(d["estado"], ("RETENIDO", "RETENIDO_DEFINITIVO"))
+            self.assertTrue(d["sin_evidencia_propia"], r["id"])
+            self.assertNotIn(r["id"], publicados)
+            vetadas = {(x["q"], x["cita"]) for x in d["sin_evidencia_propia"]}  # las preguntas sin evidencia propia no se publican nunca
+            for q in bancos:
+                self.assertNotEqual(q.get("lote"), r["id"])
+                self.assertNotIn((q.get("q"), q.get("cita")), vetadas, r["id"])
+
     def test_s00037_retenido_por_evidencia_sin_publicar(self):
         d = json.load(open(os.path.join(R, "fabrica", "estado", "retenidos", "S00037", "DECISION.json"), encoding="utf-8"))
         self.assertEqual(d["estado"], "RETENIDO")

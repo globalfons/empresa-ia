@@ -980,14 +980,38 @@
     "veredictos": "91889a9076ec7aba2f77d5ceabca8d43b8ce21b5779e2e29ae4751dcf51dc50e",
     "prompt_juez": "60bc7b51da37f9d4727011274537c0fd3588c9a234ab913499c9e5000ebd331c"
    }
+  },
+  {
+   "id": "S00039",
+   "fecha": "2026-10-06T23:23:33",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 18,
+   "generadas": 50,
+   "VALID": 44,
+   "REVIEW_REQUIRED": 6,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "70bfbf20dab93cc04cc680eaae18288f9aa72803caa07c822b0affcba0bfb168",
+    "revision": "aac16f013558e9cf1ec0f102b45c6c7b31c8ff39dd0196cbfd4b62bc818ff0c7",
+    "veredictos": "5b656ffcd3585fcc81f0e397d4f08bef5714a12f478ef1516113848a5adec990",
+    "prompt_juez": "85df766fecd3d281a10106114b5ebd096df9f4b66831eddee3c7224bb9775dac"
+   }
   }
  ],
- "pausa": {
-  "estado": "GENERATION_PAUSED",
-  "motivo": "Parada automática de la fase 1.000 VALID: problema de evidencia en S00037 (50/50 VALID; ALL_VALID_SIN_EVIDENCIA en 4 razones). Lote retenido sin publicar ni rejuzgar. Reanudar con --reanudar tras decisión humana.",
-  "lote": "S00037",
-  "fecha": "2026-10-06"
- },
+ "pausa": null,
  "omitidos": {
   "lo-4-2015|24": 2,
   "guia-mossos|C.2.2": 2,
@@ -1042,6 +1066,13 @@
    "lote": "S00025",
    "fecha": "2026-10-06",
    "levantada": "2026-10-06"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "Parada automática de la fase 1.000 VALID: problema de evidencia en S00037 (50/50 VALID; ALL_VALID_SIN_EVIDENCIA en 4 razones). Lote retenido sin publicar ni rejuzgar. Reanudar con --reanudar tras decisión humana.",
+   "lote": "S00037",
+   "fecha": "2026-10-06",
+   "levantada": "2026-10-06"
   }
  ],
  "lotes_retenidos": [
@@ -1058,6 +1089,13 @@
    "fecha": "2026-10-06",
    "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
    "evidencia": "fabrica/estado/retenidos/S00037/DECISION.json"
+  },
+  {
+   "id": "S00038",
+   "estado": "RETENIDO",
+   "fecha": "2026-10-06",
+   "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+   "evidencia": "fabrica/estado/retenidos/S00038/DECISION.json"
   }
  ]
 }

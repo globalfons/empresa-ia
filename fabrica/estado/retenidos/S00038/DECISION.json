@@ -1,0 +1,125 @@
+{
+ "lote": "S00038",
+ "estado": "RETENIDO",
+ "fecha": "2026-10-06",
+ "decision": "Retenido automáticamente: 50/50 VALID y la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó 2 razones sin evidencia individual. Campaña masiva: el lote se aísla y la fábrica continúa con el siguiente. No se publica, no se rejuzga.",
+ "bloqueo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+ "judge_policy_version": "juez-sesion-v4",
+ "veredictos_juez": {
+  "0.0": "VALID",
+  "1.0": "VALID",
+  "1.1": "VALID",
+  "1.2": "VALID",
+  "2.0": "VALID",
+  "2.1": "VALID",
+  "2.2": "VALID",
+  "3.0": "VALID",
+  "3.1": "VALID",
+  "3.2": "VALID",
+  "4.0": "VALID",
+  "4.1": "VALID",
+  "4.2": "VALID",
+  "5.0": "VALID",
+  "5.1": "VALID",
+  "5.2": "VALID",
+  "6.0": "VALID",
+  "6.1": "VALID",
+  "6.2": "VALID",
+  "7.0": "VALID",
+  "7.1": "VALID",
+  "7.2": "VALID",
+  "8.0": "VALID",
+  "8.1": "VALID",
+  "8.2": "VALID",
+  "9.0": "VALID",
+  "9.1": "VALID",
+  "9.2": "VALID",
+  "10.0": "VALID",
+  "10.1": "VALID",
+  "10.2": "VALID",
+  "11.0": "VALID",
+  "11.1": "VALID",
+  "11.2": "VALID",
+  "12.0": "VALID",
+  "12.1": "VALID",
+  "12.2": "VALID",
+  "13.0": "VALID",
+  "13.1": "VALID",
+  "13.2": "VALID",
+  "14.0": "VALID",
+  "14.1": "VALID",
+  "14.2": "VALID",
+  "15.0": "VALID",
+  "15.1": "VALID",
+  "15.2": "VALID",
+  "16.0": "VALID",
+  "16.1": "VALID",
+  "16.2": "VALID",
+  "17.0": "VALID"
+ },
+ "intentos_por_tanda": [
+  {
+   "tanda": "01",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "02",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "03",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "04",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "05",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  }
+ ],
+ "segunda_comprobacion": {
+  "ids": 50,
+  "veredictos": 50,
+  "razones_no_especificas": [
+   "1.2",
+   "2.1"
+  ],
+  "tandas_sin_evidencia": [],
+  "ok": false
+ },
+ "sin_evidencia_propia": [
+  {
+   "question_id": "1.2",
+   "q": "Segons la Guia d'estudi, en la guerra social que es va produir al camp català durant la crisi baixmedieval, què pretenien els pagesos?",
+   "cita": "Al camp es produí una veritable guerra social entre pagesos i senyors. Els primers, aprofitant el despoblament causat per les pèrdues demogràfiques, volien alliberar-se de moltes càrregues feudals",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que los campesinos, aprovechando el despoblamiento, querían liberarse de muchas cargas feudales (opción a). La b es lo que querían los señores y la c lo que querían la Busca y la Biga en la ciudad. La d no aparece en el texto. La cita contiene la frase decisiva. La pregunta es clara y los distractores son plausibles."
+  },
+  {
+   "question_id": "2.1",
+   "q": "Segons la Guia d'estudi, quin d'aquests drets NO s'esmenta entre aquells dels quals els estrangers poden ser titulars d'acord amb les condicions previstes a la llei?",
+   "cita": "Per exemple, els reconeix el dret de reunió i manifestació i el dret d’associació. Val a dir que el TC en aquella Sentència va determinar que la definició constitucional del dret de reunió, realitzada per la jurisprudència i la seva vinculació amb la dignitat de la persona, feien necessari reconèixer un contingut mínim d’aquell dret a la persona independentment de quina fos la situació en què es trobés – resident legalment o no a l’Estat espanyol. També es reconeix el dret a la vaga i el dret a l’educació. Amb tot, el Tribunal Constitucional admet que el legislador pugui condicionar l’exercici d’aquests drets. Drets dels quals només són titulars els nacionals. Seria el cas del dret de sufragi i d’accés a funcions i càrrecs públics",
+   "verdict_juez": "VALID",
+   "reason_juez": "Pregunta negativa. El texto cita reunión y manifestación, asociación y huelga (más educación) como derechos de los que pueden ser titulares los extranjeros según las condiciones de la ley. El acceso a funciones y cargos públicos se atribuye solo a los nacionales, así que la respuesta d es correcta. La cita incluye los tres derechos de las opciones a, b y c y también la frase que reserva a los nacionales el acceso a funciones públicas, por lo que es suficiente. No hay otra opción también válida."
+  }
+ ],
+ "huellas": {
+  "candidatas.json": "4f4ea0e6c73fc76fc2d498cdf4975403d7470d1bebc6ab81efdb80cd24501019",
+  "revision.json": "b0f6cd59d90b55b4f954c09a9737f54d1af32a8dcb7f225a455d65c72e95fcbd",
+  "politica.json": "2b8e3ca41dfcef3714c441fa45bdc6a44a562a9ff8e11ccc75669f2d67108cba",
+  "evaluacion.json": "a2f3f2cb669a96c0e1a425f15ce035832865ce6e733ad786c70908a6860e8e90",
+  "items.json": "6885d9017a124ad4ee661d409d0e47628d4a5db12d1330f12688e59220c84daf"
+ }
+}
