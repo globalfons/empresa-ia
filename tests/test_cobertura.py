@@ -81,9 +81,16 @@ if __name__ == "__main__":
 class PlanControlado(unittest.TestCase):
     def test_plan_desde_cobertura_usa_exactamente_sus_necesidades(self):
         from fabrica import sesion as S, fuente as F
-        sl = S.slots_desde_cobertura("mossos-esquadra", ["C.5", "C.3", "C.2"], 15, F.Fuentes())
-        self.assertEqual(sum(s["k"] for s in sl), 15)
-        self.assertEqual({s["n"].rsplit(".", 1)[0] for s in sl} <= {"C.5", "C.3", "C.2"}, True)
+        # los tres temas con más necesidades abiertas (el banco crece: un tema concreto puede quedar cubierto)
+        pend = collections.Counter()
+        for n in res()["necesidades"]:
+            pend[n["tema"]] += n["n"]
+        temas = [t for t, _ in pend.most_common(3)]
+        self.assertTrue(temas, "sin necesidades abiertas")
+        pedir = min(15, sum(pend[t] for t in temas))
+        sl = S.slots_desde_cobertura("mossos-esquadra", temas, pedir, F.Fuentes())
+        self.assertEqual(sum(s["k"] for s in sl), pedir)
+        self.assertEqual({s["n"].rsplit(".", 1)[0] for s in sl} <= set(temas), True)
         nec = {(n["tema"], n["tipo"], n["dificultad"]) for n in res()["necesidades"]}
         for s in sl:
             self.assertEqual(len(s["pedidas"]), s["k"])
@@ -91,4 +98,4 @@ class PlanControlado(unittest.TestCase):
                 self.assertIn((s["n"].rsplit(".", 1)[0], p["tipo"], p["dif"]), nec)
             self.assertNotIn(s["n"].split(".")[0], {"D"}, "nunca temas sin fuente oficial")
         difs = collections.Counter(p["dif"] for s in sl for p in s["pedidas"])
-        self.assertLess(difs[1], 15 * 0.5, f"no se llena con preguntas fáciles: {difs}")
+        self.assertLess(difs[1], pedir * 0.5, f"no se llena con preguntas fáciles: {difs}")
