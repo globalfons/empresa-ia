@@ -39,3 +39,18 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - **Aptitud verbal**: se añaden `anagrama` y `codificacion`, deterministas y verificados por cálculo. Los formatos semánticos van a un banco HUMAN_REVIEW vacío (`catalogo/aptitud/verbal-semantica-mossos-esquadra.json`) que nunca se sirve.
 - **Entrevista**: sin más volumen; los REVIEW_REQUIRED siguen pendientes.
 - **Physical Engine**: no iniciado.
+
+## Actualización 2026-10-06 · cierre de huecos P0 de conocimientos
+- **S00022**: RETENIDO_DEFINITIVO. No se aprueba a mano, no se rejuzga y no se publica. Evidencia y trazabilidad de las dos preguntas sin evidencia propia (1.0 y 4.0) en `fabrica/estado/retenidos/S00022/DECISION.json`.
+- **Lotes ejecutados** (`juez-sesion-v4`, solo B.1/B.5/C.1, sin excedente):
+
+  | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED |
+  |---|---|---|---|---|
+  | S00023 | 17 | 14 | 3 | 0 |
+  | S00024 | 2 | 2 | 0 | 0 |
+  | S00025 | 1 | 1 | 0 | 0 |
+  | **Total** | 20 | **17** | 3 | 0 |
+
+  En REVIEW_REQUIRED: dos por claridad (el juez vio que la forma de las opciones delataba la respuesta) y un caso práctico (revisión humana obligatoria).
+- **Resultado**: B.1 12/12, B.5 10/10, C.1 8/8 (el CoverageEngine propone 9 para C.1; no se generó más porque la autorización fijaba 8). La fábrica vuelve a GENERATION_PAUSED.
+- **Tests**: Deno SKIPPED (no está instalado en el entorno; `supabase/` no se ha modificado).

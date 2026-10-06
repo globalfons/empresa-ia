@@ -6,13 +6,27 @@ Orden: primero lo que corrige fuentes y calidad (P0 de fuentes, recalibración),
 
 Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguientes mossos-esquadra --n 3`.
 
+## Lotes recientes de la fábrica
+
+| lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
+|---|---|---|---|---|---|
+| S00020 | 16 | 16 | 0 | 0 | juez-sesion-v3 |
+| S00021 | 10 | 10 | 0 | 0 | juez-sesion-v4 |
+| S00023 | 17 | 14 | 3 | 0 | juez-sesion-v4 |
+| S00024 | 2 | 2 | 0 | 0 | juez-sesion-v4 |
+| S00025 | 1 | 1 | 0 | 0 | juez-sesion-v4 |
+
+- **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
+- Pausa vigente: Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED), S00024 (2 VALID) y S00025 (1 VALID) = 17 VALID nuevas, el máximo autorizado. B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar.
+
 | área | prioridad | elementos planificados |
 |---|---|---|
 | APTITUDE | P1 | 60 |
 | COMPETENCIES | P1 | 54 |
 | INTERVIEW | P1 | 4 |
-| KNOWLEDGE | P0 | 13 |
-| KNOWLEDGE | P1 | 230 |
+| KNOWLEDGE | P0 | 0 |
+| KNOWLEDGE | P1 | 225 |
+| KNOWLEDGE | P2 | 1 |
 
 ## BATCH MOSSOS-SOURCES-001
 
@@ -26,32 +40,6 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 ## BATCH MOSSOS-KNOWLEDGE-001
 
-- prioridad: P0 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
-- temas: B.1
-- subtemas: B.1.1, B.1.3, B.1.4
-- cantidad: 7
-- dificultad: {"1": 2, "2": 2}
-- tipos: {"literal": 2, "organos": 1, "plazos": 2, "aplicacion": 2}
-- fuente: guia-mossos:B.1.1, guia-mossos:B.1.3, guia-mossos:B.1.4
-- validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
-- judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
-- criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
-
-## BATCH MOSSOS-KNOWLEDGE-002
-
-- prioridad: P0 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
-- temas: B.5
-- subtemas: B.5.1, B.5.2, B.5.3
-- cantidad: 6
-- dificultad: {"1": 2}
-- tipos: {"literal": 2, "organos": 2, "plazos": 2}
-- fuente: guia-mossos:B.5.1, guia-mossos:B.5.2, guia-mossos:B.5.3
-- validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
-- judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
-- criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
-
-## BATCH MOSSOS-KNOWLEDGE-003
-
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.2
 - subtemas: C.2.2, C.2.3, C.2.4, C.2.7
@@ -63,7 +51,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-004
+## BATCH MOSSOS-KNOWLEDGE-002
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.2
@@ -76,7 +64,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-005
+## BATCH MOSSOS-KNOWLEDGE-003
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.2
@@ -90,7 +78,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 - revisión humana obligatoria (tipo de pregunta con revisión obligatoria)
 
-## BATCH MOSSOS-KNOWLEDGE-006
+## BATCH MOSSOS-KNOWLEDGE-004
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.3
@@ -103,7 +91,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-007
+## BATCH MOSSOS-KNOWLEDGE-005
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.3
@@ -117,7 +105,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 - revisión humana obligatoria (tipo de pregunta con revisión obligatoria)
 
-## BATCH MOSSOS-KNOWLEDGE-008
+## BATCH MOSSOS-KNOWLEDGE-006
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.2
@@ -130,7 +118,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-009
+## BATCH MOSSOS-KNOWLEDGE-007
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.2
@@ -143,7 +131,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-010
+## BATCH MOSSOS-KNOWLEDGE-008
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.2
@@ -157,7 +145,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 - revisión humana obligatoria (tipo de pregunta con revisión obligatoria)
 
-## BATCH MOSSOS-KNOWLEDGE-011
+## BATCH MOSSOS-KNOWLEDGE-009
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.1
@@ -170,7 +158,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-012
+## BATCH MOSSOS-KNOWLEDGE-010
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.1
@@ -184,7 +172,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 - revisión humana obligatoria (tipo de pregunta con revisión obligatoria)
 
-## BATCH MOSSOS-KNOWLEDGE-013
+## BATCH MOSSOS-KNOWLEDGE-011
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.1
@@ -197,7 +185,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-014
+## BATCH MOSSOS-KNOWLEDGE-012
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.4
@@ -210,7 +198,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-015
+## BATCH MOSSOS-KNOWLEDGE-013
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.4
@@ -223,7 +211,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-016
+## BATCH MOSSOS-KNOWLEDGE-014
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.4
@@ -236,7 +224,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-017
+## BATCH MOSSOS-KNOWLEDGE-015
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.4
@@ -249,7 +237,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-018
+## BATCH MOSSOS-KNOWLEDGE-016
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.2
@@ -262,7 +250,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-019
+## BATCH MOSSOS-KNOWLEDGE-017
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.2
@@ -275,7 +263,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-020
+## BATCH MOSSOS-KNOWLEDGE-018
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.5
@@ -288,7 +276,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-021
+## BATCH MOSSOS-KNOWLEDGE-019
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.5
@@ -301,7 +289,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-022
+## BATCH MOSSOS-KNOWLEDGE-020
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.4
@@ -314,7 +302,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-023
+## BATCH MOSSOS-KNOWLEDGE-021
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.4
@@ -327,7 +315,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-024
+## BATCH MOSSOS-KNOWLEDGE-022
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.8
@@ -340,7 +328,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-025
+## BATCH MOSSOS-KNOWLEDGE-023
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.8
@@ -353,7 +341,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-026
+## BATCH MOSSOS-KNOWLEDGE-024
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.6
@@ -366,7 +354,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-027
+## BATCH MOSSOS-KNOWLEDGE-025
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.6
@@ -379,7 +367,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-028
+## BATCH MOSSOS-KNOWLEDGE-026
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.7
@@ -392,7 +380,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-029
+## BATCH MOSSOS-KNOWLEDGE-027
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.7
@@ -405,7 +393,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-030
+## BATCH MOSSOS-KNOWLEDGE-028
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.7
@@ -418,7 +406,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-031
+## BATCH MOSSOS-KNOWLEDGE-029
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: B.7
@@ -431,7 +419,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-032
+## BATCH MOSSOS-KNOWLEDGE-030
 
 - prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: A.3
@@ -444,15 +432,15 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
-## BATCH MOSSOS-KNOWLEDGE-033
+## BATCH MOSSOS-KNOWLEDGE-031
 
-- prioridad: P1 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
+- prioridad: P2 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.1
-- subtemas: C.1.2, C.1.IF
-- cantidad: 5
-- dificultad: {"1": 1, "2": 1}
-- tipos: {"literal": 2, "organos": 1, "aplicacion": 1, "competencias": 1}
-- fuente: guia-mossos:C.1.2, guia-mossos:C.1.IF
+- subtemas: C.1.2
+- cantidad: 1
+- dificultad: {"1": 1}
+- tipos: {"literal": 1}
+- fuente: guia-mossos:C.1.2
 - validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana

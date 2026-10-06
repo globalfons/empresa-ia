@@ -1,0 +1,47 @@
+{
+ "lote": "S00022",
+ "estado": "RETENIDO_DEFINITIVO",
+ "fecha": "2026-10-06",
+ "decision": "Autorización humana 2026-10-06: descartar/retener definitivamente. No se aprueba manualmente, no se rejuzga y no se publica ninguna de sus 10 preguntas. Los hechos que cubría no se vuelven a redactar en lotes posteriores (evita un rejuicio encubierto).",
+ "bloqueo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "veredictos_juez": {
+  "0.0": "VALID",
+  "0.1": "VALID",
+  "0.2": "VALID",
+  "1.0": "VALID",
+  "1.1": "VALID",
+  "2.0": "VALID",
+  "2.1": "VALID",
+  "3.0": "VALID",
+  "4.0": "VALID",
+  "5.0": "VALID"
+ },
+ "sin_evidencia_propia": [
+  {
+   "question_id": "1.0",
+   "q": "Segons la Guia d'estudi, un cop investit el president del Govern i designats els membres del Govern, qui els nomena?",
+   "cita": "procedeix a la formació del Govern i a la designació dels seus membres, que seran nomenats pel rei i tindran el càrrec de ministres",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto indica que, tras la investidura, el presidente forma el Gobierno y designa a sus miembros, que son nombrados por el rey. La cita contiene el elemento decisivo (nombrados por el rey). Las demás opciones no son quienes nombran según el texto. Pregunta clara.",
+   "motivo": "razón sin vocabulario compartido con el enunciado, las opciones ni la cita (juez_v2.especifica): sin evidencia individual"
+  },
+  {
+   "question_id": "4.0",
+   "q": "Segons la Guia d'estudi, en quins articles de l'Estatut d'autonomia de Catalunya de 2006 s'estableix la tipologia de les competències de la Generalitat?",
+   "cita": "L’establiment d’una tipologia de les competències en els articles 110 a 112 EAC",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que la tipología de competencias se establece en los artículos 110 a 112 EAC. La cita lo contiene. Los artículos 116 a 173 corresponden a las materias, según el texto, por lo que no son correctos para la tipología. Los otros rangos no aparecen. La parecida mx46-17-9 pregunta cuáles son los tres tipos, un hecho distinto de la ubicación de los artículos.",
+   "motivo": "razón sin vocabulario compartido con el enunciado, las opciones ni la cita (juez_v2.especifica): sin evidencia individual"
+  }
+ ],
+ "huellas": {
+  "candidatas.json": "cedb07e9c22e098140b8f8c9192e291551fdd3dac305298a7f2bd4b732f5205e",
+  "evaluacion.json": "bfd15f864792a2f1496af10a87588a466396858717fbf74ec5095c0c64895ff0",
+  "items.json": "766ca04bfc269c0620b4ee91efbb255b85a9646ff04c5c86cc93324bcc44bd1b",
+  "politica.json": "5c61b4cfffd23ab7c7f388fb027f68abe5f778d147e5dde97954a27ac0bbff89",
+  "revision.json": "2f5c59a510ca77c5dc1f733a192c6a26debf931d917cc41694dd91ae35943311",
+  "tanda-01.prompt.txt": "df56c96a4632dcadd3549c383fed46026509f71ee6e2d70ca0ff33a75cdd77f4"
+ }
+}

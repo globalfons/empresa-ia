@@ -27,8 +27,13 @@ test("el banco premium se genera fuera de la web pública y solo con lo premium 
 });
 
 test("FREE: ningún recurso público (datos ni HTML) contiene una pregunta premium", () => {
-  const ids = new Set(premium.map((q) => q.id)), textos = premium.map((q) => q.q.slice(0, 60));
-  for (const f of todosLosFicheros(OUT).filter((f) => /\.(json|html|js)$/.test(f))) {
+  const ids = new Set(premium.map((q) => q.id));
+  // prefijo de 60 caracteres de cada pregunta premium; si una pregunta pública empieza igual (fórmula común «Segons les idees força
+  // del tema…»), ese prefijo no prueba nada y se comprueba el enunciado completo
+  const ficheros = todosLosFicheros(OUT).filter((f) => /\.(json|html|js)$/.test(f));
+  const pub = new Set(ficheros.filter((f) => f.endsWith(".json")).flatMap((f) => { try { return (JSON.parse(fs.readFileSync(f, "utf8")).qs || []).map((q) => (q.q || "").slice(0, 60)); } catch (e) { return []; } }));
+  const textos = premium.map((q) => (pub.has(q.q.slice(0, 60)) ? q.q : q.q.slice(0, 60)));
+  for (const f of ficheros) {
     const t = fs.readFileSync(f, "utf8");
     if (f.endsWith(".json") && t.includes('"qs"')) for (const q of JSON.parse(t).qs || []) assert.ok(!ids.has(q.id), `${q.id} en ${path.relative(OUT, f)}`);
     for (const x of textos) assert.ok(!t.includes(x), `texto premium en ${path.relative(OUT, f)}`);

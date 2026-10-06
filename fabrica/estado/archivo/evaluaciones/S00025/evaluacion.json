@@ -1,0 +1,70 @@
+{
+ "evaluacion": "S00025",
+ "creada_el": "2026-10-06T00:08:39",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 1,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0"
+   ],
+   "prompt_sha256": "57afc243bbb096d10f5d034cd57eb694dc69ce9f7c3791f2286bd0075afd23f4",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "5b4149615144778c2e91a8262229dbbf31bbda57e198cccc010ed00e8ed89f40"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica expresamente que, excepcionalmente, la proposta reial de candidat a president del Govern i la dissolució automàtica de les Corts han de ser referendats pel president o presidenta del Congrés dels Diputats, lo que respalda la opción 0. La cita reproduce literalmente esa frase y contiene todo lo necesario para elegir la respuesta. Las demás opciones son incorrectas: el presidente en funciones y los ministros competentes refrendan la regla general, no esta excepción, y el presidente del Senado no aparece en el texto como refrendante. La pregunta es clara y exige distinguir la excepción de la regla general, por lo que no es trivial. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a091bc1c2fc35b239.jsonl",
+    "respuesta_sha256": "398a3a88bcfd0221a73f9bf3c57b6621c2fc3e88364e25cf9fd80cd16365402d"
+   },
+   "registrada_el": "2026-10-06T00:09:01",
+   "intentos": [
+    {
+     "t": "2026-10-06T00:09:01",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a091bc1c2fc35b239.jsonl",
+      "respuesta_sha256": "398a3a88bcfd0221a73f9bf3c57b6621c2fc3e88364e25cf9fd80cd16365402d"
+     },
+     "respuesta": "[{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El texto indica expresamente que, excepcionalmente, la proposta reial de candidat a president del Govern i la dissolució automàtica de les Corts han de ser referendats pel president o presidenta del Congrés dels Diputats, lo que respalda la opción 0. La cita reproduce literalmente esa frase y contiene todo lo necesario para elegir la respuesta. Las demás opciones son incorrectas: el presidente en funciones y los ministros competentes refrendan la regla general, no esta excepción, y el presidente del Senado no aparece en el texto como refrendante. La pregunta es clara y exige distinguir la excepción de la regla general, por lo que no es trivial. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

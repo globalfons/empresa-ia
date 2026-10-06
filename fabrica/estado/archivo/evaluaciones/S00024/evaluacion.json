@@ -1,0 +1,86 @@
+{
+ "evaluacion": "S00024",
+ "creada_el": "2026-10-06T00:07:54",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 2,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1"
+   ],
+   "prompt_sha256": "38383fe19ddb3cda39069493ff74801e1f7e70491ab489ba9c8f8d834e8489c6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "c1f4d813103088cceb65a6018ca94ff3c9b917ac7a8bd5abafe72d2ef4e7334c",
+    "0.1": "87cf77deba96186aba445af32dec404566da3e0deb13ad42c68c4e107dd4ea01"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto afirma literalmente que 'La Generalitat té el comandament suprem de la Policia de la Generalitat - Mossos d'Esquadra i la coordinació de l'actuació de les policies locals'; la opción a (0) lo reproduce. La cita contiene ambos elementos (comandament i coordinació) y es suficiente. Las otras opciones invierten los roles, niegan funciones sobre las policías locales o atribuyen el mando al Estado, y el texto las contradice, así que solo una es correcta. La pregunta es clara, sin palabras que delaten la respuesta, y es útil como material de examen. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, en el marco de la legislación estatal sobre seguridad, corresponden a la Generalitat 'les funcions governatives sobre l'exercici dels drets de reunió i manifestació', que es la opción a (0). La cita recoge exactamente esa frase y es suficiente. Las demás opciones (ley orgánica propia, competencia exclusiva del Estado, suspensión general del derecho) no aparecen en el texto y lo contradicen, por lo que la única correcta es la a. La pregunta está bien formulada con un escenario concreto y no tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a51bf89ed58ee2051.jsonl",
+    "respuesta_sha256": "d45b346c64130dc1ee54a48154981ff28f9f2ccdf565b67c09166ecda065524f"
+   },
+   "registrada_el": "2026-10-06T00:08:14",
+   "intentos": [
+    {
+     "t": "2026-10-06T00:08:14",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a51bf89ed58ee2051.jsonl",
+      "respuesta_sha256": "d45b346c64130dc1ee54a48154981ff28f9f2ccdf565b67c09166ecda065524f"
+     },
+     "respuesta": "[{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El texto afirma literalmente que 'La Generalitat té el comandament suprem de la Policia de la Generalitat - Mossos d'Esquadra i la coordinació de l'actuació de les policies locals'; la opción a (0) lo reproduce. La cita contiene ambos elementos (comandament i coordinació) y es suficiente. Las otras opciones invierten los roles, niegan funciones sobre las policías locales o atribuyen el mando al Estado, y el texto las contradice, así que solo una es correcta. La pregunta es clara, sin palabras que delaten la respuesta, y es útil como material de examen. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, en el marco de la legislación estatal sobre seguridad, corresponden a la Generalitat 'les funcions governatives sobre l'exercici dels drets de reunió i manifestació', que es la opción a (0). La cita recoge exactamente esa frase y es suficiente. Las demás opciones (ley orgánica propia, competencia exclusiva del Estado, suspensión general del derecho) no aparecen en el texto y lo contradicen, por lo que la única correcta es la a. La pregunta está bien formulada con un escenario concreto y no tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

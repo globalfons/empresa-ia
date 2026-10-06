@@ -574,13 +574,100 @@
     "veredictos": "ff809faecf06d2f91bf0816048499394a6d198ace74bc621f6ad4983c7874234",
     "prompt_juez": "9368dd6a676b0c97b6dab7f8998a6a74a0e0c3f88f85651920bc7925fd5b6a02"
    }
+  },
+  {
+   "id": "S00023",
+   "fecha": "2026-10-06T00:07:21",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 6,
+   "generadas": 17,
+   "VALID": 14,
+   "REVIEW_REQUIRED": 3,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "212eaa3a66552b7d0b25fa0fe8d0ae4a8f91333c90381894e982f79ec44740d7",
+    "revision": "4a52e1d7c241aedaae7272d318298b0ecc32e9e64aa4294dd93f09767e69f9d7",
+    "veredictos": "a486eefd89756a659796d3b61ffc9c78599f8ffab0977fddbaf7ff0ab323a1e4",
+    "prompt_juez": "13434f5e8d02ac1d4b81d470e2377c599633b58ceba17877882abf5088b718ca"
+   }
+  },
+  {
+   "id": "S00024",
+   "fecha": "2026-10-06T00:08:14",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 1,
+   "generadas": 2,
+   "VALID": 2,
+   "REVIEW_REQUIRED": 0,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "8299e953c5e9f72e2fc2fe115263a5faca096966bdd01bb0e418760f244449a6",
+    "revision": "364c767df8d1f0b254f1565e517898246228e508c4e5cc469d94ec7e3d0a587a",
+    "veredictos": "32e572b4e00ce3c8b2d9babdeb90e611446989c533a2decada807dd340c35305",
+    "prompt_juez": "49d4fe6b11c53028cd2d95b383a6a4988a83e56ec6a5b029b044204740a00aca"
+   }
+  },
+  {
+   "id": "S00025",
+   "fecha": "2026-10-06T00:09:01",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 1,
+   "generadas": 1,
+   "VALID": 1,
+   "REVIEW_REQUIRED": 0,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "93f3ffe7f535f8749b0545d3a278290e2a592bf6d85fe0481b6eff18fd7059ed",
+    "revision": "0eead64c49ef947bc75bc0ac24617e338f76680378ddc2e98a7701b099a82187",
+    "veredictos": "8da15d7a0a2cd67ac557148c31133d8c3e4277b31833e11253c2157661ccf7a5",
+    "prompt_juez": "8d6126bdac9deb42f70dd1d9fd264b67de8beff3e3bdf9bbde938084eda63c5d"
+   }
   }
  ],
  "pausa": {
   "estado": "GENERATION_PAUSED",
-  "motivo": "P0 B.1/B.5/C.1: S00021 publicado (10 VALID). S00022 retenido sin publicar: el juez dio 10/10 VALID pero la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó razones no específicas (1.0, 4.0; razones en castellano sobre preguntas en catalán). No se relaja el guard ni se rejuzga (sin judge shopping): requiere decisión humana. El resto de generación requiere autorización explícita. Reanudar con --reanudar.",
-  "lote": "S00022",
-  "fecha": "2026-10-05"
+  "motivo": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED), S00024 (2 VALID) y S00025 (1 VALID) = 17 VALID nuevas, el máximo autorizado. B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar.",
+  "lote": "S00025",
+  "fecha": "2026-10-06"
  },
  "omitidos": {
   "lo-4-2015|24": 2,
@@ -614,6 +701,29 @@
    "lote": "S00020",
    "fecha": "2026-10-02",
    "levantada": "2026-10-05"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "P0 B.1/B.5/C.1: S00021 publicado (10 VALID). S00022 retenido sin publicar: el juez dio 10/10 VALID pero la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó razones no específicas (1.0, 4.0; razones en castellano sobre preguntas en catalán). No se relaja el guard ni se rejuzga (sin judge shopping): requiere decisión humana. El resto de generación requiere autorización explícita. Reanudar con --reanudar.",
+   "lote": "S00022",
+   "fecha": "2026-10-05",
+   "levantada": "2026-10-06"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED) y S00024 (2 VALID). B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar.",
+   "lote": "S00024",
+   "fecha": "2026-10-06",
+   "levantada": "2026-10-06"
+  }
+ ],
+ "lotes_retenidos": [
+  {
+   "id": "S00022",
+   "estado": "RETENIDO_DEFINITIVO",
+   "fecha": "2026-10-06",
+   "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+   "evidencia": "fabrica/estado/retenidos/S00022/DECISION.json"
   }
  ]
 }

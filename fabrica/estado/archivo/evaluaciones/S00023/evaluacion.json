@@ -1,0 +1,369 @@
+{
+ "evaluacion": "S00023",
+ "creada_el": "2026-10-06T00:06:28",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 17,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "0.3",
+    "0.4",
+    "0.5",
+    "1.0",
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "prompt_sha256": "7e95018baddef6ebf1101764a66cfe4b4b3475652ca07c758485d88fe6be8bdb",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "4703307096adf9cce79a57df466ce8c609997f5c6b8e50a54b3bbcbbfa780046",
+    "0.1": "c8aed4ba343af867ace841fc7aac8b786ea714213946d1a60e286c4f00eef113",
+    "0.2": "04a60c492ec39f8f6b61d1b1be22797a1e01904788276c00e52f6e768bb41d18",
+    "0.3": "ef81d2a3f06f8f75748332f1d981b97fe411f01138326e138da4d9fb45340401",
+    "0.4": "7ce471e541b3e735b4e44303f1babaf027bdca38ac95f9acdd46e5f5c754b693",
+    "0.5": "4c6e2fe09a8f15ee697ed5af9286900e5046392414c58cb12028685c6f3be853",
+    "1.0": "d3a161b5d9a161f3c3199fd7c3d6abe994b65d866a505e40058ebf6c3e2a5d43",
+    "1.1": "2f53b421e245803083de5a7326776d2082d117bc42f1d17b0365078141b38a28",
+    "1.2": "1b3d96e8e39af5f4becf129149637d2cd2c46ce0fd55bdd7301761fc01b7b01a",
+    "1.3": "3ac53981d0261b25fc919a15ee77b5f58269b69cdd71f4b128189314c7ee8e75"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice literalmente que la declaración estatutaria de derechos no afecta el régimen general de los derechos fundamentales del título I de la CE ni las leyes orgánicas que los desarrollan. La cita contiene esa frase completa. Las otras tres opciones (sustituye, rango de ley orgánica, solo lingüísticos/educación) no aparecen en el texto y lo contradicen. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los derechos vinculan a todos los poderes públicos de Cataluña y, en el caso de los derechos lingüísticos que le afectan, también a la Administración del Estado. La cita recoge ambos elementos. Las demás opciones (UE, otras CCAA, ninguna) no tienen apoyo en el texto y la opción 'A cap altra' es contradicha por él. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Respaldada: el texto dice que los derechos de los capítulos I, II y III se configuran básicamente como derechos subjetivos, sin perjuicio de su configuración legal posterior, y la cita lo contiene entero. Única: las otras opciones son falsas según el texto. Problema de claridad: los distractores usan formulaciones absolutas ('sense cap eficàcia jurídica directa', 'exclusivament') mientras la correcta es matizada, lo que delata la respuesta. Se marca clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto sitúa los principios rectores en el capítulo V del título primero del EAC con papel orientador de las políticas públicas. La cita contiene ambos datos. Los capítulos IV (garantía jurisdiccional), I y III (derechos) son distractores plausibles y ninguno es correcto según el texto. Pregunta sobre un dato concreto, útil para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.4",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Respaldada: el texto dice que las garantías de los principios rectores son inicialmente más reducidas, informan la legislación, la práctica judicial y la actuación de los poderes públicos, y son exigibles ante la jurisdicción según las normas que los desarrollan; la cita lo recoge todo. Única: las otras tres son falsas según el texto. Problema de claridad: la correcta es la más larga y matizada y los distractores son extremos ('Idèntiques... exactament', 'Inexistents... mai'), así que la respuesta se adivina por la forma. Se marca clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.5",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, cuando el EAC incorpora derechos ya recogidos por la legislación sectorial catalana (por ejemplo, participación escolar), se les confiere una garantía estatutaria. La cita lo contiene, ejemplo incluido. Los distractores (rango fundamental, amparo, derogación automática) no aparecen en el texto y se contradicen con la idea de que no se altera el régimen del título I. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los miembros del Gobierno gozan de aforamiento y que su responsabilidad penal solo puede ser exigida por el Tribunal Supremo. La cita contiene el elemento decisivo. Las otras opciones (TC, Audiencia Nacional, TSJ Madrid) no aparecen en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que cada miembro responde individualmente por su gestión política ante el presidente del Gobierno, y la cita lo recoge. La pregunta especifica 'de forma individual', por lo que no choca con la responsabilidad solidaria ante el Congreso. Rey, Senado y Tribunal Supremo (este último es para la responsabilidad penal) no son correctas según el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que no gozan de inmunidad ni de inviolabilidad salvo que además sean diputado o senador, y la cita contiene regla y excepción. La opción correcta aplica el caso del ministro que no es diputado ni senador. Las otras tres opciones contradicen el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.3",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los miembros del Gobierno pueden ser cesados en cualquier momento por el rey a propuesta del presidente del Gobierno, y la cita lo contiene. El escenario (cesar a un solo ministro) encaja con esa vía. Las otras opciones (Congreso por mayoría absoluta, Consejo de Ministros, Senado) no aparecen en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-abe8d2c0bce9b6f26.jsonl",
+    "respuesta_sha256": "393d4d15f8735b91915eddca8f82c8aca0860d3b3977cceef37b5112c3226084"
+   },
+   "registrada_el": "2026-10-06T00:07:18",
+   "intentos": [
+    {
+     "t": "2026-10-06T00:07:18",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-abe8d2c0bce9b6f26.jsonl",
+      "respuesta_sha256": "393d4d15f8735b91915eddca8f82c8aca0860d3b3977cceef37b5112c3226084"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice literalmente que la declaración estatutaria de derechos no afecta el régimen general de los derechos fundamentales del título I de la CE ni las leyes orgánicas que los desarrollan. La cita contiene esa frase completa. Las otras tres opciones (sustituye, rango de ley orgánica, solo lingüísticos/educación) no aparecen en el texto y lo contradicen. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los derechos vinculan a todos los poderes públicos de Cataluña y, en el caso de los derechos lingüísticos que le afectan, también a la Administración del Estado. La cita recoge ambos elementos. Las demás opciones (UE, otras CCAA, ninguna) no tienen apoyo en el texto y la opción 'A cap altra' es contradicha por él. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Respaldada: el texto dice que los derechos de los capítulos I, II y III se configuran básicamente como derechos subjetivos, sin perjuicio de su configuración legal posterior, y la cita lo contiene entero. Única: las otras opciones son falsas según el texto. Problema de claridad: los distractores usan formulaciones absolutas ('sense cap eficàcia jurídica directa', 'exclusivament') mientras la correcta es matizada, lo que delata la respuesta. Se marca clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.3\",\"verdict\":\"VALID\",\"reason\":\"El texto sitúa los principios rectores en el capítulo V del título primero del EAC con papel orientador de las políticas públicas. La cita contiene ambos datos. Los capítulos IV (garantía jurisdiccional), I y III (derechos) son distractores plausibles y ninguno es correcto según el texto. Pregunta sobre un dato concreto, útil para examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.4\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Respaldada: el texto dice que las garantías de los principios rectores son inicialmente más reducidas, informan la legislación, la práctica judicial y la actuación de los poderes públicos, y son exigibles ante la jurisdicción según las normas que los desarrollan; la cita lo recoge todo. Única: las otras tres son falsas según el texto. Problema de claridad: la correcta es la más larga y matizada y los distractores son extremos ('Idèntiques... exactament', 'Inexistents... mai'), así que la respuesta se adivina por la forma. Se marca clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.5\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, cuando el EAC incorpora derechos ya recogidos por la legislación sectorial catalana (por ejemplo, participación escolar), se les confiere una garantía estatutaria. La cita lo contiene, ejemplo incluido. Los distractores (rango fundamental, amparo, derogación automática) no aparecen en el texto y se contradicen con la idea de que no se altera el régimen del título I. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los miembros del Gobierno gozan de aforamiento y que su responsabilidad penal solo puede ser exigida por el Tribunal Supremo. La cita contiene el elemento decisivo. Las otras opciones (TC, Audiencia Nacional, TSJ Madrid) no aparecen en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que cada miembro responde individualmente por su gestión política ante el presidente del Gobierno, y la cita lo recoge. La pregunta especifica 'de forma individual', por lo que no choca con la responsabilidad solidaria ante el Congreso. Rey, Senado y Tribunal Supremo (este último es para la responsabilidad penal) no son correctas según el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que no gozan de inmunidad ni de inviolabilidad salvo que además sean diputado o senador, y la cita contiene regla y excepción. La opción correcta aplica el caso del ministro que no es diputado ni senador. Las otras tres opciones contradicen el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.3\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los miembros del Gobierno pueden ser cesados en cualquier momento por el rey a propuesta del presidente del Gobierno, y la cita lo contiene. El escenario (cesar a un solo ministro) encaja con esa vía. Las otras opciones (Congreso por mayoría absoluta, Consejo de Ministros, Senado) no aparecen en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "1.4",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "4.0",
+    "5.0"
+   ],
+   "prompt_sha256": "00720f2d46edd4341f81ed1c98fc69b2826a8c893a57f60febb736339ccfeca9",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "1.4": "825baa9c6cfd4516a8feeef9389028b6c286d1ab163f43397f1d59fb67112daa",
+    "2.0": "23891e4890e33dd6f6766496649a38cb2f252d8fba4eb388245b2aaf26c2db79",
+    "2.1": "5d0506acec8a511d12c9be58a7edabf288059256834318e6bc729bb5f10eec13",
+    "2.2": "4377fab30201fc0fe4185aff8bcdf9ea6a16e5d8c9219f64b6a9c1314ccd527c",
+    "3.0": "6c8d174502be69c945716e0d4a8925b67e6eb350e05ccfa00dc4f2affa081f1a",
+    "4.0": "08ce3d294074eb873d1422b5ceab84051dacca945ca4b0d4a1afb02496c6dfcd",
+    "5.0": "8b33066e8bcb7b25cdc50870ddc06da57470b8fce75a1bf1c4af52935249b1ab"
+   },
+   "veredictos": [
+    {
+     "question_id": "1.4",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text (B.5.2, 2.1) diu que el Govern exerceix la funció executiva (complir i fer complir les lleis) i que se li encomana la potestat reglamentària. La cita conté tots dos elements. Les altres opcions (legislativa, jurisdiccional, aprovar el pressupost) no apareixen com a potestat del Govern en aquest sentit. La pregunta és clara i no és trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu literalment que la protecció de persones i béns i el manteniment de l'ordre públic és una competència «a hores d'ara prou clarificada». La cita ho recull sencer. Les altres opcions (legislació penal i penitenciària, defensa, seguretat de tot l'Estat) no hi apareixen, de manera que només una és correcta. La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera «Joc i espectacles» entre els àmbits d'actuació derivats de la protecció de persones i béns i el manteniment de l'ordre públic, i la cita l'inclou. Defensa nacional, relacions internacionals i administració de justícia no hi surten. No té cap parecida registrada i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text situa la prevenció i extinció d'incendis dins «Protecció civil i emergències», i la cita ho diu explícitament. Cap dels altres àmbits (seguretat privada, trànsit, seguretat ciutadana i delictes) inclou els incendis, així que l'opció és única. La parecida nueva:guia-mossos:C.1.IF:1 pregunta quin àmbit és un dels inclosos (resposta Joc i espectacles), és a dir, un altre fet de la mateixa llista. No és duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "L'article (C.1.2, apartat 2.2) diu que l'autorització de noves modalitats de joc i apostes d'àmbit estatal requereix deliberació a la Comissió Bilateral Generalitat-Estat i informe previ determinant de la Generalitat. La cita conté els dos elements. La junta de seguretat paritària, el Consell de Garanties i el Consell de Ministres a proposta del Senat són distractors que no apareixen com a resposta. La pregunta és clara i ofereix una dada concreta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text (B.5.1, b) diu que la iniciativa legislativa pressupostària correspon al Govern i que l'aprovació es fa per llei singular i anual de les Corts Generals. La cita conté tots dos components (qui té la iniciativa i com s'aprova). Les altres opcions contradiuen el text (reial decret, decret llei, Senat, plurianual). La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text (B.1.4, 4.1.b) diu que les competències compartides atribueixen la potestat legislativa, la reglamentària i la funció executiva en el marc de les bases de l'Estat. La cita ho recull sencer, inclosa la clàusula de les bases que les distingeix. Les exclusives les atribueixen de manera íntegra, sense les bases de l'Estat. Les executives només donen la potestat reglamentària i la funció executiva. Les «delegades» no són una tipologia del text. L'opció és única i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-ac41309a328bd4e72.jsonl",
+    "respuesta_sha256": "53fa3a7cfb41643f33623fb8163248180cea4647e5e40dd8d0a5bb7941282776"
+   },
+   "registrada_el": "2026-10-06T00:07:21",
+   "intentos": [
+    {
+     "t": "2026-10-06T00:07:21",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-ac41309a328bd4e72.jsonl",
+      "respuesta_sha256": "53fa3a7cfb41643f33623fb8163248180cea4647e5e40dd8d0a5bb7941282776"
+     },
+     "respuesta": "[\n{\"question_id\":\"1.4\",\"verdict\":\"VALID\",\"reason\":\"El text (B.5.2, 2.1) diu que el Govern exerceix la funció executiva (complir i fer complir les lleis) i que se li encomana la potestat reglamentària. La cita conté tots dos elements. Les altres opcions (legislativa, jurisdiccional, aprovar el pressupost) no apareixen com a potestat del Govern en aquest sentit. La pregunta és clara i no és trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu literalment que la protecció de persones i béns i el manteniment de l'ordre públic és una competència «a hores d'ara prou clarificada». La cita ho recull sencer. Les altres opcions (legislació penal i penitenciària, defensa, seguretat de tot l'Estat) no hi apareixen, de manera que només una és correcta. La pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El text enumera «Joc i espectacles» entre els àmbits d'actuació derivats de la protecció de persones i béns i el manteniment de l'ordre públic, i la cita l'inclou. Defensa nacional, relacions internacionals i administració de justícia no hi surten. No té cap parecida registrada i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El text situa la prevenció i extinció d'incendis dins «Protecció civil i emergències», i la cita ho diu explícitament. Cap dels altres àmbits (seguretat privada, trànsit, seguretat ciutadana i delictes) inclou els incendis, així que l'opció és única. La parecida nueva:guia-mossos:C.1.IF:1 pregunta quin àmbit és un dels inclosos (resposta Joc i espectacles), és a dir, un altre fet de la mateixa llista. No és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"L'article (C.1.2, apartat 2.2) diu que l'autorització de noves modalitats de joc i apostes d'àmbit estatal requereix deliberació a la Comissió Bilateral Generalitat-Estat i informe previ determinant de la Generalitat. La cita conté els dos elements. La junta de seguretat paritària, el Consell de Garanties i el Consell de Ministres a proposta del Senat són distractors que no apareixen com a resposta. La pregunta és clara i ofereix una dada concreta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El text (B.5.1, b) diu que la iniciativa legislativa pressupostària correspon al Govern i que l'aprovació es fa per llei singular i anual de les Corts Generals. La cita conté tots dos components (qui té la iniciativa i com s'aprova). Les altres opcions contradiuen el text (reial decret, decret llei, Senat, plurianual). La pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El text (B.1.4, 4.1.b) diu que les competències compartides atribueixen la potestat legislativa, la reglamentària i la funció executiva en el marc de les bases de l'Estat. La cita ho recull sencer, inclosa la clàusula de les bases que les distingeix. Les exclusives les atribueixen de manera íntegra, sense les bases de l'Estat. Les executives només donen la potestat reglamentària i la funció executiva. Les «delegades» no són una tipologia del text. L'opció és única i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

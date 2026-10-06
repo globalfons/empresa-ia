@@ -358,6 +358,26 @@ def tandas(oid, k, cob, apt, comp, ent):
 
 
 # ------------------------------------------------------------------ INFORME
+def lotes_fabrica(n=5):
+    """Últimos lotes de sesión cerrados y lotes retenidos (fabrica/estado/estado.json): trazabilidad de lo generado."""
+    e = json.load(open(os.path.join(R, "fabrica", "estado", "estado.json"), encoding="utf-8"))
+    rec = [{k: x.get(k) for k in ("id", "generadas", "VALID", "REVIEW_REQUIRED", "REJECTED", "judge_policy_version")}
+           for x in e.get("lotes", []) if str(x.get("id", "")).startswith("S")][-n:]
+    return {"recientes": rec, "retenidos": e.get("lotes_retenidos", []), "pausa": (e.get("pausa") or {}).get("motivo")}
+
+
+def _md_lotes(a):
+    lf = a.get("lotes_fabrica") or {}
+    L = ["## Lotes recientes de la fábrica", ""]
+    L += _t(["lote", "generadas", "VALID", "REVIEW_REQUIRED", "REJECTED", "política del juez"],
+            [[x["id"], x["generadas"], x["VALID"], x["REVIEW_REQUIRED"], x["REJECTED"], x["judge_policy_version"]] for x in lf.get("recientes", [])])
+    L += [f"- **{x['id']} · {x['estado']}** ({x['fecha']}): {x['motivo']}. No se publica ni se rejuzga; evidencia en `{x['evidencia']}`."
+          for x in lf.get("retenidos", [])]
+    if lf.get("pausa"):
+        L += [f"- Pausa vigente: {lf['pausa']}"]
+    return L + [""]
+
+
 def auditar(oid="mossos-esquadra", muestreo=True):
     perfil = PF.construir(oid)
     cob = CV.analizar(oid, perfil=perfil)
@@ -372,7 +392,7 @@ def auditar(oid="mossos-esquadra", muestreo=True):
     return {"oposicion": oid, "call_id": perfil["motor360"].get("call_id"), "generado": perfil.get("generado"), "estado_fabrica": estado_fabrica(),
             "parametros": dict(PARAMETROS, tanda_inicial=CV.cfg()["lote"]["tamano_inicial"]),
             "knowledge": k, "aptitude": apt, "competencies": comp, "interview": ent, "language": idi, "physical": fis,
-            "simulations": sim, "objetivos": obj, "tandas": tandas(oid, k, cob, apt, comp, ent)}
+            "simulations": sim, "objetivos": obj, "tandas": tandas(oid, k, cob, apt, comp, ent), "lotes_fabrica": lotes_fabrica()}
 
 
 def _t(cab, filas):
@@ -389,6 +409,7 @@ def md_cobertura(a):
          "**TESTLEY_GENERATED/TESTLEY_TRAINING** = contenido propio · **REVIEW_REQUIRED** = no se sirve · **DEPRECATED/OUTDATED** = retirado. "
          "Los objetivos usan parámetros de entrenamiento de TestLey (abajo), nunca requisitos oficiales.", "",
          "## Resumen", ""]
+    L = L[:-2] + _md_lotes(a) + L[-2:]
     L += _t(["área", "contenido servido", "en revisión", "retirado", "oficial"], [
         ["Conocimientos", f"{tt('TESTLEY_VALID')} TestLey", tt("REVIEW_REQUIRED"), tt("DEPRECATED"),
          f"{tt('OFFICIAL_EXAM_VALID') + k['oficial_sin_apartado'].get('VALID', 0)} OFFICIAL_EXAM VALID ({k['examenes_oficiales']} exámenes)"],
@@ -485,6 +506,7 @@ def md_plan(a):
          "Orden: primero lo que corrige fuentes y calidad (P0 de fuentes, recalibración), después la cobertura P0/P1 y por último la ampliación. "
          f"Tamaño de tanda de conocimientos = `lote.tamano_inicial` de la fábrica ({a['parametros']['tanda_inicial']}) tras una pausa.", "",
          "Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguientes mossos-esquadra --n 3`.", ""]
+    L += _md_lotes(a)
     tot = collections.Counter()
     for t in a["tandas"]:
         tot[(t["area"], t["prioridad"])] += t["cantidad"] if isinstance(t["cantidad"], int) else 0

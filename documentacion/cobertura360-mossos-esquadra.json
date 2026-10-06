@@ -1,7 +1,7 @@
 {
  "oposicion": "mossos-esquadra",
  "call_id": "46/26",
- "generado": "2026-10-05",
+ "generado": "2026-10-06",
  "estado_fabrica": "GENERATION_PAUSED",
  "parametros": {
   "simulacros_disjuntos": 10,
@@ -57,7 +57,7 @@
     "objetivo_minimo_apartados": 20,
     "faltan": 21,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.018,
+    "cuota_testley": 0.016,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -103,7 +103,7 @@
     "objetivo_minimo_apartados": 18,
     "faltan": 16,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.018,
+    "cuota_testley": 0.016,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -145,7 +145,7 @@
     "objetivo_minimo_apartados": 12,
     "faltan": 9,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.028,
+    "cuota_testley": 0.024,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -188,7 +188,7 @@
     "objetivo_minimo_apartados": 10,
     "faltan": 16,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.028,
+    "cuota_testley": 0.024,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -231,7 +231,7 @@
     "objetivo_minimo_apartados": 14,
     "faltan": 12,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.028,
+    "cuota_testley": 0.024,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -275,7 +275,7 @@
     "objetivo_minimo_apartados": 12,
     "faltan": 10,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.018,
+    "cuota_testley": 0.016,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -320,7 +320,7 @@
     "objetivo_minimo_apartados": 14,
     "faltan": 12,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.018,
+    "cuota_testley": 0.016,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -332,27 +332,23 @@
     "apartados_con_fuente": 6,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.1.3",
-     "B.1.4",
-     "B.1.5",
      "B.1.IF"
     ],
     "sobreexplotados": [],
     "capacidad": 53,
     "peso_examenes": 0.0233,
-    "TESTLEY_VALID": 5,
-    "REVIEW_REQUIRED": 1,
+    "TESTLEY_VALID": 12,
+    "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 4,
     "OFFICIAL_EXAM_REVIEW": 2,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 4,
-     "2": 1,
+     "1": 8,
+     "2": 4,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "aplicacion",
      "negativa",
      "dificil",
      "caso_practico"
@@ -360,11 +356,11 @@
     "objetivo": 12,
     "objetivo_por_simulacros": 7,
     "objetivo_minimo_apartados": 12,
-    "faltan": 7,
-    "concentracion_excesiva": false,
-    "cuota_testley": 0.046,
-    "prioridad": "P0",
-    "motivo": "menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema"
+    "faltan": 0,
+    "concentracion_excesiva": true,
+    "cuota_testley": 0.095,
+    "prioridad": "P3",
+    "motivo": "objetivo cubierto"
    },
    {
     "tema": "B.2",
@@ -406,7 +402,7 @@
     "objetivo_minimo_apartados": 12,
     "faltan": 22,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.018,
+    "cuota_testley": 0.016,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -467,7 +463,7 @@
     "objetivo_minimo_apartados": 64,
     "faltan": 29,
     "concentracion_excesiva": true,
-    "cuota_testley": 0.321,
+    "cuota_testley": 0.278,
     "prioridad": "P2",
     "motivo": "por debajo del objetivo"
    },
@@ -512,7 +508,7 @@
     "objetivo_minimo_apartados": 18,
     "faltan": 15,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.028,
+    "cuota_testley": 0.024,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -524,27 +520,24 @@
     "apartados_con_fuente": 5,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.5.2",
-     "B.5.3",
      "B.5.4",
      "B.5.IF"
     ],
     "sobreexplotados": [],
     "capacidad": 45,
     "peso_examenes": 0.0195,
-    "TESTLEY_VALID": 4,
-    "REVIEW_REQUIRED": 3,
+    "TESTLEY_VALID": 10,
+    "REVIEW_REQUIRED": 4,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 5,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 3,
-     "2": 1,
+     "1": 6,
+     "2": 4,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "conceptual",
      "negativa",
      "dificil",
      "caso_practico"
@@ -552,11 +545,11 @@
     "objetivo": 10,
     "objetivo_por_simulacros": 6,
     "objetivo_minimo_apartados": 10,
-    "faltan": 6,
-    "concentracion_excesiva": false,
-    "cuota_testley": 0.037,
-    "prioridad": "P0",
-    "motivo": "menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema"
+    "faltan": 0,
+    "concentracion_excesiva": true,
+    "cuota_testley": 0.079,
+    "prioridad": "P3",
+    "motivo": "objetivo cubierto"
    },
    {
     "tema": "B.6",
@@ -597,7 +590,7 @@
     "objetivo_minimo_apartados": 10,
     "faltan": 10,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.028,
+    "cuota_testley": 0.024,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -642,7 +635,7 @@
     "objetivo_minimo_apartados": 16,
     "faltan": 14,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.018,
+    "cuota_testley": 0.016,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -685,7 +678,7 @@
     "objetivo_minimo_apartados": 8,
     "faltan": 12,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.028,
+    "cuota_testley": 0.024,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -696,25 +689,22 @@
     "apartados": 3,
     "apartados_con_fuente": 3,
     "apartados_bloqueados": [],
-    "apartados_sin_preguntas": [
-     "C.1.IF"
-    ],
+    "apartados_sin_preguntas": [],
     "sobreexplotados": [],
     "capacidad": 18,
     "peso_examenes": 0.0272,
-    "TESTLEY_VALID": 4,
+    "TESTLEY_VALID": 8,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 1,
     "OFFICIAL_EXAM_VALID": 6,
     "OFFICIAL_EXAM_REVIEW": 1,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 2,
-     "2": 2,
+     "1": 4,
+     "2": 4,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "conceptual",
      "negativa",
      "dificil",
      "caso_practico"
@@ -722,11 +712,11 @@
     "objetivo": 9,
     "objetivo_por_simulacros": 9,
     "objetivo_minimo_apartados": 6,
-    "faltan": 5,
+    "faltan": 1,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.037,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.063,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "C.2",
@@ -767,7 +757,7 @@
     "objetivo_minimo_apartados": 16,
     "faltan": 37,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.037,
+    "cuota_testley": 0.032,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -807,7 +797,7 @@
     "objetivo_minimo_apartados": 12,
     "faltan": 18,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.11,
+    "cuota_testley": 0.095,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -853,7 +843,7 @@
     "objetivo_minimo_apartados": 10,
     "faltan": 12,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.055,
+    "cuota_testley": 0.048,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -891,7 +881,7 @@
     "objetivo_minimo_apartados": 8,
     "faltan": 0,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.083,
+    "cuota_testley": 0.071,
     "prioridad": "P3",
     "motivo": "objetivo cubierto"
    },
@@ -1744,7 +1734,7 @@
     "A.4"
    ],
    "simulacros_disjuntos_testley_mas_oficiales": 6,
-   "simulacros_disjuntos_sin_reparto": 12,
+   "simulacros_disjuntos_sin_reparto": 13,
    "examenes_oficiales_completos": 3,
    "examenes_oficiales": 9,
    "objetivo": 10
@@ -1853,14 +1843,14 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "B.1 L'Estatut d'autonomia de Catalunya (EA",
-   "actual": 6,
-   "valid": 5,
-   "review": 1,
+   "actual": 15,
+   "valid": 12,
+   "review": 3,
    "oficial": 4,
    "objetivo": 12,
-   "faltan": 7,
-   "prioridad": "P0",
-   "motivo": "menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "objetivo cubierto"
   },
   {
    "area": "KNOWLEDGE",
@@ -1901,14 +1891,14 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "B.5 Les institucions polítiques de l'Estat",
-   "actual": 7,
-   "valid": 4,
-   "review": 3,
+   "actual": 14,
+   "valid": 10,
+   "review": 4,
    "oficial": 5,
    "objetivo": 10,
-   "faltan": 6,
-   "prioridad": "P0",
-   "motivo": "menos de 10 preguntas servibles (TestLey + oficiales): no hay ni un test del tema"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "objetivo cubierto"
   },
   {
    "area": "KNOWLEDGE",
@@ -1949,14 +1939,14 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "C.1 Les competències de la Generalitat en ",
-   "actual": 5,
-   "valid": 4,
+   "actual": 9,
+   "valid": 8,
    "review": 0,
    "oficial": 6,
    "objetivo": 9,
-   "faltan": 5,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
+   "faltan": 1,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
   },
   {
    "area": "KNOWLEDGE",
@@ -2376,76 +2366,6 @@
   {
    "id": "MOSSOS-KNOWLEDGE-001",
    "area": "KNOWLEDGE",
-   "prioridad": "P0",
-   "tipo": "generacion",
-   "temas": [
-    "B.1"
-   ],
-   "subtemas": [
-    "B.1.1",
-    "B.1.3",
-    "B.1.4"
-   ],
-   "cantidad": 7,
-   "dificultad": {
-    "1": 2,
-    "2": 2
-   },
-   "tipos": {
-    "literal": 2,
-    "organos": 1,
-    "plazos": 2,
-    "aplicacion": 2
-   },
-   "fuente": [
-    "guia-mossos:B.1.1",
-    "guia-mossos:B.1.3",
-    "guia-mossos:B.1.4"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-002",
-   "area": "KNOWLEDGE",
-   "prioridad": "P0",
-   "tipo": "generacion",
-   "temas": [
-    "B.5"
-   ],
-   "subtemas": [
-    "B.5.1",
-    "B.5.2",
-    "B.5.3"
-   ],
-   "cantidad": 6,
-   "dificultad": {
-    "1": 2
-   },
-   "tipos": {
-    "literal": 2,
-    "organos": 2,
-    "plazos": 2
-   },
-   "fuente": [
-    "guia-mossos:B.5.1",
-    "guia-mossos:B.5.2",
-    "guia-mossos:B.5.3"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-003",
-   "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
    "temas": [
@@ -2482,7 +2402,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-004",
+   "id": "MOSSOS-KNOWLEDGE-002",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2522,7 +2442,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-005",
+   "id": "MOSSOS-KNOWLEDGE-003",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2555,7 +2475,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-006",
+   "id": "MOSSOS-KNOWLEDGE-004",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2595,7 +2515,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-007",
+   "id": "MOSSOS-KNOWLEDGE-005",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2631,7 +2551,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-008",
+   "id": "MOSSOS-KNOWLEDGE-006",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2669,7 +2589,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-009",
+   "id": "MOSSOS-KNOWLEDGE-007",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2705,7 +2625,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-010",
+   "id": "MOSSOS-KNOWLEDGE-008",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2737,7 +2657,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-011",
+   "id": "MOSSOS-KNOWLEDGE-009",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2777,7 +2697,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-012",
+   "id": "MOSSOS-KNOWLEDGE-010",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2816,7 +2736,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-013",
+   "id": "MOSSOS-KNOWLEDGE-011",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2848,7 +2768,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-014",
+   "id": "MOSSOS-KNOWLEDGE-012",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2887,7 +2807,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-015",
+   "id": "MOSSOS-KNOWLEDGE-013",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2921,7 +2841,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-016",
+   "id": "MOSSOS-KNOWLEDGE-014",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2961,7 +2881,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-017",
+   "id": "MOSSOS-KNOWLEDGE-015",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2992,7 +2912,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-018",
+   "id": "MOSSOS-KNOWLEDGE-016",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3036,7 +2956,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-019",
+   "id": "MOSSOS-KNOWLEDGE-017",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3072,7 +2992,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-020",
+   "id": "MOSSOS-KNOWLEDGE-018",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3113,7 +3033,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-021",
+   "id": "MOSSOS-KNOWLEDGE-019",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3147,7 +3067,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-022",
+   "id": "MOSSOS-KNOWLEDGE-020",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3187,7 +3107,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-023",
+   "id": "MOSSOS-KNOWLEDGE-021",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3223,7 +3143,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-024",
+   "id": "MOSSOS-KNOWLEDGE-022",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3261,7 +3181,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-025",
+   "id": "MOSSOS-KNOWLEDGE-023",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3291,7 +3211,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-026",
+   "id": "MOSSOS-KNOWLEDGE-024",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3328,7 +3248,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-027",
+   "id": "MOSSOS-KNOWLEDGE-025",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3368,7 +3288,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-028",
+   "id": "MOSSOS-KNOWLEDGE-026",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3408,7 +3328,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-029",
+   "id": "MOSSOS-KNOWLEDGE-027",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3440,7 +3360,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-030",
+   "id": "MOSSOS-KNOWLEDGE-028",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3483,7 +3403,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-031",
+   "id": "MOSSOS-KNOWLEDGE-029",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3518,7 +3438,7 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-032",
+   "id": "MOSSOS-KNOWLEDGE-030",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3555,31 +3475,25 @@
    "bloqueo": "GENERATION_PAUSED"
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-033",
+   "id": "MOSSOS-KNOWLEDGE-031",
    "area": "KNOWLEDGE",
-   "prioridad": "P1",
+   "prioridad": "P2",
    "tipo": "generacion",
    "temas": [
     "C.1"
    ],
    "subtemas": [
-    "C.1.2",
-    "C.1.IF"
+    "C.1.2"
    ],
-   "cantidad": 5,
+   "cantidad": 1,
    "dificultad": {
-    "1": 1,
-    "2": 1
+    "1": 1
    },
    "tipos": {
-    "literal": 2,
-    "organos": 1,
-    "aplicacion": 1,
-    "competencias": 1
+    "literal": 1
    },
    "fuente": [
-    "guia-mossos:C.1.2",
-    "guia-mossos:C.1.IF"
+    "guia-mossos:C.1.2"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
@@ -3656,5 +3570,59 @@
    "ejecutable": false,
    "bloqueo": "requiere revisor humano de catalán"
   }
- ]
+ ],
+ "lotes_fabrica": {
+  "recientes": [
+   {
+    "id": "S00020",
+    "generadas": 16,
+    "VALID": 16,
+    "REVIEW_REQUIRED": 0,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v3"
+   },
+   {
+    "id": "S00021",
+    "generadas": 10,
+    "VALID": 10,
+    "REVIEW_REQUIRED": 0,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v4"
+   },
+   {
+    "id": "S00023",
+    "generadas": 17,
+    "VALID": 14,
+    "REVIEW_REQUIRED": 3,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v4"
+   },
+   {
+    "id": "S00024",
+    "generadas": 2,
+    "VALID": 2,
+    "REVIEW_REQUIRED": 0,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v4"
+   },
+   {
+    "id": "S00025",
+    "generadas": 1,
+    "VALID": 1,
+    "REVIEW_REQUIRED": 0,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v4"
+   }
+  ],
+  "retenidos": [
+   {
+    "id": "S00022",
+    "estado": "RETENIDO_DEFINITIVO",
+    "fecha": "2026-10-06",
+    "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+    "evidencia": "fabrica/estado/retenidos/S00022/DECISION.json"
+   }
+  ],
+  "pausa": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED), S00024 (2 VALID) y S00025 (1 VALID) = 17 VALID nuevas, el máximo autorizado. B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar."
+ }
 }
