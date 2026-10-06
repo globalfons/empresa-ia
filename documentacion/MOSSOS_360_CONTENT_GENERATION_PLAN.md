@@ -10,11 +10,11 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
 |---|---|---|---|---|---|
-| S00027 | 49 | 44 | 5 | 0 | juez-sesion-v4 |
-| S00028 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
 | S00029 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
 | S00030 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
 | S00031 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
+| S00032 | 50 | 44 | 5 | 1 | juez-sesion-v4 |
+| S00033 | 46 | 39 | 5 | 2 | juez-sesion-v4 |
 
 - **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
 
@@ -24,8 +24,8 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 | COMPETENCIES | P1 | 54 |
 | INTERVIEW | P1 | 4 |
 | KNOWLEDGE | P0 | 0 |
-| KNOWLEDGE | P1 | 15 |
-| KNOWLEDGE | P2 | 16 |
+| KNOWLEDGE | P1 | 11 |
+| KNOWLEDGE | P2 | 5 |
 
 ## BATCH MOSSOS-SOURCES-001
 
@@ -43,36 +43,36 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - temas: C.2
 - subtemas: C.2.2, C.2.3, C.2.4, C.2.7
 - cantidad: 10
-- dificultad: {"1": 2, "2": 1}
-- tipos: {"literal": 2, "organos": 2, "plazos": 2, "aplicacion": 1, "conceptual": 1, "negativa": 1, "procedimiento": 1}
+- dificultad: {"1": 2, "2": 1, "3": 1}
+- tipos: {"literal": 2, "organos": 1, "plazos": 2, "aplicacion": 1, "conceptual": 1, "negativa": 1, "requisitos": 1, "caso_practico": 1}
 - fuente: guia-mossos:C.2.2, guia-mossos:C.2.3, guia-mossos:C.2.4, guia-mossos:C.2.7
-- validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
-- judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
-- criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
-
-## BATCH MOSSOS-KNOWLEDGE-002
-
-- prioridad: P1 · tipo: generacion · ejecutable ahora: sí
-- temas: C.2
-- subtemas: C.2.2, C.2.3, C.2.4
-- cantidad: 5
-- dificultad: {"2": 1, "3": 2}
-- tipos: {"requisitos": 1, "caso_practico": 2, "dificil": 2}
-- fuente: guia-mossos:C.2.2, guia-mossos:C.2.3, guia-mossos:C.2.4
 - validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 - revisión humana obligatoria (tipo de pregunta con revisión obligatoria)
 
+## BATCH MOSSOS-KNOWLEDGE-002
+
+- prioridad: P1 · tipo: generacion · ejecutable ahora: sí
+- temas: C.2
+- subtemas: C.2.2
+- cantidad: 1
+- dificultad: {"3": 1}
+- tipos: {"dificil": 1}
+- fuente: guia-mossos:C.2.2
+- validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
+- judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
+- criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
+
 ## BATCH MOSSOS-KNOWLEDGE-003
 
 - prioridad: P2 · tipo: generacion · ejecutable ahora: sí
 - temas: C.3
-- subtemas: C.3.1, C.3.2, C.3.3
-- cantidad: 4
-- dificultad: {"1": 1, "3": 1}
-- tipos: {"plazos": 1, "caso_practico": 2, "dificil": 1}
-- fuente: guia-mossos:C.3.1, guia-mossos:C.3.2, guia-mossos:C.3.3
+- subtemas: C.3.1
+- cantidad: 2
+- dificultad: {"3": 1}
+- tipos: {"caso_practico": 1, "dificil": 1}
+- fuente: guia-mossos:C.3.1
 - validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
@@ -82,11 +82,11 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 - prioridad: P2 · tipo: generacion · ejecutable ahora: sí
 - temas: B.2
-- subtemas: B.2.2
-- cantidad: 4
-- dificultad: {"1": 1, "2": 1}
-- tipos: {"literal": 1, "organos": 1, "plazos": 1, "aplicacion": 1}
-- fuente: guia-mossos:B.2.2
+- subtemas: B.2.5
+- cantidad: 1
+- dificultad: {"1": 1}
+- tipos: {"plazos": 1}
+- fuente: guia-mossos:B.2.5
 - validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
@@ -95,11 +95,11 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 - prioridad: P2 · tipo: generacion · ejecutable ahora: sí
 - temas: A.1
-- subtemas: A.1.8, A.1.9, A.1.IF
-- cantidad: 7
-- dificultad: {"1": 3, "2": 1}
-- tipos: {"literal": 3, "aplicacion": 3, "conceptual": 1}
-- fuente: guia-mossos:A.1.8, guia-mossos:A.1.9, guia-mossos:A.1.IF
+- subtemas: A.1.IF
+- cantidad: 1
+- dificultad: {"1": 1}
+- tipos: {"literal": 1}
+- fuente: guia-mossos:A.1.IF
 - validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana

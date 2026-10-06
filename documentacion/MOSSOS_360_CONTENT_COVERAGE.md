@@ -8,11 +8,11 @@ Estados: **OFFICIAL_EXAM** = pregunta de un examen oficial · **OFFICIAL_VERIFIE
 
 | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
 |---|---|---|---|---|---|
-| S00027 | 49 | 44 | 5 | 0 | juez-sesion-v4 |
-| S00028 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
 | S00029 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
 | S00030 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
 | S00031 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
+| S00032 | 50 | 44 | 5 | 1 | juez-sesion-v4 |
+| S00033 | 46 | 39 | 5 | 2 | juez-sesion-v4 |
 
 - **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
 
@@ -20,7 +20,7 @@ Estados: **OFFICIAL_EXAM** = pregunta de un examen oficial · **OFFICIAL_VERIFIE
 
 | área | contenido servido | en revisión | retirado | oficial |
 |---|---|---|---|---|
-| Conocimientos | 377 TestLey | 45 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
+| Conocimientos | 460 TestLey | 58 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
 | Aptitud | generadores: 11 formatos × 3 dificultades | 0 | 0 | estructura (80 preguntas, 35 min); sin ejercicios oficiales |
 | Competencias | 45 situaciones + 9 fichas | 15 | 0 | 10 nombres de competencias |
 | Entrevista | 56 escenarios | 29 | 0 | objeto de la entrevista y 10 competencias |
@@ -33,25 +33,25 @@ Formato oficial del simulacro: 30 preguntas, 35 min, penalización 0.25. Peso de
 
 | tema | apartados (con fuente) | TestLey VALID | REVIEW | DEPRECATED | oficial VALID / REVIEW / OUTDATED | peso exámenes | capacidad | objetivo | faltan | prioridad |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A.1 Història de Catalunya (part I) | 10 (10) | 16 | 4 | 1 | 19 / 0 / 0 | 7.4% | 90 | 23 | 7 | P2 |
-| A.2 Història de Catalunya (part II) | 9 (9) | 20 | 1 | 0 | 14 / 0 / 0 | 5.5% | 89 | 18 | 0 | P3 |
-| A.3 Història de la policia a Catalunya | 6 (6) | 19 | 2 | 0 | 7 / 0 / 0 | 2.7% | 55 | 12 | 0 | P3 |
-| A.4 Àmbit sociolingüístic | 5 (5) | 20 | 1 | 0 | 16 / 0 / 0 | 6.2% | 50 | 19 | 0 | P3 |
-| A.5 Marc geogràfic de Catalunya | 7 (7) | 15 | 6 | 0 | 12 / 0 / 0 | 4.7% | 60 | 15 | 0 | P3 |
-| A.6 Entorn social a Catalunya | 6 (6) | 20 | 1 | 0 | 9 / 1 / 0 | 3.9% | 60 | 12 | 0 | P3 |
-| A.7 Les tecnologies de la informació e | 7 (7) | 18 | 3 | 0 | 8 / 0 / 0 | 3.1% | 66 | 14 | 0 | P3 |
-| B.1 L'Estatut d'autonomia de Catalunya | 6 (6) | 21 | 4 | 0 | 4 / 2 / 0 | 2.3% | 53 | 12 | 0 | P3 |
-| B.2 Les institucions polítiques de Cat | 6 (6) | 20 | 0 | 1 | 20 / 0 / 0 | 7.8% | 58 | 24 | 4 | P2 |
-| B.3 L'ordenament jurídic de l'Estat | 32 (32) | 38 | 0 | 0 | 11 / 0 / 0 | 4.3% | 101 | 64 | 26 | P2 |
-| B.4 Els drets humans i els drets const | 9 (9) | 21 | 0 | 0 | 11 / 1 / 0 | 4.7% | 85 | 18 | 0 | P3 |
+| A.1 Història de Catalunya (part I) | 10 (10) | 22 | 4 | 1 | 19 / 0 / 0 | 7.4% | 90 | 23 | 1 | P2 |
+| A.2 Història de Catalunya (part II) | 9 (9) | 26 | 1 | 0 | 14 / 0 / 0 | 5.5% | 89 | 18 | 0 | P3 |
+| A.3 Història de la policia a Catalunya | 6 (6) | 25 | 2 | 0 | 7 / 0 / 0 | 2.7% | 55 | 12 | 0 | P3 |
+| A.4 Àmbit sociolingüístic | 5 (5) | 25 | 2 | 0 | 16 / 0 / 0 | 6.2% | 50 | 19 | 0 | P3 |
+| A.5 Marc geogràfic de Catalunya | 7 (7) | 21 | 6 | 0 | 12 / 0 / 0 | 4.7% | 60 | 15 | 0 | P3 |
+| A.6 Entorn social a Catalunya | 6 (6) | 26 | 1 | 0 | 9 / 1 / 0 | 3.9% | 60 | 12 | 0 | P3 |
+| A.7 Les tecnologies de la informació e | 7 (7) | 24 | 3 | 0 | 8 / 0 / 0 | 3.1% | 66 | 14 | 0 | P3 |
+| B.1 L'Estatut d'autonomia de Catalunya | 6 (6) | 25 | 6 | 0 | 4 / 2 / 0 | 2.3% | 53 | 12 | 0 | P3 |
+| B.2 Les institucions polítiques de Cat | 6 (6) | 23 | 3 | 1 | 20 / 0 / 0 | 7.8% | 58 | 24 | 1 | P2 |
+| B.3 L'ordenament jurídic de l'Estat | 32 (32) | 43 | 0 | 0 | 11 / 0 / 0 | 4.3% | 101 | 64 | 21 | P2 |
+| B.4 Els drets humans i els drets const | 9 (9) | 26 | 0 | 0 | 11 / 1 / 0 | 4.7% | 85 | 18 | 0 | P3 |
 | B.5 Les institucions polítiques de l'E | 5 (5) | 21 | 4 | 0 | 5 / 0 / 0 | 1.9% | 45 | 10 | 0 | P3 |
-| B.6 Els òrgans jurisdiccionals. Poder  | 5 (5) | 15 | 3 | 0 | 11 / 0 / 0 | 4.3% | 46 | 13 | 0 | P3 |
-| B.7 L'organització territorial de l'Es | 8 (8) | 18 | 3 | 0 | 8 / 0 / 0 | 3.1% | 56 | 16 | 0 | P3 |
-| B.8 La Unió Europea | 4 (4) | 16 | 2 | 0 | 11 / 1 / 0 | 4.7% | 39 | 15 | 0 | P3 |
+| B.6 Els òrgans jurisdiccionals. Poder  | 5 (5) | 19 | 5 | 0 | 11 / 0 / 0 | 4.3% | 46 | 13 | 0 | P3 |
+| B.7 L'organització territorial de l'Es | 8 (8) | 23 | 4 | 0 | 8 / 0 / 0 | 3.1% | 56 | 16 | 0 | P3 |
+| B.8 La Unió Europea | 4 (4) | 21 | 3 | 0 | 11 / 1 / 0 | 4.7% | 39 | 15 | 0 | P3 |
 | C.1 Les competències de la Generalitat | 3 (3) | 8 | 0 | 1 | 6 / 1 / 0 | 2.7% | 18 | 9 | 1 | P2 |
-| C.2 El Departament d'Interior | 8 (8) | 15 | 2 | 0 | 23 / 9 / 3 | 13.6% | 58 | 41 | 26 | P1 |
-| C.3 La coordinació policial | 6 (6) | 26 | 4 | 0 | 22 / 3 / 0 | 9.7% | 60 | 30 | 4 | P2 |
-| C.4 El marc legal de la seguretat | 5 (5) | 18 | 3 | 0 | 14 / 1 / 0 | 5.8% | 50 | 18 | 0 | P3 |
+| C.2 El Departament d'Interior | 8 (8) | 18 | 2 | 0 | 23 / 9 / 3 | 13.6% | 58 | 41 | 23 | P1 |
+| C.3 La coordinació policial | 6 (6) | 28 | 7 | 0 | 22 / 3 / 0 | 9.7% | 60 | 30 | 2 | P2 |
+| C.4 El marc legal de la seguretat | 5 (5) | 24 | 3 | 0 | 14 / 1 / 0 | 5.8% | 50 | 18 | 0 | P3 |
 | C.5 El Codi deontològic policial | 4 (4) | 12 | 2 | 1 | 4 / 0 / 0 | 1.6% | 26 | 8 | 0 | P3 |
 | D Coneixement de l'entorn polític, e | 0 (0) | 0 | 0 | 0 | 0 / 0 / 0 | 0.0% | 0 | 0 | 0 | P1 |
 
@@ -59,26 +59,26 @@ Formato oficial del simulacro: 30 preguntas, 35 min, penalización 0.25. Peso de
 
 | tema | apartados sin preguntas | apartados bloqueados (sin texto oficial) | sobreexplotados | concentración excesiva | tipos mínimos ausentes |
 |---|---|---|---|---|---|
-| A.1 | A.1.8, A.1.9, A.1.IF | — | — | — | caso_practico |
-| A.2 | A.2.8, A.2.IF | — | — | — | dificil, caso_practico |
+| A.1 | A.1.IF | — | — | — | caso_practico |
+| A.2 | — | — | — | — | caso_practico |
 | A.3 | — | — | — | — | caso_practico |
 | A.4 | — | — | — | — | caso_practico |
 | A.5 | — | — | — | — | caso_practico |
-| A.6 | — | — | — | — | negativa, dificil, caso_practico |
+| A.6 | — | — | — | — | dificil, caso_practico |
 | A.7 | — | — | — | — | caso_practico |
-| B.1 | B.1.IF | — | — | sí: 6% del banco TestLey frente a 2% del examen | negativa, dificil, caso_practico |
+| B.1 | — | — | — | sí: 5% del banco TestLey frente a 2% del examen | negativa, dificil, caso_practico |
 | B.2 | — | — | — | — | aplicacion, caso_practico |
-| B.3 | B.3.2, B.3.3, B.3.4, B.3.5, B.3.6, B.3.IF, 83, 84, 88, 89, 92 | — | 1, 2, 3, 7, 8, 9, 95, 96 | sí: 10% del banco TestLey frente a 4% del examen | literal, conceptual, negativa, caso_practico |
-| B.4 | B.4.8, B.4.IF | — | — | — | caso_practico |
-| B.5 | — | — | — | sí: 6% del banco TestLey frente a 2% del examen | caso_practico |
+| B.3 | B.3.4, B.3.5, B.3.6, B.3.IF, 83, 84, 88, 89, 92 | — | 1, 2, 3, 7, 8, 9, 95, 96 | sí: 9% del banco TestLey frente a 4% del examen | conceptual, caso_practico |
+| B.4 | — | — | — | — | caso_practico |
+| B.5 | — | — | — | sí: 5% del banco TestLey frente a 2% del examen | caso_practico |
 | B.6 | — | — | — | — | negativa, caso_practico |
-| B.7 | B.7.IF | — | — | — | caso_practico |
-| B.8 | — | — | — | — | negativa, caso_practico |
+| B.7 | — | — | — | — | caso_practico |
+| B.8 | — | — | — | — | caso_practico |
 | C.1 | — | — | — | — | negativa, dificil, caso_practico |
 | C.2 | C.2.2, C.2.3 | — | — | — | aplicacion, caso_practico |
 | C.3 | — | — | — | — | caso_practico |
 | C.4 | — | — | — | — | conceptual, aplicacion, negativa, caso_practico |
-| C.5 | — | — | — | sí: 3% del banco TestLey frente a 2% del examen | aplicacion, caso_practico |
+| C.5 | — | — | — | — | aplicacion, caso_practico |
 | D | — | — | — | — | — |
 
 ## 2. Aptitude
@@ -154,7 +154,7 @@ Lo que necesitará la Fase 4: registro de marcas por prueba e intento; puntuaci�
 
 ## 7. Simulations
 
-- Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **3** (limitan: C.2, A.1, B.2, C.3, C.1); mezclando TestLey y oficiales: 9; sin respetar el reparto: 21. Objetivo: 10.
+- Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **4** (limitan: C.2, C.3, C.1, B.2, A.1); mezclando TestLey y oficiales: 10; sin respetar el reparto: 24. Objetivo: 10.
 - Aptitud: práctica cronometrada al ritmo oficial con ejercicios generados (ilimitada); NO es una réplica de la subprueba: las bases no publican el reparto por aptitudes y la verbal es parcial.
 - Entrevista: 5 simulaciones completas sin repetir escenario (limitan: responsabilitat, adaptabilitat, motivacio, habilitats-socials); objetivo 6.
 - Primera prueba completa: no disponible: combinaría conocimientos (simulable), aptitudinal (solo práctica) e idiomas (sin contenido).
@@ -168,25 +168,25 @@ Cómo se calcula cada objetivo:
 
 | AREA | SUBAREA | ACTUAL | VALID | REVIEW | OFICIAL | OBJETIVO | FALTAN | PRIORIDAD |
 |---|---|---|---|---|---|---|---|---|
-| KNOWLEDGE | A.1 Història de Catalunya (part I) | 21 | 16 | 4 | 19 | 23 | 7 | P2 |
-| KNOWLEDGE | A.2 Història de Catalunya (part II) | 21 | 20 | 1 | 14 | 18 | 0 | P3 |
-| KNOWLEDGE | A.3 Història de la policia a Catalunya | 21 | 19 | 2 | 7 | 12 | 0 | P3 |
-| KNOWLEDGE | A.4 Àmbit sociolingüístic | 21 | 20 | 1 | 16 | 19 | 0 | P3 |
-| KNOWLEDGE | A.5 Marc geogràfic de Catalunya | 21 | 15 | 6 | 12 | 15 | 0 | P3 |
-| KNOWLEDGE | A.6 Entorn social a Catalunya | 21 | 20 | 1 | 9 | 12 | 0 | P3 |
-| KNOWLEDGE | A.7 Les tecnologies de la informació en el | 21 | 18 | 3 | 8 | 14 | 0 | P3 |
-| KNOWLEDGE | B.1 L'Estatut d'autonomia de Catalunya (EA | 25 | 21 | 4 | 4 | 12 | 0 | P3 |
-| KNOWLEDGE | B.2 Les institucions polítiques de Catalun | 21 | 20 | 0 | 20 | 24 | 4 | P2 |
-| KNOWLEDGE | B.3 L'ordenament jurídic de l'Estat | 38 | 38 | 0 | 11 | 64 | 26 | P2 |
-| KNOWLEDGE | B.4 Els drets humans i els drets constituc | 21 | 21 | 0 | 11 | 18 | 0 | P3 |
+| KNOWLEDGE | A.1 Història de Catalunya (part I) | 27 | 22 | 4 | 19 | 23 | 1 | P2 |
+| KNOWLEDGE | A.2 Història de Catalunya (part II) | 27 | 26 | 1 | 14 | 18 | 0 | P3 |
+| KNOWLEDGE | A.3 Història de la policia a Catalunya | 27 | 25 | 2 | 7 | 12 | 0 | P3 |
+| KNOWLEDGE | A.4 Àmbit sociolingüístic | 27 | 25 | 2 | 16 | 19 | 0 | P3 |
+| KNOWLEDGE | A.5 Marc geogràfic de Catalunya | 27 | 21 | 6 | 12 | 15 | 0 | P3 |
+| KNOWLEDGE | A.6 Entorn social a Catalunya | 27 | 26 | 1 | 9 | 12 | 0 | P3 |
+| KNOWLEDGE | A.7 Les tecnologies de la informació en el | 27 | 24 | 3 | 8 | 14 | 0 | P3 |
+| KNOWLEDGE | B.1 L'Estatut d'autonomia de Catalunya (EA | 31 | 25 | 6 | 4 | 12 | 0 | P3 |
+| KNOWLEDGE | B.2 Les institucions polítiques de Catalun | 27 | 23 | 3 | 20 | 24 | 1 | P2 |
+| KNOWLEDGE | B.3 L'ordenament jurídic de l'Estat | 43 | 43 | 0 | 11 | 64 | 21 | P2 |
+| KNOWLEDGE | B.4 Els drets humans i els drets constituc | 26 | 26 | 0 | 11 | 18 | 0 | P3 |
 | KNOWLEDGE | B.5 Les institucions polítiques de l'Estat | 25 | 21 | 4 | 5 | 10 | 0 | P3 |
-| KNOWLEDGE | B.6 Els òrgans jurisdiccionals. Poder judi | 18 | 15 | 3 | 11 | 13 | 0 | P3 |
-| KNOWLEDGE | B.7 L'organització territorial de l'Estat | 21 | 18 | 3 | 8 | 16 | 0 | P3 |
-| KNOWLEDGE | B.8 La Unió Europea | 18 | 16 | 2 | 11 | 15 | 0 | P3 |
+| KNOWLEDGE | B.6 Els òrgans jurisdiccionals. Poder judi | 24 | 19 | 5 | 11 | 13 | 0 | P3 |
+| KNOWLEDGE | B.7 L'organització territorial de l'Estat | 27 | 23 | 4 | 8 | 16 | 0 | P3 |
+| KNOWLEDGE | B.8 La Unió Europea | 24 | 21 | 3 | 11 | 15 | 0 | P3 |
 | KNOWLEDGE | C.1 Les competències de la Generalitat en  | 9 | 8 | 0 | 6 | 9 | 1 | P2 |
-| KNOWLEDGE | C.2 El Departament d'Interior | 17 | 15 | 2 | 23 | 41 | 26 | P1 |
-| KNOWLEDGE | C.3 La coordinació policial | 30 | 26 | 4 | 22 | 30 | 4 | P2 |
-| KNOWLEDGE | C.4 El marc legal de la seguretat | 21 | 18 | 3 | 14 | 18 | 0 | P3 |
+| KNOWLEDGE | C.2 El Departament d'Interior | 20 | 18 | 2 | 23 | 41 | 23 | P1 |
+| KNOWLEDGE | C.3 La coordinació policial | 35 | 28 | 7 | 22 | 30 | 2 | P2 |
+| KNOWLEDGE | C.4 El marc legal de la seguretat | 27 | 24 | 3 | 14 | 18 | 0 | P3 |
 | KNOWLEDGE | C.5 El Codi deontològic policial | 15 | 12 | 2 | 4 | 8 | 0 | P3 |
 | KNOWLEDGE | D Coneixement de l'entorn polític, econò | 0 | 0 | 0 | 0 | 0 | 0 | P1 |
 | APTITUDE | abstract | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
