@@ -1,0 +1,1030 @@
+{
+ "evaluacion": "S00030",
+ "creada_el": "2026-10-06T09:45:31",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 50,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0"
+   ],
+   "prompt_sha256": "093bf97fa8129e97ca995ab1fda798fca5b0d85cd64d647bee10e4eddd7d4df6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "edaa8f9428edba12d4ebecc4af383648b38053c8b99ddb3b3aac51078b3c795e",
+    "0.1": "2fe2a556021db7cdd1e8c6c166d0772fb0e5420e55009b119f0dd690b10cce1e",
+    "0.2": "a26b756cfe67d85cf55595f78e415a0fd6c6c126cd869fb5ee4f5d5fc2e6b0e6",
+    "1.0": "d87bbfe7c7043c5081d5b83e7692edf2898d31b610492d014a7bdb7e1c9a88cd",
+    "1.1": "07ae989d2c0122d9bf86465490d23879626ead6b0455b0ca4d2bf7fd341a3a8e",
+    "1.2": "331e9bbeb741ffacdeaaed1bb3fd57be0fd603531197c9912cb73307e88277e9",
+    "2.0": "e6e417f9520c5cbabeaa7aba9a19c4fbde59ca9669be921d4b9aaa0a8684fd38",
+    "2.1": "e93a13de803a42e97579afa5f78c53e774445c7c4d843ff6539e2e3e5b480301",
+    "2.2": "8304e4419fedf77e2b6627466151124baa781822847d841705f48a6e174da616",
+    "3.0": "da90955a282b812b4d670b35c70568e51b17d47de8a411a2f6862a28870dc2d9"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.1 dice que los poderes públicos deben promover el pleno ejercicio de las libertades y derechos reconocidos por el Estatuto, la Constitución, la UE, la DUDH y el Convenio Europeo. La opción A es correcta. La cita contiene la enumeración completa, incluido el Convenio Europeo. Las otras tres opciones (abstenerse, autorización previa del Parlamento, tutela tras sentencia del TEDH) no tienen apoyo en el texto. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.3 enumera libertad, democracia, igualdad, pluralismo, paz, justicia, solidaridad, cohesión social, equidad de género y desarrollo sostenible. 'La equidad de género' es la única de las opciones que figura en la lista. Unidad de mercado, estabilidad presupuestaria y neutralidad institucional no aparecen. La cita incluye la equidad de género. Los distractores no delatan la respuesta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.2 obliga a promover las condiciones para que la libertad y la igualdad de individuos y grupos sean reales y efectivas. La opción B lo recoge y la cita lo contiene literalmente. Las demás opciones contradicen el texto: solo declarar la igualdad, excluir a los grupos, o remitir a tratados. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 5 atribuye a la Subdirecció General d'Administració i Serveis la gestión integral de los recursos humanos, económicos, materiales y jurídicos del Instituto. La cita contiene esa frase completa. Las otras opciones son órganos que dependen del Instituto, pero con funciones distintas según los apartados 3, 6 y 7, así que solo una es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 7 asigna al Servei de Selecció i Avaluació planificar y ejecutar la evaluación del perfil de competencias clave del alumnado de los cursos de formación básica. La cita lo recoge. Los distractores tienen otras funciones o no son del Instituto. La parecida guia-mossos-53 trata las condiciones psicológicas para armas de fuego, que es otro hecho (aunque el órgano sea el mismo), por lo que no la considero duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 11 define el 112 como entidad de derecho público con personalidad jurídica propia, cuya actividad se rige por el derecho privado con carácter general. La opción A coincide. La cita reproduce la frase entera. La opción B describe el Servei Català de Trànsit (apartado 9), y las otras dos no tienen apoyo en el texto. La parecida guia-mossos-211 trata sobre la presidencia de la Comisión Ejecutiva, que es otro hecho.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El texto presenta como manifestaciones de la crisis social los enfrentamientos Busca/Biga, los pogromos a los calls y la guerra social entre campesinos y señores. La cita contiene esas tres, así que se ve que aparecen. La elección de Ferran d'Antequera en el Compromís de Casp pertenece a la crisis política según el texto, por lo que la opción C es la única que no es manifestación social. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la Guerra dels Remences terminó con la Sentència de Guadalupe (1486), auspiciada por el rey Ferran II. La cita contiene ambos elementos, el documento y el rey. Las demás opciones combinan erróneamente el Compromís de Casp, Ferran d'Antequera o Martí l'Humà, que según el texto pertenecen a la crisis política. Es un hito histórico del temario, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la media de mortalidad de la peste negra a partir de 1348 fue de un tercio de la población, aunque en algunos lugares llegó a la mitad. La cita lo contiene. Ninguna otra opción (una cuarta parte, dos tercios, una décima parte) es compatible con el texto. La pregunta usa 'mitjana', así que la mención a la mitad no genera ambigüedad. Es un dato numérico útil para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto vincula la huelga de los tranvías de 1951 con la articulación progresiva de una resistencia política interior al régimen, y la cita lo dice textualmente. Los otros hechos son de otras épocas o tienen otro sentido: el consejo de guerra de Burgos y la Assemblea de Catalunya son de los años setenta, y los hechos del Palau de 1960 se citan como despertar de grupos catalanistas. Por tanto, solo la huelga de 1951 encaja con la pregunta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a144365369c1397b0.jsonl",
+    "respuesta_sha256": "95539caa752e1f496cb0612ad5c7e475021d0cace4ba9f2e20ef52b88bbc686e"
+   },
+   "registrada_el": "2026-10-06T09:47:32",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:47:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a144365369c1397b0.jsonl",
+      "respuesta_sha256": "95539caa752e1f496cb0612ad5c7e475021d0cace4ba9f2e20ef52b88bbc686e"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.1 dice que los poderes públicos deben promover el pleno ejercicio de las libertades y derechos reconocidos por el Estatuto, la Constitución, la UE, la DUDH y el Convenio Europeo. La opción A es correcta. La cita contiene la enumeración completa, incluido el Convenio Europeo. Las otras tres opciones (abstenerse, autorización previa del Parlamento, tutela tras sentencia del TEDH) no tienen apoyo en el texto. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.3 enumera libertad, democracia, igualdad, pluralismo, paz, justicia, solidaridad, cohesión social, equidad de género y desarrollo sostenible. 'La equidad de género' es la única de las opciones que figura en la lista. Unidad de mercado, estabilidad presupuestaria y neutralidad institucional no aparecen. La cita incluye la equidad de género. Los distractores no delatan la respuesta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.2 obliga a promover las condiciones para que la libertad y la igualdad de individuos y grupos sean reales y efectivas. La opción B lo recoge y la cita lo contiene literalmente. Las demás opciones contradicen el texto: solo declarar la igualdad, excluir a los grupos, o remitir a tratados. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 5 atribuye a la Subdirecció General d'Administració i Serveis la gestión integral de los recursos humanos, económicos, materiales y jurídicos del Instituto. La cita contiene esa frase completa. Las otras opciones son órganos que dependen del Instituto, pero con funciones distintas según los apartados 3, 6 y 7, así que solo una es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 7 asigna al Servei de Selecció i Avaluació planificar y ejecutar la evaluación del perfil de competencias clave del alumnado de los cursos de formación básica. La cita lo recoge. Los distractores tienen otras funciones o no son del Instituto. La parecida guia-mossos-53 trata las condiciones psicológicas para armas de fuego, que es otro hecho (aunque el órgano sea el mismo), por lo que no la considero duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 11 define el 112 como entidad de derecho público con personalidad jurídica propia, cuya actividad se rige por el derecho privado con carácter general. La opción A coincide. La cita reproduce la frase entera. La opción B describe el Servei Català de Trànsit (apartado 9), y las otras dos no tienen apoyo en el texto. La parecida guia-mossos-211 trata sobre la presidencia de la Comisión Ejecutiva, que es otro hecho.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El texto presenta como manifestaciones de la crisis social los enfrentamientos Busca/Biga, los pogromos a los calls y la guerra social entre campesinos y señores. La cita contiene esas tres, así que se ve que aparecen. La elección de Ferran d'Antequera en el Compromís de Casp pertenece a la crisis política según el texto, por lo que la opción C es la única que no es manifestación social. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la Guerra dels Remences terminó con la Sentència de Guadalupe (1486), auspiciada por el rey Ferran II. La cita contiene ambos elementos, el documento y el rey. Las demás opciones combinan erróneamente el Compromís de Casp, Ferran d'Antequera o Martí l'Humà, que según el texto pertenecen a la crisis política. Es un hito histórico del temario, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la media de mortalidad de la peste negra a partir de 1348 fue de un tercio de la población, aunque en algunos lugares llegó a la mitad. La cita lo contiene. Ninguna otra opción (una cuarta parte, dos tercios, una décima parte) es compatible con el texto. La pregunta usa 'mitjana', así que la mención a la mitad no genera ambigüedad. Es un dato numérico útil para examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El texto vincula la huelga de los tranvías de 1951 con la articulación progresiva de una resistencia política interior al régimen, y la cita lo dice textualmente. Los otros hechos son de otras épocas o tienen otro sentido: el consejo de guerra de Burgos y la Assemblea de Catalunya son de los años setenta, y los hechos del Palau de 1960 se citan como despertar de grupos catalanistas. Por tanto, solo la huelga de 1951 encaja con la pregunta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "3.1",
+    "3.2",
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "6.1"
+   ],
+   "prompt_sha256": "99da377bc46741b1bea2d0337a7d5dc2f3242dc879b6f1870cba84dc5e723426",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "3.1": "babd27a3bb0fcf064da5ea779732ca32927f8eb45628cf18f5428e5c628265e5",
+    "3.2": "4409557f7fe57a1a1104f6ebf6a7553383b83aa7b953877fb99b025f809f3386",
+    "4.0": "4a9f100514b1bbade516897e234bf6c2093233b783427272142ee3d7ced3fed8",
+    "4.1": "dea767dad43d60d585dc344329221242ccac5fe5bd5f6d6d56d105521fc4ac6b",
+    "4.2": "59285c6f9d1919096fb26199be726252c877ca18db73504981fa28fcdbf2075b",
+    "5.0": "bfb5979475cd23c3ec67764704bd44f368f72cc3707a94b07528083f33a9c837",
+    "5.1": "dc5cf325e48f4766bcd2aa629d881b6ea62ea3abe3e60a75117084424ce2d690",
+    "5.2": "eff2d854e7eede2a8cb2b2dc1cac1f9d4c8b216317a649632a71ab77acd4206d",
+    "6.0": "5026a1105fc949902ab9576c72852f33df3764e3818279f20ac378a75b569486",
+    "6.1": "a5912b8679d00bbb048ccdca536f01da9595798c871850404fac6fc1c6dd9395"
+   },
+   "veredictos": [
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que, entrats els anys cinquanta, la nova configuració mundial en blocs va fer que els EUA reconeguessin el règim a canvi de bases militars; l'opció B ho recull. La cita conté tots dos elements (blocs i bases). Les altres opcions contradiuen el text: el règim era favorable a l'eix, no hi va haver democratització i els maquis no són la causa. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que Comissions Obreres fou fundat el 1964, i la cita ho diu literalment. Els distractors 1951 (vaga de tramvies), 1960 (fets del Palau) i 1971 (Assemblea de Catalunya) són altres dates del text i no són correctes. És una dada històrica de temari, útil i no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la tercera onada va provocar un important creixement de població, que la natalitat es va recuperar i que l'envelliment es va aturar parcialment; l'opció A ho recull. La cita ho conté tot. Les altres opcions contradiuen algun element (davallada de natalitat, estancament, absència de creixement). L'estancament és posterior a la crisi del 2007, i la pregunta ho acota bé.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la població major de 65 anys va passar del 10,2% (1975) al 19,2% (2022); l'opció B ho recull i la cita ho conté. Els distractors reutilitzen xifres del text (25,6% i 14,7%, que són els menors de 15 anys) o inverteixen l'ordre, i són incorrectes. Pregunta clara i no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "L'opció B coincideix amb la llista del text i la cita és suficient. El problema és que el text situa aquesta immigració dins el context de la postguerra i fins al 1980 de manera general, sense acotar-la a la postguerra estricta. L'enunciat, 'durant la postguerra', és una interpretació lleugerament imprecisa. Hi ha dubte sobre la claredat; si hi ha dubte, la marca va a false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que l'elecció es fa per majoria de tres cinquenes parts al Congrés i que s'ha de ratificar per aquesta mateixa majoria al Senat; l'opció C ho recull i la cita ho diu literalment. Les altres opcions tenen majories o ratificacions diferents de les del text i són incorrectes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negatiu. Les opcions A, B i C corresponen a les funcions c), d) i f) del text, i la cita les conté totes tres. L'opció D (anul·lar actes administratius) no hi apareix; les funcions del text són supervisar, suggerir, recórrer i recomanar, i no anul·lar. La cita permet veure que A, B i C hi són. L'opció D no és funció del Defensor, per tant és l'única que no hi figura.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que es pot adreçar al Defensor del Poble qualsevol persona, natural o jurídica, que invoqui un interès legítim; això inclou una associació amb personalitat jurídica. La cita ho conté. Les altres opcions contradiuen el text: no exigeix persona física, no exigeix intermediació d'un parlamentari i el Defensor actua tant d'ofici com a instància de part.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text (punt 7) diu que el CGPJ és l'òrgan de govern del poder judicial i té atribuïdes expressament les funcions de nomenaments, ascensos, inspecció i règim disciplinari de jutges i magistrats; la cita ho conté. TSJC, Ministeri Fiscal i TC tenen altres funcions al text, per tant no són alternatives vàlides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text (punt 6) diu que el TSJC és l'última instància jurisdiccional dels processos iniciats a Catalunya, sens perjudici de la unificació de doctrina del Tribunal Suprem; l'opció A ho recull i la cita ho conté. La B contradiu el text. La C correspon al TC i la D al CGPJ, per tant no són vàlides. Pregunta clara i no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a59058d27a823ff36.jsonl",
+    "respuesta_sha256": "24f567a4371f70c06c0af9510abe393717e42bd99253173be609746bf1296c45"
+   },
+   "registrada_el": "2026-10-06T09:47:32",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:47:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a59058d27a823ff36.jsonl",
+      "respuesta_sha256": "24f567a4371f70c06c0af9510abe393717e42bd99253173be609746bf1296c45"
+     },
+     "respuesta": "[\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que, entrats els anys cinquanta, la nova configuració mundial en blocs va fer que els EUA reconeguessin el règim a canvi de bases militars; l'opció B ho recull. La cita conté tots dos elements (blocs i bases). Les altres opcions contradiuen el text: el règim era favorable a l'eix, no hi va haver democratització i els maquis no són la causa. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que Comissions Obreres fou fundat el 1964, i la cita ho diu literalment. Els distractors 1951 (vaga de tramvies), 1960 (fets del Palau) i 1971 (Assemblea de Catalunya) són altres dates del text i no són correctes. És una dada històrica de temari, útil i no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la tercera onada va provocar un important creixement de població, que la natalitat es va recuperar i que l'envelliment es va aturar parcialment; l'opció A ho recull. La cita ho conté tot. Les altres opcions contradiuen algun element (davallada de natalitat, estancament, absència de creixement). L'estancament és posterior a la crisi del 2007, i la pregunta ho acota bé.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la població major de 65 anys va passar del 10,2% (1975) al 19,2% (2022); l'opció B ho recull i la cita ho conté. Els distractors reutilitzen xifres del text (25,6% i 14,7%, que són els menors de 15 anys) o inverteixen l'ordre, i són incorrectes. Pregunta clara i no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"L'opció B coincideix amb la llista del text i la cita és suficient. El problema és que el text situa aquesta immigració dins el context de la postguerra i fins al 1980 de manera general, sense acotar-la a la postguerra estricta. L'enunciat, 'durant la postguerra', és una interpretació lleugerament imprecisa. Hi ha dubte sobre la claredat; si hi ha dubte, la marca va a false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que l'elecció es fa per majoria de tres cinquenes parts al Congrés i que s'ha de ratificar per aquesta mateixa majoria al Senat; l'opció C ho recull i la cita ho diu literalment. Les altres opcions tenen majories o ratificacions diferents de les del text i són incorrectes.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negatiu. Les opcions A, B i C corresponen a les funcions c), d) i f) del text, i la cita les conté totes tres. L'opció D (anul·lar actes administratius) no hi apareix; les funcions del text són supervisar, suggerir, recórrer i recomanar, i no anul·lar. La cita permet veure que A, B i C hi són. L'opció D no és funció del Defensor, per tant és l'única que no hi figura.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que es pot adreçar al Defensor del Poble qualsevol persona, natural o jurídica, que invoqui un interès legítim; això inclou una associació amb personalitat jurídica. La cita ho conté. Les altres opcions contradiuen el text: no exigeix persona física, no exigeix intermediació d'un parlamentari i el Defensor actua tant d'ofici com a instància de part.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El text (punt 7) diu que el CGPJ és l'òrgan de govern del poder judicial i té atribuïdes expressament les funcions de nomenaments, ascensos, inspecció i règim disciplinari de jutges i magistrats; la cita ho conté. TSJC, Ministeri Fiscal i TC tenen altres funcions al text, per tant no són alternatives vàlides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El text (punt 6) diu que el TSJC és l'última instància jurisdiccional dels processos iniciats a Catalunya, sens perjudici de la unificació de doctrina del Tribunal Suprem; l'opció A ho recull i la cita ho conté. La B contradiu el text. La C correspon al TC i la D al CGPJ, per tant no són vàlides. Pregunta clara i no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "6.2",
+    "7.0",
+    "7.1",
+    "7.2",
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2"
+   ],
+   "prompt_sha256": "5eee825597861c2ce51cb8e8dc386ddae3d98dccbe990398fdb264a4f4193ceb",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "6.2": "69b668fcaca0c3ff415b24cb4292cbd5c517204ce5a26f47d54fb1064e96cf47",
+    "7.0": "0a8f00a7f25b868a722376e958beb16d20334b5705c3def6ebbcd0473b6d3a06",
+    "7.1": "8e2ef40208a023ae4ba4145180f78d2aa724bc6081a6a1007edb2876b9ed92ac",
+    "7.2": "b8624db4225c0744b968146f5a3d1b6873e2a5935be3b7d195cac40024ec36fe",
+    "8.0": "ce1d1b8e98af26e9195d6a20b61416464c00112afca7baae8ff9319ecb7292a9",
+    "8.1": "c6167556bb41ebd4f91bbf2f60af057d68b758753822559e3994d8ea6b8c2a8c",
+    "8.2": "44ba5913b19be511f785374425d6b5744c8fde1c345d696148003e249aca56ed",
+    "9.0": "c2830c2801bb45d9c0038d3fd6370489f9c8d96f55c7357e25244515263e2126",
+    "9.1": "25be735cc88490b7b9468acf69fa6dea9199d036d3cf09f5c9b85eed5a173a91",
+    "9.2": "d87feb9b59e5844a514d338b8fe5a3bf76a07af755a1e9841fbf53f0ee5e5bcb"
+   },
+   "veredictos": [
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 2 del text diu que l'Administració de justícia no és poder judicial i que comprèn els mitjans personals i materials que donen suport al poder judicial; l'opció 3 ho recull. La cita conté la frase sencera. Les altres opcions (identificar-la amb el poder judicial, dir que és el seu òrgan de govern o que és un poder independent) contradiuen el text: el govern és el CGPJ i el poder judicial és el de jutges i magistrats. La pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix la IA com el conjunt de tecnologies i sistemes informàtics que permeten a les màquines simular capacitats de la intel·ligència humana, i l'opció 1 ho reflecteix. La cita conté la definició completa. Les altres opcions descriuen la internet de les coses, internet i la protecció de dades, i cap no encaixa amb la definició. La pregunta és una definició clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que els sistemes basats en IA introdueixen reptes rellevants quant a la supervisió humana, la responsabilitat sobre les decisions automatitzades i el respecte als drets fonamentals, que és l'opció 2. La cita conté els tres elements. Les altres opcions (reducció de càlcul, impossibilitat de supervisar en temps real, pèrdua de connexió) no apareixen com a reptes; el text diu el contrari en part, perquè la IA permet supervisar en temps real. La pregunta és clara i no hi ha duplicats.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la dependència de xarxes de comunicació i de sistemes automatitzats fa imprescindible garantir la seguretat de la informació, la integritat de les dades i la protecció davant d'accessos no autoritzats, i l'opció 0 ho recull. La cita ho conté íntegre. Les altres opcions (substituir la supervisió humana, renunciar a la centralització, limitar l'anàlisi) no consten al text i en part el contradiuen. La pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 4 diu que a la dècada dels vuitanta el nombre d'estrangers a Catalunya gairebé va duplicar-se, que és l'opció 2. La cita conté la frase literal. Cap altra dècada surt al text com a resposta. És una dada històrica fita del temari, no trivial, i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Els punts 10 i 11 defineixen les polítiques públiques com a decisions que determinen les actuacions del govern en una matèria concreta, i les d'igualtat d'oportunitats com a mesures per pal·liar la desigualtat entre homes i dones. L'opció 1 ho resumeix correctament. La cita inclou les dues definicions. Les altres opcions (ajuntaments i Estat en exclusiva, llei i convenis privats, immigració i serveis socials) no tenen suport al text. La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 5 diu que la immigració estrangera a Catalunya es nodreix de l'arribada d'europeus i d'una creixent immigració extracomunitària, que és l'opció 0. La cita conté la frase completa. Les altres opcions (immigració interna i retorn, refugiats i temporers, estudiants i jubilats) no consten al text. La pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 3 diu que els diputats tenen tres prerrogatives (inviolabilitat, immunitat i fur) i que no estan sotmesos a mandat imperatiu, que és l'opció 0. La cita conté els dos elements. Les altres opcions ometen el fur, inclouen la irresponsabilitat o afirmen el mandat imperatiu, i el text ho contradiu. La pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 5 diu que el Govern dirigeix l'acció política i l'Administració i és titular de la funció executiva i de la potestat reglamentària, que és l'opció 1. La cita ho conté. El Parlament és l'assemblea legislativa, i el Consell de Garanties i la Sindicatura de Comptes són institucions de rellevància estatutària, de manera que els distractors són clarament incorrectes. La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 4 diu que l'EAC assigna al Parlament quatre funcions, entre les quals la participació en l'activitat dels òrgans centrals de l'Estat, que és l'opció 2. La cita llista les quatre funcions. La potestat reglamentària i la direcció de l'Administració corresponen al Govern, i la representació ordinària de l'Estat correspon a la Presidència. Per tant, només una opció és correcta, i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a47e0d39d9cef50a9.jsonl",
+    "respuesta_sha256": "5a9765913db3bc5b1228493ccadbbf69614edd6ab1d6ea5f782121ae97446176"
+   },
+   "registrada_el": "2026-10-06T09:47:32",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:47:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a47e0d39d9cef50a9.jsonl",
+      "respuesta_sha256": "5a9765913db3bc5b1228493ccadbbf69614edd6ab1d6ea5f782121ae97446176"
+     },
+     "respuesta": "[\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 2 del text diu que l'Administració de justícia no és poder judicial i que comprèn els mitjans personals i materials que donen suport al poder judicial; l'opció 3 ho recull. La cita conté la frase sencera. Les altres opcions (identificar-la amb el poder judicial, dir que és el seu òrgan de govern o que és un poder independent) contradiuen el text: el govern és el CGPJ i el poder judicial és el de jutges i magistrats. La pregunta és clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El text defineix la IA com el conjunt de tecnologies i sistemes informàtics que permeten a les màquines simular capacitats de la intel·ligència humana, i l'opció 1 ho reflecteix. La cita conté la definició completa. Les altres opcions descriuen la internet de les coses, internet i la protecció de dades, i cap no encaixa amb la definició. La pregunta és una definició clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que els sistemes basats en IA introdueixen reptes rellevants quant a la supervisió humana, la responsabilitat sobre les decisions automatitzades i el respecte als drets fonamentals, que és l'opció 2. La cita conté els tres elements. Les altres opcions (reducció de càlcul, impossibilitat de supervisar en temps real, pèrdua de connexió) no apareixen com a reptes; el text diu el contrari en part, perquè la IA permet supervisar en temps real. La pregunta és clara i no hi ha duplicats.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la dependència de xarxes de comunicació i de sistemes automatitzats fa imprescindible garantir la seguretat de la informació, la integritat de les dades i la protecció davant d'accessos no autoritzats, i l'opció 0 ho recull. La cita ho conté íntegre. Les altres opcions (substituir la supervisió humana, renunciar a la centralització, limitar l'anàlisi) no consten al text i en part el contradiuen. La pregunta és clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 4 diu que a la dècada dels vuitanta el nombre d'estrangers a Catalunya gairebé va duplicar-se, que és l'opció 2. La cita conté la frase literal. Cap altra dècada surt al text com a resposta. És una dada històrica fita del temari, no trivial, i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"Els punts 10 i 11 defineixen les polítiques públiques com a decisions que determinen les actuacions del govern en una matèria concreta, i les d'igualtat d'oportunitats com a mesures per pal·liar la desigualtat entre homes i dones. L'opció 1 ho resumeix correctament. La cita inclou les dues definicions. Les altres opcions (ajuntaments i Estat en exclusiva, llei i convenis privats, immigració i serveis socials) no tenen suport al text. La pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 5 diu que la immigració estrangera a Catalunya es nodreix de l'arribada d'europeus i d'una creixent immigració extracomunitària, que és l'opció 0. La cita conté la frase completa. Les altres opcions (immigració interna i retorn, refugiats i temporers, estudiants i jubilats) no consten al text. La pregunta és clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 3 diu que els diputats tenen tres prerrogatives (inviolabilitat, immunitat i fur) i que no estan sotmesos a mandat imperatiu, que és l'opció 0. La cita conté els dos elements. Les altres opcions ometen el fur, inclouen la irresponsabilitat o afirmen el mandat imperatiu, i el text ho contradiu. La pregunta és clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 5 diu que el Govern dirigeix l'acció política i l'Administració i és titular de la funció executiva i de la potestat reglamentària, que és l'opció 1. La cita ho conté. El Parlament és l'assemblea legislativa, i el Consell de Garanties i la Sindicatura de Comptes són institucions de rellevància estatutària, de manera que els distractors són clarament incorrectes. La pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 4 diu que l'EAC assigna al Parlament quatre funcions, entre les quals la participació en l'activitat dels òrgans centrals de l'Estat, que és l'opció 2. La cita llista les quatre funcions. La potestat reglamentària i la direcció de l'Administració corresponen al Govern, i la representació ordinària de l'Estat correspon a la Presidència. Per tant, només una opció és correcta, i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "10.0",
+    "10.1",
+    "10.2",
+    "11.0",
+    "11.1",
+    "11.2",
+    "12.0",
+    "12.1",
+    "12.2",
+    "13.0"
+   ],
+   "prompt_sha256": "a6f9422d9854c0c84bb10c26cf131355cd18c0d259558f76966ed06f97eb6110",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "10.0": "8103a2d267168f90a9ae9a374dc8ee07afab4feb26cd4b3e0609484a2fa196e3",
+    "10.1": "741eea2f70caa31f1772bc9ee6abe3afc18e2563cc60713f468074bf9a897d5e",
+    "10.2": "ec7dcbc9db3b67d797c506184a311c6c88962b2c78796b6845c28a071a874ca5",
+    "11.0": "6ba1e7a332c3dd5d3e1dc1665dc0f9e178c102f43941bb33936eea840813aa1a",
+    "11.1": "1c2debd1491f349852622867491976985b1c5d5835b0d2ae01f45f40c4888daf",
+    "11.2": "dbc64ffab4d487542c03d743306a2e13114384c6cf3d5b5bbc20010ff06fadc3",
+    "12.0": "0ec1271f9dd0bba2e777c299624f44ee761c6a91a7b860a5bd0bdd9a619787ea",
+    "12.1": "82f34c5c83aa4d8665b89c545b3af4d9bc55966a1a0e1a0ca031b807f529e9d7",
+    "12.2": "da21d89151ff259f18f928cfc7571cbdb938801b260ce915e8bd307db91c825f",
+    "13.0": "572904a6ad93d8f7f9e1d42b4d654eb45fc1697ff7cafb11d4252c42022191af"
+   },
+   "veredictos": [
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu literalment que les competències de les comarques són de procedència municipal o de la Generalitat, i això justifica l'opció B. La cita conté aquesta frase completa. Les altres opcions (estatal, diputació, Consell Comarcal Metropolità, UE) no apareixen al text com a procedència, així que només una és correcta. La pregunta és clara i és un tema d'examen vàlid. No hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el consell comarcal està constituït per tres òrgans: el ple, el president i la comissió especial de comptes. L'opció A ho reprodueix i la cita ho conté sencer. Les altres opcions inclouen òrgans que el text no esmenta (junta de govern local, gerent, comissió informativa), així que cap és correcta. La pregunta és clara i no hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que, en les competències de procedència municipal, correspon a la comarca establir i prestar serveis supramunicipals complementaris dels municipis. L'opció A és correcta i la cita conté els dos elements necessaris: la procedència municipal i la facultat de la comarca. Les altres opcions (competència provincial, llei estatal, comissió de comptes) no tenen suport al text. L'enunciat en forma de cas pràctic és clar i no hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negatiu. El text diu que a partir de 1931 les Esquadres es van mantenir, es van adaptar al règim, es van identificar amb les institucions pròpies i el govern català, i van ser lleials als presidents de la Generalitat. Això cobreix les opcions A, B i C, i la cita les conté totes. Dissoldre-les i substituir-les per la Guàrdia Civil no hi apareix, i contradiu el 'no tan sols es van mantenir'. Per tant D és l'única que no s'ajusta. No hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la Guàrdia Urbana de Barcelona es va formar el 1843, i la cita ho recull amb l'any. Els anys 1719 (institucionalització dels Mossos), 1877 i 1931 (República) són distractors que no corresponen a aquest fet. És una dada històrica rellevant per a l'examen, clara i amb una sola resposta. No hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text atribueix al règim franquista la mescla d'interessos del règim amb tasques policials i militars, i el partit únic com a braç de la policia. La cita ho conté íntegrament. Els altres períodes (Segona República, segle XVIII, restauració de la Generalitat) es descriuen al text amb altres trets, així que només C és correcta. No hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que Espanya s'incorpora a la UE mitjançant la signatura del Tractat d'adhesió, autoritzat per la Llei orgànica 10/1985, de 2 d'agost. La cita ho reprodueix sencer. Les altres opcions (Acta Única, Maastricht, reial decret llei) apareixen al text com a altres fets, però no com a via d'incorporació d'Espanya. La pregunta és clara i no hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El contingut de l'opció A està al text: el Tractat de Brussel·les (1965) va unificar la Comissió i el Consell, i els tribunals i les assemblees ja s'havien unificat per un conveni a Roma el 25 de març de 1957. El problema és que a l'original aquesta frase continua amb 'i per l'Acta Única Europea (AUE)', i la cita la talla just abans. Això fa que l'opció C (Acta Única de 1986) sembli incorrecta sense que la cita mostri per què, quan el text de la mateixa frase esmenta l'AUE. A més, la pregunta combina dos elements, la qual cosa la fa feixuga. Per això la cita no és prou fidel i cal revisar-la.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que des de l'1 de juny de 2021 és operativa la Fiscalia Europea, i la cita ho conté. Els altres anys i dates (2001 Eurojust, 1 de gener de 1986 adhesió, novembre de 2014 doble majoria) són fets diferents del text i funcionen com a distractors. És una dada concreta útil per a l'examen i no hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el 1907 Enric Prat de la Riba és elegit president de la Diputació de Barcelona i funda l'Institut d'Estudis Catalans, i la cita ho conté. Òmnium Cultural (1961), L'Avenç (finals del segle XIX) i la Cancelleria reial (Pere el Cerimoniós) apareixen al text amb altres dates o contextos, així que només D és correcta. La pregunta és clara i no hi ha parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a59fa8cfdcd8d3136.jsonl",
+    "respuesta_sha256": "be70cdf9a8a04926454f6a97fc8dab387338843fad5c82e0711f83e2faf878cb"
+   },
+   "registrada_el": "2026-10-06T09:47:32",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:47:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a59fa8cfdcd8d3136.jsonl",
+      "respuesta_sha256": "be70cdf9a8a04926454f6a97fc8dab387338843fad5c82e0711f83e2faf878cb"
+     },
+     "respuesta": "[\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu literalment que les competències de les comarques són de procedència municipal o de la Generalitat, i això justifica l'opció B. La cita conté aquesta frase completa. Les altres opcions (estatal, diputació, Consell Comarcal Metropolità, UE) no apareixen al text com a procedència, així que només una és correcta. La pregunta és clara i és un tema d'examen vàlid. No hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el consell comarcal està constituït per tres òrgans: el ple, el president i la comissió especial de comptes. L'opció A ho reprodueix i la cita ho conté sencer. Les altres opcions inclouen òrgans que el text no esmenta (junta de govern local, gerent, comissió informativa), així que cap és correcta. La pregunta és clara i no hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que, en les competències de procedència municipal, correspon a la comarca establir i prestar serveis supramunicipals complementaris dels municipis. L'opció A és correcta i la cita conté els dos elements necessaris: la procedència municipal i la facultat de la comarca. Les altres opcions (competència provincial, llei estatal, comissió de comptes) no tenen suport al text. L'enunciat en forma de cas pràctic és clar i no hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negatiu. El text diu que a partir de 1931 les Esquadres es van mantenir, es van adaptar al règim, es van identificar amb les institucions pròpies i el govern català, i van ser lleials als presidents de la Generalitat. Això cobreix les opcions A, B i C, i la cita les conté totes. Dissoldre-les i substituir-les per la Guàrdia Civil no hi apareix, i contradiu el 'no tan sols es van mantenir'. Per tant D és l'única que no s'ajusta. No hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la Guàrdia Urbana de Barcelona es va formar el 1843, i la cita ho recull amb l'any. Els anys 1719 (institucionalització dels Mossos), 1877 i 1931 (República) són distractors que no corresponen a aquest fet. És una dada històrica rellevant per a l'examen, clara i amb una sola resposta. No hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.2\",\"verdict\":\"VALID\",\"reason\":\"El text atribueix al règim franquista la mescla d'interessos del règim amb tasques policials i militars, i el partit únic com a braç de la policia. La cita ho conté íntegrament. Els altres períodes (Segona República, segle XVIII, restauració de la Generalitat) es descriuen al text amb altres trets, així que només C és correcta. No hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que Espanya s'incorpora a la UE mitjançant la signatura del Tractat d'adhesió, autoritzat per la Llei orgànica 10/1985, de 2 d'agost. La cita ho reprodueix sencer. Les altres opcions (Acta Única, Maastricht, reial decret llei) apareixen al text com a altres fets, però no com a via d'incorporació d'Espanya. La pregunta és clara i no hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El contingut de l'opció A està al text: el Tractat de Brussel·les (1965) va unificar la Comissió i el Consell, i els tribunals i les assemblees ja s'havien unificat per un conveni a Roma el 25 de març de 1957. El problema és que a l'original aquesta frase continua amb 'i per l'Acta Única Europea (AUE)', i la cita la talla just abans. Això fa que l'opció C (Acta Única de 1986) sembli incorrecta sense que la cita mostri per què, quan el text de la mateixa frase esmenta l'AUE. A més, la pregunta combina dos elements, la qual cosa la fa feixuga. Per això la cita no és prou fidel i cal revisar-la.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que des de l'1 de juny de 2021 és operativa la Fiscalia Europea, i la cita ho conté. Els altres anys i dates (2001 Eurojust, 1 de gener de 1986 adhesió, novembre de 2014 doble majoria) són fets diferents del text i funcionen com a distractors. És una dada concreta útil per a l'examen i no hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el 1907 Enric Prat de la Riba és elegit president de la Diputació de Barcelona i funda l'Institut d'Estudis Catalans, i la cita ho conté. Òmnium Cultural (1961), L'Avenç (finals del segle XIX) i la Cancelleria reial (Pere el Cerimoniós) apareixen al text amb altres dates o contextos, així que només D és correcta. La pregunta és clara i no hi ha parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "13.1",
+    "13.2",
+    "14.0",
+    "14.1",
+    "14.2",
+    "15.0",
+    "15.1",
+    "15.2",
+    "16.0",
+    "16.1"
+   ],
+   "prompt_sha256": "590e44f31bfbb5424ad429e08b63418aa890453ade76745ef65a07127958d21d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "13.1": "bc88a79bc08e25a68f4be8ccf1d8a35e3682b7a345b4fcdfe3e9ec49520a8f67",
+    "13.2": "6976158866a3e9ee9616317594213e00e038bd9c9e5cafae95a12bde3f2542e2",
+    "14.0": "875df1fefcd0b971baad39f3737e805904ec59df8d057bcd47144d8a0ef38b22",
+    "14.1": "2da8306da10e11524b3341f18fa95c3c1b9fccbb3334fe397136f32814abcc18",
+    "14.2": "e5a65a01a8f92c828646c97e675c7c3062f6f0c5b538e97c030addd83d3c42cc",
+    "15.0": "2635440f79cff5425abae4ed414366a5f6c0046b73388123acffb0017b271b88",
+    "15.1": "32c556ce406120fb2635864422212d8bc6cc696113b8f5e16bde51324ed88456",
+    "15.2": "5431087c5afbab83adb0a942e61f95e085d7c108e8b2c947fd28c852d74e668a",
+    "16.0": "fdc21cc056110d8a43604c8733c0f55973a59ce4b42fae0ac8d1501aae8b7378",
+    "16.1": "4fac4925e67c0b1b4d4ea8dc1c769001500772d1c3507cac4f3bf8174b9a9222"
+   },
+   "veredictos": [
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, como la inmensa mayoría de la población es analfabeta y no entiende el latín culto, el Concilio de Tours (813) manda predicar en la lengua del pueblo. La cita contiene la causa completa. Los distractores contradicen el texto: el latín seguía dominando los documentos y la administración, la Cancillería real es del siglo XIV y no se menciona ninguna prohibición de los reyes. Solo una opción es correcta y la pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en los territorios que pasaron a Francia en 1659 se prohibió enseguida el catalán en la enseñanza y que en 1700 se prohibió en los documentos públicos por un edicto de Luis XIV. La cita recoge los dos elementos y su orden. La opción B invierte el orden, la C aplica Nueva Planta (1716) al Rosellón y la D contradice el texto. Solo la A es correcta y es una pregunta útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 19 del texto asigna inspector a la escala ejecutiva, sargento a la intermedia y caporal a la básica. La cita contiene las tres asignaciones necesarias. Las demás combinaciones contradicen el texto: superior es solo para superintendente, intendente mayor e intendente, y sargento no es ejecutiva. La pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 8 dice que la policía debe usar los recursos coactivos solo en situaciones extremas y aplicando los principios de oportunidad, proporcionalidad y congruencia. La cita lo recoge entero. Las otras opciones (siempre por orden, en cualquier intervención, con autorización judicial previa) no aparecen en el texto y lo contradicen. Solo la C es correcta y no hay pistas indebidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 12 dice que la unidad territorial básica para la implantación de la PG-ME es el área básica policial (ABP). La cita lo dice literalmente. La región policial es un conjunto de ABP, y ni la comarca ni la comisaría general figuran como unidad básica. Es un dato concreto y útil, y solo hay una respuesta posible.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el artículo 164.2 del Estatuto atribuye a la Generalitat el mando supremo de la policía autonómica y la coordinación de las policías locales. La cita lo recoge. La Junta de Seguridad coordina la Policía de la Generalitat con las FCSE, no las policías locales, y ni las FCSE ni los ayuntamientos tienen esa coordinación. Solo la C es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, cuando una comunidad autónoma prevé crear policía autonómica pero no puede costearla, se hace una adscripción funcional de unidades de la Policía Nacional. La cita incluye ese mecanismo y la condición. La cesión de policías locales, la integración de la Guardia Civil en la Junta y el consorcio policial no aparecen en el texto. Solo la B es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La función de vigilar espacios públicos, proteger manifestaciones y mantener el orden en grandes concentraciones corresponde prioritariamente a las policías autonómicas. Las FCSE intervienen a requerimiento de las autoridades autonómicas o por decisión propia de las estatales. La cita contiene ambos elementos. Las demás opciones invierten la titularidad o inventan condiciones (junta local, Junta de Seguridad). Solo la A es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 10 dice que, entre los órganos auxiliares de los órganos constitucionales, hay que destacar el Tribunal de Cuentas y el Consejo de Estado. La cita lo recoge completo. El Tribunal Constitucional, el Tribunal Supremo y el CGPJ no se presentan como auxiliares en el texto. Solo la B es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Es una pregunta negativa. El texto enumera cuatro autonomías de las Cortes: reglamentaria, de gobierno interno, administrativa y presupuestaria. La cita contiene la lista completa, así que permite ver que reglamentaria, presupuestaria y de gobierno interno sí figuran. La autonomía jurisdiccional no aparece, por lo que la B es la única que no es una concreción. La pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-ae05ae999dd556045.jsonl",
+    "respuesta_sha256": "f3ab25233ddc2fa211347b8634836f9b06b8368d1f839757ce755f8eba08962c"
+   },
+   "registrada_el": "2026-10-06T09:47:32",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:47:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-ae05ae999dd556045.jsonl",
+      "respuesta_sha256": "f3ab25233ddc2fa211347b8634836f9b06b8368d1f839757ce755f8eba08962c"
+     },
+     "respuesta": "[\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, como la inmensa mayoría de la población es analfabeta y no entiende el latín culto, el Concilio de Tours (813) manda predicar en la lengua del pueblo. La cita contiene la causa completa. Los distractores contradicen el texto: el latín seguía dominando los documentos y la administración, la Cancillería real es del siglo XIV y no se menciona ninguna prohibición de los reyes. Solo una opción es correcta y la pregunta es clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en los territorios que pasaron a Francia en 1659 se prohibió enseguida el catalán en la enseñanza y que en 1700 se prohibió en los documentos públicos por un edicto de Luis XIV. La cita recoge los dos elementos y su orden. La opción B invierte el orden, la C aplica Nueva Planta (1716) al Rosellón y la D contradice el texto. Solo la A es correcta y es una pregunta útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 19 del texto asigna inspector a la escala ejecutiva, sargento a la intermedia y caporal a la básica. La cita contiene las tres asignaciones necesarias. Las demás combinaciones contradicen el texto: superior es solo para superintendente, intendente mayor e intendente, y sargento no es ejecutiva. La pregunta es clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"El punto 8 dice que la policía debe usar los recursos coactivos solo en situaciones extremas y aplicando los principios de oportunidad, proporcionalidad y congruencia. La cita lo recoge entero. Las otras opciones (siempre por orden, en cualquier intervención, con autorización judicial previa) no aparecen en el texto y lo contradicen. Solo la C es correcta y no hay pistas indebidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.2\",\"verdict\":\"VALID\",\"reason\":\"El punto 12 dice que la unidad territorial básica para la implantación de la PG-ME es el área básica policial (ABP). La cita lo dice literalmente. La región policial es un conjunto de ABP, y ni la comarca ni la comisaría general figuran como unidad básica. Es un dato concreto y útil, y solo hay una respuesta posible.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el artículo 164.2 del Estatuto atribuye a la Generalitat el mando supremo de la policía autonómica y la coordinación de las policías locales. La cita lo recoge. La Junta de Seguridad coordina la Policía de la Generalitat con las FCSE, no las policías locales, y ni las FCSE ni los ayuntamientos tienen esa coordinación. Solo la C es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, cuando una comunidad autónoma prevé crear policía autonómica pero no puede costearla, se hace una adscripción funcional de unidades de la Policía Nacional. La cita incluye ese mecanismo y la condición. La cesión de policías locales, la integración de la Guardia Civil en la Junta y el consorcio policial no aparecen en el texto. Solo la B es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.2\",\"verdict\":\"VALID\",\"reason\":\"La función de vigilar espacios públicos, proteger manifestaciones y mantener el orden en grandes concentraciones corresponde prioritariamente a las policías autonómicas. Las FCSE intervienen a requerimiento de las autoridades autonómicas o por decisión propia de las estatales. La cita contiene ambos elementos. Las demás opciones invierten la titularidad o inventan condiciones (junta local, Junta de Seguridad). Solo la A es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 10 dice que, entre los órganos auxiliares de los órganos constitucionales, hay que destacar el Tribunal de Cuentas y el Consejo de Estado. La cita lo recoge completo. El Tribunal Constitucional, el Tribunal Supremo y el CGPJ no se presentan como auxiliares en el texto. Solo la B es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"Es una pregunta negativa. El texto enumera cuatro autonomías de las Cortes: reglamentaria, de gobierno interno, administrativa y presupuestaria. La cita contiene la lista completa, así que permite ver que reglamentaria, presupuestaria y de gobierno interno sí figuran. La autonomía jurisdiccional no aparece, por lo que la B es la única que no es una concreción. La pregunta es clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}
