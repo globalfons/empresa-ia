@@ -661,17 +661,70 @@
     "veredictos": "8da15d7a0a2cd67ac557148c31133d8c3e4277b31833e11253c2157661ccf7a5",
     "prompt_juez": "8d6126bdac9deb42f70dd1d9fd264b67de8beff3e3bdf9bbde938084eda63c5d"
    }
+  },
+  {
+   "id": "S00026",
+   "fecha": "2026-10-06T09:16:51",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 10,
+   "generadas": 30,
+   "VALID": 28,
+   "REVIEW_REQUIRED": 2,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "8e12eb59ba031307850535ef70c8327098b79fe9211b28044500f61654f4bdcd",
+    "revision": "c474f680a5cde1961243ccf1cc29049dc702a37637f78841f5cd01f72c10bfc6",
+    "veredictos": "1c83eec3de6e24aefd062fe076969cca46f701105b6b264ac79eac8bd5a07305",
+    "prompt_juez": "80bc25c4b5f80c4867b18ac29f5914a0ee079ff90da8684e3ceec65735324609"
+   }
+  },
+  {
+   "id": "S00027",
+   "fecha": "2026-10-06T09:24:41",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 18,
+   "generadas": 49,
+   "VALID": 44,
+   "REVIEW_REQUIRED": 5,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "7d468b398c6e18ff8838218cebdc7802f5d2eff4e550eaac9714048ef1a0d4ca",
+    "revision": "be7c6a7d27b671d3c2c1d1a4f55d62c68a9784fa031c9e4a088972e121ccd681",
+    "veredictos": "c1c7d2f19e990bf29e79b9ff32a4e70ec723ed1ca986b51fd3e2b89745311383",
+    "prompt_juez": "fec6974e09dfaf1c328576f1ee31507fe6b395b05f8eed13e94542e45eaac6e5"
+   }
   }
  ],
- "pausa": {
-  "estado": "GENERATION_PAUSED",
-  "motivo": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED), S00024 (2 VALID) y S00025 (1 VALID) = 17 VALID nuevas, el máximo autorizado. B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar.",
-  "lote": "S00025",
-  "fecha": "2026-10-06"
- },
+ "pausa": null,
  "omitidos": {
   "lo-4-2015|24": 2,
-  "guia-mossos|C.2.2": 1
+  "guia-mossos|C.2.2": 2
  },
  "pausas_levantadas": [
   {
@@ -713,6 +766,13 @@
    "estado": "GENERATION_PAUSED",
    "motivo": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED) y S00024 (2 VALID). B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar.",
    "lote": "S00024",
+   "fecha": "2026-10-06",
+   "levantada": "2026-10-06"
+  },
+  {
+   "estado": "GENERATION_PAUSED",
+   "motivo": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED), S00024 (2 VALID) y S00025 (1 VALID) = 17 VALID nuevas, el máximo autorizado. B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar.",
+   "lote": "S00025",
    "fecha": "2026-10-06",
    "levantada": "2026-10-06"
   }

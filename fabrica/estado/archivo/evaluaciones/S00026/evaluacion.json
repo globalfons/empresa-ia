@@ -1,0 +1,622 @@
+{
+ "evaluacion": "S00026",
+ "creada_el": "2026-10-06T01:14:36",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 30,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0"
+   ],
+   "prompt_sha256": "6d18a5523720c639322568a89886e3d80f106d65464bbcb316e0af8a79f722a7",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "15b4a2fd2fdc22e9c3414000bbfc72fe394c8707008b72e087088c8abff58802",
+    "0.1": "accdcf92e5f37c11dd886599a48da162c85c4a30b56148e5b4b9c33564a65db7",
+    "0.2": "dbdc28c9503713da326ffe37109864aa57eee217e16460c80d108172a82a092f",
+    "1.0": "251e78113cab4a5239593d2d315bf124692c44ecb36023c5b1fd8ade482665a8",
+    "1.1": "694c69402366f6270a45b87673d0286c3ced9d7a5236400e0881274ef25cb696",
+    "1.2": "2abbc73c1540985a5b1251426579b8f2690c7ff33be8079d109c4229d1a34f11",
+    "2.0": "5da4db213af5a7402176bd1450c3a00dea5f3c7d3ad57311575f7d6e9c6edf6c",
+    "2.1": "4184ca3bce26382b8be08c0169623bb0f48221b7694c289d88e0851522b9a1fc",
+    "2.2": "87605d3dd1bf76b8943615530b77d663ae2aebdb20e9d0705698b8e41244495a",
+    "3.0": "d226042daf9de381f107da4879b978d235b5b69fe2745faa30dfa955f856e118"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la crisi del sistema esclavista, a conseqüència de la paralització de l'expansió militar, feia que no augmentés el nombre d'esclaus i en pujés el preu. L'opció B ho recull. La cita conté tota la cadena causal (paralització, no augment d'esclaus, augment del preu). Les guerres púniques, els visigots i els sarraïns apareixen al text però no com a causa del preu, de manera que cap altra opció és vàlida. La pregunta és clara i no és trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu literalment que el 218 a. de C. Gneu Corneli Escipió posava peu a Empúries, i l'opció D és aquest any. La cita conté l'any i el fet. Les altres dates (264, 197, 133 a. de C.) no hi surten i no són defensables. És una fita històrica del temari, per tant no és trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que cap al 720 ja s'havia produït l'ocupació sarraïna dels territoris catalans, i això justifica l'opció B. La cita inclou aquesta frase i l'entrada del 711. Les altres opcions no s'ajusten a aquesta data: els visigots havien estat derrotats el 711, els romans van desembarcar el 218 a. de C. i Tarraco era la ciutat principal de la Catalunya romana, no la capital visigoda. Només una opció és vàlida.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu 'Per raons energètiques, les indústries se situaren al litoral, on podia arribar el carbó, i al llarg dels rius Ter i Llobregat', i l'opció C ho recull. La cita ho conté íntegrament. Les altres tres causes (mà d'obra, avantatges fiscals, exportació a Amèrica) no apareixen al text. La pregunta és clara i no és trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la línia Barcelona-Mataró de 1848 va ser la primera construïda a Espanya, i l'opció A coincideix. La cita ho conté. Les altres línies (Sabadell, Martorell, Granollers) no apareixen al text. És una fita del temari.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "És una pregunta en negatiu. El text associa l'avellana i l'ametlla amb Tarragona, i no amb el Maresme, de manera que l'opció C és l'única associació errònia. La cita conté les quatre associacions, i per tant també es veu que les opcions A, B i D sí que hi consten. Només una opció és incorrecta i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que en la nova societat del coneixement, el coneixement és la primera font de productivitat, i l'opció B ho recull. La cita conté la frase sencera. Els recursos naturals, els béns manufacturats i el capital financer corresponen a l'era industrial o no hi surten, i no es presenten com a primera font de productivitat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text enumera com a característiques del canvi que 'disminueix l'ocupació industrial tradicional', i això és l'opció C. Les altres tres contradiuen el text: l'agricultura passa a ser minoritària, les feines executives i tècniques augmenten i l'ocupació d'alta qualificació incrementa. La cita conté els punts a) a d), per tant s'hi veu que les altres opcions són falses.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text descriu l'Administració oberta amb serveis integrats i no compartimentats, tràmits simplificats, transaccions electròniques i servei 24 hores els 7 dies de la setmana. L'opció D recull dos d'aquests objectius. Les altres tres els contradiuen: serveis compartimentats, gestions presencials en paper i horari limitat. La cita conté tots els elements necessaris.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que, des del Tractat d'Amsterdam (1999), el ciutadà comunitari es pot desplaçar, assentar i treballar lliurement 'sense més requeriments que els administratius i burocràtics', i això és l'opció C. La cita conté la frase sencera. Un contracte previ, un permís de residència i treball o una autorització del país d'origen no hi apareixen com a requisit. El permís de residència i treball només es menciona per als estrangers de tercers països. La formulació de l'opció correcta és gairebé literal, però la pregunta és útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-acd45dfa05b9ea686.jsonl",
+    "respuesta_sha256": "5ba524890f8070c43b60074331bcd94422c6a61cbe332f585f0bc105ea036166"
+   },
+   "registrada_el": "2026-10-06T09:16:48",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:16:48",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-acd45dfa05b9ea686.jsonl",
+      "respuesta_sha256": "5ba524890f8070c43b60074331bcd94422c6a61cbe332f585f0bc105ea036166"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la crisi del sistema esclavista, a conseqüència de la paralització de l'expansió militar, feia que no augmentés el nombre d'esclaus i en pujés el preu. L'opció B ho recull. La cita conté tota la cadena causal (paralització, no augment d'esclaus, augment del preu). Les guerres púniques, els visigots i els sarraïns apareixen al text però no com a causa del preu, de manera que cap altra opció és vàlida. La pregunta és clara i no és trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu literalment que el 218 a. de C. Gneu Corneli Escipió posava peu a Empúries, i l'opció D és aquest any. La cita conté l'any i el fet. Les altres dates (264, 197, 133 a. de C.) no hi surten i no són defensables. És una fita històrica del temari, per tant no és trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que cap al 720 ja s'havia produït l'ocupació sarraïna dels territoris catalans, i això justifica l'opció B. La cita inclou aquesta frase i l'entrada del 711. Les altres opcions no s'ajusten a aquesta data: els visigots havien estat derrotats el 711, els romans van desembarcar el 218 a. de C. i Tarraco era la ciutat principal de la Catalunya romana, no la capital visigoda. Només una opció és vàlida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu 'Per raons energètiques, les indústries se situaren al litoral, on podia arribar el carbó, i al llarg dels rius Ter i Llobregat', i l'opció C ho recull. La cita ho conté íntegrament. Les altres tres causes (mà d'obra, avantatges fiscals, exportació a Amèrica) no apareixen al text. La pregunta és clara i no és trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la línia Barcelona-Mataró de 1848 va ser la primera construïda a Espanya, i l'opció A coincideix. La cita ho conté. Les altres línies (Sabadell, Martorell, Granollers) no apareixen al text. És una fita del temari.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"És una pregunta en negatiu. El text associa l'avellana i l'ametlla amb Tarragona, i no amb el Maresme, de manera que l'opció C és l'única associació errònia. La cita conté les quatre associacions, i per tant també es veu que les opcions A, B i D sí que hi consten. Només una opció és incorrecta i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que en la nova societat del coneixement, el coneixement és la primera font de productivitat, i l'opció B ho recull. La cita conté la frase sencera. Els recursos naturals, els béns manufacturats i el capital financer corresponen a l'era industrial o no hi surten, i no es presenten com a primera font de productivitat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El text enumera com a característiques del canvi que 'disminueix l'ocupació industrial tradicional', i això és l'opció C. Les altres tres contradiuen el text: l'agricultura passa a ser minoritària, les feines executives i tècniques augmenten i l'ocupació d'alta qualificació incrementa. La cita conté els punts a) a d), per tant s'hi veu que les altres opcions són falses.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El text descriu l'Administració oberta amb serveis integrats i no compartimentats, tràmits simplificats, transaccions electròniques i servei 24 hores els 7 dies de la setmana. L'opció D recull dos d'aquests objectius. Les altres tres els contradiuen: serveis compartimentats, gestions presencials en paper i horari limitat. La cita conté tots els elements necessaris.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que, des del Tractat d'Amsterdam (1999), el ciutadà comunitari es pot desplaçar, assentar i treballar lliurement 'sense més requeriments que els administratius i burocràtics', i això és l'opció C. La cita conté la frase sencera. Un contracte previ, un permís de residència i treball o una autorització del país d'origen no hi apareixen com a requisit. El permís de residència i treball només es menciona per als estrangers de tercers països. La formulació de l'opció correcta és gairebé literal, però la pregunta és útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "3.1",
+    "3.2",
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "6.1"
+   ],
+   "prompt_sha256": "407d52ef90934dc8fb2930e7da8f4d75d7faa84db16d3a2bbf055e84f4dc537d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "3.1": "9350afd2985e58e52bdd4d3c9854d94b853dbdfa2df13f7415d3539c490ef149",
+    "3.2": "ac798aabcca5e8b0a3b059b84d4a2683e2c4b427f05a255760482e646f3d48be",
+    "4.0": "53cf217fbf0fde21755d1a5be20b81cafe56c7f880860eab901d79c715fe4859",
+    "4.1": "8f9f5f15bc1c78ff867f77f450397f88fd138103a8e99f2994c7833e23f6ba15",
+    "4.2": "d0478a039ad1eb53ebc8c50d06d6c1304fdfcf4ed42ee98b02a24868617c238a",
+    "5.0": "99483d6f576be1aab7e8117ed06ec2ac0949672b4b0128b7b2de52b9b39d54cc",
+    "5.1": "bd061c60957e54955e13583c535f03c5ed464010734f06265fe5091e7ad9f13b",
+    "5.2": "46de3127948f2850ceeb4aa3eba9b3a1c0d91b32a837fdbe2370046ad37ea3ef",
+    "6.0": "037455a41dec5dfcd2dc19855d59019517c6ecb062981c5786a0db0f2a802c30",
+    "6.1": "f8e24ba8fe7b0dd1bff7295391b9b9e7e42c3102b283f3386adaaddb44a5bad0"
+   },
+   "veredictos": [
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los reglamentos tienen alcance general, son obligatorios y directamente aplicables en todos los Estados miembros, mientras que las directivas requieren transposición. La opción C coincide con la cita, que por sí sola basta para elegirla. Las demás (transposición, decisión del Estado, ratificación) contradicen el texto. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que la Llei 12/2009, de 30 de octubre, es reguladora del derecho de asilo y de la protección subsidiaria. La cita contiene todo el elemento. Los distractores corresponden a otras normas del texto (LO 8/2000, Llei 10/2010, Decret 150/2014), por lo que solo B es correcta. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto fija dos meses desde la primera votación de investidura sin que ningún candidato obtenga la confianza para la disolución automática. La cita recoge plazo, punto de cómputo y consecuencia. Los demás plazos no aparecen en el texto. Es un plazo concreto, útil como material de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que las sesiones extraordinarias las convoca el presidente o presidenta del Parlamento. La cita lo recoge. El presidente de la Generalitat solo puede solicitarlas, no convocarlas, y la Junta de Portavoces y el vicepresidente primero no tienen esa función en el texto. La pregunta pide quién convoca, así que solo C es correcta. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la Diputación Permanente está presidida por el presidente del Parlamento y formada por veintitrés miembros. La cita incluye ambos elementos (presidencia y número). Las otras opciones cambian presidente o número y contradicen el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los derechos personales o de libertad no necesitan una ley para regular su ejercicio, sino para protegerlos, y que vinculan directamente a las administraciones. La cita lo contiene. A (intervención activa) corresponde a los derechos económicos y sociales, B (participar en la voluntad estatal) a los políticos, y D contradice la cita. Solo C es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. La cita enumera educación, propiedad y negociación colectiva entre los derechos económicos y sociales, así que se ve que tres opciones sí figuran. El derecho de asociación (art. 22) el texto lo sitúa en los derechos de participación o políticos, no en los económicos y sociales. Solo B es la respuesta correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto relaciona los derechos de participación o políticos con el Estado democrático. Los derechos personales se vinculan con el Estado de derecho y los económicos y sociales con el Estado social, de modo que B y C son incorrectas. 'Estado liberal' aparece solo como contraste de la separación entre esfera privada y pública, que se supera, por lo que D es incorrecta. La cita basta para elegir A.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el Estado de estructura compuesta resultante de la CE es conocido doctrinalmente como Estado autonómico o Estado de las autonomías. La cita contiene esa denominación completa. Los otros nombres (federal, regional, unitario o descentralizado) no se atribuyen a ese Estado en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el constituyente remite la decisión final sobre la forma de organización territorial a unas normas posteriores, los estatutos de autonomía. La cita recoge exactamente esto. Las demás opciones (ley orgánica de 1979, Gobierno anual, Tribunal Constitucional) no tienen apoyo en el texto. Pregunta clara y con planteamiento de situación.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a12e371877e158b66.jsonl",
+    "respuesta_sha256": "14b45e2095823dc20a1b821da2f4514702cc95c61d8e9ec982b390d55c337395"
+   },
+   "registrada_el": "2026-10-06T09:16:48",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:16:48",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a12e371877e158b66.jsonl",
+      "respuesta_sha256": "14b45e2095823dc20a1b821da2f4514702cc95c61d8e9ec982b390d55c337395"
+     },
+     "respuesta": "[\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los reglamentos tienen alcance general, son obligatorios y directamente aplicables en todos los Estados miembros, mientras que las directivas requieren transposición. La opción C coincide con la cita, que por sí sola basta para elegirla. Las demás (transposición, decisión del Estado, ratificación) contradicen el texto. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.2\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que la Llei 12/2009, de 30 de octubre, es reguladora del derecho de asilo y de la protección subsidiaria. La cita contiene todo el elemento. Los distractores corresponden a otras normas del texto (LO 8/2000, Llei 10/2010, Decret 150/2014), por lo que solo B es correcta. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El texto fija dos meses desde la primera votación de investidura sin que ningún candidato obtenga la confianza para la disolución automática. La cita recoge plazo, punto de cómputo y consecuencia. Los demás plazos no aparecen en el texto. Es un plazo concreto, útil como material de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que las sesiones extraordinarias las convoca el presidente o presidenta del Parlamento. La cita lo recoge. El presidente de la Generalitat solo puede solicitarlas, no convocarlas, y la Junta de Portavoces y el vicepresidente primero no tienen esa función en el texto. La pregunta pide quién convoca, así que solo C es correcta. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la Diputación Permanente está presidida por el presidente del Parlamento y formada por veintitrés miembros. La cita incluye ambos elementos (presidencia y número). Las otras opciones cambian presidente o número y contradicen el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los derechos personales o de libertad no necesitan una ley para regular su ejercicio, sino para protegerlos, y que vinculan directamente a las administraciones. La cita lo contiene. A (intervención activa) corresponde a los derechos económicos y sociales, B (participar en la voluntad estatal) a los políticos, y D contradice la cita. Solo C es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. La cita enumera educación, propiedad y negociación colectiva entre los derechos económicos y sociales, así que se ve que tres opciones sí figuran. El derecho de asociación (art. 22) el texto lo sitúa en los derechos de participación o políticos, no en los económicos y sociales. Solo B es la respuesta correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"El texto relaciona los derechos de participación o políticos con el Estado democrático. Los derechos personales se vinculan con el Estado de derecho y los económicos y sociales con el Estado social, de modo que B y C son incorrectas. 'Estado liberal' aparece solo como contraste de la separación entre esfera privada y pública, que se supera, por lo que D es incorrecta. La cita basta para elegir A.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el Estado de estructura compuesta resultante de la CE es conocido doctrinalmente como Estado autonómico o Estado de las autonomías. La cita contiene esa denominación completa. Los otros nombres (federal, regional, unitario o descentralizado) no se atribuyen a ese Estado en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el constituyente remite la decisión final sobre la forma de organización territorial a unas normas posteriores, los estatutos de autonomía. La cita recoge exactamente esto. Las demás opciones (ley orgánica de 1979, Gobierno anual, Tribunal Constitucional) no tienen apoyo en el texto. Pregunta clara y con planteamiento de situación.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "6.2",
+    "7.0",
+    "7.1",
+    "7.2",
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2"
+   ],
+   "prompt_sha256": "53fa24df5a8a5232caac0e7ef25956ef49cd5119b7295bb3fdf308d64879e454",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "6.2": "d482cfce12730a9122aa0755cdbe84f2ef8438cf429dcdd5ea3fb4b9bee6f180",
+    "7.0": "e2cf32920bf81249928b3e7686bb8b3c3e02402398a163cd441eb55b33776a65",
+    "7.1": "ce5a5d2984393436781247a806fb5af3b07b7c3a6016ffd47aca429ebd1eb8a9",
+    "7.2": "88af655528cb5e8bfb7013e3314b1ca23d4be0a8335960d7041e90065fd0242a",
+    "8.0": "5951eeada5c27643415b0689684ebf993efb621f99aa170831ee65ea240f5c44",
+    "8.1": "5b48bd125bdde06493b8cbb85d1ea2ab82ce68b14d27f1d7e0989a7b9cb570cf",
+    "8.2": "5b7578578fce1783b058ffd6455e757aecc2b1378c30de30e00788d65953dbf3",
+    "9.0": "4d3e746ad2d9516bf613f2bd0edc704a43b2d164972c48f753dde7f1d60cf82d",
+    "9.1": "a6151b9a194b8d344fd54bf64ba6304150c7dadad13a8c49abe303024dabdd64",
+    "9.2": "a1b5e56a13842cc260362e4e237408db5d0e8063b1d2bb7d61536cf1ad64b9f4"
+   },
+   "veredictos": [
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la fórmula definidora de la CE tiene dos elementos: un único Estado, constitución y ordenamiento con igualdad de derechos, y el reconocimiento y garantía del derecho a la autonomía de nacionalidades y regiones. La opción a=2 es literalmente el segundo elemento. La cita, aunque acaba cortada, contiene ambos elementos. Las otras opciones (coexistencia de ordenamientos soberanos, obligación de constituirse en comunidad, diferencia de derechos por territorio) contradicen o no aparecen en el texto. Pregunta clara y única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que el Turó de l'Home (1.706 m), en el Montseny, es el punto culminante del Sistema Mediterrani, y la cita lo recoge íntegro. Los distractores (Puigsacalm 1.515 m, Montsant 1.163 m, Montserrat 1.236 m) aparecen con altitudes menores o fuera del Sistema Mediterrani, así que solo hay una respuesta correcta. Pregunta de dato concreto, útil y sin pistas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto sitúa la actividad volcánica del pla d'Olot, con cons como Santa Margarida, en la Serralada Transversal. La cita contiene esa asociación. Depressió Prelitoral, Serralada Litoral y Prepirineu son otras unidades descritas sin vulcanismo, por lo que no son arguméntables. Caso práctico claro y de respuesta única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en el Pirineu axial las altitudes van disminuyendo de oeste a este, y la cita lo incluye literalmente. Las otras tres opciones (de este a oeste, aumentan de norte a sur, aumentan de oeste a este) contradicen el texto o no se mencionan. Respuesta única y pregunta bien formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en 1723 se remodelaron y ampliaron las esquadres y Pere Anton Veciana i Rabasa fue nombrado comandante, y la cita lo contiene entero. Los años 1690 (tradición descartada), 1719 (organización de las esquadres) y 1721 (desmantelamiento) aparecen en el texto con otros hechos, así que ninguno es correcto. Dato histórico de hito del temario, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negativo. La cita contiene los tres elementos que sí se ajustan al texto: mandados siempre por la familia Veciana, precedente de las policías modernas y modelo exportado a otras zonas de la monarquía. Queda como incorrecta la opción 1: según el texto, las esquadres se desarmaron en 1721 al desaparecer la tensión fronteriza, no por su poca fidelidad, y la fidelidad se premiaba a los Veciana. Respuesta única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en 1719 el capitán general y la Reial Audiència organizaron esquadres de paisanos distribuidas por los corregimientos, y la cita contiene el contexto y la medida. El sometent estaba prohibido, no se menciona traslado de la Audiència a Valls ni guardia de soldados franceses. Respuesta única, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que una solución puede ser correcta pero no estándar, y la cita lo recoge. Las otras opciones contradicen el texto: el estándar no supone renunciar a la riqueza de otras variedades, no se equipara a lengua correcta y sí está codificado (institucionalizado, legitimado, codificado y normativizado). Opción única y pregunta útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que las variedades históricas se asocian al origen cronológico del hablante (Llull, Ausiàs March, Monzó). La cita contiene exactamente esa frase. Los orígenes geográfico y social corresponden a otras variedades, y el funcional no es un origen del hablante sino el registro por uso. Respuesta única y de una distinción propia del temario.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que las variedades sociales se pueden minimizar con la enseñanza del estándar o por los medios de comunicación, y la cita lo recoge. Las otras opciones (potenciar lenguajes de especialidad, registro coloquial en las escuelas, separar canal oral y escrito) no aparecen en el texto como medio para ello. Respuesta única y bien formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-ac27e85339e9d8655.jsonl",
+    "respuesta_sha256": "70bc32dd047c54dea68b33a33c761a6cfd703569e95b7f6a211d5730dea036fc"
+   },
+   "registrada_el": "2026-10-06T09:16:48",
+   "intentos": [
+    {
+     "t": "2026-10-06T09:16:48",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-ac27e85339e9d8655.jsonl",
+      "respuesta_sha256": "70bc32dd047c54dea68b33a33c761a6cfd703569e95b7f6a211d5730dea036fc"
+     },
+     "respuesta": "[{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la fórmula definidora de la CE tiene dos elementos: un único Estado, constitución y ordenamiento con igualdad de derechos, y el reconocimiento y garantía del derecho a la autonomía de nacionalidades y regiones. La opción a=2 es literalmente el segundo elemento. La cita, aunque acaba cortada, contiene ambos elementos. Las otras opciones (coexistencia de ordenamientos soberanos, obligación de constituirse en comunidad, diferencia de derechos por territorio) contradicen o no aparecen en el texto. Pregunta clara y única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que el Turó de l'Home (1.706 m), en el Montseny, es el punto culminante del Sistema Mediterrani, y la cita lo recoge íntegro. Los distractores (Puigsacalm 1.515 m, Montsant 1.163 m, Montserrat 1.236 m) aparecen con altitudes menores o fuera del Sistema Mediterrani, así que solo hay una respuesta correcta. Pregunta de dato concreto, útil y sin pistas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El texto sitúa la actividad volcánica del pla d'Olot, con cons como Santa Margarida, en la Serralada Transversal. La cita contiene esa asociación. Depressió Prelitoral, Serralada Litoral y Prepirineu son otras unidades descritas sin vulcanismo, por lo que no son arguméntables. Caso práctico claro y de respuesta única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"7.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en el Pirineu axial las altitudes van disminuyendo de oeste a este, y la cita lo incluye literalmente. Las otras tres opciones (de este a oeste, aumentan de norte a sur, aumentan de oeste a este) contradicen el texto o no se mencionan. Respuesta única y pregunta bien formulada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en 1723 se remodelaron y ampliaron las esquadres y Pere Anton Veciana i Rabasa fue nombrado comandante, y la cita lo contiene entero. Los años 1690 (tradición descartada), 1719 (organización de las esquadres) y 1721 (desmantelamiento) aparecen en el texto con otros hechos, así que ninguno es correcto. Dato histórico de hito del temario, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negativo. La cita contiene los tres elementos que sí se ajustan al texto: mandados siempre por la familia Veciana, precedente de las policías modernas y modelo exportado a otras zonas de la monarquía. Queda como incorrecta la opción 1: según el texto, las esquadres se desarmaron en 1721 al desaparecer la tensión fronteriza, no por su poca fidelidad, y la fidelidad se premiaba a los Veciana. Respuesta única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en 1719 el capitán general y la Reial Audiència organizaron esquadres de paisanos distribuidas por los corregimientos, y la cita contiene el contexto y la medida. El sometent estaba prohibido, no se menciona traslado de la Audiència a Valls ni guardia de soldados franceses. Respuesta única, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que una solución puede ser correcta pero no estándar, y la cita lo recoge. Las otras opciones contradicen el texto: el estándar no supone renunciar a la riqueza de otras variedades, no se equipara a lengua correcta y sí está codificado (institucionalizado, legitimado, codificado y normativizado). Opción única y pregunta útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que las variedades históricas se asocian al origen cronológico del hablante (Llull, Ausiàs March, Monzó). La cita contiene exactamente esa frase. Los orígenes geográfico y social corresponden a otras variedades, y el funcional no es un origen del hablante sino el registro por uso. Respuesta única y de una distinción propia del temario.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que las variedades sociales se pueden minimizar con la enseñanza del estándar o por los medios de comunicación, y la cita lo recoge. Las otras opciones (potenciar lenguajes de especialidad, registro coloquial en las escuelas, separar canal oral y escrito) no aparecen en el texto como medio para ello. Respuesta única y bien formulada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

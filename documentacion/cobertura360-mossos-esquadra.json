@@ -2,7 +2,7 @@
  "oposicion": "mossos-esquadra",
  "call_id": "46/26",
  "generado": "2026-10-06",
- "estado_fabrica": "GENERATION_PAUSED",
+ "estado_fabrica": "ACTIVE",
  "parametros": {
   "simulacros_disjuntos": 10,
   "min_por_apartado": 2,
@@ -22,8 +22,6 @@
     "apartados_con_fuente": 10,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.1.2",
-     "A.1.3",
      "A.1.4",
      "A.1.5",
      "A.1.6",
@@ -35,29 +33,27 @@
     "sobreexplotados": [],
     "capacidad": 90,
     "peso_examenes": 0.0739,
-    "TESTLEY_VALID": 2,
-    "REVIEW_REQUIRED": 0,
+    "TESTLEY_VALID": 7,
+    "REVIEW_REQUIRED": 1,
     "DEPRECATED": 1,
     "OFFICIAL_EXAM_VALID": 19,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 1,
-     "2": 1,
-     "3": 0
+     "1": 3,
+     "2": 3,
+     "3": 1
     },
     "tipos_minimos_ausentes": [
-     "aplicacion",
      "negativa",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 23,
     "objetivo_por_simulacros": 23,
     "objetivo_minimo_apartados": 20,
-    "faltan": 21,
+    "faltan": 16,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.016,
+    "cuota_testley": 0.035,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -69,8 +65,6 @@
     "apartados_con_fuente": 9,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.2.2",
-     "A.2.3",
      "A.2.4",
      "A.2.5",
      "A.2.6",
@@ -81,29 +75,28 @@
     "sobreexplotados": [],
     "capacidad": 89,
     "peso_examenes": 0.0545,
-    "TESTLEY_VALID": 2,
+    "TESTLEY_VALID": 8,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 14,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 1,
-     "2": 1,
+     "1": 3,
+     "2": 5,
      "3": 0
     },
     "tipos_minimos_ausentes": [
      "aplicacion",
-     "negativa",
      "dificil",
      "caso_practico"
     ],
     "objetivo": 18,
     "objetivo_por_simulacros": 17,
     "objetivo_minimo_apartados": 18,
-    "faltan": 16,
+    "faltan": 10,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.016,
+    "cuota_testley": 0.04,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -115,8 +108,6 @@
     "apartados_con_fuente": 6,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.3.2",
-     "A.3.3",
      "A.3.4",
      "A.3.5",
      "A.3.IF"
@@ -124,30 +115,29 @@
     "sobreexplotados": [],
     "capacidad": 55,
     "peso_examenes": 0.0272,
-    "TESTLEY_VALID": 3,
-    "REVIEW_REQUIRED": 0,
+    "TESTLEY_VALID": 8,
+    "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 7,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 1,
-     "2": 2,
+     "1": 3,
+     "2": 5,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "negativa",
      "dificil",
      "caso_practico"
     ],
     "objetivo": 12,
     "objetivo_por_simulacros": 9,
     "objetivo_minimo_apartados": 12,
-    "faltan": 9,
+    "faltan": 4,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.024,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.04,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "A.4",
@@ -157,38 +147,34 @@
     "apartados_con_fuente": 5,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.4.2",
-     "A.4.3",
      "A.4.4",
      "A.4.IF"
     ],
     "sobreexplotados": [],
     "capacidad": 50,
     "peso_examenes": 0.0623,
-    "TESTLEY_VALID": 3,
+    "TESTLEY_VALID": 9,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 16,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 1,
-     "2": 2,
-     "3": 0
+     "1": 3,
+     "2": 4,
+     "3": 2
     },
     "tipos_minimos_ausentes": [
-     "literal",
      "aplicacion",
      "negativa",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 19,
     "objetivo_por_simulacros": 19,
     "objetivo_minimo_apartados": 10,
-    "faltan": 16,
+    "faltan": 10,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.024,
+    "cuota_testley": 0.045,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -200,8 +186,6 @@
     "apartados_con_fuente": 7,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.5.2",
-     "A.5.3",
      "A.5.4",
      "A.5.5",
      "A.5.6",
@@ -210,28 +194,26 @@
     "sobreexplotados": [],
     "capacidad": 60,
     "peso_examenes": 0.0467,
-    "TESTLEY_VALID": 3,
-    "REVIEW_REQUIRED": 0,
+    "TESTLEY_VALID": 6,
+    "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 12,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 0,
-     "2": 2,
+     "1": 1,
+     "2": 4,
      "3": 1
     },
     "tipos_minimos_ausentes": [
-     "literal",
-     "conceptual",
      "caso_practico"
     ],
     "objetivo": 15,
     "objetivo_por_simulacros": 15,
     "objetivo_minimo_apartados": 14,
-    "faltan": 12,
+    "faltan": 9,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.024,
+    "cuota_testley": 0.03,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -243,8 +225,6 @@
     "apartados_con_fuente": 6,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.6.2",
-     "A.6.3",
      "A.6.4",
      "A.6.5",
      "A.6.IF"
@@ -252,20 +232,18 @@
     "sobreexplotados": [],
     "capacidad": 60,
     "peso_examenes": 0.0389,
-    "TESTLEY_VALID": 2,
+    "TESTLEY_VALID": 8,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 9,
     "OFFICIAL_EXAM_REVIEW": 1,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 1,
-     "2": 1,
+     "1": 3,
+     "2": 5,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "literal",
-     "aplicacion",
      "negativa",
      "dificil",
      "caso_practico"
@@ -273,11 +251,11 @@
     "objetivo": 12,
     "objetivo_por_simulacros": 12,
     "objetivo_minimo_apartados": 12,
-    "faltan": 10,
+    "faltan": 4,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.016,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.04,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "A.7",
@@ -287,8 +265,6 @@
     "apartados_con_fuente": 7,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "A.7.2",
-     "A.7.3",
      "A.7.4",
      "A.7.5",
      "A.7.6",
@@ -297,32 +273,30 @@
     "sobreexplotados": [],
     "capacidad": 66,
     "peso_examenes": 0.0311,
-    "TESTLEY_VALID": 2,
+    "TESTLEY_VALID": 8,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 8,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 2,
-     "2": 0,
-     "3": 0
+     "1": 4,
+     "2": 2,
+     "3": 2
     },
     "tipos_minimos_ausentes": [
      "conceptual",
-     "aplicacion",
      "negativa",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 14,
     "objetivo_por_simulacros": 10,
     "objetivo_minimo_apartados": 14,
-    "faltan": 12,
+    "faltan": 6,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.016,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.04,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "B.1",
@@ -337,7 +311,7 @@
     "sobreexplotados": [],
     "capacidad": 53,
     "peso_examenes": 0.0233,
-    "TESTLEY_VALID": 12,
+    "TESTLEY_VALID": 13,
     "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 4,
@@ -358,7 +332,7 @@
     "objetivo_minimo_apartados": 12,
     "faltan": 0,
     "concentracion_excesiva": true,
-    "cuota_testley": 0.095,
+    "cuota_testley": 0.066,
     "prioridad": "P3",
     "motivo": "objetivo cubierto"
    },
@@ -370,8 +344,6 @@
     "apartados_con_fuente": 6,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.2.2",
-     "B.2.3",
      "B.2.4",
      "B.2.5",
      "B.2.IF"
@@ -379,30 +351,28 @@
     "sobreexplotados": [],
     "capacidad": 58,
     "peso_examenes": 0.0778,
-    "TESTLEY_VALID": 2,
+    "TESTLEY_VALID": 8,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 1,
     "OFFICIAL_EXAM_VALID": 20,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 0,
-     "2": 2,
-     "3": 0
+     "1": 2,
+     "2": 4,
+     "3": 2
     },
     "tipos_minimos_ausentes": [
-     "literal",
      "conceptual",
      "aplicacion",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 24,
     "objetivo_por_simulacros": 24,
     "objetivo_minimo_apartados": 12,
-    "faltan": 22,
+    "faltan": 16,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.016,
+    "cuota_testley": 0.04,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -463,7 +433,7 @@
     "objetivo_minimo_apartados": 64,
     "faltan": 29,
     "concentracion_excesiva": true,
-    "cuota_testley": 0.278,
+    "cuota_testley": 0.177,
     "prioridad": "P2",
     "motivo": "por debajo del objetivo"
    },
@@ -475,8 +445,6 @@
     "apartados_con_fuente": 9,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.4.2",
-     "B.4.3",
      "B.4.4",
      "B.4.5",
      "B.4.6",
@@ -487,7 +455,7 @@
     "sobreexplotados": [],
     "capacidad": 85,
     "peso_examenes": 0.0467,
-    "TESTLEY_VALID": 3,
+    "TESTLEY_VALID": 9,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 11,
@@ -495,22 +463,20 @@
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
      "1": 1,
-     "2": 2,
-     "3": 0
+     "2": 6,
+     "3": 2
     },
     "tipos_minimos_ausentes": [
-     "negativa",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 18,
     "objetivo_por_simulacros": 15,
     "objetivo_minimo_apartados": 18,
-    "faltan": 15,
+    "faltan": 9,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.024,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.045,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "B.5",
@@ -520,25 +486,23 @@
     "apartados_con_fuente": 5,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.5.4",
      "B.5.IF"
     ],
     "sobreexplotados": [],
     "capacidad": 45,
     "peso_examenes": 0.0195,
-    "TESTLEY_VALID": 10,
+    "TESTLEY_VALID": 13,
     "REVIEW_REQUIRED": 4,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 5,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 6,
-     "2": 4,
+     "1": 7,
+     "2": 6,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "negativa",
      "dificil",
      "caso_practico"
     ],
@@ -547,7 +511,7 @@
     "objetivo_minimo_apartados": 10,
     "faltan": 0,
     "concentracion_excesiva": true,
-    "cuota_testley": 0.079,
+    "cuota_testley": 0.066,
     "prioridad": "P3",
     "motivo": "objetivo cubierto"
    },
@@ -559,7 +523,6 @@
     "apartados_con_fuente": 5,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.6.2",
      "B.6.3",
      "B.6.4",
      "B.6.IF"
@@ -567,19 +530,18 @@
     "sobreexplotados": [],
     "capacidad": 46,
     "peso_examenes": 0.0428,
-    "TESTLEY_VALID": 3,
-    "REVIEW_REQUIRED": 0,
+    "TESTLEY_VALID": 5,
+    "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 11,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 1,
-     "2": 2,
+     "1": 2,
+     "2": 3,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "literal",
      "conceptual",
      "negativa",
      "dificil",
@@ -588,9 +550,9 @@
     "objetivo": 13,
     "objetivo_por_simulacros": 13,
     "objetivo_minimo_apartados": 10,
-    "faltan": 10,
+    "faltan": 8,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.024,
+    "cuota_testley": 0.025,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -602,8 +564,6 @@
     "apartados_con_fuente": 8,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.7.2",
-     "B.7.3",
      "B.7.4",
      "B.7.5",
      "B.7.6",
@@ -613,31 +573,29 @@
     "sobreexplotados": [],
     "capacidad": 56,
     "peso_examenes": 0.0311,
-    "TESTLEY_VALID": 2,
+    "TESTLEY_VALID": 8,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 8,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 0,
-     "2": 1,
+     "1": 2,
+     "2": 5,
      "3": 1
     },
     "tipos_minimos_ausentes": [
-     "literal",
-     "aplicacion",
      "negativa",
      "caso_practico"
     ],
     "objetivo": 16,
     "objetivo_por_simulacros": 10,
     "objetivo_minimo_apartados": 16,
-    "faltan": 14,
+    "faltan": 8,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.016,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.04,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "B.8",
@@ -647,14 +605,13 @@
     "apartados_con_fuente": 4,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "B.8.2",
      "B.8.3",
      "B.8.IF"
     ],
     "sobreexplotados": [],
     "capacidad": 39,
     "peso_examenes": 0.0467,
-    "TESTLEY_VALID": 3,
+    "TESTLEY_VALID": 6,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 11,
@@ -662,23 +619,22 @@
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
      "1": 1,
-     "2": 2,
-     "3": 0
+     "2": 4,
+     "3": 1
     },
     "tipos_minimos_ausentes": [
      "literal",
      "conceptual",
      "aplicacion",
      "negativa",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 15,
     "objetivo_por_simulacros": 15,
     "objetivo_minimo_apartados": 8,
-    "faltan": 12,
+    "faltan": 9,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.024,
+    "cuota_testley": 0.03,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -714,7 +670,7 @@
     "objetivo_minimo_apartados": 6,
     "faltan": 1,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.063,
+    "cuota_testley": 0.04,
     "prioridad": "P2",
     "motivo": "por debajo del objetivo"
    },
@@ -757,7 +713,7 @@
     "objetivo_minimo_apartados": 16,
     "faltan": 37,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.032,
+    "cuota_testley": 0.02,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -770,22 +726,21 @@
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
      "C.3.1",
-     "C.3.2",
      "C.3.3",
      "C.3.IF"
     ],
     "sobreexplotados": [],
     "capacidad": 60,
     "peso_examenes": 0.0973,
-    "TESTLEY_VALID": 12,
-    "REVIEW_REQUIRED": 3,
+    "TESTLEY_VALID": 14,
+    "REVIEW_REQUIRED": 4,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 22,
     "OFFICIAL_EXAM_REVIEW": 3,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 4,
-     "2": 8,
+     "1": 5,
+     "2": 9,
      "3": 0
     },
     "tipos_minimos_ausentes": [
@@ -795,9 +750,9 @@
     "objetivo": 30,
     "objetivo_por_simulacros": 30,
     "objetivo_minimo_apartados": 12,
-    "faltan": 18,
+    "faltan": 16,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.095,
+    "cuota_testley": 0.071,
     "prioridad": "P1",
     "motivo": "menos de la mitad del objetivo"
    },
@@ -809,7 +764,6 @@
     "apartados_con_fuente": 5,
     "apartados_bloqueados": [],
     "apartados_sin_preguntas": [
-     "C.4.1",
      "C.4.2",
      "C.4.3",
      "C.4.IF"
@@ -819,19 +773,18 @@
     ],
     "capacidad": 50,
     "peso_examenes": 0.0584,
-    "TESTLEY_VALID": 6,
+    "TESTLEY_VALID": 9,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OFFICIAL_EXAM_VALID": 14,
     "OFFICIAL_EXAM_REVIEW": 1,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 0,
-     "2": 0,
+     "1": 1,
+     "2": 2,
      "3": 0
     },
     "tipos_minimos_ausentes": [
-     "literal",
      "conceptual",
      "aplicacion",
      "negativa",
@@ -841,11 +794,11 @@
     "objetivo": 18,
     "objetivo_por_simulacros": 18,
     "objetivo_minimo_apartados": 10,
-    "faltan": 12,
+    "faltan": 9,
     "concentracion_excesiva": false,
-    "cuota_testley": 0.048,
-    "prioridad": "P1",
-    "motivo": "menos de la mitad del objetivo"
+    "cuota_testley": 0.045,
+    "prioridad": "P2",
+    "motivo": "por debajo del objetivo"
    },
    {
     "tema": "C.5",
@@ -854,34 +807,31 @@
     "apartados": 4,
     "apartados_con_fuente": 4,
     "apartados_bloqueados": [],
-    "apartados_sin_preguntas": [
-     "C.5.IF"
-    ],
+    "apartados_sin_preguntas": [],
     "sobreexplotados": [],
     "capacidad": 26,
     "peso_examenes": 0.0156,
-    "TESTLEY_VALID": 9,
+    "TESTLEY_VALID": 12,
     "REVIEW_REQUIRED": 2,
     "DEPRECATED": 1,
     "OFFICIAL_EXAM_VALID": 4,
     "OFFICIAL_EXAM_REVIEW": 0,
     "OFFICIAL_EXAM_OUTDATED": 0,
     "dificultad": {
-     "1": 4,
-     "2": 5,
-     "3": 0
+     "1": 5,
+     "2": 6,
+     "3": 1
     },
     "tipos_minimos_ausentes": [
      "aplicacion",
-     "dificil",
      "caso_practico"
     ],
     "objetivo": 8,
     "objetivo_por_simulacros": 5,
     "objetivo_minimo_apartados": 8,
     "faltan": 0,
-    "concentracion_excesiva": false,
-    "cuota_testley": 0.071,
+    "concentracion_excesiva": true,
+    "cuota_testley": 0.061,
     "prioridad": "P3",
     "motivo": "objetivo cubierto"
    },
@@ -1727,14 +1677,14 @@
    },
    "simulacros_testley_disjuntos_con_reparto_oficial": 0,
    "temas_limitantes": [
-    "B.2",
-    "A.1",
     "C.2",
-    "A.2",
-    "A.4"
+    "A.1",
+    "B.2",
+    "B.6",
+    "A.5"
    ],
    "simulacros_disjuntos_testley_mas_oficiales": 6,
-   "simulacros_disjuntos_sin_reparto": 13,
+   "simulacros_disjuntos_sin_reparto": 15,
    "examenes_oficiales_completos": 3,
    "examenes_oficiales": 9,
    "objetivo": 10
@@ -1759,92 +1709,92 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "A.1 Història de Catalunya (part I)",
-   "actual": 3,
-   "valid": 2,
-   "review": 0,
+   "actual": 9,
+   "valid": 7,
+   "review": 1,
    "oficial": 19,
    "objetivo": 23,
-   "faltan": 21,
+   "faltan": 16,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
   {
    "area": "KNOWLEDGE",
    "subarea": "A.2 Història de Catalunya (part II)",
-   "actual": 3,
-   "valid": 2,
+   "actual": 9,
+   "valid": 8,
    "review": 1,
    "oficial": 14,
    "objetivo": 18,
-   "faltan": 16,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
-  },
-  {
-   "area": "KNOWLEDGE",
-   "subarea": "A.3 Història de la policia a Catalunya",
-   "actual": 3,
-   "valid": 3,
-   "review": 0,
-   "oficial": 7,
-   "objetivo": 12,
-   "faltan": 9,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
-  },
-  {
-   "area": "KNOWLEDGE",
-   "subarea": "A.4 Àmbit sociolingüístic",
-   "actual": 3,
-   "valid": 3,
-   "review": 0,
-   "oficial": 16,
-   "objetivo": 19,
-   "faltan": 16,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
-  },
-  {
-   "area": "KNOWLEDGE",
-   "subarea": "A.5 Marc geogràfic de Catalunya",
-   "actual": 3,
-   "valid": 3,
-   "review": 0,
-   "oficial": 12,
-   "objetivo": 15,
-   "faltan": 12,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
-  },
-  {
-   "area": "KNOWLEDGE",
-   "subarea": "A.6 Entorn social a Catalunya",
-   "actual": 3,
-   "valid": 2,
-   "review": 1,
-   "oficial": 9,
-   "objetivo": 12,
    "faltan": 10,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
   {
    "area": "KNOWLEDGE",
-   "subarea": "A.7 Les tecnologies de la informació en el",
-   "actual": 3,
-   "valid": 2,
+   "subarea": "A.3 Història de la policia a Catalunya",
+   "actual": 9,
+   "valid": 8,
    "review": 1,
-   "oficial": 8,
-   "objetivo": 14,
-   "faltan": 12,
+   "oficial": 7,
+   "objetivo": 12,
+   "faltan": 4,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
+  },
+  {
+   "area": "KNOWLEDGE",
+   "subarea": "A.4 Àmbit sociolingüístic",
+   "actual": 9,
+   "valid": 9,
+   "review": 0,
+   "oficial": 16,
+   "objetivo": 19,
+   "faltan": 10,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
   {
    "area": "KNOWLEDGE",
+   "subarea": "A.5 Marc geogràfic de Catalunya",
+   "actual": 9,
+   "valid": 6,
+   "review": 3,
+   "oficial": 12,
+   "objetivo": 15,
+   "faltan": 9,
+   "prioridad": "P1",
+   "motivo": "menos de la mitad del objetivo"
+  },
+  {
+   "area": "KNOWLEDGE",
+   "subarea": "A.6 Entorn social a Catalunya",
+   "actual": 9,
+   "valid": 8,
+   "review": 1,
+   "oficial": 9,
+   "objetivo": 12,
+   "faltan": 4,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
+  },
+  {
+   "area": "KNOWLEDGE",
+   "subarea": "A.7 Les tecnologies de la informació en el",
+   "actual": 9,
+   "valid": 8,
+   "review": 1,
+   "oficial": 8,
+   "objetivo": 14,
+   "faltan": 6,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
+  },
+  {
+   "area": "KNOWLEDGE",
    "subarea": "B.1 L'Estatut d'autonomia de Catalunya (EA",
-   "actual": 15,
-   "valid": 12,
+   "actual": 16,
+   "valid": 13,
    "review": 3,
    "oficial": 4,
    "objetivo": 12,
@@ -1855,12 +1805,12 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "B.2 Les institucions polítiques de Catalun",
-   "actual": 3,
-   "valid": 2,
+   "actual": 9,
+   "valid": 8,
    "review": 0,
    "oficial": 20,
    "objetivo": 24,
-   "faltan": 22,
+   "faltan": 16,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
@@ -1879,20 +1829,20 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "B.4 Els drets humans i els drets constituc",
-   "actual": 3,
-   "valid": 3,
+   "actual": 9,
+   "valid": 9,
    "review": 0,
    "oficial": 11,
    "objetivo": 18,
-   "faltan": 15,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
+   "faltan": 9,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
   },
   {
    "area": "KNOWLEDGE",
    "subarea": "B.5 Les institucions polítiques de l'Estat",
-   "actual": 14,
-   "valid": 10,
+   "actual": 17,
+   "valid": 13,
    "review": 4,
    "oficial": 5,
    "objetivo": 10,
@@ -1903,36 +1853,36 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "B.6 Els òrgans jurisdiccionals. Poder judi",
-   "actual": 3,
-   "valid": 3,
-   "review": 0,
+   "actual": 6,
+   "valid": 5,
+   "review": 1,
    "oficial": 11,
    "objetivo": 13,
-   "faltan": 10,
+   "faltan": 8,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
   {
    "area": "KNOWLEDGE",
    "subarea": "B.7 L'organització territorial de l'Estat",
-   "actual": 3,
-   "valid": 2,
+   "actual": 9,
+   "valid": 8,
    "review": 1,
    "oficial": 8,
    "objetivo": 16,
-   "faltan": 14,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
+   "faltan": 8,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
   },
   {
    "area": "KNOWLEDGE",
    "subarea": "B.8 La Unió Europea",
-   "actual": 3,
-   "valid": 3,
+   "actual": 6,
+   "valid": 6,
    "review": 0,
    "oficial": 11,
    "objetivo": 15,
-   "faltan": 12,
+   "faltan": 9,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
@@ -1963,32 +1913,32 @@
   {
    "area": "KNOWLEDGE",
    "subarea": "C.3 La coordinació policial",
-   "actual": 15,
-   "valid": 12,
-   "review": 3,
+   "actual": 18,
+   "valid": 14,
+   "review": 4,
    "oficial": 22,
    "objetivo": 30,
-   "faltan": 18,
+   "faltan": 16,
    "prioridad": "P1",
    "motivo": "menos de la mitad del objetivo"
   },
   {
    "area": "KNOWLEDGE",
    "subarea": "C.4 El marc legal de la seguretat",
-   "actual": 6,
-   "valid": 6,
+   "actual": 9,
+   "valid": 9,
    "review": 0,
    "oficial": 14,
    "objetivo": 18,
-   "faltan": 12,
-   "prioridad": "P1",
-   "motivo": "menos de la mitad del objetivo"
+   "faltan": 9,
+   "prioridad": "P2",
+   "motivo": "por debajo del objetivo"
   },
   {
    "area": "KNOWLEDGE",
    "subarea": "C.5 El Codi deontològic policial",
-   "actual": 12,
-   "valid": 9,
+   "actual": 15,
+   "valid": 12,
    "review": 2,
    "oficial": 4,
    "objetivo": 8,
@@ -2398,8 +2348,8 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-002",
@@ -2438,8 +2388,8 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-003",
@@ -2471,8 +2421,8 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": true,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-004",
@@ -2493,14 +2443,15 @@
     "2": 1
    },
    "tipos": {
-    "literal": 2,
+    "literal": 1,
     "organos": 1,
     "plazos": 2,
     "aplicacion": 1,
     "comparativa": 1,
     "competencias": 1,
     "conceptual": 1,
-    "negativa": 1
+    "negativa": 1,
+    "requisitos": 1
    },
    "fuente": [
     "guia-mossos:C.3.1",
@@ -2511,8 +2462,8 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-005",
@@ -2524,31 +2475,28 @@
    ],
    "subtemas": [
     "C.3.1",
-    "C.3.2",
-    "C.3.3"
+    "C.3.3",
+    "C.3.IF"
    ],
-   "cantidad": 8,
+   "cantidad": 6,
    "dificultad": {
-    "2": 1,
     "3": 3
    },
    "tipos": {
-    "procedimiento": 1,
-    "requisitos": 1,
     "caso_practico": 3,
     "dificil": 3
    },
    "fuente": [
     "guia-mossos:C.3.1",
-    "guia-mossos:C.3.2",
-    "guia-mossos:C.3.3"
+    "guia-mossos:C.3.3",
+    "guia-mossos:C.3.IF"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": true,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-006",
@@ -2560,33 +2508,34 @@
    ],
    "subtemas": [
     "B.2.2",
-    "B.2.3",
     "B.2.4",
-    "B.2.5"
+    "B.2.5",
+    "B.2.IF"
    ],
    "cantidad": 10,
    "dificultad": {
-    "1": 3,
+    "1": 2,
     "2": 1
    },
    "tipos": {
-    "literal": 3,
+    "literal": 2,
     "organos": 3,
-    "plazos": 3,
-    "aplicacion": 1
+    "plazos": 2,
+    "aplicacion": 2,
+    "competencias": 1
    },
    "fuente": [
     "guia-mossos:B.2.2",
-    "guia-mossos:B.2.3",
     "guia-mossos:B.2.4",
-    "guia-mossos:B.2.5"
+    "guia-mossos:B.2.5",
+    "guia-mossos:B.2.IF"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-007",
@@ -2597,32 +2546,28 @@
     "B.2"
    ],
    "subtemas": [
-    "B.2.2",
-    "B.2.3",
+    "B.2.4",
     "B.2.5"
    ],
-   "cantidad": 10,
+   "cantidad": 6,
    "dificultad": {
     "2": 2
    },
    "tipos": {
-    "competencias": 2,
     "conceptual": 2,
     "negativa": 2,
-    "procedimiento": 2,
-    "requisitos": 2
+    "procedimiento": 2
    },
    "fuente": [
-    "guia-mossos:B.2.2",
-    "guia-mossos:B.2.3",
+    "guia-mossos:B.2.4",
     "guia-mossos:B.2.5"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-008",
@@ -2630,31 +2575,39 @@
    "prioridad": "P1",
    "tipo": "generacion",
    "temas": [
-    "B.2"
+    "A.1"
    ],
    "subtemas": [
-    "B.2.2",
-    "B.2.3",
-    "B.2.4"
+    "A.1.4",
+    "A.1.5",
+    "A.1.6",
+    "A.1.7",
+    "A.1.8",
+    "A.1.9"
    ],
-   "cantidad": 2,
+   "cantidad": 10,
    "dificultad": {
-    "3": 2
+    "1": 6,
+    "2": 4
    },
    "tipos": {
-    "caso_practico": 2
+    "literal": 6,
+    "aplicacion": 4
    },
    "fuente": [
-    "guia-mossos:B.2.2",
-    "guia-mossos:B.2.3",
-    "guia-mossos:B.2.4"
+    "guia-mossos:A.1.4",
+    "guia-mossos:A.1.5",
+    "guia-mossos:A.1.6",
+    "guia-mossos:A.1.7",
+    "guia-mossos:A.1.8",
+    "guia-mossos:A.1.9"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": true,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "revision_humana": false,
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-009",
@@ -2665,25 +2618,20 @@
     "A.1"
    ],
    "subtemas": [
-    "A.1.2",
-    "A.1.3",
     "A.1.4",
     "A.1.5",
     "A.1.6",
     "A.1.7"
    ],
-   "cantidad": 10,
+   "cantidad": 6,
    "dificultad": {
-    "1": 8,
     "2": 2
    },
    "tipos": {
-    "literal": 8,
-    "aplicacion": 2
+    "conceptual": 4,
+    "negativa": 2
    },
    "fuente": [
-    "guia-mossos:A.1.2",
-    "guia-mossos:A.1.3",
     "guia-mossos:A.1.4",
     "guia-mossos:A.1.5",
     "guia-mossos:A.1.6",
@@ -2693,82 +2641,11 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-KNOWLEDGE-010",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "A.1"
-   ],
-   "subtemas": [
-    "A.1.2",
-    "A.1.3",
-    "A.1.4",
-    "A.1.5",
-    "A.1.6"
-   ],
-   "cantidad": 10,
-   "dificultad": {
-    "2": 5,
-    "3": 1
-   },
-   "tipos": {
-    "conceptual": 4,
-    "negativa": 5,
-    "caso_practico": 1
-   },
-   "fuente": [
-    "guia-mossos:A.1.2",
-    "guia-mossos:A.1.3",
-    "guia-mossos:A.1.4",
-    "guia-mossos:A.1.5",
-    "guia-mossos:A.1.6"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": true,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-011",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "A.1"
-   ],
-   "subtemas": [
-    "A.1.2",
-    "A.1.3",
-    "A.1.4"
-   ],
-   "cantidad": 1,
-   "dificultad": {
-    "3": 1
-   },
-   "tipos": {
-    "dificil": 1
-   },
-   "fuente": [
-    "guia-mossos:A.1.2",
-    "guia-mossos:A.1.3",
-    "guia-mossos:A.1.4"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-012",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2777,24 +2654,23 @@
    ],
    "subtemas": [
     "A.4.1",
-    "A.4.2",
     "A.4.3",
     "A.4.4",
     "A.4.IF"
    ],
    "cantidad": 10,
    "dificultad": {
-    "1": 4,
+    "1": 3,
     "2": 2
    },
    "tipos": {
-    "literal": 4,
-    "organos": 4,
-    "aplicacion": 2
+    "literal": 3,
+    "organos": 3,
+    "aplicacion": 2,
+    "comparativa": 2
    },
    "fuente": [
     "guia-mossos:A.4.1",
-    "guia-mossos:A.4.2",
     "guia-mossos:A.4.3",
     "guia-mossos:A.4.4",
     "guia-mossos:A.4.IF"
@@ -2803,116 +2679,11 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-013",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "A.4"
-   ],
-   "subtemas": [
-    "A.4.2",
-    "A.4.3",
-    "A.4.IF"
-   ],
-   "cantidad": 6,
-   "dificultad": {
-    "2": 2
-   },
-   "tipos": {
-    "comparativa": 2,
-    "conceptual": 2,
-    "excepcion": 2
-   },
-   "fuente": [
-    "guia-mossos:A.4.2",
-    "guia-mossos:A.4.3",
-    "guia-mossos:A.4.IF"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-014",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "C.4"
-   ],
-   "subtemas": [
-    "5",
-    "C.4.1",
-    "C.4.2",
-    "C.4.3",
-    "C.4.IF"
-   ],
-   "cantidad": 10,
-   "dificultad": {
-    "1": 3,
-    "2": 1
-   },
-   "tipos": {
-    "literal": 4,
-    "organos": 3,
-    "aplicacion": 2,
-    "comparativa": 1
-   },
-   "fuente": [
-    "guia-mossos:C.4.1",
-    "guia-mossos:C.4.2",
-    "guia-mossos:C.4.3",
-    "guia-mossos:C.4.IF",
-    "lo-2-1986:5"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-015",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "C.4"
-   ],
-   "subtemas": [
-    "C.4.1",
-    "C.4.2"
-   ],
-   "cantidad": 2,
-   "dificultad": {
-    "2": 1
-   },
-   "tipos": {
-    "competencias": 1,
-    "conceptual": 1
-   },
-   "fuente": [
-    "guia-mossos:C.4.1",
-    "guia-mossos:C.4.2"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-016",
+   "id": "MOSSOS-KNOWLEDGE-011",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -2920,8 +2691,6 @@
     "A.2"
    ],
    "subtemas": [
-    "A.2.2",
-    "A.2.3",
     "A.2.4",
     "A.2.5",
     "A.2.7",
@@ -2930,18 +2699,17 @@
    ],
    "cantidad": 10,
    "dificultad": {
-    "1": 3,
+    "1": 2,
     "2": 2
    },
    "tipos": {
     "literal": 2,
-    "organos": 3,
-    "plazos": 3,
-    "aplicacion": 2
+    "organos": 2,
+    "plazos": 2,
+    "aplicacion": 2,
+    "competencias": 2
    },
    "fuente": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3",
     "guia-mossos:A.2.4",
     "guia-mossos:A.2.5",
     "guia-mossos:A.2.7",
@@ -2952,47 +2720,11 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-017",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "A.2"
-   ],
-   "subtemas": [
-    "A.2.2",
-    "A.2.3",
-    "A.2.4",
-    "A.2.IF"
-   ],
-   "cantidad": 6,
-   "dificultad": {
-    "2": 2
-   },
-   "tipos": {
-    "competencias": 2,
-    "conceptual": 2,
-    "negativa": 2
-   },
-   "fuente": [
-    "guia-mossos:A.2.2",
-    "guia-mossos:A.2.3",
-    "guia-mossos:A.2.4",
-    "guia-mossos:A.2.IF"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-018",
+   "id": "MOSSOS-KNOWLEDGE-012",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3001,149 +2733,39 @@
    ],
    "subtemas": [
     "A.5.1",
-    "A.5.2",
     "A.5.3",
     "A.5.4",
     "A.5.5",
-    "A.5.6"
+    "A.5.6",
+    "A.5.IF"
    ],
-   "cantidad": 10,
+   "cantidad": 9,
    "dificultad": {
     "1": 4,
     "2": 1
    },
    "tipos": {
-    "literal": 5,
+    "literal": 4,
     "plazos": 4,
     "aplicacion": 1
    },
    "fuente": [
     "guia-mossos:A.5.1",
-    "guia-mossos:A.5.2",
     "guia-mossos:A.5.3",
     "guia-mossos:A.5.4",
     "guia-mossos:A.5.5",
-    "guia-mossos:A.5.6"
+    "guia-mossos:A.5.6",
+    "guia-mossos:A.5.IF"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-019",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "A.5"
-   ],
-   "subtemas": [
-    "A.5.2",
-    "A.5.3",
-    "A.5.4",
-    "A.5.5"
-   ],
-   "cantidad": 2,
-   "dificultad": {
-    "2": 2
-   },
-   "tipos": {
-    "conceptual": 2
-   },
-   "fuente": [
-    "guia-mossos:A.5.2",
-    "guia-mossos:A.5.3",
-    "guia-mossos:A.5.4",
-    "guia-mossos:A.5.5"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-020",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "B.4"
-   ],
-   "subtemas": [
-    "B.4.2",
-    "B.4.3",
-    "B.4.4",
-    "B.4.5",
-    "B.4.6"
-   ],
-   "cantidad": 10,
-   "dificultad": {
-    "1": 3,
-    "2": 2
-   },
-   "tipos": {
-    "literal": 2,
-    "organos": 3,
-    "plazos": 3,
-    "aplicacion": 2
-   },
-   "fuente": [
-    "guia-mossos:B.4.2",
-    "guia-mossos:B.4.3",
-    "guia-mossos:B.4.4",
-    "guia-mossos:B.4.5",
-    "guia-mossos:B.4.6"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-021",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "B.4"
-   ],
-   "subtemas": [
-    "B.4.2",
-    "B.4.4",
-    "B.4.7",
-    "B.4.8"
-   ],
-   "cantidad": 5,
-   "dificultad": {
-    "2": 2
-   },
-   "tipos": {
-    "competencias": 2,
-    "conceptual": 1,
-    "excepcion": 2
-   },
-   "fuente": [
-    "guia-mossos:B.4.2",
-    "guia-mossos:B.4.4",
-    "guia-mossos:B.4.7",
-    "guia-mossos:B.4.8"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-022",
+   "id": "MOSSOS-KNOWLEDGE-013",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3152,24 +2774,22 @@
    ],
    "subtemas": [
     "B.8.1",
-    "B.8.2",
     "B.8.3",
     "B.8.IF"
    ],
-   "cantidad": 10,
+   "cantidad": 9,
    "dificultad": {
     "1": 2,
-    "2": 2
+    "2": 1
    },
    "tipos": {
     "literal": 3,
     "organos": 3,
     "plazos": 2,
-    "aplicacion": 2
+    "aplicacion": 1
    },
    "fuente": [
     "guia-mossos:B.8.1",
-    "guia-mossos:B.8.2",
     "guia-mossos:B.8.3",
     "guia-mossos:B.8.IF"
    ],
@@ -3177,41 +2797,11 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-023",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "B.8"
-   ],
-   "subtemas": [
-    "B.8.1",
-    "B.8.2"
-   ],
-   "cantidad": 2,
-   "dificultad": {
-    "2": 2
-   },
-   "tipos": {
-    "competencias": 2
-   },
-   "fuente": [
-    "guia-mossos:B.8.1",
-    "guia-mossos:B.8.2"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-024",
+   "id": "MOSSOS-KNOWLEDGE-014",
    "area": "KNOWLEDGE",
    "prioridad": "P1",
    "tipo": "generacion",
@@ -3224,15 +2814,15 @@
     "B.6.4",
     "B.6.IF"
    ],
-   "cantidad": 10,
+   "cantidad": 8,
    "dificultad": {
-    "1": 4,
-    "2": 2
+    "1": 3,
+    "2": 1
    },
    "tipos": {
     "literal": 4,
-    "organos": 4,
-    "aplicacion": 2
+    "organos": 3,
+    "aplicacion": 1
    },
    "fuente": [
     "guia-mossos:B.6.2",
@@ -3244,79 +2834,144 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-025",
+   "id": "MOSSOS-KNOWLEDGE-015",
    "area": "KNOWLEDGE",
-   "prioridad": "P1",
+   "prioridad": "P2",
+   "tipo": "generacion",
+   "temas": [
+    "C.4"
+   ],
+   "subtemas": [
+    "C.4.2",
+    "C.4.3",
+    "C.4.IF"
+   ],
+   "cantidad": 9,
+   "dificultad": {
+    "1": 3,
+    "2": 1
+   },
+   "tipos": {
+    "literal": 3,
+    "organos": 3,
+    "aplicacion": 2,
+    "comparativa": 1
+   },
+   "fuente": [
+    "guia-mossos:C.4.2",
+    "guia-mossos:C.4.3",
+    "guia-mossos:C.4.IF"
+   ],
+   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
+   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
+   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
+   "revision_humana": false,
+   "ejecutable": true,
+   "bloqueo": null
+  },
+  {
+   "id": "MOSSOS-KNOWLEDGE-016",
+   "area": "KNOWLEDGE",
+   "prioridad": "P2",
+   "tipo": "generacion",
+   "temas": [
+    "B.4"
+   ],
+   "subtemas": [
+    "B.4.4",
+    "B.4.5",
+    "B.4.6",
+    "B.4.7"
+   ],
+   "cantidad": 9,
+   "dificultad": {
+    "1": 3,
+    "2": 1
+   },
+   "tipos": {
+    "literal": 2,
+    "organos": 3,
+    "plazos": 3,
+    "aplicacion": 1
+   },
+   "fuente": [
+    "guia-mossos:B.4.4",
+    "guia-mossos:B.4.5",
+    "guia-mossos:B.4.6",
+    "guia-mossos:B.4.7"
+   ],
+   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
+   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
+   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
+   "revision_humana": false,
+   "ejecutable": true,
+   "bloqueo": null
+  },
+  {
+   "id": "MOSSOS-KNOWLEDGE-017",
+   "area": "KNOWLEDGE",
+   "prioridad": "P2",
    "tipo": "generacion",
    "temas": [
     "A.6"
    ],
    "subtemas": [
     "A.6.1",
-    "A.6.2",
-    "A.6.3",
     "A.6.4",
-    "A.6.IF"
+    "A.6.5"
    ],
-   "cantidad": 10,
+   "cantidad": 4,
    "dificultad": {
-    "1": 2,
-    "2": 2
+    "1": 2
    },
    "tipos": {
-    "literal": 3,
-    "organos": 3,
-    "plazos": 2,
-    "aplicacion": 2
+    "literal": 2,
+    "organos": 2
    },
    "fuente": [
     "guia-mossos:A.6.1",
-    "guia-mossos:A.6.2",
-    "guia-mossos:A.6.3",
     "guia-mossos:A.6.4",
-    "guia-mossos:A.6.IF"
+    "guia-mossos:A.6.5"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-026",
+   "id": "MOSSOS-KNOWLEDGE-018",
    "area": "KNOWLEDGE",
-   "prioridad": "P1",
+   "prioridad": "P2",
    "tipo": "generacion",
    "temas": [
     "A.7"
    ],
    "subtemas": [
-    "A.7.2",
-    "A.7.3",
     "A.7.4",
+    "A.7.5",
     "A.7.6",
     "A.7.IF"
    ],
-   "cantidad": 10,
+   "cantidad": 6,
    "dificultad": {
     "1": 2,
-    "2": 3
+    "2": 1
    },
    "tipos": {
-    "literal": 2,
-    "organos": 3,
+    "literal": 1,
+    "organos": 2,
     "plazos": 2,
-    "aplicacion": 3
+    "aplicacion": 1
    },
    "fuente": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3",
     "guia-mossos:A.7.4",
+    "guia-mossos:A.7.5",
     "guia-mossos:A.7.6",
     "guia-mossos:A.7.IF"
    ],
@@ -3324,71 +2979,37 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-027",
+   "id": "MOSSOS-KNOWLEDGE-019",
    "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "A.7"
-   ],
-   "subtemas": [
-    "A.7.2",
-    "A.7.3",
-    "A.7.4"
-   ],
-   "cantidad": 2,
-   "dificultad": {
-    "2": 2
-   },
-   "tipos": {
-    "conceptual": 2
-   },
-   "fuente": [
-    "guia-mossos:A.7.2",
-    "guia-mossos:A.7.3",
-    "guia-mossos:A.7.4"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-028",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
+   "prioridad": "P2",
    "tipo": "generacion",
    "temas": [
     "B.7"
    ],
    "subtemas": [
     "B.7.1",
-    "B.7.2",
     "B.7.3",
     "B.7.4",
     "B.7.5",
     "B.7.6",
     "B.7.IF"
    ],
-   "cantidad": 10,
+   "cantidad": 8,
    "dificultad": {
     "1": 4,
     "2": 1
    },
    "tipos": {
-    "literal": 5,
+    "literal": 3,
     "organos": 4,
     "aplicacion": 1
    },
    "fuente": [
     "guia-mossos:B.7.1",
-    "guia-mossos:B.7.2",
     "guia-mossos:B.7.3",
     "guia-mossos:B.7.4",
     "guia-mossos:B.7.5",
@@ -3399,83 +3020,46 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-029",
+   "id": "MOSSOS-KNOWLEDGE-020",
    "area": "KNOWLEDGE",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "B.7"
-   ],
-   "subtemas": [
-    "B.7.2",
-    "B.7.3",
-    "B.7.4",
-    "B.7.5"
-   ],
-   "cantidad": 4,
-   "dificultad": {
-    "2": 1
-   },
-   "tipos": {
-    "competencias": 3,
-    "conceptual": 1
-   },
-   "fuente": [
-    "guia-mossos:B.7.2",
-    "guia-mossos:B.7.3",
-    "guia-mossos:B.7.4",
-    "guia-mossos:B.7.5"
-   ],
-   "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
-   "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
-   "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
-   "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
-  },
-  {
-   "id": "MOSSOS-KNOWLEDGE-030",
-   "area": "KNOWLEDGE",
-   "prioridad": "P1",
+   "prioridad": "P2",
    "tipo": "generacion",
    "temas": [
     "A.3"
    ],
    "subtemas": [
-    "A.3.2",
     "A.3.3",
     "A.3.4",
-    "A.3.5"
+    "A.3.5",
+    "A.3.IF"
    ],
-   "cantidad": 9,
+   "cantidad": 4,
    "dificultad": {
-    "1": 4,
-    "2": 1
+    "1": 1
    },
    "tipos": {
-    "literal": 4,
-    "organos": 4,
-    "aplicacion": 1
+    "literal": 3,
+    "organos": 1
    },
    "fuente": [
-    "guia-mossos:A.3.2",
     "guia-mossos:A.3.3",
     "guia-mossos:A.3.4",
-    "guia-mossos:A.3.5"
+    "guia-mossos:A.3.5",
+    "guia-mossos:A.3.IF"
    ],
    "validacion": "fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente",
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
-   "id": "MOSSOS-KNOWLEDGE-031",
+   "id": "MOSSOS-KNOWLEDGE-021",
    "area": "KNOWLEDGE",
    "prioridad": "P2",
    "tipo": "generacion",
@@ -3499,8 +3083,8 @@
    "judge": "juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura",
    "publicacion": "solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana",
    "revision_humana": false,
-   "ejecutable": false,
-   "bloqueo": "GENERATION_PAUSED"
+   "ejecutable": true,
+   "bloqueo": null
   },
   {
    "id": "MOSSOS-INTERVIEW-001",
@@ -3574,22 +3158,6 @@
  "lotes_fabrica": {
   "recientes": [
    {
-    "id": "S00020",
-    "generadas": 16,
-    "VALID": 16,
-    "REVIEW_REQUIRED": 0,
-    "REJECTED": 0,
-    "judge_policy_version": "juez-sesion-v3"
-   },
-   {
-    "id": "S00021",
-    "generadas": 10,
-    "VALID": 10,
-    "REVIEW_REQUIRED": 0,
-    "REJECTED": 0,
-    "judge_policy_version": "juez-sesion-v4"
-   },
-   {
     "id": "S00023",
     "generadas": 17,
     "VALID": 14,
@@ -3612,6 +3180,22 @@
     "REVIEW_REQUIRED": 0,
     "REJECTED": 0,
     "judge_policy_version": "juez-sesion-v4"
+   },
+   {
+    "id": "S00026",
+    "generadas": 30,
+    "VALID": 28,
+    "REVIEW_REQUIRED": 2,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v4"
+   },
+   {
+    "id": "S00027",
+    "generadas": 49,
+    "VALID": 44,
+    "REVIEW_REQUIRED": 5,
+    "REJECTED": 0,
+    "judge_policy_version": "juez-sesion-v4"
    }
   ],
   "retenidos": [
@@ -3623,6 +3207,6 @@
     "evidencia": "fabrica/estado/retenidos/S00022/DECISION.json"
    }
   ],
-  "pausa": "Huecos P0 de conocimientos cerrados (autorización 2026-10-06): S00023 (14 VALID, 3 REVIEW_REQUIRED), S00024 (2 VALID) y S00025 (1 VALID) = 17 VALID nuevas, el máximo autorizado. B.1 12/12, B.5 10/10, C.1 8/8. S00022 RETENIDO_DEFINITIVO. Cualquier otra generación requiere autorización explícita. Reanudar con --reanudar."
+  "pausa": null
  }
 }
