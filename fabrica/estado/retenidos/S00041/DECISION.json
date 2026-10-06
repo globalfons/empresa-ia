@@ -1,0 +1,130 @@
+{
+ "lote": "S00041",
+ "estado": "RETENIDO",
+ "fecha": "2026-10-06",
+ "decision": "Retenido automáticamente: 47/47 VALID y la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó 3 razones sin evidencia individual. Campaña masiva: el lote se aísla y la fábrica continúa con el siguiente. No se publica, no se rejuzga.",
+ "bloqueo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+ "judge_policy_version": "juez-sesion-v4",
+ "veredictos_juez": {
+  "0.0": "VALID",
+  "1.0": "VALID",
+  "1.1": "VALID",
+  "1.2": "VALID",
+  "2.0": "VALID",
+  "2.1": "VALID",
+  "2.2": "VALID",
+  "3.0": "VALID",
+  "3.1": "VALID",
+  "3.2": "VALID",
+  "4.0": "VALID",
+  "4.1": "VALID",
+  "4.2": "VALID",
+  "5.0": "VALID",
+  "6.0": "VALID",
+  "6.1": "VALID",
+  "6.2": "VALID",
+  "7.0": "VALID",
+  "7.1": "VALID",
+  "7.2": "VALID",
+  "8.0": "VALID",
+  "8.1": "VALID",
+  "8.2": "VALID",
+  "9.0": "VALID",
+  "9.1": "VALID",
+  "10.0": "VALID",
+  "10.1": "VALID",
+  "10.2": "VALID",
+  "11.0": "VALID",
+  "11.1": "VALID",
+  "11.2": "VALID",
+  "12.0": "VALID",
+  "12.1": "VALID",
+  "12.2": "VALID",
+  "13.0": "VALID",
+  "13.1": "VALID",
+  "13.2": "VALID",
+  "14.0": "VALID",
+  "14.1": "VALID",
+  "15.0": "VALID",
+  "15.1": "VALID",
+  "15.2": "VALID",
+  "16.0": "VALID",
+  "16.1": "VALID",
+  "17.0": "VALID",
+  "17.1": "VALID",
+  "17.2": "VALID"
+ },
+ "intentos_por_tanda": [
+  {
+   "tanda": "01",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "02",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "03",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "04",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "05",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  }
+ ],
+ "segunda_comprobacion": {
+  "ids": 47,
+  "veredictos": 47,
+  "razones_no_especificas": [
+   "8.0",
+   "8.2",
+   "9.0"
+  ],
+  "tandas_sin_evidencia": [],
+  "ok": false
+ },
+ "sin_evidencia_propia": [
+  {
+   "question_id": "8.0",
+   "q": "Una diputada del Parlament de Catalunya és sorpresa cometent un delicte flagrant a Girona durant el seu mandat. Segons l'apartat B.2.2 de la Guia d'estudi, pot ser detinguda?",
+   "cita": "durant llur mandat, els diputats no poden ser detinguts pels actes delictius comesos en el territori de Catalunya, excepte en el cas de delicte flagrant",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que, durante el mandato, los diputados no pueden ser detenidos por actos delictivos cometidos en Cataluña, excepto en caso de delito flagrante, y lo enmarca como inmunidad. La opción 2 (sí, flagrante) está respaldada. La cita contiene la regla y la excepción. La 0 contradice la excepción, la 1 confunde inviolabilidad (opiniones y votos) con detención, y la 3 no tiene base en el texto. Pregunta clara, con caso práctico y sin duplicados."
+  },
+  {
+   "question_id": "8.2",
+   "q": "El Parlament de Catalunya tramet a la mesa del Congrés una proposició de llei i vol que algú la defensi. Segons l'apartat B.2.2 de la Guia d'estudi, com ho fa?",
+   "cita": "trametre a la mesa del Congrés una proposició de llei, nomenant una comissió de màxim tres diputats per defensar aquesta iniciativa legislativa",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que, para defender una proposición de ley remitida a la mesa del Congreso, el Parlamento nombra una comisión de máximo tres diputados. La cita lo contiene entero. La opción 1 (cinco) contradice la cifra y las opciones 2 y 3 no aparecen en el texto con esa función. No hay parecidas y el dato (cifra concreta) es útil."
+  },
+  {
+   "question_id": "9.0",
+   "q": "Segons l'apartat A.6.3 de la Guia d'estudi, què pressuposa el model d'assimilació?",
+   "cita": "Aquest model pressuposa que, en la mesura que l’immigrant adopta la cultura de la societat receptora, aquesta l’admetrà com un membre més i es produirà la seva plena integració o, dit amb altres termes, es considera que l’aculturació (assemblar-se més a la majoria) ajudaria a reduir el prejudici i la discriminació",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que el modelo de asimilación presupone que la aculturación del inmigrante ayudaría a reducir el prejuicio y la discriminación, y la cita lo reproduce. La opción 0 es el melting pot, la 1 el pluralismo cultural y la 2 invierte el sentido de la asimilación, así que solo la 3 es correcta. La parecida guia-mossos-402 pregunta por la condición de admisión (capacidad de asimilación), que es otro hecho, y no es duplicado."
+  }
+ ],
+ "huellas": {
+  "candidatas.json": "164c613718ece25677effcd5513d3c195e24ee7b662037365ebca215ccfcfd32",
+  "revision.json": "679cfe87c0278ecadbaf4f92318213c1dd2e78254a6f95ec7a31622d94c52d91",
+  "politica.json": "20da0818ecd6d43db13e063fb9e5e24c83d2a5f9bf25120050ab0f691db1de34",
+  "evaluacion.json": "87c4d7edb16a1590ce2cfd36a44d131f2338ca9adba546da426d72f1c580f2cd",
+  "items.json": "bedf4f7193624bd15ce8276b1a1f94fb802e2fab7e6e85d16369a703e80c4b22"
+ }
+}

@@ -1,0 +1,996 @@
+{
+ "evaluacion": "S00042",
+ "creada_el": "2026-10-06T23:47:11",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 48,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "3.1",
+    "3.2"
+   ],
+   "prompt_sha256": "b9a0bda89752da66aa7b0643266c85e48e1ce6277b5ee3b36b31d5798dd0e967",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "acf93fc064d6869077bd306703cfc56694129b9f80b9360ea5f02edecfdc962e",
+    "1.0": "0f4e197b99c7040a58e8b0977cc602fa1f645db28c581c4cc379a5613097b042",
+    "1.1": "5b4c4f595b91cb6992a4b400ffe7ae2eb7cfdc84418add4fc867583fd8d333dd",
+    "1.2": "03648ebf4f86f3ab8bfd80519d05e810513a0025a668564b1c9d2ad8b8734920",
+    "2.0": "226913fba329c12ccf4850c8a9452b38ecd96e634b155aa81eb60ba27e0ec12b",
+    "2.1": "a9ef06fce408f1d6712d80cc1237c00a5b6e4e2af5a291624d1c6b4fdc66556b",
+    "2.2": "980ef079789f3874ebf538532ab75aff6ef8850b481e3f787de40465f2e845f5",
+    "3.0": "5f3d23c34dbf7df0c5bab11b8cdaa0a854541966c5d229094241a783bc707148",
+    "3.1": "93b26783ad6bd80d0ada7d864b40bdaddad1361274b95a2ea1943fa1c96c1c4d",
+    "3.2": "d68579b038e2c18444ffefea04da355e84850086db61ed2bc49135a9886cbfe4"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto del art. 12 dice que la cooperación abarca territorios pertenecientes o no al Estado español y que se pueden suscribir convenios en todos los ámbitos, que pueden incluir organismos comunes. La opción b lo recoge. La cita contiene los dos elementos necesarios (territorios no españoles y convenios en todos los ámbitos con posibles organismos comunes). Las opciones a, c y d contradicen el texto (limitación a territorios españoles, limitación al ámbito cultural y lingüístico, imposibilidad de organismos comunes). Pregunta clara y sin pistas indebidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice literalmente que el 11 de septiembre de 1714 el conseller en cap de la ciutat, Rafael Casanova, fue herido. La cita contiene ese dato completo. Los otros tres nombres (Claris, Moragues, Villarroel) no aparecen como heridos en el texto. Es un hecho clave del temario, por lo que no es trivial. Respuesta única y pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La opción c está respaldada por el texto y la cita: tras morir el emperador y recaer la corona imperial en el archiduque, a los aliados ya no les interesaba que un solo rey dominara la corona hispánica y el imperio. Sin embargo, la opción b (temor a que una misma familia reinara en Francia y en la monarquía hispánica) también es un hecho que aparece en el texto, como razón del rechazo inicial a Felipe V. Puede resultar ambigua como corrección y hace dudosa la unicidad. Además, el enunciado asume una premisa (Cataluña habría roto el Pacto de Génova) que el texto no menciona. La a es falsa, porque las negociaciones son anteriores a 1714. La d es falsa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que con el apoyo catalán al archiduque la guerra, que había empezado como internacional, se convertía en guerra civil. La opción b lo recoge y la cita contiene la frase completa. Las otras opciones son hechos del texto que no tienen ese efecto: la muerte del emperador cambió la situación internacional, Utrecht es de 1713 y la proclamación en Viena es de 1703. Respuesta única y pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que Companys fue fusilado en el Castell de Montjuïc el 15 de octubre de 1940. La cita contiene lugar y fecha, los dos elementos que hay que combinar. Los distractores cambian el lugar o el año y son claramente erróneos según el texto. Es un hecho histórico clave del temario, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El texto indica que el régimen tenía partido único, sindicalismo vertical y cortes e instituciones de gobierno nombradas desde arriba. Las opciones a, b y c aparecen en la cita, así que se ve que son rasgos reales. La d (cortes elegidas por sufragio universal) contradice el rasgo de cortes nombradas desde arriba, por lo que es la correcta. La cita contiene todos los elementos necesarios y la respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto atribuye la nueva oleada industrializadora de los años sesenta a la inyección de divisas (emigrantes y turismo) unida a la llegada de capitales de fuera, como SEAT. La opción c lo recoge y la cita lo contiene. La autarquía fue una fase superada, la crisis del petróleo es de los setenta y el aislamiento internacional es anterior. Las tres opciones son erróneas según el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el art. 53.1 CE manifiesta el valor normativo inmediato de los derechos, que deben respetarse sin necesidad de una ley que los desarrolle. La opción b lo recoge y la cita lo contiene. Las demás opciones son erróneas según el texto: la a exige ley orgánica para la exigibilidad, la c limita la vinculación a la ciudadanía, y la d permite el reglamento cuando el texto lo excluye por la reserva de ley. Respuesta única y pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el legislador, al regular el ejercicio de los derechos, está limitado por el deber de respetar su contenido esencial (art. 53.1 CE). La cita lo contiene íntegro. Los distractores (informe previo del TC, referéndum, disolución de las cámaras) son elementos del procedimiento de reforma del art. 168 y no de la regulación legal, así que son claramente erróneos. Respuesta única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto justifica la reserva de ley para asegurar que solo el Parlamento, que representa la voluntad popular, regule estos derechos, evitando la intervención del ejecutivo por vía reglamentaria. La opción d lo recoge y la cita contiene ambos elementos (Parlamento y exclusión del reglamento). Las demás opciones (regulación autonómica diferenciada, adaptación por reglamento, fijación por tribunales) no aparecen en el texto y contradicen su sentido. Respuesta única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a6285f4caeac238ac.jsonl",
+    "respuesta_sha256": "c5a689e322cbff6a3798c36cb99920e56c01ac607e8950ded481f7353bc67cfb"
+   },
+   "registrada_el": "2026-10-06T23:48:21",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:48:21",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a6285f4caeac238ac.jsonl",
+      "respuesta_sha256": "c5a689e322cbff6a3798c36cb99920e56c01ac607e8950ded481f7353bc67cfb"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El texto del art. 12 dice que la cooperación abarca territorios pertenecientes o no al Estado español y que se pueden suscribir convenios en todos los ámbitos, que pueden incluir organismos comunes. La opción b lo recoge. La cita contiene los dos elementos necesarios (territorios no españoles y convenios en todos los ámbitos con posibles organismos comunes). Las opciones a, c y d contradicen el texto (limitación a territorios españoles, limitación al ámbito cultural y lingüístico, imposibilidad de organismos comunes). Pregunta clara y sin pistas indebidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice literalmente que el 11 de septiembre de 1714 el conseller en cap de la ciutat, Rafael Casanova, fue herido. La cita contiene ese dato completo. Los otros tres nombres (Claris, Moragues, Villarroel) no aparecen como heridos en el texto. Es un hecho clave del temario, por lo que no es trivial. Respuesta única y pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La opción c está respaldada por el texto y la cita: tras morir el emperador y recaer la corona imperial en el archiduque, a los aliados ya no les interesaba que un solo rey dominara la corona hispánica y el imperio. Sin embargo, la opción b (temor a que una misma familia reinara en Francia y en la monarquía hispánica) también es un hecho que aparece en el texto, como razón del rechazo inicial a Felipe V. Puede resultar ambigua como corrección y hace dudosa la unicidad. Además, el enunciado asume una premisa (Cataluña habría roto el Pacto de Génova) que el texto no menciona. La a es falsa, porque las negociaciones son anteriores a 1714. La d es falsa.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que con el apoyo catalán al archiduque la guerra, que había empezado como internacional, se convertía en guerra civil. La opción b lo recoge y la cita contiene la frase completa. Las otras opciones son hechos del texto que no tienen ese efecto: la muerte del emperador cambió la situación internacional, Utrecht es de 1713 y la proclamación en Viena es de 1703. Respuesta única y pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que Companys fue fusilado en el Castell de Montjuïc el 15 de octubre de 1940. La cita contiene lugar y fecha, los dos elementos que hay que combinar. Los distractores cambian el lugar o el año y son claramente erróneos según el texto. Es un hecho histórico clave del temario, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El texto indica que el régimen tenía partido único, sindicalismo vertical y cortes e instituciones de gobierno nombradas desde arriba. Las opciones a, b y c aparecen en la cita, así que se ve que son rasgos reales. La d (cortes elegidas por sufragio universal) contradice el rasgo de cortes nombradas desde arriba, por lo que es la correcta. La cita contiene todos los elementos necesarios y la respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El texto atribuye la nueva oleada industrializadora de los años sesenta a la inyección de divisas (emigrantes y turismo) unida a la llegada de capitales de fuera, como SEAT. La opción c lo recoge y la cita lo contiene. La autarquía fue una fase superada, la crisis del petróleo es de los setenta y el aislamiento internacional es anterior. Las tres opciones son erróneas según el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el art. 53.1 CE manifiesta el valor normativo inmediato de los derechos, que deben respetarse sin necesidad de una ley que los desarrolle. La opción b lo recoge y la cita lo contiene. Las demás opciones son erróneas según el texto: la a exige ley orgánica para la exigibilidad, la c limita la vinculación a la ciudadanía, y la d permite el reglamento cuando el texto lo excluye por la reserva de ley. Respuesta única y pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el legislador, al regular el ejercicio de los derechos, está limitado por el deber de respetar su contenido esencial (art. 53.1 CE). La cita lo contiene íntegro. Los distractores (informe previo del TC, referéndum, disolución de las cámaras) son elementos del procedimiento de reforma del art. 168 y no de la regulación legal, así que son claramente erróneos. Respuesta única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.2\",\"verdict\":\"VALID\",\"reason\":\"El texto justifica la reserva de ley para asegurar que solo el Parlamento, que representa la voluntad popular, regule estos derechos, evitando la intervención del ejecutivo por vía reglamentaria. La opción d lo recoge y la cita contiene ambos elementos (Parlamento y exclusión del reglamento). Las demás opciones (regulación autonómica diferenciada, adaptación por reglamento, fijación por tribunales) no aparecen en el texto y contradicen su sentido. Respuesta única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "6.0",
+    "6.1",
+    "6.2",
+    "7.0",
+    "7.1",
+    "7.2"
+   ],
+   "prompt_sha256": "1849803d5fb6d06f9b7102a939b87c15a21ce4d49520b8c0e956771322d178c3",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "3e047917424c0200a45e21295a4038c5b82e9fbffeeb16ec818e6586461e11b1",
+    "4.1": "c22894537ddfc204439a253a5a94937986ff7fdf8616dbaf7edec8c49922e3c4",
+    "4.2": "e96db76be4f2e8f5cae9d06ef0bfc3e955bdd6d135299f0ebc65b28b49e957af",
+    "5.0": "e1b8fe69efca5432e262042b39f87c4f4189a2b68ec584ff4a210197779c88bc",
+    "6.0": "4360b4b7102f82d27a97885ee6744d867c5daa913a5e9e47253601cb53683dde",
+    "6.1": "22d024b43aa8445d745cb6a4131341bd7abf968f67c00d7a06973e65b4b03b09",
+    "6.2": "2fca11fceafed14ff626a7962482505ca49ba6e311569920879a3e6b453125f3",
+    "7.0": "41189cca8fc1506aa1961e18fc1944c8f87d8c75a57e37cd4c83e3b434687707",
+    "7.1": "88dbe52626c9dfee083caed43e672f1a7eb3d9574bdb53dbb27a8e8a77c36ddf",
+    "7.2": "a91b25d0f940cd0d750bd63f717bb23858502c5a78f9b623ca4d66c7b4e2fba0"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el SCT puede ser organismo recaptador por la vía de constreñimiento de sanciones a infractores residentes en un municipio distinto del de la infracción, si lo prevé el convenio con el ayuntamiento. La opción c lo recoge. La cita contiene ambos elementos (residencia en otro municipio y convenio), así que basta por sí sola. Las otras tres opciones (mismo municipio sin convenio, autorización del delegado, acuerdo del Govern) no aparecen en el texto. Pregunta clara y útil, sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto atribuye al Observatori de la Seguretat Viària funciones consultivas, de información, investigación, documentación y evaluación de las políticas de seguridad viaria. La cita lo dice expresamente y basta para elegir la opción b. La Comisión Catalana y la Interdepartamental se describen con otras funciones (consulta y participación superior; coordinación), y la Secció de Seguretat Viària no es un órgano adscrito. Solo una opción es correcta. Pregunta clara y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que SCT y Dirección General de Policía gestionan y controlan el tráfico en travesías o vías urbanas que afectan a la circulación interurbana si hay un acuerdo previo con la autoridad local. La cita recoge esa condición completa y justifica la opción a. Ni la autorización del delegado territorial, ni un informe de la Comisión Catalana, ni un convenio ratificado por el Parlamento figuran como requisito. Pregunta clara, con un único requisito. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 84 CE (texto íntegro en la cita) dice que el Gobierno está facultado para oponerse a la tramitación y que podrá presentarse una proposición de ley para derogar total o parcialmente la ley de delegación. La opción a lo recoge. La b (revocación automática), la c (no admite derogación parcial, contradice 'total o parcial') y la d (inadmisión por la Mesa y suspensión automática) no figuran en el texto. La cita es suficiente. El artículo tiene dos frases y la pregunta exige combinarlas, por lo que no es trivial. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La idea fuerza 4 dice que la seguridad de la información debe ser un elemento básico en la gestión de las organizaciones y que hay que enfocarla como un objetivo global de carácter interno. La cita contiene la frase completa y justifica la opción d. Las otras opciones (servicio externo, objetivo secundario, cuestión técnica del departamento informático) contradicen el texto. La parecida cand-guia-mossos-58 trata otro dato (dificultad de procesar la información), así que no es duplicada. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negativo. El texto (idea 7) dice que la firma electrónica permite garantizar autenticidad, integridad y no repudio. La cita enumera esos tres, de modo que se ve que a, b y d aparecen en el texto y que la c, anonimato, no. La respuesta correcta es c. Las tres opciones restantes figuran en el texto, así que solo una es la excepción. Pregunta clara, con distractores no delatores y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La idea 9 dice que la IA permite la automatización de procesos y la toma de decisiones asistida a partir del análisis masivo de datos. La cita lo recoge literalmente y justifica la opción b. Las demás opciones (reducir dispositivos, regular Internet, sustituir la firma electrónica) no figuran en el texto o lo contradicen. La parecida nueva:guia-mossos:A.7.IF:0 trata la seguridad de la información, un dato distinto, por lo que no es duplicada. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice 'Del massís del Garraf cap al sud la Depressió Prelitoral desapareix', y la cita lo contiene, lo que respalda la opción a. Las demás son falsas según el texto. La b es falsa porque la Serralada Litoral ofrece menores altitudes. La c es falsa porque la Depressió Prelitoral resulta del hundimiento, no del levantamiento, del antiguo macizo. La d es falsa porque la extensión Ter-Castelló corresponde a la Prelitoral. Solo una es correcta. Dato concreto, útil como pregunta de examen. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el delta del Ebro tiene una extensión de 320 km2, y la cita lo recoge de forma literal, lo que justifica la opción d. Los distractores (230, 410, 515) no son la cifra del delta; 515 es la longitud de costa en km, un distractor plausible pero incorrecto. Dato numérico concreto y útil. La parecida nueva:guia-mossos:A.5.2:0 trata otro hecho (la Depressió Prelitoral), así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la comunicación entre valles solo ha sido posible a través de elevados puertos de montaña y collados. La cita lo recoge y justifica la opción c. La a es falsa porque las valles fluviales se orientan de norte a sur (solo la Cerdanya va de este a oeste). La b y la d citan elementos reales del relieve que no se mencionan como vía de comunicación entre valles. Pregunta clara, con un único caso correcto. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a09cc1d523a2417eb.jsonl",
+    "respuesta_sha256": "dab65fd6bc888ce59cbf27a90fb9050823df9f216444b955668ab45dbb9070d2"
+   },
+   "registrada_el": "2026-10-06T23:48:08",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:48:08",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a09cc1d523a2417eb.jsonl",
+      "respuesta_sha256": "dab65fd6bc888ce59cbf27a90fb9050823df9f216444b955668ab45dbb9070d2"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el SCT puede ser organismo recaptador por la vía de constreñimiento de sanciones a infractores residentes en un municipio distinto del de la infracción, si lo prevé el convenio con el ayuntamiento. La opción c lo recoge. La cita contiene ambos elementos (residencia en otro municipio y convenio), así que basta por sí sola. Las otras tres opciones (mismo municipio sin convenio, autorización del delegado, acuerdo del Govern) no aparecen en el texto. Pregunta clara y útil, sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El texto atribuye al Observatori de la Seguretat Viària funciones consultivas, de información, investigación, documentación y evaluación de las políticas de seguridad viaria. La cita lo dice expresamente y basta para elegir la opción b. La Comisión Catalana y la Interdepartamental se describen con otras funciones (consulta y participación superior; coordinación), y la Secció de Seguretat Viària no es un órgano adscrito. Solo una opción es correcta. Pregunta clara y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que SCT y Dirección General de Policía gestionan y controlan el tráfico en travesías o vías urbanas que afectan a la circulación interurbana si hay un acuerdo previo con la autoridad local. La cita recoge esa condición completa y justifica la opción a. Ni la autorización del delegado territorial, ni un informe de la Comisión Catalana, ni un convenio ratificado por el Parlamento figuran como requisito. Pregunta clara, con un único requisito. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 84 CE (texto íntegro en la cita) dice que el Gobierno está facultado para oponerse a la tramitación y que podrá presentarse una proposición de ley para derogar total o parcialmente la ley de delegación. La opción a lo recoge. La b (revocación automática), la c (no admite derogación parcial, contradice 'total o parcial') y la d (inadmisión por la Mesa y suspensión automática) no figuran en el texto. La cita es suficiente. El artículo tiene dos frases y la pregunta exige combinarlas, por lo que no es trivial. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"La idea fuerza 4 dice que la seguridad de la información debe ser un elemento básico en la gestión de las organizaciones y que hay que enfocarla como un objetivo global de carácter interno. La cita contiene la frase completa y justifica la opción d. Las otras opciones (servicio externo, objetivo secundario, cuestión técnica del departamento informático) contradicen el texto. La parecida cand-guia-mossos-58 trata otro dato (dificultad de procesar la información), así que no es duplicada. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negativo. El texto (idea 7) dice que la firma electrónica permite garantizar autenticidad, integridad y no repudio. La cita enumera esos tres, de modo que se ve que a, b y d aparecen en el texto y que la c, anonimato, no. La respuesta correcta es c. Las tres opciones restantes figuran en el texto, así que solo una es la excepción. Pregunta clara, con distractores no delatores y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"La idea 9 dice que la IA permite la automatización de procesos y la toma de decisiones asistida a partir del análisis masivo de datos. La cita lo recoge literalmente y justifica la opción b. Las demás opciones (reducir dispositivos, regular Internet, sustituir la firma electrónica) no figuran en el texto o lo contradicen. La parecida nueva:guia-mossos:A.7.IF:0 trata la seguridad de la información, un dato distinto, por lo que no es duplicada. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice 'Del massís del Garraf cap al sud la Depressió Prelitoral desapareix', y la cita lo contiene, lo que respalda la opción a. Las demás son falsas según el texto. La b es falsa porque la Serralada Litoral ofrece menores altitudes. La c es falsa porque la Depressió Prelitoral resulta del hundimiento, no del levantamiento, del antiguo macizo. La d es falsa porque la extensión Ter-Castelló corresponde a la Prelitoral. Solo una es correcta. Dato concreto, útil como pregunta de examen. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el delta del Ebro tiene una extensión de 320 km2, y la cita lo recoge de forma literal, lo que justifica la opción d. Los distractores (230, 410, 515) no son la cifra del delta; 515 es la longitud de costa en km, un distractor plausible pero incorrecto. Dato numérico concreto y útil. La parecida nueva:guia-mossos:A.5.2:0 trata otro hecho (la Depressió Prelitoral), así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la comunicación entre valles solo ha sido posible a través de elevados puertos de montaña y collados. La cita lo recoge y justifica la opción c. La a es falsa porque las valles fluviales se orientan de norte a sur (solo la Cerdanya va de este a oeste). La b y la d citan elementos reales del relieve que no se mencionan como vía de comunicación entre valles. Pregunta clara, con un único caso correcto. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2",
+    "10.0",
+    "10.1",
+    "10.2",
+    "11.0"
+   ],
+   "prompt_sha256": "a58b28732fa2f17e7f6ef8684aa2637aaa8e59b89ba37055e811d07150e5a1cc",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "8.0": "50d885e3d514bcc9d902ea2650a6127ba083a8c78266615f0252a7117c03a98e",
+    "8.1": "5272924f463ad66081511d382529481c7622a318fe808ccc80712a0ff5b8d0d6",
+    "8.2": "032871fb2892f900fb384bfb97f1ef30bdfa208a524818aba3a1b12ce87cff9d",
+    "9.0": "78d093b7ea9765ff1a0be759a7a31a3c72bf93a3b3842946cd8a7d482d2d6c97",
+    "9.1": "58ace29e2b8ef72d77597e4923ea4d866feba8050e5a4cb78d615d11a79ea50b",
+    "9.2": "e59bcf93ec74fc2662b3132a9cc5e6ae95c090eea0818007923d43006d639ec3",
+    "10.0": "e760f9e1e5a4de0fb6ba05fee646b0287713d8bbc6ef01a8d0d2f55c15163b1f",
+    "10.1": "4ab9f2b9189abe061dc6917e067e1dafae47e394c8a7b437deb01f2285cc3d5e",
+    "10.2": "8d7b6190152d9a1bdc11ef896ab47de6636aab74844dfcaec62e38ccc2fe14db",
+    "11.0": "cab76d42ec9052663a9472644a7840dbac7bf6f348e040877a360251e3ba5db8"
+   },
+   "veredictos": [
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la legislatura fineix per expiració del mandat legal en complir-se els quatre anys de la data de les eleccions, i l'opció b ho recull. La cita conté l'element complet. Els distractors (constitució del Parlament, cinc anys, investidura) no tenen suport al text. Les parescudes (períodes de sessions, requisits de diputat) proven fets diferents.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text limita la inviolabilitat als actes parlamentaris i, per excepció, als actes exteriors que siguin reproducció literal d'un acte parlamentari. El cas de l'entrevista amb reproducció literal queda empara, per tant l'opció a és correcta. La cita inclou la regla i l'excepció. Les altres opcions contradiuen el text: la b ignora l'excepció, la c amplia la cobertura a qualsevol opinió i la d inventa una autorització de la Mesa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El text diu que durant el mandat els diputats no poden ser detinguts pels delictes comesos a Catalunya, excepte en cas de delicte flagrant, i això sosté l'opció d. Però el mateix text diu que el TSJC és competent per determinar la inculpació, la presó, el processament i el judici. Per això l'opció a (detenció ordenada pel TSJC) és arguïblement correcta i la unicitat no queda garantida. La cita només recull la immunitat i, mostrada sola, no permet descartar l'opció a, que el text sobre el fur deixa oberta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El model d'assimilació pressuposa que l'aculturació (assemblar-se més a la majoria) ajudaria a reduir el prejudici i la discriminació. L'opció c ho reflecteix literalment i la cita ho conté. Les opcions a (melting pot), b i d (pluralisme cultural) corresponen a altres models i no són correctes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. Les opcions a, c i d apareixen en la descripció del melting pot, i la cita les conté totes tres. L'opció b (peculiaritats a l'esfera privada) és del pluralisme cultural, per tant és l'única que no correspon al melting pot.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que tota societat ha de fixar el model o els models de convivència, a partir dels quals elabora les estratègies i polítiques socials. L'opció a ho reflecteix i la cita ho conté completament. Les opcions b, c i d (aculturació exigible, quotes, límits de concentració) no apareixen com a punt de partida al text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Segons el text, els estats sobirans deleguen algunes funcions de forma expressa a la federació i ells en retenen la resta. L'opció d és correcta i la cita conté tot l'element. Les opcions a, b i c no tenen suport al text i la a el contradiu.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que l'Estat unitari ha anat introduint mecanismes de descentralització política, mentre que el federal ha reclamat més competències cap a una major centralització i uniformització. L'opció c ho recull i la cita conté les dues parts. Les opcions a, b i d inverteixen o generalitzen l'evolució i no són correctes.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text indica que l'Estat unitari té un únic centre de decisió política (el govern) i un únic centre per dictar normes amb rang de llei (el parlament). L'opció b és correcta i la cita conté ambdós elements. El govern és el centre de decisió política, no legislatiu. El prefecte és autoritat administrativa i el tribunal suprem no hi consta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el Ple de l'IEC va ratificar per consens la nova versió de l'Ortografia en la sessió plenària del 24 d'octubre de 2016, i la cita ho conté. El 29 de setembre de 2016 és la data de ratificació de la Gramàtica, per tant és un distractor vàlid. Les altres dates no corresponen a aquesta ratificació. És una data fita de la matèria.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a09b932ebbb02eca1.jsonl",
+    "respuesta_sha256": "6762c9d383cd45f6ba7ba58f8cee185a40b56ea0c112f36bb5d64130d35078ed"
+   },
+   "registrada_el": "2026-10-06T23:48:47",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:48:47",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a09b932ebbb02eca1.jsonl",
+      "respuesta_sha256": "6762c9d383cd45f6ba7ba58f8cee185a40b56ea0c112f36bb5d64130d35078ed"
+     },
+     "respuesta": "[\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la legislatura fineix per expiració del mandat legal en complir-se els quatre anys de la data de les eleccions, i l'opció b ho recull. La cita conté l'element complet. Els distractors (constitució del Parlament, cinc anys, investidura) no tenen suport al text. Les parescudes (períodes de sessions, requisits de diputat) proven fets diferents.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"El text limita la inviolabilitat als actes parlamentaris i, per excepció, als actes exteriors que siguin reproducció literal d'un acte parlamentari. El cas de l'entrevista amb reproducció literal queda empara, per tant l'opció a és correcta. La cita inclou la regla i l'excepció. Les altres opcions contradiuen el text: la b ignora l'excepció, la c amplia la cobertura a qualsevol opinió i la d inventa una autorització de la Mesa.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El text diu que durant el mandat els diputats no poden ser detinguts pels delictes comesos a Catalunya, excepte en cas de delicte flagrant, i això sosté l'opció d. Però el mateix text diu que el TSJC és competent per determinar la inculpació, la presó, el processament i el judici. Per això l'opció a (detenció ordenada pel TSJC) és arguïblement correcta i la unicitat no queda garantida. La cita només recull la immunitat i, mostrada sola, no permet descartar l'opció a, que el text sobre el fur deixa oberta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El model d'assimilació pressuposa que l'aculturació (assemblar-se més a la majoria) ajudaria a reduir el prejudici i la discriminació. L'opció c ho reflecteix literalment i la cita ho conté. Les opcions a (melting pot), b i d (pluralisme cultural) corresponen a altres models i no són correctes.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. Les opcions a, c i d apareixen en la descripció del melting pot, i la cita les conté totes tres. L'opció b (peculiaritats a l'esfera privada) és del pluralisme cultural, per tant és l'única que no correspon al melting pot.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que tota societat ha de fixar el model o els models de convivència, a partir dels quals elabora les estratègies i polítiques socials. L'opció a ho reflecteix i la cita ho conté completament. Les opcions b, c i d (aculturació exigible, quotes, límits de concentració) no apareixen com a punt de partida al text.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"Segons el text, els estats sobirans deleguen algunes funcions de forma expressa a la federació i ells en retenen la resta. L'opció d és correcta i la cita conté tot l'element. Les opcions a, b i c no tenen suport al text i la a el contradiu.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que l'Estat unitari ha anat introduint mecanismes de descentralització política, mentre que el federal ha reclamat més competències cap a una major centralització i uniformització. L'opció c ho recull i la cita conté les dues parts. Les opcions a, b i d inverteixen o generalitzen l'evolució i no són correctes.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.2\",\"verdict\":\"VALID\",\"reason\":\"El text indica que l'Estat unitari té un únic centre de decisió política (el govern) i un únic centre per dictar normes amb rang de llei (el parlament). L'opció b és correcta i la cita conté ambdós elements. El govern és el centre de decisió política, no legislatiu. El prefecte és autoritat administrativa i el tribunal suprem no hi consta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el Ple de l'IEC va ratificar per consens la nova versió de l'Ortografia en la sessió plenària del 24 d'octubre de 2016, i la cita ho conté. El 29 de setembre de 2016 és la data de ratificació de la Gramàtica, per tant és un distractor vàlid. Les altres dates no corresponen a aquesta ratificació. És una data fita de la matèria.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "11.1",
+    "11.2",
+    "12.0",
+    "12.1",
+    "12.2",
+    "13.0",
+    "13.1",
+    "13.2",
+    "14.0",
+    "14.1"
+   ],
+   "prompt_sha256": "d4838a95da45e24f7df0f175ea318b78ebdebe8e238b5bf8becc33de010da766",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "11.1": "e60f6430acb66a0e4b2cf25521d0d8b133237891a80915bef6e29e58b34d2fb5",
+    "11.2": "212838e8e2e80203a2a99588adb5954e743066bbe36faba4edbcf96f3c80a4b2",
+    "12.0": "080a768c96722b1e1777f1486c6e15cdfad7135b63e6c4d9ccb06565786b450c",
+    "12.1": "e9e9e2b07d025440cc6385ae4f7951728fa61c67e36920893eb31de3a020984b",
+    "12.2": "7442ca34bf10a0abb0937ab50bb9e20e6986d95bd43cee0ded640b021a24dd6b",
+    "13.0": "a0a4cbe78a256c225459b5f5962f8c7257107aafce9d94e0e426e2c4c4cb7277",
+    "13.1": "65665eeb3e6bce6717156e23204ea255aa76096baf5165294c2e24003f671a98",
+    "13.2": "7e4f004db3f582f4662f6a9f8ba1c7c75cee3d09365a585b68c7d10c35475ba9",
+    "14.0": "9289e7b68bcecd79101901a56971c69ff126c13874f37214e74e738e0fc0c12c",
+    "14.1": "1b2e28102cde5590204dfc6223f4a4633529bd5504c181de7d17201083e30805"
+   },
+   "veredictos": [
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El text enumera Moll, Sanchis i Guarner, Badia i Margarit, Jané, Ruaix i Solà. Moll, Solà i Jané hi surten i Coromines no, de manera que l'opció 3 és l'única correcta. La cita conté la llista completa, així que es veu que les altres tres opcions hi apareixen. No hi ha cap altra opció defensable ni cap parecida.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la Gramàtica incorpora 'les solucions avalades per la tradició i el prestigi social que encara no tenien el reconeixement per part de la norma'. L'opció 2 hi coincideix. Les altres (registre col·loquial oral, mitjans de comunicació, acadèmies romàniques) no apareixen al text. La cita conté tot l'element necessari i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La lletra c) del text diu 'sancionar i promulgar les lleis', que és l'opció 1. 'Aprovar els decrets' contradiu la lletra d), on el rei només els expedeix. 'Nomenar ministres per iniciativa pròpia' contradiu la lletra e), que exigeix proposta del president. 'Dirigir la política' és incompatible amb l'exclusió del rei de la direcció política. La cita inclou c), d) i e), per això permet descartar les altres opcions. L'única és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text justifica la prohibició amb la necessitat de fer compatibles la institució monàrquica i el principi democràtic ('Per aquest motiu'). La cita recull tant el motiu com la conseqüència. Les altres opcions (independència judicial, conflicte Casa del Rei i Corts, assegurar la successió) no són el motiu que dona el text. La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu literalment que 'les Corts Generals representen el poble espanyol', mentre que el rei representa la unitat de l'Estat. La cita ho conté. El Govern i el Tribunal Constitucional no se'n diuen representants del poble, i el rei s'hi oposa explícitament. L'única és l'opció 3. És un fet concret i vàlid per a examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Entre els aspectes de la reforma 1905-1908 el text cita 'l'ingrés en els cossos policials mitjançant concursos oposició', que és l'opció 2. L'extensió dels Mossos a Catalunya (1932), la dependència del Comissariat d'Ordre Públic (Estatut, 1932) i la integració en l'exèrcit en fur i insígnies (franquisme, fins al 1952) són fets posteriors i no formen part de la reforma. La cita conté l'element correcte.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la necessitat d'una força que controlés la perifèria de les ciutats davant dels pistolers va revitalitzar el cos, i que els fets de 1919 van fer replantejar l'extinció. L'opció 1 hi coincideix. La Mancomunitat no volia estendre el cos (el text diu que no el va tenir en compte). La dictadura de Primo de Rivera no va exigir res, ja que 'no va causar cap problema'. Els republicans demanaven la dissolució. La cita conté el motiu.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la base de la repressió va anar a càrrec de la Guàrdia Civil, amb el suport del sometent i dels Mossos. L'opció 0 coincideix amb ambdós elements, que la cita conté. Les altres combinacions canvien l'agent principal (Seguridad, Mossos, exèrcit) o el suport, i el text les contradiu.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Les idees força diuen que la Comissió Europea 'està integrada per vint-i-set membres', opció 3. Les altres xifres (15, 25, 28) no hi apareixen. La cita conté la xifra. És una dada concreta i útil per a examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la Comissió Europea és 'un òrgan independent dels estats membres' amb la missió de protegir i vetllar pels interessos comunitaris. El Consell és intergovernamental, el Parlament representa els pobles i el Tribunal garanteix la interpretació del dret, així que cap altra opció encaixa. La cita conté la definició completa. No hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a7027a0218d1e7d51.jsonl",
+    "respuesta_sha256": "b9e02d51a4db4944b38d084c3ef24502d47b89be854297aa439a2218a1d933c5"
+   },
+   "registrada_el": "2026-10-06T23:48:50",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:48:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a7027a0218d1e7d51.jsonl",
+      "respuesta_sha256": "b9e02d51a4db4944b38d084c3ef24502d47b89be854297aa439a2218a1d933c5"
+     },
+     "respuesta": "[\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El text enumera Moll, Sanchis i Guarner, Badia i Margarit, Jané, Ruaix i Solà. Moll, Solà i Jané hi surten i Coromines no, de manera que l'opció 3 és l'única correcta. La cita conté la llista completa, així que es veu que les altres tres opcions hi apareixen. No hi ha cap altra opció defensable ni cap parecida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la Gramàtica incorpora 'les solucions avalades per la tradició i el prestigi social que encara no tenien el reconeixement per part de la norma'. L'opció 2 hi coincideix. Les altres (registre col·loquial oral, mitjans de comunicació, acadèmies romàniques) no apareixen al text. La cita conté tot l'element necessari i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"La lletra c) del text diu 'sancionar i promulgar les lleis', que és l'opció 1. 'Aprovar els decrets' contradiu la lletra d), on el rei només els expedeix. 'Nomenar ministres per iniciativa pròpia' contradiu la lletra e), que exigeix proposta del president. 'Dirigir la política' és incompatible amb l'exclusió del rei de la direcció política. La cita inclou c), d) i e), per això permet descartar les altres opcions. L'única és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.1\",\"verdict\":\"VALID\",\"reason\":\"El text justifica la prohibició amb la necessitat de fer compatibles la institució monàrquica i el principi democràtic ('Per aquest motiu'). La cita recull tant el motiu com la conseqüència. Les altres opcions (independència judicial, conflicte Casa del Rei i Corts, assegurar la successió) no són el motiu que dona el text. La pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu literalment que 'les Corts Generals representen el poble espanyol', mentre que el rei representa la unitat de l'Estat. La cita ho conté. El Govern i el Tribunal Constitucional no se'n diuen representants del poble, i el rei s'hi oposa explícitament. L'única és l'opció 3. És un fet concret i vàlid per a examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"Entre els aspectes de la reforma 1905-1908 el text cita 'l'ingrés en els cossos policials mitjançant concursos oposició', que és l'opció 2. L'extensió dels Mossos a Catalunya (1932), la dependència del Comissariat d'Ordre Públic (Estatut, 1932) i la integració en l'exèrcit en fur i insígnies (franquisme, fins al 1952) són fets posteriors i no formen part de la reforma. La cita conté l'element correcte.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la necessitat d'una força que controlés la perifèria de les ciutats davant dels pistolers va revitalitzar el cos, i que els fets de 1919 van fer replantejar l'extinció. L'opció 1 hi coincideix. La Mancomunitat no volia estendre el cos (el text diu que no el va tenir en compte). La dictadura de Primo de Rivera no va exigir res, ja que 'no va causar cap problema'. Els republicans demanaven la dissolució. La cita conté el motiu.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la base de la repressió va anar a càrrec de la Guàrdia Civil, amb el suport del sometent i dels Mossos. L'opció 0 coincideix amb ambdós elements, que la cita conté. Les altres combinacions canvien l'agent principal (Seguridad, Mossos, exèrcit) o el suport, i el text les contradiu.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"Les idees força diuen que la Comissió Europea 'està integrada per vint-i-set membres', opció 3. Les altres xifres (15, 25, 28) no hi apareixen. La cita conté la xifra. És una dada concreta i útil per a examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la Comissió Europea és 'un òrgan independent dels estats membres' amb la missió de protegir i vetllar pels interessos comunitaris. El Consell és intergovernamental, el Parlament representa els pobles i el Tribunal garanteix la interpretació del dret, així que cap altra opció encaixa. La cita conté la definició completa. No hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "15.0",
+    "15.1",
+    "15.2",
+    "16.0",
+    "16.1",
+    "17.0",
+    "17.1",
+    "17.2"
+   ],
+   "prompt_sha256": "8dab810e7d0da04ee21cb4765ce2c5e208dc882819fbf3bfb4978a4751ed5294",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "15.0": "a0e9e65bb2440d9b6e9c9ae1e24a0c1a8efe3c5409568b341a39a26fdb9a213e",
+    "15.1": "53ec3190db812c3213876c039dd6170481bbe924ce250af2f90d72c9f106b17b",
+    "15.2": "8cdd1140f6739dadbb3f861e2024b7b6032f0b1c68153b51f5eaa76ba5dcf8c9",
+    "16.0": "06016cd3a157ca7ae24de8804adaea2cdc4b9976bddb1585bb5a86345adc8f0d",
+    "16.1": "664a2c9ae8778e07c9a26995dc85a3bc7c371189b610d4eb3d1e7b0bbcd8400b",
+    "17.0": "3a7a64c012ab508cf86d4bf80f11c16a3375078ca34e74746019e109c54fd5fd",
+    "17.1": "0bd19a9dff90d9feee0a17910e9cb7d6a630f630305e8557a4489a13a591e652",
+    "17.2": "b9e4fb75bc35064aebb2ff068de9e01cd9857b65275d0ab4491d25f9078899d2"
+   },
+   "veredictos": [
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (5.5) dice que la oficina SIRENE está integrada en el Cos Nacional de Policia, en la Divisió de Cooperació Internacional, dependiente de la Dirección Adjunta Operativa. La cita contiene íntegramente el dato y respalda la opción B. Las otras tres (Guardia Civil, Secretaria d'Estat/BDSN, Mossos) no aparecen como ubicación de SIRENE, así que es única. Pregunta concreta, sin pistas en las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (5.1) afirma que no se puede sacar información del SIS para una investigación ni incorporar sus datos a bases de datos estatales; es justo el supuesto planteado, y la opción A lo recoge. La cita contiene ambos elementos. Las opciones B, C y D (autorización de SIRENE, datos sin transcendencia europea, orden judicial) no tienen apoyo en el texto, que prohíbe sin excepciones. Caso práctico bien formulado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (5.4.1) dice que la denegación de la búsqueda por razones jurídicas o de oportunidad comporta siempre como medida alternativa el esclarecimiento del domicilio y la localización del reclamado (opción D). La cita lo contiene completo. Vigilancia discreta, lista de no admisibles e Interpol no se presentan como alternativa en el texto. No hay parecidas, así que no hay duplicado. Dato específico y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (punto 8) dice que el Ministerio Fiscal ejerce sus funciones con los principios de unidad de actuación, dependencia jerárquica y sujeción a la legalidad e imparcialidad, que es la opción C. La cita lo contiene entero. Las demás opciones mezclan principios del poder judicial (exclusividad, unidad jurisdiccional) o del estatuto de jueces (independencia, inamovilidad, responsabilidad) y no coinciden con el texto. Pregunta discriminante y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (punto 4) dice que jueces y magistrados forman un cuerpo único y que su estatuto se regula en la LOPJ (opción B). La cita recoge las dos partes de la respuesta (cuerpo único y LOPJ). Las demás opciones (cuerpos por jurisdicción o territoriales, estatuto por reglamento del Ministerio, por el CGPJ o por estatutos de autonomía) contradicen el texto. Pregunta clara y sin pistas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (C.5.3) dice que el Código no entra a reglamentar prácticas policiales concretas, sino que es una herramienta pedagógica e inspiradora. Esto respalda la opción A, y la cita contiene ambas partes. La B (autorización del Comité) y la D (regula protocolos operativos) no tienen apoyo, y la C (pendiente de aprobación) es falsa: el texto dice que lo aprobó el Gobierno con el Acord GOV/25/2015. Caso práctico bien planteado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (final de C.5.3) dice que el Código atribuye a la función policial el carácter de proximidad y atención a las personas, fomento de la convivencia y práctica pedagógica (opción D). La cita lo recoge literalmente. Las demás opciones (autoridad y control, jerarquía y obediencia, neutralidad y distancia) no aparecen en el texto. No hay parecidas. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el contenido describe lo exigible a la policía con la voluntad de garantizar su credibilidad y fomentar la confianza ciudadana (opción C). La cita lo contiene entero. Las otras opciones (régimen sancionador, sustituir la normativa, limitar la autonomía) contradicen el texto, que recuerda la autonomía de actuación y dice que el Código no reglamenta. Las parecidas no son duplicadas. La 'nueva:guia-mossos:C.5.3:1' pregunta por el carácter de la función policial, y la 'guia-mossos-166' por la base del Código europeo; son hechos distintos.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-ae2a95e01ab872931.jsonl",
+    "respuesta_sha256": "b2dd7bcaa853dca5b0759454bb76db83885c05f85a9a0d2c99572cf424c2c4a0"
+   },
+   "registrada_el": "2026-10-06T23:49:10",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:49:10",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-ae2a95e01ab872931.jsonl",
+      "respuesta_sha256": "b2dd7bcaa853dca5b0759454bb76db83885c05f85a9a0d2c99572cf424c2c4a0"
+     },
+     "respuesta": "[\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El texto (5.5) dice que la oficina SIRENE está integrada en el Cos Nacional de Policia, en la Divisió de Cooperació Internacional, dependiente de la Dirección Adjunta Operativa. La cita contiene íntegramente el dato y respalda la opción B. Las otras tres (Guardia Civil, Secretaria d'Estat/BDSN, Mossos) no aparecen como ubicación de SIRENE, así que es única. Pregunta concreta, sin pistas en las opciones.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El texto (5.1) afirma que no se puede sacar información del SIS para una investigación ni incorporar sus datos a bases de datos estatales; es justo el supuesto planteado, y la opción A lo recoge. La cita contiene ambos elementos. Las opciones B, C y D (autorización de SIRENE, datos sin transcendencia europea, orden judicial) no tienen apoyo en el texto, que prohíbe sin excepciones. Caso práctico bien formulado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.2\",\"verdict\":\"VALID\",\"reason\":\"El texto (5.4.1) dice que la denegación de la búsqueda por razones jurídicas o de oportunidad comporta siempre como medida alternativa el esclarecimiento del domicilio y la localización del reclamado (opción D). La cita lo contiene completo. Vigilancia discreta, lista de no admisibles e Interpol no se presentan como alternativa en el texto. No hay parecidas, así que no hay duplicado. Dato específico y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El texto (punto 8) dice que el Ministerio Fiscal ejerce sus funciones con los principios de unidad de actuación, dependencia jerárquica y sujeción a la legalidad e imparcialidad, que es la opción C. La cita lo contiene entero. Las demás opciones mezclan principios del poder judicial (exclusividad, unidad jurisdiccional) o del estatuto de jueces (independencia, inamovilidad, responsabilidad) y no coinciden con el texto. Pregunta discriminante y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El texto (punto 4) dice que jueces y magistrados forman un cuerpo único y que su estatuto se regula en la LOPJ (opción B). La cita recoge las dos partes de la respuesta (cuerpo único y LOPJ). Las demás opciones (cuerpos por jurisdicción o territoriales, estatuto por reglamento del Ministerio, por el CGPJ o por estatutos de autonomía) contradicen el texto. Pregunta clara y sin pistas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El texto (C.5.3) dice que el Código no entra a reglamentar prácticas policiales concretas, sino que es una herramienta pedagógica e inspiradora. Esto respalda la opción A, y la cita contiene ambas partes. La B (autorización del Comité) y la D (regula protocolos operativos) no tienen apoyo, y la C (pendiente de aprobación) es falsa: el texto dice que lo aprobó el Gobierno con el Acord GOV/25/2015. Caso práctico bien planteado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.1\",\"verdict\":\"VALID\",\"reason\":\"El texto (final de C.5.3) dice que el Código atribuye a la función policial el carácter de proximidad y atención a las personas, fomento de la convivencia y práctica pedagógica (opción D). La cita lo recoge literalmente. Las demás opciones (autoridad y control, jerarquía y obediencia, neutralidad y distancia) no aparecen en el texto. No hay parecidas. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el contenido describe lo exigible a la policía con la voluntad de garantizar su credibilidad y fomentar la confianza ciudadana (opción C). La cita lo contiene entero. Las otras opciones (régimen sancionador, sustituir la normativa, limitar la autonomía) contradicen el texto, que recuerda la autonomía de actuación y dice que el Código no reglamenta. Las parecidas no son duplicadas. La 'nueva:guia-mossos:C.5.3:1' pregunta por el carácter de la función policial, y la 'guia-mossos-166' por la base del Código europeo; son hechos distintos.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}
