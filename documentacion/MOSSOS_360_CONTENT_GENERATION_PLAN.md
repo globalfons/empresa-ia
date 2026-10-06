@@ -1,6 +1,6 @@
 # Mossos 360 · Content Generation Plan
 
-Generado por `python3 -m fabrica.cobertura360 informe mossos-esquadra` a partir de `MOSSOS_360_CONTENT_COVERAGE.md` (mismos datos). Fábrica de preguntas: **ACTIVE**: las tandas de conocimientos quedan preparadas pero NO se ejecutan hasta levantar la pausa (`python3 -m fabrica.motor --reanudar` tras revisar las métricas, como exige la fábrica).
+Generado por `python3 -m fabrica.cobertura360 informe mossos-esquadra` a partir de `MOSSOS_360_CONTENT_COVERAGE.md` (mismos datos). Fábrica de preguntas: **GENERATION_PAUSED**: las tandas de conocimientos quedan preparadas pero NO se ejecutan hasta levantar la pausa (`python3 -m fabrica.motor --reanudar` tras revisar las métricas, como exige la fábrica).
 
 Orden: primero lo que corrige fuentes y calidad (P0 de fuentes, recalibración), después la cobertura P0/P1 y por último la ampliación. Tamaño de tanda de conocimientos = `lote.tamano_inicial` de la fábrica (10) tras una pausa.
 
@@ -10,13 +10,15 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
 |---|---|---|---|---|---|
-| S00031 | 50 | 45 | 5 | 0 | juez-sesion-v4 |
 | S00032 | 50 | 44 | 5 | 1 | juez-sesion-v4 |
 | S00033 | 46 | 39 | 5 | 2 | juez-sesion-v4 |
 | S00034 | 48 | 39 | 8 | 1 | juez-sesion-v4 |
 | S00035 | 50 | 45 | 4 | 1 | juez-sesion-v4 |
+| S00036 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
 
 - **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
+- **S00037 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00037/DECISION.json`.
+- Pausa vigente: Parada automática de la fase 1.000 VALID: problema de evidencia en S00037 (50/50 VALID; ALL_VALID_SIN_EVIDENCIA en 4 razones). Lote retenido sin publicar ni rejuzgar. Reanudar con --reanudar tras decisión humana.
 
 | área | prioridad | elementos planificados |
 |---|---|---|
@@ -24,7 +26,7 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 | COMPETENCIES | P1 | 54 |
 | INTERVIEW | P1 | 4 |
 | KNOWLEDGE | P0 | 0 |
-| KNOWLEDGE | P2 | 7 |
+| KNOWLEDGE | P2 | 4 |
 
 ## BATCH MOSSOS-SOURCES-001
 
@@ -38,13 +40,13 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 ## BATCH MOSSOS-KNOWLEDGE-001
 
-- prioridad: P2 · tipo: generacion · ejecutable ahora: sí
+- prioridad: P2 · tipo: generacion · ejecutable ahora: no — GENERATION_PAUSED
 - temas: C.2
-- subtemas: C.2.2, C.2.7, C.2.IF
-- cantidad: 7
+- subtemas: C.2.2, C.2.IF
+- cantidad: 4
 - dificultad: {"1": 1, "2": 1, "3": 1}
-- tipos: {"literal": 1, "plazos": 1, "aplicacion": 1, "conceptual": 1, "requisitos": 1, "caso_practico": 1, "dificil": 1}
-- fuente: guia-mossos:C.2.2, guia-mossos:C.2.7, guia-mossos:C.2.IF
+- tipos: {"literal": 1, "aplicacion": 1, "requisitos": 1, "caso_practico": 1}
+- fuente: guia-mossos:C.2.2, guia-mossos:C.2.IF
 - validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
 - judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
 - criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana

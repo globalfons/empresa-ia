@@ -951,9 +951,43 @@
     "veredictos": "a61d538c98774f407f9a0fc4c4f6e318dc250271c16c5cdb0b5a21d74c8aafdb",
     "prompt_juez": "8c9eb513fbea420ce47a219e2be9b2791964b9072c32f002aeb0d73c9677ee9f"
    }
+  },
+  {
+   "id": "S00036",
+   "fecha": "2026-10-06T18:47:26",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 19,
+   "generadas": 50,
+   "VALID": 44,
+   "REVIEW_REQUIRED": 6,
+   "REJECTED": 0,
+   "duplicadas": 0,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "37c64b1aa8a75d53e5931f613b8d54ed966b2d9c9db338bffebf2968df3c4656",
+    "revision": "138a599b235de20fdf945b2653d57d454b93ec2a48ff3989c3cd119a9c357a00",
+    "veredictos": "91889a9076ec7aba2f77d5ceabca8d43b8ce21b5779e2e29ae4751dcf51dc50e",
+    "prompt_juez": "60bc7b51da37f9d4727011274537c0fd3588c9a234ab913499c9e5000ebd331c"
+   }
   }
  ],
- "pausa": null,
+ "pausa": {
+  "estado": "GENERATION_PAUSED",
+  "motivo": "Parada automática de la fase 1.000 VALID: problema de evidencia en S00037 (50/50 VALID; ALL_VALID_SIN_EVIDENCIA en 4 razones). Lote retenido sin publicar ni rejuzgar. Reanudar con --reanudar tras decisión humana.",
+  "lote": "S00037",
+  "fecha": "2026-10-06"
+ },
  "omitidos": {
   "lo-4-2015|24": 2,
   "guia-mossos|C.2.2": 2,
@@ -1017,6 +1051,13 @@
    "fecha": "2026-10-06",
    "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
    "evidencia": "fabrica/estado/retenidos/S00022/DECISION.json"
+  },
+  {
+   "id": "S00037",
+   "estado": "RETENIDO",
+   "fecha": "2026-10-06",
+   "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+   "evidencia": "fabrica/estado/retenidos/S00037/DECISION.json"
   }
  ]
 }

@@ -55,5 +55,17 @@
   "lote": "C00001",
   "detalle": "Juez de competencias, tanda 02: el guard de valoraciones agregadas rechazó «situación diferente de las anteriores» (comparación para deduplicar, no un veredicto de grupo).",
   "accion": "fabrica.competencias.agregada excluye las comparaciones (test); se registra de nuevo la MISMA respuesta del juez. Prompt y criterios sin cambios."
+ },
+ {
+  "fecha": "2026-10-06T18:55:22",
+  "tipo": "tanda_juez_rechazada",
+  "lote": "S00037",
+  "detalle": "S00037 tanda 04: FORMATO: veredicto con campos ['criteria_checked', 'criteris_nota', 'question_id', 'reason', 'verdict']; se exigen ['criteria_checked', 'question_id', 'reason', 'verdict']"
+ },
+ {
+  "fecha": "2026-10-06T18:55:22",
+  "tipo": "juez_incompleto",
+  "lote": "S00037",
+  "detalle": "hay tandas del juez sin aceptar (pendientes o rechazadas por los guards)"
  }
 ]

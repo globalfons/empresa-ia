@@ -54,3 +54,38 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
   En REVIEW_REQUIRED: dos por claridad (el juez vio que la forma de las opciones delataba la respuesta) y un caso práctico (revisión humana obligatoria).
 - **Resultado**: B.1 12/12, B.5 10/10, C.1 8/8 (el CoverageEngine propone 9 para C.1; no se generó más porque la autorización fijaba 8). La fábrica vuelve a GENERATION_PAUSED.
 - **Tests**: Deno SKIPPED (no está instalado en el entorno; `supabase/` no se ha modificado).
+
+## Actualización 2026-10-06 · fase banco de conocimientos (objetivo 1.000 VALID)
+- **Resultado**: TESTLEY_GENERATED VALID pasa de 126 a **588**. La fábrica se detiene de forma automática antes de llegar a 1.000 (ver motivo).
+- **Lotes** (`juez-sesion-v4`, planificador general, sin Tema D ni leyes 4/2003, 10/1994 y 16/1991):
+
+  | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED |
+  |---|---|---|---|---|
+  | S00026 | 30 | 28 | 2 | 0 |
+  | S00027 | 49 | 44 | 5 | 0 |
+  | S00028 | 50 | 45 | 5 | 0 |
+  | S00029 | 50 | 45 | 5 | 0 |
+  | S00030 | 50 | 44 | 6 | 0 |
+  | S00031 | 50 | 45 | 5 | 0 |
+  | S00032 | 50 | 44 | 5 | 1 (duplicada) |
+  | S00033 | 46 | 39 | 5 | 2 |
+  | S00034 | 48 | 39 | 8 | 1 |
+  | S00035 | 50 | 45 | 4 | 1 |
+  | S00036 | 50 | 44 | 6 | 0 |
+  | **Total** | 523 | **462** | 56 | 5 |
+  | S00037 | 50 | RETENIDO | — | — |
+
+- **Parada automática (S00037)**: el juez dio 50/50 VALID, pero la comprobación ALL_VALID_SIN_EVIDENCIA encontró 4 razones sin vocabulario propio de la pregunta (11.1, 12.1, 15.0 y 17.0). Es la condición de parada «aparecen problemas de evidencia». El lote queda retenido sin publicar ni rejuzgar en `fabrica/estado/retenidos/S00037/DECISION.json`, y la fábrica pasa a GENERATION_PAUSED. Para reanudar hace falta una decisión humana y `--reanudar`. En la tanda 04 hubo un rechazo de FORMATO; se repitió con un juez nuevo, como permite la política.
+- **S00022**: `SOLAPES.json` registra las preguntas nuevas que tratan hechos de S00022. Ninguno de los dos hechos vetados (1.0 y 4.0) tiene pregunta publicada.
+- **Capacidad restante**: 151 apartados de la guía, 21 llenos (tope de 10 preguntas por apartado) y 535 huecos libres. Con la tasa observada (~85 % VALID), el techo queda en ≈ 1.040 VALID: muy justo para 1.000.
+- **Fuentes que limitan la generación**:
+  - Tema D: sin fuente oficial.
+  - Leyes 4/2003, 10/1994 y 16/1991: OFFICIAL_PENDING_REVIEW.
+  - C.2.2 y C.2.3: solo índice o enlace; omitidos.
+  - Textos con defectos de origen: tabla dialectal A.4.2, tabla de población A.5.6, puntos duplicados en C.3, erratas de OCR.
+  - REVIEW_REQUIRED también consume capacidad.
+- **Incidencias**:
+  - El commit 9d2ea48a59 se subió con un test Python dependiente de los datos en rojo (`test_plan_desde_cobertura…`, 13 ≠ 15). Se corrigió en 1ab839e3bb, y desde entonces la batería de comprobaciones se corta al primer fallo.
+  - Hubo un límite de tasa (429) de los jueces en S00033; se relanzaron sin que hubiera veredictos previos.
+  - Hubo un veredicto inconsistente en S00033 (REJECTED sin duplicado); se aplicó el criterio más conservador.
+- **Tests**: Deno SKIPPED (no está instalado; `supabase/` sin modificar). Physical Engine: no iniciado.

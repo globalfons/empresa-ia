@@ -1,0 +1,1053 @@
+{
+ "evaluacion": "S00037",
+ "creada_el": "2026-10-06T18:53:25",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 50,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "3.1",
+    "3.2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/sesion/evaluaciones/S00037/tanda-01.json",
+   "prompt_sha256": "9ae5eb71625ae8a56bb52ac9ca4a4fd2331bd666cee3ad3380b55f65f5e962e2",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "1c2391a91333d094cfdffe1ba3f60eb9df036db23e861c4e5ba1db702de0b34d",
+    "1.0": "ba6c3082d1b69a2224d1a56de3249cd81da1c17797e0d414e3a959f273175d66",
+    "1.1": "d14342c7eff2dff3ccd15f304e13e9e54ff98b83a7d66817bc3baf6ede50ac32",
+    "1.2": "3b1bebc84099af3122590614c3756d4a9e2f1b59715fe1a4d223193699cb4185",
+    "2.0": "b36d312e8c8b853fc597ebe1339815c87502cd620fe38745afe88393500896d0",
+    "2.1": "f1d46fb2c6456d87c419713f1a593db1b5e5cf2d3b0f81de7601490a7402bf38",
+    "2.2": "685d956b46f3b0218a1bbe009d02f27f580adce32cc9f9b36488d26a37af8e67",
+    "3.0": "687bd354f4a66d5b140b22e48ea927a106256e49af502bb15b888f39e56290eb",
+    "3.1": "847dfd6ac18ca9a90b1e5082e746f27c986468466f5a7040ec8048c7b299854b",
+    "3.2": "9c9b184c2e17c88a4eb1c73393a4e396abf02f0a129ea2ad89519f5a053b598c"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 10 dice que el Gobierno puede reunirse en otros lugares de Cataluña 'de acuerdo con la ley'. La opción d lo recoge y la cita contiene el elemento clave. La opción b atribuye al Reglamento del Parlamento la regulación del Gobierno, lo cual es incorrecto, porque el Reglamento rige para el Parlamento. La opción c no aparece en el texto. Pregunta clara y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en el Compromiso de Caspe (1412) se eligió a Fernando de Antequera. La cita lo recoge íntegramente. Ferran II e Isabel aparecen en el texto pero en otro contexto (nieto y esposa), por lo que no son correctas. Martí l'Humà es el rey fallecido. Hito histórico, no trivial. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto define la Busca y la Biga como grupos sociales urbanos con intereses económicos contrapuestos, y la cita lo contiene. Las demás opciones (ciudades mercantiles, remensas y señores, familias nobles) corresponden a otros elementos del texto y no son válidas. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la pérdida de la centralidad comercial del Mediterráneo explica que Portugal y Castilla buscaran nuevas rutas. La cita lo contiene. Los distractores (prohibición del Compromiso de Caspe, alianza de Génova y Venecia con los turcos, excedente agrario) contradicen o no aparecen en el texto. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto afirma que ha sido el Tribunal Constitucional quien ha establecido los criterios principales sobre la titularidad de los derechos. La cita lo recoge completo. Las demás opciones no aparecen como responsables en el texto. Sin parecidas en su lista.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negativo. El texto distingue entre nacionales, extranjeros y personas jurídicas, y la cita muestra las tres categorías, de modo que se ve que las opciones a, b y c sí aparecen. Los menores de edad no son categoría de distinción (solo se menciona 'mayores de edad' como requisito del sufragio). La parecida pregunta quién estableció los criterios, que es un hecho distinto, por lo que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que el sufragio activo y pasivo de extranjeros en elecciones municipales puede establecerse por tratado o ley 'de acuerdo con criterios de reciprocidad'. La cita lo contiene. Los otros criterios (proporcionalidad, mérito y capacidad, igualdad territorial) no aparecen. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el triunfo de la Lliga en 1901 significaba el primer triunfo del catalanismo político en unas elecciones y un revés a los partidos dinásticos (y al caciquismo). La opción b es correcta y la cita contiene ambos elementos. Las opciones a y c corresponden a Solidaritat Catalana (1907) y la d atribuye el triunfo al lerrouxismo, lo cual es falso. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que entre los cinco ejecutados tras la Semana Trágica estaba el pedagogo Ferrer i Guàrdia, fundador de la Escuela Moderna. La cita lo contiene todo. Prat de la Riba, Macià y Puig i Cadafalch aparecen en otros contextos del texto. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el complot de Garraf tenía como finalidad atentar contra Alfonso XIII, y la cita lo recoge. Prats de Molló fue un proyecto de invasión desde Francia, no un atentado. El Banquete de la Victoria y la huelga de La Canadiense no tienen relación con el atentado. Una sola opción es correcta y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-aeba10475770bdd5c.jsonl",
+    "respuesta_sha256": "309843ae10fe8f20b9de339e90a698ec59a0fcfa121359238b7d59edcaaa5c3c"
+   },
+   "registrada_el": "2026-10-06T18:55:22",
+   "intentos": [
+    {
+     "t": "2026-10-06T18:55:22",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-aeba10475770bdd5c.jsonl",
+      "respuesta_sha256": "309843ae10fe8f20b9de339e90a698ec59a0fcfa121359238b7d59edcaaa5c3c"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 10 dice que el Gobierno puede reunirse en otros lugares de Cataluña 'de acuerdo con la ley'. La opción d lo recoge y la cita contiene el elemento clave. La opción b atribuye al Reglamento del Parlamento la regulación del Gobierno, lo cual es incorrecto, porque el Reglamento rige para el Parlamento. La opción c no aparece en el texto. Pregunta clara y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en el Compromiso de Caspe (1412) se eligió a Fernando de Antequera. La cita lo recoge íntegramente. Ferran II e Isabel aparecen en el texto pero en otro contexto (nieto y esposa), por lo que no son correctas. Martí l'Humà es el rey fallecido. Hito histórico, no trivial. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El texto define la Busca y la Biga como grupos sociales urbanos con intereses económicos contrapuestos, y la cita lo contiene. Las demás opciones (ciudades mercantiles, remensas y señores, familias nobles) corresponden a otros elementos del texto y no son válidas. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la pérdida de la centralidad comercial del Mediterráneo explica que Portugal y Castilla buscaran nuevas rutas. La cita lo contiene. Los distractores (prohibición del Compromiso de Caspe, alianza de Génova y Venecia con los turcos, excedente agrario) contradicen o no aparecen en el texto. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El texto afirma que ha sido el Tribunal Constitucional quien ha establecido los criterios principales sobre la titularidad de los derechos. La cita lo recoge completo. Las demás opciones no aparecen como responsables en el texto. Sin parecidas en su lista.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negativo. El texto distingue entre nacionales, extranjeros y personas jurídicas, y la cita muestra las tres categorías, de modo que se ve que las opciones a, b y c sí aparecen. Los menores de edad no son categoría de distinción (solo se menciona 'mayores de edad' como requisito del sufragio). La parecida pregunta quién estableció los criterios, que es un hecho distinto, por lo que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que el sufragio activo y pasivo de extranjeros en elecciones municipales puede establecerse por tratado o ley 'de acuerdo con criterios de reciprocidad'. La cita lo contiene. Los otros criterios (proporcionalidad, mérito y capacidad, igualdad territorial) no aparecen. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el triunfo de la Lliga en 1901 significaba el primer triunfo del catalanismo político en unas elecciones y un revés a los partidos dinásticos (y al caciquismo). La opción b es correcta y la cita contiene ambos elementos. Las opciones a y c corresponden a Solidaritat Catalana (1907) y la d atribuye el triunfo al lerrouxismo, lo cual es falso. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que entre los cinco ejecutados tras la Semana Trágica estaba el pedagogo Ferrer i Guàrdia, fundador de la Escuela Moderna. La cita lo contiene todo. Prat de la Riba, Macià y Puig i Cadafalch aparecen en otros contextos del texto. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el complot de Garraf tenía como finalidad atentar contra Alfonso XIII, y la cita lo recoge. Prats de Molló fue un proyecto de invasión desde Francia, no un atentado. El Banquete de la Victoria y la huelga de La Canadiense no tienen relación con el atentado. Una sola opción es correcta y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "6.1",
+    "6.2",
+    "7.0"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/sesion/evaluaciones/S00037/tanda-02.json",
+   "prompt_sha256": "fce1985bf79ca90ad8ad7343266963c11172c0055ab32a798564354da0b54c2e",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "3b54e03450ca6c006262673c99345ce9650cc9f7c84d7bf92284ed75dc934975",
+    "4.1": "52405dfc153cf118124c2ec63ab5cdffcb465c9c55e9d5e583632b17449be9a1",
+    "4.2": "65a887824b9c54d62919fb9fb00402caa97b0d64a74b804d505fde9176fe080f",
+    "5.0": "1620270fc3fc57874bf93996dc267dc0d5b96d76f7bdde8152fbb8730dfbdb6a",
+    "5.1": "d1c79d679cf8d61fb5543429e52c9e44c0e190601252a9b381aed8a42909b3d9",
+    "5.2": "85bb4eb71cb4df86e4b343669cc5f62f8fb0daf516bb0782dc0c49ae3c87af96",
+    "6.0": "44afe078cc8027939eda035736d1be4c2e09cc64c96148d84a3db443f9862fbf",
+    "6.1": "9b4131406a132aa9ee2429323b9a5bf419945c177fc40c515d06bc57ccea4f71",
+    "6.2": "4f6e3f8f058377865e78562c1801154d19b7e00f8efa6952a5042ed99923ff30",
+    "7.0": "e289c674e6ef4d252ba682ba2c78c33abdcfce0ea79c507b9d25341c4728fa06"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 6 del text diu literalment que la Subdirecció General d'Estudis Universitaris, Recerca i Desenvolupament impulsa, coordina i gestiona la formació universitària, la recerca i la innovació en l'àmbit de la seguretat pública. La cita reprodueix aquesta frase sencera i identifica l'òrgan. Els altres òrgans (Escola de Policia, Subdirecció d'Administració i Serveis, Servei de Selecció i Avaluació) tenen funcions diferents als punts 3, 5 i 7. No hi ha cap parella a parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 3 atribueix a l'Escola de Policia de Catalunya dissenyar el contingut docent i supervisar l'avaluació en l'àmbit de la seguretat. L'Escola de Bombers fa el mateix però en l'àmbit de la prevenció, el medi natural i els incendis (punt 4), de manera que la precisió 'seguretat' de la pregunta la fa única. La cita conté tota la frase, inclòs l'àmbit. El Servei Català de Trànsit i la Subdirecció d'Administració i Serveis no tenen aquesta funció.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 8 diu que la transferència es va fer per la via de l'article 150.2 CE mitjançant una Llei orgànica de transferència. La cita inclou tant la via (150.2) com l'instrument (llei orgànica), que són els dos elements que demana la pregunta. Els distractors canvien l'article (149.1, 150.1) o l'instrument (decret, llei marc) i són incorrectes segons el text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que les relacions de confiança protegeixen la privacitat i fan viables les comunicacions, i que això és la principal motivació de la signatura electrònica. La cita ho recull sencer. La parecida guia-mossos-175 pregunta l'objectiu de l'administració electrònica (transparència, eficàcia i qualitat), que és un fet diferent; no hi ha duplicat. Els distractors (cost, velocitat, substituir la identificació presencial) no apareixen al text.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix la integritat com la certesa que el missatge no s'ha modificat durant la transmissió, i la cita ho diu textualment. L'autenticitat (identitat del remitent) i el no repudi (negar l'enviament) són propietats diferents. La confidencialitat no es menciona al text. La parecida nueva:guia-mossos:A.7.4:0 tracta la motivació de la signatura, un fet diferent; no hi ha duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negatiu. El text diu que l'administració electrònica aspira a millorar la prestació dels serveis, a augmentar-ne la productivitat i a augmentar la participació ciutadana. La cita conté aquests tres elements, de manera que es veu que les opcions 0, 1 i 3 hi surten. La reducció de la plantilla del sector públic no s'esmenta enlloc, per tant és l'única resposta que no s'hi troba. Pregunta clara i sense duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que l'EAC, d'acord amb la CE (article 152.1), estableix la responsabilitat política del president i del Govern davant el Parlament. La cita ho inclou amb el número d'article. Els altres articles (143.1, 148.1, 151.1) no apareixen al text i són distractors clars. És un fet concret i útil per a un examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text descriu l'òrgan medieval (Diputació del General) com el que representava els interessos de les Corts Catalanes i els defensava davant el rei i els seus oficials quan no estaven reunides. L'opció 0 ho resumeix correctament i la cita ho conté. Les altres opcions (recaptar tributs, governar en nom del rei, convocar i presidir les Corts) no apareixen al text. Pregunta clara i sense duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "L'últim fragment del text diu que els mecanismes del sistema doten el president o la presidenta amb la facultat de dissoldre anticipadament el Parlament. La cita ho recull. La Mesa, el president del Parlament i el Consell de Garanties Estatutàries no tenen aquesta facultat segons el text. Resposta única i pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 5 diu que els rius catalans tenen règims fluvials molt diferents i irregulars, i que això provoca l'existència de diferents xarxes hidrogràfiques. La cita ho conté íntegrament. El clima 'uniforme' contradiu el punt 4, que parla de varietats climàtiques. Els rius no neixen a la mateixa unitat de relleu segons el text, i la concentració de població a la RMB no es relaciona amb les xarxes hidrogràfiques. Resposta única i sense duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a50a65b7de000a397.jsonl",
+    "respuesta_sha256": "457fd4f870c5892851ffb680db375765cf2d85399469c541e551706e427440a2"
+   },
+   "registrada_el": "2026-10-06T18:55:22",
+   "intentos": [
+    {
+     "t": "2026-10-06T18:55:22",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a50a65b7de000a397.jsonl",
+      "respuesta_sha256": "457fd4f870c5892851ffb680db375765cf2d85399469c541e551706e427440a2"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 6 del text diu literalment que la Subdirecció General d'Estudis Universitaris, Recerca i Desenvolupament impulsa, coordina i gestiona la formació universitària, la recerca i la innovació en l'àmbit de la seguretat pública. La cita reprodueix aquesta frase sencera i identifica l'òrgan. Els altres òrgans (Escola de Policia, Subdirecció d'Administració i Serveis, Servei de Selecció i Avaluació) tenen funcions diferents als punts 3, 5 i 7. No hi ha cap parella a parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 3 atribueix a l'Escola de Policia de Catalunya dissenyar el contingut docent i supervisar l'avaluació en l'àmbit de la seguretat. L'Escola de Bombers fa el mateix però en l'àmbit de la prevenció, el medi natural i els incendis (punt 4), de manera que la precisió 'seguretat' de la pregunta la fa única. La cita conté tota la frase, inclòs l'àmbit. El Servei Català de Trànsit i la Subdirecció d'Administració i Serveis no tenen aquesta funció.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 8 diu que la transferència es va fer per la via de l'article 150.2 CE mitjançant una Llei orgànica de transferència. La cita inclou tant la via (150.2) com l'instrument (llei orgànica), que són els dos elements que demana la pregunta. Els distractors canvien l'article (149.1, 150.1) o l'instrument (decret, llei marc) i són incorrectes segons el text.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que les relacions de confiança protegeixen la privacitat i fan viables les comunicacions, i que això és la principal motivació de la signatura electrònica. La cita ho recull sencer. La parecida guia-mossos-175 pregunta l'objectiu de l'administració electrònica (transparència, eficàcia i qualitat), que és un fet diferent; no hi ha duplicat. Els distractors (cost, velocitat, substituir la identificació presencial) no apareixen al text.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"El text defineix la integritat com la certesa que el missatge no s'ha modificat durant la transmissió, i la cita ho diu textualment. L'autenticitat (identitat del remitent) i el no repudi (negar l'enviament) són propietats diferents. La confidencialitat no es menciona al text. La parecida nueva:guia-mossos:A.7.4:0 tracta la motivació de la signatura, un fet diferent; no hi ha duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negatiu. El text diu que l'administració electrònica aspira a millorar la prestació dels serveis, a augmentar-ne la productivitat i a augmentar la participació ciutadana. La cita conté aquests tres elements, de manera que es veu que les opcions 0, 1 i 3 hi surten. La reducció de la plantilla del sector públic no s'esmenta enlloc, per tant és l'única resposta que no s'hi troba. Pregunta clara i sense duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que l'EAC, d'acord amb la CE (article 152.1), estableix la responsabilitat política del president i del Govern davant el Parlament. La cita ho inclou amb el número d'article. Els altres articles (143.1, 148.1, 151.1) no apareixen al text i són distractors clars. És un fet concret i útil per a un examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El text descriu l'òrgan medieval (Diputació del General) com el que representava els interessos de les Corts Catalanes i els defensava davant el rei i els seus oficials quan no estaven reunides. L'opció 0 ho resumeix correctament i la cita ho conté. Les altres opcions (recaptar tributs, governar en nom del rei, convocar i presidir les Corts) no apareixen al text. Pregunta clara i sense duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"L'últim fragment del text diu que els mecanismes del sistema doten el president o la presidenta amb la facultat de dissoldre anticipadament el Parlament. La cita ho recull. La Mesa, el president del Parlament i el Consell de Garanties Estatutàries no tenen aquesta facultat segons el text. Resposta única i pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 5 diu que els rius catalans tenen règims fluvials molt diferents i irregulars, i que això provoca l'existència de diferents xarxes hidrogràfiques. La cita ho conté íntegrament. El clima 'uniforme' contradiu el punt 4, que parla de varietats climàtiques. Els rius no neixen a la mateixa unitat de relleu segons el text, i la concentració de població a la RMB no es relaciona amb les xarxes hidrogràfiques. Resposta única i sense duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "7.1",
+    "7.2",
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2",
+    "10.0",
+    "10.1"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/sesion/evaluaciones/S00037/tanda-03.json",
+   "prompt_sha256": "5a8810c03aaace918abb7cd2b37b06722951dd17e5df38e546956328bd31bdd1",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "7.1": "00f5cd91d0e84fd5ca5ab265b747c2dd44ded1f02a5b81b86cfc1ee7e7296dcc",
+    "7.2": "4814953372cb25ae4dc5cb9de1713c32e248510a67f3a2f6510abb82db29e925",
+    "8.0": "a6b101328087f0b12548732b061054578cf708925830726ea8563fb8f202ee96",
+    "8.1": "468c5f2e7886f44925430f8f67554bd5055cd90dd1d9350268e85227449c5b54",
+    "8.2": "2841857184f96f581b046d5b6079e0ae1a4a60100a695a1078ad543c1d1a6450",
+    "9.0": "88bd0312bf0c998d861fb21898d5330a81273d90c9ac4bb0802219ee8d127623",
+    "9.1": "1185587eb0daa56475c7cf046ccdc0a13cb90ccae3c51f4a24cc1578a59566d8",
+    "9.2": "e9f35e0bdaa2817c3965294397d54c6a2974c2a4ee19fe11c7ee5ed4b902a00c",
+    "10.0": "e36f44cf4f4daadf5b0fe48fd787927f3aefbcd1d02b1b4efb8a5dfe260ba829",
+    "10.1": "48e439cd8e3332e1f1aa043591ae318990213f5ee5c277776eef1e8b90365fd6"
+   },
+   "veredictos": [
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 4 del texto dice literalmente que la complejidad orográfica y la proximidad al mar hacen relevantes el relieve y la continentalidad, que dan otras variedades climáticas. La opción 0 lo recoge. La cita contiene todo lo necesario. Las otras opciones (población litoral, regímenes fluviales, regiones biogeográficas) no son la causa que da el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 3 afirma que el litoral catalán está constituido por planas litorales, costas y algunos deltas, que es la opción 2. La cita lo contiene entero. Los distractores (sierras litorales, islas, estanques, acantilados, bahías, cuencas de erosión) no aparecen como constitución del litoral. Pregunta clara y sin pistas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 9 dice que el decreto ley y el decreto legislativo tienen el mismo rango, fuerza y valor que las leyes y que la CE exige la intervención de las Cortes Generales en algún momento del procedimiento. La opción 3 combina ambos elementos y la cita incluye los dos. Las otras opciones fallan en el rango o en la intervención de las Cortes. Única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 5 define la ley como la norma aprobada por el Parlamento (Cortes Generales y asambleas legislativas de las comunidades autónomas). La opción 1 coincide y la cita contiene el paréntesis necesario. Gobierno, Tribunal Constitucional y gobiernos autonómicos no aprueban leyes según el texto. Única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 4 explica que la Constitución es jerárquicamente superior porque emana del pueblo, mediante sus representantes, en ejercicio de su soberanía (poder constituyente). La opción 0 lo refleja y la cita lo contiene. Los distractores (mayoría absoluta de ambas cámaras, validación del TC, antigüedad) no aparecen en el texto como causa. Clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El primer elemento de la fórmula (a) incluye único Estado, única constitución, único ordenamiento jurídico e igualdad de derechos y obligaciones. Las tres primeras opciones aparecen en la cita. Un único poder ejecutivo no figura en el texto, así que la opción 3 es la correcta. La cita basta para ver las otras tres opciones. Única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la aprobación en 1979 de los primeros estatutos puso en funcionamiento un tipo de organización territorial previsto pero hasta entonces no constituido, basado en comunidades autónomas. Es la opción 0 y la cita lo contiene. Las demás (reforma de la CE, supresión del principio dispositivo, federación de estados soberanos) contradicen o no figuran en el texto. Clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que, partiendo del principio dispositivo, la CE posibilita generalizar el régimen autonómico, lo que produce una descentralización vertical del poder político. Es la opción 2. La cita incluye ambos elementos (principio y tipo de descentralización). Las otras tres combinaciones son erróneas en al menos uno de los dos. Única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto atribuye el Informe sobre la integración de las personas inmigradas en Cataluña 2020 a la Secretaría de Igualdad, Migraciones y Ciudadanía, y la cita lo contiene. El Ministerio de Inclusión y el Observatorio Permanente aparecen en el texto, pero como autores de otra publicación (30 de junio de 2020), no de este informe. Idescat se cita solo como fuente de datos. Es un dato concreto y útil, no trivial. Única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto enumera tres dimensiones del carácter global de la migración, la primera de las cuales es el crecimiento o al menos el mantenimiento constante del volumen de personas migrantes. Es la opción 2 y la cita la recoge. Las otras opciones contradicen el texto: ampliación de redes, diversificación de tipos y predominio de redes transoceánicas. Única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a05b227621b63dbdf.jsonl",
+    "respuesta_sha256": "74abe344bd7d30e3ff179573d740524c5d722a9c3d8bf8bddb47d70b02ed07e1"
+   },
+   "registrada_el": "2026-10-06T18:55:22",
+   "intentos": [
+    {
+     "t": "2026-10-06T18:55:22",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a05b227621b63dbdf.jsonl",
+      "respuesta_sha256": "74abe344bd7d30e3ff179573d740524c5d722a9c3d8bf8bddb47d70b02ed07e1"
+     },
+     "respuesta": "[\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 4 del texto dice literalmente que la complejidad orográfica y la proximidad al mar hacen relevantes el relieve y la continentalidad, que dan otras variedades climáticas. La opción 0 lo recoge. La cita contiene todo lo necesario. Las otras opciones (población litoral, regímenes fluviales, regiones biogeográficas) no son la causa que da el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 3 afirma que el litoral catalán está constituido por planas litorales, costas y algunos deltas, que es la opción 2. La cita lo contiene entero. Los distractores (sierras litorales, islas, estanques, acantilados, bahías, cuencas de erosión) no aparecen como constitución del litoral. Pregunta clara y sin pistas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 9 dice que el decreto ley y el decreto legislativo tienen el mismo rango, fuerza y valor que las leyes y que la CE exige la intervención de las Cortes Generales en algún momento del procedimiento. La opción 3 combina ambos elementos y la cita incluye los dos. Las otras opciones fallan en el rango o en la intervención de las Cortes. Única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 5 define la ley como la norma aprobada por el Parlamento (Cortes Generales y asambleas legislativas de las comunidades autónomas). La opción 1 coincide y la cita contiene el paréntesis necesario. Gobierno, Tribunal Constitucional y gobiernos autonómicos no aprueban leyes según el texto. Única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 4 explica que la Constitución es jerárquicamente superior porque emana del pueblo, mediante sus representantes, en ejercicio de su soberanía (poder constituyente). La opción 0 lo refleja y la cita lo contiene. Los distractores (mayoría absoluta de ambas cámaras, validación del TC, antigüedad) no aparecen en el texto como causa. Clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El primer elemento de la fórmula (a) incluye único Estado, única constitución, único ordenamiento jurídico e igualdad de derechos y obligaciones. Las tres primeras opciones aparecen en la cita. Un único poder ejecutivo no figura en el texto, así que la opción 3 es la correcta. La cita basta para ver las otras tres opciones. Única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la aprobación en 1979 de los primeros estatutos puso en funcionamiento un tipo de organización territorial previsto pero hasta entonces no constituido, basado en comunidades autónomas. Es la opción 0 y la cita lo contiene. Las demás (reforma de la CE, supresión del principio dispositivo, federación de estados soberanos) contradicen o no figuran en el texto. Clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que, partiendo del principio dispositivo, la CE posibilita generalizar el régimen autonómico, lo que produce una descentralización vertical del poder político. Es la opción 2. La cita incluye ambos elementos (principio y tipo de descentralización). Las otras tres combinaciones son erróneas en al menos uno de los dos. Única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El texto atribuye el Informe sobre la integración de las personas inmigradas en Cataluña 2020 a la Secretaría de Igualdad, Migraciones y Ciudadanía, y la cita lo contiene. El Ministerio de Inclusión y el Observatorio Permanente aparecen en el texto, pero como autores de otra publicación (30 de junio de 2020), no de este informe. Idescat se cita solo como fuente de datos. Es un dato concreto y útil, no trivial. Única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El texto enumera tres dimensiones del carácter global de la migración, la primera de las cuales es el crecimiento o al menos el mantenimiento constante del volumen de personas migrantes. Es la opción 2 y la cita la recoge. Las otras opciones contradicen el texto: ampliación de redes, diversificación de tipos y predominio de redes transoceánicas. Única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "10.2",
+    "11.0",
+    "11.1",
+    "11.2",
+    "12.0",
+    "12.1",
+    "12.2",
+    "13.0",
+    "13.1",
+    "13.2"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/sesion/evaluaciones/S00037/tanda-04.json",
+   "prompt_sha256": "5c8d3de38d950bae007226e06e328b3deb3ed8dd1b1ce8c515168c91f9c22a16",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "10.2": "e96e2d4bedb298a0e3b8c8bbd67248279ab7ac8ffa47ff069ea2cfc14406a467",
+    "11.0": "86339ee8ead2fb1b79993069bb71e095c1f3ed3bbcd687b5e2e21680ce0e99be",
+    "11.1": "5295be953b83946e6b213d573e092e3a2919320aa130773039ecade7e3cdffa4",
+    "11.2": "639bb72d5450c107f50bfb50c60a928dcdcca08650de3acb976581c699a9a6c0",
+    "12.0": "d521ecdd56d0ffc4ac5ee33d36f5868a4507b85bc7cc8e3c6ecd397706d839f3",
+    "12.1": "1ad5d9333165a570ac92537364ba014604c694616d0baa050750f072edbcc848",
+    "12.2": "b40595fb0b4589558c655048140197b190a2dd5df55e28f9cd486b35026161d8",
+    "13.0": "87983060c6450d0ff13e9c02d9f084643d2c6b9f269d0e445956d514792964e1",
+    "13.1": "aed92e2de25004c281947256767136c164964ad59bc00ea2f68a8351ce3dd391",
+    "13.2": "a337ff8b9a504cf8723c5d4f6d547493ee36ad2e29865aa26056ef826bf4f205"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-06T18:55:22",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a2103d0ee77a39e71.jsonl",
+      "respuesta_sha256": "62f2364f42fb878a08ec6713e34431a4a81a1661471c197d5a1d30e8e534cb67"
+     },
+     "respuesta": "[\n{\"question_id\":\"10.2\",\"verdict\":\"VALID\",\"reason\":\"El text (punt c de l'apartat) contrasta la immigració econòmica i laboral (treballs poc qualificats, xarxes familiars àmplies) amb la de països desenvolupats: jubilats i pensionistes, estudiants, llars unipersonals i treballs d'alta qualificació. L'opció B ho recull i la cita ho conté tot. L'opció A correspon a la immigració econòmica, la C i la D no apareixen com a perfil de països desenvolupats. Única i ben formulada.\",\"criteris_nota\":\"\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el CGPJ és un dels òrgans legitimats per plantejar conflicte d'atribucions entre òrgans constitucionals davant el Tribunal Constitucional (art. 59.1.c LOTC). La cita ho conté íntegrament. Cap altre distractor (Suprem, Corts, Consell d'Estat) és defensable. La parecida cand-guia-mossos-37 tracta de l'elecció del president, fet diferent, per tant no és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"El text indica que dels dotze vocals jutges i magistrats, sis són a proposta de 3/5 del Congrés i sis a proposta de 3/5 del Senat. L'opció A és correcta i la cita conté nombre i majoria. L'opció B (quatre vocals) correspon al torn de juristes, però la pregunta especifica el torn de jutges, així que no és vàlida. C i D són falses. La parecida cand-guia-mossos-37 (elecció del president) no avalua el mateix fet.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.2\",\"verdict\":\"VALID\",\"reason\":\"La funció a) de l'apartat és proposar el nomenament dels magistrats del Tribunal Suprem i del Tribunal Constitucional, i la cita ho recull. Les altres opcions són errònies segons el text: el CGPJ només és escoltat pel Govern pel Fiscal General, emet informes (no aprova) sobre avantprojectes, i només està legitimat per plantejar conflictes d'atribucions, no els resol. Les parecides tracten altres fets (president; sis vocals del Senat), per tant no hi ha duplicitat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 7 de les idees força diu que el Govern és la institució encarregada de la direcció de la política interior i exterior de l'Estat; la cita ho recull literalment. Les Corts, la Corona i el Consell d'Estat no tenen aquesta funció segons el text. La pregunta reprodueix una frase, però és una idea força central i amb distractors plausibles, per tant és vàlida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 8 justifica la jerarquia perquè el càrrec de ministre depèn directament de la decisió del president i de la relació de confiança; la cita ho conté. Les opcions A (elegits pel Congrés), C (responsabilitat davant el Consell d'Estat) i D (el Consell de Ministres revoca decisions del president) no apareixen al text i contradiuen la jerarquia descrita. Única i clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El text (punts 9) diu que la titularitat és vitalícia, la successió hereditària i que la inviolabilitat i la irresponsabilitat completen la monarquia. Les opcions A, B i C hi apareixen i la cita les conté totes. L'opció D (responsabilitat política del rei davant les Corts) contradiu la irresponsabilitat, per tant és l'única NO atribuïda. Cita suficient per veure que les altres tres sí hi són.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El text, a les varietats lèxiques, assigna al balear al·lot/a, capell, granera, torcar, ver; la cita ho conté. Les altres opcions (valencià, lleidatà, alguerès) tenen altres exemples lèxics al text (prompte, xic; bajoca, mançana; forqueta, morro), per tant cap és vàlida. Pregunta útil i sense pistes.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que hi ha textos escrits per ser dits (conferències, telenotícies) i textos escrits que imiten l'oral (teatre). L'opció B és correcta i la cita conté tots dos grups. L'opció A usa el teatre, que el text classifica com a text que imita l'oral i no com a escrit per ser dit, i les novel·les no hi consten; C i D no apareixen. Única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"El text posa «Aquest home està borratxo» com a exemple de col·loquial i estàndard, i la cita ho recull amb els contrastos (vulgar i culte). L'opció A (vulgar) correspon a una altra frase, la C (culte) també; la D (literari i científic) no s'hi vincula. Només la B és correcta. Pregunta útil i inequívoca.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "BATCH_REJECTED · FORMATO: veredicto con campos ['criteria_checked', 'criteris_nota', 'question_id', 'reason', 'verdict']; se exigen ['criteria_checked', 'question_id', 'reason', 'verdict']"
+    },
+    {
+     "t": "2026-10-06T18:56:09",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-aa0992421dc84c732.jsonl",
+      "respuesta_sha256": "a858f3431d024b7203edf0db8a6c2995e05419bd6bb74cc100deb4607f0089f8"
+     },
+     "respuesta": "[\n{\"question_id\":\"10.2\",\"verdict\":\"VALID\",\"reason\":\"El texto (punto c de A.6.1) opone la inmigración económica y laboral (trabajos poco cualificados, redes familiares amplias) a la de países desarrollados (jubilados y pensionistas, estudiantes, hogares unipersonales, trabajos de alta cualificación). La opción b recoge esto y la cita lo contiene. Las demás opciones son el perfil económico, refugiados (no atribuido a este grupo) y agrario (no aparece). Única y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el CGPJ es uno de los órganos legitimados para plantear conflicto de atribuciones entre órganos constitucionales ante el Tribunal Constitucional (art. 59.1.c LOTC). La cita contiene el dato completo. Las otras opciones (Supremo, Cortes, Consejo de Estado) no aparecen como destino. La parecida cand-guia-mossos-37 trata de la elección del presidente, otro hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que, de los doce vocales jueces y magistrados, seis se eligen a propuesta de 3/5 del Congreso y seis a propuesta de 3/5 del Senado; la cita lo recoge entero (número y mayoría). La opción b (cuatro, 3/5 Senado) es cierta para el turno de juristas, pero el enunciado acota al turno de jueces y magistrados, por lo que no compite. Las opciones c y d contradicen el texto. La parecida versa sobre el presidente, no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.2\",\"verdict\":\"VALID\",\"reason\":\"La función a) del apartado 2.2 es proponer el nombramiento de jueces y magistrados del Tribunal Supremo y del Tribunal Constitucional, que está en la cita. Las otras opciones son falsas según el texto: al CGPJ solo se le escucha sobre el Fiscal General, emite informes (no aprueba) sobre anteproyectos, y es un órgano legitimado para plantear conflictos, no para resolverlos. Las parecidas tratan hechos distintos.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"La idea fuerza 7 afirma que el Gobierno es la institución encargada de la dirección de la política interior y exterior del Estado; la cita lo reproduce. Corts, Corona y Consell d'Estat no tienen esa función en el texto. Es un dato de contenido identificativo y útil, no una fórmula trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.1\",\"verdict\":\"VALID\",\"reason\":\"La idea fuerza 8 explica la jerarquía porque el cargo de ministro depende directamente de la decisión del presidente y de la relación de confianza; la cita lo contiene íntegro. Las otras opciones (elección por el Congreso, responsabilidad ante el Consejo de Estado, revocación por el Consejo de Ministros) no figuran en el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El texto atribuye a la monarquía parlamentaria titularidad vitalicia, sucesión hereditaria, inviolabilidad e irresponsabilidad. Las opciones a, b y c aparecen en la cita y la d (responsabilidad política del rey ante las Cortes) contradice la irresponsabilidad, también presente en la cita. Por tanto la cita muestra todos los elementos necesarios y la respuesta d es la única no atribuida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado de rasgos léxicos indica 'Balear: al·lot/a, capell, granera, torcar, ver...'; la cita lo reproduce. Valenciano, leridano y alguerés tienen otras palabras listadas (xic, prompte; bajoca, panís; forqueta, morro), por lo que ninguna otra opción es válida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que hay textos escritos para ser dichos (conferencias, telenoticias) y otros que imitan lo oral (teatro); la cita contiene ambos. La opción a mezcla el teatro, que el texto sitúa en la otra categoría, con novelas, que no aparecen. Cartas, correos, informes y actas no se mencionan. Única opción correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"El texto clasifica 'Aquest home està borratxo' como colloquial i estàndard, 'va pet' como vulgar y la frase de intoxicación etílica como culta; la cita incluye los tres ejemplos. Las demás opciones corresponden a otros ejemplos o categorías y no se aplican a esta expresión. Pregunta bien formada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "question_id": "10.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (punto c de A.6.1) opone la inmigración económica y laboral (trabajos poco cualificados, redes familiares amplias) a la de países desarrollados (jubilados y pensionistas, estudiantes, hogares unipersonales, trabajos de alta cualificación). La opción b recoge esto y la cita lo contiene. Las demás opciones son el perfil económico, refugiados (no atribuido a este grupo) y agrario (no aparece). Única y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el CGPJ es uno de los órganos legitimados para plantear conflicto de atribuciones entre órganos constitucionales ante el Tribunal Constitucional (art. 59.1.c LOTC). La cita contiene el dato completo. Las otras opciones (Supremo, Cortes, Consejo de Estado) no aparecen como destino. La parecida cand-guia-mossos-37 trata de la elección del presidente, otro hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que, de los doce vocales jueces y magistrados, seis se eligen a propuesta de 3/5 del Congreso y seis a propuesta de 3/5 del Senado; la cita lo recoge entero (número y mayoría). La opción b (cuatro, 3/5 Senado) es cierta para el turno de juristas, pero el enunciado acota al turno de jueces y magistrados, por lo que no compite. Las opciones c y d contradicen el texto. La parecida versa sobre el presidente, no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La función a) del apartado 2.2 es proponer el nombramiento de jueces y magistrados del Tribunal Supremo y del Tribunal Constitucional, que está en la cita. Las otras opciones son falsas según el texto: al CGPJ solo se le escucha sobre el Fiscal General, emite informes (no aprueba) sobre anteproyectos, y es un órgano legitimado para plantear conflictos, no para resolverlos. Las parecidas tratan hechos distintos.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La idea fuerza 7 afirma que el Gobierno es la institución encargada de la dirección de la política interior y exterior del Estado; la cita lo reproduce. Corts, Corona y Consell d'Estat no tienen esa función en el texto. Es un dato de contenido identificativo y útil, no una fórmula trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La idea fuerza 8 explica la jerarquía porque el cargo de ministro depende directamente de la decisión del presidente y de la relación de confianza; la cita lo contiene íntegro. Las otras opciones (elección por el Congreso, responsabilidad ante el Consejo de Estado, revocación por el Consejo de Ministros) no figuran en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El texto atribuye a la monarquía parlamentaria titularidad vitalicia, sucesión hereditaria, inviolabilidad e irresponsabilidad. Las opciones a, b y c aparecen en la cita y la d (responsabilidad política del rey ante las Cortes) contradice la irresponsabilidad, también presente en la cita. Por tanto la cita muestra todos los elementos necesarios y la respuesta d es la única no atribuida.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado de rasgos léxicos indica 'Balear: al·lot/a, capell, granera, torcar, ver...'; la cita lo reproduce. Valenciano, leridano y alguerés tienen otras palabras listadas (xic, prompte; bajoca, panís; forqueta, morro), por lo que ninguna otra opción es válida.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que hay textos escritos para ser dichos (conferencias, telenoticias) y otros que imitan lo oral (teatro); la cita contiene ambos. La opción a mezcla el teatro, que el texto sitúa en la otra categoría, con novelas, que no aparecen. Cartas, correos, informes y actas no se mencionan. Única opción correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto clasifica 'Aquest home està borratxo' como colloquial i estàndard, 'va pet' como vulgar y la frase de intoxicación etílica como culta; la cita incluye los tres ejemplos. Las demás opciones corresponden a otros ejemplos o categorías y no se aplican a esta expresión. Pregunta bien formada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-aa0992421dc84c732.jsonl",
+    "respuesta_sha256": "a858f3431d024b7203edf0db8a6c2995e05419bd6bb74cc100deb4607f0089f8"
+   },
+   "registrada_el": "2026-10-06T18:56:09"
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "14.0",
+    "14.1",
+    "14.2",
+    "15.0",
+    "15.1",
+    "15.2",
+    "16.0",
+    "16.1",
+    "16.2",
+    "17.0"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/sesion/evaluaciones/S00037/tanda-05.json",
+   "prompt_sha256": "22563e8f048ef4274eb8a009e492553cdae4076b79097a65e79766e927a11ba7",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "14.0": "3d8dce04af2df0c8383f93b4336a6705456b6ec6fba2613c23783dfbe3f8c906",
+    "14.1": "52f8fddd848656b720f9ec9a95966ee67b8c09d1db38587daf1006bae1598830",
+    "14.2": "e735f1a77e53be084f0c4b8a96cea634a961ad6bf4fa7fce8f525e92300a02c0",
+    "15.0": "34ec917d2a616903dd964892d618561a0f6c4480bcf4e4dce4e71f0953c0ee83",
+    "15.1": "2e4778366672693181d8be2715269a7ff8ef06388944c065b1c87a6e7830e67a",
+    "15.2": "8420e565e40a06902401f460f8056bffc0faa184a7ebfffe191e5c035689c135",
+    "16.0": "07818d213872e689fe35515f9a12cb0be66c826a9f2480caa42d5f381e94901f",
+    "16.1": "9ca4d21d2c9d7544b873f89586c46552c1775c38533d45b114adf4d24689aded",
+    "16.2": "5499d02a79344ab2e53b4961791ca1b93880a0df0a08acc6ce0fb80b0ae4c273",
+    "17.0": "cba96189134cffeb6e5381e702288711d5d762384f31049357baf555b1967721"
+   },
+   "veredictos": [
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 6 del texto dice que responden personal y directamente, sin perjuicio de la responsabilidad patrimonial de las Administraciones Públicas. Eso respalda la opción b. La cita contiene la frase completa, con los dos elementos (responsabilidad personal y directa, y responsabilidad patrimonial de la Administración). Las otras opciones (Administración directa y agente subsidiario, mando que ordena, reparto a partes iguales) contradicen el texto o no aparecen en él. Es una pregunta clara y no hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 1.c del texto dice que deben abstenerse de todo acto de corrupción y oponerse a él resueltamente. La opción c lo reproduce y la cita contiene ambos elementos. La opción a solo recoge la abstención, por lo que es incorrecta. Las opciones b y d no tienen apoyo en el texto. La parecida 14.0 trata de la responsabilidad personal y patrimonial, que es un hecho distinto, por lo que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 2.b del texto dice que en todas sus intervenciones proporcionarán información cumplida y tan amplia como sea posible sobre las causas y finalidad. La cita lo recoge íntegramente. El secreto profesional (apartado 5) se refiere a informaciones conocidas por razón de la función, no a la causa de la intervención ante el ciudadano. No se condiciona la información a autorización del superior ni se limita a dar un número de identificación. El supuesto práctico es claro y las opciones no están marcadas por palabras absolutas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, al ser la policía más avanzada en términos policiales modernos, a la segunda mitad de siglo el modelo fue exportado a otras zonas de la monarquía. La cita incluye el antecedente y la consecuencia. Los distractores (disolución, paso del mando a la Real Audiencia, permiso para organizar el somatén) contradicen el texto o no aparecen en él. Es una pregunta clara, sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el cuerpo se convertía en una innovación policial a partir de los años cuarenta del siglo XVIII, y la cita lo contiene. Los otros años (veinte del XVIII, noventa del XVII, veinte del XIX) no coinciden con ese dato. En el texto, 1719 y 1723 se refieren a la creación y remodelación, no a la innovación policial. Es una fecha de contenido histórico del temario, con una pregunta bien formulada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Es una pregunta en negativo. El texto y la cita enumeran los tres aspectos que las investigaciones perfilarán mejor: origen, características en el momento de la formación y papel de Pere Anton Veciana. Las opciones a, b y c están en la cita. La opción d (papel durante la Guerra de Sucesión) no se menciona como objeto de investigación, por lo que la respuesta d es la única que no figura. La cita permite ver que las otras tres sí aparecen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto, en las funciones de la Junta de Seguretat, dice: determinar el Estatuto, el Reglamento, las dotaciones, la composición numérica, la estructura y el reclutamiento de la Policía de la Generalitat. La opción b es correcta y la cita contiene esa función. Nombrar al director general, aprobar planes locales y resolver recursos contra sanciones no figuran entre las funciones. Es una pregunta clara y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la Ley 4/2003 establece que cooperación, colaboración, lealtad institucional y auxilio mutuo son los principios rectores. La opción c lo reproduce y la cita contiene los cuatro elementos. Los distractores mezclan términos ajenos (jerarquía, descentralización, unidad de mando), por lo que no hay otra opción válida. La pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Es una pregunta en negativo. El texto y la cita enumeran cuatro representantes de la Generalitat: titular del Departamento, Secretaría General, Dirección General de la Policía y Asesoría Jurídica. Tres de las opciones aparecen en la cita, mientras que la Dirección General de Protección Civil no figura, por lo que la opción c es la única que no está. La parecida (funciones de la Junta) trata otro hecho, por lo que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que las instituciones catalanas deben velar por las buenas prácticas policiales y que estas encajen en los marcos deontológicos internacionales, especialmente el Código europeo de ética de la policía. La opción b lo reproduce y la cita lo contiene completo. Las juntas locales, el reglamento del Comité de Ética y los convenios con otras policías no se presentan en el texto como marco al que deban encajar. La pregunta es clara y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a6b18945279d9934b.jsonl",
+    "respuesta_sha256": "f1017657aef56f6c36156fd7b5988dfeff39a3cb34b21a007613447a1d66dc41"
+   },
+   "registrada_el": "2026-10-06T18:55:22",
+   "intentos": [
+    {
+     "t": "2026-10-06T18:55:22",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a6b18945279d9934b.jsonl",
+      "respuesta_sha256": "f1017657aef56f6c36156fd7b5988dfeff39a3cb34b21a007613447a1d66dc41"
+     },
+     "respuesta": "[\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 6 del texto dice que responden personal y directamente, sin perjuicio de la responsabilidad patrimonial de las Administraciones Públicas. Eso respalda la opción b. La cita contiene la frase completa, con los dos elementos (responsabilidad personal y directa, y responsabilidad patrimonial de la Administración). Las otras opciones (Administración directa y agente subsidiario, mando que ordena, reparto a partes iguales) contradicen el texto o no aparecen en él. Es una pregunta clara y no hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 1.c del texto dice que deben abstenerse de todo acto de corrupción y oponerse a él resueltamente. La opción c lo reproduce y la cita contiene ambos elementos. La opción a solo recoge la abstención, por lo que es incorrecta. Las opciones b y d no tienen apoyo en el texto. La parecida 14.0 trata de la responsabilidad personal y patrimonial, que es un hecho distinto, por lo que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 2.b del texto dice que en todas sus intervenciones proporcionarán información cumplida y tan amplia como sea posible sobre las causas y finalidad. La cita lo recoge íntegramente. El secreto profesional (apartado 5) se refiere a informaciones conocidas por razón de la función, no a la causa de la intervención ante el ciudadano. No se condiciona la información a autorización del superior ni se limita a dar un número de identificación. El supuesto práctico es claro y las opciones no están marcadas por palabras absolutas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, al ser la policía más avanzada en términos policiales modernos, a la segunda mitad de siglo el modelo fue exportado a otras zonas de la monarquía. La cita incluye el antecedente y la consecuencia. Los distractores (disolución, paso del mando a la Real Audiencia, permiso para organizar el somatén) contradicen el texto o no aparecen en él. Es una pregunta clara, sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el cuerpo se convertía en una innovación policial a partir de los años cuarenta del siglo XVIII, y la cita lo contiene. Los otros años (veinte del XVIII, noventa del XVII, veinte del XIX) no coinciden con ese dato. En el texto, 1719 y 1723 se refieren a la creación y remodelación, no a la innovación policial. Es una fecha de contenido histórico del temario, con una pregunta bien formulada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.2\",\"verdict\":\"VALID\",\"reason\":\"Es una pregunta en negativo. El texto y la cita enumeran los tres aspectos que las investigaciones perfilarán mejor: origen, características en el momento de la formación y papel de Pere Anton Veciana. Las opciones a, b y c están en la cita. La opción d (papel durante la Guerra de Sucesión) no se menciona como objeto de investigación, por lo que la respuesta d es la única que no figura. La cita permite ver que las otras tres sí aparecen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El texto, en las funciones de la Junta de Seguretat, dice: determinar el Estatuto, el Reglamento, las dotaciones, la composición numérica, la estructura y el reclutamiento de la Policía de la Generalitat. La opción b es correcta y la cita contiene esa función. Nombrar al director general, aprobar planes locales y resolver recursos contra sanciones no figuran entre las funciones. Es una pregunta clara y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la Ley 4/2003 establece que cooperación, colaboración, lealtad institucional y auxilio mutuo son los principios rectores. La opción c lo reproduce y la cita contiene los cuatro elementos. Los distractores mezclan términos ajenos (jerarquía, descentralización, unidad de mando), por lo que no hay otra opción válida. La pregunta es clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.2\",\"verdict\":\"VALID\",\"reason\":\"Es una pregunta en negativo. El texto y la cita enumeran cuatro representantes de la Generalitat: titular del Departamento, Secretaría General, Dirección General de la Policía y Asesoría Jurídica. Tres de las opciones aparecen en la cita, mientras que la Dirección General de Protección Civil no figura, por lo que la opción c es la única que no está. La parecida (funciones de la Junta) trata otro hecho, por lo que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que las instituciones catalanas deben velar por las buenas prácticas policiales y que estas encajen en los marcos deontológicos internacionales, especialmente el Código europeo de ética de la policía. La opción b lo reproduce y la cita lo contiene completo. Las juntas locales, el reglamento del Comité de Ética y los convenios con otras policías no se presentan en el texto como marco al que deban encajar. La pregunta es clara y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "lote": "S00037",
+ "estado": "RETENIDO",
+ "fecha": "2026-10-06",
+ "decision": "Retenido automáticamente: 50/50 VALID y la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó 4 razones sin evidencia individual. Condición de parada de la fase (problemas de evidencia). No se publica, no se rejuzga. Pendiente de decisión humana.",
+ "bloqueo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+ "nota_tanda_04": "La tanda 04 fue rechazada por el guard de FORMATO (campo extra 'criteris_nota') y se volvió a evaluar con un juez nuevo; la segunda respuesta fue ACEPTADA. Ambos intentos quedan en evaluacion.json.",
+ "judge_policy_version": "juez-sesion-v4",
+ "veredictos_juez": {
+  "0.0": "VALID",
+  "1.0": "VALID",
+  "1.1": "VALID",
+  "1.2": "VALID",
+  "2.0": "VALID",
+  "2.1": "VALID",
+  "2.2": "VALID",
+  "3.0": "VALID",
+  "3.1": "VALID",
+  "3.2": "VALID",
+  "4.0": "VALID",
+  "4.1": "VALID",
+  "4.2": "VALID",
+  "5.0": "VALID",
+  "5.1": "VALID",
+  "5.2": "VALID",
+  "6.0": "VALID",
+  "6.1": "VALID",
+  "6.2": "VALID",
+  "7.0": "VALID",
+  "7.1": "VALID",
+  "7.2": "VALID",
+  "8.0": "VALID",
+  "8.1": "VALID",
+  "8.2": "VALID",
+  "9.0": "VALID",
+  "9.1": "VALID",
+  "9.2": "VALID",
+  "10.0": "VALID",
+  "10.1": "VALID",
+  "10.2": "VALID",
+  "11.0": "VALID",
+  "11.1": "VALID",
+  "11.2": "VALID",
+  "12.0": "VALID",
+  "12.1": "VALID",
+  "12.2": "VALID",
+  "13.0": "VALID",
+  "13.1": "VALID",
+  "13.2": "VALID",
+  "14.0": "VALID",
+  "14.1": "VALID",
+  "14.2": "VALID",
+  "15.0": "VALID",
+  "15.1": "VALID",
+  "15.2": "VALID",
+  "16.0": "VALID",
+  "16.1": "VALID",
+  "16.2": "VALID",
+  "17.0": "VALID"
+ },
+ "intentos_por_tanda": [
+  {
+   "tanda": "01",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "02",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "03",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "04",
+   "intentos": [
+    "BATCH_REJECTED · FORMATO: veredicto con campos ['criteria_checked', 'criteris_nota', 'question_id', 'reason', 'verdict']; se exigen ['criteria_checked', 'question_id', 'reason', 'verdict']",
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "05",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  }
+ ],
+ "sin_evidencia_propia": [
+  {
+   "question_id": "11.1",
+   "q": "El Senat ha de proposar vocals del Consell General del Poder Judicial del torn de jutges i magistrats. Segons l'apartat B.6.2 de la Guia d'estudi, quants vocals i amb quina majoria?",
+   "cita": "Dotze vocals han de ser jutges i magistrats de qualsevol de les categories judicials. D’entre aquests, sis vocals són elegits a proposta de 3/5 del Congrés, i els altres sis a proposta de 3/5 del Senat",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto indica que, de los doce vocales jueces y magistrados, seis se eligen a propuesta de 3/5 del Congreso y seis a propuesta de 3/5 del Senado; la cita lo recoge entero (número y mayoría). La opción b (cuatro, 3/5 Senado) es cierta para el turno de juristas, pero el enunciado acota al turno de jueces y magistrados, por lo que no compite. Las opciones c y d contradicen el texto. La parecida versa sobre el presidente, no es duplicada.",
+   "motivo": "razón sin vocabulario compartido con enunciado/opciones/cita (juez_v2.especifica)"
+  },
+  {
+   "question_id": "12.1",
+   "q": "Segons les idees força del tema B.5, per què es diu que el Govern adopta una organització basada en el principi de jerarquia?",
+   "cita": "El Govern adopta una organització basada en el principi de jerarquia, ja que l’exercici del càrrec de ministre depèn directament de la decisió del seu president o presidenta i de la relació de confiança que hi hagi entre ells",
+   "verdict_juez": "VALID",
+   "reason_juez": "La idea fuerza 8 explica la jerarquía porque el cargo de ministro depende directamente de la decisión del presidente y de la relación de confianza; la cita lo contiene íntegro. Las otras opciones (elección por el Congreso, responsabilidad ante el Consejo de Estado, revocación por el Consejo de Ministros) no figuran en el texto.",
+   "motivo": "razón sin vocabulario compartido con enunciado/opciones/cita (juez_v2.especifica)"
+  },
+  {
+   "question_id": "15.0",
+   "q": "Segons l'apartat A.3.2 de la Guia d'estudi, quina conseqüència va tenir que els Mossos esdevinguessin, al segle XVIII, la policia més avançada en termes policials moderns?",
+   "cita": "sinó que es convertiria en la policia més avançada en termes policials moderns i ben representativa de la realitat d’una Catalunya que estava en uns moments de canvis i transformacions demogràfiques, agrícoles i comercials. Això va fer, fins i tot, que a la segona meitat de segle el model fora exportat a altres zones de la monarquia per a la seva implantació",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que, al ser la policía más avanzada en términos policiales modernos, a la segunda mitad de siglo el modelo fue exportado a otras zonas de la monarquía. La cita incluye el antecedente y la consecuencia. Los distractores (disolución, paso del mando a la Real Audiencia, permiso para organizar el somatén) contradicen el texto o no aparecen en él. Es una pregunta clara, sin parecidas.",
+   "motivo": "razón sin vocabulario compartido con enunciado/opciones/cita (juez_v2.especifica)"
+  },
+  {
+   "question_id": "17.0",
+   "q": "Segons l'apartat C.5.3 de la Guia d'estudi, en quins marcs han d'encaixar les bones pràctiques en l'àmbit policial que promouen les institucions catalanes?",
+   "cita": "han de vetllar per la promoció de les bones pràctiques en l’àmbit policial, i que aquestes encaixin en els marcs deontològics internacionals, especialment el Codi europeu d’ètica de la policia",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que las instituciones catalanas deben velar por las buenas prácticas policiales y que estas encajen en los marcos deontológicos internacionales, especialmente el Código europeo de ética de la policía. La opción b lo reproduce y la cita lo contiene completo. Las juntas locales, el reglamento del Comité de Ética y los convenios con otras policías no se presentan en el texto como marco al que deban encajar. La pregunta es clara y sin parecidas.",
+   "motivo": "razón sin vocabulario compartido con enunciado/opciones/cita (juez_v2.especifica)"
+  }
+ ],
+ "huellas": {
+  "abierto.json": "9dec5b9b7ea6cf3d48e132908df821fd20574fdb7cb7f82a04a7e679a325c653",
+  "candidatas.json": "f288bd290780826c0f0319cbd531ed22f32f6e9f688e90c3bfd21585b5ac1e81",
+  "evaluacion.json": "fde081189e192a821763cbaf2a67cd70298ab8a655146925af7c7d9b12394c6d",
+  "items.json": "23ac30426c6ac6be29572dd4c6fc937798d08291261d2d5e280d9f36d7a153b3",
+  "politica.json": "e1ec4c13fd70bcde75d9fcef85b6e20b3fa89039a8540c8bea9496ad3c2fc46e",
+  "revision.json": "302fb3d3a6f4ce2d20bf6d2ec8f2d55b9e4eadcf1ecf790e28259b76cff44d36"
+ }
+}

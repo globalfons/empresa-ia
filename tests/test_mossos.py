@@ -319,3 +319,17 @@ class LoteRetenido(unittest.TestCase):
             for q in json.load(open(f, encoding="utf-8")):
                 self.assertNotEqual(q.get("lote"), "S00022", f)
                 self.assertNotIn(q.get("q"), textos, f)
+
+    def test_s00037_retenido_por_evidencia_sin_publicar(self):
+        d = json.load(open(os.path.join(R, "fabrica", "estado", "retenidos", "S00037", "DECISION.json"), encoding="utf-8"))
+        self.assertEqual(d["estado"], "RETENIDO")
+        self.assertEqual({x["question_id"] for x in d["sin_evidencia_propia"]}, {"11.1", "12.1", "15.0", "17.0"})
+        e = json.load(open(os.path.join(R, "fabrica", "estado", "estado.json"), encoding="utf-8"))
+        self.assertIn("S00037", [x["id"] for x in e["lotes_retenidos"]])
+        self.assertNotIn("S00037", [x["id"] for x in e["lotes"]])
+        cand = json.load(open(os.path.join(R, "fabrica", "estado", "retenidos", "S00037", "candidatas.json"), encoding="utf-8"))
+        textos = {c["q"] for c in cand}
+        for f in glob.glob(os.path.join(R, "datos", "preguntas-*.json")) + glob.glob(os.path.join(R, "datos", "candidatas", "*.json")):
+            for q in json.load(open(f, encoding="utf-8")):
+                self.assertNotEqual(q.get("lote"), "S00037", f)
+                self.assertNotIn(q.get("q"), textos, f)
