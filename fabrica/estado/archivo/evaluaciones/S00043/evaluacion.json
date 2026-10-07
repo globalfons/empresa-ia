@@ -1,0 +1,1040 @@
+{
+ "evaluacion": "S00043",
+ "creada_el": "2026-10-06T23:55:46",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 50,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "3.1",
+    "3.2"
+   ],
+   "prompt_sha256": "b1082f3f6507f53738fed62e3d3b70c2006dc2c994bdc004f5aeabcba9b56681",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "5e31ff2d15a9b90d1fb1a13935a0235695b45de0b41821d5b02d7fa0a59db432",
+    "1.0": "125d792e2387fa2b6c262b1a78e9d70b023193cda6a4ddee56c9904c2d53b9e5",
+    "1.1": "8cbe39634babc7c438dac5b0a846bcea56bdabf19bc7ada60bf41eaac916c669",
+    "1.2": "c6c69a3cdf1b4ee6e0c5ee1180aeea3e4d7d10b9ad32efd51f920907c2b770c8",
+    "2.0": "30bec2e0a0b7ae9ebdc64c221b2b4847ead0c0f1c47e1e27e2e237c95ce2951e",
+    "2.1": "13384562b099f1cbd9883f9ba93d399b59925682e4782ea891485e290ec0c96e",
+    "2.2": "8d5c944c675d6afd21139471ac9ca183b86b7caceabd4869c4adab5c1f705abe",
+    "3.0": "b6f6fac809b716902abe57d23bf19cf0dc6075b7a072fcd79455f9122f75cc78",
+    "3.1": "80940638e478530c9bab4ee3d10b810cd41b0b97de8f2bf6098e79b32a22dd86",
+    "3.2": "dc794326d017356b284c47a9401acf3d48f466e68c21819f405e99e3de1e51e6"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 13 dice que la Generalitat puede solicitar al Estado la suscripción de tratados internacionales sobre esta materia, y la cita recoge exactamente eso, así que la opción A queda respaldada. Las otras opciones no se sostienen. La B (suscribir directamente el tratado) no aparece en el texto. Tampoco aparece la C (ratificación por el Parlamento). En la D, el texto solo permite acuerdos de cooperación con instituciones, no tratados. Pregunta clara y útil, con una sola respuesta correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que Barcelona llegaría al final de siglo hacia los 100.000 habitantes, y la cita lo contiene literalmente, así que la opción C queda respaldada. Los 470.000 de la opción D son la población de Cataluña en 1712, no la de Barcelona, por lo que no compiten. Es una cifra concreta del temario y no es trivial. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto describe la distribución del crecimiento como crecimiento por encima de la media en el litoral, crecimiento en el interior y ralentización en la montaña. La cita lo recoge completo y la opción D lo reproduce. Las demás opciones son permutaciones falsas. La parecida (población de Barcelona) trata un dato distinto, así que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto explica que el aumento de la demanda de manufacturas puso al límite la producción urbana y gremial y que por eso se estimuló el trabajo a domicilio. La cita contiene toda la cadena causal y la opción A la refleja. Las otras tres opciones (prohibición de los gremios, crisis agraria y abandono de la viña, concentración de la lana en la fábrica de indianas) no tienen apoyo en el texto. El enunciado con escenario es claro.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el gobierno español convocó las elecciones del 21-D de 2017, y la cita lo recoge. El Senado solo aprobó el art. 155 y el Tribunal Constitucional solo suspendió la consulta, de modo que esas opciones son falsas. El president del Parlament no aparece. Hay una única respuesta correcta y la pregunta es útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. La opción C afirma que el gobierno tripartito dirigió la Generalitat entre 2006 y 2012, pero el texto dice 2003-2010, así que es la única que no se ajusta. Las opciones A, B y D aparecen literalmente en el texto. La cita incluye todos esos elementos, también el período 2003-2010 que desmiente la C, por lo que permite ver que las otras tres sí están en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el Tribunal Constitucional suspendió la consulta pero que, a pesar de ello, se llevó a cabo el 1 de octubre. La cita incluye ambas partes y la opción D las combina. Las demás opciones contradicen el texto: la A niega la suspensión, la B habla del 9 de noviembre (consulta de 2014) y la C dice que el TC la avaló y que el Senado la suspendió. La corrección que pide el enunciado es clara y única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Para el amparo por violaciones de órganos judiciales el texto exige agotar la vía judicial previa, haber invocado el derecho en el proceso y presentarlo en treinta días. La cita contiene los tres elementos y la opción A los combina. Los veinte días corresponden a los órganos ejecutivos y los tres meses a los legislativos, y esas opciones no coinciden con el texto. Los seis meses son del TEDH. Única respuesta correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto fija 48 horas desde la notificación para que los promotores de una reunión prohibida interpongan recurso contencioso-administrativo, y la cita lo recoge. Los 4 días son el plazo del juez para resolver, no el de los promotores, y los 20 días corresponden a otro supuesto. No hay otra opción correcta. Es un plazo concreto, útil para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la sentencia de la sala se puede recurrir en supuestos excepcionales ante la gran sala en el plazo de tres meses, y la cita lo recoge completo. La opción C lo reproduce. En las demás, la A pone seis meses (plazo del recurso inicial), la B dice 'cualquier supuesto' y 'pleno del Tribunal', y la D nombra al Tribunal Constitucional. Todas contradicen el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-abdca38cd1931fdce.jsonl",
+    "respuesta_sha256": "96c37a41bb667005ba0b161437e54c7e1d336c5c1f5601ce118811f56e4ff792"
+   },
+   "registrada_el": "2026-10-06T23:56:43",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:56:43",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-abdca38cd1931fdce.jsonl",
+      "respuesta_sha256": "96c37a41bb667005ba0b161437e54c7e1d336c5c1f5601ce118811f56e4ff792"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 13 dice que la Generalitat puede solicitar al Estado la suscripción de tratados internacionales sobre esta materia, y la cita recoge exactamente eso, así que la opción A queda respaldada. Las otras opciones no se sostienen. La B (suscribir directamente el tratado) no aparece en el texto. Tampoco aparece la C (ratificación por el Parlamento). En la D, el texto solo permite acuerdos de cooperación con instituciones, no tratados. Pregunta clara y útil, con una sola respuesta correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que Barcelona llegaría al final de siglo hacia los 100.000 habitantes, y la cita lo contiene literalmente, así que la opción C queda respaldada. Los 470.000 de la opción D son la población de Cataluña en 1712, no la de Barcelona, por lo que no compiten. Es una cifra concreta del temario y no es trivial. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El texto describe la distribución del crecimiento como crecimiento por encima de la media en el litoral, crecimiento en el interior y ralentización en la montaña. La cita lo recoge completo y la opción D lo reproduce. Las demás opciones son permutaciones falsas. La parecida (población de Barcelona) trata un dato distinto, así que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El texto explica que el aumento de la demanda de manufacturas puso al límite la producción urbana y gremial y que por eso se estimuló el trabajo a domicilio. La cita contiene toda la cadena causal y la opción A la refleja. Las otras tres opciones (prohibición de los gremios, crisis agraria y abandono de la viña, concentración de la lana en la fábrica de indianas) no tienen apoyo en el texto. El enunciado con escenario es claro.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el gobierno español convocó las elecciones del 21-D de 2017, y la cita lo recoge. El Senado solo aprobó el art. 155 y el Tribunal Constitucional solo suspendió la consulta, de modo que esas opciones son falsas. El president del Parlament no aparece. Hay una única respuesta correcta y la pregunta es útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. La opción C afirma que el gobierno tripartito dirigió la Generalitat entre 2006 y 2012, pero el texto dice 2003-2010, así que es la única que no se ajusta. Las opciones A, B y D aparecen literalmente en el texto. La cita incluye todos esos elementos, también el período 2003-2010 que desmiente la C, por lo que permite ver que las otras tres sí están en el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el Tribunal Constitucional suspendió la consulta pero que, a pesar de ello, se llevó a cabo el 1 de octubre. La cita incluye ambas partes y la opción D las combina. Las demás opciones contradicen el texto: la A niega la suspensión, la B habla del 9 de noviembre (consulta de 2014) y la C dice que el TC la avaló y que el Senado la suspendió. La corrección que pide el enunciado es clara y única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"Para el amparo por violaciones de órganos judiciales el texto exige agotar la vía judicial previa, haber invocado el derecho en el proceso y presentarlo en treinta días. La cita contiene los tres elementos y la opción A los combina. Los veinte días corresponden a los órganos ejecutivos y los tres meses a los legislativos, y esas opciones no coinciden con el texto. Los seis meses son del TEDH. Única respuesta correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El texto fija 48 horas desde la notificación para que los promotores de una reunión prohibida interpongan recurso contencioso-administrativo, y la cita lo recoge. Los 4 días son el plazo del juez para resolver, no el de los promotores, y los 20 días corresponden a otro supuesto. No hay otra opción correcta. Es un plazo concreto, útil para examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la sentencia de la sala se puede recurrir en supuestos excepcionales ante la gran sala en el plazo de tres meses, y la cita lo recoge completo. La opción C lo reproduce. En las demás, la A pone seis meses (plazo del recurso inicial), la B dice 'cualquier supuesto' y 'pleno del Tribunal', y la D nombra al Tribunal Constitucional. Todas contradicen el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "6.0",
+    "6.1",
+    "6.2",
+    "7.0",
+    "7.1",
+    "7.2"
+   ],
+   "prompt_sha256": "fbcad866323246d8bd140a3ed2c6695d5c408460bac388ee0a918f3f4059a6d6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "68bd59ce04a620b86b86bca0d0279bc980e2e353af2f4f3543b2ed0d3eb755a1",
+    "4.1": "16072750b745039bb4e875f1043cf1504edeb4558e5908c3d44c8b8acc588b24",
+    "4.2": "cd0f57d72ad361c3513fc6f45428009373e0bbf4f2da864a0fe3137a8e7301f3",
+    "5.0": "0c02e8f32df4807c28d578e5934644b9d4f87ec6050fa91f3e07a17e62099245",
+    "6.0": "2d7282b552b07bb732e42e44973f26fcf69199dba85d6bdeed41e35a35002761",
+    "6.1": "03fa0dde14b96ffc8da287e99a79cd5cc1c41a36253a355d0c761ff8c6fd3685",
+    "6.2": "0002ed8b78935fc23121b3c3560c06d35d170d2b5c35959f9f6d9eb367890174",
+    "7.0": "b2892061c9cb96736f574ca4cf71b651eea833c5f5ffe8b5e2ab9a1415878ab1",
+    "7.1": "0cb44180738a6be897f07816afccb0f24d5f6890a607cfd6da5d1efd79a95f34",
+    "7.2": "33a86ed690bd88aae57d1454072c9d21eb90a02d16789d1b2987603b4f00ac4b"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (C.2.4) dice que con el Decret 19/2002 se crea la Sub-direcció General de la Policia, a la que se encomienda el comandamiento operativo del cuerpo. La opción 3 es correcta. La cita contiene órgano y función. La Prefectura (opción 0) se crea con el Decret 415/2011, y la Divisió d'Afers Interns se crea en otro momento, así que ninguna es válida. Pregunta clara y no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el Complex Central entra en funcionamiento a pleno rendimiento en octubre de 2009, y la cita lo recoge literalmente. Los distractores son fechas que aparecen en el texto con otro significado (noviembre 2008 fin del despliegue en Tarragona y Terres de l'Ebre, 2004 patrulla en Barcelona, 2011 decreto), por lo que ninguno es correcto. Es un dato concreto y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la Junta de Seguretat de Catalunya acuerda el 5 de noviembre de 2021 ampliar el máximo de efectivos a 22.006. La cita contiene órgano y fecha. Las demás opciones mezclan órgano o fecha erróneos (Parlament, Pla Mossos 2030 en 2022, Decret 57/2023), y ninguna es defendible según el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 88 CE es una sola frase, y la opción correcta (Consejo de Ministros lo aprueba y lo somete al Congreso con exposición de motivos y antecedentes) solo la reformula. Está respaldada, la cita es suficiente y la opción es única, ya que los distractores cambian Senado, Presidente o Congreso. Sin embargo, según el criterio de artículo de una sola frase que se restablece sin más, la pregunta es trivial y se marca clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (A.7.1) dice que el diario electrónico y el acceso a cualquier artículo son posibles gracias a la técnica del hipertexto, y la cita lo contiene. Realidad virtual, telefonía móvil y domótica aparecen en el texto con otras funciones, por lo que no son correctas aquí. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, como primera consecuencia, el gran número de población activa ya no está en el sector secundario sino en servicios o terciario. La cita lo recoge completo. Los distractores (industrial, agrario, reparto igual) contradicen o no aparecen en el texto. Pregunta unívoca.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El texto define las tecnologías de la información como elaborar, procesar, almacenar y transmitir la información. La cita contiene las cuatro operaciones, de modo que se ve que elaborar, almacenar y transmitir sí aparecen y certificar no. Solo la opción 0 es correcta. Es una enumeración concreta y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en agosto La Molina tiene 123 mm (1.267 mm anuales) y Lleida 24 mm (326 mm anuales), que es la opción 1. La cita contiene los cuatro datos, y las demás opciones intercambian cifras. La parecida guia-mossos-427 trata de clima atlántico en la Vall d'Aran, un hecho distinto, así que no es duplicada. Los datos numéricos concretos son material de examen válido.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en primavera y otoño se recoge, en la mayoría de los casos, buena parte de la precipitación anual. La cita lo contiene literalmente. El texto indica que en invierno las lluvias son escasas y que en verano llueve mucho solo en el Pirineo, por lo que las demás opciones no son correctas. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto atribuye a menudo los registros bajos de las planas de poniente y valles bajos al efecto de sombra pluviométrica de los relieves, y la cita lo recoge. La inversión térmica se refiere a temperaturas y la lejanía del Ecuador se descarta expresamente. La gota fría se asocia a tormentas intensas, no a la baja precipitación. Solo la opción 3 es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 5,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-ae5449df1e312a1e2.jsonl",
+    "respuesta_sha256": "1e1a3f583c354876ab4af73e9526dde62d06264f3f4c2cf714df823bb9b2891f"
+   },
+   "registrada_el": "2026-10-06T23:56:56",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:56:56",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 5,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-ae5449df1e312a1e2.jsonl",
+      "respuesta_sha256": "1e1a3f583c354876ab4af73e9526dde62d06264f3f4c2cf714df823bb9b2891f"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El texto (C.2.4) dice que con el Decret 19/2002 se crea la Sub-direcció General de la Policia, a la que se encomienda el comandamiento operativo del cuerpo. La opción 3 es correcta. La cita contiene órgano y función. La Prefectura (opción 0) se crea con el Decret 415/2011, y la Divisió d'Afers Interns se crea en otro momento, así que ninguna es válida. Pregunta clara y no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el Complex Central entra en funcionamiento a pleno rendimiento en octubre de 2009, y la cita lo recoge literalmente. Los distractores son fechas que aparecen en el texto con otro significado (noviembre 2008 fin del despliegue en Tarragona y Terres de l'Ebre, 2004 patrulla en Barcelona, 2011 decreto), por lo que ninguno es correcto. Es un dato concreto y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la Junta de Seguretat de Catalunya acuerda el 5 de noviembre de 2021 ampliar el máximo de efectivos a 22.006. La cita contiene órgano y fecha. Las demás opciones mezclan órgano o fecha erróneos (Parlament, Pla Mossos 2030 en 2022, Decret 57/2023), y ninguna es defendible según el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 88 CE es una sola frase, y la opción correcta (Consejo de Ministros lo aprueba y lo somete al Congreso con exposición de motivos y antecedentes) solo la reformula. Está respaldada, la cita es suficiente y la opción es única, ya que los distractores cambian Senado, Presidente o Congreso. Sin embargo, según el criterio de artículo de una sola frase que se restablece sin más, la pregunta es trivial y se marca clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El texto (A.7.1) dice que el diario electrónico y el acceso a cualquier artículo son posibles gracias a la técnica del hipertexto, y la cita lo contiene. Realidad virtual, telefonía móvil y domótica aparecen en el texto con otras funciones, por lo que no son correctas aquí. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, como primera consecuencia, el gran número de población activa ya no está en el sector secundario sino en servicios o terciario. La cita lo recoge completo. Los distractores (industrial, agrario, reparto igual) contradicen o no aparecen en el texto. Pregunta unívoca.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El texto define las tecnologías de la información como elaborar, procesar, almacenar y transmitir la información. La cita contiene las cuatro operaciones, de modo que se ve que elaborar, almacenar y transmitir sí aparecen y certificar no. Solo la opción 0 es correcta. Es una enumeración concreta y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en agosto La Molina tiene 123 mm (1.267 mm anuales) y Lleida 24 mm (326 mm anuales), que es la opción 1. La cita contiene los cuatro datos, y las demás opciones intercambian cifras. La parecida guia-mossos-427 trata de clima atlántico en la Vall d'Aran, un hecho distinto, así que no es duplicada. Los datos numéricos concretos son material de examen válido.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en primavera y otoño se recoge, en la mayoría de los casos, buena parte de la precipitación anual. La cita lo contiene literalmente. El texto indica que en invierno las lluvias son escasas y que en verano llueve mucho solo en el Pirineo, por lo que las demás opciones no son correctas. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.2\",\"verdict\":\"VALID\",\"reason\":\"El texto atribuye a menudo los registros bajos de las planas de poniente y valles bajos al efecto de sombra pluviométrica de los relieves, y la cita lo recoge. La inversión térmica se refiere a temperaturas y la lejanía del Ecuador se descarta expresamente. La gota fría se asocia a tormentas intensas, no a la baja precipitación. Solo la opción 3 es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2",
+    "10.0",
+    "10.1",
+    "10.2",
+    "11.0"
+   ],
+   "prompt_sha256": "2d497a473a50e458916d042948d91004a14ecf27f9e5c63ae8e1fb91daf3fae9",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "8.0": "3230c6c9b262ae0c9959ed9333e7b1f7439a520c0603386d57a02e23c065dbe0",
+    "8.1": "59b68d5eac8041fd5a4d9dac45a9ea9faa6b661f0aacc42fd409c76922c43c9a",
+    "8.2": "3d682545c27d617d57fefa03deba0291aa44350499bf63da4bb9c19da2ccf657",
+    "9.0": "7e3345e549f8d565faa725ece3e8dc156f399280b7586cecf00f7c8963016682",
+    "9.1": "31cc23cbd4eed0bada180a9c13e9e5b7a9f7c44709b8581b742d8f342d512ef9",
+    "9.2": "89144eee78f4dd4f95324eda6f13e911f7842edd73d540e88eba1a5179bc0ea4",
+    "10.0": "c400e8ebff2df469d8b86837f116b1cd6d075732d3010d88029dd428f5bd7cac",
+    "10.1": "5f32190b8f841047d3834149f0a8a5f0fd1dad448a75f7f442593264907289fe",
+    "10.2": "d46cb708d0657860bcab43cf4d6f42368f1568836baa60d50aa993dd6cec2fbe",
+    "11.0": "4a074edfd16ec924ff0f0b9847aabdc409d819863ca08e61f18d02a868f89f6d"
+   },
+   "veredictos": [
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text (art. 69 EAC) diu que el conseller primer té, a més de les competències delegables pel president, competències pròpies d'acord amb la Llei 13/2008. L'opció 0 ho recull. La cita conté els dos elements (delegades pel president i pròpies segons la Llei 13/2008). Les altres opcions fallen: Parlament, 'sense competències pròpies' i Decret 421/2006 no apareixen com a font de delegació ni de competències pròpies. Pregunta clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que, com a òrgan de direcció administrativa, cada departament és dirigit per un conseller o consellera. L'opció 1 ho reprodueix. La cita ho conté íntegrament. Cap altra opció és vàlida: el president dirigeix la direcció política, el conseller primer no s'assigna als departaments i la Comissió Jurídica Assessora és un òrgan consultiu. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text afirma que és suficient, per a l'eficàcia i l'entrada en vigor, la publicació al DOGC dels actes, disposicions generals i normes del Govern. L'opció 2 hi encaixa. La cita ho conté tot. Les opcions BOE, convalidació parlamentària i compte al Parlament contradiuen el text. L'enunciat és un supòsit pràctic ben format i no regala la resposta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que l'any 2021 el Govern de la Generalitat crea el Departament d'Igualtat i Feminismes i en fixa l'estructura amb el Decret 249/2021. L'opció 3 combina els dos elements (òrgan i norma) i la cita els conté tots dos. Les altres barregen òrgan o norma incorrectes (Parlament, ICD, Llei 17/2015, Llei 5/2008). Pregunta clara i amb dades concretes útils per a examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la Llei 39/1999 promovia la conciliació de la vida familiar i laboral, i que la Llei 3/2007 fa una regulació específica contra la discriminació per raó de sexe. L'opció 0 ho reflecteix. La cita inclou ambdues parts. Les altres opcions inverteixen o confonen les lleis (violència masclista és la Llei 5/2008; la primera llei catalana és la 17/2015). La parecida de la tanda és de la 9.2 i prova un altre fet, per tant no hi ha duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu explícitament que la Llei 17/2015, de 21 de juliol, és la primera llei d'igualtat de dones i homes catalana. La cita ho conté directament. Les altres lleis (5/2008, 8/2006, 3/2007) apareixen al text amb un altre objecte, per tant només una opció és correcta. La parecida (diferència entre Llei 39/1999 i 3/2007) prova un fet diferent i no és duplicat. Pregunta útil, amb dada concreta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que les comunitats del segon grup poden assolir el mateix nivell d'autonomia utilitzant un procediment especial que exigeix una manifestació de voluntat d'autogovern molt més àmplia (art. 151.1). L'opció 2 ho recull i la cita ho conté tot. Les altres opcions descriuen el primer grup (projectes d'estatut, règim provisional) o el tercer (cinc anys, art. 148.2), per tant són incorrectes per a aquest grup.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el 1992 el PSOE i el PP van arribar a un pacte autonòmic per equiparar les competències de les comunitats de via lenta mitjançant traspassos. L'opció 3 ho reprodueix i la cita ho conté. Les altres són errònies: la 0 i la 1 barregen el pacte del 1981 (PSOE i UCD, LOAPA, frenar el principi dispositiu) amb el de 1992, i la 2 no té suport al text. Una sola opció és completa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la classificació respon a un triple criteri: l'històric, el competencial i el del procediment d'accés a l'autonomia. L'opció 0 ho recull i la cita ho conté literalment. Les altres introdueixen criteris no esmentats (territorial, demogràfic, financer, lingüístic). La parecida guia-mossos-434 pregunta per l'autonomia administrativa de municipis i províncies, un fet diferent, per tant no és duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text defineix la diglòssia: la llengua A (alta, més prestigi) expressa tots els àmbits de poder i la B (baixa, menys prestigi) només s'usa en àmbits privats. L'opció 1 ho reprodueix i la cita conté la definició completa. L'opció 0 inverteix les llengües, i la 2 i la 3 reparteixen incorrectament els àmbits. Una sola opció és correcta i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-ad9e0680010e3d55b.jsonl",
+    "respuesta_sha256": "227874f3dc2f17df15595fd6af84b7d7d4e82d15dd2c1495559ecf1c4e6acb21"
+   },
+   "registrada_el": "2026-10-06T23:57:33",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:57:33",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-ad9e0680010e3d55b.jsonl",
+      "respuesta_sha256": "227874f3dc2f17df15595fd6af84b7d7d4e82d15dd2c1495559ecf1c4e6acb21"
+     },
+     "respuesta": "[\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El text (art. 69 EAC) diu que el conseller primer té, a més de les competències delegables pel president, competències pròpies d'acord amb la Llei 13/2008. L'opció 0 ho recull. La cita conté els dos elements (delegades pel president i pròpies segons la Llei 13/2008). Les altres opcions fallen: Parlament, 'sense competències pròpies' i Decret 421/2006 no apareixen com a font de delegació ni de competències pròpies. Pregunta clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que, com a òrgan de direcció administrativa, cada departament és dirigit per un conseller o consellera. L'opció 1 ho reprodueix. La cita ho conté íntegrament. Cap altra opció és vàlida: el president dirigeix la direcció política, el conseller primer no s'assigna als departaments i la Comissió Jurídica Assessora és un òrgan consultiu. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El text afirma que és suficient, per a l'eficàcia i l'entrada en vigor, la publicació al DOGC dels actes, disposicions generals i normes del Govern. L'opció 2 hi encaixa. La cita ho conté tot. Les opcions BOE, convalidació parlamentària i compte al Parlament contradiuen el text. L'enunciat és un supòsit pràctic ben format i no regala la resposta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que l'any 2021 el Govern de la Generalitat crea el Departament d'Igualtat i Feminismes i en fixa l'estructura amb el Decret 249/2021. L'opció 3 combina els dos elements (òrgan i norma) i la cita els conté tots dos. Les altres barregen òrgan o norma incorrectes (Parlament, ICD, Llei 17/2015, Llei 5/2008). Pregunta clara i amb dades concretes útils per a examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la Llei 39/1999 promovia la conciliació de la vida familiar i laboral, i que la Llei 3/2007 fa una regulació específica contra la discriminació per raó de sexe. L'opció 0 ho reflecteix. La cita inclou ambdues parts. Les altres opcions inverteixen o confonen les lleis (violència masclista és la Llei 5/2008; la primera llei catalana és la 17/2015). La parecida de la tanda és de la 9.2 i prova un altre fet, per tant no hi ha duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu explícitament que la Llei 17/2015, de 21 de juliol, és la primera llei d'igualtat de dones i homes catalana. La cita ho conté directament. Les altres lleis (5/2008, 8/2006, 3/2007) apareixen al text amb un altre objecte, per tant només una opció és correcta. La parecida (diferència entre Llei 39/1999 i 3/2007) prova un fet diferent i no és duplicat. Pregunta útil, amb dada concreta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que les comunitats del segon grup poden assolir el mateix nivell d'autonomia utilitzant un procediment especial que exigeix una manifestació de voluntat d'autogovern molt més àmplia (art. 151.1). L'opció 2 ho recull i la cita ho conté tot. Les altres opcions descriuen el primer grup (projectes d'estatut, règim provisional) o el tercer (cinc anys, art. 148.2), per tant són incorrectes per a aquest grup.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el 1992 el PSOE i el PP van arribar a un pacte autonòmic per equiparar les competències de les comunitats de via lenta mitjançant traspassos. L'opció 3 ho reprodueix i la cita ho conté. Les altres són errònies: la 0 i la 1 barregen el pacte del 1981 (PSOE i UCD, LOAPA, frenar el principi dispositiu) amb el de 1992, i la 2 no té suport al text. Una sola opció és completa.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la classificació respon a un triple criteri: l'històric, el competencial i el del procediment d'accés a l'autonomia. L'opció 0 ho recull i la cita ho conté literalment. Les altres introdueixen criteris no esmentats (territorial, demogràfic, financer, lingüístic). La parecida guia-mossos-434 pregunta per l'autonomia administrativa de municipis i províncies, un fet diferent, per tant no és duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El text defineix la diglòssia: la llengua A (alta, més prestigi) expressa tots els àmbits de poder i la B (baixa, menys prestigi) només s'usa en àmbits privats. L'opció 1 ho reprodueix i la cita conté la definició completa. L'opció 0 inverteix les llengües, i la 2 i la 3 reparteixen incorrectament els àmbits. Una sola opció és correcta i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "11.1",
+    "11.2",
+    "12.0",
+    "12.1",
+    "13.0",
+    "13.1",
+    "13.2",
+    "14.0",
+    "14.1",
+    "14.2"
+   ],
+   "prompt_sha256": "cb09bb2eb83b6498c802ef71ef7b5914eeab35a95174865dbb0d8f899cd77fa9",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "11.1": "6669e6ec2b929ff230bb014d677837d0f98be536f38af98234b330648a977ec6",
+    "11.2": "2f5357fa841799a3b6d4fa7f7e78c3d2b1b922b65797c3b0a794d3de629ce198",
+    "12.0": "1a2451fff1efed16ed1c9f4552ea37e0d02a054f058ac11a8c7c2f72bff703c1",
+    "12.1": "c9730379f10950c93a3b27e154285831308b8da89fec23cbb0673d4c6a39afef",
+    "13.0": "bf39619c32a04f5eb97efc570426c10bad4d0782df74839b9f387b05a79110ca",
+    "13.1": "d56cb85f23e6e61350cb6700f55025a6112a0a9ccf9da9a7659ab5fbfdc86636",
+    "13.2": "d633aebc154650f075bc56b0381e299bafe69b05c7e8b210368fc64554a536ae",
+    "14.0": "80bb10382d0981d29332718a5c7655507b9f64d92532cc0be30cc8c349ae417f",
+    "14.1": "ed2e85397a79ff559dbe6da6175a22f893b3645b2c1176402f28edaff05e6b82",
+    "14.2": "3d8f1b31ba070cf3a9f0695a224edff85e7e6a5cbd1bf55b1352ce8b09b945b7"
+   },
+   "veredictos": [
+    {
+     "question_id": "11.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El punt 6 del text i la cita diuen que en les relacions formals s'usa el català com a llengua de prestigi i que en les informals s'usa exclusivament el català. L'opció a (índex 2) hi concorda, però està mal redactada: li falta la llengua a la part formal ('s'usava com a llengua de prestigi'). Això la fa confusa i poc útil. Les altres opcions són falses: a posa el llatí, b el castellà, d fa conviure el català amb el castellà en l'àmbit informal. La cita sola és suficient i la resposta és única, però la pregunta no és clara per l'error de redacció de l'opció correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 4 del text i la cita diuen literalment que Pere el Cerimoniós va ser el primer rei català que va intuir el lligam entre poder i llengua. Cap altre rei de les opcions (Jaume I, Alfons el Magnànim, Martí l'Humà) hi apareix. La cita conté tot l'element necessari. La pregunta és clara i els distractors són plausibles.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "L'article 165.4 diu 'un Senador i un altre més per cada milió d'habitants'. Amb 3,5 milions, la lectura natural és 1+3=4 senadors, designats per l'assemblea legislativa, i la cita ho recull. El text no diu què passa amb la fracció de milió: 3,5 podria arrodonir-se a 4 milions i donar 5 senadors, que és l'opció d. Com que la pregunta depèn d'un criteri que el text no estableix, l'opció correcta no és inequívoca i la pregunta és ambigua.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text, apartats d) i e) de les funcions, assigna el control a preguntes, interpel·lacions i comissions d'investigació, i l'impuls a proposicions no de llei, resolucions i mocions. L'opció b ho reflecteix exactament. La cita inclou tots dos apartats. Les opcions a, c i d barregen o inverteixen elements (a els inverteix, c i d hi afegeixen mocions o el pressupost on no toca), per tant la resposta és única i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu 'Entre 1997 i 1998 la Generalitat tindria les competències executives en matèria de trànsit i circulació de vehicles de motor', i la cita ho conté sencer. Els distractors són dates reals del mateix text amb un altre significat: 1983 és la llei de la Policia, 1985 l'Escola de Policia, 1994 l'inici del desplegament i 2008 la culminació. Només l'opció c és correcta. És una dada concreta i útil per a l'examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el procés va ser 'fruit de la interacció i de l'acord entre el rupturisme de les forces opositores ... i el reformisme dels sectors ... del règim anterior'. L'opció d ho recull i la cita ho conté sencer. Les opcions a, b i c contradiuen el text: imposició del rupturisme, reforma sense oposició, acord amb la policia de la dictadura. La resposta és única i els distractors són versions parcials plausibles.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negatiu. El text i la cita enumeren els tres nivells: policia de l'Administració central, policies de les comunitats autònomes que ho preveiessin i policies locals dependents del poder municipal. Les opcions b, c i d hi surten totes tres a la cita. L'opció a, policies provincials de les diputacions, no hi surt, per tant és la que NO és un nivell. La cita sola permet veure-ho i la resposta és única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text llista els tractats amb la data de signatura: Amsterdam 2 d'octubre de 1997, Niça 26 de febrer de 2001, Maastricht 7 de febrer de 1992 i Lisboa 13 de desembre de 2007. L'opció b (Amsterdam, 2/10/1997) és l'única correcta. Les altres tres combinen un tractat amb la data d'un altre. La cita inclou totes les dates necessàries. Les dates de signatura de tractats són fites del temari.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "A l'efecte directe en sentit material, el text diu que les normes comunitàries 'són aplicables directament pels tribunals dels estats membres en la resolució dels conflictes', i la cita ho conté. La Comissió, els parlaments estatals i el Consell no hi apareixen com a aplicadors. La resposta és única i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que les decisions són 'actes particulars, obligatoris per als seus destinataris, que poden ser estats membres o persones físiques o jurídiques', i la cita ho conté. L'opció d és l'única correcta. L'opció a exclou les persones i la b exclou els estats, per tant contradiuen el text. La c atribueix a les decisions el caràcter dels reglaments, que és una altra figura. La pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a69e9c8f6a1d6131d.jsonl",
+    "respuesta_sha256": "bee108462038c3e334625f9f7b90533d6fa6bdfa0cd9ff33a4686ca333eec9e7"
+   },
+   "registrada_el": "2026-10-06T23:57:39",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:57:39",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a69e9c8f6a1d6131d.jsonl",
+      "respuesta_sha256": "bee108462038c3e334625f9f7b90533d6fa6bdfa0cd9ff33a4686ca333eec9e7"
+     },
+     "respuesta": "[{\"question_id\":\"11.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El punt 6 del text i la cita diuen que en les relacions formals s'usa el català com a llengua de prestigi i que en les informals s'usa exclusivament el català. L'opció a (índex 2) hi concorda, però està mal redactada: li falta la llengua a la part formal ('s'usava com a llengua de prestigi'). Això la fa confusa i poc útil. Les altres opcions són falses: a posa el llatí, b el castellà, d fa conviure el català amb el castellà en l'àmbit informal. La cita sola és suficient i la resposta és única, però la pregunta no és clara per l'error de redacció de l'opció correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},{\"question_id\":\"11.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 4 del text i la cita diuen literalment que Pere el Cerimoniós va ser el primer rei català que va intuir el lligam entre poder i llengua. Cap altre rei de les opcions (Jaume I, Alfons el Magnànim, Martí l'Humà) hi apareix. La cita conté tot l'element necessari. La pregunta és clara i els distractors són plausibles.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"12.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"L'article 165.4 diu 'un Senador i un altre més per cada milió d'habitants'. Amb 3,5 milions, la lectura natural és 1+3=4 senadors, designats per l'assemblea legislativa, i la cita ho recull. El text no diu què passa amb la fracció de milió: 3,5 podria arrodonir-se a 4 milions i donar 5 senadors, que és l'opció d. Com que la pregunta depèn d'un criteri que el text no estableix, l'opció correcta no és inequívoca i la pregunta és ambigua.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":false,\"duplicada_de\":\"\"}},{\"question_id\":\"12.1\",\"verdict\":\"VALID\",\"reason\":\"El text, apartats d) i e) de les funcions, assigna el control a preguntes, interpel·lacions i comissions d'investigació, i l'impuls a proposicions no de llei, resolucions i mocions. L'opció b ho reflecteix exactament. La cita inclou tots dos apartats. Les opcions a, c i d barregen o inverteixen elements (a els inverteix, c i d hi afegeixen mocions o el pressupost on no toca), per tant la resposta és única i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu 'Entre 1997 i 1998 la Generalitat tindria les competències executives en matèria de trànsit i circulació de vehicles de motor', i la cita ho conté sencer. Els distractors són dates reals del mateix text amb un altre significat: 1983 és la llei de la Policia, 1985 l'Escola de Policia, 1994 l'inici del desplegament i 2008 la culminació. Només l'opció c és correcta. És una dada concreta i útil per a l'examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el procés va ser 'fruit de la interacció i de l'acord entre el rupturisme de les forces opositores ... i el reformisme dels sectors ... del règim anterior'. L'opció d ho recull i la cita ho conté sencer. Les opcions a, b i c contradiuen el text: imposició del rupturisme, reforma sense oposició, acord amb la policia de la dictadura. La resposta és única i els distractors són versions parcials plausibles.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negatiu. El text i la cita enumeren els tres nivells: policia de l'Administració central, policies de les comunitats autònomes que ho preveiessin i policies locals dependents del poder municipal. Les opcions b, c i d hi surten totes tres a la cita. L'opció a, policies provincials de les diputacions, no hi surt, per tant és la que NO és un nivell. La cita sola permet veure-ho i la resposta és única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El text llista els tractats amb la data de signatura: Amsterdam 2 d'octubre de 1997, Niça 26 de febrer de 2001, Maastricht 7 de febrer de 1992 i Lisboa 13 de desembre de 2007. L'opció b (Amsterdam, 2/10/1997) és l'única correcta. Les altres tres combinen un tractat amb la data d'un altre. La cita inclou totes les dates necessàries. Les dates de signatura de tractats són fites del temari.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"A l'efecte directe en sentit material, el text diu que les normes comunitàries 'són aplicables directament pels tribunals dels estats membres en la resolució dels conflictes', i la cita ho conté. La Comissió, els parlaments estatals i el Consell no hi apareixen com a aplicadors. La resposta és única i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},{\"question_id\":\"14.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que les decisions són 'actes particulars, obligatoris per als seus destinataris, que poden ser estats membres o persones físiques o jurídiques', i la cita ho conté. L'opció d és l'única correcta. L'opció a exclou les persones i la b exclou els estats, per tant contradiuen el text. La c atribueix a les decisions el caràcter dels reglaments, que és una altra figura. La pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "15.0",
+    "15.1",
+    "15.2",
+    "16.0",
+    "16.1",
+    "17.0",
+    "17.1",
+    "18.0",
+    "18.1",
+    "18.2"
+   ],
+   "prompt_sha256": "16bb1b4ea775c41c93fadfe1ffa3085c4bfde9519c5d597cabbfb1550db78413",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "15.0": "c29e00ef55428c39bce65e4417152f331f9f5cb2e5bd65a0cbb74b874d06ab50",
+    "15.1": "35982d37ca10946b10dc80e643e85eb754a7309bd9c23be76cddbe8d877195fd",
+    "15.2": "3830054fb982124ef4f822dd3449dc88a90449504278c49c2c6d13460b565be0",
+    "16.0": "6bf690d4e1ebdd740ea3e13a7d5baa6dc3a1362780b9ea54821dd4fa4a423a1e",
+    "16.1": "ff8bda73bc69614546a1ac6c40152e97b5d9c46fb6629985e6cd66f671c3148a",
+    "17.0": "2ecfba429f047a0a0c4a1aea3e82a9aaf47f327a8f5784a6c3e29bf4a6a552eb",
+    "17.1": "57d37b25af37df331044bea29df7b8c594fd115af6dec0ef7ca31fc0590ff058",
+    "18.0": "a2c9ce9870c51ed45cd80a49cdadc27600ba74111df5c64ff03745ac24dd1abb",
+    "18.1": "401111fe5393020e71253b01537dffeb760ca8b60ee2b976f0371693a95ae541",
+    "18.2": "63c8570170aacb654936e097bd3907cf51a7ec08643ef657118fb9dd6e3c7daf"
+   },
+   "veredictos": [
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 6 del text diu que tenen competència les comunitats l'estatut de les quals ho preveu i que han exercit aquesta previsió. L'opció A ho reprodueix i la B (encara que no l'hagin exercida) el contradiu. La cita conté tots dos requisits (previsió estatutària i exercici), per tant és suficient. Les opcions C i D no tenen cap suport al text. No hi ha parecides, i la pregunta és clara i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 11 del text diu que el sistema de seguretat de Catalunya el constitueixen les autoritats de seguretat, els cossos policials i els òrgans de coordinació i participació, que és l'opció B. La cita ho recull sencer. Els distractors (empreses privades, òrgans judicials, ajuntaments i societat civil) no apareixen com a components del sistema. Les parecides tracten l'OCN de la Interpol i la competència de les comunitats autònomes, que són fets diferents, així que no hi ha duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 24 diu que Schengen implicava suprimir els controls de persones, vehicles i mercaderies a les fronteres comunes i establir mesures de substitució. L'opció C ho recull. Les opcions A i D contradiuen el text, i la B (visat comú) no hi consta. La cita ho conté tot. L'escenari del camió és coherent i no regala la resposta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "El punt 4 enumera independència, inamovibilitat, imparcialitat, incompatibilitat i responsabilitat. La dependència jeràrquica és un principi del Ministeri Fiscal (punt 8), de manera que la resposta D és correcta i la cita és suficient. Però la parecida cand-guia-mossos-51 és pràcticament idèntica, amb la mateixa pregunta NO i la mateixa resposta, per tant és un duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "cand-guia-mossos-51"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 1 diu que el poder judicial es compon de jutges i magistrats, que és l'opció A. La cita ho diu literalment. Els fiscals queden fora, perquè el punt 8 diu que el Ministeri Fiscal no forma part del poder judicial. L'Administració de justícia i el CGPJ tampoc són components segons el text. Les parecides tracten fets diferents (principis del Fiscal, cos únic i LOPJ, elecció del president del CGPJ), per tant no hi ha duplicat.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el Codi s'aplica als òrgans autoritzats o controlats pels poders públics, amb el manteniment de l'ordre com a primer objectiu, i que estan autoritzats per l'Estat a usar la força o poders especials. Com que l'Estat no ho autoritza, la resposta correcta és B. La cita conté tots els requisits acumulatius. El supòsit és clar i les altres opcions són errònies.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el Comitè de Ministres, en la Recomanació REC(2001)10, recomana als governs dels estats membres que basin la seva legislació i els seus codis de conducta en el Codi. La resposta C és correcta i la cita ho conté tot. Parlaments, cossos de policia i TEDH no apareixen com a destinataris. És una pregunta de fet útil, sense duplicats.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la policia local, en funcions de policia judicial, pot practicar les primeres diligències de prevenció i la custòdia d'objectes d'un delicte, i que n'ha de donar compte a l'autoritat judicial o al Ministeri Fiscal. La resposta D és correcta i la cita ho conté. L'alcalde, el conseller i el cap del cos hi apareixen en altres contextos (comandament, emergència), no com a destinataris d'aquest compte. L'escenari és clar.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la legislació de règim local atorga als municipis competències pròpies en seguretat en llocs públics, ordenació del trànsit i protecció civil, que és l'opció A. La cita conté la llista sencera. Els distractors barregen elements que no hi són (policia judicial, investigació criminal, ordre públic, trànsit interurbà, seguretat ciutadana). La pregunta és concreta i útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que els municipis sense policia local poden dotar-se de guàrdies, vigilants, agents o algutzirs, i que cap d'aquestes figures estarà autoritzada per dur arma. La resposta B és correcta i la cita ho conté, malgrat que el parèntesi hi queda tallat. No hi ha cap excepció per autorització de l'alcalde o del conseller, de manera que les altres opcions són falses. L'escenari és clar.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a0a30ee2fae454fdc.jsonl",
+    "respuesta_sha256": "34a8836e903425a07395f0bdc0480aa4f983b9f911ebfcb9bbdcdfb74b03a008"
+   },
+   "registrada_el": "2026-10-06T23:58:13",
+   "intentos": [
+    {
+     "t": "2026-10-06T23:58:13",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a0a30ee2fae454fdc.jsonl",
+      "respuesta_sha256": "34a8836e903425a07395f0bdc0480aa4f983b9f911ebfcb9bbdcdfb74b03a008"
+     },
+     "respuesta": "[\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 6 del text diu que tenen competència les comunitats l'estatut de les quals ho preveu i que han exercit aquesta previsió. L'opció A ho reprodueix i la B (encara que no l'hagin exercida) el contradiu. La cita conté tots dos requisits (previsió estatutària i exercici), per tant és suficient. Les opcions C i D no tenen cap suport al text. No hi ha parecides, i la pregunta és clara i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 11 del text diu que el sistema de seguretat de Catalunya el constitueixen les autoritats de seguretat, els cossos policials i els òrgans de coordinació i participació, que és l'opció B. La cita ho recull sencer. Els distractors (empreses privades, òrgans judicials, ajuntaments i societat civil) no apareixen com a components del sistema. Les parecides tracten l'OCN de la Interpol i la competència de les comunitats autònomes, que són fets diferents, així que no hi ha duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 24 diu que Schengen implicava suprimir els controls de persones, vehicles i mercaderies a les fronteres comunes i establir mesures de substitució. L'opció C ho recull. Les opcions A i D contradiuen el text, i la B (visat comú) no hi consta. La cita ho conté tot. L'escenari del camió és coherent i no regala la resposta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"REJECTED\",\"reason\":\"El punt 4 enumera independència, inamovibilitat, imparcialitat, incompatibilitat i responsabilitat. La dependència jeràrquica és un principi del Ministeri Fiscal (punt 8), de manera que la resposta D és correcta i la cita és suficient. Però la parecida cand-guia-mossos-51 és pràcticament idèntica, amb la mateixa pregunta NO i la mateixa resposta, per tant és un duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"cand-guia-mossos-51\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 1 diu que el poder judicial es compon de jutges i magistrats, que és l'opció A. La cita ho diu literalment. Els fiscals queden fora, perquè el punt 8 diu que el Ministeri Fiscal no forma part del poder judicial. L'Administració de justícia i el CGPJ tampoc són components segons el text. Les parecides tracten fets diferents (principis del Fiscal, cos únic i LOPJ, elecció del president del CGPJ), per tant no hi ha duplicat.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el Codi s'aplica als òrgans autoritzats o controlats pels poders públics, amb el manteniment de l'ordre com a primer objectiu, i que estan autoritzats per l'Estat a usar la força o poders especials. Com que l'Estat no ho autoritza, la resposta correcta és B. La cita conté tots els requisits acumulatius. El supòsit és clar i les altres opcions són errònies.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el Comitè de Ministres, en la Recomanació REC(2001)10, recomana als governs dels estats membres que basin la seva legislació i els seus codis de conducta en el Codi. La resposta C és correcta i la cita ho conté tot. Parlaments, cossos de policia i TEDH no apareixen com a destinataris. És una pregunta de fet útil, sense duplicats.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la policia local, en funcions de policia judicial, pot practicar les primeres diligències de prevenció i la custòdia d'objectes d'un delicte, i que n'ha de donar compte a l'autoritat judicial o al Ministeri Fiscal. La resposta D és correcta i la cita ho conté. L'alcalde, el conseller i el cap del cos hi apareixen en altres contextos (comandament, emergència), no com a destinataris d'aquest compte. L'escenari és clar.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la legislació de règim local atorga als municipis competències pròpies en seguretat en llocs públics, ordenació del trànsit i protecció civil, que és l'opció A. La cita conté la llista sencera. Els distractors barregen elements que no hi són (policia judicial, investigació criminal, ordre públic, trànsit interurbà, seguretat ciutadana). La pregunta és concreta i útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que els municipis sense policia local poden dotar-se de guàrdies, vigilants, agents o algutzirs, i que cap d'aquestes figures estarà autoritzada per dur arma. La resposta B és correcta i la cita ho conté, malgrat que el parèntesi hi queda tallat. No hi ha cap excepció per autorització de l'alcalde o del conseller, de manera que les altres opcions són falses. L'escenari és clar.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

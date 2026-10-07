@@ -1,0 +1,1030 @@
+{
+ "evaluacion": "S00044",
+ "creada_el": "2026-10-07T00:05:07",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 50,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "3.1",
+    "3.2"
+   ],
+   "prompt_sha256": "312d94f3b40d00d1cf76f549c1e5b375953e2355f31a212b345f46eb223d4ff7",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "eba95227b54632ef2082623055b1fe573673c2ef087da995ae6d4fd7c1cbb2fa",
+    "1.0": "f35c5df84fc3cce7b583c7caccffea2d986e21ed8a226c9f269da2cc6e5ef5bc",
+    "1.1": "ee1c6bbbf3150d37722a6bf02924e56f406079897953973ff4970316b871ed62",
+    "1.2": "a3fa170b06205fffe64ddd6f0dbdd236e5270c12eebfed53a613dbb2ece78ac6",
+    "2.0": "61cae306a4f9a8aeb101ed7226d7c27620bcf8e6f577329b4d54b5fd0e2042aa",
+    "2.1": "4ff113c860e7dc1997eb5e815b5a627e6fe5e21af395cf17307e85c94808109a",
+    "2.2": "52865b6f86222e5213e9f267bf2e8529b09fb814349c8ea9ed8ca347340c6707",
+    "3.0": "58dbd1b5e5f6506701b1d289edb414b0e2d6ff29a40b86625e18fd86f5e3d8ac",
+    "3.1": "1a2231f5774eda922798e8dc3b6b84356215280eac6cdce2d0cb106a0c6e1534",
+    "3.2": "929d71cdf1fad1a5e6d5fdd74308cfcb6359d57d696b79d0a635dabc95df23ac"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 14.2 dice que los extranjeros que adquieren la nacionalidad española quedan sometidos al derecho civil catalán mientras mantengan la vecindad administrativa, salvo que manifiesten voluntad en contraria. Eso es la opción B. La cita recoge todos los elementos (derecho catalán, vecindad administrativa, excepción por voluntad en contra). Las otras tres opciones (derecho común, diez años, derecho del país de origen) contradicen el texto. La pregunta es clara y exige distinguir regla y excepción.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 3 de las ideas fuerza A.1 dice que el substrato romano es la base sobre la que cristalizará la cultura catalana. La cita lo recoge literalmente. Visigodo, franco e ibérico no aparecen como base cultural en el texto, así que solo hay una respuesta correcta. La pregunta es un dato concreto del temario y no da pistas en las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 9 atribuye la pérdida de las libertades colectivas a la derrota militar del 11 de septiembre de 1714 ante las tropas de Felipe V. La cita lo contiene entero. Las otras opciones aparecen en el texto pero con otro papel: la pérdida de Cerdeña y Cataluña Norte, la crisis de la baja edad media y la debilidad franca. Ninguna es causa de la pérdida de libertades. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 7 dice que la crisis política produce una unión dinástica con Castilla que desplazará el poder hacia el reino vecino. La cita incluye la crisis y su consecuencia. Las demás opciones son hechos de otros momentos: el nacimiento de las Cortes en el siglo XIV, la recuperación del siglo XVIII y la relación con los francos. No son consecuencia de esa crisis, así que la respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 9 del tema A.2 dice que en la Transición vuelve del exilio el presidente Josep Tarradellas. La cita lo recoge. Companys y Macià son de la Segunda República y Pujol fue el primer presidente electo, no volvió del exilio. Las parecidas (387 Maragall, 386 Tribunal Constitucional, 388 Pujol 126º) tratan otros hechos, así que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 12 dice que el 14 de mayo de 2018 el Parlament eligió a Joaquim Torra. La cita lo recoge. El Gobierno español solo convocó elecciones, y Senado y Congreso no intervienen según el texto. Las parecidas (Tarradellas y el mandato de Maragall) tratan otros datos, así que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Es una pregunta en negativo. El texto atribuye al período el capitalismo, la industrialización y el obrerismo en Cataluña y la consolidación de los estados modernos. También dice que el Estado español será incapaz de estructurar un modelo sólido y duradero, lo que contradice la opción C. La cita contiene los tres elementos que aparecen en las otras opciones y el que se niega, así que es suficiente. La opción C es la única no atribuida.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 8.2 dice que, con el art. 17.2 suspendido individualmente, el plazo se puede prorrogar hasta cinco días con autorización judicial previa otorgada antes de las 72 horas. La cita contiene todos los elementos: cinco días, autorización judicial y 72 horas. La opción A mezcla el estado de excepción (10 días, 24 horas). La C pone al Ministerio del Interior como autoridad, y el texto solo le atribuye la intervención de comunicaciones en urgencia. La D corresponde a las comunicaciones. La respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que durante el estado de alarma no se puede suspender el ejercicio de los derechos y solo hay restricciones. La cita lo recoge. Las opciones A, B y D describen la suspensión propia del estado de excepción o de sitio, o una autorización del Congreso que no se menciona para la alarma, así que son falsas. La parecida 353 (declaración del estado de sitio) trata otro hecho.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "En el estado de excepción, para el art. 18.2 el texto permite inspecciones y registros domiciliarios cuando se consideren necesarios para el orden público, con comunicación inmediata al juez. Eso es la opción C. La cita contiene ambos requisitos. La A exige autorización judicial previa, que no se pide. La B pone 72 horas, plazo que no existe aquí. La D atribuye la autorización al Congreso, y el texto solo exige su autorización para declarar el estado. La parecida 354 trata de la detención (art. 17), no del domicilio.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-ad9927c2cf8ce777b.jsonl",
+    "respuesta_sha256": "7f314ff8fa888e255b73351615d5e523812a31afff92079e30058b6d0b8dd09d"
+   },
+   "registrada_el": "2026-10-07T00:06:15",
+   "intentos": [
+    {
+     "t": "2026-10-07T00:06:15",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-ad9927c2cf8ce777b.jsonl",
+      "respuesta_sha256": "7f314ff8fa888e255b73351615d5e523812a31afff92079e30058b6d0b8dd09d"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 14.2 dice que los extranjeros que adquieren la nacionalidad española quedan sometidos al derecho civil catalán mientras mantengan la vecindad administrativa, salvo que manifiesten voluntad en contraria. Eso es la opción B. La cita recoge todos los elementos (derecho catalán, vecindad administrativa, excepción por voluntad en contra). Las otras tres opciones (derecho común, diez años, derecho del país de origen) contradicen el texto. La pregunta es clara y exige distinguir regla y excepción.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 3 de las ideas fuerza A.1 dice que el substrato romano es la base sobre la que cristalizará la cultura catalana. La cita lo recoge literalmente. Visigodo, franco e ibérico no aparecen como base cultural en el texto, así que solo hay una respuesta correcta. La pregunta es un dato concreto del temario y no da pistas en las opciones.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El punto 9 atribuye la pérdida de las libertades colectivas a la derrota militar del 11 de septiembre de 1714 ante las tropas de Felipe V. La cita lo contiene entero. Las otras opciones aparecen en el texto pero con otro papel: la pérdida de Cerdeña y Cataluña Norte, la crisis de la baja edad media y la debilidad franca. Ninguna es causa de la pérdida de libertades. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El punto 7 dice que la crisis política produce una unión dinástica con Castilla que desplazará el poder hacia el reino vecino. La cita incluye la crisis y su consecuencia. Las demás opciones son hechos de otros momentos: el nacimiento de las Cortes en el siglo XIV, la recuperación del siglo XVIII y la relación con los francos. No son consecuencia de esa crisis, así que la respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 9 del tema A.2 dice que en la Transición vuelve del exilio el presidente Josep Tarradellas. La cita lo recoge. Companys y Macià son de la Segunda República y Pujol fue el primer presidente electo, no volvió del exilio. Las parecidas (387 Maragall, 386 Tribunal Constitucional, 388 Pujol 126º) tratan otros hechos, así que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El punto 12 dice que el 14 de mayo de 2018 el Parlament eligió a Joaquim Torra. La cita lo recoge. El Gobierno español solo convocó elecciones, y Senado y Congreso no intervienen según el texto. Las parecidas (Tarradellas y el mandato de Maragall) tratan otros datos, así que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"Es una pregunta en negativo. El texto atribuye al período el capitalismo, la industrialización y el obrerismo en Cataluña y la consolidación de los estados modernos. También dice que el Estado español será incapaz de estructurar un modelo sólido y duradero, lo que contradice la opción C. La cita contiene los tres elementos que aparecen en las otras opciones y el que se niega, así que es suficiente. La opción C es la única no atribuida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 8.2 dice que, con el art. 17.2 suspendido individualmente, el plazo se puede prorrogar hasta cinco días con autorización judicial previa otorgada antes de las 72 horas. La cita contiene todos los elementos: cinco días, autorización judicial y 72 horas. La opción A mezcla el estado de excepción (10 días, 24 horas). La C pone al Ministerio del Interior como autoridad, y el texto solo le atribuye la intervención de comunicaciones en urgencia. La D corresponde a las comunicaciones. La respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que durante el estado de alarma no se puede suspender el ejercicio de los derechos y solo hay restricciones. La cita lo recoge. Las opciones A, B y D describen la suspensión propia del estado de excepción o de sitio, o una autorización del Congreso que no se menciona para la alarma, así que son falsas. La parecida 353 (declaración del estado de sitio) trata otro hecho.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.2\",\"verdict\":\"VALID\",\"reason\":\"En el estado de excepción, para el art. 18.2 el texto permite inspecciones y registros domiciliarios cuando se consideren necesarios para el orden público, con comunicación inmediata al juez. Eso es la opción C. La cita contiene ambos requisitos. La A exige autorización judicial previa, que no se pide. La B pone 72 horas, plazo que no existe aquí. La D atribuye la autorización al Congreso, y el texto solo exige su autorización para declarar el estado. La parecida 354 trata de la detención (art. 17), no del domicilio.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "6.0",
+    "6.1",
+    "6.2",
+    "7.0",
+    "7.1",
+    "8.0"
+   ],
+   "prompt_sha256": "74059e5bbd952e786ac615c34648c438684f7e432e811765e22e1c2f9080e13d",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "a8c7be3d48414e50fdea34ab50050dbf490b7d426f32a921209cca77f8c81c25",
+    "4.1": "1d62aeaa52e2a726c6bf213532bf0fe03d03df96c33c7b595dcc6d01392681db",
+    "4.2": "61aec6905a022ebf2f1f43bd1d9f1b6a4fe093cb96f3db799934c4b72842ca71",
+    "5.0": "d9c1dff8f666526e24cf2360acfc10ca11394da64165347ccfaa49bb72b0a51f",
+    "6.0": "9d805f2019e1bf5aaa2372d6fc359f1e494904775154aa9e06939f32cd1cd526",
+    "6.1": "0abadb7eb2a3cbc76d42e309c33f035293821daf21ec5a3a55d25a58bdedc3be",
+    "6.2": "9b405e53c1e0f3caf249222f62d1c9c9d16905794abb85fc4b52509a1a93c529",
+    "7.0": "f6f5722bdd7a97b6077bfa9e0dce656dae94c833b485c2c11409d2ec39ee3e51",
+    "7.1": "4f090c7cc8c446dc7e383909a50cd9dcb037f2e451d3df20187595c4978dcfec",
+    "8.0": "16d684a9e410c2a59f6ec86e6c704cdc05f0d8799c31c35f422bac3cb012b36c"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los cossos locals de Policia disponían del 092, y la cita recoge los tres números (085 Bombers, 088 Mossos, 092 locales), por lo que basta para elegir la opción 092. Los otros números pertenecen a otros cuerpos o no aparecen, así que la respuesta es única. Es un dato concreto útil como pregunta de examen. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que 085 y 088 dejaron de estar activos a partir del 30 de septiembre de 2012, y la cita lo reproduce completo. Las demás fechas son distractores (30 de julio de 2007 es la fecha de la Ley 9/2007). Una sola opción es correcta y el dato es un hito útil, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en el Consell Rector hay una persona de la Delegació del Govern de l'Estat si así lo acuerdan los órganos estatales competentes, lo que respalda la opción c. Las otras tres atribuyen mal el número de personas o quién las designa: ens locals son 2 propuestas por entidades asociativas, Ajuntament de Barcelona es 1, y Agents Rurals es su titular directivo. La cita incluye los apartados d, e, f y g, así que contiene todo lo necesario. La parecida guia-mossos-256 trata de la naturaleza jurídica del centro, no de la composición del Consell Rector.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 89.2 dice que las proposiciones tomadas en consideración por el Senado se remiten al Congreso para su trámite en éste como tal proposición, que es la opción b. La opción c (como proyecto de ley) y la a (al Gobierno) contradicen el texto. La cita contiene la frase íntegra. No es trivial, porque el artículo tiene dos apartados y la pregunta exige conocer el matiz de 'como tal proposición'.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto afirma que el paso de la sociedad postindustrial a la del conocimiento desplaza a la mayor parte de la fuerza de trabajo del sector secundario al terciario o de servicios. La cita lo contiene completo. El desplazamiento primario-secundario que aparece en el texto corresponde a la Revolución Industrial, y las otras opciones son incorrectas, por lo que la respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en la cibercultura lo que se transmite tiene tanta importancia como el medio tecnológico, que es la opción c. Las opciones a y b invierten la jerarquía y la d contradice que la cultura está íntimamente ligada a los comportamientos sociales y económicos. La cita contiene la definición completa y la respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa. El texto cita como ejemplos de invasión del hogar el correo del trabajo desde casa, las llamadas de trabajo en el móvil y las tareas que requieren concentración, y no menciona las reuniones por videoconferencia (opción c). La cita contiene los tres ejemplos que sí aparecen, así que permite ver que las otras opciones están en el texto. La respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto describe la región eurosiberiana como dominio de los bosques caducifolios (rouredes y fagedes) y de los de pino rojo, que es la opción c. El pino negro pertenece a la región boreoalpina (opción d incorrecta), y alzinars, màquies y brolles son mediterráneos. La cita contiene toda la información necesaria y la respuesta es única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los alzinars tienen la alzina y la carrasca como árboles característicos, y la cita lo reproduce literalmente. Las demás combinaciones incluyen pi roig, roure o faig, que el texto asigna a la región eurosiberiana. Es un dato concreto, la respuesta es única y no hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el síndic o síndica de greuges puede ser separado anticipadamente por mayoría de tres quintas partes del Parlamento en caso de negligencia notoria, y la cita contiene mayoría y causa. Las otras opciones cambian la mayoría (absoluta, dos tercios), la causa o el órgano que decide. La respuesta es única y es un dato útil como pregunta de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a7415cc1590d8e666.jsonl",
+    "respuesta_sha256": "8bfbdd0ec606211a7626b9fe91b623ab6680f87e5db10f3f37d2b394dd844ff7"
+   },
+   "registrada_el": "2026-10-07T00:06:02",
+   "intentos": [
+    {
+     "t": "2026-10-07T00:06:02",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a7415cc1590d8e666.jsonl",
+      "respuesta_sha256": "8bfbdd0ec606211a7626b9fe91b623ab6680f87e5db10f3f37d2b394dd844ff7"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los cossos locals de Policia disponían del 092, y la cita recoge los tres números (085 Bombers, 088 Mossos, 092 locales), por lo que basta para elegir la opción 092. Los otros números pertenecen a otros cuerpos o no aparecen, así que la respuesta es única. Es un dato concreto útil como pregunta de examen. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que 085 y 088 dejaron de estar activos a partir del 30 de septiembre de 2012, y la cita lo reproduce completo. Las demás fechas son distractores (30 de julio de 2007 es la fecha de la Ley 9/2007). Una sola opción es correcta y el dato es un hito útil, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en el Consell Rector hay una persona de la Delegació del Govern de l'Estat si así lo acuerdan los órganos estatales competentes, lo que respalda la opción c. Las otras tres atribuyen mal el número de personas o quién las designa: ens locals son 2 propuestas por entidades asociativas, Ajuntament de Barcelona es 1, y Agents Rurals es su titular directivo. La cita incluye los apartados d, e, f y g, así que contiene todo lo necesario. La parecida guia-mossos-256 trata de la naturaleza jurídica del centro, no de la composición del Consell Rector.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 89.2 dice que las proposiciones tomadas en consideración por el Senado se remiten al Congreso para su trámite en éste como tal proposición, que es la opción b. La opción c (como proyecto de ley) y la a (al Gobierno) contradicen el texto. La cita contiene la frase íntegra. No es trivial, porque el artículo tiene dos apartados y la pregunta exige conocer el matiz de 'como tal proposición'.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El texto afirma que el paso de la sociedad postindustrial a la del conocimiento desplaza a la mayor parte de la fuerza de trabajo del sector secundario al terciario o de servicios. La cita lo contiene completo. El desplazamiento primario-secundario que aparece en el texto corresponde a la Revolución Industrial, y las otras opciones son incorrectas, por lo que la respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en la cibercultura lo que se transmite tiene tanta importancia como el medio tecnológico, que es la opción c. Las opciones a y b invierten la jerarquía y la d contradice que la cultura está íntimamente ligada a los comportamientos sociales y económicos. La cita contiene la definición completa y la respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa. El texto cita como ejemplos de invasión del hogar el correo del trabajo desde casa, las llamadas de trabajo en el móvil y las tareas que requieren concentración, y no menciona las reuniones por videoconferencia (opción c). La cita contiene los tres ejemplos que sí aparecen, así que permite ver que las otras opciones están en el texto. La respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El texto describe la región eurosiberiana como dominio de los bosques caducifolios (rouredes y fagedes) y de los de pino rojo, que es la opción c. El pino negro pertenece a la región boreoalpina (opción d incorrecta), y alzinars, màquies y brolles son mediterráneos. La cita contiene toda la información necesaria y la respuesta es única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los alzinars tienen la alzina y la carrasca como árboles característicos, y la cita lo reproduce literalmente. Las demás combinaciones incluyen pi roig, roure o faig, que el texto asigna a la región eurosiberiana. Es un dato concreto, la respuesta es única y no hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el síndic o síndica de greuges puede ser separado anticipadamente por mayoría de tres quintas partes del Parlamento en caso de negligencia notoria, y la cita contiene mayoría y causa. Las otras opciones cambian la mayoría (absoluta, dos tercios), la causa o el órgano que decide. La respuesta es única y es un dato útil como pregunta de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2",
+    "10.0",
+    "10.1",
+    "10.2",
+    "11.0",
+    "11.1"
+   ],
+   "prompt_sha256": "7ca0bbb42cc8c3caf546c2117c70b65ac894caf251534b2b2eded08e5ad0b513",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "8.1": "daadb85db9496ffc20fd273f953d81bc32a44bce6ad139b30480ed2101688af2",
+    "8.2": "335d2b44d72b9c8f1829120c6f2d11b23005f547f071d151bdb89f1301ffdfc3",
+    "9.0": "b89ac22b4240ae293859e4fa92ab87c65dd6267af37816c1b773351b166c8a85",
+    "9.1": "afd54916447a7ea391f6e28f6f681d25a232d7f30855f7f07fead95145701113",
+    "9.2": "1a42e4a93b820af38d6adecd5ba7da668cccf4feb12e86f4f7495fc37c81e898",
+    "10.0": "3cb69b40f4c864aa2cfa5cb706ad8c966fe4ba4f9cdd5bb5e05f2543491b208c",
+    "10.1": "a78e892a53919a9afcedb54003541b42b06a43b4070ad189a4df42de21b4d748",
+    "10.2": "b933dbba2fb2e871212fa1113bfe3e614bb4c86fa7a19009908b86347869f3dc",
+    "11.0": "5fd40c08b027e30e653b8fb853bc0f141ff5b39ad17ff238643afb7320050c65",
+    "11.1": "60b148441223bbfc9945395762ff2f9e21695e8d32db59851fde91323bcf21bb"
+   },
+   "veredictos": [
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text de B.2.5 diu literalment que per ser Síndic de Greuges cal ser català, major d'edat i gaudir del ple ús dels drets civils i polítics. La cita conté els tres requisits de l'opció 2. Les altres opcions no hi encaixen: jurista de reconeguda competència és el requisit del Consell de Garanties, no del Síndic; la condició de diputat i els cinc anys de residència no apareixen al text. La pregunta és clara. La parecida sobre la separació anticipada del càrrec tracta un altre fet.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el Ple de la Sindicatura de Comptes està integrat per set síndics nomenats per un període de sis anys. La cita ho conté sencer, de manera que l'opció 2 (sis anys) és correcta. Cap altra durada (quatre, cinc, nou) hi consta. El mandat de sis anys del Síndic de Greuges no genera ambigüitat, perquè la pregunta és explícita sobre la Sindicatura. No hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text de A.6.5 enumera quatre dimensions de l'Estat del benestar. Els serveis d'ajuda a les famílies són a la dimensió b (serveis) i la creació d'ocupació a la d (intervencions per a l'ocupació). L'enunciat demana 'respectivament' ocupació i després famílies, i l'opció 1 (intervencions per a l'ocupació i serveis) encaixa en aquest ordre. La cita inclou els apartats b, c i d, que bastem per decidir. Les altres combinacions barregen les dimensions i són incorrectes. És un cas pràctic ben format.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el sistema català de serveis socials té com a destinatàries totes les persones que necessiten orientació i assessorament, entre d'altres, per fer front i prevenir situacions de manca de cohesió social o familiar. La cita ho recull tot, així que l'opció 1 és correcta. Les altres són falses segons el text: el sistema inclou la prevenció, no es limita a la desigualtat econòmica i no exigeix pertànyer a un grup específic (això és només l'atenció especialitzada). La pregunta és un cas pràctic clar.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que els serveis s'organitzen segons problemàtiques primàries o especialitzades distribuïdes en el territori. La cita ho conté literalment i justifica l'opció 1. La titularitat pública o privada descriu qui integra el sistema, no com s'organitza, i l'edat o la renda no apareixen com a criteri d'organització. No hi ha duplicats.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 8 de les idees força defineix la província com una entitat local amb personalitat jurídica pròpia, determinada per l'agrupació de municipis limítrofes. La cita ho conté i l'opció 2 és correcta. Les altres descriuen la vegueria, la comunitat autònoma i el municipi (unitat local bàsica), per tant són falses. La pregunta no es limita a repetir una frase d'un sol enunciat i és útil. No hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text assenyala com a principis del model unitari la unitat, la uniformitat i la centralització. La descentralització s'esmenta com a tret de l'Estat federal. La cita conté els tres principis, de manera que permet veure que les opcions 0, 1 i 3 hi són i que la 2 no. L'opció 2 és l'única que no és principi del model unitari. La parecida sobre la província tracta un altre fet, per tant no és duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que els estats membres disposen d'una constitució pròpia, d'una organització política pròpia i de poders propis que exerceixen només sobre el seu territori. La cita ho conté i l'opció 1 és correcta. Les opcions 0 i 3 atribueixen als estats membres poders sobre tot el territori federal, cosa que la cita ('només sobre el seu territori') exclou. L'opció 2 nega la constitució pròpia. Les parecides 476 (òrgans de la federació) i 368 (què caracteritza l'Estat federal) tracten fets diferents, i les altres dues no són duplicades.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la Crònica de Jaume I o Llibre dels Feyts va ser dictada pel mateix rei. La cita ho conté i l'opció 1 és correcta. Desclot, Muntaner i Pere el Cerimoniós són autors d'altres cròniques i el text ho atribueix a cadascun. La pregunta és clara i l'opció correcta no es delata amb paraules absolutes. No hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que L'Avenç recomanava acabar amb l'anarquia ortogràfica i publicar un nou diccionari, unificar els dos models de llengua (culta i popular) i depurar el lèxic. La cita inclou les tres recomanacions i l'opció 1 en recull l'essència. L'opció 0 són objectius de la Renaixença i la 2 són criteris de la Gramàtica de Fabra. La 3 contradiu la recomanació d'unificar. Només una opció és vàlida i no hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-ac566f2c71291dfc5.jsonl",
+    "respuesta_sha256": "34e887f66978a8b7df3772724218fd0b6b8cac31ce254827cbfff7de6b9e8e6b"
+   },
+   "registrada_el": "2026-10-07T00:06:44",
+   "intentos": [
+    {
+     "t": "2026-10-07T00:06:44",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-ac566f2c71291dfc5.jsonl",
+      "respuesta_sha256": "34e887f66978a8b7df3772724218fd0b6b8cac31ce254827cbfff7de6b9e8e6b"
+     },
+     "respuesta": "[\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"El text de B.2.5 diu literalment que per ser Síndic de Greuges cal ser català, major d'edat i gaudir del ple ús dels drets civils i polítics. La cita conté els tres requisits de l'opció 2. Les altres opcions no hi encaixen: jurista de reconeguda competència és el requisit del Consell de Garanties, no del Síndic; la condició de diputat i els cinc anys de residència no apareixen al text. La pregunta és clara. La parecida sobre la separació anticipada del càrrec tracta un altre fet.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el Ple de la Sindicatura de Comptes està integrat per set síndics nomenats per un període de sis anys. La cita ho conté sencer, de manera que l'opció 2 (sis anys) és correcta. Cap altra durada (quatre, cinc, nou) hi consta. El mandat de sis anys del Síndic de Greuges no genera ambigüitat, perquè la pregunta és explícita sobre la Sindicatura. No hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El text de A.6.5 enumera quatre dimensions de l'Estat del benestar. Els serveis d'ajuda a les famílies són a la dimensió b (serveis) i la creació d'ocupació a la d (intervencions per a l'ocupació). L'enunciat demana 'respectivament' ocupació i després famílies, i l'opció 1 (intervencions per a l'ocupació i serveis) encaixa en aquest ordre. La cita inclou els apartats b, c i d, que bastem per decidir. Les altres combinacions barregen les dimensions i són incorrectes. És un cas pràctic ben format.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el sistema català de serveis socials té com a destinatàries totes les persones que necessiten orientació i assessorament, entre d'altres, per fer front i prevenir situacions de manca de cohesió social o familiar. La cita ho recull tot, així que l'opció 1 és correcta. Les altres són falses segons el text: el sistema inclou la prevenció, no es limita a la desigualtat econòmica i no exigeix pertànyer a un grup específic (això és només l'atenció especialitzada). La pregunta és un cas pràctic clar.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que els serveis s'organitzen segons problemàtiques primàries o especialitzades distribuïdes en el territori. La cita ho conté literalment i justifica l'opció 1. La titularitat pública o privada descriu qui integra el sistema, no com s'organitza, i l'edat o la renda no apareixen com a criteri d'organització. No hi ha duplicats.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 8 de les idees força defineix la província com una entitat local amb personalitat jurídica pròpia, determinada per l'agrupació de municipis limítrofes. La cita ho conté i l'opció 2 és correcta. Les altres descriuen la vegueria, la comunitat autònoma i el municipi (unitat local bàsica), per tant són falses. La pregunta no es limita a repetir una frase d'un sol enunciat i és útil. No hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El text assenyala com a principis del model unitari la unitat, la uniformitat i la centralització. La descentralització s'esmenta com a tret de l'Estat federal. La cita conté els tres principis, de manera que permet veure que les opcions 0, 1 i 3 hi són i que la 2 no. L'opció 2 és l'única que no és principi del model unitari. La parecida sobre la província tracta un altre fet, per tant no és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que els estats membres disposen d'una constitució pròpia, d'una organització política pròpia i de poders propis que exerceixen només sobre el seu territori. La cita ho conté i l'opció 1 és correcta. Les opcions 0 i 3 atribueixen als estats membres poders sobre tot el territori federal, cosa que la cita ('només sobre el seu territori') exclou. L'opció 2 nega la constitució pròpia. Les parecides 476 (òrgans de la federació) i 368 (què caracteritza l'Estat federal) tracten fets diferents, i les altres dues no són duplicades.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la Crònica de Jaume I o Llibre dels Feyts va ser dictada pel mateix rei. La cita ho conté i l'opció 1 és correcta. Desclot, Muntaner i Pere el Cerimoniós són autors d'altres cròniques i el text ho atribueix a cadascun. La pregunta és clara i l'opció correcta no es delata amb paraules absolutes. No hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que L'Avenç recomanava acabar amb l'anarquia ortogràfica i publicar un nou diccionari, unificar els dos models de llengua (culta i popular) i depurar el lèxic. La cita inclou les tres recomanacions i l'opció 1 en recull l'essència. L'opció 0 són objectius de la Renaixença i la 2 són criteris de la Gramàtica de Fabra. La 3 contradiu la recomanació d'unificar. Només una opció és vàlida i no hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "11.2",
+    "12.0",
+    "12.1",
+    "13.0",
+    "13.1",
+    "14.0",
+    "15.0",
+    "15.1",
+    "16.0",
+    "17.0"
+   ],
+   "prompt_sha256": "51567304838dff35e9c789c3ecb1cec83a2d9cb9857cbef1d41c9b4fe96bbfb0",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "11.2": "2aa57622cd1fcf10da47d1aea3dfb079d028b010c038b5208e3e43d5d9a71144",
+    "12.0": "553b8fedae023b2d6de52acb16fc71c5fe09c225f3c7930bde13fb5a067b05ac",
+    "12.1": "ec86fbb6971ce3b87afc7541df935e9f0c244ee165be23aaf7b222bdf2206ab5",
+    "13.0": "bc16b051a2dcf24af9fe9780a42dafd1da959d45b737119f9871ac5547835500",
+    "13.1": "6b2a8ceb0fb4684a4fb6c44a945e6f631a72a87941d44637478a40481f0cf17b",
+    "14.0": "17e1c45052c4a51e18c930d86aa6692620b18de04254d0c752ee6128a036799f",
+    "15.0": "dba190a7e6b047caa38408e18c1d7e75ab5a97b304a1c064f916e82cf029b9c6",
+    "15.1": "21d8815973b37978f12cc1132e71f9d6d0f6ff1e902f9ee86c05ef5acd5caf2f",
+    "16.0": "a5177a2131a3d04c5b37b0fdb654f57a5e77797522a535eeb56d9bc47adce8cc",
+    "17.0": "b2456735ef5cecfc53cb4654512a27848d5bdb09859a232f9dcabbd342031de6"
+   },
+   "veredictos": [
+    {
+     "question_id": "11.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que del fenici només han quedat topònims aïllats: Eivissa, Maó, Tagomago; l'opció correcta (fenici) hi coincideix. La cita conté tot l'element necessari. Cèltic i iberobasc tenen altres topònims (Besalú, Cardona) i l'àrab apareix com a superstrat, així que cap altra opció és correcta. Pregunta clara i sense duplicats.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el Govern és un òrgan col·legiat que actua sota la direcció del president i a través del Consell de Ministres. La cita ho conté íntegrament. Consell d'Estat, Conferència de Presidents i Congrés no hi apareixen com a via d'actuació (el Congrés només és l'òrgan davant el qual responen). Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text i la cita diuen que, després d'unes eleccions, el Govern cessant continua en funcions fins a la presa de possessió del nou govern. La cita inclou el cas de les eleccions i la conseqüència. Les altres opcions (fins a la investidura, dissolució amb el rei, termini de dos mesos) no tenen suport al text. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 7 de les idees força diu que durant la Guerra Civil la policia va ser fidel al Govern de la Generalitat durant l'aixecament militar colpista; la cita ho recull completament. Cap altra opció té suport al text. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 1 diu que una de les bases del manteniment de l'ordre públic fou la defensa de la Pau i Treva, i la cita ho conté. Milícia Nacional, Guàrdia Civil i guàrdies urbanes apareixen al text però no com a bases de l'ordre públic. La parecida (actitud de la policia a la Guerra Civil) tracta un altre fet, per tant no és duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negatiu. El punt 5 diu que la Comissió és independent, que vetlla pels interessos comunitaris i que els membres han d'oferir garanties d'independència; la cita conté aquests tres elements. Que els membres representen els interessos del seu Estat és el que el text atribueix al Consell, per tant l'opció correcta és la que no s'ajusta. Les parecides tracten el Consell i el nombre de membres, no el mateix fet.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text assigna al Consell de Seguretat de Catalunya la funció d'analitzar, estudiar i avaluar la seguretat i emetre un informe anual; la cita ho conté. La Comissió del Govern, la Comissió de Policia i les comissions regionals tenen altres funcions descrites al text. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que la Junta Local de Seguretat crea la Mesa de Coordinació Operativa com a òrgan permanent i estable de coordinació al municipi; la cita ho conté tot (qui la crea, caràcter i àmbit). Les altres opcions barregen creadors, caràcter o funcions errònies. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text del criteri territorial diu: Tribunal Suprem i Audiència Nacional, tots dos amb seu a Madrid i jurisdicció a tot l'Estat. La cita conté tots dos apartats. TSJ, Audiència Provincial i CGPJ no tenen aquesta condició al text (el CGPJ no és òrgan jurisdiccional d'aquesta llista). Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "El punt 3 i la cita avalen l'opció correcta (policia i sistema penal tenen un paper determinant en la protecció de l'Estat de dret). Però la parecida guia-mossos-166 pregunta en què es basa el Codi europeu d'ètica i té com a resposta exactament el mateix fet, només reformulat com a correcció a un agent. Per això és duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "guia-mossos-166"
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a1478221245548c46.jsonl",
+    "respuesta_sha256": "24504229583a94d8d4f140a2a77d99c016ac652732f2978aa1e52df9737e6bc0"
+   },
+   "registrada_el": "2026-10-07T00:06:47",
+   "intentos": [
+    {
+     "t": "2026-10-07T00:06:47",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a1478221245548c46.jsonl",
+      "respuesta_sha256": "24504229583a94d8d4f140a2a77d99c016ac652732f2978aa1e52df9737e6bc0"
+     },
+     "respuesta": "[\n{\"question_id\":\"11.2\",\"verdict\":\"VALID\",\"reason\":\"El text diu que del fenici només han quedat topònims aïllats: Eivissa, Maó, Tagomago; l'opció correcta (fenici) hi coincideix. La cita conté tot l'element necessari. Cèltic i iberobasc tenen altres topònims (Besalú, Cardona) i l'àrab apareix com a superstrat, així que cap altra opció és correcta. Pregunta clara i sense duplicats.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el Govern és un òrgan col·legiat que actua sota la direcció del president i a través del Consell de Ministres. La cita ho conté íntegrament. Consell d'Estat, Conferència de Presidents i Congrés no hi apareixen com a via d'actuació (el Congrés només és l'òrgan davant el qual responen). Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.1\",\"verdict\":\"VALID\",\"reason\":\"El text i la cita diuen que, després d'unes eleccions, el Govern cessant continua en funcions fins a la presa de possessió del nou govern. La cita inclou el cas de les eleccions i la conseqüència. Les altres opcions (fins a la investidura, dissolució amb el rei, termini de dos mesos) no tenen suport al text. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 7 de les idees força diu que durant la Guerra Civil la policia va ser fidel al Govern de la Generalitat durant l'aixecament militar colpista; la cita ho recull completament. Cap altra opció té suport al text. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 1 diu que una de les bases del manteniment de l'ordre públic fou la defensa de la Pau i Treva, i la cita ho conté. Milícia Nacional, Guàrdia Civil i guàrdies urbanes apareixen al text però no com a bases de l'ordre públic. La parecida (actitud de la policia a la Guerra Civil) tracta un altre fet, per tant no és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negatiu. El punt 5 diu que la Comissió és independent, que vetlla pels interessos comunitaris i que els membres han d'oferir garanties d'independència; la cita conté aquests tres elements. Que els membres representen els interessos del seu Estat és el que el text atribueix al Consell, per tant l'opció correcta és la que no s'ajusta. Les parecides tracten el Consell i el nombre de membres, no el mateix fet.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El text assigna al Consell de Seguretat de Catalunya la funció d'analitzar, estudiar i avaluar la seguretat i emetre un informe anual; la cita ho conté. La Comissió del Govern, la Comissió de Policia i les comissions regionals tenen altres funcions descrites al text. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El text diu que la Junta Local de Seguretat crea la Mesa de Coordinació Operativa com a òrgan permanent i estable de coordinació al municipi; la cita ho conté tot (qui la crea, caràcter i àmbit). Les altres opcions barregen creadors, caràcter o funcions errònies. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El text del criteri territorial diu: Tribunal Suprem i Audiència Nacional, tots dos amb seu a Madrid i jurisdicció a tot l'Estat. La cita conté tots dos apartats. TSJ, Audiència Provincial i CGPJ no tenen aquesta condició al text (el CGPJ no és òrgan jurisdiccional d'aquesta llista). Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"REJECTED\",\"reason\":\"El punt 3 i la cita avalen l'opció correcta (policia i sistema penal tenen un paper determinant en la protecció de l'Estat de dret). Però la parecida guia-mossos-166 pregunta en què es basa el Codi europeu d'ètica i té com a resposta exactament el mateix fet, només reformulat com a correcció a un agent. Per això és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"guia-mossos-166\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "18.0",
+    "18.1",
+    "18.2",
+    "19.0",
+    "19.1",
+    "19.2",
+    "20.0",
+    "20.1",
+    "21.0",
+    "21.1"
+   ],
+   "prompt_sha256": "47de11490f08278c25b78f76c0bcae36c4da03fe795fa1683dfb1b189c8296f4",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "18.0": "4c72ce1335719f3439dafd3881a8f1b7b6ad9601c94f55c386ef321f1f095ada",
+    "18.1": "238695edcf0a549b6015fbe275c3b336c6d3eb6bf7b84f87b46d018c000f3feb",
+    "18.2": "d822139249a8b1470596d4cc3009fe6c6683f896001935f3da109b9a46d09524",
+    "19.0": "7525f5fc266902f2ac4506cfb622060a52ec89a634cbc38d757c14db775482a7",
+    "19.1": "d7e70c14692b1150f02e54ee286f06cee229181791ba81c69572dfa5bdc93ad5",
+    "19.2": "8f4eaad5945b53cdce64ea043624c5508c6eac3c34eb52143c32a91e0305635a",
+    "20.0": "75b24e29dab144f52538572cbeca9c92751572ffae3bfc9160c9a241fe11d69a",
+    "20.1": "a12307f37427b19e5bbec52e760dca016555ae6027e7860a54a1d0cd18c92ce1",
+    "21.0": "dcf985fd99d66e8671bb633dd34c00fd8a73124a764f6a6c90942b2b08e12367",
+    "21.1": "e5b91dabbe46810e44e863f17a965a6a7fa94b6c06417a05f53102cd4488229d"
+   },
+   "veredictos": [
+    {
+     "question_id": "18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto (punto 15) da las escalas de la PG-ME: suport, bàsica, intermèdia, executiva y superior. El punto 19 da las de las policías locales: superior, executiva, intermèdia y bàsica. Solo la escala de suport está en la primera lista y no en la segunda, así que la opción B es correcta y las otras tres figuran en ambas. La cita recoge los puntos 15 y 19, por lo que es suficiente para ver que las otras opciones sí aparecen. La pregunta es clara y no tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 17 dice que los municipios de más de 10.000 habitantes pueden crear cuerpos de policía local, y la cita lo reproduce literalmente. Las demás cifras (5.000, 20.000, 50.000) no aparecen en el texto. Es un dato numérico útil para examen y no tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 22 atribuye a la policía local la policía de tráfico en el núcleo urbano y la protección de autoridades e instalaciones municipales, por lo que es posible y la opción A es correcta. La cita contiene ambas funciones. Las opciones B y C contradicen el texto, y la D (convenio previo) no tiene apoyo en él. La pregunta es de aplicación práctica y está bien formada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 1 dice que el Estatuto da a la Generalitat el comandamiento supremo de la policía autónoma y la coordinación de las policías locales, que es la opción C. La cita recoge ambos elementos. Las opciones A, B y D alteran uno de los dos y son falsas según el texto. No tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 3 dice que la responsabilidad de la Generalitat es territorial y se extiende a todo el territorio de Cataluña, y la cita lo reproduce. Las demás opciones (personal, sectorial, local) no tienen apoyo en el texto. Las parecidas guia-mossos-90 (incendios) y guia-mossos-88 (competencia clarificada) tratan hechos distintos, así que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el objetivo de la Administración es mantener niveles y servicios de seguridad homogéneos en todo el territorio, y la cita lo contiene. Las demás opciones contradicen el texto: éste habla de equilibrar necesidades locales y regionales, no de priorizar, concentrar ni delegar. La parecida nueva:guia-mossos:C.1.IF:1 pregunta por el alcance territorial de la responsabilidad, un hecho distinto del objetivo de la cohesión territorial, así que no es duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "20.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 15.2 dice que todas las personas tienen derecho al libre desarrollo de su personalidad y capacidad personal, a diferencia del apartado 1, que habla de los ciudadanos de Cataluña. La opción C es correcta. Las demás restringen el colectivo y no coinciden con el texto. La cita contiene el elemento decisivo (\"Todas las personas\"). No tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "20.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 15.3 dice que los derechos del Estatuto pueden extenderse a otras personas en los términos que establecen las leyes, y la cita lo reproduce. Las opciones A (acuerdo del Gobierno), B (vecindad administrativa) y C (tratados internacionales) no figuran en el texto y lo contradicen. La pregunta es concreta y no tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la Diputación del General o Generalitat, nacida en el siglo XIV, se componía de tres diputados (uno por brazo) y tres oidores de cuentas, que es la opción B. La cita contiene la composición completa. El Consell de Cent (cien prohombres) y los cinco consejeros pertenecen al gobierno de Barcelona, por lo que las opciones A y C son distractores falsos. El dato es un hito del temario, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto define el braç reial como los representantes de las ciudades, y la cita lo dice expresamente. Las demás opciones (familia real, oficiales del monarca, diputados de la Generalitat) no tienen apoyo en el texto. La pregunta es clara y no tiene parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-ac8dc0c24bc096b91.jsonl",
+    "respuesta_sha256": "343ce59f3ec6ac2f1de64ac7be783f6aeacf6fefc07ad750ef365e6fce45e938"
+   },
+   "registrada_el": "2026-10-07T00:07:19",
+   "intentos": [
+    {
+     "t": "2026-10-07T00:07:19",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-ac8dc0c24bc096b91.jsonl",
+      "respuesta_sha256": "343ce59f3ec6ac2f1de64ac7be783f6aeacf6fefc07ad750ef365e6fce45e938"
+     },
+     "respuesta": "[\n{\"question_id\":\"18.0\",\"verdict\":\"VALID\",\"reason\":\"El texto (punto 15) da las escalas de la PG-ME: suport, bàsica, intermèdia, executiva y superior. El punto 19 da las de las policías locales: superior, executiva, intermèdia y bàsica. Solo la escala de suport está en la primera lista y no en la segunda, así que la opción B es correcta y las otras tres figuran en ambas. La cita recoge los puntos 15 y 19, por lo que es suficiente para ver que las otras opciones sí aparecen. La pregunta es clara y no tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.1\",\"verdict\":\"VALID\",\"reason\":\"El punto 17 dice que los municipios de más de 10.000 habitantes pueden crear cuerpos de policía local, y la cita lo reproduce literalmente. Las demás cifras (5.000, 20.000, 50.000) no aparecen en el texto. Es un dato numérico útil para examen y no tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.2\",\"verdict\":\"VALID\",\"reason\":\"El punto 22 atribuye a la policía local la policía de tráfico en el núcleo urbano y la protección de autoridades e instalaciones municipales, por lo que es posible y la opción A es correcta. La cita contiene ambas funciones. Las opciones B y C contradicen el texto, y la D (convenio previo) no tiene apoyo en él. La pregunta es de aplicación práctica y está bien formada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 1 dice que el Estatuto da a la Generalitat el comandamiento supremo de la policía autónoma y la coordinación de las policías locales, que es la opción C. La cita recoge ambos elementos. Las opciones A, B y D alteran uno de los dos y son falsas según el texto. No tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.1\",\"verdict\":\"VALID\",\"reason\":\"El punto 3 dice que la responsabilidad de la Generalitat es territorial y se extiende a todo el territorio de Cataluña, y la cita lo reproduce. Las demás opciones (personal, sectorial, local) no tienen apoyo en el texto. Las parecidas guia-mossos-90 (incendios) y guia-mossos-88 (competencia clarificada) tratan hechos distintos, así que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el objetivo de la Administración es mantener niveles y servicios de seguridad homogéneos en todo el territorio, y la cita lo contiene. Las demás opciones contradicen el texto: éste habla de equilibrar necesidades locales y regionales, no de priorizar, concentrar ni delegar. La parecida nueva:guia-mossos:C.1.IF:1 pregunta por el alcance territorial de la responsabilidad, un hecho distinto del objetivo de la cohesión territorial, así que no es duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"20.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 15.2 dice que todas las personas tienen derecho al libre desarrollo de su personalidad y capacidad personal, a diferencia del apartado 1, que habla de los ciudadanos de Cataluña. La opción C es correcta. Las demás restringen el colectivo y no coinciden con el texto. La cita contiene el elemento decisivo (\\\"Todas las personas\\\"). No tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"20.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 15.3 dice que los derechos del Estatuto pueden extenderse a otras personas en los términos que establecen las leyes, y la cita lo reproduce. Las opciones A (acuerdo del Gobierno), B (vecindad administrativa) y C (tratados internacionales) no figuran en el texto y lo contradicen. La pregunta es concreta y no tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la Diputación del General o Generalitat, nacida en el siglo XIV, se componía de tres diputados (uno por brazo) y tres oidores de cuentas, que es la opción B. La cita contiene la composición completa. El Consell de Cent (cien prohombres) y los cinco consejeros pertenecen al gobierno de Barcelona, por lo que las opciones A y C son distractores falsos. El dato es un hito del temario, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.1\",\"verdict\":\"VALID\",\"reason\":\"El texto define el braç reial como los representantes de las ciudades, y la cita lo dice expresamente. Las demás opciones (familia real, oficiales del monarca, diputados de la Generalitat) no tienen apoyo en el texto. La pregunta es clara y no tiene parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}
