@@ -1,0 +1,982 @@
+{
+ "evaluacion": "S00050",
+ "creada_el": "2026-10-07T14:44:47",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 47,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "3.1",
+    "4.0"
+   ],
+   "prompt_sha256": "bcbf55b813cd4b9ff9c6a8962364ff47252335ea41f035e14a5ec622b06886f6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "3cdf3984796049abf32a7cef92fe2cdf98ba47e23ecbbf16e826a6ef35049e18",
+    "1.0": "debc328299570093454294eef25db772f48d44bf41296b858913233979c5478a",
+    "1.1": "6c93472f63d54a02d888a7baae6bf268eccaa9b6edec8c708445011c3558afca",
+    "1.2": "3f60967a7948b2d34cf5cff816fc78691268dc258b05ceee1dd7eb089b6e5ea7",
+    "2.0": "a94d1d7e314a10d1f3d62a9c3ec50cbd98844d79683f931b0634d7a4d32bcdf4",
+    "2.1": "b4adeb78bf0e8123bcb45c4ba9604edba958b914a271e92fa6ce1819fe4b69d0",
+    "2.2": "873afc8356dc27393bfe4f7d156ad4aa25d13c237941d1876fa6cd89616b4406",
+    "3.0": "f6f05f5600c16e0521844f57d72277c9040cd6fe3e3337e1db0a4c80880bd8f2",
+    "3.1": "3026c43e55331180c6d8ac08ec88909c0d4b22ef4f3c5f6c59d86d21e4692395",
+    "4.0": "416dc933dc9eca36498d5c7eea470ecad070b126677050278eeda8b09802e6d1"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 22.2 dice literalmente que todas las personas tienen el deber de respetar y preservar el patrimonio cultural, y la cita recoge justo esa frase. Las otras opciones (contribuir económicamente, comunicar la visita, acreditar vecindad) no aparecen en el texto. Pregunta clara y sin pistas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto cita a Perot Rocaguinarda como bandolero de gran fama, y la cita lo contiene. Pau Claris, Olivares y Lluís XIII aparecen en el texto con otros papeles, no como bandoleros, así que solo la opción B es correcta. Dato concreto y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto atribuye la conversión de la revuelta social en confrontación contra la política del conde duque a las autoridades de Cataluña con Pau Claris al frente de la Generalitat, y la cita lo recoge completo. Los bandoleros, el virrey y Lluís XIII no tienen ese papel en el texto, por lo que ninguna otra opción es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que con la Unión de Armas Cataluña debía aportar al ejército gran cantidad de hombres y dinero, y la cita lo contiene entero. Los distractores (alojar soldados franceses, unificar fueros, virrey persiguiendo bandoleros) no corresponden a la Unión de Armas según el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto fija que desde 1971 la oposición en Cataluña se polarizó en torno a la Asamblea de Cataluña, y la cita lo dice. Los años distractores (1960, 1964, 1973) son otros hechos del texto, por lo que no hay ambigüedad. Dato de hito, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta NO: la cita incluye los tres fenómenos que sí contestaron el inmovilismo (estudiantes, partidos clandestinos, cambios en la Iglesia) y menciona que la organización obrera fue al margen del sindicalismo oficial, por lo que la integración en el sindicalismo vertical no figura. La parecida guia-mossos-629 trata otro hecho (rasgos del régimen: cortes por sufragio universal), no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto señala una oleada inmigratoria desde regiones como Andalucía en los años sesenta, y la cita lo incluye junto al desplazamiento del campo a la ciudad y el inicio de la adquisición de bienes de consumo. Las otras tres opciones invierten o contradicen el texto (ciudad a campo, reducción de consumo, disminución de población).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los derechos de los arts. 15 a 29 solo se reforman por el art. 168 y que esa dificultad actúa como garantía de su reconocimiento. La cita contiene ambos elementos (rango de artículos y función), y las opciones con arts. 30-38, vía reglamentaria o impedir regulación por ley no tienen apoyo en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "El texto respalda la opción C (la eficacia directa no excluye la regulación, que solo puede ser por ley) y la cita es suficiente. Sin embargo, la parecida guia-mossos-633 prueba esencialmente el mismo hecho: la reserva de ley sirve para que regule el Parlamento y se evite la vía reglamentaria del ejecutivo. Lo que aquí es la opción correcta (solo por ley, no por reglamento) es la respuesta de aquella. Se rechaza por duplicidad.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "guia-mossos-633"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 6 del texto dice que, al estar elaborada por los representantes del pueblo, se concede a la ley rango superior al de las normas aprobadas por otros órganos del Estado, y la cita lo recoge. Las demás opciones (Gobierno con el rey, control previo del TC, materias de las CCAA) no son el motivo según el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-afebc20be55af28ad.jsonl",
+    "respuesta_sha256": "a1367fa2c7968b995944e68eeca32be8f17f09454615ac8c40ce4e5af25f5a5c"
+   },
+   "registrada_el": "2026-10-07T14:45:44",
+   "intentos": [
+    {
+     "t": "2026-10-07T14:45:44",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-afebc20be55af28ad.jsonl",
+      "respuesta_sha256": "a1367fa2c7968b995944e68eeca32be8f17f09454615ac8c40ce4e5af25f5a5c"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 22.2 dice literalmente que todas las personas tienen el deber de respetar y preservar el patrimonio cultural, y la cita recoge justo esa frase. Las otras opciones (contribuir económicamente, comunicar la visita, acreditar vecindad) no aparecen en el texto. Pregunta clara y sin pistas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El texto cita a Perot Rocaguinarda como bandolero de gran fama, y la cita lo contiene. Pau Claris, Olivares y Lluís XIII aparecen en el texto con otros papeles, no como bandoleros, así que solo la opción B es correcta. Dato concreto y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El texto atribuye la conversión de la revuelta social en confrontación contra la política del conde duque a las autoridades de Cataluña con Pau Claris al frente de la Generalitat, y la cita lo recoge completo. Los bandoleros, el virrey y Lluís XIII no tienen ese papel en el texto, por lo que ninguna otra opción es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que con la Unión de Armas Cataluña debía aportar al ejército gran cantidad de hombres y dinero, y la cita lo contiene entero. Los distractores (alojar soldados franceses, unificar fueros, virrey persiguiendo bandoleros) no corresponden a la Unión de Armas según el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El texto fija que desde 1971 la oposición en Cataluña se polarizó en torno a la Asamblea de Cataluña, y la cita lo dice. Los años distractores (1960, 1964, 1973) son otros hechos del texto, por lo que no hay ambigüedad. Dato de hito, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta NO: la cita incluye los tres fenómenos que sí contestaron el inmovilismo (estudiantes, partidos clandestinos, cambios en la Iglesia) y menciona que la organización obrera fue al margen del sindicalismo oficial, por lo que la integración en el sindicalismo vertical no figura. La parecida guia-mossos-629 trata otro hecho (rasgos del régimen: cortes por sufragio universal), no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El texto señala una oleada inmigratoria desde regiones como Andalucía en los años sesenta, y la cita lo incluye junto al desplazamiento del campo a la ciudad y el inicio de la adquisición de bienes de consumo. Las otras tres opciones invierten o contradicen el texto (ciudad a campo, reducción de consumo, disminución de población).\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los derechos de los arts. 15 a 29 solo se reforman por el art. 168 y que esa dificultad actúa como garantía de su reconocimiento. La cita contiene ambos elementos (rango de artículos y función), y las opciones con arts. 30-38, vía reglamentaria o impedir regulación por ley no tienen apoyo en el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"REJECTED\",\"reason\":\"El texto respalda la opción C (la eficacia directa no excluye la regulación, que solo puede ser por ley) y la cita es suficiente. Sin embargo, la parecida guia-mossos-633 prueba esencialmente el mismo hecho: la reserva de ley sirve para que regule el Parlamento y se evite la vía reglamentaria del ejecutivo. Lo que aquí es la opción correcta (solo por ley, no por reglamento) es la respuesta de aquella. Se rechaza por duplicidad.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"guia-mossos-633\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 6 del texto dice que, al estar elaborada por los representantes del pueblo, se concede a la ley rango superior al de las normas aprobadas por otros órganos del Estado, y la cita lo recoge. Las demás opciones (Gobierno con el rey, control previo del TC, materias de las CCAA) no son el motivo según el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.1",
+    "4.2",
+    "5.0",
+    "6.0",
+    "7.0",
+    "7.1",
+    "8.0",
+    "10.0",
+    "11.0",
+    "12.0"
+   ],
+   "prompt_sha256": "4170ec59bfc57d5da810169d2f041026360770591fbaa9d04d14a4d74234c870",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.1": "79327046c283e14dabda05ce69045d739d1e6950655df51eda330225812d8b8b",
+    "4.2": "cbd3209167ac7d6325c008fc9f3a254f9b6cf4291e6f0a3e4ed5de93bd1a7ba3",
+    "5.0": "9b12a74b36df777f15d2febfd22b8b2fc066ce9f32ec3beeabf17b9c3b9903cf",
+    "6.0": "80632f831e5683164bedcb11aece65120be208ead1d5fe23a8c46ecd0b80c544",
+    "7.0": "3aa10f2fa1205be2a155a0b3ce9b57bdff2dd1b9ce71f20e31787b2d0492d515",
+    "7.1": "4b1d0da05dab4fa70609904f4c9d2ce7235628325feb0e82b2a857efdc4f5c04",
+    "8.0": "b4273283a83d1908cc634e198839e545a3788d8f72b515f90035b9971276ae91",
+    "10.0": "3e4cc4d5e3561aabd2cedb510daec9141b71d9c3fbf279d49958436e3c4a8b28",
+    "11.0": "e5828e5fe646153375169138b55db9c9bfcb461c758fd87f47cff07ffac4186c",
+    "12.0": "0dfe802f8d876fc4d24d55cad1756949c08e34c6c0be86da9dfcea61067abd9b"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 1 del texto diu que la Constitució regula la producció de les altres normes, obre la cadena de validesa i és criteri interpretatiu, tal com marca l'opció A. La cita conté els tres elements. Les altres opcions barregen funcions que el text no atribueix a la Constitució (aprovar reglaments, resoldre conflictes entre ens, delegar la potestat legislativa, ratificar tractats, derogar lleis). Només una opció és correcta i la pregunta és clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 8 diu que la distinció entre llei ordinària i orgànica es basa en la matèria que regulen i en el procediment d'aprovació, que és l'opció B. La cita ho recull sencer. Les altres combinacions (òrgan parlamentari, rang, iniciativa) no coincideixen amb el text per a aquesta distinció. Només una opció és correcta i no hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text de 4.3.3.2 diu que el procés va 'des de la prevenció, les entrades i desencadenants ... fins als supòsits de situació final i tancament', cosa que respon l'opció B. La cita inclou l'abast complet. Les altres opcions (detenció fins a la posada a disposició judicial, denúncia fins a sentència, urgència fins a atestat) no són l'abast descrit. La parecida mx46-19-8 pregunta quin és l'altre procés (el de la detenció), un fet diferent, així que no és duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que el president o presidenta, per decret, pot nomenar i separar el conseller primer i 'donar compte al Parlament'. Això és l'opció A, i la cita ho conté. Les altres opcions (Comissió Jurídica Assessora, CTESC, Departament de la Vicepresidència) apareixen al text amb altres funcions. La parecida guia-mossos-685 tracta de les competències del conseller primer, un fet diferent.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt 5 diu 'Les persones han d'aprendre a valorar i seleccionar la informació abans de processar-la', que és l'opció B. La cita és literal i suficient. Les altres opcions (emmagatzemar i difondre, xifrar i signar, traduir i resumir) no hi apareixen. Les parecides 639 i 637 tracten de la IA i de la seguretat de la informació, fets diferents.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negatiu. El punt 9 cita com a reptes de la IA la seguretat, el control i la garantia dels drets fonamentals. La sostenibilitat ambiental no hi figura, per tant l'opció D és la resposta. La cita conté els tres àmbits que apareixen a les altres opcions, de manera que permet veure que són al text. Les parecides 639 i 596 tracten d'altres fets (què permet la IA i àmbits d'aplicació), així que no són duplicades.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que entre el Segre i el Llobregat el Prepirineu és més estret i només hi tenen continuïtat les serres interiors, com el Cadí. Això coincideix amb l'opció B i la cita ho recull complet (més estret, només interiors, Cadí). Les altres opcions inverteixen l'amplada o les serres, i el Montsec i Sant Gervàs pertanyen al sector occidental. És única i clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punt g) diu que els instruments de participació són la designació directa de senadors 'per part dels parlaments de les comunitats autònomes', que és l'opció C. La cita ho conté. Els governs, els presidents i les diputacions provincials no hi apareixen com a designadors. No hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "El punt 6 del text i la cita justifiquen que el català era llengua de prestigi en les relacions formals i s'usava exclusivament en les informals. L'opció B és coherent amb això. Però la parecida cand-guia-mossos-84 prova exactament el mateix fet (ús del català en relacions formals i informals als segles XIV-XV) amb un altre enunciat, així que és duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "cand-guia-mossos-84"
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El text diu que 'la Secretaria d'Estat de Seguretat del Ministeri de l'Interior ha desenvolupat la Base de dades d'assenyalaments nacionals (BDSN)', que és l'opció B. La cita és literal i suficient. L'Oficina SIRENE, la Divisió de Cooperació Internacional i la Direcció Adjunta Operativa apareixen al text, però amb funcions del SIS i no com a desenvolupadors de la BDSN. No hi ha parecides.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a62a6f8776c7bb666.jsonl",
+    "respuesta_sha256": "8921bdddde130023f6231c06c15c0e3f64292b281dd2479df95a587590843524"
+   },
+   "registrada_el": "2026-10-07T14:45:57",
+   "intentos": [
+    {
+     "t": "2026-10-07T14:45:57",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a62a6f8776c7bb666.jsonl",
+      "respuesta_sha256": "8921bdddde130023f6231c06c15c0e3f64292b281dd2479df95a587590843524"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El punt 1 del texto diu que la Constitució regula la producció de les altres normes, obre la cadena de validesa i és criteri interpretatiu, tal com marca l'opció A. La cita conté els tres elements. Les altres opcions barregen funcions que el text no atribueix a la Constitució (aprovar reglaments, resoldre conflictes entre ens, delegar la potestat legislativa, ratificar tractats, derogar lleis). Només una opció és correcta i la pregunta és clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El punt 8 diu que la distinció entre llei ordinària i orgànica es basa en la matèria que regulen i en el procediment d'aprovació, que és l'opció B. La cita ho recull sencer. Les altres combinacions (òrgan parlamentari, rang, iniciativa) no coincideixen amb el text per a aquesta distinció. Només una opció és correcta i no hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El text de 4.3.3.2 diu que el procés va 'des de la prevenció, les entrades i desencadenants ... fins als supòsits de situació final i tancament', cosa que respon l'opció B. La cita inclou l'abast complet. Les altres opcions (detenció fins a la posada a disposició judicial, denúncia fins a sentència, urgència fins a atestat) no són l'abast descrit. La parecida mx46-19-8 pregunta quin és l'altre procés (el de la detenció), un fet diferent, així que no és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que el president o presidenta, per decret, pot nomenar i separar el conseller primer i 'donar compte al Parlament'. Això és l'opció A, i la cita ho conté. Les altres opcions (Comissió Jurídica Assessora, CTESC, Departament de la Vicepresidència) apareixen al text amb altres funcions. La parecida guia-mossos-685 tracta de les competències del conseller primer, un fet diferent.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El punt 5 diu 'Les persones han d'aprendre a valorar i seleccionar la informació abans de processar-la', que és l'opció B. La cita és literal i suficient. Les altres opcions (emmagatzemar i difondre, xifrar i signar, traduir i resumir) no hi apareixen. Les parecides 639 i 637 tracten de la IA i de la seguretat de la informació, fets diferents.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negatiu. El punt 9 cita com a reptes de la IA la seguretat, el control i la garantia dels drets fonamentals. La sostenibilitat ambiental no hi figura, per tant l'opció D és la resposta. La cita conté els tres àmbits que apareixen a les altres opcions, de manera que permet veure que són al text. Les parecides 639 i 596 tracten d'altres fets (què permet la IA i àmbits d'aplicació), així que no són duplicades.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que entre el Segre i el Llobregat el Prepirineu és més estret i només hi tenen continuïtat les serres interiors, com el Cadí. Això coincideix amb l'opció B i la cita ho recull complet (més estret, només interiors, Cadí). Les altres opcions inverteixen l'amplada o les serres, i el Montsec i Sant Gervàs pertanyen al sector occidental. És única i clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El punt g) diu que els instruments de participació són la designació directa de senadors 'per part dels parlaments de les comunitats autònomes', que és l'opció C. La cita ho conté. Els governs, els presidents i les diputacions provincials no hi apareixen com a designadors. No hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"REJECTED\",\"reason\":\"El punt 6 del text i la cita justifiquen que el català era llengua de prestigi en les relacions formals i s'usava exclusivament en les informals. L'opció B és coherent amb això. Però la parecida cand-guia-mossos-84 prova exactament el mateix fet (ús del català en relacions formals i informals als segles XIV-XV) amb un altre enunciat, així que és duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"cand-guia-mossos-84\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"El text diu que 'la Secretaria d'Estat de Seguretat del Ministeri de l'Interior ha desenvolupat la Base de dades d'assenyalaments nacionals (BDSN)', que és l'opció B. La cita és literal i suficient. L'Oficina SIRENE, la Divisió de Cooperació Internacional i la Direcció Adjunta Operativa apareixen al text, però amb funcions del SIS i no com a desenvolupadors de la BDSN. No hi ha parecides.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "13.0",
+    "14.0",
+    "15.0",
+    "15.1",
+    "15.2",
+    "16.0",
+    "16.1",
+    "16.2",
+    "17.0",
+    "17.1"
+   ],
+   "prompt_sha256": "c33d071ed57f2907632bacf3041abe4d361cac513c148a0fa3f8cef8d577a383",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "13.0": "e5223a2e3ce61e447a732ea6cab8c83be6fc95cb1257709625ed75e2a7a93d68",
+    "14.0": "f78270789a15bb75dd4da0ace8d42e5121bf6775c29fb321549c78aa7d1da766",
+    "15.0": "5c7f201d295702c735839a3f16eae3fd03ebef1cda577eb6e43cc0668067f078",
+    "15.1": "49e162d6f399d7e435b2554b603eadb096093656e2c2c08a60a0acaac9e25c99",
+    "15.2": "f63cb339ca2fddef0e486ae358f38e7f41e0ed67f1c3807ef09cc36ef776e75e",
+    "16.0": "7ab05401f39c0fa910fce4b07d87b02d495b935c4e53b2c601a3a845430cdc05",
+    "16.1": "56bc7de9a0d3b3888672d5a9805390cd0a2a01beb437416e9899e22b672d8eaf",
+    "16.2": "ea89ae73a0d6829745dee9031b3f1f88eb47e08e36c208dd93de2e948291fbc7",
+    "17.0": "48351500ee4dc5eb585c62c2f0b181944250f4c19abffde9e620ea0bf46921cc",
+    "17.1": "7f4bd50a8c4470e563b2911c858bb64f2a2009451ce6890f15a86dd204020b35"
+   },
+   "veredictos": [
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, donde exista policía local, esta se integrará en un cuerpo único sin perjuicio de la organización interna por reglamento. Eso respalda la opción b y la cita lo contiene entero. La autorización del conseller (opción a) y los 10.000 habitantes (opción d) aparecen en el texto, pero solo para crear policía local, no para dividirla en dos cuerpos. El intendente (opción c) solo es una categoría. Solo una opción es correcta y el supuesto práctico está bien formulado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto y la cita dicen que los regionalistas de la Lliga deseaban, según las Bases de Manresa de 1892, un sistema basado en el somatén con una fuerza policial permanente bajo el poder regional. Esto coincide con la opción a. Las otras opciones (Guardia Civil bajo Capitanía, cuerpos de Vigilancia y Seguridad, policías locales con el gobernador civil) corresponden a otros contextos del texto y no al modelo que deseaba la Lliga. La cita contiene todo lo necesario y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 23.1 dice que se accede a los servicios sanitarios de responsabilidad pública en condiciones de igualdad y gratuidad, que es la opción c. La cita lo recoge completo. Copago, proximidad, urgencia, residencia y reciprocidad no figuran en el texto. No hay parecidas con el mismo hecho. La pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 23.2 atribuye el respeto de las preferencias en la elección de médico y de centro a los usuarios de la sanidad pública, que es la opción b. La cita lo contiene entero. La opción c (pública y privada) es falsa: el apartado 3 menciona lo público y lo privado, pero para el derecho a la información, no para este. La opción a es falsa y la d no figura en el texto. Solo hay una correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 23.3 reconoce el derecho a ser informado sobre los tratamientos médicos y sus riesgos antes de que se apliquen, que es la opción c, y la cita lo recoge. Las otras opciones (al finalizar, cuando lo considere el médico, dentro del mes siguiente) contradicen el texto. La parecida nueva:eac-2006:23:0 trata del apartado 1, la igualdad y gratuidad del acceso, y es un hecho distinto, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que el Pacto de Génova (1705) con Inglaterra daba apoyo al archiduque Carlos a cambio de ayuda militar y el compromiso de defender las libertades y constituciones catalanas, que es la opción b. La cita contiene ambos elementos. Las otras opciones (república independiente, cesión del Rosellón y la Cerdanya, apoyo naval y catastro) no están en el texto. La parecida guia-mossos-343 pregunta por las razones del apoyo, que es otro hecho, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que Inglaterra, Holanda, el Imperio Austríaco y Portugal formaron la Gran Alianza de La Haya, que es la opción c, y la cita enumera los cuatro. Las otras opciones incluyen a Francia o a Castilla, que no figuran como miembros. Es una pregunta de hecho concreto y útil, sin duplicados.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la represión posterior a 1714 comportó la imposición del catastro, la construcción de la Ciudadela y el encarcelamiento y muerte de muchos austracistas. La opción c (la Ciudadela) está respaldada y la cita la contiene. Las demás son hechos anteriores y ajenos a la represión: la reunión de las Cortes por Felipe V, el pacto con Inglaterra y la proclamación del archiduque en Viena. Solo una es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negativo. El texto sitúa la investidura de Puigdemont el 10 de enero de 2016, por lo que no ocurrió en 2017 y la opción b es la correcta. La cita contiene los tres hechos de 2017 (marco legal en septiembre, consulta el 1 de octubre, 155 el 27 de octubre) y la investidura de 2016, así que permite ver que las demás opciones sí figuran. La parecida guia-mossos-670 trata de quién convocó las elecciones, un hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que bajo el mandato de Maragall el Parlament de Catalunya elaboró el nuevo Estatuto, aprobado por la LO 6/2006, lo que respalda la opción b. La cita lo contiene. El Tribunal Constitucional solo aparece por la sentencia de 2010, el Senado por el 155 y el Govern no se menciona como autor, así que hay una única correcta. La parecida guia-mossos-713 trata de la elección de Torra, un hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a25e886489f2215aa.jsonl",
+    "respuesta_sha256": "db20806b3d6d5010ac8096cee735a51866c414f884a7620d8049fcfd0b44d3d6"
+   },
+   "registrada_el": "2026-10-07T14:46:21",
+   "intentos": [
+    {
+     "t": "2026-10-07T14:46:21",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a25e886489f2215aa.jsonl",
+      "respuesta_sha256": "db20806b3d6d5010ac8096cee735a51866c414f884a7620d8049fcfd0b44d3d6"
+     },
+     "respuesta": "[\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, donde exista policía local, esta se integrará en un cuerpo único sin perjuicio de la organización interna por reglamento. Eso respalda la opción b y la cita lo contiene entero. La autorización del conseller (opción a) y los 10.000 habitantes (opción d) aparecen en el texto, pero solo para crear policía local, no para dividirla en dos cuerpos. El intendente (opción c) solo es una categoría. Solo una opción es correcta y el supuesto práctico está bien formulado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El texto y la cita dicen que los regionalistas de la Lliga deseaban, según las Bases de Manresa de 1892, un sistema basado en el somatén con una fuerza policial permanente bajo el poder regional. Esto coincide con la opción a. Las otras opciones (Guardia Civil bajo Capitanía, cuerpos de Vigilancia y Seguridad, policías locales con el gobernador civil) corresponden a otros contextos del texto y no al modelo que deseaba la Lliga. La cita contiene todo lo necesario y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 23.1 dice que se accede a los servicios sanitarios de responsabilidad pública en condiciones de igualdad y gratuidad, que es la opción c. La cita lo recoge completo. Copago, proximidad, urgencia, residencia y reciprocidad no figuran en el texto. No hay parecidas con el mismo hecho. La pregunta es clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 23.2 atribuye el respeto de las preferencias en la elección de médico y de centro a los usuarios de la sanidad pública, que es la opción b. La cita lo contiene entero. La opción c (pública y privada) es falsa: el apartado 3 menciona lo público y lo privado, pero para el derecho a la información, no para este. La opción a es falsa y la d no figura en el texto. Solo hay una correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 23.3 reconoce el derecho a ser informado sobre los tratamientos médicos y sus riesgos antes de que se apliquen, que es la opción c, y la cita lo recoge. Las otras opciones (al finalizar, cuando lo considere el médico, dentro del mes siguiente) contradicen el texto. La parecida nueva:eac-2006:23:0 trata del apartado 1, la igualdad y gratuidad del acceso, y es un hecho distinto, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que el Pacto de Génova (1705) con Inglaterra daba apoyo al archiduque Carlos a cambio de ayuda militar y el compromiso de defender las libertades y constituciones catalanas, que es la opción b. La cita contiene ambos elementos. Las otras opciones (república independiente, cesión del Rosellón y la Cerdanya, apoyo naval y catastro) no están en el texto. La parecida guia-mossos-343 pregunta por las razones del apoyo, que es otro hecho, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que Inglaterra, Holanda, el Imperio Austríaco y Portugal formaron la Gran Alianza de La Haya, que es la opción c, y la cita enumera los cuatro. Las otras opciones incluyen a Francia o a Castilla, que no figuran como miembros. Es una pregunta de hecho concreto y útil, sin duplicados.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la represión posterior a 1714 comportó la imposición del catastro, la construcción de la Ciudadela y el encarcelamiento y muerte de muchos austracistas. La opción c (la Ciudadela) está respaldada y la cita la contiene. Las demás son hechos anteriores y ajenos a la represión: la reunión de las Cortes por Felipe V, el pacto con Inglaterra y la proclamación del archiduque en Viena. Solo una es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negativo. El texto sitúa la investidura de Puigdemont el 10 de enero de 2016, por lo que no ocurrió en 2017 y la opción b es la correcta. La cita contiene los tres hechos de 2017 (marco legal en septiembre, consulta el 1 de octubre, 155 el 27 de octubre) y la investidura de 2016, así que permite ver que las demás opciones sí figuran. La parecida guia-mossos-670 trata de quién convocó las elecciones, un hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que bajo el mandato de Maragall el Parlament de Catalunya elaboró el nuevo Estatuto, aprobado por la LO 6/2006, lo que respalda la opción b. La cita lo contiene. El Tribunal Constitucional solo aparece por la sentencia de 2010, el Senado por el 155 y el Govern no se menciona como autor, así que hay una única correcta. La parecida guia-mossos-713 trata de la elección de Torra, un hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "17.2",
+    "18.0",
+    "18.1",
+    "18.2",
+    "19.0",
+    "19.1",
+    "19.2",
+    "20.0",
+    "21.0",
+    "23.0"
+   ],
+   "prompt_sha256": "5b6ad921628df2ebd7b4afe5a3a344172abfa99754481dccd0008a1bd821ceaa",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "17.2": "709a464cb90ccbd6de51704c0e860badbbd56e5a64440d2f438cd63c9f82b08f",
+    "18.0": "0d0227ac57bb4f7a31f9446c76c2d2db0e82eb81477168560f3a70952164e7cf",
+    "18.1": "ba8a3cee37bcc33a564b206e117ed3a8cdfb24fd4c1219da93ca04ec3cc88916",
+    "18.2": "2210a2a642e0bef6e3c48503d3547aa2f571f909792bdaa564366bffc01f9668",
+    "19.0": "211c6714a0caadac121f4fee660ebaa028a209d1f3b2d942771f8f161d5f5e1f",
+    "19.1": "34b4ab3b9b3db8219d6fcf63cec8e57c1d93e4760e497c1b38beeeabfa48bdb4",
+    "19.2": "c37a99d01609e92aaa1edf0f03df58b1cc28999e3a9309a6d09063653aecfb24",
+    "20.0": "3aa110b57d0c1f0103038a0afcef4b33c68513472c61e81b4b2823780dbda079",
+    "21.0": "a8fe6f5ed72ce30b2279c44bcd8fac8bd52983d21ad5be8d71d57f94725fd57f",
+    "23.0": "d0cbe19e3fe198391bac2d4485b9d1a52eee50e61b4aa4e52b26d534118617a0"
+   },
+   "veredictos": [
+    {
+     "question_id": "17.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto indica que las elecciones del 27 de setembre de 2015 las ganó la coalición Junts pel Sí, y la cita recoge ambos elementos (fecha y ganador). Las otras opciones (2010 ganó CiU, 2017 sin ganador indicado, generales de 2011 ganó el PP) no son correctas según el texto. El enunciado es algo enrevesado, pero es inequívoco y evalúa un hito histórico del temario. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la suspensión puede denegarse si puede perturbar gravemente los intereses generales o los derechos o libertades de un tercero, y la cita lo contiene literalmente. Las otras opciones mezclan requisitos de interposición (invocar el derecho, plazo de veinte días, órgano legislativo) que no son causa de denegación de la suspensión. Es única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, si se admite el recurso, la competencia corresponde a las salas del Tribunal Constitucional, y la cita lo recoge literalmente. Los distractores (Supremo, juzgados contenciosos, TEDH) no se atribuyen esa competencia en el texto. Es un dato concreto sobre un órgano, útil para examen, y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto y la cita dicen que el amparo constitucional protege los derechos del amparo ordinario más la objeción de conciencia (art. 30.2). Vivienda, propiedad y trabajo no aparecen como añadidos. La cita contiene todo lo necesario, y la pregunta es clara y sin pistas en las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que durante los 30 días de vigencia el Congreso de los Diputados debe estudiar los decretos ley y decidir si los convalida o los deroga. La cita lo contiene entero. Senado, Tribunal Constitucional y Consejo de Estado no tienen esa función en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que no se puede delegar lo que debe regularse por ley orgánica (art. 81), y la cita incluye tanto ese límite como la regla de la ley de bases para el texto articulado, por lo que contiene los elementos necesarios. La ley de bases y la ley ordinaria quedan descartadas porque la materia no es delegable, y el decreto ley no se menciona para esto. La parecida guia-mossos-448 pregunta por el texto refundido (ley ordinaria), un hecho distinto, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que, si el Congreso quiere modificar el contenido de un decreto ley, puede tramitarlo como proyecto de ley por el procedimiento de urgencia, y la cita lo recoge literalmente. Las demás opciones (proposición de ley ordinaria, decreto legislativo, ley de bases en lectura única) no aparecen en el texto para este supuesto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "20.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que la Decisión 91/396/CEE del Consejo de las Comunidades Europeas obligó a introducir el número 112 en las redes telefónicas de los estados miembros para evitar el desconocimiento de los números locales. La cita lo contiene. El centro único, el 088 común y la guía de números no aparecen en el texto (el 088 era el número de los Mossos en Cataluña). Pregunta clara y única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los miembros del Consejo de Garantías Estatutarias, nombrados por el presidente de la Generalitat, se proponen en dos terceras partes por el Parlamento (mayoría de tres quintos) y una tercera parte por el Gobierno. La cita contiene todos esos elementos (fracciones, mayoría y proponentes). Las otras opciones invierten o inventan las proporciones. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "23.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que en primavera y otoño las lluvias suelen caer en forma de tormentas muy intensas ocasionadas por el fenómeno de la gota fría. La cita lo recoge. La inversión térmica es invernal, la sombra pluviométrica explica la baja precipitación y la amplitud térmica es otra cosa, por lo que ninguna otra opción es correcta. El supuesto es claro.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 2,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a9164d53b28c51b60.jsonl",
+    "respuesta_sha256": "fa67156cce835212b4f6a33b6565eaa1d3f7205482fe72e731db1a0ea6ecfae7"
+   },
+   "registrada_el": "2026-10-08T17:57:58",
+   "intentos": [
+    {
+     "t": "2026-10-08T17:57:58",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 2,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a9164d53b28c51b60.jsonl",
+      "respuesta_sha256": "fa67156cce835212b4f6a33b6565eaa1d3f7205482fe72e731db1a0ea6ecfae7"
+     },
+     "respuesta": "[\n{\"question_id\":\"17.2\",\"verdict\":\"VALID\",\"reason\":\"El texto indica que las elecciones del 27 de setembre de 2015 las ganó la coalición Junts pel Sí, y la cita recoge ambos elementos (fecha y ganador). Las otras opciones (2010 ganó CiU, 2017 sin ganador indicado, generales de 2011 ganó el PP) no son correctas según el texto. El enunciado es algo enrevesado, pero es inequívoco y evalúa un hito histórico del temario. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la suspensión puede denegarse si puede perturbar gravemente los intereses generales o los derechos o libertades de un tercero, y la cita lo contiene literalmente. Las otras opciones mezclan requisitos de interposición (invocar el derecho, plazo de veinte días, órgano legislativo) que no son causa de denegación de la suspensión. Es única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, si se admite el recurso, la competencia corresponde a las salas del Tribunal Constitucional, y la cita lo recoge literalmente. Los distractores (Supremo, juzgados contenciosos, TEDH) no se atribuyen esa competencia en el texto. Es un dato concreto sobre un órgano, útil para examen, y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.2\",\"verdict\":\"VALID\",\"reason\":\"El texto y la cita dicen que el amparo constitucional protege los derechos del amparo ordinario más la objeción de conciencia (art. 30.2). Vivienda, propiedad y trabajo no aparecen como añadidos. La cita contiene todo lo necesario, y la pregunta es clara y sin pistas en las opciones.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que durante los 30 días de vigencia el Congreso de los Diputados debe estudiar los decretos ley y decidir si los convalida o los deroga. La cita lo contiene entero. Senado, Tribunal Constitucional y Consejo de Estado no tienen esa función en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que no se puede delegar lo que debe regularse por ley orgánica (art. 81), y la cita incluye tanto ese límite como la regla de la ley de bases para el texto articulado, por lo que contiene los elementos necesarios. La ley de bases y la ley ordinaria quedan descartadas porque la materia no es delegable, y el decreto ley no se menciona para esto. La parecida guia-mossos-448 pregunta por el texto refundido (ley ordinaria), un hecho distinto, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que, si el Congreso quiere modificar el contenido de un decreto ley, puede tramitarlo como proyecto de ley por el procedimiento de urgencia, y la cita lo recoge literalmente. Las demás opciones (proposición de ley ordinaria, decreto legislativo, ley de bases en lectura única) no aparecen en el texto para este supuesto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"20.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que la Decisión 91/396/CEE del Consejo de las Comunidades Europeas obligó a introducir el número 112 en las redes telefónicas de los estados miembros para evitar el desconocimiento de los números locales. La cita lo contiene. El centro único, el 088 común y la guía de números no aparecen en el texto (el 088 era el número de los Mossos en Cataluña). Pregunta clara y única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los miembros del Consejo de Garantías Estatutarias, nombrados por el presidente de la Generalitat, se proponen en dos terceras partes por el Parlamento (mayoría de tres quintos) y una tercera parte por el Gobierno. La cita contiene todos esos elementos (fracciones, mayoría y proponentes). Las otras opciones invierten o inventan las proporciones. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"23.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que en primavera y otoño las lluvias suelen caer en forma de tormentas muy intensas ocasionadas por el fenómeno de la gota fría. La cita lo recoge. La inversión térmica es invernal, la sombra pluviométrica explica la baja precipitación y la amplitud térmica es otra cosa, por lo que ninguna otra opción es correcta. El supuesto es claro.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "24.0",
+    "25.0",
+    "26.0",
+    "27.0",
+    "28.0",
+    "28.1",
+    "28.2"
+   ],
+   "prompt_sha256": "d8d104bd3f7d6f21daba329e2bf29bfa49dccd002d07f6e898d7954a05e56b25",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "24.0": "051921253b1e119ba0c7c62e871c0fc28e5e7049492819d9e45c170611697a54",
+    "25.0": "c5efd73ab35dd527b3e65c6916656e25167dd008806fb1db7d1cfdffd63e3c1a",
+    "26.0": "812bc516bc03592bf557060a92a616f273707d5d0345793d3065c77fb52fe68a",
+    "27.0": "2c00c8d0160f13c6896f727e976733c1964aa2a049d9c81c62fe8c5700c66ea2",
+    "28.0": "14d8bb607144a3f371d877ab439b4614c084ee81a0860f29d92c0f662e590346",
+    "28.1": "cb954ae7f75480fd459545afe916780df3c6cd5ff2ab03c62712979ec8808d8d",
+    "28.2": "e42f546bc36a3eb4d9ebebc6ff4672d46b9c20ebd88e444916af4718ce3fdd37"
+   },
+   "veredictos": [
+    {
+     "question_id": "24.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice literalmente que la posibilidad de diseñar políticas públicas depende del ámbito competencial y que también pueden llevarse a cabo mediante acuerdos o convenios entre administraciones y con colectivos particulares; la opción 0 lo recoge. La cita contiene ambos elementos (de qué depende y la otra vía). Los distractores (presupuesto, decretos ley, consultas vinculantes, mayoría parlamentaria, ICD) no aparecen como respuesta en el texto. Pregunta clara y útil, no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "25.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El punto 9 del texto indica que la vegueria es la división territorial adoptada por la Generalitat para la futura organización territorial de sus servicios; la provincia se asocia al Estado (punto 8) y no a la vegueria. La cita contiene la frase completa. Los otros tres distractores no son correctos según el texto. Pregunta clara, sin pistas en las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "26.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Los puntos 11 y 18 del texto dicen que la PG-ME actúa en todo el territorio de Cataluña y la policía local en el territorio de su municipio (con la excepción de emergencia en municipios limítrofes). La opción 1 es la única que combina ambos hechos. La cita incluye el punto 11 y el 18 completos hasta 'municipi'. La parecida guia-mossos-744 trata de otra cuestión (la escala de apoyo), no es duplicada. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "27.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto sí dice que la nueva policía debía ser profesionalmente bien preparada, y las opciones 0, 1 y 3 no aparecen en el texto, por lo que está respaldada y la cita es suficiente. Pero la pregunta es poco clara: la opción correcta es la única que describe una cualidad positiva y las otras (fuero militar, integrarse en el ejército, depender del gobernador civil) son absurdas frente a 'policía nueva, autonómica y democrática'. Además la cita enumera varias condiciones (imagen de una Cataluña autónoma, arraigada, considerada propia, avanzada y democrática) y la pregunta dice 'cuál de estas condiciones', lo que la hace delatora y de bajo valor discriminatorio.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "28.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 3 del artículo 24 dice que las personas o familias en situación de pobreza tienen derecho a una renta garantizada de ciudadanía que les asegure los mínimos de una vida digna; la opción 1 lo reproduce. La cita contiene el sujeto y la finalidad. Las otras opciones mezclan sujetos y finalidades de otros apartados (apartados 2 y 4) o inventan la finalidad de vivienda, por lo que solo una es correcta. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "28.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 4 del artículo 24 dice que las organizaciones del tercer sector social ejercen sus funciones en los ámbitos de la participación y la colaboración sociales; la opción 1 lo recoge exactamente. La cita contiene el dato completo. Las demás opciones (gestión e inspección, financiación y evaluación, planificación y acreditación) no figuran en el texto. No es duplicada de 28.0 ni 28.2 (apartados distintos). Pregunta clara y específica.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "28.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 2 del artículo 24 dice que las personas con necesidades especiales, para mantener la autonomía personal en las actividades de la vida diaria, tienen derecho a recibir la atención adecuada; la opción 2 lo refleja. La cita incluye finalidad y derecho. Las otras opciones corresponden a otros apartados (renta garantizada, tercer sector, acceso en igualdad a servicios sociales) y no son correctas para este sujeto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a22e45a66a195a988.jsonl",
+    "respuesta_sha256": "6a1ce7df8d78d54436e0e494b6f66f55ab43fccb03c166bc00463aeb8babd0e2"
+   },
+   "registrada_el": "2026-10-08T17:58:28",
+   "intentos": [
+    {
+     "t": "2026-10-08T17:58:28",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a22e45a66a195a988.jsonl",
+      "respuesta_sha256": "6a1ce7df8d78d54436e0e494b6f66f55ab43fccb03c166bc00463aeb8babd0e2"
+     },
+     "respuesta": "[\n{\"question_id\":\"24.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice literalmente que la posibilidad de diseñar políticas públicas depende del ámbito competencial y que también pueden llevarse a cabo mediante acuerdos o convenios entre administraciones y con colectivos particulares; la opción 0 lo recoge. La cita contiene ambos elementos (de qué depende y la otra vía). Los distractores (presupuesto, decretos ley, consultas vinculantes, mayoría parlamentaria, ICD) no aparecen como respuesta en el texto. Pregunta clara y útil, no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"25.0\",\"verdict\":\"VALID\",\"reason\":\"El punto 9 del texto indica que la vegueria es la división territorial adoptada por la Generalitat para la futura organización territorial de sus servicios; la provincia se asocia al Estado (punto 8) y no a la vegueria. La cita contiene la frase completa. Los otros tres distractores no son correctos según el texto. Pregunta clara, sin pistas en las opciones.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"26.0\",\"verdict\":\"VALID\",\"reason\":\"Los puntos 11 y 18 del texto dicen que la PG-ME actúa en todo el territorio de Cataluña y la policía local en el territorio de su municipio (con la excepción de emergencia en municipios limítrofes). La opción 1 es la única que combina ambos hechos. La cita incluye el punto 11 y el 18 completos hasta 'municipi'. La parecida guia-mossos-744 trata de otra cuestión (la escala de apoyo), no es duplicada. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"27.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto sí dice que la nueva policía debía ser profesionalmente bien preparada, y las opciones 0, 1 y 3 no aparecen en el texto, por lo que está respaldada y la cita es suficiente. Pero la pregunta es poco clara: la opción correcta es la única que describe una cualidad positiva y las otras (fuero militar, integrarse en el ejército, depender del gobernador civil) son absurdas frente a 'policía nueva, autonómica y democrática'. Además la cita enumera varias condiciones (imagen de una Cataluña autónoma, arraigada, considerada propia, avanzada y democrática) y la pregunta dice 'cuál de estas condiciones', lo que la hace delatora y de bajo valor discriminatorio.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"28.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 3 del artículo 24 dice que las personas o familias en situación de pobreza tienen derecho a una renta garantizada de ciudadanía que les asegure los mínimos de una vida digna; la opción 1 lo reproduce. La cita contiene el sujeto y la finalidad. Las otras opciones mezclan sujetos y finalidades de otros apartados (apartados 2 y 4) o inventan la finalidad de vivienda, por lo que solo una es correcta. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"28.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 4 del artículo 24 dice que las organizaciones del tercer sector social ejercen sus funciones en los ámbitos de la participación y la colaboración sociales; la opción 1 lo recoge exactamente. La cita contiene el dato completo. Las demás opciones (gestión e inspección, financiación y evaluación, planificación y acreditación) no figuran en el texto. No es duplicada de 28.0 ni 28.2 (apartados distintos). Pregunta clara y específica.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"28.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 2 del artículo 24 dice que las personas con necesidades especiales, para mantener la autonomía personal en las actividades de la vida diaria, tienen derecho a recibir la atención adecuada; la opción 2 lo refleja. La cita incluye finalidad y derecho. Las otras opciones corresponden a otros apartados (renta garantizada, tercer sector, acceso en igualdad a servicios sociales) y no son correctas para este sujeto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

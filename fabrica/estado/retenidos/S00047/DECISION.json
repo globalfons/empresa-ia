@@ -1,0 +1,117 @@
+{
+ "lote": "S00047",
+ "estado": "RETENIDO",
+ "fecha": "2026-10-06",
+ "decision": "Retenido automáticamente: 50/50 VALID y la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó 1 razones sin evidencia individual. Campaña masiva: el lote se aísla y la fábrica continúa con el siguiente. No se publica, no se rejuzga.",
+ "bloqueo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+ "judge_policy_version": "juez-sesion-v4",
+ "veredictos_juez": {
+  "0.0": "VALID",
+  "0.1": "VALID",
+  "1.0": "VALID",
+  "1.1": "VALID",
+  "1.2": "VALID",
+  "2.0": "VALID",
+  "2.1": "VALID",
+  "2.2": "VALID",
+  "3.0": "VALID",
+  "3.1": "VALID",
+  "3.2": "VALID",
+  "4.0": "VALID",
+  "5.0": "VALID",
+  "5.1": "VALID",
+  "5.2": "VALID",
+  "6.0": "VALID",
+  "6.1": "VALID",
+  "7.0": "VALID",
+  "8.0": "VALID",
+  "8.1": "VALID",
+  "9.0": "VALID",
+  "10.0": "VALID",
+  "11.0": "VALID",
+  "12.0": "VALID",
+  "13.0": "VALID",
+  "14.0": "VALID",
+  "15.0": "VALID",
+  "16.0": "VALID",
+  "17.0": "VALID",
+  "17.1": "VALID",
+  "17.2": "VALID",
+  "18.0": "VALID",
+  "18.1": "VALID",
+  "18.2": "VALID",
+  "19.0": "VALID",
+  "19.1": "VALID",
+  "19.2": "VALID",
+  "20.0": "VALID",
+  "20.1": "VALID",
+  "20.2": "VALID",
+  "21.0": "VALID",
+  "21.1": "VALID",
+  "22.0": "VALID",
+  "22.1": "VALID",
+  "22.2": "VALID",
+  "23.0": "VALID",
+  "23.1": "VALID",
+  "24.0": "VALID",
+  "25.0": "VALID",
+  "26.0": "VALID"
+ },
+ "intentos_por_tanda": [
+  {
+   "tanda": "01",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "02",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "03",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "04",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "05",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  }
+ ],
+ "segunda_comprobacion": {
+  "ids": 50,
+  "veredictos": 50,
+  "razones_no_especificas": [
+   "5.1"
+  ],
+  "tandas_sin_evidencia": [],
+  "ok": false
+ },
+ "sin_evidencia_propia": [
+  {
+   "question_id": "5.1",
+   "q": "D'acord amb l'article 81 de la Constitució, tal com el recull la Guia d'estudi, quina d'aquestes lleis NO s'esmenta com a llei orgànica?",
+   "cita": "D’acord amb l’article 81, són lleis orgàniques: a) les que afecten el desenvolupament dels drets fonamentals o les llibertats públiques; b) les que aprovin els estatuts d’autonomia; i c) les que afecten altres matèries no enumerades expressament per l’article 81 però previstes al llarg de l’articulat de la CE",
+   "verdict_juez": "VALID",
+   "reason_juez": "Pregunta en negativo. La cita contiene las tres categorías de leyes orgánicas del art. 81: derechos fundamentales y libertades públicas, estatutos de autonomía y otras materias previstas en la CE. Por tanto las opciones A, B y D aparecen en la cita. La ley de presupuestos (opción C) se menciona en el texto solo como tipo de ley distinto, no como orgánica, así que es la única que no se menciona. Cita suficiente y única respuesta posible."
+  }
+ ],
+ "huellas": {
+  "candidatas.json": "26971a4917373d4c15ab1cb408c337362a78b8434b93a9591a4cf504e8c77e4a",
+  "revision.json": "c783d06d9ac9beb854a2f6deda2ee7bf83a063e0ad38785865873333ea57052b",
+  "politica.json": "d4e392fa584f6e6b3851a568ad095e30098a86b26adfadebbf45dbe4ccaa4dad",
+  "evaluacion.json": "9a7618a341c417a0f10007b577660348998ff2f88a745e04b9d4c865c0626c64",
+  "items.json": "c10b28b753991b2de380d5db380b5d5b60fb6c6f0865c6b4e01a325a84463935"
+ }
+}

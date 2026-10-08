@@ -89,3 +89,15 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
   - Hubo un límite de tasa (429) de los jueces en S00033; se relanzaron sin que hubiera veredictos previos.
   - Hubo un veredicto inconsistente en S00033 (REJECTED sin duplicado); se aplicó el criterio más conservador.
 - **Tests**: Deno SKIPPED (no está instalado; `supabase/` sin modificar). Physical Engine: no iniciado.
+
+## Actualización 2026-10-08 · campaña masiva (objetivo >1.000 VALID)
+- **Resultado**: TESTLEY_GENERATED VALID pasa de 588 a **1.013** (+425).
+- **Lotes S00038–S00051** (`juez-sesion-v4`, sin cambios de política ni de guards):
+  - Publicados (10 lotes: S00039, S00040, S00042–S00046, S00048, S00050, S00051): 487 preguntas generadas → 425 VALID, 51 REVIEW_REQUIRED y 11 REJECTED, todas por duplicado.
+  - Retenidos sin publicar ni rejuzgar (4 lotes, 195 preguntas): S00038, S00041, S00047 y S00049. En los cuatro el juez dio 100 % VALID y la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó razones sin evidencia propia (2, 3, 1 y 4 respectivamente). La evidencia está en `fabrica/estado/retenidos/<lote>/DECISION.json`.
+  - La campaña aísla cada lote problemático y continúa con el siguiente; la fábrica no queda en pausa.
+- **Incidencias**:
+  - Límites de uso (429) en el redactor y los jueces; se relanzaron sin veredictos previos.
+  - En S00051, la tanda 05 fue rechazada por el guard (RESPUESTA_AGREGADA) y se repitió con un juez nuevo.
+- **Test nuevo**: ningún lote retenido ni ninguna pregunta marcada sin evidencia llega al banco (`LoteRetenido.test_todos_los_lotes_retenidos_sin_publicar`).
+- **Pendiente**: S00022 sigue RETENIDO_DEFINITIVO. El resto de retenidos espera decisión humana.

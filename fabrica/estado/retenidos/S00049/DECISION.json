@@ -1,0 +1,139 @@
+{
+ "lote": "S00049",
+ "estado": "RETENIDO",
+ "fecha": "2026-10-06",
+ "decision": "Retenido automáticamente: 48/48 VALID y la segunda comprobación ALL_VALID_SIN_EVIDENCIA marcó 4 razones sin evidencia individual. Campaña masiva: el lote se aísla y la fábrica continúa con el siguiente. No se publica, no se rejuzga.",
+ "bloqueo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+ "judge_policy_version": "juez-sesion-v4",
+ "veredictos_juez": {
+  "0.0": "VALID",
+  "1.0": "VALID",
+  "1.1": "VALID",
+  "1.2": "VALID",
+  "2.0": "VALID",
+  "2.1": "VALID",
+  "2.2": "VALID",
+  "3.0": "VALID",
+  "3.1": "VALID",
+  "3.2": "VALID",
+  "4.0": "VALID",
+  "4.1": "VALID",
+  "4.2": "VALID",
+  "5.0": "VALID",
+  "6.0": "VALID",
+  "7.0": "VALID",
+  "8.0": "VALID",
+  "9.0": "VALID",
+  "10.0": "VALID",
+  "11.0": "VALID",
+  "12.0": "VALID",
+  "13.0": "VALID",
+  "14.0": "VALID",
+  "15.0": "VALID",
+  "15.1": "VALID",
+  "15.2": "VALID",
+  "16.0": "VALID",
+  "16.1": "VALID",
+  "16.2": "VALID",
+  "17.0": "VALID",
+  "17.1": "VALID",
+  "17.2": "VALID",
+  "18.0": "VALID",
+  "18.1": "VALID",
+  "18.2": "VALID",
+  "19.0": "VALID",
+  "19.1": "VALID",
+  "19.2": "VALID",
+  "20.0": "VALID",
+  "21.0": "VALID",
+  "23.0": "VALID",
+  "24.0": "VALID",
+  "25.0": "VALID",
+  "26.0": "VALID",
+  "27.0": "VALID",
+  "28.0": "VALID",
+  "28.1": "VALID",
+  "28.2": "VALID"
+ },
+ "intentos_por_tanda": [
+  {
+   "tanda": "01",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "02",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "03",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "04",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  },
+  {
+   "tanda": "05",
+   "intentos": [
+    "ACEPTADA"
+   ]
+  }
+ ],
+ "segunda_comprobacion": {
+  "ids": 48,
+  "veredictos": 48,
+  "razones_no_especificas": [
+   "3.0",
+   "12.0",
+   "17.0",
+   "24.0"
+  ],
+  "tandas_sin_evidencia": [],
+  "ok": false
+ },
+ "sin_evidencia_propia": [
+  {
+   "question_id": "3.0",
+   "q": "Es planteja reformar un dret reconegut a l'article 20 de la CE. Segons l'apartat B.4.5 de la Guia d'estudi, quin procediment s'ha de seguir?",
+   "cita": "Els drets reconeguts als articles 15 a 29 de la CE només poden ser reformats seguint el procediment previst a l’article 168 del text constitucional",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto dice que los derechos de los arts. 15 a 29 de la CE solo pueden reformarse por el procedimiento del art. 168. El art. 20 está dentro de ese rango y la cita lo contiene, así que la inferencia es directa. Los arts. 53.1 y 9.1 se citan en el texto para otras garantías y el art. 81 no aparece, por lo que no son correctos para la reforma. Es única y clara."
+  },
+  {
+   "question_id": "12.0",
+   "q": "Segons l'apartat C.3.5 de la Guia d'estudi, a quines autoritats està destinada la funció del SIS relativa als estrangers inclosos a la llista de no admissibles (article 96 del CAAS)?",
+   "cita": "estrangers inclosos a la llista de no admissibles, destinat a les autoritats d’estrangeria (article 96)",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto (5.3 Funcionament del SIS) dice literalmente que los extranjeros incluidos en la lista de no admisibles (art. 96) se destinan a las autoridades de extranjería. La opción 2 está respaldada. La cita contiene el elemento completo. Los distractores corresponden a otros artículos (95 judiciales, 97 policiales y judiciales) y no son correctos aquí. La pregunta es clara y útil."
+  },
+  {
+   "question_id": "17.0",
+   "q": "Segons l'apartat A.2.8 de la Guia d'estudi, quin d'aquests elements NO s'esmenta entre els que van comportar una espiral de dificultats econòmiques durant la greu crisi econòmica?",
+   "cita": "L’atur, el rescat d’entitats bancàries, els conflictes amb la banca pel pagament d’hipoteques, els desnonaments, la disminució de prestacions socials, etc., van comportar una espiral de dificultats econòmiques",
+   "verdict_juez": "VALID",
+   "reason_juez": "Pregunta negativa. El texto enumera el paro, el rescate de entidades bancarias, los conflictos hipotecarios, los desahucios y la 'disminución de prestaciones sociales'. La cita contiene la lista completa, así que se ve que las opciones 0, 1 y 3 figuran y que el 'aumento de prestaciones' no figura (el texto dice lo contrario). Solo la opción 2 es correcta y la pregunta es clara."
+  },
+  {
+   "question_id": "24.0",
+   "q": "Segons l'apartat A.6.4 de la Guia d'estudi, quin d'aquests és un dels objectius de la Llei 5/2008, del dret de les dones a eradicar la violència masclista?",
+   "cita": "Posteriorment s’aprova la Llei 5/2008, del 24 d’abril, del dret de les dones a eradicar la violència masclista amb l’objectiu d’eradicar les estructures socials i els estereotips culturals que la perpetuen",
+   "verdict_juez": "VALID",
+   "reason_juez": "El texto indica que la Llei 5/2008 tiene por objetivo erradicar las estructuras sociales y los estereotipos culturales que perpetúan la violencia, y la opción B coincide. La cita incluye ese elemento. Los distractores corresponden a otras normas del texto (Llei 8/2006 sobre conciliación, el permiso de 16 semanas del RDL 6/2019 y el Decret 249/2021), así que ninguno es objetivo de la Llei 5/2008. No hay parecidas."
+  }
+ ],
+ "huellas": {
+  "candidatas.json": "24ad13de77a972c42ba7f1568a804258bd3943bc9293ebc26d2abd4498fbe108",
+  "revision.json": "2bf6c3f34e2654e13116ccc8abb82eca02d9b17b4cfc961fac6c83029059912b",
+  "politica.json": "341f0d4d978cba05eca5eab464f8bf37c82f5f2c3f24cbbb5e59ce780b19d81c",
+  "evaluacion.json": "baf43fdffb0416c9b81436d56e875bfc90e10815d36a645aeb87409a6842ad07",
+  "items.json": "80bdc4aae6859ba0a1ecf75a6299d8f0f83ad050b5a2d5200ec431a7f812d89d"
+ }
+}

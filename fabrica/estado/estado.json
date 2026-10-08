@@ -1183,6 +1183,93 @@
     "veredictos": "4d11ff55d8d5e48f0f69bab80f32b1b26288ff84228415779974c48eab81878f",
     "prompt_juez": "198a1a6c53ad8baa9d3fe84ecf617806ecb8d555060f214f373c1a59eac89c56"
    }
+  },
+  {
+   "id": "S00048",
+   "fecha": "2026-10-07T14:26:20",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 27,
+   "generadas": 50,
+   "VALID": 45,
+   "REVIEW_REQUIRED": 4,
+   "REJECTED": 1,
+   "duplicadas": 1,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "0496c70338ce9b19335f9e2e25c5123d8075c407f92b84f39a9c57fe7f8e2b1d",
+    "revision": "d37728d5f5cd31cda3c4a590541649f1aff66a840efe706a9f37e15e46cc24bd",
+    "veredictos": "78e1ec9d383f8ec6125ae65b04cd92bf156ee249eeb56fc649dd19dc7bd39d53",
+    "prompt_juez": "01c97e30fe61251783a9199585cfb757d6dd6b0b13dfb5be8895f5a5a2ff002c"
+   }
+  },
+  {
+   "id": "S00050",
+   "fecha": "2026-10-08T17:58:33",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 29,
+   "generadas": 47,
+   "VALID": 40,
+   "REVIEW_REQUIRED": 5,
+   "REJECTED": 2,
+   "duplicadas": 2,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "bc3db5ad6ced9ee674d2897cc510117528ee50f477116c7bba988cd112fd59b1",
+    "revision": "1862f2fd70e1114dc51cc57327ca44209200e8192478f2472cca906f889c7029",
+    "veredictos": "8829d33a19a558446387fb111ea58926c05c5426909d8a28c4145286b8d20d07",
+    "prompt_juez": "ef7b767087b691b45885cadf73c0c4a6ef00707d52425cffdd0042b28adeb295"
+   }
+  },
+  {
+   "id": "S00051",
+   "fecha": "2026-10-08T18:08:48",
+   "modo": "sesion",
+   "oposiciones": [
+    "mossos-esquadra"
+   ],
+   "articulos": 27,
+   "generadas": 46,
+   "VALID": 38,
+   "REVIEW_REQUIRED": 5,
+   "REJECTED": 3,
+   "duplicadas": 3,
+   "tokens": {},
+   "coste_usd": 0.0,
+   "nota_coste": "redactadas en una sesión de Claude Code: incluido en la suscripción, sin coste de API",
+   "segundos": 0,
+   "incidencias": [],
+   "judge_policy_version": "juez-sesion-v4",
+   "judge_policy_sha256": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+   "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+   "generator_prompt_version": "redactor-sesion-v3",
+   "huellas": {
+    "candidatas": "7e1464b6d033ea6ecca61a8ded98e686d3ee3826a7b336f39539f5ef42f7de8b",
+    "revision": "2e831e42b1b3877c6aad2099833a2a305859263554fd2cb90fb68fc5a66b67d7",
+    "veredictos": "c1992ad2e930d85a164a66ae077d698a5e18753d9156dc4fb3b5a123d424eee2",
+    "prompt_juez": "c2e7c5cc2d53228dfc8a2a741be141d8518a18d6ab364451271371aa24036be4"
+   }
   }
  ],
  "pausa": null,
@@ -1190,7 +1277,9 @@
   "lo-4-2015|24": 2,
   "guia-mossos|C.2.2": 2,
   "guia-mossos|C.2.3": 1,
-  "guia-mossos|C.5.IF": 2
+  "guia-mossos|C.5.IF": 2,
+  "guia-mossos|A.6.3": 1,
+  "guia-mossos|A.7.3": 2
  },
  "pausas_levantadas": [
   {
@@ -1278,6 +1367,20 @@
    "fecha": "2026-10-06",
    "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
    "evidencia": "fabrica/estado/retenidos/S00041/DECISION.json"
+  },
+  {
+   "id": "S00047",
+   "estado": "RETENIDO",
+   "fecha": "2026-10-06",
+   "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+   "evidencia": "fabrica/estado/retenidos/S00047/DECISION.json"
+  },
+  {
+   "id": "S00049",
+   "estado": "RETENIDO",
+   "fecha": "2026-10-06",
+   "motivo": "ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual)",
+   "evidencia": "fabrica/estado/retenidos/S00049/DECISION.json"
   }
  ]
 }

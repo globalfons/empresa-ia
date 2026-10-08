@@ -10,15 +10,18 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 
 | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
 |---|---|---|---|---|---|
-| S00033 | 46 | 39 | 5 | 2 | juez-sesion-v4 |
-| S00034 | 48 | 39 | 8 | 1 | juez-sesion-v4 |
-| S00035 | 50 | 45 | 4 | 1 | juez-sesion-v4 |
-| S00036 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
-| S00039 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
+| S00045 | 49 | 39 | 7 | 3 | juez-sesion-v4 |
+| S00046 | 47 | 42 | 5 | 0 | juez-sesion-v4 |
+| S00048 | 50 | 45 | 4 | 1 | juez-sesion-v4 |
+| S00050 | 47 | 40 | 5 | 2 | juez-sesion-v4 |
+| S00051 | 46 | 38 | 5 | 3 | juez-sesion-v4 |
 
 - **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
 - **S00037 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00037/DECISION.json`.
 - **S00038 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00038/DECISION.json`.
+- **S00041 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00041/DECISION.json`.
+- **S00047 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00047/DECISION.json`.
+- **S00049 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00049/DECISION.json`.
 
 | área | prioridad | elementos planificados |
 |---|---|---|
@@ -26,7 +29,6 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 | COMPETENCIES | P1 | 54 |
 | INTERVIEW | P1 | 4 |
 | KNOWLEDGE | P0 | 0 |
-| KNOWLEDGE | P2 | 1 |
 
 ## BATCH MOSSOS-SOURCES-001
 
@@ -37,19 +39,6 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - validacion: catalogo/perfil.py → verificar_bloque / fabrica.fuente
 - judge: —
 - criterio de publicación: no aplica
-
-## BATCH MOSSOS-KNOWLEDGE-001
-
-- prioridad: P2 · tipo: generacion · ejecutable ahora: sí
-- temas: C.2
-- subtemas: C.2.2
-- cantidad: 1
-- dificultad: {"2": 1}
-- tipos: {"aplicacion": 1}
-- fuente: guia-mossos:C.2.2
-- validacion: fabrica.validacion (estructura, respuesta única, cita literal, duplicados) + fabrica.fuente
-- judge: juez independiente con la política activa (fabrica/politica_juez/registro.json), tandas de solo lectura
-- criterio de publicación: solo VALID por la puerta de la fábrica (fabrica.sesion/motor); REVIEW_REQUIRED a revisión humana
 
 ## BATCH MOSSOS-INTERVIEW-001
 

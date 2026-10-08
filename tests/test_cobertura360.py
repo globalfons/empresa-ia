@@ -71,7 +71,10 @@ class Plan(unittest.TestCase):
     def test_tandas_de_conocimiento_concretas_y_bloqueadas_por_la_pausa(self):
         tam = K.CV.cfg()["lote"]["tamano_inicial"]
         kn = [t for t in A["tandas"] if t["area"] == "KNOWLEDGE" and t["tipo"] == "generacion"]
-        self.assertTrue(kn)
+        faltan = sum(t["faltan"] for t in A["knowledge"]["temas"] if t["apartados_con_fuente"])
+        if not kn:  # sin tandas solo si los objetivos de los temas con fuente están cubiertos
+            self.assertEqual(faltan, 0)
+            return
         for t in kn:
             self.assertLessEqual(t["cantidad"], tam)
             self.assertEqual(t["cantidad"], sum(t["tipos"].values()))
@@ -96,7 +99,8 @@ class Plan(unittest.TestCase):
             self.assertIn(h, md)
         self.assertIn("nunca requisitos oficiales", md)
         plan = K.md_plan(A)
-        self.assertIn("## BATCH MOSSOS-KNOWLEDGE-001", plan)
+        if any(t["area"] == "KNOWLEDGE" and t["tipo"] == "generacion" for t in A["tandas"]):
+            self.assertIn("## BATCH MOSSOS-KNOWLEDGE-001", plan)
         self.assertIn("criterio de publicación", plan)
 
 

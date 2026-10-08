@@ -8,21 +8,24 @@ Estados: **OFFICIAL_EXAM** = pregunta de un examen oficial · **OFFICIAL_VERIFIE
 
 | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
 |---|---|---|---|---|---|
-| S00033 | 46 | 39 | 5 | 2 | juez-sesion-v4 |
-| S00034 | 48 | 39 | 8 | 1 | juez-sesion-v4 |
-| S00035 | 50 | 45 | 4 | 1 | juez-sesion-v4 |
-| S00036 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
-| S00039 | 50 | 44 | 6 | 0 | juez-sesion-v4 |
+| S00045 | 49 | 39 | 7 | 3 | juez-sesion-v4 |
+| S00046 | 47 | 42 | 5 | 0 | juez-sesion-v4 |
+| S00048 | 50 | 45 | 4 | 1 | juez-sesion-v4 |
+| S00050 | 47 | 40 | 5 | 2 | juez-sesion-v4 |
+| S00051 | 46 | 38 | 5 | 3 | juez-sesion-v4 |
 
 - **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
 - **S00037 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00037/DECISION.json`.
 - **S00038 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00038/DECISION.json`.
+- **S00041 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00041/DECISION.json`.
+- **S00047 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00047/DECISION.json`.
+- **S00049 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00049/DECISION.json`.
 
 ## Resumen
 
 | área | contenido servido | en revisión | retirado | oficial |
 |---|---|---|---|---|
-| Conocimientos | 632 TestLey | 84 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
+| Conocimientos | 1013 TestLey | 140 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
 | Aptitud | generadores: 11 formatos × 3 dificultades | 0 | 0 | estructura (80 preguntas, 35 min); sin ejercicios oficiales |
 | Competencias | 45 situaciones + 9 fichas | 15 | 0 | 10 nombres de competencias |
 | Entrevista | 56 escenarios | 29 | 0 | objeto de la entrevista y 10 competencias |
@@ -35,26 +38,26 @@ Formato oficial del simulacro: 30 preguntas, 35 min, penalización 0.25. Peso de
 
 | tema | apartados (con fuente) | TestLey VALID | REVIEW | DEPRECATED | oficial VALID / REVIEW / OUTDATED | peso exámenes | capacidad | objetivo | faltan | prioridad |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A.1 Història de Catalunya (part I) | 10 (10) | 30 | 8 | 1 | 19 / 0 / 0 | 7.4% | 90 | 23 | 0 | P3 |
-| A.2 Història de Catalunya (part II) | 9 (9) | 37 | 2 | 0 | 14 / 0 / 0 | 5.5% | 89 | 18 | 0 | P3 |
-| A.3 Història de la policia a Catalunya | 6 (6) | 35 | 4 | 0 | 7 / 0 / 0 | 2.7% | 55 | 12 | 0 | P3 |
-| A.4 Àmbit sociolingüístic | 5 (5) | 30 | 4 | 0 | 16 / 0 / 0 | 6.2% | 50 | 19 | 0 | P3 |
-| A.5 Marc geogràfic de Catalunya | 7 (7) | 33 | 6 | 0 | 12 / 0 / 0 | 4.7% | 60 | 15 | 0 | P3 |
-| A.6 Entorn social a Catalunya | 6 (6) | 35 | 4 | 0 | 9 / 1 / 0 | 3.9% | 60 | 12 | 0 | P3 |
-| A.7 Les tecnologies de la informació e | 7 (7) | 35 | 4 | 0 | 8 / 0 / 0 | 3.1% | 66 | 14 | 0 | P3 |
-| B.1 L'Estatut d'autonomia de Catalunya | 6 (6) | 30 | 7 | 0 | 4 / 2 / 0 | 2.3% | 53 | 12 | 0 | P3 |
-| B.2 Les institucions polítiques de Cat | 6 (6) | 32 | 6 | 1 | 20 / 0 / 0 | 7.8% | 58 | 24 | 0 | P3 |
-| B.3 L'ordenament jurídic de l'Estat | 32 (32) | 53 | 2 | 0 | 11 / 0 / 0 | 4.3% | 101 | 64 | 11 | P2 |
-| B.4 Els drets humans i els drets const | 9 (9) | 36 | 1 | 0 | 11 / 1 / 0 | 4.7% | 85 | 18 | 0 | P3 |
-| B.5 Les institucions polítiques de l'E | 5 (5) | 28 | 6 | 0 | 5 / 0 / 0 | 1.9% | 45 | 10 | 0 | P3 |
-| B.6 Els òrgans jurisdiccionals. Poder  | 5 (5) | 30 | 6 | 0 | 11 / 0 / 0 | 4.3% | 46 | 13 | 0 | P3 |
-| B.7 L'organització territorial de l'Es | 8 (8) | 33 | 6 | 0 | 8 / 0 / 0 | 3.1% | 56 | 16 | 0 | P3 |
-| B.8 La Unió Europea | 4 (4) | 25 | 3 | 0 | 11 / 1 / 0 | 4.7% | 39 | 15 | 0 | P3 |
-| C.1 Les competències de la Generalitat | 3 (3) | 12 | 0 | 1 | 6 / 1 / 0 | 2.7% | 18 | 9 | 0 | P3 |
-| C.2 El Departament d'Interior | 8 (8) | 29 | 2 | 0 | 23 / 9 / 3 | 13.6% | 58 | 41 | 12 | P2 |
-| C.3 La coordinació policial | 6 (6) | 39 | 8 | 0 | 22 / 3 / 0 | 9.7% | 60 | 30 | 0 | P3 |
-| C.4 El marc legal de la seguretat | 5 (5) | 33 | 3 | 0 | 14 / 1 / 0 | 5.8% | 50 | 18 | 0 | P3 |
-| C.5 El Codi deontològic policial | 4 (4) | 17 | 2 | 1 | 4 / 0 / 0 | 1.6% | 26 | 8 | 0 | P3 |
+| A.1 Història de Catalunya (part I) | 10 (10) | 64 | 19 | 1 | 19 / 0 / 0 | 7.4% | 90 | 23 | 0 | P3 |
+| A.2 Història de Catalunya (part II) | 9 (9) | 78 | 5 | 0 | 14 / 0 / 0 | 5.5% | 89 | 18 | 0 | P3 |
+| A.3 Història de la policia a Catalunya | 6 (6) | 50 | 5 | 0 | 7 / 0 / 0 | 2.7% | 55 | 12 | 0 | P3 |
+| A.4 Àmbit sociolingüístic | 5 (5) | 43 | 8 | 0 | 16 / 0 / 0 | 6.2% | 50 | 19 | 0 | P3 |
+| A.5 Marc geogràfic de Catalunya | 7 (7) | 52 | 8 | 0 | 12 / 0 / 0 | 4.7% | 60 | 15 | 0 | P3 |
+| A.6 Entorn social a Catalunya | 6 (6) | 54 | 7 | 0 | 9 / 1 / 0 | 3.9% | 60 | 12 | 0 | P3 |
+| A.7 Les tecnologies de la informació e | 7 (7) | 59 | 6 | 0 | 8 / 0 / 0 | 3.1% | 66 | 14 | 0 | P3 |
+| B.1 L'Estatut d'autonomia de Catalunya | 6 (6) | 59 | 10 | 0 | 4 / 2 / 0 | 2.3% | 53 | 12 | 0 | P3 |
+| B.2 Les institucions polítiques de Cat | 6 (6) | 49 | 10 | 1 | 20 / 0 / 0 | 7.8% | 58 | 24 | 0 | P3 |
+| B.3 L'ordenament jurídic de l'Estat | 32 (32) | 82 | 6 | 0 | 11 / 0 / 0 | 4.3% | 101 | 64 | 0 | P3 |
+| B.4 Els drets humans i els drets const | 9 (9) | 73 | 4 | 0 | 11 / 1 / 0 | 4.7% | 85 | 18 | 0 | P3 |
+| B.5 Les institucions polítiques de l'E | 5 (5) | 35 | 10 | 0 | 5 / 0 / 0 | 1.9% | 45 | 10 | 0 | P3 |
+| B.6 Els òrgans jurisdiccionals. Poder  | 5 (5) | 39 | 8 | 0 | 11 / 0 / 0 | 4.3% | 46 | 13 | 0 | P3 |
+| B.7 L'organització territorial de l'Es | 8 (8) | 50 | 6 | 0 | 8 / 0 / 0 | 3.1% | 56 | 16 | 0 | P3 |
+| B.8 La Unió Europea | 4 (4) | 36 | 3 | 0 | 11 / 1 / 0 | 4.7% | 39 | 15 | 0 | P3 |
+| C.1 Les competències de la Generalitat | 3 (3) | 18 | 0 | 1 | 6 / 1 / 0 | 2.7% | 18 | 9 | 0 | P3 |
+| C.2 El Departament d'Interior | 8 (8) | 54 | 5 | 0 | 23 / 9 / 3 | 13.6% | 58 | 41 | 0 | P3 |
+| C.3 La coordinació policial | 6 (6) | 51 | 11 | 0 | 22 / 3 / 0 | 9.7% | 60 | 30 | 0 | P3 |
+| C.4 El marc legal de la seguretat | 5 (5) | 44 | 6 | 0 | 14 / 1 / 0 | 5.8% | 50 | 18 | 0 | P3 |
+| C.5 El Codi deontològic policial | 4 (4) | 23 | 3 | 1 | 4 / 0 / 0 | 1.6% | 26 | 8 | 0 | P3 |
 | D Coneixement de l'entorn polític, e | 0 (0) | 0 | 0 | 0 | 0 / 0 / 0 | 0.0% | 0 | 0 | 0 | P1 |
 
 ### Apartados sin cobertura, bloqueados y concentración
@@ -63,21 +66,21 @@ Formato oficial del simulacro: 30 preguntas, 35 min, penalización 0.25. Peso de
 |---|---|---|---|---|---|
 | A.1 | — | — | — | — | caso_practico |
 | A.2 | — | — | — | — | caso_practico |
-| A.3 | — | — | — | sí: 6% del banco TestLey frente a 3% del examen | caso_practico |
+| A.3 | — | — | — | — | caso_practico |
 | A.4 | — | — | — | — | caso_practico |
 | A.5 | — | — | — | — | caso_practico |
 | A.6 | — | — | — | — | caso_practico |
 | A.7 | — | — | — | — | caso_practico |
-| B.1 | — | — | — | sí: 5% del banco TestLey frente a 2% del examen | negativa, dificil, caso_practico |
-| B.2 | — | — | — | — | aplicacion, caso_practico |
-| B.3 | 83, 84, 88, 89, 92 | — | 1, 2, 3, 7, 8, 9, 95, 96 | — | caso_practico |
+| B.1 | — | — | — | sí: 6% del banco TestLey frente a 2% del examen | negativa, dificil, caso_practico |
+| B.2 | — | — | — | — | caso_practico |
+| B.3 | 88 | — | 1, 2, 3, 7, 8, 9, 95, 96 | — | caso_practico |
 | B.4 | — | — | — | — | caso_practico |
-| B.5 | — | — | — | sí: 4% del banco TestLey frente a 2% del examen | caso_practico |
+| B.5 | — | — | — | — | caso_practico |
 | B.6 | — | — | — | — | negativa, caso_practico |
 | B.7 | — | — | — | — | caso_practico |
 | B.8 | — | — | — | — | caso_practico |
 | C.1 | — | — | — | — | negativa, caso_practico |
-| C.2 | C.2.2 | — | — | — | aplicacion, caso_practico |
+| C.2 | C.2.2 | — | — | — | caso_practico |
 | C.3 | — | — | — | — | caso_practico |
 | C.4 | — | — | — | — | conceptual, negativa, caso_practico |
 | C.5 | — | — | — | — | caso_practico |
@@ -156,7 +159,7 @@ Lo que necesitará la Fase 4: registro de marcas por prueba e intento; puntuaci�
 
 ## 7. Simulations
 
-- Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **7** (limitan: C.2, C.3, A.1, B.2, C.1); mezclando TestLey y oficiales: 12; sin respetar el reparto: 29. Objetivo: 10.
+- Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **13** (limitan: C.2, C.3, B.2, C.1, A.4); mezclando TestLey y oficiales: 18; sin respetar el reparto: 42. Objetivo: 10.
 - Aptitud: práctica cronometrada al ritmo oficial con ejercicios generados (ilimitada); NO es una réplica de la subprueba: las bases no publican el reparto por aptitudes y la verbal es parcial.
 - Entrevista: 5 simulaciones completas sin repetir escenario (limitan: responsabilitat, adaptabilitat, motivacio, habilitats-socials); objetivo 6.
 - Primera prueba completa: no disponible: combinaría conocimientos (simulable), aptitudinal (solo práctica) e idiomas (sin contenido).
@@ -170,26 +173,26 @@ Cómo se calcula cada objetivo:
 
 | AREA | SUBAREA | ACTUAL | VALID | REVIEW | OFICIAL | OBJETIVO | FALTAN | PRIORIDAD |
 |---|---|---|---|---|---|---|---|---|
-| KNOWLEDGE | A.1 Història de Catalunya (part I) | 39 | 30 | 8 | 19 | 23 | 0 | P3 |
-| KNOWLEDGE | A.2 Història de Catalunya (part II) | 39 | 37 | 2 | 14 | 18 | 0 | P3 |
-| KNOWLEDGE | A.3 Història de la policia a Catalunya | 39 | 35 | 4 | 7 | 12 | 0 | P3 |
-| KNOWLEDGE | A.4 Àmbit sociolingüístic | 34 | 30 | 4 | 16 | 19 | 0 | P3 |
-| KNOWLEDGE | A.5 Marc geogràfic de Catalunya | 39 | 33 | 6 | 12 | 15 | 0 | P3 |
-| KNOWLEDGE | A.6 Entorn social a Catalunya | 39 | 35 | 4 | 9 | 12 | 0 | P3 |
-| KNOWLEDGE | A.7 Les tecnologies de la informació en el | 39 | 35 | 4 | 8 | 14 | 0 | P3 |
-| KNOWLEDGE | B.1 L'Estatut d'autonomia de Catalunya (EA | 37 | 30 | 7 | 4 | 12 | 0 | P3 |
-| KNOWLEDGE | B.2 Les institucions polítiques de Catalun | 39 | 32 | 6 | 20 | 24 | 0 | P3 |
-| KNOWLEDGE | B.3 L'ordenament jurídic de l'Estat | 55 | 53 | 2 | 11 | 64 | 11 | P2 |
-| KNOWLEDGE | B.4 Els drets humans i els drets constituc | 37 | 36 | 1 | 11 | 18 | 0 | P3 |
-| KNOWLEDGE | B.5 Les institucions polítiques de l'Estat | 34 | 28 | 6 | 5 | 10 | 0 | P3 |
-| KNOWLEDGE | B.6 Els òrgans jurisdiccionals. Poder judi | 36 | 30 | 6 | 11 | 13 | 0 | P3 |
-| KNOWLEDGE | B.7 L'organització territorial de l'Estat | 39 | 33 | 6 | 8 | 16 | 0 | P3 |
-| KNOWLEDGE | B.8 La Unió Europea | 28 | 25 | 3 | 11 | 15 | 0 | P3 |
-| KNOWLEDGE | C.1 Les competències de la Generalitat en  | 13 | 12 | 0 | 6 | 9 | 0 | P3 |
-| KNOWLEDGE | C.2 El Departament d'Interior | 31 | 29 | 2 | 23 | 41 | 12 | P2 |
-| KNOWLEDGE | C.3 La coordinació policial | 47 | 39 | 8 | 22 | 30 | 0 | P3 |
-| KNOWLEDGE | C.4 El marc legal de la seguretat | 36 | 33 | 3 | 14 | 18 | 0 | P3 |
-| KNOWLEDGE | C.5 El Codi deontològic policial | 20 | 17 | 2 | 4 | 8 | 0 | P3 |
+| KNOWLEDGE | A.1 Història de Catalunya (part I) | 84 | 64 | 19 | 19 | 23 | 0 | P3 |
+| KNOWLEDGE | A.2 Història de Catalunya (part II) | 83 | 78 | 5 | 14 | 18 | 0 | P3 |
+| KNOWLEDGE | A.3 Història de la policia a Catalunya | 55 | 50 | 5 | 7 | 12 | 0 | P3 |
+| KNOWLEDGE | A.4 Àmbit sociolingüístic | 51 | 43 | 8 | 16 | 19 | 0 | P3 |
+| KNOWLEDGE | A.5 Marc geogràfic de Catalunya | 60 | 52 | 8 | 12 | 15 | 0 | P3 |
+| KNOWLEDGE | A.6 Entorn social a Catalunya | 61 | 54 | 7 | 9 | 12 | 0 | P3 |
+| KNOWLEDGE | A.7 Les tecnologies de la informació en el | 65 | 59 | 6 | 8 | 14 | 0 | P3 |
+| KNOWLEDGE | B.1 L'Estatut d'autonomia de Catalunya (EA | 69 | 59 | 10 | 4 | 12 | 0 | P3 |
+| KNOWLEDGE | B.2 Les institucions polítiques de Catalun | 60 | 49 | 10 | 20 | 24 | 0 | P3 |
+| KNOWLEDGE | B.3 L'ordenament jurídic de l'Estat | 88 | 82 | 6 | 11 | 64 | 0 | P3 |
+| KNOWLEDGE | B.4 Els drets humans i els drets constituc | 77 | 73 | 4 | 11 | 18 | 0 | P3 |
+| KNOWLEDGE | B.5 Les institucions polítiques de l'Estat | 45 | 35 | 10 | 5 | 10 | 0 | P3 |
+| KNOWLEDGE | B.6 Els òrgans jurisdiccionals. Poder judi | 47 | 39 | 8 | 11 | 13 | 0 | P3 |
+| KNOWLEDGE | B.7 L'organització territorial de l'Estat | 56 | 50 | 6 | 8 | 16 | 0 | P3 |
+| KNOWLEDGE | B.8 La Unió Europea | 39 | 36 | 3 | 11 | 15 | 0 | P3 |
+| KNOWLEDGE | C.1 Les competències de la Generalitat en  | 19 | 18 | 0 | 6 | 9 | 0 | P3 |
+| KNOWLEDGE | C.2 El Departament d'Interior | 59 | 54 | 5 | 23 | 41 | 0 | P3 |
+| KNOWLEDGE | C.3 La coordinació policial | 62 | 51 | 11 | 22 | 30 | 0 | P3 |
+| KNOWLEDGE | C.4 El marc legal de la seguretat | 50 | 44 | 6 | 14 | 18 | 0 | P3 |
+| KNOWLEDGE | C.5 El Codi deontològic policial | 27 | 23 | 3 | 4 | 8 | 0 | P3 |
 | KNOWLEDGE | D Coneixement de l'entorn polític, econò | 0 | 0 | 0 | 0 | 0 | 0 | P1 |
 | APTITUDE | abstract | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
 | APTITUDE | spatial | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
