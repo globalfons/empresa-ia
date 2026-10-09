@@ -5,6 +5,7 @@
   var el = document.getElementById("aptitud");
   if (!el || !window.TLAptitud || !window.TLPsico) return;
   var A = window.TLAptitud, P = window.TLPsico, OP = el.getAttribute("data-op"), ID = el.getAttribute("data-idioma") || "es";
+  var AUTO = /modo=(\w+)/.exec(location.hash || "");
   var CFG = window.TL_CONFIG || {}, PLAN = window.TL && TL.plan ? TL.plan() : null;
   var COMPLETO = !window.TL || !TL.puede || TL.puede("aptitud_completo");
   var MUESTRA = (PLAN && PLAN.aptitud_muestra) || ((CFG.planes || {}).free || {}).aptitud_muestra || 10;
@@ -58,6 +59,8 @@
         empezar({ modo: modo === "categoria" ? (cat ? "categoria" : dif ? "dificultad" : "mixto") : modo, categoria: cat || null, dificultad: dif, n: n });
       });
     });
+    // Enlace directo a un modo (p. ej. desde el simulacro 360 del panel): #modo=contrarreloj; si el modo es del Pase y no está disponible, mixto
+    if (AUTO) { var bb = el.querySelector('[data-modo="' + AUTO[1] + '"]:not([disabled])') || el.querySelector('[data-modo="mixto"]'); AUTO = null; if (bb) bb.click(); }
   }
 
   // ---------- sesión ----------

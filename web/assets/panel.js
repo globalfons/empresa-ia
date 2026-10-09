@@ -158,6 +158,13 @@
       '<p class="muted small">Calculado con tu tiempo disponible, tus fallos y tus repasos pendientes. Es una orientación de TestLey, no un dato oficial.</p></section>';
   }
   // Módulos de preparación del perfil: los de tipo «test» enlazan a los tests; el resto, checklist y registro manual (sin nota)
+  // Panel 360: estado de todos los módulos, recomendaciones, reparto semanal y simulacro combinado (panel360.js)
+  var OTRAS = ["idiomas", "requisitos", "reconocimiento_medico", "documentacion", "calendario"];
+  function seccion360(s) {
+    if (!ES_OP || !window.TLPanel360 || !PERFIL || !PERFIL.motor360) return "";
+    var cl = window.TLMotor ? PERFIL.modulos.filter(function (m) { return OTRAS.indexOf(m.id) >= 0; }).map(function (m) { var e = TLMotor.estadoModulo(LEY, m); return { id: m.id, nombre: m.nombre, hechas: e.hechas, total: e.total }; }) : [];
+    return TLPanel360.seccion(LEY, PERFIL, { stats: s, ajustes: TL.ajustes(), checklists: cl, root: TL.root });
+  }
   function seccionPreparacion() {
     if (!ES_OP || !window.TLMotor || !PERFIL || !PERFIL.modulos.length) return "";
     var cal = TLMotor.proximos(PERFIL).slice(0, 4);
@@ -229,7 +236,7 @@
     var ult = s.sesiones.slice(-12);
 
     el.innerHTML =
-      '<div class="panel-grid"><div class="panel-main">' + seccionQueEstudiar(s, data) + seccionHoy(s, data) + seccionPreparacion() +
+      '<div class="panel-grid"><div class="panel-main">' + seccionQueEstudiar(s, data) + seccionHoy(s, data) + seccion360(s) + seccionPreparacion() +
       // Cabecera
       '<section class="hero-panel">' +
       '<div class="hp-main"><span class="kicker">' + (ses ? "Hola, " + esc((perfil && perfil.alias) || ses.user.email.split("@")[0]) : "Tu progreso en este dispositivo") + "</span>" +

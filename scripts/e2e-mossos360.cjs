@@ -116,6 +116,23 @@ const OP = 'mossos-esquadra';
     await p.click('[data-otra]'); await p.waitForSelector('[data-modo]');
     ok('23i MÉTRICAS · 1 sesión y competencias trabajadas (principal y secundarias)', /1 sesiones · [1-9]\/10 competencias/.test(await texto()));
     const sw4 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw4 > w) pasos.push(['sin desbordamiento entrevista', false, sw4]);
+    await ir(`oposiciones/${OP}/fisica/`); await p.waitForSelector('input[name="fx-sexo"]', { timeout: 8000 }).catch(() => {});
+    ok('24a FÍSICA · 3 pruebas oficiales y fuente DOGC', /Circuit d'agilitat/.test(await texto()) && await p.locator('a[href*="dogc.gencat.cat"]').count());
+    await p.check('input[name="fx-sexo"][value="homes"]'); await p.waitForSelector('#fx-form');
+    for (const [id, v] of [['circuit-agilitat', '18,4'], ['pressio-banc', '33'], ['cursa-llancadora', '9,5']]) { await p.selectOption('#fx-form select[name="prueba"]', id); await p.fill('#fx-form input[name="marca"]', v); await p.click('#fx-form button[type="submit"]'); await p.waitForTimeout(100); }
+    const fx = await p.evaluate(() => JSON.parse(localStorage.getItem('testley:fisica:v1') || '{}'));
+    const fxt = await texto(); ok('24b FÍSICA · marcas guardadas y lectura del barem', (fx.registros || []).length === 3 && /Lectura ponderada: 6\b/.test(fxt), (fx.registros || []).length + ' ' + (fxt.match(/Lectura ponderada[^·]*/) || [''])[0]);
+    ok('24c FÍSICA · plan orientativo con sesiones', /Orientativo de TestLey/.test(await texto()) && await p.locator('[data-sesion]').count());
+    const sw5 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw5 > w) pasos.push(['sin desbordamiento física', false, sw5]);
+    await ir(`oposiciones/${OP}/otras-pruebas/`); const ot = await texto();
+    ok('24d OTRAS PRUEBAS · catalán C1, idiomas y Annex 3', /C1/.test(ot) && /Idiomas voluntarios/.test(ot) && /Annex 3/.test(ot));
+    await ir(`panel/?c=${OP}`); await p.waitForSelector('#panel360', { timeout: 8000 }).catch(() => {});
+    const p360 = await p.locator('#panel360').innerText().catch(() => '');
+    ok('25a PANEL 360 · módulos con datos reales (física 6/10, entrevista, competencias)', /Lectura 6\/10/.test(p360) && await p.locator('#panel360 [data-m360]').count() >= 6, p360.slice(0, 100));
+    ok('25b PANEL 360 · recomendaciones, reparto semanal y simulacro combinado', await p.locator('#rec360 li').count() && await p.locator('#rep360 li').count() >= 6 && await p.locator('#sim360 li').count() === 4);
+    await p.click('#sim360 a[href*="modo=contrarreloj"]'); await p.waitForSelector('.opt', { timeout: 8000 }).catch(() => {});
+    ok('25c SIMULACRO 360 · el paso aptitudinal arranca la sesión', await p.locator('.opt').count());
+    const sw6 = await p.evaluate(() => document.documentElement.scrollWidth); if (sw6 > w) pasos.push(['sin desbordamiento aptitud', false, sw6]);
     informe.push({ tag, pasos });
     await c.close();
   }

@@ -140,6 +140,9 @@ const MOTOR = {};
 const motorDe = (o) => (o.id in MOTOR ? MOTOR[o.id] : (MOTOR[o.id] = fs.existsSync(`catalogo/perfiles/${o.id}.json`) ? JSON.parse(fs.readFileSync(`catalogo/perfiles/${o.id}.json`, "utf8")).motor360 || null : null));
 const aptitudOf = (o) => { const m = motorDe(o); const a = m && m.modulos.aptitude.oficial; return a && a.verification_status === "OFFICIAL_VERIFIED" ? a : null; };
 const competenciasOf = (o) => { const m = motorDe(o); const c = m && m.modulos.competency.oficial; return c && c.verification_status === "OFFICIAL_VERIFIED" && fs.existsSync(`catalogo/competencias/${o.id}.json`) ? c : null; };
+const fisicaOf = (o) => { const m = motorDe(o); const c = m && m.modulos.physical && m.modulos.physical.oficial; return c && c.verification_status === "OFFICIAL_VERIFIED" ? c : null; };
+const otrasOf = (o) => { const m = motorDe(o); if (!m) return null; const l = m.modulos.language && m.modulos.language.oficial, md = m.modulos.medical_information && m.modulos.medical_information.oficial;
+  const ok = (x) => x && x.verification_status === "OFFICIAL_VERIFIED" ? x : null; const r = { catala: ok(l && l.catala), idiomas: ok(l && l.idiomas_voluntarios), medica: ok(md) }; return r.catala || r.idiomas || r.medica ? r : null; };
 const entrevistaOf = (o) => { const m = motorDe(o); const c = m && m.modulos.interview.oficial; return c && c.verification_status === "OFFICIAL_VERIFIED" && competenciasOf(o) && fs.existsSync(`catalogo/entrevista/${o.id}.json`) ? c : null; };
 function page(route, opts) {
   const lm = opts.lastmod || C.updated;
@@ -515,7 +518,7 @@ ${LEYES.filter((L) => !L.qs.length).length ? `<h2>En preparación</h2><ul>${LEYE
 // ---------- Panel, ranking y cuenta ----------
 page("panel/", {
   title: "Mi panel de progreso", description: "Tu progreso en TestLey: nota orientativa, dominio por título, puntos débiles, racha y logros.", noindex: true, wide: true,
-  scripts: ["plan.js", "motores.js", "avisos.js", "panel.js"],
+  scripts: ["plan.js", "motores.js", "avisos.js", "fisica.js", "panel360.js", "panel.js"],
   body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
 page("errores/", {
@@ -736,6 +739,8 @@ ${prep}
 ${pend}
 ${aptitudOf(o) ? `<section class="card" id="aptitudinal"><h2>Subprueba aptitudinal</h2><p>${aptitudOf(o).preguntas} preguntas en ${aptitudOf(o).minutos} minutos sobre razonamiento abstracto, espacial, aptitud verbal, numérica y perceptiva. Entrena con ejercicios originales de TestLey por aptitud, dificultad, contrarreloj o en modo adaptativo.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/aptitudinal/">Entrenar la aptitudinal</a></p></section>` : ""}
 ${competenciasOf(o) ? `<section class="card" id="competencias-psicologia"><h2>Competencias y psicología</h2><p>La 3a prueba evalúa ${competenciasOf(o).lista.length} competencias con un test de competencias y una entrevista. Conoce las competencias oficiales, entrena con situaciones prácticas y compara tu autopercepción.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/competencias/">Competencias y autoconocimiento</a></p></section>` : ""}
+${fisicaOf(o) ? `<section class="card" id="prueba-fisica"><h2>Prueba física</h2><p>Registra tus marcas en las ${fisicaOf(o).pruebas.length} pruebas oficiales, consulta tu puntuación según los barems de la convocatoria y sigue un plan de entrenamiento orientativo hasta la fecha del examen.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/fisica/">Preparar la prueba física</a></p></section>` : ""}
+${otrasOf(o) ? `<section class="card" id="otras-pruebas"><h2>Catalán, idiomas y revisión médica</h2><p>Estructura oficial de la prueba de catalán, los idiomas voluntarios y los capítulos del cuadro de exclusiones médicas, con lista de tareas para tu preparación.</p><p><a class="btn" href="${r}oposiciones/${o.id}/otras-pruebas/">Ver las otras pruebas</a></p></section>` : ""}
 ${entrevistaOf(o) ? `<section class="card" id="entrevista"><h2>Entrevista</h2><p>Practica la entrevista de la prueba de adecuación psicoprofesional: responde por escrito a situaciones y preguntas de entrenamiento, recibe un análisis por competencias y revisa tu evolución.</p><p><a class="btn primary" href="${r}oposiciones/${o.id}/entrevista/">Entrenar la entrevista</a></p></section>` : ""}
 ${o.examenes.length ? `<section class="card" id="examenes"><div class="of-head"><h2>Exámenes oficiales anteriores</h2><span class="badge-oficial">Fuente oficial</span></div><p>Preguntas y plantilla de respuestas publicadas por la administración. Hazlos tal cual se publicaron, con la respuesta oficial.</p><ul class="of-list">${o.examenes.map((e) => `<li><span><a href="${r}oposiciones/${o.id}/examenes-oficiales/${e.id}/">Examen oficial ${esc(e.convocatoria)}</a> · ${e.preguntes.length} preguntas${e.minuts ? ` · ${e.minuts} min` : ""}</span></li>`).join("")}</ul><p><a class="btn" href="${r}oposiciones/${o.id}/examenes-oficiales/">Ver todos los exámenes oficiales</a></p></section>` : ""}
 <section class="card" id="legislacion"><h2>Legislación</h2><p class="muted small">${leyesOp.filter((n) => PUB[n.id]).length} de ${leyesOp.length} normas con test. ${boletin(o) === "BOE" ? "Textos consolidados del BOE." : "Fuentes oficiales: guia d'estudi de la Generalitat y textos consolidados del BOE."}</p><details class="leyes-det"${leyesOp.length <= 8 ? " open" : ""}><summary>Ver las ${leyesOp.length} normas</summary><ul class="of-list">${leyesOp.map((n) => `<li><span>${PUB[n.id] ? `${n.tipo === "guia_oficial" ? esc(n.nombre) : `<a href="${r}${PUB[n.id].slug}/">${esc(n.nombre)}</a>`} <span class="chip ok">Con test</span>` : `${esc(n.nombre)} <span class="chip grey">En preparación</span>`}</span> <a class="muted small" href="${esc(n.url || `https://www.boe.es/buscar/act.php?id=${n.id}`)}" rel="noopener">${esc(n.tipo === "guia_oficial" ? "PDF oficial" : n.id)}</a></li>`).join("")}</ul></details></section>
@@ -848,6 +853,40 @@ for (const o of OPOS) {
 <div id="competencias" data-op="${o.id}" data-base="${r}">Cargando…</div>
 ${entrevistaOf(o) ? `<p><a class="btn" href="${r}oposiciones/${o.id}/entrevista/">Practicar la entrevista</a></p>` : ""}
 <p class="muted small">Fuente: <a href="${esc(c.fuente)}" rel="noopener">${esc(c.documento)}</a>. Las explicaciones, los comportamientos observables, las situaciones y el cuestionario son material de entrenamiento de TestLey revisado por un juez independiente. No son criterios del tribunal, no predicen el resultado y no constituyen ninguna evaluación psicológica.</p>`,
+  });
+}
+// Prueba física (Physical Engine): solo con barems oficiales verificados; el plan es orientativo y va separado de los requisitos
+for (const o of OPOS) {
+  const f = fisicaOf(o);
+  if (!f) continue;
+  page(`oposiciones/${o.id}/fisica/`, {
+    title: titulo("", `Prueba física ${opCorto(o)}: barems, marcas y plan`, ""), lastmod: o.actualizado, wide: true,
+    scripts: ["fisica.js"],
+    description: descripcion(`Calcula tu puntuación en las ${f.pruebas.length} pruebas físicas de ${opCorto(o)} con los barems oficiales y registra tu evolución.`, "Plan de entrenamiento orientativo hasta la fecha del examen."),
+    crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Prueba física", `oposiciones/${o.id}/fisica/`]],
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Prueba física</span></nav>
+<h1>Prueba física · ${esc(opCorto(o))}</h1>
+<p class="lead">Según las bases de la convocatoria ${esc(f.call_id)}: ${f.pruebas.map((p) => esc(p.nombre)).join(", ")}; cada prueba se puntúa de 0 a 10 con los barems oficiales, pondera un tercio y exige al menos ${f.minimo_por_ejercicio} punto. <span class="badge-oficial">Dato oficial</span></p>
+${f.citas.slice(0, 2).map((c) => `<blockquote class="cita small">${esc(c)}</blockquote>`).join("")}
+<div id="fisica" data-op="${o.id}" data-base="${r}">Cargando…</div>
+<p class="muted small">Fuente: <a href="${esc(f.fuente)}" rel="noopener">${esc(f.documento)}</a>. Los barems y los mínimos son oficiales. El plan, las sesiones y los consejos son orientativos de TestLey: no son requisitos del tribunal ni una prescripción médica o deportiva.</p>`,
+  });
+}
+// Otras pruebas (catalán, idiomas voluntarios, cuadro médico): información oficial de consulta; el seguimiento va en el panel
+for (const o of OPOS) {
+  const x = otrasOf(o);
+  if (!x) continue;
+  const src = (v) => `<p class="muted small">Fuente: <a href="${esc(v.fuente)}" rel="noopener">${esc(v.documento)}</a> <span class="badge-oficial">Dato oficial</span></p>`;
+  page(`oposiciones/${o.id}/otras-pruebas/`, {
+    title: titulo("", `${opCorto(o)}: catalán, idiomas y revisión médica`, ""), lastmod: o.actualizado,
+    description: descripcion(`Estructura oficial de la prueba de catalán, los idiomas voluntarios y el cuadro de exclusiones médicas de ${opCorto(o)}.`, "Información de las bases, con seguimiento en tu panel."),
+    crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Otras pruebas", `oposiciones/${o.id}/otras-pruebas/`]],
+    body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Otras pruebas</span></nav>
+<h1>Catalán, idiomas y revisión médica · ${esc(opCorto(o))}</h1>
+${x.catala ? `<section class="card" id="catala"><h2>Prueba de catalán</h2><p><strong>Requisito:</strong> ${esc(x.catala.requisito)}.</p><p><strong>Exención:</strong> ${esc(x.catala.exencion)}.</p><ul>${x.catala.prueba.partes.map((p) => `<li>Parte ${p.parte} (${p.minutos} min): ${esc(p.contenido)}.</li>`).join("")}</ul><p>Resultado: ${esc(x.catala.prueba.resultado)}; para el apto hace falta un mínimo del ${x.catala.prueba.minimo_pct} %.</p>${x.catala.citas.slice(-2).map((c) => `<blockquote class="cita small">${esc(c)}</blockquote>`).join("")}${src(x.catala)}<p class="muted small">TestLey no dispone todavía de material de práctica de catalán revisado: no se ofrecen ejercicios para no presentar contenido sin revisar.</p></section>` : ""}
+${x.idiomas ? `<section class="card" id="idiomas"><h2>Idiomas voluntarios</h2><p>${x.idiomas.preguntas_por_idioma} preguntas por idioma tras escuchar una grabación; como máximo ${x.idiomas.max_idiomas} idiomas; cada idioma vale de 0 a ${String(x.idiomas.puntos_por_idioma).replace(".", ",")} puntos (máximo ${x.idiomas.maximo}).</p>${x.idiomas.citas.map((c) => `<blockquote class="cita small">${esc(c)}</blockquote>`).join("")}${src(x.idiomas)}</section>` : ""}
+${x.medica ? `<section class="card" id="medica"><h2>Revisión médica</h2><p>${esc(x.medica.anexo)}. Capítulos del cuadro:</p><ul>${x.medica.capitulos.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><p class="notice">${esc(x.medica.aviso)}</p>${src(x.medica)}</section>` : ""}
+<p><a class="btn primary" href="${r}panel/">Seguir mis tareas en el panel</a></p>`,
   });
 }
 // Entrenador aptitudinal (Aptitude Engine): solo para oposiciones con estructura aptitudinal oficial verificada en su perfil

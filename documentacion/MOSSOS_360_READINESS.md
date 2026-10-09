@@ -16,12 +16,12 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - [x] **Psychometric foundation** · cuestionario de autopercepción (20 ítems, pares invertidos, consistencia, evolución) como SELF_ASSESSMENT separado de OBJECTIVE_SCORE, sin respuestas correctas ni diagnóstico (`web/assets/competencias.js`) · tests JS · E2E 22d
 - [x] **Interview trainer** · 56 escenarios TESTLEY_TRAINING VALID (lotes E00001-E00003) con la política `juez-entrevista-v2` (Sonnet como referencia, prompt congelado, combinación conservadora de rondas) y la regla determinista v2; las 10 competencias oficiales con ≥ 5; 29 en REVIEW_REQUIRED y 19 REJECTED, nunca servidos · `/oposiciones/mossos-esquadra/entrevista/` · `tests/test_entrevista.py`, `tests/js/entrevista.test.mjs`, `tests/deno/tutor_entrevista_test.ts`, E2E 23a–23i · `INTERVIEW_ENGINE.md`. Análisis con IA: implementado, pendiente del despliegue del Tutor IA
 - [x] **Content coverage audit** · `fabrica/cobertura360.py` → `MOSSOS_360_CONTENT_COVERAGE.md` (calculado desde los datos), objetivos razonados y `MOSSOS_360_CONTENT_GENERATION_PLAN.md`; `python3 -m fabrica.cobertura360 siguientes` · `tests/test_cobertura360.py`. La auditoría muestra huecos P0 (abajo)
-- [ ] Physical tracker · barems oficiales verificados; sin registro de marcas (Fase 4)
-- [ ] Catalan information · datos verificados en el perfil; sin vista para el usuario (Fase 6)
-- [ ] Psychophysical information · capítulos del Anexo 3 verificados; sin vista (Fase 6)
-- [ ] Simulation · solo conocimientos (Fase 5)
-- [ ] Adaptive plan · solo conocimientos (Fase 5)
-- [ ] Progress dashboard · Fase 6
+- [x] Physical tracker · `oposiciones/mossos-esquadra/fisica/` (`web/assets/fisica.js`): registro de marcas, lectura de los barems oficiales, mínimos, evolución y plan orientativo por fases con calendario de sesiones (tests `tests/js/fisica.test.mjs`)
+- [x] Catalan information · `oposiciones/mossos-esquadra/otras-pruebas/` (estructura oficial del C1 e idiomas voluntarios). Sin material de práctica de catalán: BLOQUEADO hasta tener material revisado
+- [x] Psychophysical information · capítulos del Annex 3 en `otras-pruebas/`, solo informativos; seguimiento por tareas en el panel
+- [x] Simulation · simulacro 360 combinado en el panel (conocimientos + aptitudinal contrarreloj + competencias + entrevista)
+- [x] Adaptive plan · reparto semanal multimódulo según la fecha del examen, las horas y los módulos débiles o sin empezar (`web/assets/panel360.js`)
+- [x] Progress dashboard · sección «Tu preparación 360» del panel (tests `tests/js/panel360.test.mjs`, E2E 25a-25c)
 - [ ] Mobile QA · se repite en cada fase con UI
 - [x] **Tests green** · `npm test` (estado de la Fase 0)
 - [ ] Security review · Fase 7
@@ -101,3 +101,26 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
   - En S00051, la tanda 05 fue rechazada por el guard (RESPUESTA_AGREGADA) y se repitió con un juez nuevo.
 - **Test nuevo**: ningún lote retenido ni ninguna pregunta marcada sin evidencia llega al banco (`LoteRetenido.test_todos_los_lotes_retenidos_sin_publicar`).
 - **Pendiente**: S00022 sigue RETENIDO_DEFINITIVO. El resto de retenidos espera decisión humana.
+
+## Actualización 2026-10-09 · cierre de módulos Mossos 360
+| Módulo | Estado |
+|---|---|
+| Conocimientos (1.013 VALID TestLey, tests por tema, simulacros, repaso espaciado, errores) | IMPLEMENTADO Y FUNCIONAL |
+| Aptitudinal: numérica, abstracta, espacial, perceptiva y verbal formal | IMPLEMENTADO Y FUNCIONAL |
+| Aptitud verbal semántica (sinónimos, analogías) | BLOQUEADO: necesita un banco revisado por personas |
+| Competencias y autoconocimiento (psicométrico explicado, sin diagnóstico) | IMPLEMENTADO Y FUNCIONAL |
+| Entrevista: banco, sesiones, rúbrica y historial | IMPLEMENTADO Y FUNCIONAL |
+| Entrevista: análisis con IA | PENDIENTE DE CONFIGURACIÓN EXTERNA (Tutor IA) |
+| Prueba física (barems oficiales, marcas, evolución, plan, calendario) | IMPLEMENTADO Y FUNCIONAL |
+| Catalán, idiomas voluntarios y cuadro médico (información y tareas) | IMPLEMENTADO Y FUNCIONAL |
+| Práctica de catalán e idiomas | BLOQUEADO: no hay material revisado |
+| Panel 360, recomendaciones, reparto adaptativo y simulacro combinado | IMPLEMENTADO Y FUNCIONAL |
+| Límites premium en el servidor | PENDIENTE DE CONFIGURACIÓN EXTERNA (`PREMIUM_DEPLOYMENT.md`) |
+| Conjunto del producto | PENDIENTE DE AUDITORÍA FINAL |
+
+**Credenciales que configura el propietario** (solo en los secretos de GitHub o Supabase, nunca en el chat ni en el repositorio):
+- `SUPABASE_URL` y `SUPABASE_ANON_KEY`.
+- `SUPABASE_SERVICE_ROLE_KEY`: solo en los secretos del servidor.
+- `ANTHROPIC_API_KEY`, `TUTOR_MODEL` y `TUTOR_LIMITE_DIARIO`: Tutor IA y análisis de la entrevista.
+- `LEMONSQUEEZY_WEBHOOK_SECRET`, `LS_STORE_ID` y `LS_PRODUCT_ID`: pagos, sin cambios.
+- `RESEND_API_KEY`: emails.
