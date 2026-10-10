@@ -216,9 +216,13 @@ class Publicado(unittest.TestCase):
         self.assertTrue(all(e["competency_id"] in ids and e["verification_status"] == "VALID" and e["traza"]["verdict"] == "VALID" for e in pub["escenarios"]))
         self.assertEqual(len({e["id"] for e in pub["escenarios"]}), len(pub["escenarios"]))
         self.assertFalse(any(C.PROHIBIDO.search(json.dumps(x, ensure_ascii=False)) for x in pub["competencias"] + pub["escenarios"]))
-        ev = json.load(open(os.path.join(R, "fabrica", "competencias", pub["lotes"][-1], "evaluacion.json"), encoding="utf-8"))
-        ver = C.veredictos(ev)
-        self.assertTrue(all(ver[e["id"]] == "VALID" for e in pub["escenarios"]))
+        pol = C.politica()  # cada item publicado es VALID en las rondas de SU lote (lotes complementarios incluidos)
+        for lote in pub["lotes"]:
+            comb = C.combinar_de(C.TRABAJO, lote, pol)
+            for x in pub["competencias"] + pub["escenarios"]:
+                if x["traza"]["lote"] == lote:
+                    clave = "ficha-" + x["id"] if "explicacion" in x else x["id"]
+                    self.assertEqual(comb[clave]["verdict"], "VALID", clave)
 
 
 if __name__ == "__main__":

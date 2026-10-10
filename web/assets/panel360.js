@@ -65,8 +65,9 @@
     if (cl.length) {
       var h = cl.reduce(function (a, x) { return a + x.hechas; }, 0), t = cl.reduce(function (a, x) { return a + x.total; }, 0);
       var pe = cl.filter(function (x) { return x.hechas < x.total; })[0];
-      out.push({ id: "otras", nombre: "Catalán, médica y trámites", url: base + "otras-pruebas/", estado: h ? "en_curso" : "sin_empezar", valor: t ? Math.round((100 * h) / t) : null,
-        detalle: h + "/" + t + " tareas hechas", debil: pe ? pe.nombre : null });
+      var cr = typeof window !== "undefined" && window.TLCatala ? window.TLCatala.resum() : null;
+      out.push({ id: "otras", nombre: "Catalán, médica y trámites", url: base + "otras-pruebas/", estado: h || (cr && cr.redaccions + cr.lectures) ? "en_curso" : "sin_empezar", valor: t ? Math.round((100 * h) / t) : null,
+        detalle: h + "/" + t + " tareas hechas" + (cr ? " · " + cr.redaccions + " redacciones y " + cr.lectures + " lecturas de catalán" : ""), debil: pe ? pe.nombre : null });
     }
 
     // Fecha del examen → días, fase y reparto orientativo del tiempo semanal (más peso a lo débil o sin empezar)

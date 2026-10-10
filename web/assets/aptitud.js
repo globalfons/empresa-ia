@@ -209,8 +209,33 @@
     throw new Error("sin ejercicio válido para " + cat + "/" + sub);
   }
 
+  // ---------- verbal semántica: SOLO ítems aprobados por una persona (catalogo/aptitud/verbal-semantica-<op>.json → build) ----------
+  // Nunca se generan: el build publica únicamente los ítems con human_review.aprobado_por y fecha; aquí se sirven tal cual.
+  var REVISADOS = [];
+  function revisadoOk(x) {
+    return !!(x && x.id && x.human_review && x.human_review.aprobado_por && x.human_review.fecha && x.referencia && x.referencia.url &&
+      x.opciones && x.opciones.length === 4 && x.opciones.every(function (o, i) { return x.opciones.indexOf(o) === i; }) && x.correcta >= 0 && x.correcta < 4);
+  }
+  function cargarRevisados(lista) { REVISADOS = (lista || []).filter(revisadoOk); return REVISADOS.length; }
+  function semantico(semilla, op, idioma) {
+    var x = REVISADOS[(semilla >>> 0) % REVISADOS.length];
+    return { id: "apt-verbal-rev-" + x.id, opposition_id: op || null, category: "verbal", subtype: "semantica_" + x.formato, difficulty: x.dificultad || 2,
+      prompt: x.enunciado, stimulus: x.texto ? { tipo: "texto", texto: x.texto } : null, options: x.opciones.slice(), options_type: "texto", correct_answer: x.correcta,
+      explanation: x.explicacion + " (Referencia: " + x.referencia.fuente + ")", estimated_time: TIEMPO.verbal, source_type: "TESTLEY_TRAINING",
+      source_reference: x.referencia.url, verification_status: "HUMAN_REVIEWED", generator: null, created_at: null, idioma: x.idioma || idioma || "es", revisado_por: x.human_review.aprobado_por };
+  }
+  // En verbal, con banco revisado cargado, la mitad de los ejercicios son semánticos revisados (si no hay, solo los calculables).
+  function verbalOSemantico(r, dif, op, idioma) {
+    if (REVISADOS.length && r() < 0.5) return semantico(ent(r, 0, 1e9), op, idioma);
+    return ejercicio("verbal", elegir(r, SUBTIPOS.verbal), dif, ent(r, 1, 1e9), op, idioma);
+  }
+
   // Recalcula el ejercicio desde su id y comprueba unicidad y solubilidad. [] = válido.
   function verificar(e) {
+    if (e && /^apt-verbal-rev-/.test(e.id)) {
+      var x = REVISADOS.filter(function (y) { return "apt-verbal-rev-" + y.id === e.id; })[0];
+      return x && x.correcta === e.correct_answer && JSON.stringify(x.opciones) === JSON.stringify(e.options) ? [] : ["ítem semántico sin aprobación humana o modificado"];
+    }
     var p = [], m = /^apt-([a-z]+)-([a-z_]+)-d([123])-(\d+)$/.exec(e && e.id || "");
     if (!m) return ["id no reproducible"];
     var again = ejercicio(m[1], m[2], +m[3], +m[4], e.opposition_id, e.idioma);
@@ -242,7 +267,7 @@
     var cats = conf.categoria ? [conf.categoria] : (conf.categorias || CATEGORIAS);
     for (var i = 0; i < n; i++) {
       var c = cats[i % cats.length], sub = elegir(r, SUBTIPOS[c]), dif = conf.dificultad || (conf.modo === "mixto" ? ent(r, 1, 3) : 2);
-      out.push(ejercicio(c, sub, dif, ent(r, 1, 1e9), conf.oposicion, conf.idioma));
+      out.push(c === "verbal" ? verbalOSemantico(r, dif, conf.oposicion, conf.idioma) : ejercicio(c, sub, dif, ent(r, 1, 1e9), conf.oposicion, conf.idioma));
     }
     return { items: barajar(r, out), segundos: conf.modo === "contrarreloj" ? n * SEG_OFICIAL : null };
   }
@@ -256,7 +281,7 @@
     var c = pend.length ? pend[0] : cats.slice().sort(function (a, b) { var x = estado.cat[a], y = estado.cat[b]; return x.ok / x.n - y.ok / y.n || x.n - y.n; })[0];
     var s = estado.cat[c] || { n: 0, ok: 0, dif: 1, racha: 0 };
     var r = rng((estado.paso = (estado.paso || 0) + 1) * 977 + (conf.semilla || 1));
-    return ejercicio(c, elegir(r, SUBTIPOS[c]), s.dif, ent(r, 1, 1e9), conf.oposicion, conf.idioma);
+    return c === "verbal" ? verbalOSemantico(r, s.dif, conf.oposicion, conf.idioma) : ejercicio(c, elegir(r, SUBTIPOS[c]), s.dif, ent(r, 1, 1e9), conf.oposicion, conf.idioma);
   }
   function registrar(estado, e, acierto) {
     estado.cat = estado.cat || {};
@@ -268,5 +293,5 @@
   }
 
   window.TLAptitud = { CATEGORIAS: CATEGORIAS, SUBTIPOS: SUBTIPOS, SEG_OFICIAL: SEG_OFICIAL, ejercicio: ejercicio, verificar: verificar, item: item,
-    lote: lote, siguiente: siguiente, registrar: registrar, _rotar: rotar, _refl: refl };
+    lote: lote, siguiente: siguiente, registrar: registrar, cargarRevisados: cargarRevisados, _rotar: rotar, _refl: refl };
 })();

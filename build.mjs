@@ -518,7 +518,7 @@ ${LEYES.filter((L) => !L.qs.length).length ? `<h2>En preparación</h2><ul>${LEYE
 // ---------- Panel, ranking y cuenta ----------
 page("panel/", {
   title: "Mi panel de progreso", description: "Tu progreso en TestLey: nota orientativa, dominio por título, puntos débiles, racha y logros.", noindex: true, wide: true,
-  scripts: ["plan.js", "motores.js", "avisos.js", "fisica.js", "panel360.js", "panel.js"],
+  scripts: ["plan.js", "motores.js", "avisos.js", "fisica.js", "catala.js", "panel360.js", "panel.js"],
   body: () => `<div class="ctx-bar"><label class="muted" for="ctx">Estoy preparando</label><select id="ctx" class="select">${OPOS.map((o) => `<option value="${o.id}">${esc(o.nombre)} (${esc(o.grupo)})</option>`).join("")}${PUBLICADAS.map((L) => `<option value="${L.slug}">Solo ${esc(L.corto)}</option>`).join("")}</select></div><div id="panel" data-ley="${LEY.slug}"><p class="muted">Cargando tu progreso…</p></div>`,
 });
 page("errores/", {
@@ -876,14 +876,28 @@ ${f.citas.slice(0, 2).map((c) => `<blockquote class="cita small">${esc(c)}</bloc
 for (const o of OPOS) {
   const x = otrasOf(o);
   if (!x) continue;
+  // Pràctica de català: temes d'entrenament (TestLey) + lectures literals dels textos oficials del DOGC (normes, sense drets d'autor)
+  const fc = `catalogo/catala/${o.id}.json`, cat = x.catala && fs.existsSync(fc) ? JSON.parse(fs.readFileSync(fc, "utf8")) : null;
+  if (cat) {
+    const lectures = [];
+    for (const id of cat.lectures_dogc) {
+      const f = `catalogo/fuentes/DOGC-${id}.txt`;
+      if (!fs.existsSync(f)) continue;
+      const t = fs.readFileSync(f, "utf8"), font = t.split("\n")[0].trim();
+      t.split(/\n/).map((p) => p.trim()).filter((p) => { const n = p.split(/\s+/).length; return n >= 70 && n <= 200 && /[.:]$/.test(p); })
+        .forEach((p, i) => lectures.push({ id: `dogc-${id}-${i}`, text: p, font, url: `https://dogc.gencat.cat/ca/document-del-dogc/?documentId=${id}` }));
+    }
+    fs.writeFileSync(path.join(OUT_TMP, "datos", `catala-${o.id}.json`), JSON.stringify({ oposicion: o.id, lectures, temes_redaccio: cat.temes_redaccio, temes_conversa: cat.temes_conversa }));
+  }
   const src = (v) => `<p class="muted small">Fuente: <a href="${esc(v.fuente)}" rel="noopener">${esc(v.documento)}</a> <span class="badge-oficial">Dato oficial</span></p>`;
   page(`oposiciones/${o.id}/otras-pruebas/`, {
-    title: titulo("", `${opCorto(o)}: catalán, idiomas y revisión médica`, ""), lastmod: o.actualizado,
+    title: titulo("", `${opCorto(o)}: catalán, idiomas y revisión médica`, ""), lastmod: o.actualizado, scripts: cat ? ["catala.js"] : [],
     description: descripcion(`Estructura oficial de la prueba de catalán, los idiomas voluntarios y el cuadro de exclusiones médicas de ${opCorto(o)}.`, "Información de las bases, con seguimiento en tu panel."),
     crumbs: [["Oposiciones", "oposiciones/"], [o.nombre, `oposiciones/${o.id}/`], ["Otras pruebas", `oposiciones/${o.id}/otras-pruebas/`]],
     body: (r) => `<nav class="crumbs"><a href="${r}">Inicio</a> › <a href="${r}oposiciones/">Oposiciones</a> › <a href="${r}oposiciones/${o.id}/">${esc(o.nombre)}</a> › <span>Otras pruebas</span></nav>
 <h1>Catalán, idiomas y revisión médica · ${esc(opCorto(o))}</h1>
-${x.catala ? `<section class="card" id="catala"><h2>Prueba de catalán</h2><p><strong>Requisito:</strong> ${esc(x.catala.requisito)}.</p><p><strong>Exención:</strong> ${esc(x.catala.exencion)}.</p><ul>${x.catala.prueba.partes.map((p) => `<li>Parte ${p.parte} (${p.minutos} min): ${esc(p.contenido)}.</li>`).join("")}</ul><p>Resultado: ${esc(x.catala.prueba.resultado)}; para el apto hace falta un mínimo del ${x.catala.prueba.minimo_pct} %.</p>${x.catala.citas.slice(-2).map((c) => `<blockquote class="cita small">${esc(c)}</blockquote>`).join("")}${src(x.catala)}<p class="muted small">TestLey no dispone todavía de material de práctica de catalán revisado: no se ofrecen ejercicios para no presentar contenido sin revisar.</p></section>` : ""}
+${x.catala ? `<section class="card" id="catala"><h2>Prueba de catalán</h2><p><strong>Requisito:</strong> ${esc(x.catala.requisito)}.</p><p><strong>Exención:</strong> ${esc(x.catala.exencion)}.</p><ul>${x.catala.prueba.partes.map((p) => `<li>Parte ${p.parte} (${p.minutos} min): ${esc(p.contenido)}.</li>`).join("")}</ul><p>Resultado: ${esc(x.catala.prueba.resultado)}; para el apto hace falta un mínimo del ${x.catala.prueba.minimo_pct} %.</p>${x.catala.citas.slice(-2).map((c) => `<blockquote class="cita small">${esc(c)}</blockquote>`).join("")}${src(x.catala)}</section>` : ""}
+${cat ? `<section class="card" id="catala-practica"><div id="catala-app" data-op="${o.id}" data-base="${r}">Carregant…</div><p class="muted small">Las preguntas de sintaxis y comprensión de la primera parte no se ofrecen: necesitan material revisado por personas.</p></section>` : ""}
 ${x.idiomas ? `<section class="card" id="idiomas"><h2>Idiomas voluntarios</h2><p>${x.idiomas.preguntas_por_idioma} preguntas por idioma tras escuchar una grabación; como máximo ${x.idiomas.max_idiomas} idiomas; cada idioma vale de 0 a ${String(x.idiomas.puntos_por_idioma).replace(".", ",")} puntos (máximo ${x.idiomas.maximo}).</p>${x.idiomas.citas.map((c) => `<blockquote class="cita small">${esc(c)}</blockquote>`).join("")}${src(x.idiomas)}</section>` : ""}
 ${x.medica ? `<section class="card" id="medica"><h2>Revisión médica</h2><p>${esc(x.medica.anexo)}. Capítulos del cuadro:</p><ul>${x.medica.capitulos.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><p class="notice">${esc(x.medica.aviso)}</p>${src(x.medica)}</section>` : ""}
 <p><a class="btn primary" href="${r}panel/">Seguir mis tareas en el panel</a></p>`,
@@ -893,6 +907,10 @@ ${x.medica ? `<section class="card" id="medica"><h2>Revisión médica</h2><p>${e
 for (const o of OPOS) {
   const a = aptitudOf(o);
   if (!a) continue;
+  // Verbal semántica: SOLO ítems aprobados por una persona (human_review.aprobado_por + fecha + referencia). Sin aprobados → no se publica nada.
+  const fv = `catalogo/aptitud/verbal-semantica-${o.id}.json`;
+  const rev = fs.existsSync(fv) ? JSON.parse(fs.readFileSync(fv, "utf8")).items.filter((x) => x.estado === "APROBADO_HUMANO" && x.human_review && x.human_review.aprobado_por && x.human_review.fecha && x.referencia && x.referencia.url) : [];
+  if (rev.length) fs.writeFileSync(path.join(OUT_TMP, "datos", `verbal-revisado-${o.id}.json`), JSON.stringify({ oposicion: o.id, items: rev.map(({ id, formato, idioma, dificultad, enunciado, texto, opciones, correcta, explicacion, referencia, human_review }) => ({ id, formato, idioma, dificultad, enunciado, texto, opciones, correcta, explicacion, referencia, human_review: { aprobado_por: human_review.aprobado_por, fecha: human_review.fecha } })) }));
   page(`oposiciones/${o.id}/aptitudinal/`, {
     title: titulo("", `Psicotécnicos ${opCorto(o)}: entrenador de la aptitudinal`, ""), lastmod: o.actualizado, wide: true,
     scripts: ["psicotecnicos.js", "aptitud.js", "aptitud-ui.js"],
@@ -902,7 +920,7 @@ for (const o of OPOS) {
 <h1>Subprueba aptitudinal · ${esc(opCorto(o))}</h1>
 <p class="lead">Según las bases de la convocatoria ${esc(a.call_id)}: ${a.preguntas} preguntas de ${a.opciones} opciones en ${a.minutos} minutos; los errores y los blancos no restan y el apto exige ${a.minimo_apte} puntos sobre 10. <span class="badge-oficial">Dato oficial</span></p>
 <blockquote class="cita small">${esc(a.citas[0])}</blockquote>
-<div id="aptitud" class="quiz" data-op="${o.id}" data-idioma="${esc(motorDe(o).idioma || "es")}">Cargando el entrenador…</div>
+<div id="aptitud" class="quiz" data-op="${o.id}" data-base="${r}" data-idioma="${esc(motorDe(o).idioma || "es")}">Cargando el entrenador…</div>
 <p class="muted small">Fuente: <a href="${esc(a.fuente)}" rel="noopener">${esc(a.documento)}</a>. Los ejercicios son originales de TestLey (no reproducen pruebas oficiales ni material comercial) y su respuesta se calcula y se comprueba automáticamente. ${esc(a.nota || "")}</p>`,
   });
 }

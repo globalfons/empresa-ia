@@ -114,5 +114,10 @@
       '<div class="actions"><button class="btn primary" data-otra>Otra sesión</button></div>';
     el.querySelector("[data-otra]").addEventListener("click", menu);
   }
-  menu();
+  // Banco verbal semántico revisado por personas: el build solo publica datos/verbal-revisado-<op>.json si hay ítems aprobados
+  var BASE = el.getAttribute("data-base") || (window.TL && TL.root) || "../../../";
+  if (window.fetch) fetch(BASE + "datos/verbal-revisado-" + OP + ".json").then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) { if (d) A.cargarRevisados(d.items); }).catch(function () {}).then(menu);
+  else menu();
+
 })();

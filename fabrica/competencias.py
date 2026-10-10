@@ -80,7 +80,20 @@ def validar(cand, ofi):
     ids = [x["id"] for x in ofi["lista"]]
     out = {}
     fichas = {f.get("id"): f for f in cand.get("competencias", [])}
-    if sorted(fichas) != sorted(ids):
+    # Lote complementario («complementa»: lote anterior): amplía el contenido publicado sin rehacerlo. Sus fichas son un
+    # subconjunto de las oficiales (p. ej. la que quedó en revisión) y sus escenarios no pueden repetir los ya publicados.
+    previos = []
+    if cand.get("complementa"):
+        pub = J.leer(os.path.join(DESTINO, f"{cand.get('oposicion')}.json"), {})
+        if cand["complementa"] not in pub.get("lotes", []):
+            out["_complementa"] = [f"el lote {cand['complementa']} no está publicado"]
+        if not set(fichas) <= set(ids):
+            out["_competencias"] = [f"fichas que no son competencias oficiales: {sorted(set(fichas) - set(ids))}"]
+        publicados = {e["id"] for e in pub.get("escenarios", [])} | set(pub.get("cola_revision", [])) | set(pub.get("rechazadas", []))
+        if publicados & {e.get("id") for e in cand.get("escenarios", [])}:
+            out.setdefault("_escenarios", []).append(f"ids ya usados: {sorted(publicados & {e.get('id') for e in cand.get('escenarios', [])})}")
+        previos = pub.get("escenarios", [])
+    elif sorted(fichas) != sorted(ids):
         out["_competencias"] = [f"las fichas deben ser exactamente las {len(ids)} competencias oficiales: faltan {sorted(set(ids) - set(fichas))}, sobran {sorted(set(fichas) - set(ids))}"]
     for cid, f in fichas.items():
         p = []
@@ -140,7 +153,7 @@ def validar(cand, ofi):
         texto = json.dumps(e, ensure_ascii=False)
         if PROHIBIDO.search(texto):
             p.append(f"afirmación prohibida: «{PROHIBIDO.search(texto).group(0)}»")
-        dup = next((v["id"] for v in vistos if jaccard(v["situacion"], e.get("situacion")) >= 0.5), None)
+        dup = next((v["id"] for v in previos + vistos if jaccard(v["situacion"], e.get("situacion")) >= 0.5), None)
         if dup:
             p.append(f"situación casi idéntica a {dup}")
         vistos.append(e)
@@ -373,9 +386,20 @@ def publicar(lote):
     rechazadas = sorted(i for i, v in ver.items() if v == "REJECTED")
     destino = os.path.join(DESTINO, f"{cand['oposicion']}.json")
     previo = J.leer(destino, {"lotes": []})
+    superadas = list(previo.get("superadas", []))
+    if cand.get("complementa"):
+        # Complementario: conserva lo publicado; una ficha nueva VALID sustituye a la anterior de la misma competencia (si la había).
+        # Las ids previas en revisión que ahora tienen versión VALID pasan a «superadas» (trazabilidad del lote original).
+        nuevas = {f["id"] for f in fichas}
+        for i in [x for x in previo.get("cola_revision", []) if x.startswith("ficha-") and x[6:] in nuevas]:
+            superadas.append({"id": i, "lote_original": cand["complementa"], "sustituida_por": lote})
+        fichas = [f for f in previo.get("competencias", []) if f["id"] not in nuevas] + fichas
+        esc = previo.get("escenarios", []) + esc
+        revision = sorted(set(x for x in previo.get("cola_revision", []) if not any(s["id"] == x for s in superadas)) | {f"{lote}:{i}" for i in revision})
+        rechazadas = sorted(set(previo.get("rechazadas", [])) | {f"{lote}:{i}" for i in rechazadas})
     pub = {"_ayuda": "Contenido de ENTRENAMIENTO de TestLey (no oficial) publicado por fabrica/competencias.py: solo items VALID del juez. Las competencias y su cita oficial están en catalogo/preparacion/<oposición>.json.",
            "oposicion": cand["oposicion"], "call_id": ofi.get("call_id"), "lotes": sorted(set(previo.get("lotes", [])) | {lote}),
-           "competencias": fichas, "escenarios": esc, "cola_revision": revision, "rechazadas": rechazadas}
+           "competencias": fichas, "escenarios": esc, "cola_revision": revision, "rechazadas": rechazadas, **({"superadas": superadas} if superadas else {})}
     J.escribir(destino, pub)
     res = {"lote": lote, "politica": pol["version"], "publicadas_fichas": len(fichas), "publicados_escenarios": len(esc), "review_required": revision, "rejected": rechazadas, "fecha": ahora()}
     J.escribir(os.path.join(d, "resultado.json"), res)

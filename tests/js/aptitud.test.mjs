@@ -129,3 +129,15 @@ test("aptitud verbal semántica: banco HUMAN_REVIEW, nunca generado ni servido",
   for (const f of ["sinonimos", "antonimos", "analogias", "vocabulario", "comprension_lectora"]) assert.ok(!A.SUBTIPOS.verbal.includes(f), f);
   if (fs.existsSync("docs")) assert.ok(!fs.existsSync("docs/datos/verbal-semantica-mossos-esquadra.json"));
 });
+
+test("verbal semántica revisada: solo se sirven ítems con aprobación humana y referencia", () => {
+  const X = cargar(["web/assets/aptitud.js"]).ctx.TLAptitud;
+  const base = { formato: "sinonimos", idioma: "es", dificultad: 2, enunciado: "Sinónimo de prueba", opciones: ["a", "b", "c", "d"], correcta: 1, explicacion: "Explicación de prueba suficientemente larga", referencia: { fuente: "DLE", url: "https://dle.rae.es/x" } };
+  assert.equal(X.cargarRevisados([{ ...base, id: "sin-1" }, { ...base, id: "sin-2", human_review: { aprobado_por: "Persona", fecha: "2026-10-10" } }]), 1);
+  const items = X.lote({ categoria: "verbal", n: 40, semilla: 7 }).items;
+  const sem = items.filter((e) => /^apt-verbal-rev-/.test(e.id));
+  assert.ok(sem.length > 0 && sem.every((e) => e.id === "apt-verbal-rev-sin-2" && e.verification_status === "HUMAN_REVIEWED" && X.verificar(e).length === 0));
+  assert.ok(items.filter((e) => !/^apt-verbal-rev-/.test(e.id)).every((e) => X.verificar(e).length === 0));
+  X.cargarRevisados([]);
+  assert.ok(X.lote({ categoria: "verbal", n: 20, semilla: 7 }).items.every((e) => !/^apt-verbal-rev-/.test(e.id)));
+});
