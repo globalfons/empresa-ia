@@ -66,7 +66,7 @@ test("respuestas correctas comprobadas con cálculo independiente del generador"
 test("deterministas y variados: misma semilla, mismo ejercicio; semillas distintas, ejercicios distintos", () => {
   assert.deepEqual(A.ejercicio("abstracto", "serie_figuras", 2, 42), A.ejercicio("abstracto", "serie_figuras", 2, 42));
   for (const c of A.CATEGORIAS) for (const s of A.SUBTIPOS[c]) {
-    const vistos = new Set(Array.from({ length: 100 }, (_, i) => JSON.stringify([A.ejercicio(c, s, 2, i * 977 + 3).stimulus, A.ejercicio(c, s, 2, i * 977 + 3).prompt])));
+    const vistos = new Set(Array.from({ length: 100 }, (_, i) => JSON.stringify([A.ejercicio(c, s, 2, i * 977 + 3).stimulus, A.ejercicio(c, s, 2, i * 977 + 3).prompt, A.ejercicio(c, s, 2, i * 977 + 3).options])));
     assert.ok(vistos.size >= 70, `${c}/${s}: ${vistos.size} distintos de 100`);
   }
 });

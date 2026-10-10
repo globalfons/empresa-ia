@@ -12,7 +12,8 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "tl-premium-"));
 const OUT = path.join(tmp, "web"), PRIV = path.join(tmp, "privado");
 execFileSync("node", ["build.mjs"], { env: { ...process.env, TL_OUT: OUT, TL_PRIV: PRIV, TL_BANCO_PRIVADO: "1" }, stdio: "ignore" });
 const privado = Object.fromEntries(fs.readdirSync(PRIV).map((f) => [f.replace(/\.json$/, ""), JSON.parse(fs.readFileSync(path.join(PRIV, f), "utf8"))]));
-const premium = Object.values(privado).flatMap((x) => x.qs);
+const ENTRENO = /^(competencias|entrevista)-/; // escenarios de entrenamiento premium (no son preguntas)
+const premium = Object.entries(privado).filter(([k]) => !ENTRENO.test(k)).flatMap(([, x]) => x.qs);
 const guia = JSON.parse(fs.readFileSync("datos/preguntas-guia-mossos.json", "utf8")).filter((q) => !["DEPRECATED", "OUTDATED"].includes(q.verification_status));
 
 function todosLosFicheros(dir) {
@@ -22,7 +23,7 @@ function todosLosFicheros(dir) {
 test("el banco premium se genera fuera de la web pública y solo con lo premium (guía de Mossos)", () => {
   assert.ok(premium.length >= guia.length - 10 - 1, `${premium.length} premium de ${guia.length}`);
   assert.ok(!PRIV.startsWith(OUT));
-  assert.deepEqual(Object.keys(privado).sort(), ["guia-mossos", "mossos-esquadra"]);
+  assert.deepEqual(Object.keys(privado).sort(), ["competencias-mossos-esquadra", "entrevista-mossos-esquadra", "guia-mossos", "mossos-esquadra"]);
   assert.ok(premium.every((q) => (q.ley || "guia-mossos") === "guia-mossos"), "nada de leyes del BOE (gratis por artículo)");
 });
 
@@ -90,3 +91,16 @@ test("PREMIUM: la función autoriza y el banco completo llega al usuario", async
 });
 
 test.after(() => fs.rmSync(tmp, { recursive: true, force: true }));
+
+test("FREE: competencias y entrevista públicas solo con la muestra; el resto únicamente en el banco privado", () => {
+  for (const [mod, porComp, comp] of [["competencias", 1, (e) => e.competency_id], ["entrevista", 1, (e) => e.competency_ids[0]]]) {
+    const pub = JSON.parse(fs.readFileSync(path.join(OUT, `datos/${mod}-mossos-esquadra.json`), "utf8"));
+    const priv = privado[`${mod}-mossos-esquadra`].qs;
+    assert.equal(pub.premium, true);
+    const n = {}; for (const e of pub.escenarios) n[comp(e)] = (n[comp(e)] || 0) + 1;
+    assert.ok(Object.values(n).every((k) => k <= porComp), mod);
+    assert.ok(priv.length > pub.escenarios.length, mod);
+    const ficheros = todosLosFicheros(OUT).filter((f) => /\.(json|html|js)$/.test(f));
+    for (const f of ficheros) { const t = fs.readFileSync(f, "utf8"); for (const e of priv) assert.ok(!t.includes(e.situacion), `${mod} premium en ${path.relative(OUT, f)}`); }
+  }
+});

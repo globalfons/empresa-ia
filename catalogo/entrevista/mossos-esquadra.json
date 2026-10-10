@@ -5,7 +5,8 @@
  "lotes": [
   "E00001",
   "E00002",
-  "E00003"
+  "E00003",
+  "E00004"
  ],
  "escenarios": [
   {
@@ -2684,6 +2685,277 @@
     ],
     "verdict": "VALID"
    }
+  },
+  {
+   "id": "ent-responsabilitat-13",
+   "competency_ids": [
+    "responsabilitat",
+    "resolucio-problemes"
+   ],
+   "tipo": "situacional",
+   "categoria": "atencio",
+   "dificultad": 2,
+   "contexto": "Material d'una associació",
+   "situacion": "Ets la persona encarregada del material d'una associació juvenil. El dia abans d'una activitat important descobreixes que falta el projector que tenies sota la teva responsabilitat i no recordes on es va quedar.",
+   "pregunta": "Què faries si, el dia abans d'una activitat, descobrissis que falta un projector que estava sota la teva responsabilitat?",
+   "indicadores": [
+    "Assumeix que el material era responsabilitat seva sense buscar culpables",
+    "Avisa a temps les persones afectades per l'activitat",
+    "Proposa alternatives concretes perquè l'activitat es pugui fer",
+    "Pensa com evitar que torni a passar (registre de préstecs, revisió)"
+   ],
+   "errores_frecuentes": [
+    "Centrar-se a buscar qui l'ha agafat sense pensar en l'activitat de l'endemà",
+    "Amagar el problema fins al darrer moment"
+   ],
+   "repregunta": "Què canviaries en la gestió del material perquè no tornés a passar?",
+   "opposition_id": "mossos-esquadra",
+   "call_id": "46/26",
+   "source_type": "TESTLEY_TRAINING",
+   "generated_by": "redactor de la sesión a partir dels buits de fabrica.cobertura360 (2026-10-10)",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "E00004",
+    "politica": "juez-entrevista-v2",
+    "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+    "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+    "veredictos": [
+     {
+      "ronda": "evaluacion.json",
+      "tanda": "01",
+      "modelo": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+      "verdict": "VALID",
+      "judged_at": "2026-10-10T06:34:30"
+     }
+    ],
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "ent-adaptabilitat-11",
+   "competency_ids": [
+    "adaptabilitat",
+    "cooperacio"
+   ],
+   "tipo": "situacional",
+   "categoria": "adaptacio",
+   "dificultad": 2,
+   "contexto": "Trasllat de centre de treball",
+   "situacion": "A mitja temporada et traslladen de cop a un altre centre de la mateixa empresa, amb un equip que no coneixes, uns horaris diferents i unes maneres de treballar que no són les que feies servir fins ara.",
+   "pregunta": "Com t'organitzaries les primeres setmanes si et traslladessin de cop a un altre centre amb un equip i uns horaris nous?",
+   "indicadores": [
+    "Mostra una actitud oberta davant del canvi encara que no l'hagi triat",
+    "Explica com aprendria les maneres de fer del nou equip",
+    "Concreta com s'organitzaria amb els nous horaris",
+    "Valora què pot aportar de la seva experiència anterior sense imposar-ho"
+   ],
+   "errores_frecuentes": [
+    "Comparar constantment amb el centre anterior",
+    "Esperar que el nou equip s'adapti a la seva manera de treballar"
+   ],
+   "repregunta": "Què faries si al cap d'un mes encara et costés adaptar-te al nou equip?",
+   "opposition_id": "mossos-esquadra",
+   "call_id": "46/26",
+   "source_type": "TESTLEY_TRAINING",
+   "generated_by": "redactor de la sesión a partir dels buits de fabrica.cobertura360 (2026-10-10)",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "E00004",
+    "politica": "juez-entrevista-v2",
+    "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+    "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+    "veredictos": [
+     {
+      "ronda": "evaluacion.json",
+      "tanda": "01",
+      "modelo": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+      "verdict": "VALID",
+      "judged_at": "2026-10-10T06:34:30"
+     }
+    ],
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "ent-adaptabilitat-12",
+   "competency_ids": [
+    "adaptabilitat",
+    "resolucio-problemes",
+    "autocontrol"
+   ],
+   "tipo": "situacional",
+   "categoria": "pressio",
+   "dificultad": 3,
+   "contexto": "Activitat a l'aire lliure amb un grup",
+   "situacion": "Acompanyes un grup de vint persones en una excursió organitzada per una entitat. A mig recorregut el temps canvia de sobte, comença a ploure fort i l'itinerari previst deixa de ser segur.",
+   "pregunta": "Què faries si, a mitja excursió amb un grup, el temps canviés de sobte i calgués reorganitzar-ho tot en pocs minuts?",
+   "indicadores": [
+    "Prioritza la seguretat de les persones del grup",
+    "Pren decisions ràpides però raonades amb la informació disponible",
+    "Comunica els canvis al grup amb calma i claredat",
+    "Té en compte avisar l'entitat o els responsables"
+   ],
+   "errores_frecuentes": [
+    "Mantenir el pla inicial per no decebre el grup",
+    "Prendre decisions sense explicar-les al grup"
+   ],
+   "repregunta": "Com sabries que la decisió que has pres ha estat l'encertada?",
+   "opposition_id": "mossos-esquadra",
+   "call_id": "46/26",
+   "source_type": "TESTLEY_TRAINING",
+   "generated_by": "redactor de la sesión a partir dels buits de fabrica.cobertura360 (2026-10-10)",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "E00004",
+    "politica": "juez-entrevista-v2",
+    "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+    "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+    "veredictos": [
+     {
+      "ronda": "evaluacion.json",
+      "tanda": "01",
+      "modelo": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+      "verdict": "VALID",
+      "judged_at": "2026-10-10T06:34:30"
+     }
+    ],
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "ent-motivacio-11",
+   "competency_ids": [
+    "motivacio",
+    "autogestio"
+   ],
+   "tipo": "conductual",
+   "categoria": "trajectoria",
+   "dificultad": 1,
+   "contexto": "Objectiu a llarg termini",
+   "situacion": "Experiència en què el candidat es va proposar un objectiu a llarg termini (estudis, esport, idiomes, un projecte personal) i va haver de mantenir l'esforç durant molt de temps.",
+   "pregunta": "Explica'm un objectiu a llarg termini que t'hagis proposat. Què et va ajudar a no abandonar-lo?",
+   "indicadores": [
+    "Descriu un objectiu concret i el temps que hi va dedicar",
+    "Explica les dificultats reals que va trobar pel camí",
+    "Identifica què el va mantenir motivat (motius, suports, hàbits)",
+    "Reflexiona sobre què n'ha après per a nous reptes"
+   ],
+   "errores_frecuentes": [
+    "Triar un objectiu massa curt o sense dificultat real",
+    "Explicar només el resultat sense parlar del procés"
+   ],
+   "repregunta": "Hi va haver algun moment en què et plantegessis deixar-ho? Què vas fer?",
+   "opposition_id": "mossos-esquadra",
+   "call_id": "46/26",
+   "source_type": "TESTLEY_TRAINING",
+   "generated_by": "redactor de la sesión a partir dels buits de fabrica.cobertura360 (2026-10-10)",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "E00004",
+    "politica": "juez-entrevista-v2",
+    "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+    "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+    "veredictos": [
+     {
+      "ronda": "evaluacion.json",
+      "tanda": "01",
+      "modelo": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+      "verdict": "VALID",
+      "judged_at": "2026-10-10T06:34:30"
+     }
+    ],
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "ent-habilitats-socials-13",
+   "competency_ids": [
+    "habilitats-socials",
+    "orientacio-servei"
+   ],
+   "tipo": "situacional",
+   "categoria": "comunicacio",
+   "dificultad": 2,
+   "contexto": "Atenció a una persona que no parla la llengua",
+   "situacion": "Treballes a la recepció d'una instal·lació esportiva i has d'explicar una norma important de seguretat a una persona que no parla bé ni el català ni el castellà.",
+   "pregunta": "Com t'asseguraries que t'entén una persona que no parla bé la teva llengua i a qui has d'explicar una norma important?",
+   "indicadores": [
+    "Adapta el llenguatge: frases curtes, paraules senzilles i un ritme pausat",
+    "Fa servir recursos de suport (gestos, imatges, traductor, algú que l'ajudi)",
+    "Comprova que la persona ho ha entès",
+    "Manté una actitud respectuosa i pacient"
+   ],
+   "errores_frecuentes": [
+    "Repetir el mateix missatge més alt o més ràpid",
+    "Donar per entès el missatge sense comprovar-ho"
+   ],
+   "repregunta": "Què faries si, malgrat tot, veiessis que no t'ha entès?",
+   "opposition_id": "mossos-esquadra",
+   "call_id": "46/26",
+   "source_type": "TESTLEY_TRAINING",
+   "generated_by": "redactor de la sesión a partir dels buits de fabrica.cobertura360 (2026-10-10)",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "E00004",
+    "politica": "juez-entrevista-v2",
+    "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+    "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+    "veredictos": [
+     {
+      "ronda": "evaluacion.json",
+      "tanda": "01",
+      "modelo": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+      "verdict": "VALID",
+      "judged_at": "2026-10-10T06:34:30"
+     }
+    ],
+    "verdict": "VALID"
+   }
+  },
+  {
+   "id": "ent-habilitats-socials-14",
+   "competency_ids": [
+    "habilitats-socials",
+    "autocontrol"
+   ],
+   "tipo": "situacional",
+   "categoria": "conflicte",
+   "dificultad": 3,
+   "contexto": "Reunió de veïns",
+   "situacion": "En una reunió de la comunitat de veïns, mentre exposes una proposta per millorar la neteja de l'escala, una persona t'interromp diverses vegades amb un to despectiu davant de tothom.",
+   "pregunta": "Com reaccionaries si, mentre exposes una proposta en una reunió, algú t'interrompés repetidament amb un to despectiu?",
+   "indicadores": [
+    "Manté la calma i un to respectuós",
+    "Posa límits a les interrupcions de manera assertiva",
+    "Escolta si hi ha arguments vàlids darrere de la crítica",
+    "Reconduix la reunió cap a la proposta i el diàleg"
+   ],
+   "errores_frecuentes": [
+    "Respondre amb el mateix to despectiu",
+    "Abandonar la proposta per evitar el conflicte"
+   ],
+   "repregunta": "Com parlaries amb aquella persona després de la reunió?",
+   "opposition_id": "mossos-esquadra",
+   "call_id": "46/26",
+   "source_type": "TESTLEY_TRAINING",
+   "generated_by": "redactor de la sesión a partir dels buits de fabrica.cobertura360 (2026-10-10)",
+   "verification_status": "VALID",
+   "traza": {
+    "lote": "E00004",
+    "politica": "juez-entrevista-v2",
+    "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+    "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+    "veredictos": [
+     {
+      "ronda": "evaluacion.json",
+      "tanda": "01",
+      "modelo": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+      "verdict": "VALID",
+      "judged_at": "2026-10-10T06:34:30"
+     }
+    ],
+    "verdict": "VALID"
+   }
   }
  ],
  "cola_revision": [
@@ -2703,6 +2975,7 @@
   "ent-habilitats-socials-2",
   "ent-habilitats-socials-4",
   "ent-motivacio-1",
+  "ent-motivacio-10",
   "ent-motivacio-2",
   "ent-motivacio-4",
   "ent-motivacio-9",
@@ -2712,6 +2985,7 @@
   "ent-resolucio-problemes-3",
   "ent-resolucio-problemes-5",
   "ent-responsabilitat-10",
+  "ent-responsabilitat-14",
   "ent-responsabilitat-2",
   "ent-responsabilitat-3",
   "ent-responsabilitat-5",

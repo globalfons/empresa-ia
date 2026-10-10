@@ -1,0 +1,221 @@
+{
+ "lote": "E00004",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "creada_el": "2026-10-10T06:33:28",
+ "judge_prompt": "fabrica/prompts/juez-entrevista-v1.txt",
+ "judge_prompt_sha256": "ef6d35b9e7c20ccd848727f620e219c58a1364ad66a93de57d212100e51a7c94",
+ "politica": "juez-entrevista-v2",
+ "politica_sha256": "136a451d4d08249b8dd15382cdc68b4780f714d2b03b9c72f589308b8917c310",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "candidatas_sha256": "ed2cbaf54ac85253cfdd3f0dc708cdfef60c32530df1bb1c257623b0e18e66e6",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "ent-responsabilitat-13",
+    "ent-responsabilitat-14",
+    "ent-adaptabilitat-11",
+    "ent-adaptabilitat-12",
+    "ent-motivacio-10",
+    "ent-motivacio-11",
+    "ent-habilitats-socials-13",
+    "ent-habilitats-socials-14"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/entrevista/E00004/tanda-01.json",
+   "prompt_sha256": "bd31925cfe031e28a5863d7abd4c22d0f21f1a104002b3d17e3b9a7730caadba",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "ent-responsabilitat-13": "8ac92ffd0c539102cb7bfefd9a444ba7d77d53c362e5b349b5c0c40ef82fa752",
+    "ent-responsabilitat-14": "11ae1b8acbbe0aac0cc5322b5b8df854480c4f593a0e0b7d1cc43c622f0a4fbd",
+    "ent-adaptabilitat-11": "2a9236b51772b27155a9bff2407e15b69b1ddddf224f9309de38cfdd5045c25f",
+    "ent-adaptabilitat-12": "df93cd0bde800abdc9a821b7b69b230e13690b2083cd8791a67906c6a56ae4c5",
+    "ent-motivacio-10": "051b8dc6ef0f8cd7b52f16255f20440cd10aea6604c83ced4d11ec261ab453ba",
+    "ent-motivacio-11": "c7bfabacbacccedc8d4a5bd8c98c4b094dae05585e8f9d17935f345f2c12492c",
+    "ent-habilitats-socials-13": "a986c045ce4041182e6d8c865bfc98c61c723e26d80f7ed7576ecad26afe7c32",
+    "ent-habilitats-socials-14": "edbc4d6220521092cc550b4607ce256334db7b1c4cf5119129da63b975ae9c6e"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-10T06:34:09",
+     "evidencia": {
+      "herramientas": [
+       "Read"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a30e3c88ee880b2ac.jsonl",
+      "respuesta_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     "respuesta": null,
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "BATCH_REJECTED · RESPUESTA_VACIA: el juez no devolvió ninguna respuesta"
+    },
+    {
+     "t": "2026-10-10T06:34:30",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a30e3c88ee880b2ac.jsonl",
+      "respuesta_sha256": "0d50a6ef1c05ee77ce8a8d9578496f58661bc5058b86ad4704c4ffb3a400627c"
+     },
+     "respuesta": "[\n{\"item_id\":\"ent-responsabilitat-13\",\"verdict\":\"VALID\",\"reason\":\"Situación plausible de asociación juvenil (material perdido el día antes de una actividad), sin procedimientos policiales. Texto en catalán claro; indicadores (asumir, avisar, alternativas, prevención) y errores encajan con la pregunta y la repregunta, que solo profundiza en la prevención. La pregunta admite respuestas buenas distintas. Competencias (responsabilidad, resolución de problemas) bien visibles. Sin afirmaciones oficiales ni diagnóstico. No repite ningún 'parecido': los de material incompleto (5 y 7) tratan un descuido ajeno, no una pérdida propia.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-responsabilitat-14\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto es coherente, la situación (tienda, jefe que pide dar una fecha falsa) es realista y relevante para responsabilidad y servicio. Pero la salida ética es casi obvia, y los indicadores ('identifica el conflicto entre obedecer y ser honesto', 'plantea el problema al responsable', 'informa al cliente con veracidad') dictan una única respuesta en vez de señalar rasgos de una buena explicación. Por eso la pregunta es poco abierta y los indicadores no son pertinentes. No duplica el 6, que trata un error propio ya cometido. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":false,\"indicadores_pertinentes\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-11\",\"verdict\":\"VALID\",\"reason\":\"Traslado de centro con equipo y horarios nuevos: plausible en el ámbito laboral. Pregunta situacional abierta, que permite enfoques distintos. Indicadores razonables (actitud abierta, aprender las formas del equipo, organización de horarios, aportar sin imponer) y errores coherentes, y la repregunta sobre la dificultad persistente encaja. Muestra adaptabilidad y, en parte, cooperación. No duplica los 'parecidos': el 1 es conductual, y el 5 y el 6 se refieren a otros cambios. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-adaptabilitat-12\",\"verdict\":\"VALID\",\"reason\":\"Excursión de una entidad con 20 personas y cambio brusco del tiempo: plausible en voluntariado o ocio, sin procedimientos policiales. Pregunta situacional abierta con varias formas válidas de responder. Indicadores (seguridad, decisión rápida y razonada, comunicación calmada, avisar a la entidad) no dictan una respuesta única. Los errores y la repregunta ('cómo sabrías que fue acertada') son coherentes. Permite mostrar adaptabilidad, resolución de problemas y autocontrol. No duplica ningún 'parecido'. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-10\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La situación (oferta de trabajo estable durante la preparación) es plausible y la pregunta es abierta, con indicadores razonables. Pero la repregunta 'Què et diria que has pres la decisió correcta d'aquí a un any?' es confusa y está mal formulada en catalán (no se entiende quién 'diría' qué). Además presupone que hay una decisión 'correcta', lo que choca con la ausencia de respuesta única. Por eso no es coherente. Hay un riesgo menor de sesgo implícito hacia rechazar la oferta. No duplica el motivacio-11, que trata de un objetivo ya vivido.\",\"criteria_checked\":{\"coherente\":false,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-motivacio-11\",\"verdict\":\"VALID\",\"reason\":\"Pregunta conductual sobre un objetivo a largo plazo (estudios, deporte, idiomas), accesible para cualquier candidato. Texto claro; indicadores (objetivo concreto, dificultades reales, qué lo sostuvo, aprendizaje) son señales no arbitrarias de una buena explicación y no dictan una respuesta. Los errores y la repregunta ('¿te planteaste dejarlo?') son coherentes. Muestra motivación y autogestión. No duplica ningún 'parecido': el 4 trata de una decepción profesional y el 8 de la actividad más motivadora. Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-13\",\"verdict\":\"VALID\",\"reason\":\"Recepción de una instalación deportiva y una persona que no domina ni catalán ni castellano: situación cotidiana y realista, sin procedimientos policiales. La pregunta es abierta (admite varios recursos y enfoques). Los indicadores (lenguaje adaptado, apoyos, comprobar la comprensión, paciencia) son señales razonables sin imponer una respuesta única. Los errores y la repregunta ('si aun así no te ha entendido') son coherentes. Muestra comunicación y servicio. No duplica los 'parecidos' (el 5 trata de una persona nerviosa y el 7 de explicar a varias personas). Sin afirmaciones oficiales ni diagnóstico.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"ent-habilitats-socials-14\",\"verdict\":\"VALID\",\"reason\":\"Reunión de comunidad de vecinos con interrupciones despectivas: situación plausible y cotidiana. Pregunta abierta con varias respuestas posibles (límites, escucha, reconducción). Indicadores (calma, asertividad, escuchar argumentos válidos, reconducir) y errores (responder con el mismo tono, abandonar la propuesta) son coherentes con la pregunta. La repregunta sobre hablar con la persona después encaja. Muestra habilidades sociales y autocontrol. No duplica ningún 'parecido': el 3 es conductual y trata de un tema incómodo. Sin afirmaciones oficiales ni diagnóstico; 'reconduix' es una variante admitida.\",\"criteria_checked\":{\"coherente\":true,\"realista\":true,\"pregunta_abierta\":true,\"indicadores_pertinentes\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "item_id": "ent-responsabilitat-13",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Situación plausible de asociación juvenil (material perdido el día antes de una actividad), sin procedimientos policiales. Texto en catalán claro; indicadores (asumir, avisar, alternativas, prevención) y errores encajan con la pregunta y la repregunta, que solo profundiza en la prevención. La pregunta admite respuestas buenas distintas. Competencias (responsabilidad, resolución de problemas) bien visibles. Sin afirmaciones oficiales ni diagnóstico. No repite ningún 'parecido': los de material incompleto (5 y 7) tratan un descuido ajeno, no una pérdida propia.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-responsabilitat-14",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto es coherente, la situación (tienda, jefe que pide dar una fecha falsa) es realista y relevante para responsabilidad y servicio. Pero la salida ética es casi obvia, y los indicadores ('identifica el conflicto entre obedecer y ser honesto', 'plantea el problema al responsable', 'informa al cliente con veracidad') dictan una única respuesta en vez de señalar rasgos de una buena explicación. Por eso la pregunta es poco abierta y los indicadores no son pertinentes. No duplica el 6, que trata un error propio ya cometido. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": false,
+      "indicadores_pertinentes": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Traslado de centro con equipo y horarios nuevos: plausible en el ámbito laboral. Pregunta situacional abierta, que permite enfoques distintos. Indicadores razonables (actitud abierta, aprender las formas del equipo, organización de horarios, aportar sin imponer) y errores coherentes, y la repregunta sobre la dificultad persistente encaja. Muestra adaptabilidad y, en parte, cooperación. No duplica los 'parecidos': el 1 es conductual, y el 5 y el 6 se refieren a otros cambios. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-adaptabilitat-12",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Excursión de una entidad con 20 personas y cambio brusco del tiempo: plausible en voluntariado o ocio, sin procedimientos policiales. Pregunta situacional abierta con varias formas válidas de responder. Indicadores (seguridad, decisión rápida y razonada, comunicación calmada, avisar a la entidad) no dictan una respuesta única. Los errores y la repregunta ('cómo sabrías que fue acertada') son coherentes. Permite mostrar adaptabilidad, resolución de problemas y autocontrol. No duplica ningún 'parecido'. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-10",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La situación (oferta de trabajo estable durante la preparación) es plausible y la pregunta es abierta, con indicadores razonables. Pero la repregunta 'Què et diria que has pres la decisió correcta d'aquí a un any?' es confusa y está mal formulada en catalán (no se entiende quién 'diría' qué). Además presupone que hay una decisión 'correcta', lo que choca con la ausencia de respuesta única. Por eso no es coherente. Hay un riesgo menor de sesgo implícito hacia rechazar la oferta. No duplica el motivacio-11, que trata de un objetivo ya vivido.",
+     "criteria_checked": {
+      "coherente": false,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-motivacio-11",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta conductual sobre un objetivo a largo plazo (estudios, deporte, idiomas), accesible para cualquier candidato. Texto claro; indicadores (objetivo concreto, dificultades reales, qué lo sostuvo, aprendizaje) son señales no arbitrarias de una buena explicación y no dictan una respuesta. Los errores y la repregunta ('¿te planteaste dejarlo?') son coherentes. Muestra motivación y autogestión. No duplica ningún 'parecido': el 4 trata de una decepción profesional y el 8 de la actividad más motivadora. Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-13",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Recepción de una instalación deportiva y una persona que no domina ni catalán ni castellano: situación cotidiana y realista, sin procedimientos policiales. La pregunta es abierta (admite varios recursos y enfoques). Los indicadores (lenguaje adaptado, apoyos, comprobar la comprensión, paciencia) son señales razonables sin imponer una respuesta única. Los errores y la repregunta ('si aun así no te ha entendido') son coherentes. Muestra comunicación y servicio. No duplica los 'parecidos' (el 5 trata de una persona nerviosa y el 7 de explicar a varias personas). Sin afirmaciones oficiales ni diagnóstico.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "ent-habilitats-socials-14",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Reunión de comunidad de vecinos con interrupciones despectivas: situación plausible y cotidiana. Pregunta abierta con varias respuestas posibles (límites, escucha, reconducción). Indicadores (calma, asertividad, escuchar argumentos válidos, reconducir) y errores (responder con el mismo tono, abandonar la propuesta) son coherentes con la pregunta. La repregunta sobre hablar con la persona después encaja. Muestra habilidades sociales y autocontrol. No duplica ningún 'parecido': el 3 es conductual y trata de un tema incómodo. Sin afirmaciones oficiales ni diagnóstico; 'reconduix' es una variante admitida.",
+     "criteria_checked": {
+      "coherente": true,
+      "realista": true,
+      "pregunta_abierta": true,
+      "indicadores_pertinentes": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a30e3c88ee880b2ac.jsonl",
+    "respuesta_sha256": "0d50a6ef1c05ee77ce8a8d9578496f58661bc5058b86ad4704c4ffb3a400627c"
+   },
+   "registrada_el": "2026-10-10T06:34:30",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)"
+  }
+ ]
+}

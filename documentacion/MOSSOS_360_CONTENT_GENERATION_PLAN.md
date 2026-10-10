@@ -26,8 +26,6 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 | área | prioridad | elementos planificados |
 |---|---|---|
 | APTITUDE | P1 | 60 |
-| COMPETENCIES | P1 | 54 |
-| INTERVIEW | P1 | 4 |
 | KNOWLEDGE | P0 | 0 |
 
 ## BATCH MOSSOS-SOURCES-001
@@ -39,28 +37,6 @@ Siguientes tandas en cualquier momento: `python3 -m fabrica.cobertura360 siguien
 - validacion: catalogo/perfil.py → verificar_bloque / fabrica.fuente
 - judge: —
 - criterio de publicación: no aplica
-
-## BATCH MOSSOS-INTERVIEW-001
-
-- prioridad: P1 · tipo: generacion · ejecutable ahora: sí
-- temas: responsabilitat, adaptabilitat, motivacio, habilitats-socials
-- cantidad: 4 · por competencia: {'responsabilitat': 1, 'adaptabilitat': 1, 'motivacio': 1, 'habilitats-socials': 1}
-- dificultad: 1-3 (repartida)
-- tipos: conductual y situacional (mín. 2 situacionales por competencia)
-- fuente: nombres oficiales de las competencias (catalogo/preparacion); el contenido es TESTLEY_TRAINING
-- validacion: fabrica.entrevista.validar (reglas v2, sin duplicados con lotes anteriores)
-- judge: política juez-entrevista-v2 (modelo de referencia: sonnet)
-- criterio de publicación: puerta de fabrica.entrevista: VALID del modelo de referencia, ningún veredicto más conservador, sin retención de auditoría
-
-## BATCH MOSSOS-COMPETENCY-REJUDGE-001
-
-- prioridad: P1 · tipo: reevaluacion · ejecutable ahora: sí
-- temas: C00002
-- cantidad: 54
-- accion: rejuzgar fichas y situaciones con el modelo de referencia y el mismo prompt congelado (juez-competencias-v1), combinación conservadora como en entrevista; no se genera contenido nuevo
-- validacion: fabrica.competencias.validar (sin cambios)
-- judge: Sonnet (referencia) · prompt congelado
-- criterio de publicación: solo VALID del modelo de referencia sin veredicto más conservador
 
 ## BATCH MOSSOS-APTITUDE-VERBAL-001
 

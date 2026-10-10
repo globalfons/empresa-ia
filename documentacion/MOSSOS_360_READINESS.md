@@ -7,7 +7,7 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - [x] **Temario operativo** · 21 temas, `/oposiciones/mossos-esquadra/tema-N/` · `tests/test_perfil.py`
 - [ ] **Knowledge tests operativos** · funcionan, pero la cobertura es PARCIAL: 99 preguntas TestLey VALID; 3 temas P0 (B.1, B.5, C.1: menos de 10 preguntas servibles), 0 simulacros TestLey disjuntos con el reparto oficial; apartados sin texto oficial en B.8, C.1-C.4 y tema D sin fuente (`MOSSOS_360_CONTENT_COVERAGE.md`); la fábrica está en GENERATION_PAUSED
 - [x] **Official exams separados** · 290 OFFICIAL_EXAM en su propio banco · `scripts/integridad_banco.py`, `tests/test_mossos.py`
-- [ ] Aptitud verbal · PARCIAL: series de letras y orden alfabético (`web/assets/aptitud.js`, tests en `tests/js/aptitud.test.mjs`). La verbal semántica (sinónimos, analogías) necesita un banco revisado por personas
+- [ ] Aptitud verbal · PARCIAL (2026-10-10: cadena de revisión humana implementada en `fabrica/verbal.py`; 0 ítems hasta que una persona los redacte y los apruebe): series de letras y orden alfabético (`web/assets/aptitud.js`, tests en `tests/js/aptitud.test.mjs`). La verbal semántica (sinónimos, analogías) necesita un banco revisado por personas
 - [x] **Aptitud numérica** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
 - [x] **Aptitud abstracta** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
 - [x] **Aptitud espacial** · `web/assets/aptitud.js` + `/oposiciones/mossos-esquadra/aptitudinal/` · `tests/js/aptitud.test.mjs` (solubilidad, unicidad, cálculo independiente) · E2E 21a–21c en 375 px y escritorio · contenido TESTLEY_GENERATED, nunca oficial
@@ -17,7 +17,7 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - [x] **Interview trainer** · 56 escenarios TESTLEY_TRAINING VALID (lotes E00001-E00003) con la política `juez-entrevista-v2` (Sonnet como referencia, prompt congelado, combinación conservadora de rondas) y la regla determinista v2; las 10 competencias oficiales con ≥ 5; 29 en REVIEW_REQUIRED y 19 REJECTED, nunca servidos · `/oposiciones/mossos-esquadra/entrevista/` · `tests/test_entrevista.py`, `tests/js/entrevista.test.mjs`, `tests/deno/tutor_entrevista_test.ts`, E2E 23a–23i · `INTERVIEW_ENGINE.md`. Análisis con IA: implementado, pendiente del despliegue del Tutor IA
 - [x] **Content coverage audit** · `fabrica/cobertura360.py` → `MOSSOS_360_CONTENT_COVERAGE.md` (calculado desde los datos), objetivos razonados y `MOSSOS_360_CONTENT_GENERATION_PLAN.md`; `python3 -m fabrica.cobertura360 siguientes` · `tests/test_cobertura360.py`. La auditoría muestra huecos P0 (abajo)
 - [x] Physical tracker · `oposiciones/mossos-esquadra/fisica/` (`web/assets/fisica.js`): registro de marcas, lectura de los barems oficiales, mínimos, evolución y plan orientativo por fases con calendario de sesiones (tests `tests/js/fisica.test.mjs`)
-- [x] Catalan information · `oposiciones/mossos-esquadra/otras-pruebas/` (estructura oficial del C1 e idiomas voluntarios). Sin material de práctica de catalán: BLOQUEADO hasta tener material revisado
+- [x] Catalan information · `oposiciones/mossos-esquadra/otras-pruebas/` (estructura oficial del C1 e idiomas voluntarios). Práctica (2026-10-10): redacción de 180 palabras con 90 min y lectura en voz alta de textos oficiales del DOGC; sintaxis y comprensión BLOQUEADAS hasta tener material revisado
 - [x] Psychophysical information · capítulos del Annex 3 en `otras-pruebas/`, solo informativos; seguimiento por tareas en el panel
 - [x] Simulation · simulacro 360 combinado en el panel (conocimientos + aptitudinal contrarreloj + competencias + entrevista)
 - [x] Adaptive plan · reparto semanal multimódulo según la fecha del examen, las horas y los módulos débiles o sin empezar (`web/assets/panel360.js`)
@@ -107,13 +107,14 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 |---|---|
 | Conocimientos (1.013 VALID TestLey, tests por tema, simulacros, repaso espaciado, errores) | IMPLEMENTADO Y FUNCIONAL |
 | Aptitudinal: numérica, abstracta, espacial, perceptiva y verbal formal | IMPLEMENTADO Y FUNCIONAL |
-| Aptitud verbal semántica (sinónimos, analogías) | BLOQUEADO: necesita un banco revisado por personas |
+| Aptitud verbal semántica (sinónimos, analogías) | BLOQUEADO: la cadena está implementada, pero necesita ítems redactados y aprobados por personas |
 | Competencias y autoconocimiento (psicométrico explicado, sin diagnóstico) | IMPLEMENTADO Y FUNCIONAL |
 | Entrevista: banco, sesiones, rúbrica y historial | IMPLEMENTADO Y FUNCIONAL |
 | Entrevista: análisis con IA | PENDIENTE DE CONFIGURACIÓN EXTERNA (Tutor IA) |
 | Prueba física (barems oficiales, marcas, evolución, plan, calendario) | IMPLEMENTADO Y FUNCIONAL |
 | Catalán, idiomas voluntarios y cuadro médico (información y tareas) | IMPLEMENTADO Y FUNCIONAL |
-| Práctica de catalán e idiomas | BLOQUEADO: no hay material revisado |
+| Práctica de catalán: redacción y lectura oral con textos oficiales del DOGC | IMPLEMENTADO Y FUNCIONAL |
+| Catalán: preguntas de sintaxis y comprensión; idiomas voluntarios (audio) | BLOQUEADO: no hay material revisado |
 | Panel 360, recomendaciones, reparto adaptativo y simulacro combinado | IMPLEMENTADO Y FUNCIONAL |
 | Límites premium en el servidor | PENDIENTE DE CONFIGURACIÓN EXTERNA (`PREMIUM_DEPLOYMENT.md`) |
 | Conjunto del producto | PENDIENTE DE AUDITORÍA FINAL |
@@ -124,3 +125,23 @@ Estado global: **NOT READY**. Solo se marca un punto con evidencia comprobable.
 - `ANTHROPIC_API_KEY`, `TUTOR_MODEL` y `TUTOR_LIMITE_DIARIO`: Tutor IA y análisis de la entrevista.
 - `LEMONSQUEEZY_WEBHOOK_SECRET`, `LS_STORE_ID` y `LS_PRODUCT_ID`: pagos, sin cambios.
 - `RESEND_API_KEY`: emails.
+
+## Actualización 2026-10-10 · cierre de pendientes funcionales y de contenido
+- **Competencias**:
+  - Las 10 fichas oficiales están completas: habilitats socials, nueva en el lote C00003, sustituye a la que quedó en revisión en C00002, que queda trazada en `superadas`.
+  - 67 escenarios VALID; los lotes complementarios C00003 y C00004 añaden 22.
+  - 4 escenarios nuevos quedan en revisión y no se publican.
+- **Entrevista**:
+  - 62 escenarios VALID, al menos 6 por competencia; el lote E00004 añade 6.
+  - Los 2 escenarios en revisión no se publican.
+  - El análisis con IA está implementado (cliente `TLTutor.entrevista` y modo `entrevista` de la función `tutor`); solo falta desplegarlo.
+- **Aptitudinal**: nuevos formatos `intrus` (abstracta) y `mirall` (espacial), verificados por cálculo.
+- **Verbal semántica**: cadena de revisión humana (`fabrica/verbal.py`). Hay 0 ítems hasta que una persona los redacte y los apruebe.
+- **Catalán**: redacción (180 palabras, 90 min) y lectura en voz alta con textos oficiales del DOGC, integradas en el panel 360. Las preguntas de sintaxis y comprensión y la práctica de idiomas voluntarios siguen bloqueadas por falta de material revisado.
+- **Premium**: los escenarios de competencias y de entrevista entran en el banco privado (en la web solo queda la muestra de 1 por competencia). El tutor los lee del banco. El test de fugas pasa (7/7).
+- **Retenidos**: los lotes retenidos (S00022 y el resto) no se han tocado.
+- **Pendiente del propietario**:
+  - Desplegar las funciones `banco` y `tutor`.
+  - Configurar los secretos `LS_STORE_ID`, `SITE_ORIGIN`, `ANTHROPIC_API_KEY` y, opcionalmente, `TUTOR_MODEL` y `TUTOR_LIMITE_DIARIO`.
+  - Ejecutar el SQL de `banco_premium` y subir el banco.
+  - Activar `bancoPrivado` y añadir `tutorUrl` en `config.json`.

@@ -1,7 +1,7 @@
 {
  "oposicion": "mossos-esquadra",
  "call_id": "46/26",
- "generado": "2026-10-09",
+ "generado": "2026-10-10",
  "estado_fabrica": "ACTIVE",
  "parametros": {
   "simulacros_disjuntos": 10,
@@ -832,7 +832,8 @@
     "categoria": "abstracto",
     "area": "abstract",
     "subtipos": [
-     "serie_figuras"
+     "serie_figuras",
+     "intrus"
     ],
     "dificultades": [
      1,
@@ -852,20 +853,31 @@
      "serie_figuras/d3": {
       "distintos": 1818,
       "errores": 0
+     },
+     "intrus/d1": {
+      "distintos": 1994,
+      "errores": 0
+     },
+     "intrus/d2": {
+      "distintos": 1997,
+      "errores": 0
+     },
+     "intrus/d3": {
+      "distintos": 1990,
+      "errores": 0
      }
     },
     "min_distintos_por_combinacion": 1818,
     "errores_verificacion": 0,
-    "huecos": [
-     "un solo formato de ejercicio"
-    ],
-    "prioridad": "P2"
+    "huecos": [],
+    "prioridad": "P3"
    },
    {
     "categoria": "espacial",
     "area": "spatial",
     "subtipos": [
-     "rotacion"
+     "rotacion",
+     "mirall"
     ],
     "dificultades": [
      1,
@@ -885,14 +897,24 @@
      "rotacion/d3": {
       "distintos": 1997,
       "errores": 0
+     },
+     "mirall/d1": {
+      "distintos": 1224,
+      "errores": 0
+     },
+     "mirall/d2": {
+      "distintos": 1994,
+      "errores": 0
+     },
+     "mirall/d3": {
+      "distintos": 1993,
+      "errores": 0
      }
     },
-    "min_distintos_por_combinacion": 1685,
+    "min_distintos_por_combinacion": 1224,
     "errores_verificacion": 0,
-    "huecos": [
-     "un solo formato de ejercicio"
-    ],
-    "prioridad": "P2"
+    "huecos": [],
+    "prioridad": "P3"
    },
    {
     "categoria": "verbal",
@@ -1071,38 +1093,41 @@
  },
  "competencies": {
   "lotes": [
-   "C00002"
+   "C00002",
+   "C00003",
+   "C00004"
   ],
   "modelos_juez": [
-   "claude-haiku-4-5"
+   "claude-haiku-4-5",
+   "claude-sonnet"
   ],
-  "requiere_recalibracion": true,
+  "requiere_recalibracion": false,
   "competencias": [
    {
     "id": "responsabilitat",
     "nombre": "Responsabilitat i orientació a la qualitat",
     "perfil_valid": 1,
-    "situaciones": 4,
-    "VALID": 4,
+    "situaciones": 7,
+    "VALID": 7,
     "REVIEW_REQUIRED": 2,
     "formatos": {
-     "eleccion": 3,
-     "ranking": 1
+     "eleccion": 5,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 2
+    "faltan": 0
    },
    {
     "id": "cooperacio",
     "nombre": "Cooperació i treball en equip",
     "perfil_valid": 1,
-    "situaciones": 6,
-    "VALID": 6,
+    "situaciones": 8,
+    "VALID": 8,
     "REVIEW_REQUIRED": 0,
     "formatos": {
-     "eleccion": 4,
-     "ranking": 2
+     "eleccion": 5,
+     "ranking": 3
     },
     "autoevaluacion": 2,
     "objetivo": 6,
@@ -1112,120 +1137,121 @@
     "id": "autonomia",
     "nombre": "Autonomia i iniciativa",
     "perfil_valid": 1,
-    "situaciones": 4,
-    "VALID": 4,
+    "situaciones": 6,
+    "VALID": 6,
     "REVIEW_REQUIRED": 2,
     "formatos": {
-     "eleccion": 3,
-     "ranking": 1
+     "eleccion": 4,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 2
+    "faltan": 0
    },
    {
     "id": "resolucio-problemes",
     "nombre": "Resolució de problemes",
     "perfil_valid": 1,
-    "situaciones": 4,
-    "VALID": 4,
+    "situaciones": 6,
+    "VALID": 6,
     "REVIEW_REQUIRED": 2,
     "formatos": {
-     "eleccion": 4
+     "eleccion": 5,
+     "ranking": 1
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 2
+    "faltan": 0
    },
    {
     "id": "orientacio-servei",
     "nombre": "Orientació de servei a les persones",
     "perfil_valid": 1,
-    "situaciones": 4,
-    "VALID": 4,
+    "situaciones": 7,
+    "VALID": 7,
     "REVIEW_REQUIRED": 2,
     "formatos": {
-     "eleccion": 3,
-     "ranking": 1
+     "eleccion": 5,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 2
+    "faltan": 0
    },
    {
     "id": "adaptabilitat",
     "nombre": "Adaptabilitat i flexibilitat",
     "perfil_valid": 1,
-    "situaciones": 4,
-    "VALID": 4,
+    "situaciones": 6,
+    "VALID": 6,
     "REVIEW_REQUIRED": 2,
     "formatos": {
-     "eleccion": 3,
-     "ranking": 1
+     "eleccion": 4,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 2
+    "faltan": 0
    },
    {
     "id": "autocontrol",
     "nombre": "Autocontrol i resistència a la pressió",
     "perfil_valid": 1,
-    "situaciones": 5,
-    "VALID": 5,
+    "situaciones": 7,
+    "VALID": 7,
     "REVIEW_REQUIRED": 1,
     "formatos": {
-     "eleccion": 4,
-     "ranking": 1
+     "eleccion": 5,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 1
+    "faltan": 0
    },
    {
     "id": "autogestio",
     "nombre": "Autogestió i desenvolupament personal",
     "perfil_valid": 1,
-    "situaciones": 5,
-    "VALID": 5,
+    "situaciones": 7,
+    "VALID": 7,
     "REVIEW_REQUIRED": 1,
     "formatos": {
-     "eleccion": 4,
-     "ranking": 1
+     "eleccion": 5,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 1
+    "faltan": 0
    },
    {
     "id": "motivacio",
     "nombre": "Motivació i identificació amb l'organització",
     "perfil_valid": 1,
-    "situaciones": 4,
-    "VALID": 4,
+    "situaciones": 6,
+    "VALID": 6,
     "REVIEW_REQUIRED": 2,
     "formatos": {
-     "eleccion": 3,
-     "ranking": 1
+     "eleccion": 4,
+     "ranking": 2
     },
     "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 2
+    "faltan": 0
    },
    {
     "id": "habilitats-socials",
     "nombre": "Habilitats socials i comunicatives",
-    "perfil_valid": 0,
-    "situaciones": 5,
-    "VALID": 5,
+    "perfil_valid": 1,
+    "situaciones": 7,
+    "VALID": 7,
     "REVIEW_REQUIRED": 1,
     "formatos": {
-     "eleccion": 4,
-     "ranking": 1
+     "eleccion": 5,
+     "ranking": 2
     },
-    "autoevaluacion": 0,
+    "autoevaluacion": 2,
     "objetivo": 6,
-    "faltan": 1
+    "faltan": 0
    }
   ]
  },
@@ -1233,7 +1259,8 @@
   "lotes": [
    "E00001",
    "E00002",
-   "E00003"
+   "E00003",
+   "E00004"
   ],
   "politica": "juez-entrevista-v2",
   "modelo_referencia": "sonnet",
@@ -1241,22 +1268,23 @@
    {
     "id": "responsabilitat",
     "nombre": "Responsabilitat i orientació a la qualitat",
-    "escenarios": 12,
-    "VALID": 5,
-    "REVIEW_REQUIRED": 5,
+    "escenarios": 14,
+    "VALID": 6,
+    "REVIEW_REQUIRED": 6,
     "review_ids": [
      "ent-responsabilitat-2",
      "ent-responsabilitat-3",
      "ent-responsabilitat-5",
      "ent-responsabilitat-6",
-     "ent-responsabilitat-10"
+     "ent-responsabilitat-10",
+     "ent-responsabilitat-14"
     ],
     "review_sustituidos": [],
-    "situacionales_valid": 1,
+    "situacionales_valid": 2,
     "secundaria_en": 6,
     "objetivo": 6,
-    "faltan": 1,
-    "prioridad": "P1"
+    "faltan": 0,
+    "prioridad": "P3"
    },
    {
     "id": "cooperacio",
@@ -1269,7 +1297,7 @@
     ],
     "review_sustituidos": [],
     "situacionales_valid": 2,
-    "secundaria_en": 4,
+    "secundaria_en": 5,
     "objetivo": 6,
     "faltan": 0,
     "prioridad": "P3"
@@ -1304,7 +1332,7 @@
     ],
     "review_sustituidos": [],
     "situacionales_valid": 2,
-    "secundaria_en": 3,
+    "secundaria_en": 5,
     "objetivo": 6,
     "faltan": 0,
     "prioridad": "P3"
@@ -1321,7 +1349,7 @@
     ],
     "review_sustituidos": [],
     "situacionales_valid": 2,
-    "secundaria_en": 2,
+    "secundaria_en": 3,
     "objetivo": 6,
     "faltan": 0,
     "prioridad": "P3"
@@ -1329,8 +1357,8 @@
    {
     "id": "adaptabilitat",
     "nombre": "Adaptabilitat i flexibilitat",
-    "escenarios": 10,
-    "VALID": 5,
+    "escenarios": 12,
+    "VALID": 7,
     "REVIEW_REQUIRED": 3,
     "review_ids": [
      "ent-adaptabilitat-2",
@@ -1338,11 +1366,11 @@
      "ent-adaptabilitat-9"
     ],
     "review_sustituidos": [],
-    "situacionales_valid": 2,
+    "situacionales_valid": 4,
     "secundaria_en": 5,
     "objetivo": 6,
-    "faltan": 1,
-    "prioridad": "P1"
+    "faltan": 0,
+    "prioridad": "P3"
    },
    {
     "id": "autocontrol",
@@ -1356,7 +1384,7 @@
     ],
     "review_sustituidos": [],
     "situacionales_valid": 2,
-    "secundaria_en": 4,
+    "secundaria_en": 6,
     "objetivo": 6,
     "faltan": 0,
     "prioridad": "P3"
@@ -1374,7 +1402,7 @@
     ],
     "review_sustituidos": [],
     "situacionales_valid": 2,
-    "secundaria_en": 3,
+    "secundaria_en": 4,
     "objetivo": 6,
     "faltan": 0,
     "prioridad": "P3"
@@ -1382,27 +1410,28 @@
    {
     "id": "motivacio",
     "nombre": "Motivació i identificació amb l'organització",
-    "escenarios": 9,
-    "VALID": 5,
-    "REVIEW_REQUIRED": 4,
+    "escenarios": 11,
+    "VALID": 6,
+    "REVIEW_REQUIRED": 5,
     "review_ids": [
      "ent-motivacio-1",
      "ent-motivacio-2",
      "ent-motivacio-4",
-     "ent-motivacio-9"
+     "ent-motivacio-9",
+     "ent-motivacio-10"
     ],
     "review_sustituidos": [],
     "situacionales_valid": 2,
     "secundaria_en": 0,
     "objetivo": 6,
-    "faltan": 1,
-    "prioridad": "P1"
+    "faltan": 0,
+    "prioridad": "P3"
    },
    {
     "id": "habilitats-socials",
     "nombre": "Habilitats socials i comunicatives",
-    "escenarios": 12,
-    "VALID": 5,
+    "escenarios": 14,
+    "VALID": 7,
     "REVIEW_REQUIRED": 4,
     "review_ids": [
      "ent-habilitats-socials-1",
@@ -1411,11 +1440,11 @@
      "ent-habilitats-socials-12"
     ],
     "review_sustituidos": [],
-    "situacionales_valid": 2,
+    "situacionales_valid": 4,
     "secundaria_en": 3,
     "objetivo": 6,
-    "faltan": 1,
-    "prioridad": "P1"
+    "faltan": 0,
+    "prioridad": "P3"
    }
   ]
  },
@@ -1572,12 +1601,16 @@
    "generador_ok": true
   },
   "entrevista": {
-   "simulaciones_sin_repetir": 5,
+   "simulaciones_sin_repetir": 6,
    "limitante": [
     "responsabilitat",
-    "adaptabilitat",
-    "motivacio",
-    "habilitats-socials"
+    "cooperacio",
+    "autonomia",
+    "resolucio-problemes",
+    "orientacio-servei",
+    "autocontrol",
+    "autogestio",
+    "motivacio"
    ],
    "objetivo": 6
   },
@@ -1839,26 +1872,26 @@
   {
    "area": "APTITUDE",
    "subarea": "abstract",
-   "actual": 1,
-   "valid": 1,
+   "actual": 2,
+   "valid": 2,
    "review": 0,
    "oficial": 0,
    "objetivo": "formatos",
-   "faltan": "un solo formato de ejercicio",
-   "prioridad": "P2",
-   "motivo": "generador: 1 formatos × 3 dificultades, ≥1818 distintos/combinación"
+   "faltan": "—",
+   "prioridad": "P3",
+   "motivo": "generador: 2 formatos × 3 dificultades, ≥1818 distintos/combinación"
   },
   {
    "area": "APTITUDE",
    "subarea": "spatial",
-   "actual": 1,
-   "valid": 1,
+   "actual": 2,
+   "valid": 2,
    "review": 0,
    "oficial": 0,
    "objetivo": "formatos",
-   "faltan": "un solo formato de ejercicio",
-   "prioridad": "P2",
-   "motivo": "generador: 1 formatos × 3 dificultades, ≥1685 distintos/combinación"
+   "faltan": "—",
+   "prioridad": "P3",
+   "motivo": "generador: 2 formatos × 3 dificultades, ≥1224 distintos/combinación"
   },
   {
    "area": "APTITUDE",
@@ -1899,134 +1932,134 @@
   {
    "area": "COMPETENCIES",
    "subarea": "responsabilitat",
-   "actual": 4,
-   "valid": 4,
+   "actual": 7,
+   "valid": 7,
    "review": 2,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 2,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "cooperacio",
-   "actual": 6,
-   "valid": 6,
+   "actual": 8,
+   "valid": 8,
    "review": 0,
    "oficial": "nombre",
    "objetivo": 6,
    "faltan": 0,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "autonomia",
-   "actual": 4,
-   "valid": 4,
+   "actual": 6,
+   "valid": 6,
    "review": 2,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 2,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "resolucio-problemes",
-   "actual": 4,
-   "valid": 4,
+   "actual": 6,
+   "valid": 6,
    "review": 2,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 2,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "orientacio-servei",
-   "actual": 4,
-   "valid": 4,
+   "actual": 7,
+   "valid": 7,
    "review": 2,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 2,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "adaptabilitat",
-   "actual": 4,
-   "valid": 4,
+   "actual": 6,
+   "valid": 6,
    "review": 2,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 2,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "autocontrol",
-   "actual": 5,
-   "valid": 5,
+   "actual": 7,
+   "valid": 7,
    "review": 1,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "autogestio",
-   "actual": 5,
-   "valid": 5,
+   "actual": 7,
+   "valid": 7,
    "review": 1,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "motivacio",
-   "actual": 4,
-   "valid": 4,
+   "actual": 6,
+   "valid": 6,
    "review": 2,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 2,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "COMPETENCIES",
    "subarea": "habilitats-socials",
-   "actual": 5,
-   "valid": 5,
+   "actual": 7,
+   "valid": 7,
    "review": 1,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
-   "motivo": "juzgadas solo con un modelo que la calibración de entrevista mostró laxo: rejuzgar con el de referencia"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "—"
   },
   {
    "area": "INTERVIEW",
    "subarea": "responsabilitat",
-   "actual": 12,
-   "valid": 5,
-   "review": 5,
+   "actual": 14,
+   "valid": 6,
+   "review": 6,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
-   "motivo": "1 situacionales VALID (mín. 2)"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "2 situacionales VALID (mín. 2)"
   },
   {
    "area": "INTERVIEW",
@@ -2079,14 +2112,14 @@
   {
    "area": "INTERVIEW",
    "subarea": "adaptabilitat",
-   "actual": 10,
-   "valid": 5,
+   "actual": 12,
+   "valid": 7,
    "review": 3,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
-   "motivo": "2 situacionales VALID (mín. 2)"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "4 situacionales VALID (mín. 2)"
   },
   {
    "area": "INTERVIEW",
@@ -2115,38 +2148,38 @@
   {
    "area": "INTERVIEW",
    "subarea": "motivacio",
-   "actual": 9,
-   "valid": 5,
-   "review": 4,
+   "actual": 11,
+   "valid": 6,
+   "review": 5,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
+   "faltan": 0,
+   "prioridad": "P3",
    "motivo": "2 situacionales VALID (mín. 2)"
   },
   {
    "area": "INTERVIEW",
    "subarea": "habilitats-socials",
-   "actual": 12,
-   "valid": 5,
+   "actual": 14,
+   "valid": 7,
    "review": 4,
    "oficial": "nombre",
    "objetivo": 6,
-   "faltan": 1,
-   "prioridad": "P1",
-   "motivo": "2 situacionales VALID (mín. 2)"
+   "faltan": 0,
+   "prioridad": "P3",
+   "motivo": "4 situacionales VALID (mín. 2)"
   },
   {
    "area": "LANGUAGE",
    "subarea": "català (C1)",
-   "actual": 0,
-   "valid": 0,
+   "actual": 22,
+   "valid": 22,
    "review": 0,
    "oficial": "requisito y estructura de la prueba",
-   "objetivo": "—",
-   "faltan": "todo el contenido de práctica",
+   "objetivo": "práctica de redacción y oral",
+   "faltan": "preguntas de sintaxis y comprensión (bloqueadas: necesitan material revisado por personas)",
    "prioridad": "P2",
-   "motivo": "obligatoria y eliminatoria solo sin C1 acreditado; producto aparte (redacción, sintaxis, comprensión, oral)"
+   "motivo": "redacción (180 palabras, 90 min) y lectura en voz alta con textos oficiales del DOGC: web/assets/catala.js"
   },
   {
    "area": "LANGUAGE",
@@ -2158,19 +2191,19 @@
    "objetivo": "—",
    "faltan": "comprensión oral (audio)",
    "prioridad": "P3",
-   "motivo": "mérito voluntario; requiere audio"
+   "motivo": "mérito voluntario; requiere audio con material revisado (bloqueado)"
   },
   {
    "area": "PHYSICAL",
    "subarea": "registro y barems",
-   "actual": 0,
-   "valid": 0,
+   "actual": 3,
+   "valid": 3,
    "review": 0,
    "oficial": "pruebas y barems verificados",
    "objetivo": "motor (Fase 4)",
-   "faltan": "Physical Engine",
-   "prioridad": "P1",
-   "motivo": "no es contenido: es la Fase 4 (no iniciada)"
+   "faltan": "—",
+   "prioridad": "P3",
+   "motivo": "Physical Engine: barems oficiales, marcas, evolución y plan orientativo (web/assets/fisica.js)"
   }
  ],
  "tandas": [
@@ -2190,51 +2223,6 @@
    "publicacion": "no aplica",
    "ejecutable": false,
    "bloqueo": "requiere fuentes oficiales (trabajo de ingesta, no generación)"
-  },
-  {
-   "id": "MOSSOS-INTERVIEW-001",
-   "area": "INTERVIEW",
-   "prioridad": "P1",
-   "tipo": "generacion",
-   "temas": [
-    "responsabilitat",
-    "adaptabilitat",
-    "motivacio",
-    "habilitats-socials"
-   ],
-   "subtemas": [],
-   "cantidad": 4,
-   "por_competencia": {
-    "responsabilitat": 1,
-    "adaptabilitat": 1,
-    "motivacio": 1,
-    "habilitats-socials": 1
-   },
-   "dificultad": "1-3 (repartida)",
-   "tipos": "conductual y situacional (mín. 2 situacionales por competencia)",
-   "fuente": "nombres oficiales de las competencias (catalogo/preparacion); el contenido es TESTLEY_TRAINING",
-   "validacion": "fabrica.entrevista.validar (reglas v2, sin duplicados con lotes anteriores)",
-   "judge": "política juez-entrevista-v2 (modelo de referencia: sonnet)",
-   "publicacion": "puerta de fabrica.entrevista: VALID del modelo de referencia, ningún veredicto más conservador, sin retención de auditoría",
-   "ejecutable": true,
-   "bloqueo": null
-  },
-  {
-   "id": "MOSSOS-COMPETENCY-REJUDGE-001",
-   "area": "COMPETENCIES",
-   "prioridad": "P1",
-   "tipo": "reevaluacion",
-   "temas": [
-    "C00002"
-   ],
-   "subtemas": [],
-   "cantidad": 54,
-   "accion": "rejuzgar fichas y situaciones con el modelo de referencia y el mismo prompt congelado (juez-competencias-v1), combinación conservadora como en entrevista; no se genera contenido nuevo",
-   "validacion": "fabrica.competencias.validar (sin cambios)",
-   "judge": "Sonnet (referencia) · prompt congelado",
-   "publicacion": "solo VALID del modelo de referencia sin veredicto más conservador",
-   "ejecutable": true,
-   "bloqueo": null
   },
   {
    "id": "MOSSOS-APTITUDE-VERBAL-001",

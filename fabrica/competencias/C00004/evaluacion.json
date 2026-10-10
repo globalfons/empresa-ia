@@ -1,0 +1,172 @@
+{
+ "lote": "C00004",
+ "oposicion": "mossos-esquadra",
+ "call_id": "46/26",
+ "creada_el": "2026-10-10T06:33:28",
+ "judge_prompt": "fabrica/prompts/juez-competencias-v1.txt",
+ "judge_prompt_sha256": "08bce88854a7eacd2fd59d16af63380686009933d308522aac9be9f68e10b8da",
+ "politica": "juez-competencias-v2",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "candidatas_sha256": "2ffe1609518835c834a3da5ccd145aacb156936d728c07f2f95bc2f5b96f569e",
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "esc-responsabilitat-9",
+    "esc-responsabilitat-10",
+    "esc-orientacio-servei-9",
+    "esc-orientacio-servei-10",
+    "esc-adaptabilitat-9",
+    "esc-adaptabilitat-10"
+   ],
+   "fichero": "/home/user/empresa-ia/fabrica/competencias/C00004/tanda-01.json",
+   "prompt_sha256": "12a6d13e9b5e2702b95003ccae614c310a7c6d77902c1ee55578bac9760861e7",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "esc-responsabilitat-9": "64a56e51b7078b1893f4af4c92d1c1a3b924a7f81478a6cc3308f1baf48d69d3",
+    "esc-responsabilitat-10": "9bf938df33610ca3aae7dc6bd31f1e5f191d67816370e4d431aa05410cf17770",
+    "esc-orientacio-servei-9": "b1c742e466af3163bb19dba012dad64909a855b8f0738b2a2b58a6b29b13e75b",
+    "esc-orientacio-servei-10": "691b472c0e372d5716253e842cf36f9eebbe4bf050416306af70ce3d0d9aedf7",
+    "esc-adaptabilitat-9": "e0e4870e32d8f0aa7fdd2b987c9b4da59ec1111b4ebe5e479a55899551379f1c",
+    "esc-adaptabilitat-10": "a75b97d19b3b4844a809c23abc140570759afe178f23f7e3c27e380df37c9ef2"
+   },
+   "intentos": [
+    {
+     "t": "2026-10-10T06:34:09",
+     "evidencia": {
+      "herramientas": [
+       "Read"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a50002249b72b94ad.jsonl",
+      "respuesta_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     },
+     "respuesta": null,
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "BATCH_REJECTED · RESPUESTA_VACIA: el juez no devolvió ninguna respuesta"
+    },
+    {
+     "t": "2026-10-10T06:34:25",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a50002249b72b94ad.jsonl",
+      "respuesta_sha256": "04ef743952ff7b3efd8dee1eb82daea43e993eaf733058bc79cb51b95e4aa097"
+     },
+     "respuesta": "[\n{\"item_id\":\"esc-responsabilitat-9\",\"verdict\":\"VALID\",\"reason\":\"Escenario de eleccion claro y realista, en catalan correcto. Puntos coherentes con la justificacion: A suma 3 (registrar ya y avisar a la coordinadora), D 2, C 1, B 0 (ocultar). Con una alergia, dejar constancia y avisar de inmediato es la actuacion mas profesional y ninguna otra opcion la iguala: ocultarlo es inaceptable, comentarlo informalmente o aplazarlo al dia siguiente es insuficiente. Entrena responsabilidad y calidad en el trabajo. No hay afirmaciones oficiales ni diagnosticos. Su situacion (comedor, olvido de registro) es distinta de la de esc-responsabilitat-10 (voluntariado, compromiso horario), asi que no es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-responsabilitat-10\",\"verdict\":\"VALID\",\"reason\":\"Ranking coherente: los puntos totales (opcion 0 = 4, opcion 3 = 2, opcion 1 = 1, opcion 2 = 0) coinciden con orden_recomendado [0,3,1,2] y con la justificacion. Es defendible que lo mas responsable sea avisar esa misma noche y ayudar a buscar sustituto, que un aviso vago al grupo sea mejor que esperar a la manana, y que no presentarse sin avisar sea lo peor. Entrena la responsabilidad ante un compromiso adquirido, con la cooperacion como dimension secundaria adecuada. No hay afirmaciones oficiales ni diagnosticos. No es duplicado de esc-responsabilitat-9, porque el dilema (comunicar un incumplimiento posible) es distinto.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-9\",\"verdict\":\"VALID\",\"reason\":\"Escenario de eleccion realista y bien redactado. Los puntos son coherentes: B suma 4, D 2, C 1, A 0. Atender al ciudadano, explicarle opciones y ayudarle a presentar lo que pueda hoy es claramente la mejor actuacion; atender sin explorar alternativas aporta poco, y derivarle o hacerle volver le hace perder el plazo. Ninguna otra opcion iguala a B. Entrena orientacion de servicio, con resolucion de problemas como dimension secundaria razonable. No hay afirmaciones oficiales ni diagnosticos. Su situacion difiere de la del museo (esc-orientacio-servei-10), asi que no es duplicado.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-orientacio-servei-10\",\"verdict\":\"VALID\",\"reason\":\"Ranking coherente: los puntos (opcion 1 = 4, opcion 2 = 2, opcion 3 = 1, opcion 0 = 0) coinciden con orden_recomendado [1,2,3,0] y con la justificacion. Adaptar la visita a la necesidad de la familia e informar al museo es lo mas orientado al servicio. Dejarlo en una visita normal con algunas descripciones es insuficiente pero mejor que derivarlos a otro dia, y negar el acceso es lo peor. La clave es defendible: la matizacion 'si es pot' sobre los objetos tangibles evita una recomendacion imprudente. Entrena orientacion de servicio; habilidades sociales es una dimension secundaria aceptable. No hay afirmaciones oficiales ni diagnosticos. No es duplicado de esc-orientacio-servei-9.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-9\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Hay dos problemas. (1) Incoherencia en las dimensiones: expected_dimensions incluye 'cooperacio', pero la opcion recomendada (B) no puntua en cooperacion (solo la opcion A, con 0), y la justificacion no la explica. (2) La clave no es unica: la opcion D (agrupar las consultas y llamar solo ante una duda realmente importante) es una practica profesional razonable y casi equiparable a B. La justificacion de que 'fer excepcions sovint trenca l'acord' es debil, porque la situacion habla de una preferencia del tutor, no de un acuerdo, y una duda urgente que bloquea la tarea justifica comunicarla. La diferencia de puntos entre B y D (3 frente a 2) es arbitraria. Es relevante para adaptabilidad y no tiene afirmaciones oficiales ni diagnosticos. No es duplicado de esc-adaptabilitat-10.\",\"criteria_checked\":{\"coherente\":false,\"clave_defendible\":false,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}},\n{\"item_id\":\"esc-adaptabilitat-10\",\"verdict\":\"VALID\",\"reason\":\"Ranking coherente: los puntos (opcion 1 = 4, opcion 3 = 2, opcion 0 = 1, opcion 2 = 0) coinciden con orden_recomendado [1,3,0,2] y con la justificacion. Rehacer el horario semana a semana segun los turnos y reservar bloques fijos para lo clave es claramente la mejor forma de adaptarse sin perder el rumbo. Estudiar sin plan es mejor que parar o mantener un horario imposible. El orden de los tres ultimos es discutible pero razonable y esta explicado. Entrena adaptabilidad al cambio, con autogestion como dimension secundaria. No hay afirmaciones oficiales, promesas de aprobar ni diagnosticos. No es duplicado de esc-adaptabilitat-9, porque el dilema (cambio de turno frente a preferencia del tutor) es distinto.\",\"criteria_checked\":{\"coherente\":true,\"clave_defendible\":true,\"relevante\":true,\"sin_afirmaciones_oficiales\":true,\"sin_diagnostico\":true,\"duplicado_de\":\"\"}}\n]",
+     "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+     "resultado": "ACEPTADA"
+    }
+   ],
+   "veredictos": [
+    {
+     "item_id": "esc-responsabilitat-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de eleccion claro y realista, en catalan correcto. Puntos coherentes con la justificacion: A suma 3 (registrar ya y avisar a la coordinadora), D 2, C 1, B 0 (ocultar). Con una alergia, dejar constancia y avisar de inmediato es la actuacion mas profesional y ninguna otra opcion la iguala: ocultarlo es inaceptable, comentarlo informalmente o aplazarlo al dia siguiente es insuficiente. Entrena responsabilidad y calidad en el trabajo. No hay afirmaciones oficiales ni diagnosticos. Su situacion (comedor, olvido de registro) es distinta de la de esc-responsabilitat-10 (voluntariado, compromiso horario), asi que no es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-responsabilitat-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking coherente: los puntos totales (opcion 0 = 4, opcion 3 = 2, opcion 1 = 1, opcion 2 = 0) coinciden con orden_recomendado [0,3,1,2] y con la justificacion. Es defendible que lo mas responsable sea avisar esa misma noche y ayudar a buscar sustituto, que un aviso vago al grupo sea mejor que esperar a la manana, y que no presentarse sin avisar sea lo peor. Entrena la responsabilidad ante un compromiso adquirido, con la cooperacion como dimension secundaria adecuada. No hay afirmaciones oficiales ni diagnosticos. No es duplicado de esc-responsabilitat-9, porque el dilema (comunicar un incumplimiento posible) es distinto.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-9",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Escenario de eleccion realista y bien redactado. Los puntos son coherentes: B suma 4, D 2, C 1, A 0. Atender al ciudadano, explicarle opciones y ayudarle a presentar lo que pueda hoy es claramente la mejor actuacion; atender sin explorar alternativas aporta poco, y derivarle o hacerle volver le hace perder el plazo. Ninguna otra opcion iguala a B. Entrena orientacion de servicio, con resolucion de problemas como dimension secundaria razonable. No hay afirmaciones oficiales ni diagnosticos. Su situacion difiere de la del museo (esc-orientacio-servei-10), asi que no es duplicado.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-orientacio-servei-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking coherente: los puntos (opcion 1 = 4, opcion 2 = 2, opcion 3 = 1, opcion 0 = 0) coinciden con orden_recomendado [1,2,3,0] y con la justificacion. Adaptar la visita a la necesidad de la familia e informar al museo es lo mas orientado al servicio. Dejarlo en una visita normal con algunas descripciones es insuficiente pero mejor que derivarlos a otro dia, y negar el acceso es lo peor. La clave es defendible: la matizacion 'si es pot' sobre los objetos tangibles evita una recomendacion imprudente. Entrena orientacion de servicio; habilidades sociales es una dimension secundaria aceptable. No hay afirmaciones oficiales ni diagnosticos. No es duplicado de esc-orientacio-servei-9.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-9",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Hay dos problemas. (1) Incoherencia en las dimensiones: expected_dimensions incluye 'cooperacio', pero la opcion recomendada (B) no puntua en cooperacion (solo la opcion A, con 0), y la justificacion no la explica. (2) La clave no es unica: la opcion D (agrupar las consultas y llamar solo ante una duda realmente importante) es una practica profesional razonable y casi equiparable a B. La justificacion de que 'fer excepcions sovint trenca l'acord' es debil, porque la situacion habla de una preferencia del tutor, no de un acuerdo, y una duda urgente que bloquea la tarea justifica comunicarla. La diferencia de puntos entre B y D (3 frente a 2) es arbitraria. Es relevante para adaptabilidad y no tiene afirmaciones oficiales ni diagnosticos. No es duplicado de esc-adaptabilitat-10.",
+     "criteria_checked": {
+      "coherente": false,
+      "clave_defendible": false,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    },
+    {
+     "item_id": "esc-adaptabilitat-10",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Ranking coherente: los puntos (opcion 1 = 4, opcion 3 = 2, opcion 0 = 1, opcion 2 = 0) coinciden con orden_recomendado [1,3,0,2] y con la justificacion. Rehacer el horario semana a semana segun los turnos y reservar bloques fijos para lo clave es claramente la mejor forma de adaptarse sin perder el rumbo. Estudiar sin plan es mejor que parar o mantener un horario imposible. El orden de los tres ultimos es discutible pero razonable y esta explicado. Entrena adaptabilidad al cambio, con autogestion como dimension secundaria. No hay afirmaciones oficiales, promesas de aprobar ni diagnosticos. No es duplicado de esc-adaptabilitat-9, porque el dilema (cambio de turno frente a preferencia del tutor) es distinto.",
+     "criteria_checked": {
+      "coherente": true,
+      "clave_defendible": true,
+      "relevante": true,
+      "sin_afirmaciones_oficiales": true,
+      "sin_diagnostico": true,
+      "duplicado_de": ""
+     }
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a50002249b72b94ad.jsonl",
+    "respuesta_sha256": "04ef743952ff7b3efd8dee1eb82daea43e993eaf733058bc79cb51b95e4aa097"
+   },
+   "registrada_el": "2026-10-10T06:34:25",
+   "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)"
+  }
+ ]
+}

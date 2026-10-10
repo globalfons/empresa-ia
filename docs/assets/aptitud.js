@@ -7,7 +7,7 @@
 (function () {
   var GEN = "testley-aptitud-v1";
   var CATEGORIAS = ["verbal", "numerico", "abstracto", "espacial", "perceptivo"];
-  var SUBTIPOS = { numerico: ["serie", "porcentaje", "proporcion"], abstracto: ["serie_figuras"], espacial: ["rotacion"],
+  var SUBTIPOS = { numerico: ["serie", "porcentaje", "proporcion"], abstracto: ["serie_figuras", "intrus"], espacial: ["rotacion", "mirall"],
     perceptivo: ["pares_identicos", "contar_simbolo"], verbal: ["serie_letras", "orden_alfabetico", "anagrama", "codificacion"] };
   // Verbal: solo formatos con respuesta verificable por cálculo (letras, orden, anagramas, codificación). Los formatos semánticos
   // (vocabulario, sinónimos, antónimos, analogías, comprensión) necesitan criterio lingüístico humano: banco aparte en revisión
@@ -20,14 +20,16 @@
       pares: "Quantes parelles són exactament iguals?", contar: function (s) { return "Quantes vegades apareix el símbol «" + s + "»?"; },
       letras: "Quina lletra continua la sèrie?", orden: function (p) { return "Si ordenes alfabèticament aquestes paraules, quina queda en la posició " + p + "?"; },
       anagrama: function (w) { return "Quina opció té exactament les mateixes lletres que «" + w + "», en un altre ordre?"; },
-      codigo: function (a, b, w) { return "Si «" + a + "» es codifica com «" + b + "», com es codifica «" + w + "»?"; } },
+      codigo: function (a, b, w) { return "Si «" + a + "» es codifica com «" + b + "», com es codifica «" + w + "»?"; },
+      intrus: "Quina figura és diferent de les altres tres?", mirall: "Quina figura és la imatge al mirall (reflex horitzontal) de la de l'esquerra?" },
     es: { serie: "¿Qué número continúa la serie?", pct: function (p, n) { return "¿Cuánto es el " + p + " % de " + n + "?"; },
       prop: function (a, b, c) { return "Si " + a + " unidades cuestan " + b + " €, ¿cuánto cuestan " + c + " unidades?"; },
       fig: "¿Qué figura continúa la serie?", rot: function (g) { return "¿Qué figura es la de la izquierda girada " + g + "° en sentido horario?"; },
       pares: "¿Cuántas parejas son exactamente iguales?", contar: function (s) { return "¿Cuántas veces aparece el símbolo «" + s + "»?"; },
       letras: "¿Qué letra continúa la serie?", orden: function (p) { return "Si ordenas alfabéticamente estas palabras, ¿cuál queda en la posición " + p + "?"; },
       anagrama: function (w) { return "¿Qué opción tiene exactamente las mismas letras que «" + w + "», en otro orden?"; },
-      codigo: function (a, b, w) { return "Si «" + a + "» se codifica como «" + b + "», ¿cómo se codifica «" + w + "»?"; } },
+      codigo: function (a, b, w) { return "Si «" + a + "» se codifica como «" + b + "», ¿cómo se codifica «" + w + "»?"; },
+      intrus: "¿Qué figura es diferente de las otras tres?", mirall: "¿Qué figura es la imagen en el espejo (reflejo horizontal) de la de la izquierda?" },
   };
   // Léxico neutro sin acentos (el orden alfabético no depende de reglas de colación)
   var PALABRAS = ["arbre", "barca", "camisa", "dona", "escala", "farola", "gat", "hora", "illa", "llapis", "mapa", "nota", "ocell", "porta",
@@ -84,6 +86,14 @@
   // ---------- abstracto: figura asimétrica = marco + flecha orientada + puntos + relleno ----------
   var MARCOS = ["circulo", "cuadrado", "triangulo"];
   function gAbstracto(r, sub, dif, t) {
+    if (sub === "intrus") {
+      // Tres figuras iguales salvo el giro (que no cuenta) y una que cambia en un solo atributo: forma (dif 1), puntos (2) o relleno (3)
+      var b = { m: ent(r, 0, 2), p: ent(r, 0, 4), r: ent(r, 0, 1) }, giros = barajar(r, [0, 45, 90, 135, 180, 225, 270, 315]).slice(0, 4);
+      var figs = giros.map(function (g) { return { m: b.m, g: g, p: b.p, r: b.r }; }), k = ent(r, 0, 3), x = figs[k];
+      if (dif === 1) x.m = (b.m + ent(r, 1, 2)) % 3; else if (dif === 2) x.p = (b.p + ent(r, 1, 4)) % 5; else x.r = 1 - b.r;
+      return { prompt: t.intrus, stimulus: null, options: figs, a: k, opciones_tipo: "figura",
+        explanation: "Totes les figures poden estar girades; la diferent és l'única que canvia " + (dif === 1 ? "de forma" : dif === 2 ? "el nombre de punts" : "el farciment") + "." };
+    }
     var f0 = { m: ent(r, 0, 2), g: ent(r, 0, 7) * 45, p: ent(r, 0, 2), r: ent(r, 0, 1) };
     var paso = { g: elegir(r, [45, 90, -45]), p: dif >= 2 ? 1 : 0, r: dif >= 3 ? 1 : 0, m: 0 };
     function fig(i) { return { m: f0.m, g: ((f0.g + paso.g * i) % 360 + 360) % 360, p: (f0.p + paso.p * i) % 5, r: (f0.r + paso.r * i) % 2 }; }
@@ -110,6 +120,11 @@
       g = null;
     }
     if (!g) return null;
+    if (sub === "mirall") {
+      var okm = refl(g), opm = opciones(r, okm, [g, rotar(g, 1), rotar(g, 2), refl(rotar(g, 1)), refl(rotar(g, 2))]);
+      return opm && { prompt: t.mirall, stimulus: { tipo: "cuadricula", cuadricula: g }, options: opm.o, a: opm.a, opciones_tipo: "cuadricula",
+        explanation: "El reflex horitzontal inverteix cada fila d'esquerra a dreta; les altres opcions són girs o reflexos d'una figura girada." };
+    }
     var veces = ent(r, 1, 3), ok = rotar(g, veces);
     var op = opciones(r, ok, [refl(ok), rotar(g, (veces + 1) % 4 || 2), refl(rotar(g, (veces + 2) % 4)), refl(g), rotar(g, (veces + 2) % 4)]);
     return op && { prompt: t.rot(veces * 90), stimulus: { tipo: "cuadricula", cuadricula: g }, options: op.o, a: op.a, opciones_tipo: "cuadricula",
@@ -249,7 +264,15 @@
       var ana = (e.options || []).filter(function (o) { return ord(o) === base && o !== e.stimulus.texto; });
       if (ana.length !== 1 || ord(e.options[e.correct_answer]) !== base) p.push("el anagrama no es único");
     }
-    if (e.category === "espacial") {
+    if (e.subtype === "mirall") {
+      var rf = JSON.stringify(refl(e.stimulus.cuadricula));
+      if (ks.filter(function (k) { return k === rf; }).length !== 1 || ks[e.correct_answer] !== rf) p.push("el reflex no és únic");
+    }
+    if (e.subtype === "intrus") {
+      var sig = (e.options || []).map(function (f) { return [f.m, f.p, f.r].join(","); }), unic = sig.filter(function (x) { return sig.indexOf(x) === sig.lastIndexOf(x); });
+      if (unic.length !== 1 || sig[e.correct_answer] !== unic[0] || sig.filter(function (x) { return x !== unic[0]; }).length !== 3) p.push("l'intrús no és únic");
+    }
+    if (e.subtype === "rotacion") {
       var g = e.stimulus.cuadricula, giradas = [1, 2, 3].map(function (v) { return JSON.stringify(rotar(g, v)); });
       var correctas = ks.filter(function (k) { return giradas.indexOf(k) >= 0 && k === JSON.stringify(rotar(g, (+e.prompt.match(/(\d+)°/)[1]) / 90)); });
       if (correctas.length !== 1) p.push("la rotación pedida no es única");

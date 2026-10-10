@@ -69,6 +69,15 @@ function separarPremium(clave, qs, ley) {
   const fuera = new Set(PRIVADO[clave].map((q) => q.id));
   return qs.filter((q) => !fuera.has(q.id));
 }
+// Entrenamiento premium (competencias, entrevista): con bancoPrivado, la web pública solo lleva `porComp` escenarios por competencia
+// (la muestra gratuita); el resto va al banco privado con la clave «<módulo>-<oposición>» y lo sirve la función «banco».
+function separarEscenarios(clave, esc, porComp, compDe) {
+  if (!BANCO_PRIVADO) return { escenarios: esc, premium: false };
+  const n = {}, pub = [], priv = [];
+  for (const e of esc) { const c = compDe(e); n[c] = (n[c] || 0) + 1; (n[c] <= porComp ? pub : priv).push(e); }
+  if (priv.length) PRIVADO[clave] = priv;
+  return { escenarios: pub, premium: priv.length > 0 };
+}
 // lastmod de las páginas de cada ley: último commit de sus preguntas o de su texto (si hay cambios sin commit, hoy).
 // En un clon superficial (checkout de CI con fetch-depth 1) la historia no es fiable: se usa config.updated.
 const GIT_OK = (() => { try { return execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() === "false"; } catch { return false; } })();
@@ -816,7 +825,7 @@ for (const o of OPOS) {
   fs.writeFileSync(path.join(OUT_TMP, "datos", `entrevista-${o.id}.json`), JSON.stringify({
     oposicion: o.id, call_id: a.call_id, competencias: c.lista.map((x) => ({ ...x, clave: c.clave.includes(x.id) })),
     oficial: { citas: a.citas, fuente: a.fuente, documento: a.documento, verification_status: a.verification_status },
-    escenarios: pub.escenarios.filter((e) => e.verification_status === "VALID").map(({ traza, generated_by, ...e }) => e),
+    ...separarEscenarios(`entrevista-${o.id}`, pub.escenarios.filter((e) => e.verification_status === "VALID").map(({ traza, generated_by, ...e }) => e), 1, (e) => e.competency_ids[0]),
   }));
   page(`oposiciones/${o.id}/entrevista/`, {
     title: titulo("", `Entrevista ${opCorto(o)}: entrenador por competencias`, ""), lastmod: o.actualizado, wide: true,
@@ -839,7 +848,7 @@ for (const o of OPOS) {
   fs.writeFileSync(path.join(OUT_TMP, "datos", `competencias-${o.id}.json`), JSON.stringify({
     oposicion: o.id, oficial: { lista: c.lista, clave: c.clave, escala: c.escala, apte: c.apte, citas: c.citas, fuente: c.fuente, documento: c.documento, call_id: c.call_id, verification_status: c.verification_status },
     competencias: pub.competencias.filter((f) => f.verification_status === "VALID").map(({ traza, ...f }) => f),
-    escenarios: pub.escenarios.filter((e) => e.verification_status === "VALID").map(({ traza, ...e }) => e),
+    ...separarEscenarios(`competencias-${o.id}`, pub.escenarios.filter((e) => e.verification_status === "VALID").map(({ traza, ...e }) => e), (PLAN_FREE.competencias_muestra || 1), (e) => e.competency_id),
   }));
   page(`oposiciones/${o.id}/competencias/`, {
     title: titulo("", `Competencias ${opCorto(o)}: entrenamiento y autoconocimiento`, ""), lastmod: o.actualizado, wide: true,

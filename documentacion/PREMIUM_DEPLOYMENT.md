@@ -10,6 +10,7 @@ el contenido premium sigue en `docs/datos/` (público) para no dejar sin servici
 | Preguntas de leyes del BOE (`docs/datos/<ley>.json`, y dentro de cada oposición) | **No** | La página de precios promete «los tests de cada artículo son y seguirán siendo gratis»; cada artículo tiene su test sin bloqueo. Protegerlas sería un cambio de producto (decisión del propietario, no técnica). |
 | Exámenes oficiales (`examen-*.json`) | No | Documentos públicos del organismo, acceso libre. |
 | Preguntas de la Guia d'estudi de Mossos (`guia-mossos`, sin páginas de artículo) | **Sí** | Solo se pueden practicar dentro de la oposición; sin Pase solo hay 10 de muestra. |
+| Escenarios de competencias y de entrevista (más allá de 1 por competencia) | **Sí** (desde 2026-10-10) | Con `bancoPrivado` la web solo lleva la muestra gratuita; el resto va a `banco_premium` con las claves `competencias-<oposición>` y `entrevista-<oposición>`, servido por la misma función `banco`. El tutor lee del banco privado los escenarios de entrevista premium. |
 | Funciones premium (simulacro, test completo, plan, tutor, alertas) | Funcionalidad | Se bloquean en el navegador sobre contenido gratuito; el tutor ya comprueba el plan en el servidor. |
 
 Hoy: 41 preguntas de la guía (31 premium + 10 de muestra). Toda pregunta nueva de Mossos que salga de la guía será premium automáticamente.

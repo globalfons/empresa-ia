@@ -269,13 +269,18 @@ def objetivos(k, apt, comp, ent, idi):
         filas.append({"area": "INTERVIEW", "subarea": c["id"], "actual": c["escenarios"], "valid": c["VALID"], "review": c["REVIEW_REQUIRED"],
                       "oficial": "nombre", "objetivo": c["objetivo"], "faltan": c["faltan"], "prioridad": c["prioridad"],
                       "motivo": f"{c['situacionales_valid']} situacionales VALID (mín. {PARAMETROS['entrevista_situacionales']})"})
-    filas.append({"area": "LANGUAGE", "subarea": "català (C1)", "actual": 0, "valid": 0, "review": 0, "oficial": "requisito y estructura de la prueba",
-                  "objetivo": "—", "faltan": "todo el contenido de práctica", "prioridad": "P2",
-                  "motivo": "obligatoria y eliminatoria solo sin C1 acreditado; producto aparte (redacción, sintaxis, comprensión, oral)"})
+    fc = os.path.join(R, "catalogo", "catala", "mossos-esquadra.json")
+    cat = json.load(open(fc, encoding="utf-8")) if os.path.exists(fc) else {}
+    nt = len(cat.get("temes_redaccio", [])) + len(cat.get("temes_conversa", []))
+    filas.append({"area": "LANGUAGE", "subarea": "català (C1)", "actual": nt, "valid": nt, "review": 0, "oficial": "requisito y estructura de la prueba",
+                  "objetivo": "práctica de redacción y oral", "faltan": "preguntas de sintaxis y comprensión (bloqueadas: necesitan material revisado por personas)" if nt else "todo el contenido de práctica",
+                  "prioridad": "P2", "motivo": "redacción (180 palabras, 90 min) y lectura en voz alta con textos oficiales del DOGC: web/assets/catala.js" if nt else "sin práctica"})
     filas.append({"area": "LANGUAGE", "subarea": "idiomes voluntaris", "actual": 0, "valid": 0, "review": 0, "oficial": "6 preguntas por idioma, máx. 2, 1,5 p",
-                  "objetivo": "—", "faltan": "comprensión oral (audio)", "prioridad": "P3", "motivo": "mérito voluntario; requiere audio"})
-    filas.append({"area": "PHYSICAL", "subarea": "registro y barems", "actual": 0, "valid": 0, "review": 0, "oficial": "pruebas y barems verificados",
-                  "objetivo": "motor (Fase 4)", "faltan": "Physical Engine", "prioridad": "P1", "motivo": "no es contenido: es la Fase 4 (no iniciada)"})
+                  "objetivo": "—", "faltan": "comprensión oral (audio)", "prioridad": "P3", "motivo": "mérito voluntario; requiere audio con material revisado (bloqueado)"})
+    fis = os.path.exists(os.path.join(R, "web", "assets", "fisica.js"))
+    filas.append({"area": "PHYSICAL", "subarea": "registro y barems", "actual": 3 if fis else 0, "valid": 3 if fis else 0, "review": 0, "oficial": "pruebas y barems verificados",
+                  "objetivo": "motor (Fase 4)", "faltan": "—" if fis else "Physical Engine", "prioridad": "P3" if fis else "P1",
+                  "motivo": "Physical Engine: barems oficiales, marcas, evolución y plan orientativo (web/assets/fisica.js)" if fis else "no es contenido: es la Fase 4 (no iniciada)"})
     return filas
 
 

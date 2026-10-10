@@ -121,7 +121,8 @@
   }
 
   var VISTAS = { fichas: fichas, entreno: entreno, auto: auto, progreso: progreso };
-  fetch(BASE + "datos/competencias-" + OP + ".json").then(function (r) { return r.json(); }).then(function (d) {
+  fetch(BASE + "datos/competencias-" + OP + ".json").then(function (r) { return r.json(); })
+    .then(function (d) { return window.TL && TL.completarPremium ? TL.completarPremium("competencias-" + OP, d, "escenarios") : d; }).then(function (d) {
     D = d; PERF = C.perfiles(d);
     PERF.forEach(function (p) { NOM[p.id] = p.official_name; });
     fichas();

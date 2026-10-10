@@ -26,9 +26,9 @@ Estados: **OFFICIAL_EXAM** = pregunta de un examen oficial · **OFFICIAL_VERIFIE
 | área | contenido servido | en revisión | retirado | oficial |
 |---|---|---|---|---|
 | Conocimientos | 1013 TestLey | 140 | 4 | 266 OFFICIAL_EXAM VALID (9 exámenes) |
-| Aptitud | generadores: 11 formatos × 3 dificultades | 0 | 0 | estructura (80 preguntas, 35 min); sin ejercicios oficiales |
-| Competencias | 45 situaciones + 9 fichas | 15 | 0 | 10 nombres de competencias |
-| Entrevista | 56 escenarios | 29 | 0 | objeto de la entrevista y 10 competencias |
+| Aptitud | generadores: 13 formatos × 3 dificultades | 0 | 0 | estructura (80 preguntas, 35 min); sin ejercicios oficiales |
+| Competencias | 67 situaciones + 10 fichas | 15 | 0 | 10 nombres de competencias |
+| Entrevista | 62 escenarios | 31 | 0 | objeto de la entrevista y 10 competencias |
 | Idiomas | 0 | 0 | 0 | requisito C1, estructura de la prueba e idiomas voluntarios |
 | Física | — (Fase 4) | 0 | 0 | 3 pruebas con barems verificados |
 
@@ -92,47 +92,47 @@ Oficial (OFFICIAL_VERIFIED): 80 preguntas, 35 min, sin penalización, mínimo 5;
 
 | aptitud | formatos (subtipos) | dificultades | banco oficial/revisado | mín. ejercicios distintos por combinación | errores de verificación | huecos | prioridad |
 |---|---|---|---|---|---|---|---|
-| abstract | serie_figuras | 1-3 | 0 | 1818 | 0 | un solo formato de ejercicio | P2 |
-| spatial | rotacion | 1-3 | 0 | 1685 | 0 | un solo formato de ejercicio | P2 |
+| abstract | serie_figuras, intrus | 1-3 | 0 | 1818 | 0 | — | P3 |
+| spatial | rotacion, mirall | 1-3 | 0 | 1224 | 0 | — | P3 |
 | verbal | serie_letras, orden_alfabetico, anagrama, codificacion | 1-3 | 0 | 1249 | 0 | solo formatos formales (series de letras, orden alfabético): sin vocabulario, sinónimos, antónimos, analogías ni comprensión; las bases solo dicen «aptitud verbal», no publican formatos | P1 |
 | numerical | serie, porcentaje, proporcion | 1-3 | 0 | 1022 | 0 | — | P3 |
 | perceptive | pares_identicos, contar_simbolo | 1-3 | 0 | 2000 | 0 | — | P3 |
 
 ## 3. Competencies
 
-Lotes publicados: C00002 · modelos del juez: claude-haiku-4-5 · **requiere recalibración** (solo juzgado con un modelo que en entrevista resultó laxo)
+Lotes publicados: C00002, C00003, C00004 · modelos del juez: claude-haiku-4-5, claude-sonnet
 
 | competencia oficial | ficha VALID | situaciones | VALID | REVIEW | formatos | ítems de autoevaluación | objetivo | faltan |
 |---|---|---|---|---|---|---|---|---|
-| Responsabilitat i orientació a la qualitat | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
-| Cooperació i treball en equip | 1 | 6 | 6 | 0 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
-| Autonomia i iniciativa | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
-| Resolució de problemes | 1 | 4 | 4 | 2 | {'eleccion': 4} | 2 | 6 | 2 |
-| Orientació de servei a les persones | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
-| Adaptabilitat i flexibilitat | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
-| Autocontrol i resistència a la pressió | 1 | 5 | 5 | 1 | {'eleccion': 4, 'ranking': 1} | 2 | 6 | 1 |
-| Autogestió i desenvolupament personal | 1 | 5 | 5 | 1 | {'eleccion': 4, 'ranking': 1} | 2 | 6 | 1 |
-| Motivació i identificació amb l'organització | 1 | 4 | 4 | 2 | {'eleccion': 3, 'ranking': 1} | 2 | 6 | 2 |
-| Habilitats socials i comunicatives | 0 | 5 | 5 | 1 | {'eleccion': 4, 'ranking': 1} | 0 | 6 | 1 |
+| Responsabilitat i orientació a la qualitat | 1 | 7 | 7 | 2 | {'eleccion': 5, 'ranking': 2} | 2 | 6 | 0 |
+| Cooperació i treball en equip | 1 | 8 | 8 | 0 | {'eleccion': 5, 'ranking': 3} | 2 | 6 | 0 |
+| Autonomia i iniciativa | 1 | 6 | 6 | 2 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
+| Resolució de problemes | 1 | 6 | 6 | 2 | {'eleccion': 5, 'ranking': 1} | 2 | 6 | 0 |
+| Orientació de servei a les persones | 1 | 7 | 7 | 2 | {'eleccion': 5, 'ranking': 2} | 2 | 6 | 0 |
+| Adaptabilitat i flexibilitat | 1 | 6 | 6 | 2 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
+| Autocontrol i resistència a la pressió | 1 | 7 | 7 | 1 | {'eleccion': 5, 'ranking': 2} | 2 | 6 | 0 |
+| Autogestió i desenvolupament personal | 1 | 7 | 7 | 1 | {'eleccion': 5, 'ranking': 2} | 2 | 6 | 0 |
+| Motivació i identificació amb l'organització | 1 | 6 | 6 | 2 | {'eleccion': 4, 'ranking': 2} | 2 | 6 | 0 |
+| Habilitats socials i comunicatives | 1 | 7 | 7 | 1 | {'eleccion': 5, 'ranking': 2} | 2 | 6 | 0 |
 
 ## 4. Interview
 
-Lotes: E00001, E00002, E00003 · política del juez juez-entrevista-v2 (referencia: sonnet).
+Lotes: E00001, E00002, E00003, E00004 · política del juez juez-entrevista-v2 (referencia: sonnet).
 
 | competencia oficial | escenarios (todos los lotes) | VALID | REVIEW | situacionales VALID | como secundaria | objetivo | faltan | prioridad |
 |---|---|---|---|---|---|---|---|---|
-| Responsabilitat i orientació a la qualitat | 12 | 5 | 5 | 1 | 6 | 6 | 1 | P1 |
-| Cooperació i treball en equip | 7 | 6 | 1 | 2 | 4 | 6 | 0 | P3 |
+| Responsabilitat i orientació a la qualitat | 14 | 6 | 6 | 2 | 6 | 6 | 0 | P3 |
+| Cooperació i treball en equip | 7 | 6 | 1 | 2 | 5 | 6 | 0 | P3 |
 | Autonomia i iniciativa | 10 | 6 | 2 | 2 | 1 | 6 | 0 | P3 |
-| Resolució de problemes | 12 | 6 | 3 | 2 | 3 | 6 | 0 | P3 |
-| Orientació de servei a les persones | 10 | 6 | 2 | 2 | 2 | 6 | 0 | P3 |
-| Adaptabilitat i flexibilitat | 10 | 5 | 3 | 2 | 5 | 6 | 1 | P1 |
-| Autocontrol i resistència a la pressió | 10 | 6 | 2 | 2 | 4 | 6 | 0 | P3 |
-| Autogestió i desenvolupament personal | 12 | 6 | 3 | 2 | 3 | 6 | 0 | P3 |
-| Motivació i identificació amb l'organització | 9 | 5 | 4 | 2 | 0 | 6 | 1 | P1 |
-| Habilitats socials i comunicatives | 12 | 5 | 4 | 2 | 3 | 6 | 1 | P1 |
+| Resolució de problemes | 12 | 6 | 3 | 2 | 5 | 6 | 0 | P3 |
+| Orientació de servei a les persones | 10 | 6 | 2 | 2 | 3 | 6 | 0 | P3 |
+| Adaptabilitat i flexibilitat | 12 | 7 | 3 | 4 | 5 | 6 | 0 | P3 |
+| Autocontrol i resistència a la pressió | 10 | 6 | 2 | 2 | 6 | 6 | 0 | P3 |
+| Autogestió i desenvolupament personal | 12 | 6 | 3 | 2 | 4 | 6 | 0 | P3 |
+| Motivació i identificació amb l'organització | 11 | 6 | 5 | 2 | 0 | 6 | 0 | P3 |
+| Habilitats socials i comunicatives | 14 | 7 | 4 | 4 | 3 | 6 | 0 | P3 |
 
-En REVIEW_REQUIRED (no se sirven): ent-responsabilitat-2, ent-responsabilitat-3, ent-responsabilitat-5, ent-responsabilitat-6, ent-responsabilitat-10, ent-cooperacio-3, ent-autonomia-1, ent-autonomia-2, ent-resolucio-problemes-2, ent-resolucio-problemes-3, ent-resolucio-problemes-5, ent-orientacio-servei-1, ent-orientacio-servei-3, ent-adaptabilitat-2, ent-adaptabilitat-4, ent-adaptabilitat-9, ent-autocontrol-1, ent-autocontrol-4, ent-autogestio-1, ent-autogestio-2, ent-autogestio-4, ent-motivacio-1, ent-motivacio-2, ent-motivacio-4, ent-motivacio-9, ent-habilitats-socials-1, ent-habilitats-socials-2, ent-habilitats-socials-4, ent-habilitats-socials-12. Sustituidos por una versión corregida VALID: —.
+En REVIEW_REQUIRED (no se sirven): ent-responsabilitat-2, ent-responsabilitat-3, ent-responsabilitat-5, ent-responsabilitat-6, ent-responsabilitat-10, ent-responsabilitat-14, ent-cooperacio-3, ent-autonomia-1, ent-autonomia-2, ent-resolucio-problemes-2, ent-resolucio-problemes-3, ent-resolucio-problemes-5, ent-orientacio-servei-1, ent-orientacio-servei-3, ent-adaptabilitat-2, ent-adaptabilitat-4, ent-adaptabilitat-9, ent-autocontrol-1, ent-autocontrol-4, ent-autogestio-1, ent-autogestio-2, ent-autogestio-4, ent-motivacio-1, ent-motivacio-2, ent-motivacio-4, ent-motivacio-9, ent-motivacio-10, ent-habilitats-socials-1, ent-habilitats-socials-2, ent-habilitats-socials-4, ent-habilitats-socials-12. Sustituidos por una versión corregida VALID: —.
 
 ## 5. Language
 
@@ -161,7 +161,7 @@ Lo que necesitará la Fase 4: registro de marcas por prueba e intento; puntuaci�
 
 - Conocimientos: 3 de 9 exámenes oficiales con todas sus preguntas VALID (simulacro oficial real). Simulacros TestLey disjuntos respetando el reparto oficial: **13** (limitan: C.2, C.3, B.2, C.1, A.4); mezclando TestLey y oficiales: 18; sin respetar el reparto: 42. Objetivo: 10.
 - Aptitud: práctica cronometrada al ritmo oficial con ejercicios generados (ilimitada); NO es una réplica de la subprueba: las bases no publican el reparto por aptitudes y la verbal es parcial.
-- Entrevista: 5 simulaciones completas sin repetir escenario (limitan: responsabilitat, adaptabilitat, motivacio, habilitats-socials); objetivo 6.
+- Entrevista: 6 simulaciones completas sin repetir escenario (limitan: responsabilitat, cooperacio, autonomia, resolucio-problemes, orientacio-servei, autocontrol, autogestio, motivacio); objetivo 6.
 - Primera prueba completa: no disponible: combinaría conocimientos (simulable), aptitudinal (solo práctica) e idiomas (sin contenido).
 
 ## Content targets
@@ -194,34 +194,34 @@ Cómo se calcula cada objetivo:
 | KNOWLEDGE | C.4 El marc legal de la seguretat | 50 | 44 | 6 | 14 | 18 | 0 | P3 |
 | KNOWLEDGE | C.5 El Codi deontològic policial | 27 | 23 | 3 | 4 | 8 | 0 | P3 |
 | KNOWLEDGE | D Coneixement de l'entorn polític, econò | 0 | 0 | 0 | 0 | 0 | 0 | P1 |
-| APTITUDE | abstract | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
-| APTITUDE | spatial | 1 | 1 | 0 | 0 | formatos | un solo formato de ejercicio | P2 |
+| APTITUDE | abstract | 2 | 2 | 0 | 0 | formatos | — | P3 |
+| APTITUDE | spatial | 2 | 2 | 0 | 0 | formatos | — | P3 |
 | APTITUDE | verbal | 4 | 4 | 0 | 0 | formatos semánticos | solo formatos formales (series de letras, orden alfabético): sin vocabulario, sinónimos, antónimos, analogías ni comprensión; las bases solo dicen «aptitud verbal», no publican formatos | P1 |
 | APTITUDE | numerical | 3 | 3 | 0 | 0 | formatos | — | P3 |
 | APTITUDE | perceptive | 2 | 2 | 0 | 0 | formatos | — | P3 |
-| COMPETENCIES | responsabilitat | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
-| COMPETENCIES | cooperacio | 6 | 6 | 0 | nombre | 6 | 0 | P1 |
-| COMPETENCIES | autonomia | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
-| COMPETENCIES | resolucio-problemes | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
-| COMPETENCIES | orientacio-servei | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
-| COMPETENCIES | adaptabilitat | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
-| COMPETENCIES | autocontrol | 5 | 5 | 1 | nombre | 6 | 1 | P1 |
-| COMPETENCIES | autogestio | 5 | 5 | 1 | nombre | 6 | 1 | P1 |
-| COMPETENCIES | motivacio | 4 | 4 | 2 | nombre | 6 | 2 | P1 |
-| COMPETENCIES | habilitats-socials | 5 | 5 | 1 | nombre | 6 | 1 | P1 |
-| INTERVIEW | responsabilitat | 12 | 5 | 5 | nombre | 6 | 1 | P1 |
+| COMPETENCIES | responsabilitat | 7 | 7 | 2 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | cooperacio | 8 | 8 | 0 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | autonomia | 6 | 6 | 2 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | resolucio-problemes | 6 | 6 | 2 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | orientacio-servei | 7 | 7 | 2 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | adaptabilitat | 6 | 6 | 2 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | autocontrol | 7 | 7 | 1 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | autogestio | 7 | 7 | 1 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | motivacio | 6 | 6 | 2 | nombre | 6 | 0 | P3 |
+| COMPETENCIES | habilitats-socials | 7 | 7 | 1 | nombre | 6 | 0 | P3 |
+| INTERVIEW | responsabilitat | 14 | 6 | 6 | nombre | 6 | 0 | P3 |
 | INTERVIEW | cooperacio | 7 | 6 | 1 | nombre | 6 | 0 | P3 |
 | INTERVIEW | autonomia | 10 | 6 | 2 | nombre | 6 | 0 | P3 |
 | INTERVIEW | resolucio-problemes | 12 | 6 | 3 | nombre | 6 | 0 | P3 |
 | INTERVIEW | orientacio-servei | 10 | 6 | 2 | nombre | 6 | 0 | P3 |
-| INTERVIEW | adaptabilitat | 10 | 5 | 3 | nombre | 6 | 1 | P1 |
+| INTERVIEW | adaptabilitat | 12 | 7 | 3 | nombre | 6 | 0 | P3 |
 | INTERVIEW | autocontrol | 10 | 6 | 2 | nombre | 6 | 0 | P3 |
 | INTERVIEW | autogestio | 12 | 6 | 3 | nombre | 6 | 0 | P3 |
-| INTERVIEW | motivacio | 9 | 5 | 4 | nombre | 6 | 1 | P1 |
-| INTERVIEW | habilitats-socials | 12 | 5 | 4 | nombre | 6 | 1 | P1 |
-| LANGUAGE | català (C1) | 0 | 0 | 0 | requisito y estructura de la prueba | — | todo el contenido de práctica | P2 |
+| INTERVIEW | motivacio | 11 | 6 | 5 | nombre | 6 | 0 | P3 |
+| INTERVIEW | habilitats-socials | 14 | 7 | 4 | nombre | 6 | 0 | P3 |
+| LANGUAGE | català (C1) | 22 | 22 | 0 | requisito y estructura de la prueba | práctica de redacción y oral | preguntas de sintaxis y comprensión (bloqueadas: necesitan material revisado por personas) | P2 |
 | LANGUAGE | idiomes voluntaris | 0 | 0 | 0 | 6 preguntas por idioma, máx. 2, 1,5 p | — | comprensión oral (audio) | P3 |
-| PHYSICAL | registro y barems | 0 | 0 | 0 | pruebas y barems verificados | motor (Fase 4) | Physical Engine | P1 |
+| PHYSICAL | registro y barems | 3 | 3 | 0 | pruebas y barems verificados | motor (Fase 4) | — | P3 |
 
 ### Huecos P0
 

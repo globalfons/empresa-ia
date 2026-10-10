@@ -448,8 +448,9 @@
 
   // Banco premium (B1): con bancoPrivado, docs/datos solo trae una muestra de lo premium; el resto lo sirve la función «banco»
   // de Supabase tras comprobar en el servidor la suscripción (mi_plan) o la clave de licencia. El navegador nunca decide.
-  function conPremium(l, d) {
+  function conPremium(l, d, campo) {
     var p = pase();
+    campo = campo || "qs";
     if (!CFG.bancoPrivado || !d || !d.premium || !p || !ONLINE) return Promise.resolve(d);
     var cuerpo = { clave: l };
     if (p.clave) cuerpo.licencia = p.clave;
@@ -459,8 +460,8 @@
         headers: { apikey: CFG.supabaseAnonKey, Authorization: "Bearer " + (s ? s.access_token : CFG.supabaseAnonKey), "Content-Type": "application/json" } });
     }).then(function (r) { return r.ok ? r.json() : null; }).then(function (x) {
       if (!x || !x.qs) { d.premiumCargado = false; return d; }
-      var ids = {}; d.qs.forEach(function (q) { ids[q.id] = 1; });
-      d.qs = d.qs.concat(x.qs.filter(function (q) { return !ids[q.id]; }));
+      var ids = {}; d[campo].forEach(function (q) { ids[q.id] = 1; });
+      d[campo] = d[campo].concat(x.qs.filter(function (q) { return !ids[q.id]; }));
       d.premiumCargado = true;
       return d;
     }).catch(function () { d.premiumCargado = false; return d; });
@@ -474,6 +475,8 @@
     sesion: sesion, registrar: registrar, entrar: entrar, salir: salir, recordar: recordar,
     perfil: perfil, actualizarPerfil: actualizarPerfil, ranking: ranking, subir: subir, bajar: bajar,
     setDatos: function (l, d) { DATOS[l] = d; },
+    // Contenido de entrenamiento premium (competencias, entrevista): misma función «banco»; campo = lista a completar
+    completarPremium: function (clave, d, campo) { return conPremium(clave, d, campo); },
     cargar: function (l) { return fetch((CFG.root || "./") + "datos/" + l + ".json").then(function (r) { return r.json(); }).then(function (d) { return conPremium(l, d); }).then(function (d) { DATOS[l] = d; return d; }); },
     pintarCabecera: pintarCabecera,
     pase: pase, activarPase: activarPase, quitarPase: quitarPase, planServidor: planServidor,

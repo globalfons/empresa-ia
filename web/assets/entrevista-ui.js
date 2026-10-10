@@ -88,7 +88,8 @@
     el.querySelector("[data-otra]").addEventListener("click", menu);
   }
 
-  fetch(BASE + "datos/entrevista-" + OP + ".json").then(function (r) { return r.json(); }).then(function (d) {
+  fetch(BASE + "datos/entrevista-" + OP + ".json").then(function (r) { return r.json(); })
+    .then(function (d) { return window.TL && TL.completarPremium ? TL.completarPremium("entrevista-" + OP, d, "escenarios") : d; }).then(function (d) {
     D = d; d.competencias.forEach(function (c) { NOM[c.id] = c.nombre; }); menu();
   }).catch(function () { el.innerHTML = "<p>No se ha podido cargar el entrenador. Recarga la página.</p>"; });
 })();

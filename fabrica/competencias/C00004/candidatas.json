@@ -1,0 +1,291 @@
+{
+ "oposicion": "mossos-esquadra",
+ "generador": "redactor-competencies-v1 · lot complementari C00004 (escenaris per a les competències per sota de l'objectiu)",
+ "complementa": "C00003",
+ "competencias": [],
+ "escenarios": [
+  {
+   "id": "esc-responsabilitat-9",
+   "competency_id": "responsabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Fas de monitor en un menjador escolar. En acabar el torn t'adones que no has apuntat al registre que un infant amb al·lèrgia ha menjat un postres diferent del previst, tot i que aparentment no ha tingut cap reacció.",
+   "contexto": "Menjador escolar",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Apuntar-ho ara al registre i avisar la coordinadora perquè ho sàpiga la família.",
+     "puntos": {
+      "responsabilitat": 2,
+      "orientacio-servei": 1
+     }
+    },
+    {
+     "texto": "No dir-ho, perquè no ha tingut cap reacció i registrar-ho ara només generaria alarma innecessària entre les famílies.",
+     "puntos": {
+      "responsabilitat": 0,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Comentar-ho a un altre monitor perquè estigui pendent de l'infant demà.",
+     "puntos": {
+      "responsabilitat": 1,
+      "orientacio-servei": 0
+     }
+    },
+    {
+     "texto": "Apuntar-ho al registre l'endemà a primera hora, quan tingui més temps per escriure-ho bé.",
+     "puntos": {
+      "responsabilitat": 1,
+      "orientacio-servei": 1
+     }
+    }
+   ],
+   "justificacion": "En temes de salut, deixar constància i avisar de seguida permet que la família i el centre actuïn; ajornar-ho o comentar-ho de manera informal és insuficient i callar és el pitjor.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "orientacio-servei"
+   ]
+  },
+  {
+   "id": "esc-responsabilitat-10",
+   "competency_id": "responsabilitat",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Formes part d'un equip de voluntaris que reparteix aliments. Et vas comprometre a recollir una furgoneta a les vuit del matí, però la nit abans et trobes malament i no saps si podràs anar-hi.",
+   "contexto": "Banc d'aliments",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Avisar aquella mateixa nit el coordinador i ajudar a buscar qui em pot substituir.",
+     "puntos": {
+      "responsabilitat": 2,
+      "cooperacio": 2
+     }
+    },
+    {
+     "texto": "Esperar al matí a veure com em trobo i, si no puc, avisar llavors.",
+     "puntos": {
+      "responsabilitat": 1,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "No dir res i no presentar-me, ja que algú altre ho resoldrà quan vegi que no hi soc.",
+     "puntos": {
+      "responsabilitat": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Enviar un missatge al grup aquella nit dient que potser no podré anar-hi.",
+     "puntos": {
+      "responsabilitat": 1,
+      "cooperacio": 1
+     }
+    }
+   ],
+   "justificacion": "Avisar amb temps i ajudar a trobar una solució és el més responsable; un avís vague al grup ajuda poc, esperar al matí deixa poc marge i no presentar-se sense avisar és el pitjor.",
+   "expected_dimensions": [
+    "responsabilitat",
+    "cooperacio"
+   ],
+   "orden_recomendado": [
+    0,
+    3,
+    1,
+    2
+   ]
+  },
+  {
+   "id": "esc-orientacio-servei-9",
+   "competency_id": "orientacio-servei",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Treballes en una oficina d'atenció ciutadana i un home molt nerviós arriba cinc minuts abans de tancar perquè avui és l'últim dia per presentar una sol·licitud i li falta un document.",
+   "contexto": "Oficina d'atenció ciutadana",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Dir-li que torni un altre dia, perquè ja estem a punt de tancar i no hi ha temps d'atendre'l bé.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Atendre'l, explicar-li quines opcions té i ajudar-lo a presentar el que pugui avui.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "resolucio-problemes": 2
+     }
+    },
+    {
+     "texto": "Donar-li el telèfon d'informació perquè hi truqui demà.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "resolucio-problemes": 0
+     }
+    },
+    {
+     "texto": "Atendre'l però sense comprovar si hi ha alguna alternativa per al document que falta.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "resolucio-problemes": 1
+     }
+    }
+   ],
+   "justificacion": "Atendre la persona i buscar opcions perquè no perdi el termini és el millor servei; atendre-la sense explorar alternatives aporta poc, derivar-la o fer-la tornar li fa perdre el termini.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "resolucio-problemes"
+   ]
+  },
+  {
+   "id": "esc-orientacio-servei-10",
+   "competency_id": "orientacio-servei",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Fas de guia en un museu i una família amb un infant amb discapacitat visual et demana si poden fer la visita, però l'itinerari està pensat només per mirar.",
+   "contexto": "Museu",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Dir-los que el museu no té activitats adaptades.",
+     "puntos": {
+      "orientacio-servei": 0,
+      "habilitats-socials": 0
+     }
+    },
+    {
+     "texto": "Adaptar la visita amb descripcions i, si es pot, objectes per tocar, i informar-ne el museu perquè ho tingui en compte.",
+     "puntos": {
+      "orientacio-servei": 2,
+      "habilitats-socials": 2
+     }
+    },
+    {
+     "texto": "Fer la visita habitual i descriure algunes peces quan hi hagi temps.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "habilitats-socials": 1
+     }
+    },
+    {
+     "texto": "Recomanar-los que tornin un dia de visita adaptada, si n'hi ha.",
+     "puntos": {
+      "orientacio-servei": 1,
+      "habilitats-socials": 0
+     }
+    }
+   ],
+   "justificacion": "Adaptar el servei a la necessitat i fer-ho saber a l'organització és la millor resposta; descriure algunes peces és insuficient, derivar-los a un altre dia és poc útil i negar l'accés és el pitjor.",
+   "expected_dimensions": [
+    "orientacio-servei",
+    "habilitats-socials"
+   ],
+   "orden_recomendado": [
+    1,
+    2,
+    3,
+    0
+   ]
+  },
+  {
+   "id": "esc-adaptabilitat-9",
+   "competency_id": "adaptabilitat",
+   "formato": "eleccion",
+   "dificultad": 2,
+   "situacion": "Comences a fer pràctiques en una empresa i descobreixes que el teu tutor prefereix rebre les consultes per escrit i agrupades un cop al dia, mentre que tu estàs acostumat a preguntar en el moment.",
+   "contexto": "Pràctiques en una empresa",
+   "pregunta": "Què faries en aquesta situació?",
+   "opciones": [
+    {
+     "texto": "Continuar preguntant en el moment, perquè així resolc els dubtes més ràpid i no m'encallo amb la feina.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "cooperacio": 0
+     }
+    },
+    {
+     "texto": "Agrupar les consultes per escrit i avançar mentrestant amb el que pugui fer pel meu compte.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "autonomia": 1
+     }
+    },
+    {
+     "texto": "Deixar de fer consultes per no molestar.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autonomia": 1
+     }
+    },
+    {
+     "texto": "Agrupar-les, però trucar-li quan un dubte em sembli prou important.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autonomia": 1
+     }
+    }
+   ],
+   "justificacion": "Adaptar-se a la manera de treballar de l'equip i continuar avançant és el més adequat; fer excepcions sovint trenca l'acord, i no preguntar o ignorar la preferència del tutor són les opcions menys adequades.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "cooperacio",
+    "autonomia"
+   ]
+  },
+  {
+   "id": "esc-adaptabilitat-10",
+   "competency_id": "adaptabilitat",
+   "formato": "ranking",
+   "dificultad": 3,
+   "situacion": "Prepares les proves amb un horari d'estudi fix i, de cop, a la feina et canvien a un torn rotatiu que fa impossible mantenir l'horari que tenies.",
+   "contexto": "Preparació del procés",
+   "pregunta": "Ordena les actuacions de la més adequada a la menys adequada.",
+   "opciones": [
+    {
+     "texto": "Mantenir l'horari antic i estudiar menys els dies que no quadri.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autogestio": 1
+     }
+    },
+    {
+     "texto": "Refer l'horari setmana a setmana segons els torns i reservar blocs fixos per a les matèries clau.",
+     "puntos": {
+      "adaptabilitat": 2,
+      "autogestio": 2
+     }
+    },
+    {
+     "texto": "Deixar d'estudiar fins que tingui un horari estable.",
+     "puntos": {
+      "adaptabilitat": 0,
+      "autogestio": 0
+     }
+    },
+    {
+     "texto": "Estudiar quan pugui, sense planificar, aprofitant els forats que quedin.",
+     "puntos": {
+      "adaptabilitat": 1,
+      "autogestio": 1
+     }
+    }
+   ],
+   "justificacion": "Reorganitzar la planificació segons els torns és adaptar-se sense perdre el rumb; estudiar sense pla és millor que no fer-ho, però mantenir un horari impossible o aturar-se són les pitjors opcions.",
+   "expected_dimensions": [
+    "adaptabilitat",
+    "autogestio"
+   ],
+   "orden_recomendado": [
+    1,
+    3,
+    0,
+    2
+   ]
+  }
+ ]
+}

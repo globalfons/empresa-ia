@@ -107,7 +107,13 @@ async function escenarioEntrevista(op: string, id: string) {
   const r = await fetch(`${SITE}datos/entrevista-${op}.json`);
   if (!r.ok) return null;
   const d = await r.json().catch(() => null);
-  const e = (d?.escenarios || []).find((x: { id: string }) => x.id === id);
+  let e = (d?.escenarios || []).find((x: { id: string }) => x.id === id);
+  if (!e && d?.premium) { // con bancoPrivado, los escenarios premium no están en la web: se leen del banco privado (solo usuarios con Pase llegan aquí)
+    const srv = env("SUPABASE_SERVICE_ROLE_KEY");
+    const b = await fetch(`${SB}/rest/v1/banco_premium?clave=eq.${encodeURIComponent("entrevista-" + op)}&select=datos`, { headers: { apikey: srv, Authorization: `Bearer ${srv}` } });
+    const priv = b.ok ? (await b.json().catch(() => null))?.[0]?.datos : null;
+    e = (priv?.qs || []).find((x: { id: string }) => x.id === id);
+  }
   return e ? { e, nombres: Object.fromEntries((d.competencias || []).map((c: { id: string; nombre: string }) => [c.id, c.nombre])) } : null;
 }
 
