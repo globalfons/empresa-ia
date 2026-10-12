@@ -8,11 +8,11 @@ Estados: **OFFICIAL_EXAM** = pregunta de un examen oficial · **OFFICIAL_VERIFIE
 
 | lote | generadas | VALID | REVIEW_REQUIRED | REJECTED | política del juez |
 |---|---|---|---|---|---|
-| S00045 | 49 | 39 | 7 | 3 | juez-sesion-v4 |
 | S00046 | 47 | 42 | 5 | 0 | juez-sesion-v4 |
 | S00048 | 50 | 45 | 4 | 1 | juez-sesion-v4 |
 | S00050 | 47 | 40 | 5 | 2 | juez-sesion-v4 |
 | S00051 | 46 | 38 | 5 | 3 | juez-sesion-v4 |
+| S00052 | 30 | 23 | 7 | 0 | juez-sesion-v4 |
 
 - **S00022 · RETENIDO_DEFINITIVO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00022/DECISION.json`.
 - **S00037 · RETENIDO** (2026-10-06): ALL_VALID_SIN_EVIDENCIA (juez_v2.resultado → evidencia_individual). No se publica ni se rejuzga; evidencia en `fabrica/estado/retenidos/S00037/DECISION.json`.

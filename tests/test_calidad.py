@@ -150,9 +150,14 @@ class TestEstructuraExamen(unittest.TestCase):
         s = self.op["policia-nacional-escala-basica"]["examen"]["simulacro"]
         self.assertEqual((s["preguntas"], s["minutos"], s["opciones"]), (100, 50, 3))
 
-    def test_guardia_civil_temario_pendiente_y_explicado(self):
+    def test_guardia_civil_temario_oficial_verificado(self):
+        # 2026-10-12: temario oficial (Resolución de 26/06/2019 modificada el 03/10/2022, PDF firmado de la Guardia Civil)
         o = self.op["guardia-civil-cabos-guardias"]
-        self.assertEqual(o["temario"]["tipo"], "pendiente")
-        self.assertTrue(any(x["campo"] == "temario" and x["motivo"] for x in o.get("pendientes", [])))
+        self.assertEqual(o["temario"]["tipo"], "oficial_publicado")
+        self.assertEqual(len(o["temario"]["temas"]), 25)
+        f = o["fuentes"]["temario"]
+        self.assertEqual(f["verification_status"], "OFFICIAL_VERIFIED")
+        self.assertTrue(f["url"].startswith("https://web.guardiacivil.es/"))
+        self.assertFalse(any(x["campo"] == "temario" for x in o.get("pendientes", [])))
 
 if __name__ == "__main__": unittest.main()

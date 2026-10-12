@@ -9,7 +9,7 @@
   "domain": "administracion.gob.es", "url": "https://administracion.gob.es/pag_Home/empleoPublico/buscadorEmpleo.html", "tipo": "html", "crawler": "playwright", "parser": "html_enlaces",
   "frecuencia_horas": 24, "activo": true, "opciones": {"incluir": "(?i)convocatoria|oposici|proceso selectivo|plazas", "max_documentos": 60}},
  {"id": "policia-nacional", "nombre": "Policía Nacional · Oposiciones", "prioridad": 3, "organismo": "Dirección General de la Policía",
-  "domain": "www.policia.es", "url": "https://www.policia.es/_es/oposiciones.php", "tipo": "html", "crawler": "http", "parser": "html_enlaces",
+  "domain": "www.policia.es", "url": "https://www.policia.es/portalaspirantes/es/web/escala-basica-ejecutiva", "tipo": "html", "crawler": "http", "parser": "html_enlaces",
   "frecuencia_horas": 24, "activo": true, "opciones": {"incluir": "(?i)convocatoria|temario|bases|escala|admitid|calendario|oposici", "max_documentos": 40}},
  {"id": "guardia-civil", "nombre": "Guardia Civil · Ingreso en el Cuerpo", "prioridad": 4, "organismo": "Dirección General de la Guardia Civil",
   "domain": "web.guardiacivil.es", "url": "https://web.guardiacivil.es/es/tramites/ingresos/ingresocuerpo/", "tipo": "html", "crawler": "playwright", "parser": "html_enlaces",

@@ -1,0 +1,620 @@
+{
+ "evaluacion": "S00052",
+ "creada_el": "2026-10-12T07:04:38",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 30,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0"
+   ],
+   "prompt_sha256": "0b0ba709a9536f37119825c363cad19c416e45ef52bbed0fd54b391617f7a183",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "07fef7f93a0dc7bf44ce12290e18f8a916e9e10f1ba0a90258ed4364963eeab1",
+    "0.1": "fb7b52cfd2c574178a2cea41623d96d712918c2f8e25bd1d31065a7562fa3147",
+    "0.2": "21db2ced1aa92caa23e3566095116f8cfa979ed8213d2ace8b8c615767bd3bbb",
+    "1.0": "25f2423387f5c50951599b9236a6656897a9771e83aaf0709c09fab251d99da6",
+    "1.1": "409aaf30302cc444d80d9c52e470e85b3d226a3a5f4e2aa243566d3db554ce41",
+    "1.2": "4595e327193361e8a6a0ebd5d4ee45dc1f25567a2c180ff469767380e7a55316",
+    "2.0": "200830ae91e6ee9afa8bc9e0159abf446436a7f23312dbd2738d19f351a25d7a",
+    "2.1": "513635849a42a24fe811f448d5a6b3ae54a4869367420d84cd7524fabdfecfb5",
+    "2.2": "0aa90860da460e2e6a214a8ceae0ef8694f81e1ff5bd92ab141f64f7a78a1f44",
+    "3.0": "f14b843374dd337e0e5b38140958b0ba0ffa153139527753de57d109c749e9ef"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 5.1 dice que 'todos los poderes públicos, en sus respectivos ámbitos competenciales' velan por el patrimonio natural, y la cita lo recoge entero. La opción A está respaldada, la cita basta y ninguna otra opción es correcta. La pregunta no es clara: los tres distractores llevan 'Únicamente', 'Solo' y 'Exclusivamente', y esas palabras delatan que la respuesta es la opción abierta 'Todos'.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.2.c) dice que las Administraciones 'promoverán la utilización de medidas fiscales y otros incentivos económicos' para iniciativas privadas de conservación, y la cita lo contiene entero. Las tasas, la prohibición y la expropiación no aparecen en el texto. La pregunta es clara y no tiene parecidas que prueben el mismo hecho.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.2.b) dice que se 'identificarán y, en la medida de lo posible, eliminarán los incentivos contrarios a su conservación', y la cita recoge ambos verbos. Las demás opciones (mantenerlos, duplicarlos, trasladarlos) contradicen el texto. La parecida 5.2.c (medidas fiscales) prueba un hecho distinto, así que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.7 dice que las Universidades incluirán y fomentarán 'la formación, docencia e investigación en igualdad de género y no discriminación de forma transversal'. La cita lo recoge literalmente. Los distractores (atención psicológica, registro de casos, mediación familiar) no figuran en el artículo. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.2 atribuye a la Educación Infantil el aprendizaje en la resolución pacífica de conflictos en la infancia, y la cita lo recoge. Bachillerato, ESO y FP tienen otros cometidos en los apartados 4 y 5. Solo la opción C es correcta y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.1 dice que el sistema educativo incluirá, dentro de sus principios de calidad, 'la eliminación de los obstáculos que dificultan la plena igualdad', y la cita lo recoge. La segunda lengua, la evaluación externa y la gratuidad de libros no aparecen en el texto. La pregunta es clara y no hay duplicados.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5 dice que el principio es 'aplicable en el ámbito del empleo privado y en el del empleo público', y la cita lo recoge. Las opciones A y B excluyen un ámbito y la D añade un umbral de plantilla que el texto no menciona. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que no es discriminación la diferencia de trato cuando la característica sea 'requisito profesional esencial y determinante', con objetivo legítimo y requisito proporcionado. La cita contiene esos tres elementos, que son los que recoge la opción B. Las otras opciones (decisión del empleador, votación de la plantilla, contrato temporal) no están en el texto. Aunque la cita omite la mención a la naturaleza de la actividad, la opción correcta no la necesita.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5 garantiza la igualdad 'en la afiliación y participación en las organizaciones sindicales y empresariales', y la cita lo recoge. Las otras opciones contradicen el texto: incluye las condiciones retributivas y de despido sin distinción, y el acceso al empleo incluye el trabajo por cuenta propia. La parecida 2.0 prueba el ámbito público/privado, que es otro hecho, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 22 obliga a estos establecimientos a 'dar previo aviso por escrito a las intervenciones de armas, del día y hora en que comiencen' cada proceso de fabricación. La cita contiene todos esos elementos: aviso previo, por escrito, a las intervenciones de armas, con día y hora. Los distractores (nada, verbal al ayuntamiento, autorización del Ministerio) contradicen el texto. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a6e3d56c9c5fe6d4a.jsonl",
+    "respuesta_sha256": "495fc3a328aa04e56e8bac9a9b04fcb7067beb4097dee4bfc5a9d0087ecdf553"
+   },
+   "registrada_el": "2026-10-12T07:05:50",
+   "intentos": [
+    {
+     "t": "2026-10-12T07:05:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a6e3d56c9c5fe6d4a.jsonl",
+      "respuesta_sha256": "495fc3a328aa04e56e8bac9a9b04fcb7067beb4097dee4bfc5a9d0087ecdf553"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 5.1 dice que 'todos los poderes públicos, en sus respectivos ámbitos competenciales' velan por el patrimonio natural, y la cita lo recoge entero. La opción A está respaldada, la cita basta y ninguna otra opción es correcta. La pregunta no es clara: los tres distractores llevan 'Únicamente', 'Solo' y 'Exclusivamente', y esas palabras delatan que la respuesta es la opción abierta 'Todos'.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.2.c) dice que las Administraciones 'promoverán la utilización de medidas fiscales y otros incentivos económicos' para iniciativas privadas de conservación, y la cita lo contiene entero. Las tasas, la prohibición y la expropiación no aparecen en el texto. La pregunta es clara y no tiene parecidas que prueben el mismo hecho.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.2.b) dice que se 'identificarán y, en la medida de lo posible, eliminarán los incentivos contrarios a su conservación', y la cita recoge ambos verbos. Las demás opciones (mantenerlos, duplicarlos, trasladarlos) contradicen el texto. La parecida 5.2.c (medidas fiscales) prueba un hecho distinto, así que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.7 dice que las Universidades incluirán y fomentarán 'la formación, docencia e investigación en igualdad de género y no discriminación de forma transversal'. La cita lo recoge literalmente. Los distractores (atención psicológica, registro de casos, mediación familiar) no figuran en el artículo. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.2 atribuye a la Educación Infantil el aprendizaje en la resolución pacífica de conflictos en la infancia, y la cita lo recoge. Bachillerato, ESO y FP tienen otros cometidos en los apartados 4 y 5. Solo la opción C es correcta y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.1 dice que el sistema educativo incluirá, dentro de sus principios de calidad, 'la eliminación de los obstáculos que dificultan la plena igualdad', y la cita lo recoge. La segunda lengua, la evaluación externa y la gratuidad de libros no aparecen en el texto. La pregunta es clara y no hay duplicados.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 5 dice que el principio es 'aplicable en el ámbito del empleo privado y en el del empleo público', y la cita lo recoge. Las opciones A y B excluyen un ámbito y la D añade un umbral de plantilla que el texto no menciona. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que no es discriminación la diferencia de trato cuando la característica sea 'requisito profesional esencial y determinante', con objetivo legítimo y requisito proporcionado. La cita contiene esos tres elementos, que son los que recoge la opción B. Las otras opciones (decisión del empleador, votación de la plantilla, contrato temporal) no están en el texto. Aunque la cita omite la mención a la naturaleza de la actividad, la opción correcta no la necesita.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 5 garantiza la igualdad 'en la afiliación y participación en las organizaciones sindicales y empresariales', y la cita lo recoge. Las otras opciones contradicen el texto: incluye las condiciones retributivas y de despido sin distinción, y el acceso al empleo incluye el trabajo por cuenta propia. La parecida 2.0 prueba el ámbito público/privado, que es otro hecho, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 22 obliga a estos establecimientos a 'dar previo aviso por escrito a las intervenciones de armas, del día y hora en que comiencen' cada proceso de fabricación. La cita contiene todos esos elementos: aviso previo, por escrito, a las intervenciones de armas, con día y hora. Los distractores (nada, verbal al ayuntamiento, autorización del Ministerio) contradicen el texto. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0",
+    "4.1",
+    "4.2",
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "6.1",
+    "6.2",
+    "7.0"
+   ],
+   "prompt_sha256": "d8ae11ecefb06682dcdf6806717641573d9224e5d82b38cb197e9952e40294fb",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "f97d8ee759a5548a4c2021e495631fbdc8724ba9c52238ac5f9f76f2e2d20cef",
+    "4.1": "a12ab8eaed48949b8854b2ec9784539ce215c4043e98f7d7239b8a1dc9b2e875",
+    "4.2": "d5b0f0b5473c0277e5cfd76847f01397f03b0751ce7ee1ecdbfa34dc9c84828a",
+    "5.0": "ad2e56777897066a99859a3062c35075fa5135109536e78f17c21ce1906441ad",
+    "5.1": "51e8aaba30353e3088947d2f73847017308bb30c6fc27382357bb66ecd11370a",
+    "5.2": "55871767b060b9ad09c974972b1b4e92e1d06169b3f90898ffbfc07301e21c74",
+    "6.0": "6ae6f101313b744cbf1aefc58fee6fb0939efe928c4f9a96a6a3733a8a8650ba",
+    "6.1": "c7645c3c5851c034e87d2f15c1bb0772dcd1d0a7f63b18d8367a0e5e20c8839e",
+    "6.2": "f441875f256b5688043ed32ba1f15a8e82684451f29518de93bd45d4f8296aaa",
+    "7.0": "27e1b963d0cfbcd36d7e75d6e76830b15d3f78886b057c74e8566e6ba3e45527"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El apartado 1 del art. 25 respalda la opción B (legislación específica, RGPD y la propia ley orgánica) y la cita la contiene entera. Ninguna otra opción es correcta. Pero dos distractores llevan los absolutos 'Solo' y 'Exclusivamente', y otro dice 'A ninguna norma', mientras que la correcta es la única matizada y la más larga. La respuesta se puede deducir sin saber el contenido, así que la pregunta no es suficientemente limpia para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 3 del art. 25 dice que pueden denegar las solicitudes de los derechos de los arts. 15 a 22 cuando los datos estén amparados por el secreto estadístico. La cita lo recoge completo. Los demás supuestos (carga de trabajo, menores, plazo de un mes) no aparecen en el texto. Es un requisito concreto y útil, y no hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 2 del art. 25 establece que los datos de los arts. 9 y 10 RGPD son de aportación estrictamente voluntaria y solo se recogen con consentimiento expreso. La cita contiene ambos elementos. Los distractores (plan autonómico obligatorio, anonimización en un año, autorización judicial) no figuran en el texto. La parecida 4.1 trata otro hecho (denegación de derechos), por lo que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.1 fija como objeto de la política preventiva la promoción de la mejora de las condiciones de trabajo para elevar el nivel de protección de la seguridad y la salud, y la cita lo reproduce literalmente. Los distractores (reducir costes, sancionar, complementos salariales) no son el objeto según el texto. No hay duplicadas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.1.b) dice que la política preventiva se elabora con la participación de empresarios y trabajadores a través de sus organizaciones más representativas, y la cita contiene todo ello. Los distractores (Gobierno con informe de la Inspección, cada empresa, comunidades autónomas) no coinciden con el texto. Pregunta clara y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.2 prevé la colaboración permanente entre Trabajo y Seguridad Social y los Ministerios que correspondan, en particular Educación y Ciencia y Sanidad y Consumo. La cita contiene esos elementos. Las otras opciones nombran ministerios distintos (Interior y Defensa, Industria y Energía, Economía y Hacienda), que el texto no menciona. Es un dato concreto y útil, y no hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.2 dice que los alumnos de los Centros Docentes de la Guardia Civil están igualmente sujetos a la ley, y la cita lo reproduce. Retirados, policías locales y personal civil de Defensa no se mencionan como sujetos en el texto. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.3 excluye a los miembros de la Guardia Civil en situaciones administrativas en que dejen de estar sujetos al régimen general de derechos y obligaciones del personal. La cita lo contiene completo. Misiones internacionales, menos de un año de servicio y Escala de Oficiales no aparecen como exclusiones en el texto. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.1 indica que la regulación se hace con las particularidades derivadas de su carácter de Instituto Armado de naturaleza militar, y la cita lo reproduce. Los distractores (cuerpo civil, policía judicial, funcionarios locales) contradicen el texto. Es un dato clave del temario y no hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 42 respalda la opción B: la promesa de matrimonio no obliga a contraerlo ni a cumplir lo estipulado para el caso de no celebrarse, y la cita lo contiene. Pero la opción C (obligación de indemnizar los gastos hechos en atención al matrimonio) trata una cuestión que el texto del art. 42 no regula. Es la materia del artículo siguiente, que no está incluido, así que no puede descartarse con el texto aportado. Por eso no se garantiza que la opción sea única y hay que revisar el distractor C.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a877617412364047d.jsonl",
+    "respuesta_sha256": "ace4f67d97736e1cd12eb5b3dcfa2276d07e0662f3be2c5147517ed2f9e83e53"
+   },
+   "registrada_el": "2026-10-12T07:05:50",
+   "intentos": [
+    {
+     "t": "2026-10-12T07:05:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a877617412364047d.jsonl",
+      "respuesta_sha256": "ace4f67d97736e1cd12eb5b3dcfa2276d07e0662f3be2c5147517ed2f9e83e53"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El apartado 1 del art. 25 respalda la opción B (legislación específica, RGPD y la propia ley orgánica) y la cita la contiene entera. Ninguna otra opción es correcta. Pero dos distractores llevan los absolutos 'Solo' y 'Exclusivamente', y otro dice 'A ninguna norma', mientras que la correcta es la única matizada y la más larga. La respuesta se puede deducir sin saber el contenido, así que la pregunta no es suficientemente limpia para examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 3 del art. 25 dice que pueden denegar las solicitudes de los derechos de los arts. 15 a 22 cuando los datos estén amparados por el secreto estadístico. La cita lo recoge completo. Los demás supuestos (carga de trabajo, menores, plazo de un mes) no aparecen en el texto. Es un requisito concreto y útil, y no hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 2 del art. 25 establece que los datos de los arts. 9 y 10 RGPD son de aportación estrictamente voluntaria y solo se recogen con consentimiento expreso. La cita contiene ambos elementos. Los distractores (plan autonómico obligatorio, anonimización en un año, autorización judicial) no figuran en el texto. La parecida 4.1 trata otro hecho (denegación de derechos), por lo que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.1 fija como objeto de la política preventiva la promoción de la mejora de las condiciones de trabajo para elevar el nivel de protección de la seguridad y la salud, y la cita lo reproduce literalmente. Los distractores (reducir costes, sancionar, complementos salariales) no son el objeto según el texto. No hay duplicadas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.1.b) dice que la política preventiva se elabora con la participación de empresarios y trabajadores a través de sus organizaciones más representativas, y la cita contiene todo ello. Los distractores (Gobierno con informe de la Inspección, cada empresa, comunidades autónomas) no coinciden con el texto. Pregunta clara y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.2 prevé la colaboración permanente entre Trabajo y Seguridad Social y los Ministerios que correspondan, en particular Educación y Ciencia y Sanidad y Consumo. La cita contiene esos elementos. Las otras opciones nombran ministerios distintos (Interior y Defensa, Industria y Energía, Economía y Hacienda), que el texto no menciona. Es un dato concreto y útil, y no hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.2 dice que los alumnos de los Centros Docentes de la Guardia Civil están igualmente sujetos a la ley, y la cita lo reproduce. Retirados, policías locales y personal civil de Defensa no se mencionan como sujetos en el texto. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.3 excluye a los miembros de la Guardia Civil en situaciones administrativas en que dejen de estar sujetos al régimen general de derechos y obligaciones del personal. La cita lo contiene completo. Misiones internacionales, menos de un año de servicio y Escala de Oficiales no aparecen como exclusiones en el texto. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.1 indica que la regulación se hace con las particularidades derivadas de su carácter de Instituto Armado de naturaleza militar, y la cita lo reproduce. Los distractores (cuerpo civil, policía judicial, funcionarios locales) contradicen el texto. Es un dato clave del temario y no hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 42 respalda la opción B: la promesa de matrimonio no obliga a contraerlo ni a cumplir lo estipulado para el caso de no celebrarse, y la cita lo contiene. Pero la opción C (obligación de indemnizar los gastos hechos en atención al matrimonio) trata una cuestión que el texto del art. 42 no regula. Es la materia del artículo siguiente, que no está incluido, así que no puede descartarse con el texto aportado. Por eso no se garantiza que la opción sea única y hay que revisar el distractor C.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0",
+    "9.1",
+    "9.2",
+    "10.0",
+    "10.1",
+    "10.2",
+    "11.0"
+   ],
+   "prompt_sha256": "12edb72366ce94ce48da0877d3b569fc1dd620f676273814baea484486ed2c1f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "8.0": "33e7a226f838797d0b7e78ee8ba1876bb45533d68f3bb600e8a8408513836f0b",
+    "8.1": "3283e83d872a4b73f34cef4d097e4889b836a964fd22cc144da70537d2fcbc28",
+    "8.2": "a3cf614d89ba96ac80ff63b3f290014787ff948a1ff0352e16544bdc5d34bd6d",
+    "9.0": "7617a2ce299745e616e8129559f91095be9ef0dff7d81fdbe23c2546939c0b88",
+    "9.1": "0c56aae72ae1242e0d3f895f7246f8a74fa364df47b4a8157d446dc52b09a23e",
+    "9.2": "19ee15312432934c171a7ccb4ad2a159bdd93684df9ae5d664a8e8f7a44fd760",
+    "10.0": "f2f1e798d6ee06c3764009c68c56e6c811ef44c6e129f2aa4ade16da72591553",
+    "10.1": "7e7b15379fd028733018c51995332ff304d4bd861781244e206e4b0fe9f0a0c7",
+    "10.2": "410bf5be02308914f459ad01c13fdf5cc28692d5ebb01df45e58e5a7d3cca192",
+    "11.0": "4408521f198920a1b9be616c2123a3c557a093a073fc86270c71823c595d8c07"
+   },
+   "veredictos": [
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.2.a del texto fija la reincidencia en 'el término de dos años de más de una infracción de la misma naturaleza' como circunstancia de multa en grado medio. La cita contiene íntegramente el dato (dos años) y la condición de resolución firme. Los otros plazos (seis meses, un año, cinco años) no aparecen en el texto. Es un plazo concreto, material útil de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La respuesta (capacidad económica) está respaldada: es el criterio g) de individualización, no una circunstancia de grado medio, mientras que violencia, rostro cubierto y menores sí son circunstancias del grado medio (letras b, c, d). Pero es una pregunta en negativo y la cita solo recoge la frase introductoria 'En cada grado, para la individualización... los siguientes criterios:'. No muestra que la capacidad económica sea un criterio ni que las otras tres opciones sean circunstancias de grado medio. Por tanto la cita no es suficiente.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que solo se sanciona con multa en grado máximo cuando los hechos revistan especial gravedad y así se justifique con el número y entidad de las circunstancias y los criterios. La cita lo contiene completo. La reincidencia lleva al grado medio, no al máximo. Las opciones c) y d) no figuran en el texto. Solo la opción b es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2 bis.1 atribuye al Gobierno la definición, planificación, regulación y desarrollo de la política de inmigración, sin perjuicio de las competencias de CCAA y Entidades Locales. La cita contiene el sujeto (Gobierno) y la función. Las demás opciones invierten el sujeto o introducen la UE, que no aparece como titular. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2 bis.2.b incluye entre los principios 'la ordenación de los flujos migratorios laborales, de acuerdo con las necesidades de la situación nacional del empleo', y la cita lo recoge literalmente. Las otras opciones (libre entrada sin autorización, preferencia de nacionales, limitar la cooperación a readmisión) contradicen o no figuran en el texto. Solo una es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2 bis.3 dice que el Estado garantizará el principio de solidaridad atendiendo a los territorios con especial incidencia de flujos migratorios. La cita lo contiene íntegro. Autonomía financiera, subsidiariedad y reciprocidad no aparecen en el texto. Pregunta clara y sin ambigüedad.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 6.2 dice que corresponde a la Administración General del Estado establecer cualquier limitación o prohibición de la navegación marítima y sus actividades conexas. La cita contiene el sujeto y la función. CCAA del litoral, ayuntamientos y autoridades portuarias no tienen esa atribución en el texto. Respuesta única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 6.4 atribuye a las CCAA las funciones sobre especies 'excepto las altamente migratorias' cuando hay continuidad ecológica. La cita recoge la excepción literal. Cetáceos, invasoras y aves marinas no se mencionan como excepción, así que solo la opción a es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Está respaldada por el art. 6.4, que atribuye a las CCAA las funciones cuando hay continuidad ecológica avalada científicamente. Pero la cita solo contiene la condición ('cuando exista continuidad ecológica... avalada por la mejor evidencia científica') y no dice quién ejerce la función. Sola no permite elegir 'las comunidades autónomas', así que no es suficiente. Además la opción a usa 'Siempre', un distractor delatado por el adverbio. Hay que ajustar la cita e incluir 'Corresponde a las comunidades autónomas'.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 5 es una sola frase ('deberán prever la escolarización inmediata de los hijos...') y la cita coincide con ella, así que la respuesta es correcta y única. Pero la opción correcta se limita a reproducir esa frase del artículo, lo que según el criterio es trivial. Los distractores (ayuda mensual, cambio de apellidos, tutela pública) son claramente ajenos y no discriminan. Se marca clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-ae38a9cb6d54fe823.jsonl",
+    "respuesta_sha256": "d235d77174260023de2e0d90622bed00ecb824fb6064bf98e4081cc345b82d8b"
+   },
+   "registrada_el": "2026-10-12T07:06:15",
+   "intentos": [
+    {
+     "t": "2026-10-12T07:06:15",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-ae38a9cb6d54fe823.jsonl",
+      "respuesta_sha256": "d235d77174260023de2e0d90622bed00ecb824fb6064bf98e4081cc345b82d8b"
+     },
+     "respuesta": "[\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.2.a del texto fija la reincidencia en 'el término de dos años de más de una infracción de la misma naturaleza' como circunstancia de multa en grado medio. La cita contiene íntegramente el dato (dos años) y la condición de resolución firme. Los otros plazos (seis meses, un año, cinco años) no aparecen en el texto. Es un plazo concreto, material útil de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La respuesta (capacidad económica) está respaldada: es el criterio g) de individualización, no una circunstancia de grado medio, mientras que violencia, rostro cubierto y menores sí son circunstancias del grado medio (letras b, c, d). Pero es una pregunta en negativo y la cita solo recoge la frase introductoria 'En cada grado, para la individualización... los siguientes criterios:'. No muestra que la capacidad económica sea un criterio ni que las otras tres opciones sean circunstancias de grado medio. Por tanto la cita no es suficiente.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que solo se sanciona con multa en grado máximo cuando los hechos revistan especial gravedad y así se justifique con el número y entidad de las circunstancias y los criterios. La cita lo contiene completo. La reincidencia lleva al grado medio, no al máximo. Las opciones c) y d) no figuran en el texto. Solo la opción b es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 2 bis.1 atribuye al Gobierno la definición, planificación, regulación y desarrollo de la política de inmigración, sin perjuicio de las competencias de CCAA y Entidades Locales. La cita contiene el sujeto (Gobierno) y la función. Las demás opciones invierten el sujeto o introducen la UE, que no aparece como titular. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 2 bis.2.b incluye entre los principios 'la ordenación de los flujos migratorios laborales, de acuerdo con las necesidades de la situación nacional del empleo', y la cita lo recoge literalmente. Las otras opciones (libre entrada sin autorización, preferencia de nacionales, limitar la cooperación a readmisión) contradicen o no figuran en el texto. Solo una es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 2 bis.3 dice que el Estado garantizará el principio de solidaridad atendiendo a los territorios con especial incidencia de flujos migratorios. La cita lo contiene íntegro. Autonomía financiera, subsidiariedad y reciprocidad no aparecen en el texto. Pregunta clara y sin ambigüedad.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 6.2 dice que corresponde a la Administración General del Estado establecer cualquier limitación o prohibición de la navegación marítima y sus actividades conexas. La cita contiene el sujeto y la función. CCAA del litoral, ayuntamientos y autoridades portuarias no tienen esa atribución en el texto. Respuesta única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 6.4 atribuye a las CCAA las funciones sobre especies 'excepto las altamente migratorias' cuando hay continuidad ecológica. La cita recoge la excepción literal. Cetáceos, invasoras y aves marinas no se mencionan como excepción, así que solo la opción a es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Está respaldada por el art. 6.4, que atribuye a las CCAA las funciones cuando hay continuidad ecológica avalada científicamente. Pero la cita solo contiene la condición ('cuando exista continuidad ecológica... avalada por la mejor evidencia científica') y no dice quién ejerce la función. Sola no permite elegir 'las comunidades autónomas', así que no es suficiente. Además la opción a usa 'Siempre', un distractor delatado por el adverbio. Hay que ajustar la cita e incluir 'Corresponde a las comunidades autónomas'.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 5 es una sola frase ('deberán prever la escolarización inmediata de los hijos...') y la cita coincide con ella, así que la respuesta es correcta y única. Pero la opción correcta se limita a reproducir esa frase del artículo, lo que según el criterio es trivial. Los distractores (ayuda mensual, cambio de apellidos, tutela pública) son claramente ajenos y no discriminan. Se marca clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

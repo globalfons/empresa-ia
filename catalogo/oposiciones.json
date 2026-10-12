@@ -10,7 +10,7 @@
   "grupo": "",
   "estado": "activa",
   "estado_nota": "Proceso selectivo convocado en 2026.",
-  "actualizado": "2026-09-30",
+  "actualizado": "2026-10-12",
   "fuentes": {
    "convocatoria": {
     "tipo": "BOE",
@@ -20,6 +20,19 @@
     "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-9982",
     "fecha_publicacion": "2026-05-08",
     "texto": "catalogo/fuentes/BOE-A-2026-9982.txt"
+   },
+   "temario": {
+    "tipo": "WEB",
+    "organismo": "Dirección General de la Guardia Civil",
+    "id": "GC-TEMARIO-2022",
+    "titulo": "Resolución de la Dirección General de la Guardia Civil por la que se modifica la Resolución de 26 de junio de 2019 que determina el temario de las convocatorias de los procesos de selección para el ingreso en los centros docentes de formación para la incorporación a la Escala de Cabos y Guardias de la Guardia Civil (firmada el 3 de octubre de 2022)",
+    "url": "https://web.guardiacivil.es/export/sites/guardiaCivil/documentos/pdfs/2022/IngresoGC2022/RESOLUCION-DGGC-CON-ANEXO-MODIFICA-TEMARIO-PRUEBAS-ECG-GC.pdf",
+    "fecha_publicacion": "2022-10-03",
+    "texto": "catalogo/fuentes/GC-TEMARIO-2022.txt",
+    "verification_status": "OFFICIAL_VERIFIED",
+    "retrieved_at": "2026-10-12T06:51:52+00:00",
+    "sha256": "cacad39621a2c8f9ae3ee993705a3de59e34f75f76afffdb6344bf9b3d6127ba",
+    "nota": "Temario vigente citado en las bases de la convocatoria 2026 (BOE-A-2026-9982): Resolución de 26 de junio de 2019 modificada el 3 de octubre de 2022. Texto extraído del PDF oficial firmado (CSV GEN-99e3-7996-3e05-46e1-8663-f610-0bf9-689c)."
    }
   },
   "oficial": {
@@ -125,11 +138,6 @@
   },
   "pendientes": [
    {
-    "campo": "temario",
-    "motivo": "El temario oficial está en la Resolución de 26 de junio de 2019 (modificada el 3 de octubre de 2022) de la Dirección General de la Guardia Civil, que no se publica en el BOE. Pendiente de verificar en la web oficial de la Guardia Civil.",
-    "fuente_prevista": "https://web.guardiacivil.es/es/tramites/ingresos/ingresocuerpo/"
-   },
-   {
     "campo": "fechas_examen",
     "motivo": "El lugar, fecha y hora de las pruebas los anuncia el Tribunal de Selección en la web oficial de la Guardia Civil.",
     "fuente_prevista": "https://web.guardiacivil.es/es/tramites/ingresos/ingresocuerpo/"
@@ -196,7 +204,280 @@
     }
    ]
   },
-  "temario": [],
+  "temario": [
+   {
+    "bloque": "Anexo",
+    "tema": 1,
+    "titulo": "DERECHOS HUMANOS.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 2,
+    "titulo": "IGUALDAD EFECTIVA DE MUJERES Y HOMBRES.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-6115"
+    ],
+    "asignacion": {
+     "BOE-A-2007-6115": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 3,
+    "titulo": "PREVENCIÓN DE RIESGOS LABORALES.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-24292"
+    ],
+    "asignacion": {
+     "BOE-A-1995-24292": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 4,
+    "titulo": "DERECHO CONSTITUCIONAL.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1981-10325"
+    ],
+    "asignacion": {
+     "BOE-A-1978-31229": "revisada",
+     "BOE-A-1981-10325": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 5,
+    "titulo": "DERECHO DE LA UNIÓN EUROPEA.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 6,
+    "titulo": "INSTITUCIONES INTERNACIONALES.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 7,
+    "titulo": "DERECHO CIVIL.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1889-4763"
+    ],
+    "asignacion": {
+     "BOE-A-1889-4763": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 8,
+    "titulo": "DERECHO PENAL.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444"
+    ],
+    "asignacion": {
+     "BOE-A-1995-25444": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 9,
+    "titulo": "DERECHO PROCESAL PENAL.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1882-6036",
+     "BOE-A-1984-11620",
+     "BOE-A-1985-12666",
+     "BOE-A-2015-4606"
+    ],
+    "asignacion": {
+     "BOE-A-1882-6036": "revisada",
+     "BOE-A-1984-11620": "revisada",
+     "BOE-A-1985-12666": "revisada",
+     "BOE-A-2015-4606": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 10,
+    "titulo": "DERECHO ADMINISTRATIVO.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10565",
+     "BOE-A-2015-10566"
+    ],
+    "asignacion": {
+     "BOE-A-2015-10565": "revisada",
+     "BOE-A-2015-10566": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 11,
+    "titulo": "PROTECCIÓN DE DATOS.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2018-16673"
+    ],
+    "asignacion": {
+     "BOE-A-2018-16673": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 12,
+    "titulo": "EXTRANJERÍA. INMIGRACIÓN.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2000-544",
+     "BOE-A-2007-4184"
+    ],
+    "asignacion": {
+     "BOE-A-2000-544": "revisada",
+     "BOE-A-2007-4184": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 13,
+    "titulo": "SEGURIDAD PÚBLICA Y SEGURIDAD PRIVADA.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-3442",
+     "BOE-A-2014-3649"
+    ],
+    "asignacion": {
+     "BOE-A-2015-3442": "revisada",
+     "BOE-A-2014-3649": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 14,
+    "titulo": "MINISTERIO DEL INTERIOR. MINISTERIO DE DEFENSA.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 15,
+    "titulo": "FUERZAS Y CUERPOS DE SEGURIDAD. GUARDIA CIVIL.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1986-6859",
+     "BOE-A-2007-18391"
+    ],
+    "asignacion": {
+     "BOE-A-1986-6859": "revisada",
+     "BOE-A-2007-18391": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 16,
+    "titulo": "MATERIAS SOCIO-CULTURALES. PROTECCIÓN CIVIL. DESARROLLO SOSTENIBLE. EFICIENCIA ENERGÉTICA.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-21490"
+    ],
+    "asignacion": {
+     "BOE-A-2007-21490": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 17,
+    "titulo": "MATERIAS TÉCNICO-CIENTÍFICAS. TECNOLOGÍAS DE LA INFORMACIÓN Y LA COMUNICACIÓN.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 18,
+    "titulo": "TOPOGRAFÍA.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 19,
+    "titulo": "DEONTOLOGÍA PROFESIONAL.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 20,
+    "titulo": "RESPONSABILIDAD PENAL DE LOS MENORES.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 21,
+    "titulo": "PROTECCIÓN INTEGRAL CONTRA LA VIOLENCIA DE GÉNERO.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2004-21760"
+    ],
+    "asignacion": {
+     "BOE-A-2004-21760": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 22,
+    "titulo": "ARMAS Y EXPLOSIVOS.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1993-6202"
+    ],
+    "asignacion": {
+     "BOE-A-1993-6202": "revisada"
+    }
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 23,
+    "titulo": "DERECHO FISCAL.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 24,
+    "titulo": "INGLÉS.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Anexo",
+    "tema": 25,
+    "titulo": "LENGUA ESPAÑOLA.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   }
+  ],
   "preparacion": {
    "descripcion": "Mientras verificamos el temario oficial, practica con leyes que se estudian habitualmente para las oposiciones de seguridad. Es contenido de preparación de TestLey, no el temario oficial.",
    "normas": [
@@ -229,25 +510,25 @@
    "nota": "Se guarda una publicación del BOE si su título contiene todos los términos de alguno de los grupos."
   },
   "notas": "",
-  "temario_tipo": "pendiente",
-  "verificacion": "pendiente",
+  "temario_tipo": "oficial_publicado",
+  "verificacion": "parcial",
   "categoria_nombre": "Guardia Civil",
   "convocatoria": {
    "referencia": "Resolución 160/38243/2026, de 5 de mayo, de la Dirección General de la Guardia Civil (BOE-A-2026-9982)",
    "fecha_publicacion": "2026-05-08",
    "url_oficial": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-9982",
    "estado": "activa",
-   "anexo": null,
+   "anexo": "I",
    "plazas": 3240,
    "turno": "libre"
   },
   "fuente_temario": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-9982",
-  "verificado": "2026-09-30",
+  "verificado": "2026-10-12",
   "cobertura": {
-   "temas_total": 0,
-   "temas_legislativos": 0,
-   "temas_no_legislativos": 0,
-   "pct_legislativo_cubierto": 0.0
+   "temas_total": 25,
+   "temas_legislativos": 21,
+   "temas_no_legislativos": 4,
+   "pct_legislativo_cubierto": 66.7
   }
  },
  {
