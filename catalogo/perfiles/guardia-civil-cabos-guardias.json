@@ -8,7 +8,7 @@
  "territorio": "España",
  "grupo": "",
  "categoria": "guardia-civil",
- "generado": "2026-10-12",
+ "generado": "2026-10-19",
  "ficha_actualizada": "2026-10-12",
  "convocatoria": {
   "actual": {
@@ -32,8 +32,8 @@
  },
  "contenido": {
   "OFFICIAL_EXAM": 0,
-  "TESTLEY_GENERATED": 2360,
-  "REVIEW_REQUIRED": 71,
+  "TESTLEY_GENERATED": 2381,
+  "REVIEW_REQUIRED": 78,
   "DEPRECATED": 0,
   "OUTDATED": 0,
   "nota": "OFFICIAL_EXAM y TESTLEY_GENERATED son bancos separados: nunca se mezclan en un examen oficial ni cuentan como cobertura uno del otro."
@@ -468,21 +468,23 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 43,
+    "TESTLEY_GENERATED": 46,
     "OFFICIAL_EXAM": 0,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 1,
-    "2": 1,
+    "1": 2,
+    "2": 3,
     "3": 1,
     "?": 40
    },
    "tipos": {
+    "comparativa": 1,
+    "conceptual": 1,
     "dificil": 1,
-    "literal": 1,
+    "literal": 2,
     "negativa": 1,
     "sin_tipo": 40
    },
@@ -535,19 +537,22 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 78,
+    "TESTLEY_GENERATED": 81,
     "OFFICIAL_EXAM": 0,
     "REVIEW_REQUIRED": 0,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 23,
-    "2": 45,
-    "3": 10
+    "1": 24,
+    "2": 46,
+    "3": 11
    },
    "tipos": {
+    "competencias": 1,
+    "dificil": 1,
     "literal": 1,
+    "organos": 1,
     "procedimiento": 1,
     "requisitos": 1,
     "sin_tipo": 75
@@ -767,7 +772,7 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 108,
+    "TESTLEY_GENERATED": 109,
     "OFFICIAL_EXAM": 0,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
@@ -775,10 +780,11 @@
    },
    "dificultad": {
     "1": 26,
-    "2": 61,
+    "2": 62,
     "3": 21
    },
    "tipos": {
+    "conceptual": 1,
     "sin_tipo": 108
    },
    "ultima_actualizacion": "2026-10-12",
@@ -1131,15 +1137,15 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 64,
+    "TESTLEY_GENERATED": 65,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 5,
+    "REVIEW_REQUIRED": 7,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 5,
-    "2": 14,
+    "2": 15,
     "3": 2,
     "?": 43
    },
@@ -1154,10 +1160,11 @@
     "negativa": 1,
     "organos": 1,
     "plazos": 1,
+    "procedimiento": 1,
     "requisitos": 2,
     "sin_tipo": 43
    },
-   "ultima_actualizacion": "2026-10-12",
+   "ultima_actualizacion": "2026-10-19",
    "cambios_recientes": []
   },
   {
@@ -1224,15 +1231,15 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 135,
+    "TESTLEY_GENERATED": 137,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 10,
+    "REVIEW_REQUIRED": 11,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 27,
-    "2": 65,
+    "1": 28,
+    "2": 66,
     "3": 12,
     "?": 31
    },
@@ -1245,13 +1252,13 @@
     "excepcion": 9,
     "literal": 5,
     "negativa": 4,
-    "organos": 7,
+    "organos": 8,
     "plazos": 9,
     "procedimiento": 5,
-    "requisitos": 5,
+    "requisitos": 6,
     "sin_tipo": 73
    },
-   "ultima_actualizacion": "2026-10-12",
+   "ultima_actualizacion": "2026-10-19",
    "cambios_recientes": []
   },
   {
@@ -1318,35 +1325,35 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 121,
+    "TESTLEY_GENERATED": 123,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 18,
+    "REVIEW_REQUIRED": 19,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 27,
-    "2": 53,
+    "2": 55,
     "3": 8,
     "?": 33
    },
    "tipos": {
     "aplicacion": 5,
-    "comparativa": 4,
+    "comparativa": 5,
     "competencias": 4,
     "conceptual": 5,
     "definiciones": 1,
     "dificil": 2,
     "excepcion": 1,
     "literal": 6,
-    "negativa": 4,
+    "negativa": 5,
     "organos": 10,
     "plazos": 2,
     "procedimiento": 3,
     "requisitos": 7,
     "sin_tipo": 67
    },
-   "ultima_actualizacion": "2026-10-12",
+   "ultima_actualizacion": "2026-10-19",
    "cambios_recientes": []
   },
   {
@@ -1450,27 +1457,29 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 47,
+    "TESTLEY_GENERATED": 49,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 2,
+    "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 4,
-    "2": 3,
+    "2": 5,
     "3": 2,
     "?": 38
    },
    "tipos": {
     "aplicacion": 1,
     "comparativa": 2,
+    "competencias": 1,
     "dificil": 2,
     "literal": 3,
     "organos": 1,
+    "requisitos": 1,
     "sin_tipo": 38
    },
-   "ultima_actualizacion": "2026-10-12",
+   "ultima_actualizacion": "2026-10-19",
    "cambios_recientes": []
   },
   {
@@ -1519,28 +1528,28 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 35,
+    "TESTLEY_GENERATED": 38,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 7,
+    "REVIEW_REQUIRED": 8,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 3,
-    "2": 4,
+    "1": 5,
+    "2": 5,
     "3": 1,
     "?": 27
    },
    "tipos": {
-    "aplicacion": 1,
+    "aplicacion": 2,
     "conceptual": 1,
     "dificil": 1,
     "excepcion": 1,
-    "literal": 3,
+    "literal": 5,
     "requisitos": 1,
     "sin_tipo": 27
    },
-   "ultima_actualizacion": "2026-10-12",
+   "ultima_actualizacion": "2026-10-19",
    "cambios_recientes": []
   },
   {
@@ -1737,24 +1746,24 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 36,
+    "TESTLEY_GENERATED": 37,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 1,
+    "REVIEW_REQUIRED": 2,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 1,
-    "2": 2,
+    "2": 3,
     "?": 33
    },
    "tipos": {
     "comparativa": 1,
-    "conceptual": 1,
+    "conceptual": 2,
     "literal": 1,
     "sin_tipo": 33
    },
-   "ultima_actualizacion": "2026-10-12",
+   "ultima_actualizacion": "2026-10-19",
    "cambios_recientes": []
   },
   {
@@ -1803,24 +1812,24 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 62,
+    "TESTLEY_GENERATED": 65,
     "OFFICIAL_EXAM": 0,
     "REVIEW_REQUIRED": 3,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 20,
+    "1": 21,
     "2": 34,
-    "3": 8
+    "3": 10
    },
    "tipos": {
     "aplicacion": 3,
     "conceptual": 2,
     "definiciones": 2,
-    "dificil": 1,
+    "dificil": 3,
     "excepcion": 4,
-    "literal": 4,
+    "literal": 5,
     "negativa": 1,
     "organos": 3,
     "plazos": 1,
@@ -2145,8 +2154,8 @@
     },
     "contenido": {
      "OFFICIAL_EXAM": 0,
-     "TESTLEY_GENERATED": 2360,
-     "REVIEW_REQUIRED": 71
+     "TESTLEY_GENERATED": 2381,
+     "REVIEW_REQUIRED": 78
     },
     "entrenable": true
    },
