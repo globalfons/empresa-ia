@@ -19125,5 +19125,39 @@
    "dia": "2026-10-20",
    "tipo": "OFFICIAL_SOURCE_FAILED"
   }
+ },
+ "04e7fc99f1ca4f8a82b48c4ab808d8d6:publicar-programado:publish_scheduled": {
+  "id": "04e7fc99f1ca4f8a82b48c4ab808d8d6:publicar-programado:publish_scheduled",
+  "type": "publish_scheduled",
+  "data": {
+   "regla": "publicar-programado",
+   "accion": {
+    "accion": "publish_scheduled"
+   },
+   "evento": {
+    "id": "04e7fc99f1ca4f8a82b48c4ab808d8d6",
+    "type": "DAILY_TICK",
+    "entity_type": "calendario",
+    "entity_id": "2026-10-20",
+    "payload": {},
+    "correlation_id": "04e7fc99f1ca4f8a82b48c4ab808d8d6"
+   },
+   "importancia": "LOW"
+  },
+  "event_id": "04e7fc99f1ca4f8a82b48c4ab808d8d6",
+  "status": "done",
+  "priority": 6,
+  "retries": 0,
+  "created_at": "2026-10-20T12:06:08Z",
+  "run_after": "2026-10-20T12:06:08Z",
+  "started_at": "2026-10-20T12:06:08Z",
+  "finished_at": "2026-10-20T12:06:08Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "publicados": [],
+   "pendientes_manual": []
+  }
  }
 }
