@@ -25527,5 +25527,206 @@
    "publicados": [],
    "pendientes_manual": []
   }
+ },
+ "112f5857e4564c5dbd0856a969f3c352:fecha-examen:update_seo": {
+  "id": "112f5857e4564c5dbd0856a969f3c352:fecha-examen:update_seo",
+  "type": "update_seo",
+  "data": {
+   "regla": "fecha-examen",
+   "accion": {
+    "accion": "update_seo"
+   },
+   "evento": {
+    "id": "112f5857e4564c5dbd0856a969f3c352",
+    "type": "EXAM_DATE_CHANGED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Models i plantilles de correcció de la 1a prova",
+     "url": "https://mossos.gencat.cat/ca/els_mossos_desquadra/acces_al_cos/Mosso_a/mosso-a-convocatoria-46-26/",
+     "boe_id": "MOSSOS-2fd0fd717e",
+     "fecha": "2026-10-22",
+     "campos": [
+      "fecha_examen"
+     ],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "112f5857e4564c5dbd0856a969f3c352"
+   },
+   "importancia": "CRITICAL"
+  },
+  "event_id": "112f5857e4564c5dbd0856a969f3c352",
+  "status": "done",
+  "priority": 1,
+  "retries": 0,
+  "created_at": "2026-10-23T12:03:17Z",
+  "run_after": "2026-10-23T12:03:17Z",
+  "started_at": "2026-10-23T12:03:17Z",
+  "finished_at": "2026-10-23T12:03:17Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "ruta": "oposiciones/mossos-esquadra/",
+   "indexable": true,
+   "motivo": "ficha revisada"
+  }
+ },
+ "112f5857e4564c5dbd0856a969f3c352:fecha-examen:notify_followers": {
+  "id": "112f5857e4564c5dbd0856a969f3c352:fecha-examen:notify_followers",
+  "type": "notify_followers",
+  "data": {
+   "regla": "fecha-examen",
+   "accion": {
+    "accion": "notify_followers"
+   },
+   "evento": {
+    "id": "112f5857e4564c5dbd0856a969f3c352",
+    "type": "EXAM_DATE_CHANGED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Models i plantilles de correcció de la 1a prova",
+     "url": "https://mossos.gencat.cat/ca/els_mossos_desquadra/acces_al_cos/Mosso_a/mosso-a-convocatoria-46-26/",
+     "boe_id": "MOSSOS-2fd0fd717e",
+     "fecha": "2026-10-22",
+     "campos": [
+      "fecha_examen"
+     ],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "112f5857e4564c5dbd0856a969f3c352"
+   },
+   "importancia": "CRITICAL"
+  },
+  "event_id": "112f5857e4564c5dbd0856a969f3c352",
+  "status": "skipped",
+  "priority": 1,
+  "retries": 0,
+  "created_at": "2026-10-23T12:03:17Z",
+  "run_after": "2026-10-23T12:03:17Z",
+  "started_at": "2026-10-23T12:03:17Z",
+  "finished_at": "2026-10-23T12:03:17Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "motivo": "flag email desactivado (los avisos in-app siguen funcionando)"
+  }
+ },
+ "112f5857e4564c5dbd0856a969f3c352:fecha-examen:analytics_event": {
+  "id": "112f5857e4564c5dbd0856a969f3c352:fecha-examen:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "fecha-examen",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "112f5857e4564c5dbd0856a969f3c352",
+    "type": "EXAM_DATE_CHANGED",
+    "entity_type": "oposicion",
+    "entity_id": "mossos-esquadra",
+    "payload": {
+     "titulo": "Models i plantilles de correcció de la 1a prova",
+     "url": "https://mossos.gencat.cat/ca/els_mossos_desquadra/acces_al_cos/Mosso_a/mosso-a-convocatoria-46-26/",
+     "boe_id": "MOSSOS-2fd0fd717e",
+     "fecha": "2026-10-22",
+     "campos": [
+      "fecha_examen"
+     ],
+     "verification_status": "OFFICIAL_VERIFIED"
+    },
+    "correlation_id": "112f5857e4564c5dbd0856a969f3c352"
+   },
+   "importancia": "CRITICAL"
+  },
+  "event_id": "112f5857e4564c5dbd0856a969f3c352",
+  "status": "done",
+  "priority": 1,
+  "retries": 0,
+  "created_at": "2026-10-23T12:03:17Z",
+  "run_after": "2026-10-23T12:03:17Z",
+  "started_at": "2026-10-23T12:03:17Z",
+  "finished_at": "2026-10-23T12:03:17Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-23",
+   "tipo": "EXAM_DATE_CHANGED"
+  }
+ },
+ "243544d1a61d4899a7f221c451d0722f:fuente-caida:analytics_event": {
+  "id": "243544d1a61d4899a7f221c451d0722f:fuente-caida:analytics_event",
+  "type": "analytics_event",
+  "data": {
+   "regla": "fuente-caida",
+   "accion": {
+    "accion": "analytics_event"
+   },
+   "evento": {
+    "id": "243544d1a61d4899a7f221c451d0722f",
+    "type": "OFFICIAL_SOURCE_FAILED",
+    "entity_type": "fuente",
+    "entity_id": "ccaa-dogc",
+    "payload": {
+     "estado": "inaccesible",
+     "errores_consecutivos": 12,
+     "error": "robots.txt no permite https://administraciopublica.gencat.cat/ca/funcio-publica/"
+    },
+    "correlation_id": "243544d1a61d4899a7f221c451d0722f"
+   },
+   "importancia": "MEDIUM"
+  },
+  "event_id": "243544d1a61d4899a7f221c451d0722f",
+  "status": "done",
+  "priority": 4,
+  "retries": 0,
+  "created_at": "2026-10-23T12:03:17Z",
+  "run_after": "2026-10-23T12:03:17Z",
+  "started_at": "2026-10-23T12:03:17Z",
+  "finished_at": "2026-10-23T12:03:17Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "dia": "2026-10-23",
+   "tipo": "OFFICIAL_SOURCE_FAILED"
+  }
+ },
+ "c42fe51094cd4ab39c44a3243be275bc:publicar-programado:publish_scheduled": {
+  "id": "c42fe51094cd4ab39c44a3243be275bc:publicar-programado:publish_scheduled",
+  "type": "publish_scheduled",
+  "data": {
+   "regla": "publicar-programado",
+   "accion": {
+    "accion": "publish_scheduled"
+   },
+   "evento": {
+    "id": "c42fe51094cd4ab39c44a3243be275bc",
+    "type": "DAILY_TICK",
+    "entity_type": "calendario",
+    "entity_id": "2026-10-23",
+    "payload": {},
+    "correlation_id": "c42fe51094cd4ab39c44a3243be275bc"
+   },
+   "importancia": "LOW"
+  },
+  "event_id": "c42fe51094cd4ab39c44a3243be275bc",
+  "status": "done",
+  "priority": 6,
+  "retries": 0,
+  "created_at": "2026-10-23T12:03:17Z",
+  "run_after": "2026-10-23T12:03:17Z",
+  "started_at": "2026-10-23T12:03:17Z",
+  "finished_at": "2026-10-23T12:03:17Z",
+  "error": null,
+  "provider": null,
+  "cost": 0.0,
+  "result": {
+   "publicados": [],
+   "pendientes_manual": []
+  }
  }
 }
