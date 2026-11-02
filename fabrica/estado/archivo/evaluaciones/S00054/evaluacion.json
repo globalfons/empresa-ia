@@ -1,0 +1,807 @@
+{
+ "evaluacion": "S00054",
+ "creada_el": "2026-11-02T07:56:25",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 39,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0"
+   ],
+   "prompt_sha256": "727d3380c9c84c1e5b73d249ee154f44847ab8e925db584b93acda8582549d60",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "ff015f82771dc9e3ef4c54c9237d5692d5c320bba6bdc1dd59abf472dc1b133c",
+    "0.1": "43312b065c7a4d127155ad3c4bbaa96f28b779e05fc8cfbf3be56220a6c084b0",
+    "0.2": "c612ad93a525a99339ba8a4543a113fef844cc51b116f19f468006016ce65941",
+    "1.0": "af0aca87fa59a4c8efa44c0abaa50a175461123c42ba19c15b420cd0fe81c99b",
+    "1.1": "24f8fe5ef6d1cd6f7142e23c33e19b24284cedd9965e001a2f3dace12c4b1558",
+    "1.2": "9f4a1c9d94139684ff40922f1ae974776f2c84ce753cb6e51c5fcca0f59dfa12",
+    "2.0": "d8dbf15081ffa951d480c663e284efd65f0ce07181b9531d73d593beea6855f7",
+    "2.1": "b18cdc596e21a6d4b8623f2014f389dbbaa4d24cb1fd683571356b1ccd9ca35e",
+    "2.2": "d21b21d8a63ec7ae3599e6be53818bd253fea0432c8cdefaa1f141109ad5746c",
+    "3.0": "a13992f1e0c416e02aedf10133980ee997aa1b0ac7b56e350640092f7c025bbc"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 15 apartado Uno dice que el ingreso se hace mediante mandamiento u orden de la autoridad competente, con excepciones (presentación voluntaria, estados de alarma, excepción o sitio). La opción 0 coincide con el texto. Las otras tres (comunicación verbal, solicitud del interno, acuerdo del Director) no aparecen en el texto. La cita contiene la regla general completa y la pregunta ya dice 'salvo excepciones'. Pregunta clara y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto establece que la presentación voluntaria se comunica inmediatamente a la autoridad judicial, que resuelve lo procedente. La opción 1 lo recoge. Rechazar el ingreso, admitir como penada o trasladar a comisaría no tienen apoyo en el texto. La cita contiene la excepción completa. Supuesto práctico claro; sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que para cada penado se formará un protocolo de personalidad, además del expediente personal. La opción 1 es la correcta y las demás (informe social, plan de trabajo, historial disciplinario) no figuran en el artículo. La cita incluye la frase completa. La parecida 0.1 (presentación voluntaria) examina un hecho distinto, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 16 dice 'de manera inmediata, a una completa separación', cualquiera que sea el centro. La opción 1 lo recoge. Plazo de una semana, decisión del Juez de Vigilancia y revisión médica no aparecen en el texto. La cita contiene el elemento necesario. El plazo de 'inmediata' es un dato útil para examen; sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La letra e) del art. 16 dice que los detenidos y presos por delitos dolosos estarán separados de los que estén por delitos de imprudencia. La opción 0 es la correcta y las demás (edad superior a 50, nacionalidad, régimen abierto) no son criterios del texto. La cita contiene la letra e) completa. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La letra b) del art. 16 dice que detenidos y presos están separados de los condenados y, en ambos casos, los primarios de los reincidentes. La opción 1 es la correcta; españoles/extranjeros, trabajadores y duración de condena no aparecen. La cita recoge la letra b) completa. Las parecidas 1.1 (letra e, dolosos/imprudencia) y 1.0 (inmediatez) prueban hechos distintos, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 17.Dos dice que el Director del establecimiento pone en libertad a los detenidos si pasadas 72 horas no se ha recibido mandamiento u orden de prisión. La opción 1 es la correcta. Juez de Vigilancia, Ministerio Fiscal y jefe de servicios no aparecen con esa función. La cita contiene la frase completa. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 17.Tres exige para excarcelar la aprobación de la propuesta de libertad condicional por el Juez de Vigilancia. La opción 0 lo recoge. Director General, Junta de Tratamiento e informe del Fiscal no aparecen en el texto. La cita contiene la frase completa, incluida la distinción con la libertad definitiva (Tribunal sentenciador). Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 17.Cuatro dice que al liberado se entrega, entre otras cosas, una certificación del tiempo privado de libertad y de la cualificación profesional obtenida. La opción 1 es la correcta. Informe psicológico, copia del expediente disciplinario y documento de identidad provisional no figuran. La cita contiene el fragmento necesario. La parecida 2.1 prueba otro hecho (quién aprueba la libertad condicional), así que no es duplicada. La pregunta incluye 'entre otras cosas', por lo que es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa sobre el art. 18. El texto exige respetar la dignidad, los derechos de los internos y la seguridad de la conducción, así que las opciones 0, 1 y 2 aparecen en él. La elección del centro de destino por el interno no figura, por lo que la opción 3 es la excepción correcta. La cita contiene los tres elementos, necesarios para ver que los distractores sí están en el texto. Única respuesta posible; sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-a07a4c28dbe92eb1c.jsonl",
+    "respuesta_sha256": "a55313a0887dc456e6a91d5c89ad713287fdb37611f9af0f8daf4184bc7492c4"
+   },
+   "registrada_el": "2026-11-02T07:57:35",
+   "intentos": [
+    {
+     "t": "2026-11-02T07:57:35",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-a07a4c28dbe92eb1c.jsonl",
+      "respuesta_sha256": "a55313a0887dc456e6a91d5c89ad713287fdb37611f9af0f8daf4184bc7492c4"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 15 apartado Uno dice que el ingreso se hace mediante mandamiento u orden de la autoridad competente, con excepciones (presentación voluntaria, estados de alarma, excepción o sitio). La opción 0 coincide con el texto. Las otras tres (comunicación verbal, solicitud del interno, acuerdo del Director) no aparecen en el texto. La cita contiene la regla general completa y la pregunta ya dice 'salvo excepciones'. Pregunta clara y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El texto establece que la presentación voluntaria se comunica inmediatamente a la autoridad judicial, que resuelve lo procedente. La opción 1 lo recoge. Rechazar el ingreso, admitir como penada o trasladar a comisaría no tienen apoyo en el texto. La cita contiene la excepción completa. Supuesto práctico claro; sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que para cada penado se formará un protocolo de personalidad, además del expediente personal. La opción 1 es la correcta y las demás (informe social, plan de trabajo, historial disciplinario) no figuran en el artículo. La cita incluye la frase completa. La parecida 0.1 (presentación voluntaria) examina un hecho distinto, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 16 dice 'de manera inmediata, a una completa separación', cualquiera que sea el centro. La opción 1 lo recoge. Plazo de una semana, decisión del Juez de Vigilancia y revisión médica no aparecen en el texto. La cita contiene el elemento necesario. El plazo de 'inmediata' es un dato útil para examen; sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"La letra e) del art. 16 dice que los detenidos y presos por delitos dolosos estarán separados de los que estén por delitos de imprudencia. La opción 0 es la correcta y las demás (edad superior a 50, nacionalidad, régimen abierto) no son criterios del texto. La cita contiene la letra e) completa. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"La letra b) del art. 16 dice que detenidos y presos están separados de los condenados y, en ambos casos, los primarios de los reincidentes. La opción 1 es la correcta; españoles/extranjeros, trabajadores y duración de condena no aparecen. La cita recoge la letra b) completa. Las parecidas 1.1 (letra e, dolosos/imprudencia) y 1.0 (inmediatez) prueban hechos distintos, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 17.Dos dice que el Director del establecimiento pone en libertad a los detenidos si pasadas 72 horas no se ha recibido mandamiento u orden de prisión. La opción 1 es la correcta. Juez de Vigilancia, Ministerio Fiscal y jefe de servicios no aparecen con esa función. La cita contiene la frase completa. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 17.Tres exige para excarcelar la aprobación de la propuesta de libertad condicional por el Juez de Vigilancia. La opción 0 lo recoge. Director General, Junta de Tratamiento e informe del Fiscal no aparecen en el texto. La cita contiene la frase completa, incluida la distinción con la libertad definitiva (Tribunal sentenciador). Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 17.Cuatro dice que al liberado se entrega, entre otras cosas, una certificación del tiempo privado de libertad y de la cualificación profesional obtenida. La opción 1 es la correcta. Informe psicológico, copia del expediente disciplinario y documento de identidad provisional no figuran. La cita contiene el fragmento necesario. La parecida 2.1 prueba otro hecho (quién aprueba la libertad condicional), así que no es duplicada. La pregunta incluye 'entre otras cosas', por lo que es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa sobre el art. 18. El texto exige respetar la dignidad, los derechos de los internos y la seguridad de la conducción, así que las opciones 0, 1 y 2 aparecen en él. La elección del centro de destino por el interno no figura, por lo que la opción 3 es la excepción correcta. La cita contiene los tres elementos, necesarios para ver que los distractores sí están en el texto. Única respuesta posible; sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "4.0",
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "7.0",
+    "8.0",
+    "8.1",
+    "9.0",
+    "9.1"
+   ],
+   "prompt_sha256": "e653a08e37fb5cc24a3db1742abe784e0ae8e4758d0ab458c5ccedec561664df",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "4.0": "757b4f141f41437bda4890bf43e198cfd58fdd32e9a3d6d50dff21c2c07a4d39",
+    "5.0": "cfe7cf3f8ab1f111e350932adfd5ac0bd8c0ef0be52cd74360a97dab3da5e3a3",
+    "5.1": "d661caf93bc79c84a41497d783c66ab2207b7b29c842ef029a2cef58a0354506",
+    "5.2": "166cb43a7a3e788613afb82fd240d8d005d4075ab20731839bef976f02fb20dc",
+    "6.0": "c1be59a6d6c5c35a6d152e5bdb6352e1b6904e5d978028153870fea1f27438a4",
+    "7.0": "1f0e336571c8120d8eb098121868838d641c2302660b1f255575cd20e8f7c7d1",
+    "8.0": "0204eee307cc36fad2ad67bdc56ebaf936707e9ef96504cb2d1eb7fe8f2c660a",
+    "8.1": "20bd79f2c7495526db76c237654d87ef95f0cc343aba3b4f13121cf1d8a60eb7",
+    "9.0": "a46ee8efcbb911ce5e135bf1d546c5fa4859e2bba09054ab5c847a10f8ffd54e",
+    "9.1": "bfaaa985e441dfeb6b56cffc3e0fdfbf798f7a83f04eeae9f62d17e6fbfde25e"
+   },
+   "veredictos": [
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 8.Uno dice que en los establecimientos de preventivos también podrán cumplirse penas privativas de libertad cuando el internamiento efectivo pendiente no exceda de seis meses. La opción A lo recoge literalmente. La cita contiene el requisito completo. Las otras tres opciones (solicitud del penado, condena de dos años, centro completo) no aparecen en el texto. Pregunta clara y con un plazo concreto, útil para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 19.Uno establece que todos los internos se alojarán en celdas individuales, con excepciones puntuales. La pregunta dice 'como regla general', lo que encaja con esa estructura. La cita basta para elegir la opción A. Los distractores (módulos colectivos, celdas dobles, decisión de la Junta) no son la regla general según el texto. No tiene parecidas propias.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 19.Uno permite recurrir a dependencias colectivas en caso de insuficiencia temporal de alojamiento o por indicación del médico o de los equipos de observación y tratamiento. La opción B lo reproduce y la cita contiene ambos supuestos. Ninguna otra opción (petición del interno o autorización del Juez, preventivos o régimen abierto, periodo de observación inicial) figura en el texto. La parecida 5.0 pregunta por la regla general, no por las excepciones, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 19.Tres dice que la administración facilitará gratuitamente a los internos los servicios y artículos de aseo diario necesarios. La opción A lo recoge y la cita contiene el sujeto y la gratuidad. Familias, peculio propio y voluntariado no figuran en el texto. La parecida (celdas individuales) trata un hecho distinto, por lo que no hay duplicidad.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 41.Uno dice que el régimen disciplinario se dirigirá a garantizar la seguridad y conseguir una convivencia ordenada. La opción A coincide y la cita contiene la finalidad completa. Los distractores (castigar conductas contrarias al tratamiento, reducir internos en régimen cerrado, cumplir horarios) no están en el texto. Pregunta clara y no trivial, porque pide la finalidad concreta del régimen disciplinario.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 20.Dos exige que en las salidas al exterior los internos vistan ropas que no denoten su condición de recluidos. La opción B lo reproduce y la cita lo contiene íntegro. Uniforme, distintivo y ropa fijada por el Director no figuran en el texto. Pregunta clara, sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 21.Dos dice que la Administración proporcionará una alimentación controlada por el Médico. La opción A coincide y la cita contiene al sujeto (el Médico). Director, jefe de cocina y Junta de Tratamiento no aparecen como controladores de la alimentación. La parecida 8.1 pregunta por los factores que se tienen en cuenta, que es un hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negativo. El art. 21.Dos menciona como factores el estado de salud, la naturaleza del trabajo y, en lo posible, las convicciones filosóficas y religiosas. La situación económica personal (opción D) no aparece, así que es la respuesta. La cita recoge los tres factores presentes, de modo que se ve que las otras opciones sí están en el texto. La parecida 8.0 (quién controla) trata otro hecho, por lo que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 22.Dos atribuye al Director, a instancia del Médico, la facultad de ordenar por razones de higiene la inutilización de ropas y efectos contaminados. La opción A es correcta y la cita contiene sujeto, instancia y finalidad. El Juez de Vigilancia, el jefe de servicios y el propio Médico (que solo insta) no son quienes ordenan. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 22.Tres dice que el Director, a instancia del interno o del Médico y de conformidad con éste en todo caso, decide sobre el destino de los medicamentos. La opción B lo reproduce fielmente. La cita contiene todos los elementos: quién decide, a instancia de quién y la conformidad del Médico. Las otras opciones (Médico autónomo, Juez de Vigilancia, farmacéutico) contradicen el texto. No es duplicada de ninguna otra pregunta del lote, porque 9.0 trata la inutilización de ropas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-af93f8ae5d624c43c.jsonl",
+    "respuesta_sha256": "db2b7fbcc3580662cf9dd3db303e8e68c5c6e34e0bb0ded626750c0fbc91a52e"
+   },
+   "registrada_el": "2026-11-02T07:57:35",
+   "intentos": [
+    {
+     "t": "2026-11-02T07:57:35",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-af93f8ae5d624c43c.jsonl",
+      "respuesta_sha256": "db2b7fbcc3580662cf9dd3db303e8e68c5c6e34e0bb0ded626750c0fbc91a52e"
+     },
+     "respuesta": "[\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 8.Uno dice que en los establecimientos de preventivos también podrán cumplirse penas privativas de libertad cuando el internamiento efectivo pendiente no exceda de seis meses. La opción A lo recoge literalmente. La cita contiene el requisito completo. Las otras tres opciones (solicitud del penado, condena de dos años, centro completo) no aparecen en el texto. Pregunta clara y con un plazo concreto, útil para examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 19.Uno establece que todos los internos se alojarán en celdas individuales, con excepciones puntuales. La pregunta dice 'como regla general', lo que encaja con esa estructura. La cita basta para elegir la opción A. Los distractores (módulos colectivos, celdas dobles, decisión de la Junta) no son la regla general según el texto. No tiene parecidas propias.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 19.Uno permite recurrir a dependencias colectivas en caso de insuficiencia temporal de alojamiento o por indicación del médico o de los equipos de observación y tratamiento. La opción B lo reproduce y la cita contiene ambos supuestos. Ninguna otra opción (petición del interno o autorización del Juez, preventivos o régimen abierto, periodo de observación inicial) figura en el texto. La parecida 5.0 pregunta por la regla general, no por las excepciones, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 19.Tres dice que la administración facilitará gratuitamente a los internos los servicios y artículos de aseo diario necesarios. La opción A lo recoge y la cita contiene el sujeto y la gratuidad. Familias, peculio propio y voluntariado no figuran en el texto. La parecida (celdas individuales) trata un hecho distinto, por lo que no hay duplicidad.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 41.Uno dice que el régimen disciplinario se dirigirá a garantizar la seguridad y conseguir una convivencia ordenada. La opción A coincide y la cita contiene la finalidad completa. Los distractores (castigar conductas contrarias al tratamiento, reducir internos en régimen cerrado, cumplir horarios) no están en el texto. Pregunta clara y no trivial, porque pide la finalidad concreta del régimen disciplinario.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 20.Dos exige que en las salidas al exterior los internos vistan ropas que no denoten su condición de recluidos. La opción B lo reproduce y la cita lo contiene íntegro. Uniforme, distintivo y ropa fijada por el Director no figuran en el texto. Pregunta clara, sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 21.Dos dice que la Administración proporcionará una alimentación controlada por el Médico. La opción A coincide y la cita contiene al sujeto (el Médico). Director, jefe de cocina y Junta de Tratamiento no aparecen como controladores de la alimentación. La parecida 8.1 pregunta por los factores que se tienen en cuenta, que es un hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negativo. El art. 21.Dos menciona como factores el estado de salud, la naturaleza del trabajo y, en lo posible, las convicciones filosóficas y religiosas. La situación económica personal (opción D) no aparece, así que es la respuesta. La cita recoge los tres factores presentes, de modo que se ve que las otras opciones sí están en el texto. La parecida 8.0 (quién controla) trata otro hecho, por lo que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 22.Dos atribuye al Director, a instancia del Médico, la facultad de ordenar por razones de higiene la inutilización de ropas y efectos contaminados. La opción A es correcta y la cita contiene sujeto, instancia y finalidad. El Juez de Vigilancia, el jefe de servicios y el propio Médico (que solo insta) no son quienes ordenan. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 22.Tres dice que el Director, a instancia del interno o del Médico y de conformidad con éste en todo caso, decide sobre el destino de los medicamentos. La opción B lo reproduce fielmente. La cita contiene todos los elementos: quién decide, a instancia de quién y la conformidad del Médico. Las otras opciones (Médico autónomo, Juez de Vigilancia, farmacéutico) contradicen el texto. No es duplicada de ninguna otra pregunta del lote, porque 9.0 trata la inutilización de ropas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "9.2",
+    "10.0",
+    "11.0",
+    "11.1",
+    "11.2",
+    "12.0",
+    "13.0",
+    "13.1",
+    "13.2",
+    "14.0"
+   ],
+   "prompt_sha256": "0ab7ef97523ea0dcc81cbda69f60d785b5280e2ed0d8119ba6e43899979e0160",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "9.2": "1720edb54cb3324e38a5ae81e9cad06b4a9512f53915a8de7ccc9d290d061015",
+    "10.0": "f12a09bff17bdedc4f8d1a90069949237a3a01071f05d0076deb33038a323961",
+    "11.0": "8f74203f5df3c496b21a23c2744ca9d6adedee7b320d436043c99ed58cf57389",
+    "11.1": "8e65a579f054f5303730b479605cba756bb5f0ee31da90f9e5356409a89581da",
+    "11.2": "b3773d8491020bf6e7b3bd481ae4be050cfe88d768b288d33cd575dd6e541c45",
+    "12.0": "68df11d8cb6786d282d9c0ae88feabd2b8af44fbeb72e3a808f6df93b33ac0e2",
+    "13.0": "ad7a9cce756baa7bd919b232e632343c3f4a2292017b6a1c6e6cb5d0c59fdc8e",
+    "13.1": "8046ac91a6011cc7191015b06b68679dc4196477546e7f8046318d1559fa5e88",
+    "13.2": "3a6399cbd0d904d61b8999fa887f2cc2b35bbe6b9f4d423f1a61e67827988dbf",
+    "14.0": "8661155b83e1936778ebddfc16a6444335e77ce33d7dde6e79217420b10d100b"
+   },
+   "veredictos": [
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado Uno del art. 22 dice que, si el Reglamento no autoriza al interno a conservar dinero u objetos de valor, se guardan en lugar seguro con resguardo o se envían a personas autorizadas por el recluso. La opción B lo recoge y la cita contiene todo lo necesario. Las otras tres opciones (destruir, Tesoro Público, Juez de Vigilancia) no aparecen en el texto, y el artículo tiene varios apartados, así que no es una mera repetición.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto respalda la opción B: el control de la publicidad se ajusta a criterios de veracidad en lo que atañe a la salud. La cita lo contiene entero y ninguna otra opción es defendible. El problema es que el artículo es una sola frase y la opción correcta solo la repite, con distractores obviamente ajenos (rentabilidad, neutralidad, libre competencia). Por eso es poco útil como pregunta de examen y marco clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 1 del art. 15 atribuye a la Dirección General de Protección Internacional las competencias del Ministerio sobre la instrucción y tramitación de los procedimientos de protección internacional. La cita incluye sujeto y competencia. Los otros órganos (Policía, Instituciones Penitenciarias, Política Interior) no aparecen en el texto. La pregunta es clara y no es trivial, porque pide identificar un órgano concreto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La letra d) del apartado 2 prevé la emisión de informe sobre los recursos de reposición contra resoluciones de protección internacional, sin perjuicio de las competencias de la Secretaría General Técnica. La cita recoge esa salvedad, que es lo que se pide, y el sujeto ya está en el enunciado. Las demás opciones (Consejo de Ministros, Abogacía del Estado, Oficina de Extranjería provincial) no aparecen en el texto. La parecida 11.0 trata otro hecho (quién instruye los procedimientos), así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La letra a) del apartado 2 atribuye a la Dirección General de Protección Internacional la representación institucional en reuniones de organismos internacionales y supranacionales, en especial los de la UE, así que la respuesta está respaldada. Pero la cita empieza en 'La representación institucional...' y no nombra a la Dirección General, que figura en el encabezado del apartado 2. Mostrada sola no permite elegir la opción A, de modo que cita_suficiente=false. Ninguna otra opción es defendible.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 34 incluye entre las finalidades del Consejo 'salvaguardar el ejercicio de derecho de acceso a la información pública', y la cita lo contiene. Las otras opciones (sancionar penalmente, presupuestos, autorizar contratos) no aparecen en el texto. El artículo es una sola frase y la opción correcta es una simple reproducción de uno de sus elementos con distractores muy ajenos, por lo que la pregunta resulta trivial y marco clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 1 del art. 28 dice que los responsables y encargados determinan las medidas técnicas y organizativas apropiadas, y la cita lo contiene. Ni la AEPD, ni los delegados de protección de datos, ni los afectados aparecen como sujetos de esa determinación. La opción B es única y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 1 del art. 28 dice que se valorará 'en particular' si procede la evaluación de impacto en la protección de datos y la consulta previa. La cita lo recoge completo. Las otras opciones (notificar al Ministerio de Justicia, cobrar tasa, publicar en boletín) no figuran en el texto. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 2.b) del art. 28 lista como mayor riesgo el tratamiento que pudiera privar a los afectados de sus derechos y libertades o impedirles el control sobre sus datos, y la cita lo reproduce. Los distractores (agenda personal, consentimiento escrito, soporte en papel) no están en la lista de supuestos, así que ninguno es correcto. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "REJECTED",
+     "verdict": "REJECTED",
+     "reason": "La respuesta está respaldada: el apartado 1 del art. 82 dice 'Este traslado tendrá la consideración de traslado forzoso', y la cita lo contiene. Pero la parecida trebep-89 pregunta lo mismo con otras palabras (traslado de la funcionaria víctima de violencia de género que debe abandonar su puesto) y tiene la misma respuesta, 'Traslado forzoso'. Es una duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": "trebep-89"
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a472ab1eeda690315.jsonl",
+    "respuesta_sha256": "364276f3833b98d23f35dee4bf6db0a771222a56c86c4221970d5bca6d42fd13"
+   },
+   "registrada_el": "2026-11-02T07:58:46",
+   "intentos": [
+    {
+     "t": "2026-11-02T07:58:46",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a472ab1eeda690315.jsonl",
+      "respuesta_sha256": "364276f3833b98d23f35dee4bf6db0a771222a56c86c4221970d5bca6d42fd13"
+     },
+     "respuesta": "[\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado Uno del art. 22 dice que, si el Reglamento no autoriza al interno a conservar dinero u objetos de valor, se guardan en lugar seguro con resguardo o se envían a personas autorizadas por el recluso. La opción B lo recoge y la cita contiene todo lo necesario. Las otras tres opciones (destruir, Tesoro Público, Juez de Vigilancia) no aparecen en el texto, y el artículo tiene varios apartados, así que no es una mera repetición.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto respalda la opción B: el control de la publicidad se ajusta a criterios de veracidad en lo que atañe a la salud. La cita lo contiene entero y ninguna otra opción es defendible. El problema es que el artículo es una sola frase y la opción correcta solo la repite, con distractores obviamente ajenos (rentabilidad, neutralidad, libre competencia). Por eso es poco útil como pregunta de examen y marco clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 1 del art. 15 atribuye a la Dirección General de Protección Internacional las competencias del Ministerio sobre la instrucción y tramitación de los procedimientos de protección internacional. La cita incluye sujeto y competencia. Los otros órganos (Policía, Instituciones Penitenciarias, Política Interior) no aparecen en el texto. La pregunta es clara y no es trivial, porque pide identificar un órgano concreto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"La letra d) del apartado 2 prevé la emisión de informe sobre los recursos de reposición contra resoluciones de protección internacional, sin perjuicio de las competencias de la Secretaría General Técnica. La cita recoge esa salvedad, que es lo que se pide, y el sujeto ya está en el enunciado. Las demás opciones (Consejo de Ministros, Abogacía del Estado, Oficina de Extranjería provincial) no aparecen en el texto. La parecida 11.0 trata otro hecho (quién instruye los procedimientos), así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La letra a) del apartado 2 atribuye a la Dirección General de Protección Internacional la representación institucional en reuniones de organismos internacionales y supranacionales, en especial los de la UE, así que la respuesta está respaldada. Pero la cita empieza en 'La representación institucional...' y no nombra a la Dirección General, que figura en el encabezado del apartado 2. Mostrada sola no permite elegir la opción A, de modo que cita_suficiente=false. Ninguna otra opción es defendible.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 34 incluye entre las finalidades del Consejo 'salvaguardar el ejercicio de derecho de acceso a la información pública', y la cita lo contiene. Las otras opciones (sancionar penalmente, presupuestos, autorizar contratos) no aparecen en el texto. El artículo es una sola frase y la opción correcta es una simple reproducción de uno de sus elementos con distractores muy ajenos, por lo que la pregunta resulta trivial y marco clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 1 del art. 28 dice que los responsables y encargados determinan las medidas técnicas y organizativas apropiadas, y la cita lo contiene. Ni la AEPD, ni los delegados de protección de datos, ni los afectados aparecen como sujetos de esa determinación. La opción B es única y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 1 del art. 28 dice que se valorará 'en particular' si procede la evaluación de impacto en la protección de datos y la consulta previa. La cita lo recoge completo. Las otras opciones (notificar al Ministerio de Justicia, cobrar tasa, publicar en boletín) no figuran en el texto. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 2.b) del art. 28 lista como mayor riesgo el tratamiento que pudiera privar a los afectados de sus derechos y libertades o impedirles el control sobre sus datos, y la cita lo reproduce. Los distractores (agenda personal, consentimiento escrito, soporte en papel) no están en la lista de supuestos, así que ninguno es correcto. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"REJECTED\",\"reason\":\"La respuesta está respaldada: el apartado 1 del art. 82 dice 'Este traslado tendrá la consideración de traslado forzoso', y la cita lo contiene. Pero la parecida trebep-89 pregunta lo mismo con otras palabras (traslado de la funcionaria víctima de violencia de género que debe abandonar su puesto) y tiene la misma respuesta, 'Traslado forzoso'. Es una duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"trebep-89\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "14.1",
+    "15.0",
+    "15.1",
+    "16.0",
+    "16.1",
+    "16.2",
+    "17.0",
+    "18.0",
+    "19.0"
+   ],
+   "prompt_sha256": "d53381fa21bcc576737cd796740defd1c3c26ae379d9e5b692d3aef486efc1e9",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "14.1": "a28049819151115ae1a2c4a5f47a0c5b0d7db701e6883f39269db93e569a1c5d",
+    "15.0": "58615c128cff9d00148c3e502d2c77d6cd341598e8d1545d3e7e9d2036210f7b",
+    "15.1": "0ce52b685a14227549e299b28ee9f27760f6f156b588f9a10cfe081b552273e3",
+    "16.0": "f6fdc1547434c53c99c0383da1885a2c4a692a4821c21e25b9b9eab8f86e7659",
+    "16.1": "e93c3325142b90e659e10db9b931096a41245b7d8fb9423b84fdfbe03f11e390",
+    "16.2": "a1f07bfaf0addadaef7c060ccbedf62555cfa7948e687176809e41033352aebf",
+    "17.0": "187936871d37cf9458efaeb7ba5c0988dcd600735fa4ea4c0605f32eaefd59e0",
+    "18.0": "69d2637b3715ae187281d219d2ca98c0f8f6d02ab870e32a451e5bf7a68d3a74",
+    "19.0": "10a2dfc7aaa460ba00df863b23dd6b6239385b803062ae3199bd4331d93933ef"
+   },
+   "veredictos": [
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 82.1 dice que la Administración 'estará obligada a comunicarle las vacantes ubicadas en la misma localidad o en las localidades que la interesada expresamente solicite', que es la opción A. La cita contiene todo el elemento necesario. Las otras opciones (concurso específico, informe judicial, excedencia de un año) no aparecen en el texto. La parecida nueva:trebep:82:0 pregunta por otro hecho (el traslado forzoso), así que no es duplicada. La pregunta es clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 32.2 permite suspender o modificar convenios ya firmados 'excepcionalmente y por causa grave de interés público derivada de una alteración sustancial de las circunstancias económicas'. Eso coincide literalmente con la opción A, y la cita recoge toda la condición. Las demás opciones (mayoría de la mesa, cambio de titular, cinco años de antigüedad) no figuran en el texto. No hay parecidas, y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 32.2 exige a las Administraciones 'informar a las organizaciones sindicales de las causas de la suspensión o modificación', que es la opción A, y la cita lo contiene entero. Indemnización, autorización de la jurisdicción social y elecciones sindicales no aparecen en el texto. El enunciado habla de 'un ministerio' y el artículo de 'Administraciones Públicas', pero el caso encaja sin ambigüedad. No hay parecidas. Esta pregunta pide la consecuencia, mientras que la 15.0 pide el supuesto, así que son hechos distintos.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.1 reconoce el derecho a acceder a prestaciones y servicios 'con independencia del lugar del territorio del Estado español donde residan, en condiciones de igualdad', que es la opción A. La cita lo recoge completo. Las otras tres opciones (por comunidad autónoma, diez años de residencia, renta exclusivamente) contradicen o no aparecen en el texto. La pregunta no tiene parecidas propias. Sus hermanas 16.1 y 16.2 tratan otros apartados (4.2.c y 4.2.g), no el mismo hecho.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.2.c reconoce el derecho 'a elegir su lugar de residencia y dónde y con quién vivir, en igualdad de condiciones', que es la opción A, y la cita lo contiene. Pensión no contributiva incompatible, exención de impuestos municipales y centros privados gratuitos no figuran en el texto. La parecida nueva:ley-39-2006:4:0 trata del apartado 1 (igualdad territorial), que es un hecho distinto. Por eso no hay duplicidad. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4.2.g reconoce el derecho 'a recibir una atención libre de sujeciones, ya sean estas físicas, mecánicas, farmacológicas o químicas, y de restricciones', que es la opción A. La cita lo contiene completo. Las demás opciones (ocho horas de atención domiciliaria, personal del municipio, urgencias preferentes) no aparecen en el texto. Las parecidas (4.2.c y 4.1) tratan otros derechos, así que no hay duplicidad.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 38 dice que los poderes públicos garantizan la libertad de empresa y la defensa de la productividad 'de acuerdo con las exigencias de la economía general y, en su caso, de la planificación', que es la opción A. La cita lo recoge íntegro. Las demás opciones (sin limitación por interés general, agentes sociales, Banco de España) no aparecen en el texto. No hay parecidas. El dato es material de examen legítimo y las opciones no delatan la respuesta de forma decisiva.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 11.Uno dice que las Salas conocen de 'los asuntos que, atribuidos a la justicia constitucional, no sean de la competencia del Pleno', que es la opción A, y la cita lo contiene. Recursos de inconstitucionalidad contra leyes orgánicas, conflictos entre órganos constitucionales y verificación de nombramientos no aparecen en el texto como competencia de las Salas. No hay parecidas. La pregunta es clara y trata de la competencia residual, un contenido útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Es una pregunta negativa. El art. 12.Uno dice que el Defensor del Pueblo puede 'en todo caso, de oficio o a instancia de parte, supervisar por sí mismo' la actividad de la Comunidad Autónoma. Las opciones A, B y C aparecen en el texto y la cita las recoge. Condicionarlo a 'autorización del gobierno autonómico' (opción D) es lo que no aparece y lo que choca con 'en todo caso', por lo que D es la respuesta correcta. La cita basta para ver los tres elementos que sí se dan. No hay parecidas y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a3aee3a31b1c9445f.jsonl",
+    "respuesta_sha256": "245925972f6593e939f0a51054ab3d51fa96b8ecba99403c995694c712ab1d75"
+   },
+   "registrada_el": "2026-11-02T07:58:39",
+   "intentos": [
+    {
+     "t": "2026-11-02T07:58:39",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a3aee3a31b1c9445f.jsonl",
+      "respuesta_sha256": "245925972f6593e939f0a51054ab3d51fa96b8ecba99403c995694c712ab1d75"
+     },
+     "respuesta": "[{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 82.1 dice que la Administración 'estará obligada a comunicarle las vacantes ubicadas en la misma localidad o en las localidades que la interesada expresamente solicite', que es la opción A. La cita contiene todo el elemento necesario. Las otras opciones (concurso específico, informe judicial, excedencia de un año) no aparecen en el texto. La parecida nueva:trebep:82:0 pregunta por otro hecho (el traslado forzoso), así que no es duplicada. La pregunta es clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 32.2 permite suspender o modificar convenios ya firmados 'excepcionalmente y por causa grave de interés público derivada de una alteración sustancial de las circunstancias económicas'. Eso coincide literalmente con la opción A, y la cita recoge toda la condición. Las demás opciones (mayoría de la mesa, cambio de titular, cinco años de antigüedad) no figuran en el texto. No hay parecidas, y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 32.2 exige a las Administraciones 'informar a las organizaciones sindicales de las causas de la suspensión o modificación', que es la opción A, y la cita lo contiene entero. Indemnización, autorización de la jurisdicción social y elecciones sindicales no aparecen en el texto. El enunciado habla de 'un ministerio' y el artículo de 'Administraciones Públicas', pero el caso encaja sin ambigüedad. No hay parecidas. Esta pregunta pide la consecuencia, mientras que la 15.0 pide el supuesto, así que son hechos distintos.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.1 reconoce el derecho a acceder a prestaciones y servicios 'con independencia del lugar del territorio del Estado español donde residan, en condiciones de igualdad', que es la opción A. La cita lo recoge completo. Las otras tres opciones (por comunidad autónoma, diez años de residencia, renta exclusivamente) contradicen o no aparecen en el texto. La pregunta no tiene parecidas propias. Sus hermanas 16.1 y 16.2 tratan otros apartados (4.2.c y 4.2.g), no el mismo hecho.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.2.c reconoce el derecho 'a elegir su lugar de residencia y dónde y con quién vivir, en igualdad de condiciones', que es la opción A, y la cita lo contiene. Pensión no contributiva incompatible, exención de impuestos municipales y centros privados gratuitos no figuran en el texto. La parecida nueva:ley-39-2006:4:0 trata del apartado 1 (igualdad territorial), que es un hecho distinto. Por eso no hay duplicidad. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 4.2.g reconoce el derecho 'a recibir una atención libre de sujeciones, ya sean estas físicas, mecánicas, farmacológicas o químicas, y de restricciones', que es la opción A. La cita lo contiene completo. Las demás opciones (ocho horas de atención domiciliaria, personal del municipio, urgencias preferentes) no aparecen en el texto. Las parecidas (4.2.c y 4.1) tratan otros derechos, así que no hay duplicidad.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 38 dice que los poderes públicos garantizan la libertad de empresa y la defensa de la productividad 'de acuerdo con las exigencias de la economía general y, en su caso, de la planificación', que es la opción A. La cita lo recoge íntegro. Las demás opciones (sin limitación por interés general, agentes sociales, Banco de España) no aparecen en el texto. No hay parecidas. El dato es material de examen legítimo y las opciones no delatan la respuesta de forma decisiva.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 11.Uno dice que las Salas conocen de 'los asuntos que, atribuidos a la justicia constitucional, no sean de la competencia del Pleno', que es la opción A, y la cita lo contiene. Recursos de inconstitucionalidad contra leyes orgánicas, conflictos entre órganos constitucionales y verificación de nombramientos no aparecen en el texto como competencia de las Salas. No hay parecidas. La pregunta es clara y trata de la competencia residual, un contenido útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.0\",\"verdict\":\"VALID\",\"reason\":\"Es una pregunta negativa. El art. 12.Uno dice que el Defensor del Pueblo puede 'en todo caso, de oficio o a instancia de parte, supervisar por sí mismo' la actividad de la Comunidad Autónoma. Las opciones A, B y C aparecen en el texto y la cita las recoge. Condicionarlo a 'autorización del gobierno autonómico' (opción D) es lo que no aparece y lo que choca con 'en todo caso', por lo que D es la respuesta correcta. La cita basta para ver los tres elementos que sí se dan. No hay parecidas y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

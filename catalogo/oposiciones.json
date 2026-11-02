@@ -5250,5 +5250,891 @@
    "temas_no_legislativos": 23,
    "pct_legislativo_cubierto": 94.8
   }
+ },
+ {
+  "id": "iipp-enfermeros",
+  "nombre": "Cuerpo de Enfermeros de Instituciones Penitenciarias",
+  "categoria": "prisiones",
+  "organismo": "Ministerio del Interior · Secretaría General de Instituciones Penitenciarias",
+  "administracion": "AGE",
+  "ambito": "estatal",
+  "territorio": "España",
+  "grupo": "A2",
+  "estado": "activa",
+  "actualizado": "2026-11-02",
+  "fuentes": {
+   "convocatoria": {
+    "tipo": "BOE",
+    "id": "BOE-A-2026-22468",
+    "titulo": "Resolución de 21 de octubre de 2026, de la Subsecretaría, por la que se convoca proceso selectivo para ingreso, por el sistema general de acceso libre, en el Cuerpo de Enfermeros de Instituciones Penitenciarias (BOE-A-2026-22468)",
+    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22468",
+    "fecha_publicacion": "2026-10-27",
+    "texto": "catalogo/fuentes/BOE-A-2026-22468.txt"
+   }
+  },
+  "oficial": {
+   "plazas": {
+    "valor": 35,
+    "fuente": "convocatoria",
+    "cita": "2.1 Se convoca proceso selectivo para cubrir 35 plazas del Cuerpo de Enfermeros de Instituciones Penitenciarias, Subgrupo A2 (Código 0911) por el sistema general de acceso libre."
+   },
+   "titulacion": {
+    "valor": "Diplomado Universitario o Grado en Enfermería",
+    "fuente": "convocatoria",
+    "cita": "3.7 Las personas aspirantes deberán estar en posesión del título de Diplomado Universitario o Grado en Enfermería"
+   },
+   "requisitos": [
+    {
+     "valor": "Nacionalidad española",
+     "fuente": "convocatoria",
+     "cita": "3.2 Nacionalidad: Las personas aspirantes deberán tener la nacionalidad española."
+    },
+    {
+     "valor": "Capacidad funcional para el desempeño de las tareas",
+     "fuente": "convocatoria",
+     "cita": "3.3 Capacidad: Poseer la capacidad funcional para el desempeño de las tareas."
+    },
+    {
+     "valor": "Tener cumplidos 16 años y no exceder la edad de jubilación forzosa",
+     "fuente": "convocatoria",
+     "cita": "3.4 Edad: Tener cumplidos dieciséis años y no exceder, en su caso, de la edad máxima de jubilación forzosa."
+    },
+    {
+     "valor": "No haber sido separado del servicio ni estar inhabilitado",
+     "fuente": "convocatoria",
+     "cita": "3.5 Habilitación: No haber sido separado mediante expediente disciplinario del servicio de cualquiera de las Administraciones públicas"
+    }
+   ],
+   "plazo_solicitudes": {
+    "valor": "20 días hábiles desde el día siguiente a la publicación en el BOE",
+    "fuente": "convocatoria",
+    "cita": "dispondrán de un plazo de presentación de solicitudes de veinte días hábiles contados a partir del día siguiente al de la fecha de publicación de esta convocatoria en el «Boletín Oficial del Estado»"
+   },
+   "pruebas": [
+    {
+     "valor": "Primer ejercicio: cuestionario de 100 preguntas con cuatro respuestas",
+     "fuente": "convocatoria",
+     "cita": "Consistirá en contestar por escrito un cuestionario de 100 preguntas con cuatro respuestas múltiples, que versará sobre el contenido completo del programa"
+    },
+    {
+     "valor": "Duración máxima del primer ejercicio: 1 h 45 min",
+     "fuente": "convocatoria",
+     "cita": "La duración máxima de este ejercicio será de una hora y cuarenta y cinco minutos."
+    },
+    {
+     "valor": "Cada error descuenta un tercio; en blanco no penaliza",
+     "fuente": "convocatoria",
+     "cita": "Las contestaciones erróneas se penalizarán con un tercio del valor de una contestación y las contestaciones en blanco no penalizarán."
+    }
+   ]
+  },
+  "examen": {
+   "oficial": {
+    "preguntas": 100,
+    "minutos": 105,
+    "penalizacion": 0.3333333333333333
+   },
+   "simulacro": {
+    "preguntas": 100,
+    "minutos": 105,
+    "opciones": 4,
+    "penalizacion": 0.3333333333333333,
+    "origen": "oficial",
+    "nota": "Mismo número de preguntas, tiempo y penalización que el primer ejercicio oficial."
+   },
+   "estructura": [
+    {
+     "parte": "Primer ejercicio · cuestionario",
+     "preguntas": 100,
+     "minutos": 105,
+     "en_simulacro": true,
+     "cita": "Consistirá en contestar por escrito un cuestionario de 100 preguntas con cuatro respuestas múltiples, que versará sobre el contenido completo del programa",
+     "fuente": "convocatoria"
+    },
+    {
+     "parte": "Segundo ejercicio · desarrollo por escrito de tres temas",
+     "en_simulacro": false,
+     "motivo": "Es un ejercicio de desarrollo por escrito, no tipo test.",
+     "cita": "Consistirá en desarrollar por escrito, tres temas extraídos al azar, correspondiendo uno de ellos a la primera parte del programa y los otros dos restantes a la segunda parte, disponiendo para su realización de un tiempo máximo de tres horas.",
+     "fuente": "convocatoria"
+    },
+    {
+     "parte": "Tercer ejercicio · supuestos prácticos",
+     "en_simulacro": false,
+     "motivo": "Supuestos prácticos de desarrollo, no tipo test.",
+     "cita": "Consistirá en resolver durante un tiempo máximo de una hora y treinta minutos tres supuestos prácticos de los cuatro propuestos por el órgano de selección",
+     "fuente": "convocatoria"
+    }
+   ]
+  },
+  "temario": [
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 1,
+    "titulo": "La Constitución Española de 1978: principios generales, estructura y contenido. Derechos y deberes fundamentales. La Corona. Funciones constitucionales del Rey. Las Cortes Generales. La elaboración de las leyes. El Defensor del Pueblo. Nombramiento y «status». Competencias.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229",
+     "BOE-A-1981-10325"
+    ],
+    "asignacion": {
+     "BOE-A-1978-31229": "revisada",
+     "BOE-A-1981-10325": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 2,
+    "titulo": "El Poder Judicial. La organización judicial. Actuaciones judiciales. El Consejo General del Poder Judicial. El Tribunal Constitucional: Composición y atribuciones. El Ministerio Fiscal.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1985-12666",
+     "BOE-A-1979-23709"
+    ],
+    "asignacion": {
+     "BOE-A-1985-12666": "revisada",
+     "BOE-A-1979-23709": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 3,
+    "titulo": "El Gobierno: El Consejo de Ministros, el Presidente del Gobierno, los Ministros, otros miembros. La Administración Territorial del Estado: Los Delegados de Gobierno, Subdelegados del Gobierno y Directores Insulares, breve referencia a sus competencias.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1997-25336",
+     "BOE-A-2015-10566"
+    ],
+    "asignacion": {
+     "BOE-A-1997-25336": "revisada",
+     "BOE-A-2015-10566": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 4,
+    "titulo": "La Organización Territorial del Estado: La ordenación del territorio del Estado en la Constitución. Instituciones Fundamentales de las Comunidades Autónomas: la Asamblea; el Presidente y Consejo de Gobierno; el Tribunal Superior de Justicia. Comunidades Autónomas. Competencias de las mismas en materia penitenciaria.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1978-31229"
+    ],
+    "asignacion": {
+     "BOE-A-1978-31229": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 5,
+    "titulo": "La Unión Europea: Tratados originarios y modificativos. Las Instituciones Comunitarias: El Parlamento, el Consejo, El Consejo Europeo, la Comisión, el Tribunal de Justicia, el Tribunal de Cuentas, el Banco Central Europeo. Efectos de la integración europea sobre la organización del Estado Español.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 6,
+    "titulo": "Estructura orgánica del Ministerio de Interior. La Secretaría General de Instituciones Penitenciarias. Entidad Estatal de Derecho Público Trabajo Penitenciario y Formación para el Empleo: organización y competencias.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2024-3793"
+    ],
+    "asignacion": {
+     "BOE-A-2024-3793": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 7,
+    "titulo": "Régimen jurídico del personal al servicio de las Administraciones públicas. El Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público. Derechos y deberes del personal al servicio de las Administraciones públicas. Régimen de incompatibilidades. La responsabilidad disciplinaria: Faltas, sanciones y ejecución de las mismas. Prescripción y cancelación.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ],
+    "asignacion": {
+     "BOE-A-2015-11719": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 8,
+    "titulo": "El acceso al empleo público: Principios rectores y requisitos generales. Sistemas selectivos. La adquisición y pérdida de la condición de funcionario público. La provisión de los puestos de trabajo. Las situaciones administrativas de los funcionarios.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-11719"
+    ],
+    "asignacion": {
+     "BOE-A-2015-11719": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 9,
+    "titulo": "Políticas Públicas. Políticas sociales de igualdad de género y no discriminación. Políticas contra la violencia de género. Políticas de integración de las personas con discapacidad. Régimen jurídico de la Dependencia: Ley 39/2006, de 14 de diciembre, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia. Normativa vigente. Administración Electrónica.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2007-6115",
+     "BOE-A-2004-21760",
+     "BOE-A-2013-12632",
+     "BOE-A-2006-21990"
+    ],
+    "asignacion": {
+     "BOE-A-2007-6115": "revisada",
+     "BOE-A-2004-21760": "revisada",
+     "BOE-A-2013-12632": "revisada",
+     "BOE-A-2006-21990": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 10,
+    "titulo": "La Gobernanza Pública y el Gobierno Abierto. Concepto y principios inspiradores del Gobierno Abierto: Colaboración, participación, transparencia y rendición de cuentas. Datos abiertos y reutilización. El marco jurídico y los planes de Gobierno Abierto en España.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2013-12887"
+    ],
+    "asignacion": {
+     "BOE-A-2013-12887": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · I. Organización del Estado, Gestión de Personal y Derecho Administrativo General",
+    "tema": 11,
+    "titulo": "Las fuentes del Derecho Administrativo. La jerarquía de las fuentes. El acto administrativo: Concepto, clases y elementos. La Ley 39/2015, de 1 de octubre, del procedimiento administrativo común de las Administraciones públicas: contenido, ámbito de aplicación, y sus fases.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2015-10565"
+    ],
+    "asignacion": {
+     "BOE-A-2015-10565": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 12,
+    "titulo": "La regulación supranacional en materia penitenciaria: Convenios, Tratados, Pactos. Declaraciones y Recomendaciones. Especial referencia a los acuerdos sobre traslados de personas condenadas. Organismos de vigilancia y control. Especial consideración de la labor de las Naciones Unidas y del Consejo de Europa. La ley 23/2014, de 20 de noviembre, de reconocimiento mutuo de resoluciones penales en la Unión Europea.",
+    "tipo": "legislativo_generico",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 13,
+    "titulo": "La pena. Concepto y fines. Clases de penas y efectos. Especial referencia a las penas privativas de libertad. Las medidas de seguridad.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1995-25444"
+    ],
+    "asignacion": {
+     "BOE-A-1995-25444": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 14,
+    "titulo": "El Derecho Penitenciario: Concepto, contenido y fuentes. La normativa penitenciaria vigente. Las líneas generales de la ejecución de las penas en nuestro ordenamiento fijadas por el artículo 25.2 de la Constitución.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 15,
+    "titulo": "La Relación Jurídico-Penitenciaria: Naturaleza y fundamento. Derechos de los internos: Clases y límites, sistema de protección y régimen de garantías. Deberes de los internos.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 16,
+    "titulo": "Prestaciones de la Administración Penitenciaria: Asistencia sanitaria. Higiene y alimentación. La Asistencia religiosa. La Acción Social Penitenciaria.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 17,
+    "titulo": "El Régimen Penitenciario: Concepto y principios inspiradores. Normas generales en la organización de un Centro Penitenciario: El ingreso. Las relaciones con el exterior, comunicaciones y visitas. La participación de los internos en la actividad. La información, quejas y recursos. Las conducciones y traslados en sus diferentes modalidades.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 18,
+    "titulo": "El Régimen en los Establecimientos Penitenciarios: Régimen de Preventivos. Régimen Ordinario. Régimen Cerrado. Régimen Abierto. Unidades Psiquiátricas Penitenciarias.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 19,
+    "titulo": "Libertad y excarcelación de los internos. Suspensión de la ejecución del resto de la pena y concesión de la libertad condicional. Beneficios Penitenciarios.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 20,
+    "titulo": "El Régimen Disciplinario: Principios generales y ámbito de aplicación. Clasificación de las faltas y sanciones. Procedimiento sancionador. Prescripción y cancelación. Las recompensas.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 21,
+    "titulo": "El Tratamiento Penitenciario: Concepto, fines y principios inspiradores. La observación del interno. La clasificación en grados. El principio de individualización científica. La Central Penitenciaria de Observación. Los permisos de salida.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 22,
+    "titulo": "El control de la actividad penitenciaria por el Juez de Vigilancia: Normativa vigente. Funciones. El Ministerio Fiscal.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Primera parte · II. Derecho Penitenciario",
+    "tema": 23,
+    "titulo": "El modelo organizativo penitenciario: Estructura y Régimen jurídico. Órganos Colegiados y Unipersonales. El Cuerpo de Enfermeros de Instituciones Penitenciarias: funciones.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1979-23708"
+    ],
+    "asignacion": {
+     "BOE-A-1979-23708": "revisada"
+    }
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 1,
+    "titulo": "Proceso de salud y enfermedad. Concepción de salud ideal/óptima. Representaciones sociales del estado de salud. Salud y prácticas culturales. Salud Pública: Concepto y actuaciones en la materia. Influencias teóricas de la salud pública. Influencia sociocultural en los cuidados de salud.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 2,
+    "titulo": "Demografía sanitaria. Fuentes de información. Indicadores demográficos y su utilidad para el trabajo enfermero: natalidad, fecundidad, mortalidad, migraciones, crecimiento vegetativo, letalidad y esperanza de vida. Indicadores socioeconómicos, del nivel de salud y medioambientales. Principales problemas de salud en la población española actual y en el medio penitenciario. Elementos de priorización: magnitud, trascendencia, vulnerabilidad y coste.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 3,
+    "titulo": "Marco legislativo regulador de la Asistencia Sanitaria en España. Planificación sanitaria. Elaboración de programas de salud y su evaluación. Estrategias de salud nacionales, europeas e internacionales. Descripción de guías de práctica clínica, mapas de cuidados y vías clínicas.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-1986-10499"
+    ],
+    "asignacion": {
+     "BOE-A-1986-10499": "revisada"
+    }
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 4,
+    "titulo": "Atención primaria de salud. Cartera de servicios comunes de atención primaria del Ministerio de Sanidad. Organización de los cuidados enfermeros: centro de salud, comunidad, hospital. Coordinación entre niveles asistenciales, y con los servicios sociales. Atención domiciliaria.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 5,
+    "titulo": "Epistemología de la disciplina enfermera. Conceptos nucleares de la Enfermería. Modelos y teorías de Enfermería. Características generales de los modelos: componentes y elementos. Principales teorías. Patrones funcionales de Gordon.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 6,
+    "titulo": "El proceso de atención de enfermería. Características, orígenes, evolución y fases. Valoración. Entrevista clínica. Instrumentos de valoración: cuestionarios, test e índices para la valoración. Proceso diagnóstico y diagnósticos enfermeros. Taxonomía NANDA. Planificación y ejecución. Formulación de objetivos. Intervenciones. Taxonomía NIC. Evaluación: Clasificación de resultados en Enfermería. Taxonomía NOC. Criterios de resultados. Indicadores de actividades de enfermería.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 7,
+    "titulo": "Calidad Asistencial. Concepto. Componentes. Dimensiones de calidad: científico técnica, eficiencia, accesibilidad y satisfacción del usuario. Planes de mejora de la calidad asistencial: planificación, diseño e implantación. Evaluación. Tendencias actuales de evaluación de calidad de los cuidados enfermeros. Mejora continua de la calidad. Calidad de la excelencia. Normativas ISO. Calidad asistencial/valores éticos/costes.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 8,
+    "titulo": "Investigación en enfermería: definición, tipos, fundamentos y técnicas. Conceptos de población, muestra y variable. Principales diseños y métodos de investigación Validez de los métodos diagnósticos: validez y fiabilidad de los instrumentos de medida. Sensibilidad y especificidad. Valor predictivo positivo y negativo.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 9,
+    "titulo": "Epidemiología: concepto y fines. Indicadores de morbimortalidad. Enfermedades de declaración obligatoria. Vigilancia Epidemiológica y sistemas de notificación. Circuitos de notificación de vigilancia epidemiológica. Redes de vigilancia epidemiológica. Redes internacionales de alerta.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 10,
+    "titulo": "Sistemas de información utilizados en la asistencia sanitaria: Historia clínica. Clasificaciones Internacionales de Problemas de Salud (CIAP, CIE, DSM y NANDA) Ley 41/2002, del 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica. El consentimiento informado.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 11,
+    "titulo": "Principios fundamentales de la Bioética: Código Deontológico de la Enfermería Española. Marco legislativo Ley Orgánica 3/2018, de 5 de diciembre, de Protección de datos personales y garantía de los derechos digitales. Secreto profesional. Ley 30/1979 y Real Decreto 1723/2012, de 28 de diciembre, sobre extracción y trasplante de órganos. Ensayos clínicos. Registros de instrucciones previas.",
+    "tipo": "legislativo",
+    "normas": [
+     "BOE-A-2018-16673"
+    ],
+    "asignacion": {
+     "BOE-A-2018-16673": "revisada"
+    }
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 12,
+    "titulo": "Salud medioambiental. Saneamiento: aguas, artrópodos y roedores, higiene establecimientos. Riesgos ambientales para la salud. Técnicas de desinsectación y desratización. Gestión de residuos sanitarios. Ambientes saludables.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 13,
+    "titulo": "Métodos de limpieza rutinaria de suelos y fómites en centros sanitarios. Desinfección: Conceptos generales, antisépticos y desinfectantes. Esterilización: Conceptos generales, medios, métodos y técnicas a emplear. Conservación del material esterilizado. Infección nosocomial. Medidas preventivas. Aislamiento sanitario: Concepto, tipos y descripción.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 14,
+    "titulo": "Bases de la farmacología: farmacocinética (absorción, distribución, metabolismo y eliminación), farmacodinamia (acción, curva dosis-respuesta, efecto placebo) y farmacovigilancia (toxicidad, efectos indeseables e interacciones). Clasificación general de los medicamentos. Condiciones de conservación de los medicamentos. Administración de medicamentos. Vías de administración: definición, tipos, puntos de elección, técnicas y problemas más frecuentes. Seguridad clínica en la administración de fármacos. Errores en la administración de medicamentos.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 15,
+    "titulo": "Real Decreto Legislativo 1/2015. Texto refundido de la Ley de garantías y uso racional de los medicamentos. Prescripción enfermera: Real Decreto 954/2015, de 23 de octubre y Real Decreto 1302/2018, de 22 de octubre. Guías para la indicación, uso y autorización de dispensación de medicamentos sujetos a prescripción médica por parte de las/los enfermeras/os.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 16,
+    "titulo": "Inmunizaciones: concepto. Clasificación y tipos de vacunas. Contraindicaciones. Complicaciones. Conservación, administración y pautas de vacunación. Calendario vacunal en adultos y niños.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 17,
+    "titulo": "Técnicas de obtención, manipulación y transporte de muestras biológicas para su estudio. Precauciones para el manejo de fluidos corporales. Criterios de calidad de la seguridad biológica.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 18,
+    "titulo": "Estrategia de promoción de la actividad física y alimentación equilibrada: Clasificación de los alimentos. Valoración del patrón de alimentación. Evaluación del estado nutricional. Necesidades nutricionales. Elaboración de dietas relacionadas con la edad y momento vital. Recomendaciones dietéticas en determinadas patologías crónicas. Dietas terapéuticas. Ejercicio físico.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 19,
+    "titulo": "Higiene alimentaria. Control y manipulación de los alimentos. Epidemiología. Medidas de prevención y control. Valoración y cuidados de enfermería en personas con toxiinfección alimentaria.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 20,
+    "titulo": "Problemas de desnutrición, deshidratación, alergias alimentarias, trastornos de la conducta alimentaria (anorexia, bulimia). Valoración y cuidados de enfermería. Tratamiento terapéutico multidisciplinar Valoración y cuidados de enfermería en personas con nutrición enteral y parenteral. Técnicas de administración. Protocolos de actuación.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 21,
+    "titulo": "Problemas gastrointestinales: dolor (abdomen agudo, úlcera gastroduodenal, gastritis), obstrucción intestinal, cáncer colorrectal, diarrea, estreñimiento, incontinencias y otros. Valoración y cuidados de enfermería. Factores de riesgo. Procedimientos y técnicas de enfermería: Sondaje nasogástrico, lavado gástrico, extracción fecalomas. Cuidado de las ostomías gastrointestinales.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 22,
+    "titulo": "Problemas endocrinológicos y metabólicos: diabetes y sus complicaciones, bocio, hipotiroidismo, hipertiroidismo y otros. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería. Medidas preventivas, educación dietética y ejercicio físico. Control y seguimiento en atención primaria. Cuidados de enfermería del pie diabético. Tratamiento con yodo radiactivo, medidas de protección.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 23,
+    "titulo": "Problemas endocrinológicos y metabólicos: hiperlipemias, obesidad. Procedimientos y técnicas de enfermería. Factores de riesgo. Complicaciones. Valoración y cuidados de enfermería. Medidas preventivas. Educación dietética y ejercicio físico. Control y seguimiento de enfermería en atención primaria.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 24,
+    "titulo": "Problemas en la piel y mucosas. Cuidados generales de la piel. Valoración y cuidados de enfermería. Valoración integral del deterioro de la integridad cutánea. Las úlceras por presión: Concepto, factores de riesgo, localización. Procesos de formación y estadios. Escalas de valoración de riesgos. Medidas de prevención y tratamiento. Enfermedades infecciosas cutáneas y parasitarias. Técnicas de recogida de muestras biológicas. Intervención de enfermería.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 25,
+    "titulo": "Heridas y quemaduras. Autolesiones. Heridas por apuñalamiento. Escalas de valoración. Valoración y cuidados de enfermería. Tratamiento de urgencias. Actuación de enfermería, curas y baño salino. Apósitos (tipos, indicaciones). Medidas de prevención. Tratamiento y atención de enfermería en las secuelas de las lesiones graves.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 26,
+    "titulo": "Problemas en el sistema renal y urológico: insuficiencia renal aguda, infección urinaria, prostatitis, cáncer de próstata, litiasis renoureteral y otros. Valoración y cuidados de enfermería. Cateterismo vesical: Concepto, indicaciones y contraindicaciones del sondaje vesical. Cuidados de las ostomías urológicas. Incontinencias. Tratamiento sustitutivo de la función renal: diálisis peritoneal, hemodiálisis. Trasplante renal.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 27,
+    "titulo": "Problemas cardiovasculares: Insuficiencia cardiaca, síndrome coronario agudo, trasplante cardíaco, arterioesclerosis de las extremidades inferiores y otros. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería. Hipertensión arterial. Prioridad en la prevención. Control y seguimiento de enfermería en atención primaria. Educación para la salud.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 28,
+    "titulo": "Parada cardiorrespiratoria. Reanimación cardiopulmonar básica y avanzada. Desfibrilación automática externa. Actuación de enfermería. Cuidados post resucitación.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 29,
+    "titulo": "Urgencias y emergencias: concepto. Valoración y cuidados de enfermería ante situaciones críticas: politraumatizados, shock, hemorragias, intoxicaciones agudas. Escalas utilizadas en la valoración. Priorización y triage en situaciones de múltiples víctimas y catástrofes. Tratamiento de urgencia. Sistemas de evacuación.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 30,
+    "titulo": "Implantación de catéteres intravasculares: concepto, tipos, indicaciones y contraindicaciones. Técnicas asépticas de inserción. Factores de riesgo asociados. Criterios de retirada del catéter. Complicaciones más frecuentes: infección, extravasaciones. Actuación de enfermería. Recomendaciones y consenso nacional. Guías clínicas.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 31,
+    "titulo": "El paciente quirúrgico: Preoperatorio, intraoperatorio y posquirúrgico. Cirugía Mayor Ambulatoria y Cirugía Menor. Procedimientos de enfermería: drenajes, curas y otras técnicas. Apósitos: tipos, indicaciones. Valoración y cuidados de enfermería.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 32,
+    "titulo": "Problemas respiratorios: insuficiencia respiratoria aguda, enfermedad pulmonar obstructiva crónica, tromboembolismo pulmonar, apnea del sueño, asma y otros. Valoración y cuidados de enfermería. Procedimientos de enfermería: ventilación mecánica, oxigenoterapia, drenaje torácico, broncoscopia, aerosolterapia. Cuidados de enfermería a personas con vías aéreas artificiales: intubación endotraqueal y traqueostomías.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 33,
+    "titulo": "Problemas en el sistema músculo-esquelético. Enfermedades del aparato locomotor: osteoporosis, tumores óseos, artrosis, artritis reumatoide y otras. Traumatismos músculo-esqueléticos: fractura, amputación, esguince, luxación y otros. Valoración y cuidados de enfermería. Procedimientos de enfermería: vendajes, inmovilizaciones. Cuidados de enfermería. Traumatismos craneoencefálicos. Tratamiento de urgencias. Actuación de enfermería.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 34,
+    "titulo": "Problemas oftalmológicos: conjuntivitis, queratitis, glaucoma, retinopatía diabética, desprendimientos de retina, cataratas, traumatismos, ojo seco y otros. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería: aplicación de gotas y pomadas oculares, irrigación del ojo, recogida de muestras conjuntivales.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 35,
+    "titulo": "Problemas otorrinolaringológicos: otitis, presbiacusias, enfermedad de Ménière, sinusitis y otros. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería: administración de aerosoles, sistemas de exploración y pruebas de audición, extracción de cerumen, recogida de frotis faríngeo, nasal y ótico.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 36,
+    "titulo": "Epidemiología de las infecciones/enfermedades transmisibles: conceptos generales. Clasificación. Cadena epidemiológica (mecanismo de transmisión, fuente, modo de presentación). Medidas de prevención y control: precauciones universales, específicas y estrictas. Recomendaciones para la prevención y control de la infección en el personal sanitario.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 37,
+    "titulo": "Procesos infecto-contagiosos: VIH, hepatitis. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería. Medidas de prevención y control. Adherencia al tratamiento. Técnicas de asesoramiento o counselling.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 38,
+    "titulo": "Procesos infecto-contagiosos: tuberculosis. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería relacionados: prueba de la tuberculina, inducción de esputos, aspirado gástrico. Medidas de prevención y control. Tratamiento directamente observado.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 39,
+    "titulo": "Procesos infecto-contagiosos de transmisión sexual: sífilis, gonorrea y otros. Valoración y cuidados de enfermería. Métodos diagnósticos y recogida de muestras. Medidas de prevención y control. Vacunación. Tratamiento.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 40,
+    "titulo": "Adicciones. Programas de desintoxicación, deshabituación y de disminución del riesgo y reducción del daño. Estrategias de prevención de hábitos tóxicos: alcohol, tabaco y drogas. Trastornos mentales y del comportamiento por consumo de sustancias. Valoración y cuidados de enfermería. Consecuencias sociales y sanitarias derivadas del consumo de drogas.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 41,
+    "titulo": "Problemas neurológicos y del sistema nervioso: accidente cerebrovascular, epilepsia, esclerosis múltiple y lateral amiotrófica, coma y otros. Valoración y cuidados de enfermería. Procedimientos y técnicas de enfermería. Coma. Escalas de valoración. Tratamiento de urgencia. Actuación de enfermería.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 42,
+    "titulo": "Trastornos del estado de ánimo: cuadros de angustia/ansiedad, hipocondría y depresión. Escalas de valoración. Tratamiento. Valoración y cuidados de enfermería. Análisis de la situación familiar y social. El apoyo al cuidador principal y familia. Prevención y control ante el riesgo de suicidio. Suicidio en el medio penitenciario. Intervención enfermera.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 43,
+    "titulo": "Trastornos adaptativos y de la personalidad. Escalas de valoración. Valoración y cuidados de enfermería. Análisis de la situación familiar y social. El apoyo al cuidador principal y familia. Intervención enfermera.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 44,
+    "titulo": "Esquizofrenia y otros trastornos psicóticos. Escalas de valoración. Tratamiento. Valoración y cuidados de enfermería. Abordaje en situación de crisis. Inmovilizaciones terapéuticas (medicamentosa, mecánicas) Intervención enfermera. Programa de atención integral al enfermo mental en el medio penitenciario (PAIEM).",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 45,
+    "titulo": "Problemas de afrontamiento y tolerancia al estrés, familiar, situaciones postraumáticas (agresiones, pérdida y duelo). Valoración y cuidados de enfermería. Abordaje en situación de crisis. Técnicas de modificación de conducta, terapia cognitiva, de potenciación de la comunicación, de relajación, de adaptación.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 46,
+    "titulo": "Sexualidad. Reproducción. Planificación familiar. Métodos anticonceptivos. Interrupción voluntaria del embarazo. Cuidados a personas con patrones inefectivos o disfunciones sexuales: valoración integra.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 47,
+    "titulo": "La mujer gestante: Alimentación, higiene y cambios fisiológicos y psicológicos. Valoración y cuidados de enfermería. Educación maternal. Problemas más frecuentes y/o graves durante la gestación: aborto, placenta previa, desprendimiento prematuro de placenta, diabetes gestacional, incompatibilidad de Rh, eclampsia. Seguimiento y control del embarazo y puerperio. Intervención enfermera. Fortalecimiento del suelo pélvico.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 48,
+    "titulo": "La mujer en el climaterio y posmenopausia. Cambios fisiológicos y psicológicos. Valoración y cuidados de enfermería. Diagnóstico precoz del cáncer ginecológico.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 49,
+    "titulo": "Recién nacido sano. Cuidados generales. Parámetros de desarrollo y crecimiento. Valoración y cuidados de enfermería. Detección precoz de enfermedades congénitas y metabólicas. Cuidados de enfermería del recién nacido enfermo. Cuidados del recién nacido de bajo peso y prematuro. Crisis convulsivas. Insuficiencia respiratoria aguda. Problemas gastrointestinales agudos. Deshidratación. Valoración integral. Identificación de problemas más prevalentes del niño y de la familia. Lactancia materna.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 50,
+    "titulo": "Principales cambios en el proceso de envejecimiento: fisiológicos, psicológicos, sociales y patológicos. Evaluación geriátrica integral: clínica, funcional, mental y social. Valoración y cuidados de enfermería en el anciano. Plan Gerontológico Nacional. Examen de salud para mayores de 65 años. Envejecimiento saludable. Atención enfermera a personas en situación de dependencia. Violencia sobre las personas ancianas.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 51,
+    "titulo": "El enfermo terminal. Abordaje integral. Dolor: fisiología, escalas de valoración, características y tratamiento. Duelo: tipo y manifestaciones, problemas de aceptación y adaptación. Valoración y cuidados de enfermería. Apoyo al cuidador principal y familia. Cuidados del paciente encamado. Actuación de enfermería.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 52,
+    "titulo": "La Educación para la Salud. Principios básicos, Educación individual, grupal y comunitaria: concepto, metodología y técnicas didácticas. Técnicas de Educación para la Salud para el fomento del autocuidado y promoción de la salud del paciente, cuidador principal y familia. Criterios para la elaboración de Programas de Educación para la Salud. Grupos de autoayuda. Formación de Agentes de Salud.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 53,
+    "titulo": "Técnicas y habilidades de comunicación: relación enfermera – paciente. Escucha activa. Relación de ayuda. Entrevista motivacional. Manejo de situaciones de conflicto. Manejo del estrés. Identificación de necesidades de apoyo emocional y psicológico al paciente. Abordaje de las barreras culturales.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   },
+   {
+    "bloque": "Segunda parte",
+    "tema": 54,
+    "titulo": "Género y salud. Perspectiva de género en la salud. Actuación sanitaria y protocolos ante la violencia de género. Atención a las víctimas de agresiones sexuales.",
+    "tipo": "no_legislativo",
+    "normas": [],
+    "asignacion": {}
+   }
+  ],
+  "notas": "La numeración de temas se reinicia en la segunda parte del programa (materias de enfermería), como en el anexo I.",
+  "vigilancia": {
+   "secciones": [
+    "2A",
+    "2B"
+   ],
+   "grupos": [
+    [
+     "Cuerpo de Enfermeros de Instituciones Penitenciarias"
+    ]
+   ],
+   "nota": "Se guarda una publicación del BOE si su título contiene todos los términos de alguno de los grupos. Es de «tu convocatoria» si es la propia convocatoria o su título cita convocatoria_ref; si no, es del mismo cuerpo (otros procesos).",
+   "convocatoria_ref": [
+    "Resolución de 21 de octubre de 2026"
+   ]
+  },
+  "estado_nota": "Convocatoria publicada en el BOE de 27 de octubre de 2026; plazo de solicitudes de 20 días hábiles.",
+  "pendientes": [
+   {
+    "campo": "temas_sin_norma_en_base",
+    "motivo": "Parte del bloque II (Reglamento Penitenciario y normativa supranacional) y la mayoría de temas de la segunda parte (materias sanitarias) aún no tienen norma ni preguntas en TestLey; la Ley Orgánica General Penitenciaria ya está incorporada."
+   },
+   {
+    "campo": "fechas_examen",
+    "motivo": "El lugar, la fecha y la hora del primer ejercicio se publicarán en el BOE con la lista provisional de admitidos."
+   }
+  ],
+  "temario_tipo": "oficial_publicado",
+  "verificacion": "parcial",
+  "categoria_nombre": "Instituciones Penitenciarias",
+  "convocatoria": {
+   "referencia": "Resolución de 21 de octubre de 2026, de la Subsecretaría, por la que se convoca proceso selectivo para ingreso, por el sistema general de acceso libre, en el Cuerpo de Enfermeros de Instituciones Penitenciarias (BOE-A-2026-22468)",
+   "fecha_publicacion": "2026-10-27",
+   "url_oficial": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22468",
+   "estado": "activa",
+   "anexo": "I",
+   "plazas": 35,
+   "turno": "libre"
+  },
+  "fuente_temario": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22468",
+  "verificado": "2026-11-02",
+  "cobertura": {
+   "temas_total": 77,
+   "temas_legislativos": 25,
+   "temas_no_legislativos": 52,
+   "pct_legislativo_cubierto": 92.0
+  }
  }
 ]
