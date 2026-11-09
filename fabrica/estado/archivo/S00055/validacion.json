@@ -1,0 +1,1004 @@
+[
+ {
+  "s": 0,
+  "res": [
+   [
+    {
+     "s": 0,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 42 de la LO 1/1979 General Penitenciaria, ¿cuánto tiempo como máximo puede durar la sanción de aislamiento en celda?",
+     "o": [
+      "Siete días",
+      "Catorce días",
+      "Veintiún días",
+      "Un mes"
+     ],
+     "a": 1,
+     "cita": "Aislamiento en celda, que no podrá exceder de catorce días.",
+     "apartado": "Dos.a",
+     "exp": "Según el artículo 42.Dos.a) de la LO 1/1979 General Penitenciaria, el aislamiento en celda no puede exceder de catorce días.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:42:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 0,
+     "tipo": "aplicacion",
+     "dif": 2,
+     "q": "Un interno comete repetidamente la misma infracción. Según el artículo 42 de la LO 1/1979 General Penitenciaria, ¿cuánto podrán incrementarse las sanciones?",
+     "o": [
+      "En la mitad de su máximo",
+      "En el doble de su máximo",
+      "En un tercio de su mínimo",
+      "En una cuarta parte de su máximo"
+     ],
+     "a": 0,
+     "cita": "En los casos de repetición de la infracción, las sanciones podrán incrementarse en la mitad de su máximo.",
+     "apartado": "Tres",
+     "exp": "Según el artículo 42.Tres de la LO 1/1979 General Penitenciaria, en caso de repetición pueden incrementarse en la mitad de su máximo.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:42:1"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 0,
+     "tipo": "caso_practico",
+     "dif": 3,
+     "q": "Un interno incumple el horario sin violencia ni alteración grave de la convivencia. Según el artículo 42 de la LO 1/1979 General Penitenciaria, ¿cuándo cabe aplicar el aislamiento en celda?",
+     "o": [
+      "Cuando se manifieste una evidente agresividad o violencia del interno o altere reiterada y gravemente la convivencia",
+      "Cuando el interno haya cometido cualquier falta grave en los últimos seis meses",
+      "Cuando lo solicite el resto de internos del módulo afectado",
+      "Cuando el interno sea reincidente en faltas leves de cualquier tipo"
+     ],
+     "a": 0,
+     "cita": "La sanción de aislamiento en celda solo será de aplicación en los casos en que se manifieste una evidente agresividad o violencia por parte del interno, o cuando éste reiterada y gravemente altere la normal convivencia en el centro.",
+     "apartado": "Cuatro",
+     "exp": "Según el artículo 42.Cuatro de la LO 1/1979 General Penitenciaria, el aislamiento en celda se reserva a la agresividad o violencia evidente o a la alteración reiterada y grave de la convivencia.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:42:2"
+    },
+    [
+     [
+      "REVIEW_REQUIRED",
+      "tipo caso_practico: revisión humana obligatoria en esta fase"
+     ]
+    ],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "s": 1,
+  "res": [
+   [
+    {
+     "s": 1,
+     "tipo": "conceptual",
+     "dif": 2,
+     "q": "Según el artículo 23 de la LO 1/1979 General Penitenciaria, los registros y cacheos de los internos se efectuarán:",
+     "o": [
+      "Con las garantías y periodicidad que reglamentariamente se determinen y respetando la dignidad de la persona",
+      "A criterio del funcionario de servicio y sin necesidad de periodicidad fija",
+      "Con autorización previa del Juez de Vigilancia en cada caso",
+      "Una vez al mes, en presencia de un representante de los internos"
+     ],
+     "a": 0,
+     "cita": "se efectuarán en los casos con las garantías y periodicidad que reglamentariamente se determinen y dentro del respeto a la dignidad de la persona.",
+     "apartado": "",
+     "exp": "Según el artículo 23 de la LO 1/1979 General Penitenciaria, se remiten al reglamento y siempre con respeto a la dignidad de la persona.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:23:0"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0
+  ]
+ },
+ {
+  "s": 2,
+  "res": [
+   [
+    {
+     "s": 2,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 24 de la LO 1/1979 General Penitenciaria, ¿quién controlará los precios de los productos que adquieren los internos?",
+     "o": [
+      "La Junta de Tratamiento",
+      "La autoridad competente",
+      "El Director del establecimiento",
+      "Los propios internos"
+     ],
+     "a": 1,
+     "cita": "Los precios se controlarán por la autoridad competente",
+     "apartado": "",
+     "exp": "Según el artículo 24 de la LO 1/1979 General Penitenciaria, los controla la autoridad competente; los internos participan en el control de calidad y precios.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:24:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 2,
+     "tipo": "excepcion",
+     "dif": 2,
+     "q": "Según el artículo 24 de la LO 1/1979 General Penitenciaria, los precios de los productos vendidos a los internos:",
+     "o": [
+      "No podrán ser superiores a los que rijan en la localidad del establecimiento",
+      "Podrán superar en un diez por ciento los de la localidad",
+      "Se fijarán libremente por la empresa concesionaria",
+      "Serán los que apruebe cada año el Consejo de Ministros"
+     ],
+     "a": 0,
+     "cita": "en ningún caso, podrán ser superiores a los que rijan en la localidad en que se halle ubicado el establecimiento.",
+     "apartado": "",
+     "exp": "Según el artículo 24 de la LO 1/1979 General Penitenciaria, en ningún caso pueden superar los precios de la localidad.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:24:1"
+    },
+    [],
+    "sospecha"
+   ],
+   [
+    {
+     "s": 2,
+     "tipo": "competencias",
+     "dif": 2,
+     "q": "Según el artículo 24 de la LO 1/1979 General Penitenciaria, ¿quién gestionará la venta de productos alimenticios y de consumo a los internos?",
+     "o": [
+      "La Administración penitenciaria directamente o Empresas concesionarias",
+      "Las asociaciones de familiares de internos",
+      "Las organizaciones no gubernamentales acreditadas",
+      "Los ayuntamientos donde se ubique el centro"
+     ],
+     "a": 0,
+     "cita": "La venta de dichos productos será gestionada directamente por la Administración penitenciaria o por Empresas concesionarias.",
+     "apartado": "",
+     "exp": "Según el artículo 24 de la LO 1/1979 General Penitenciaria, la gestiona la Administración penitenciaria o empresas concesionarias.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:24:2"
+    },
+    [],
+    "sospecha"
+   ]
+  ],
+  "idx": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "s": 3,
+  "res": [
+   [
+    {
+     "s": 3,
+     "tipo": "definiciones",
+     "dif": 1,
+     "q": "Según el artículo 9 de la LO 1/1979 General Penitenciaria, a efectos de esta Ley se entiende por jóvenes las personas que no hayan cumplido:",
+     "o": [
+      "Dieciocho años",
+      "Veintiún años",
+      "Veinticinco años",
+      "Treinta años"
+     ],
+     "a": 1,
+     "cita": "se entiende por jóvenes las personas de uno u otro sexo que no hayan cumplido los veintiún años.",
+     "apartado": "Dos",
+     "exp": "Según el artículo 9.Dos de la LO 1/1979 General Penitenciaria, son jóvenes quienes no han cumplido veintiún años.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:9:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 3,
+     "tipo": "dificil",
+     "dif": 3,
+     "q": "Según el artículo 9 de la LO 1/1979 General Penitenciaria, excepcionalmente, ¿hasta qué edad pueden permanecer en centros para jóvenes quienes ya hayan cumplido veintiún años?",
+     "o": [
+      "Hasta no alcanzar los veinticinco años",
+      "Hasta no alcanzar los veintitrés años",
+      "Hasta no alcanzar los treinta años",
+      "Hasta cumplir la mitad de su condena"
+     ],
+     "a": 0,
+     "cita": "Excepcionalmente, y teniendo en cuenta la personalidad del interno, podrán permanecer en centros destinados a jóvenes quienes, habiendo cumplido veintiún años, no hayan alcanzado los veinticinco.",
+     "apartado": "Dos",
+     "exp": "Según el artículo 9.Dos de la LO 1/1979 General Penitenciaria, excepcionalmente y atendiendo a su personalidad, hasta no alcanzar los veinticinco años.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:9:1"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ },
+ {
+  "s": 4,
+  "res": [
+   [
+    {
+     "s": 4,
+     "tipo": "negativa",
+     "dif": 2,
+     "q": "Según el artículo 25 de la LO 1/1979 General Penitenciaria, ¿cuál de estas necesidades NO menciona el artículo al distribuir el tiempo de los internos?",
+     "o": [
+      "Ocho horas diarias de descanso nocturno",
+      "Las sesiones de tratamiento",
+      "Las actividades formativas laborales y culturales",
+      "Dos horas diarias de visitas familiares"
+     ],
+     "a": 3,
+     "cita": "El tiempo se distribuirá de manera que se garanticen ocho horas diarias para el descanso nocturno y queden atendidas las necesidades espirituales y físicas, las sesiones de tratamiento y las actividades formativas laborales y culturales de los internos.",
+     "apartado": "Dos",
+     "exp": "Según el artículo 25.Dos de la LO 1/1979 General Penitenciaria, se garantizan descanso, necesidades espirituales y físicas, tratamiento y actividades formativas; no se fijan horas de visitas.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:25:0"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0
+  ]
+ },
+ {
+  "s": 5,
+  "res": [
+   [
+    {
+     "s": 5,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 26 de la LO 1/1979 General Penitenciaria, el trabajo del interno es considerado:",
+     "o": [
+      "Un derecho y un deber, elemento fundamental del tratamiento",
+      "Una medida de corrección disciplinaria",
+      "Una actividad voluntaria sin relación con el tratamiento",
+      "Un deber que puede imponerse como castigo"
+     ],
+     "a": 0,
+     "cita": "El trabajo será considerado como un derecho y como un deber del interno, siendo un elemento fundamental del tratamiento.",
+     "apartado": "",
+     "exp": "Según el artículo 26 de la LO 1/1979 General Penitenciaria, es derecho y deber del interno y elemento fundamental del tratamiento.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:26:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 5,
+     "tipo": "comparativa",
+     "dif": 2,
+     "q": "Según el artículo 26 de la LO 1/1979 General Penitenciaria, ¿cuál de estas es una condición del trabajo penitenciario?",
+     "o": [
+      "Gozará de la protección de la legislación vigente en materia de Seguridad Social",
+      "Podrá aplicarse como medida de corrección disciplinaria",
+      "Se supeditará a los intereses económicos de la Administración",
+      "Tendrá carácter aflictivo cuando lo acuerde el Director"
+     ],
+     "a": 0,
+     "cita": "Gozará de la protección dispensada por la legislación vigente en materia de Seguridad Social.",
+     "apartado": "f",
+     "exp": "Según el artículo 26.f) de la LO 1/1979 General Penitenciaria, el trabajo goza de la protección de la Seguridad Social; no es aflictivo ni correctivo ni se supedita a intereses económicos.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:26:1"
+    },
+    [],
+    "sospecha"
+   ],
+   [
+    {
+     "s": 5,
+     "tipo": "dificil",
+     "dif": 3,
+     "q": "Según el artículo 26 de la LO 1/1979 General Penitenciaria, ¿con qué fin tendrá el trabajo carácter formativo, creador o conservador de hábitos laborales, productivo o terapéutico?",
+     "o": [
+      "Preparar a los internos para las condiciones normales del trabajo libre",
+      "Financiar el mantenimiento de los establecimientos penitenciarios",
+      "Reducir automáticamente la duración de la condena",
+      "Compensar económicamente a las víctimas del delito"
+     ],
+     "a": 0,
+     "cita": "Tendrá carácter formativo, creador o conservador de hábitos laborales, productivo o terapéutico, con el fin de preparar a los internos para las condiciones normales del trabajo libre.",
+     "apartado": "c",
+     "exp": "Según el artículo 26.c) de la LO 1/1979 General Penitenciaria, su fin es preparar para las condiciones normales del trabajo libre.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:26:2"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "s": 6,
+  "res": [
+   [
+    {
+     "s": 6,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 27 de la LO 1/1979 General Penitenciaria, ¿a qué modalidad de trabajo dará la administración carácter preferente?",
+     "o": [
+      "A las de formación profesional",
+      "A las artesanales y artísticas",
+      "A las de producción en régimen cooperativo",
+      "A las prestaciones en servicios auxiliares comunes"
+     ],
+     "a": 0,
+     "cita": "Las de formación profesional, a las que la administración dará carácter preferente.",
+     "apartado": "Uno.a",
+     "exp": "Según el artículo 27.Uno.a) de la LO 1/1979 General Penitenciaria, la formación profesional tiene carácter preferente.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:27:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 6,
+     "tipo": "requisitos",
+     "dif": 2,
+     "q": "Según el artículo 27 de la LO 1/1979 General Penitenciaria, todo trabajo directamente productivo que realicen los internos:",
+     "o": [
+      "Será remunerado y se desarrollará en las condiciones de seguridad e higiene de la legislación vigente",
+      "Será voluntario y no remunerado salvo autorización del Juez de Vigilancia",
+      "Se compensará con días de redención de condena exclusivamente",
+      "Se remunerará en especie mediante productos del economato"
+     ],
+     "a": 0,
+     "cita": "Todo trabajo directamente productivo que realicen los internos será remunerado y se desarrollará en las condiciones de seguridad e higiene establecidas en la legislación vigente.",
+     "apartado": "Dos",
+     "exp": "Según el artículo 27.Dos de la LO 1/1979 General Penitenciaria, el trabajo productivo es remunerado y con condiciones de seguridad e higiene.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:27:1"
+    },
+    [],
+    "sospecha"
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ },
+ {
+  "s": 7,
+  "res": [
+   [
+    {
+     "s": 7,
+     "tipo": "aplicacion",
+     "dif": 2,
+     "q": "Según el artículo 28 de la LO 1/1979 General Penitenciaria, el trabajo de los internos debe ser compatible con:",
+     "o": [
+      "Las sesiones de tratamiento y las necesidades de enseñanza en los niveles obligatorios",
+      "Los horarios de visita de los familiares y abogados",
+      "Las actividades deportivas organizadas por el centro",
+      "Los turnos de limpieza del establecimiento"
+     ],
+     "a": 0,
+     "cita": "El trabajo será compatible con las sesiones de tratamiento y con las necesidades de enseñanza en los niveles obligatorios.",
+     "apartado": "",
+     "exp": "Según el artículo 28 de la LO 1/1979 General Penitenciaria, debe compatibilizarse con el tratamiento y la enseñanza obligatoria.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:28:0"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0
+  ]
+ },
+ {
+  "s": 8,
+  "res": [
+   [
+    {
+     "s": 8,
+     "tipo": "comparativa",
+     "dif": 2,
+     "q": "Según el artículo 29 de la LO 1/1979 General Penitenciaria, ¿quiénes quedan exceptuados de la obligación de trabajar de los penados?",
+     "o": [
+      "Los mayores de sesenta y cinco años",
+      "Los mayores de cincuenta y cinco años",
+      "Los que lleven más de diez años en prisión",
+      "Los que estén en régimen ordinario"
+     ],
+     "a": 0,
+     "cita": "Los mayores de sesenta y cinco años.",
+     "apartado": "Uno.c",
+     "exp": "Según el artículo 29.Uno.c) de la LO 1/1979 General Penitenciaria, están exceptuados los mayores de sesenta y cinco años, entre otros.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:29:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 8,
+     "tipo": "plazos",
+     "dif": 1,
+     "q": "Según el artículo 29 de la LO 1/1979 General Penitenciaria, ¿durante cuánto tiempo quedan exceptuadas de trabajar las mujeres embarazadas, con carácter general?",
+     "o": [
+      "Dieciséis semanas ininterrumpidas",
+      "Doce semanas ininterrumpidas",
+      "Veinte semanas ininterrumpidas",
+      "Seis semanas ininterrumpidas"
+     ],
+     "a": 0,
+     "cita": "Las mujeres embarazadas durante dieciséis semanas ininterrumpidas ampliables por parto múltiple hasta dieciocho semanas.",
+     "apartado": "Uno.e",
+     "exp": "Según el artículo 29.Uno.e) de la LO 1/1979 General Penitenciaria, son dieciséis semanas, ampliables a dieciocho por parto múltiple.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:29:1"
+    },
+    [],
+    "sospecha"
+   ],
+   [
+    {
+     "s": 8,
+     "tipo": "aplicacion",
+     "dif": 2,
+     "q": "Según el artículo 29 de la LO 1/1979 General Penitenciaria, los sometidos a prisión preventiva:",
+     "o": [
+      "Podrán trabajar conforme a sus aptitudes e inclinaciones",
+      "Tienen la misma obligación de trabajar que los penados",
+      "No pueden realizar ningún trabajo hasta la sentencia",
+      "Deben trabajar en servicios auxiliares comunes del centro"
+     ],
+     "a": 0,
+     "cita": "Los sometidos a prisión preventiva podrán trabajar conforme a sus aptitudes e inclinaciones.",
+     "apartado": "Dos",
+     "exp": "Según el artículo 29.Dos de la LO 1/1979 General Penitenciaria, para los preventivos el trabajo es una posibilidad, no una obligación.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:29:2"
+    },
+    [],
+    "sospecha"
+   ]
+  ],
+  "idx": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "s": 9,
+  "res": [
+   [
+    {
+     "s": 9,
+     "tipo": "conceptual",
+     "dif": 2,
+     "q": "Según el artículo 30 de la LO 1/1979 General Penitenciaria, los bienes, productos o servicios obtenidos por el trabajo de los internos tendrán, en igualdad de condiciones:",
+     "o": [
+      "Carácter preferente en las adjudicaciones de suministros y obras públicas",
+      "Exención de impuestos en su comercialización dentro y fuera del centro",
+      "Un precio mínimo garantizado por el Estado en todos los contratos",
+      "Prohibición de su venta a particulares fuera del establecimiento"
+     ],
+     "a": 0,
+     "cita": "tendrán en igualdad de condiciones, carácter preferente en las adjudicaciones de suministros y obras de las Administraciones públicas.",
+     "apartado": "",
+     "exp": "Según el artículo 30 de la LO 1/1979 General Penitenciaria, tienen preferencia en adjudicaciones públicas en igualdad de condiciones.",
+     "confianza": "alta",
+     "id": "nueva:lo-1-1979:30:0"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0
+  ]
+ },
+ {
+  "s": 10,
+  "res": [
+   [
+    {
+     "s": 10,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 28 de la Ley 14/1986, General de Sanidad, ¿qué principio deben atender las medidas preventivas sanitarias?",
+     "o": [
+      "Preferencia de la colaboración voluntaria con las autoridades sanitarias",
+      "Preferencia de las sanciones económicas sobre las preventivas",
+      "Aplicación uniforme de las mismas medidas en todo el territorio",
+      "Prioridad de la libre circulación sobre la salud pública"
+     ],
+     "a": 0,
+     "cita": "Preferencia de la colaboración voluntaria con las autoridades sanitarias.",
+     "apartado": "a",
+     "exp": "Según el artículo 28.a) de la Ley 14/1986, se prefiere la colaboración voluntaria con las autoridades sanitarias.",
+     "confianza": "alta",
+     "id": "nueva:ley-14-1986:28:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 10,
+     "tipo": "negativa",
+     "dif": 2,
+     "q": "Según el artículo 28 de la Ley 14/1986, ¿qué medidas preventivas obligatorias NO se podrán ordenar?",
+     "o": [
+      "Las que conlleven riesgo para la vida",
+      "Las que limiten la libre circulación",
+      "Las que afecten a la libertad de empresa",
+      "Las que sean proporcionadas a sus fines"
+     ],
+     "a": 0,
+     "cita": "No se podrán ordenar medidas obligatorias que conlleven riesgo para la vida.",
+     "apartado": "b",
+     "exp": "Según el artículo 28.b) de la Ley 14/1986, no pueden ordenarse medidas obligatorias con riesgo para la vida; las demás limitaciones deben ser proporcionadas y lo menos lesivas posible.",
+     "confianza": "media",
+     "id": "nueva:ley-14-1986:28:1"
+    },
+    [
+     [
+      "REVIEW_REQUIRED",
+      "el generador declara confianza media"
+     ]
+    ],
+    "sospecha"
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ },
+ {
+  "s": 11,
+  "res": [
+   [
+    {
+     "s": 11,
+     "tipo": "organos",
+     "dif": 1,
+     "q": "Según el artículo 2 del Real Decreto 207/2024, ¿a quién corresponde el ejercicio del mando de las Fuerzas y Cuerpos de Seguridad del Estado?",
+     "o": [
+      "A la persona titular de la Secretaría de Estado de Seguridad",
+      "A la persona titular de la Subsecretaría del Interior",
+      "A la Dirección General de la Policía",
+      "A la Delegación del Gobierno en cada comunidad autónoma"
+     ],
+     "a": 0,
+     "cita": "Corresponde a la persona titular de la Secretaría de Estado de Seguridad el ejercicio de las funciones a las que se refiere el artículo 62 de la Ley 40/2015, de 1 de octubre, y en particular, la dirección, coordinación y supervisión de los órganos directivos dependientes de la Secretaría de Estado, bajo la inmediata autoridad de la persona titular del Ministerio, para el ejercicio de las siguientes funciones: a) La promoción de las condiciones para el ejercicio de los derechos fundamentales, en los términos establecidos en la Constitución Española y en las leyes que los desarrollan, especialmente en relación con la libertad y seguridad personales, la inviolabilidad del domicilio y de las comunicaciones y la libertad de residencia y circulación. b) El ejercicio del mando de las Fuerzas y Cuerpos de Seguridad del Estado",
+     "apartado": "1.b",
+     "exp": "Según el artículo 2.1.b) del Real Decreto 207/2024, el mando corresponde a la Secretaría de Estado de Seguridad.",
+     "confianza": "media",
+     "id": "nueva:rd-207-2024:2:0"
+    },
+    [
+     [
+      "REVIEW_REQUIRED",
+      "el generador declara confianza media"
+     ]
+    ],
+    null
+   ],
+   [
+    {
+     "s": 11,
+     "tipo": "procedimiento",
+     "dif": 2,
+     "q": "Según el artículo 2 del Real Decreto 207/2024, la Secretaría de Estado de Seguridad dirige y supervisa sus órganos directivos:",
+     "o": [
+      "Bajo la inmediata autoridad de la persona titular del Ministerio",
+      "Con independencia funcional respecto del Ministerio",
+      "Bajo la supervisión de la Comisión Delegada de Seguridad",
+      "A propuesta de la Subsecretaría del Interior"
+     ],
+     "a": 0,
+     "cita": "bajo la inmediata autoridad de la persona titular del Ministerio",
+     "apartado": "1",
+     "exp": "Según el artículo 2.1 del Real Decreto 207/2024, actúa bajo la inmediata autoridad del titular del Ministerio.",
+     "confianza": "alta",
+     "id": "nueva:rd-207-2024:2:1"
+    },
+    [],
+    "sospecha"
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ },
+ {
+  "s": 12,
+  "res": [
+   [
+    {
+     "s": 12,
+     "tipo": "competencias",
+     "dif": 2,
+     "q": "Según el artículo 38 de la Ley 19/2013, ¿qué función tiene encomendada el Consejo de Transparencia y Buen Gobierno?",
+     "o": [
+      "Informar preceptivamente los proyectos normativos estatales que desarrollen esta Ley",
+      "Sancionar penalmente a los altos cargos que incumplan",
+      "Aprobar los presupuestos de las Administraciones públicas",
+      "Resolver los recursos contencioso-administrativos en materia de transparencia"
+     ],
+     "a": 0,
+     "cita": "Informar preceptivamente los proyectos normativos de carácter estatal que desarrollen esta Ley o que estén relacionados con su objeto.",
+     "apartado": "1.c",
+     "exp": "Según el artículo 38.1.c) de la Ley 19/2013, informa preceptivamente esos proyectos normativos.",
+     "confianza": "alta",
+     "id": "nueva:ley-19-2013:38:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 12,
+     "tipo": "procedimiento",
+     "dif": 2,
+     "q": "Según el artículo 38 de la Ley 19/2013, ¿ante quién se presenta la memoria anual del Consejo de Transparencia y Buen Gobierno?",
+     "o": [
+      "Ante las Cortes Generales",
+      "Ante el Consejo de Ministros",
+      "Ante el Tribunal de Cuentas",
+      "Ante el Defensor del Pueblo"
+     ],
+     "a": 0,
+     "cita": "elaborará anualmente una memoria en la que se incluirá información sobre el cumplimiento de las obligaciones previstas y que será presentada ante las Cortes Generales.",
+     "apartado": "1.d",
+     "exp": "Según el artículo 38.1.d) de la Ley 19/2013, la memoria anual se presenta ante las Cortes Generales.",
+     "confianza": "alta",
+     "id": "nueva:ley-19-2013:38:1"
+    },
+    [],
+    "sospecha"
+   ],
+   [
+    {
+     "s": 12,
+     "tipo": "competencias",
+     "dif": 2,
+     "q": "Según el artículo 38 de la Ley 19/2013, ¿a quién corresponde adoptar criterios de interpretación uniforme de las obligaciones de la Ley?",
+     "o": [
+      "Al Presidente del Consejo de Transparencia y Buen Gobierno",
+      "Al Pleno del Consejo de Estado",
+      "A la Comisión de Transparencia del Congreso",
+      "A cada Ministerio en su ámbito"
+     ],
+     "a": 0,
+     "cita": "El Presidente del Consejo de Transparencia y Buen Gobierno ejercerá las siguientes funciones: a) Adoptar criterios de interpretación uniforme de las obligaciones contenidas en esta Ley.",
+     "apartado": "2.a",
+     "exp": "Según el artículo 38.2.a) de la Ley 19/2013, es función del Presidente del Consejo.",
+     "confianza": "alta",
+     "id": "nueva:ley-19-2013:38:2"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "s": 13,
+  "res": [
+   [
+    {
+     "s": 13,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 29 de la LO 3/2018, ¿cómo se determinarán las responsabilidades de los corresponsables del tratamiento?",
+     "o": [
+      "Atendiendo a las actividades que efectivamente desarrolle cada uno de ellos",
+      "A partes iguales entre todos los corresponsables",
+      "Según el volumen de datos que trate cada uno",
+      "Conforme decida la Agencia Española de Protección de Datos"
+     ],
+     "a": 0,
+     "cita": "se realizará atendiendo a las actividades que efectivamente desarrolle cada uno de los corresponsables del tratamiento.",
+     "apartado": "",
+     "exp": "Según el artículo 29 de la LO 3/2018, se atiende a las actividades que efectivamente desarrolla cada corresponsable.",
+     "confianza": "alta",
+     "id": "nueva:lo-3-2018:29:0"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0
+  ]
+ },
+ {
+  "s": 14,
+  "res": [
+   [
+    {
+     "s": 14,
+     "tipo": "plazos",
+     "dif": 1,
+     "q": "Según el artículo 84 del TREBEP, tras el cese en un puesto obtenido por libre designación en otra Administración, ¿en qué plazo máximo puede la Administración de destino acordar su adscripción a otro puesto?",
+     "o": [
+      "Un mes",
+      "Quince días",
+      "Tres meses",
+      "Seis meses"
+     ],
+     "a": 0,
+     "cita": "en el plazo máximo de un mes a contar desde el día siguiente al del cese, podrá acordar la adscripción del funcionario a otro puesto de la misma",
+     "apartado": "3",
+     "exp": "Según el artículo 84.3 del TREBEP, el plazo máximo es de un mes desde el día siguiente al cese.",
+     "confianza": "alta",
+     "id": "nueva:trebep:84:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 14,
+     "tipo": "requisitos",
+     "dif": 2,
+     "q": "Según el artículo 84 del TREBEP, ¿mediante qué instrumento se establecerán preferentemente las medidas de movilidad interadministrativa?",
+     "o": [
+      "Mediante convenio de Conferencia Sectorial u otros instrumentos de colaboración",
+      "Mediante ley orgánica aprobada por las Cortes",
+      "Mediante acuerdo de la Mesa General de Negociación",
+      "Mediante resolución de cada Subsecretaría"
+     ],
+     "a": 0,
+     "cita": "preferentemente mediante convenio de Conferencia Sectorial u otros instrumentos de colaboración.",
+     "apartado": "1",
+     "exp": "Según el artículo 84.1 del TREBEP, preferentemente mediante convenio de Conferencia Sectorial.",
+     "confianza": "alta",
+     "id": "nueva:trebep:84:1"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 14,
+     "tipo": "aplicacion",
+     "dif": 2,
+     "q": "Un funcionario obtuvo por concurso un puesto en otra Administración y ese puesto se suprime. Según el artículo 84 del TREBEP, ¿qué ocurre?",
+     "o": [
+      "Permanece en la Administración de destino, que deberá asignarle un puesto",
+      "Vuelve automáticamente a su Administración de origen",
+      "Pasa a la situación de excedencia forzosa",
+      "Queda en expectativa de destino en su Administración de origen"
+     ],
+     "a": 0,
+     "cita": "En los supuestos de remoción o supresión del puesto de trabajo obtenido por concurso, permanecerán en la Administración de destino, que deberá asignarles un puesto de trabajo",
+     "apartado": "3",
+     "exp": "Según el artículo 84.3 del TREBEP, permanece en la Administración de destino, que debe asignarle un puesto.",
+     "confianza": "alta",
+     "id": "nueva:trebep:84:2"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "s": 15,
+  "res": [
+   [
+    {
+     "s": 15,
+     "tipo": "excepcion",
+     "dif": 2,
+     "q": "Según el artículo 34 del TREBEP, ¿a qué se extiende la competencia de las Mesas Sectoriales?",
+     "o": [
+      "A los temas comunes del sector no decididos por la Mesa General o que esta les reenvíe o delegue",
+      "A todas las materias de la Administración, con independencia de la Mesa General",
+      "A la aprobación de las leyes de presupuestos",
+      "A los temas de condiciones de trabajo de todos los empleados públicos"
+     ],
+     "a": 0,
+     "cita": "La competencia de las Mesas Sectoriales se extenderá a los temas comunes a los funcionarios del sector que no hayan sido objeto de decisión por parte de la Mesa General respectiva o a los que ésta explícitamente les reenvíe o delegue.",
+     "apartado": "5",
+     "exp": "Según el artículo 34.5 del TREBEP, abarca lo no decidido por la Mesa General o lo que esta reenvíe o delegue.",
+     "confianza": "alta",
+     "id": "nueva:trebep:34:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 15,
+     "tipo": "caso_practico",
+     "dif": 3,
+     "q": "Un municipio quiere sumarse a la negociación colectiva de su ámbito. Según el artículo 34 del TREBEP, ¿cómo puede hacerlo?",
+     "o": [
+      "Adhiriéndose con carácter previo o de manera sucesiva a la negociación colectiva del ámbito correspondiente",
+      "Constituyendo necesariamente su propia Mesa Sectorial",
+      "Solicitando autorización a la Mesa General de la Administración General del Estado",
+      "Mediante acuerdo del Pleno de la Diputación Provincial"
+     ],
+     "a": 0,
+     "cita": "los municipios podrán adherirse con carácter previo o de manera sucesiva a la negociación colectiva que se lleve a cabo en el ámbito correspondiente.",
+     "apartado": "2",
+     "exp": "Según el artículo 34.2 del TREBEP, los municipios pueden adherirse previa o sucesivamente.",
+     "confianza": "alta",
+     "id": "nueva:trebep:34:1"
+    },
+    [
+     [
+      "REVIEW_REQUIRED",
+      "tipo caso_practico: revisión humana obligatoria en esta fase"
+     ]
+    ],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ },
+ {
+  "s": 16,
+  "res": [
+   [
+    {
+     "s": 16,
+     "tipo": "comparativa",
+     "dif": 2,
+     "q": "Según el artículo 5 del Real Decreto Legislativo 1/2013, ¿en cuál de estos ámbitos se aplicarán las medidas específicas de igualdad de oportunidades y accesibilidad?",
+     "o": [
+      "Administración de justicia",
+      "Régimen fiscal de las empresas",
+      "Política monetaria",
+      "Defensa nacional"
+     ],
+     "a": 0,
+     "cita": "f) Administración de justicia.",
+     "apartado": "",
+     "exp": "Según el artículo 5.f) del Real Decreto Legislativo 1/2013, la Administración de justicia es uno de los ámbitos.",
+     "confianza": "media",
+     "id": "nueva:rdl-1-2013:5:0"
+    },
+    [
+     [
+      "REVIEW_REQUIRED",
+      "el generador declara confianza media"
+     ]
+    ],
+    null
+   ],
+   [
+    {
+     "s": 16,
+     "tipo": "conceptual",
+     "dif": 2,
+     "q": "Según el artículo 5 del Real Decreto Legislativo 1/2013, al aplicar las medidas al patrimonio cultural se busca conciliar:",
+     "o": [
+      "La protección patrimonial y el acceso, goce y disfrute de las personas con discapacidad",
+      "La rentabilidad turística de los bienes y su conservación a largo plazo",
+      "El derecho de propiedad privada de los titulares y la expropiación forzosa",
+      "La libertad de empresa de los gestores y la protección del medio ambiente"
+     ],
+     "a": 0,
+     "cita": "siempre con el propósito de conciliar los valores de protección patrimonial y de acceso, goce y disfrute por parte de las personas con discapacidad.",
+     "apartado": "h",
+     "exp": "Según el artículo 5.h) del Real Decreto Legislativo 1/2013, se concilian protección patrimonial y acceso de las personas con discapacidad.",
+     "confianza": "alta",
+     "id": "nueva:rdl-1-2013:5:1"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ },
+ {
+  "s": 17,
+  "res": [
+   [
+    {
+     "s": 17,
+     "tipo": "literal",
+     "dif": 1,
+     "q": "Según el artículo 39 de la Constitución, ¿qué protección aseguran los poderes públicos a la familia?",
+     "o": [
+      "Social, económica y jurídica",
+      "Sanitaria y educativa",
+      "Fiscal y laboral",
+      "Religiosa y cultural"
+     ],
+     "a": 0,
+     "cita": "Los poderes públicos aseguran la protección social, económica y jurídica de la familia.",
+     "apartado": "1",
+     "exp": "Según el artículo 39.1 de la Constitución, la protección es social, económica y jurídica.",
+     "confianza": "alta",
+     "id": "nueva:constitucion:39:0"
+    },
+    [],
+    null
+   ],
+   [
+    {
+     "s": 17,
+     "tipo": "negativa",
+     "dif": 2,
+     "q": "Según el artículo 39 de la Constitución, los padres deben prestar asistencia de todo orden a los hijos:",
+     "o": [
+      "Habidos dentro o fuera del matrimonio, durante su minoría de edad y en los demás casos legales",
+      "Habidos dentro del matrimonio, hasta los veinticinco años",
+      "Habidos dentro o fuera del matrimonio, hasta que se emancipen económicamente",
+      "Mientras convivan en el domicilio familiar"
+     ],
+     "a": 0,
+     "cita": "Los padres deben prestar asistencia de todo orden a los hijos habidos dentro o fuera del matrimonio, durante su minoría de edad y en los demás casos en que legalmente proceda.",
+     "apartado": "3",
+     "exp": "Según el artículo 39.3 de la Constitución, la asistencia alcanza a todos los hijos durante su minoría de edad y en los demás casos legales.",
+     "confianza": "alta",
+     "id": "nueva:constitucion:39:1"
+    },
+    [],
+    null
+   ]
+  ],
+  "idx": [
+   0,
+   1
+  ]
+ }
+]

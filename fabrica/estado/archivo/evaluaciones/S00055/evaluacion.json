@@ -1,0 +1,775 @@
+{
+ "evaluacion": "S00055",
+ "creada_el": "2026-11-09T07:49:06",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 37,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.0",
+    "3.1",
+    "4.0"
+   ],
+   "prompt_sha256": "0b449d36008432f31b0de9e32928fc16d821ce64c330dcd30e98c9a760f251d8",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "d21aab4f7af885babff97f0bda2e849c34da862dab4bcddd6421edd777e8f1a7",
+    "0.1": "248eeaf54e37dcf2ea546d320c00ccba1360bd196def32dfea40c0c131224cb5",
+    "0.2": "43e3736843b377c53e7ff9873ae835b65746e11b221488d955870ac4b961386b",
+    "1.0": "2d5fbb04f25b86abf3a2867dc6a96865e1fac540988db02cbda0075a9a0ecf35",
+    "2.0": "8c6f9888a4f466928964154332af708d7ebe24208fc54619d8ae3664bc8d376e",
+    "2.1": "82c3d8569e6da67ffc6a2fadd475074779267ea68499f1d1ccc31f81933ea127",
+    "2.2": "a539812e7c92502601ef39b936635cda82de95a0373c3b98acc8d05259192500",
+    "3.0": "2802393ffafe17def6e6e52e0ecba4755bfc8c7cb06084f99bffeb8cbf36961d",
+    "3.1": "f639772a7aed45598cadf29a0cb2426930f9934a7bf7cbc5c64fea6db313f2c2",
+    "4.0": "e46f0f6a7b4a64e4d734203c92a80c1b55f67de1aefe8d20eff3c9997bc0ab8f"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 42.Dos.a) dice que el aislamiento en celda no podrá exceder de catorce días, y la cita lo recoge completo. Ninguna otra opción es válida: siete aparece solo como fines de semana (letra b), 21 días y un mes no figuran como máximo del aislamiento. Pregunta clara y útil (plazo concreto).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 42.Tres dice que en repetición de la infracción las sanciones podrán incrementarse en la mitad de su máximo; la cita lo contiene íntegro. Los distractores (doble, un tercio del mínimo, una cuarta parte) no figuran en el texto. Pregunta clara, sin duplicados en parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 42.Cuatro limita el aislamiento a evidente agresividad o violencia, o alteración reiterada y grave de la convivencia; la cita lo recoge completo. Los demás supuestos (falta grave reciente, petición de internos, reincidencia en leves) no aparecen en el texto. El supuesto planteado es coherente y útil, y las opciones no delatan la respuesta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 23 dice que registros y cacheos se efectúan con las garantías y periodicidad reglamentarias y con respeto a la dignidad de la persona; la cita contiene todos los elementos. Las otras opciones (criterio del funcionario, autorización judicial previa, mensual con representante) no tienen apoyo en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto dice que los precios se controlan por la autoridad competente, pero añade que 'los internos participarán también en el control de calidad y precios'. Por tanto la opción 'Los propios internos' es discutible como también correcta (unica=false). Además la cita, sola, haría parecer errónea esa opción cuando el texto les da participación en el control (cita_suficiente=false). Hay que reformular la pregunta o eliminar ese distractor.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 24 dice que los precios en ningún caso podrán ser superiores a los de la localidad del establecimiento; la cita lo contiene. La parecida 2.0 pregunta quién controla los precios, un hecho distinto (órgano vs. límite de precio), así que no es duplicada. Los distractores (+10%, libre fijación, Consejo de Ministros) contradicen o no figuran en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 24 dice que la venta es gestionada directamente por la Administración penitenciaria o por Empresas concesionarias; la cita contiene ambos elementos. Las parecidas tratan del control de precios y del tope de precios, hechos distintos. Los distractores (asociaciones, ONG, ayuntamientos) no figuran en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 9.Dos define jóvenes como quienes no hayan cumplido veintiún años; la cita lo recoge. Los veinticinco años aparecen solo como excepción de permanencia, no como definición, por lo que no compiten con la respuesta. Es un dato de contenido útil y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 9.Dos permite excepcionalmente permanecer en centros de jóvenes a quienes, habiendo cumplido veintiún años, no hayan alcanzado los veinticinco; la cita lo contiene. Los otros distractores (23, 30, mitad de condena) no figuran. Pregunta clara y sin parecidas que la dupliquen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa: el art. 25.Dos menciona ocho horas de descanso nocturno, necesidades espirituales y físicas, sesiones de tratamiento y actividades formativas laborales y culturales. La cita reúne todos esos elementos, de modo que se ve que las opciones a, b y c aparecen en el texto, y 'dos horas diarias de visitas familiares' no figura. Única respuesta posible y pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-aa92aae255e8cfd8a.jsonl",
+    "respuesta_sha256": "f35bd9fc17456be204b1238eb8da70c2b14c1d242aaf5ab4c309b38b72961ad8"
+   },
+   "registrada_el": "2026-11-09T07:50:13",
+   "intentos": [
+    {
+     "t": "2026-11-09T07:50:13",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-aa92aae255e8cfd8a.jsonl",
+      "respuesta_sha256": "f35bd9fc17456be204b1238eb8da70c2b14c1d242aaf5ab4c309b38b72961ad8"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 42.Dos.a) dice que el aislamiento en celda no podrá exceder de catorce días, y la cita lo recoge completo. Ninguna otra opción es válida: siete aparece solo como fines de semana (letra b), 21 días y un mes no figuran como máximo del aislamiento. Pregunta clara y útil (plazo concreto).\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 42.Tres dice que en repetición de la infracción las sanciones podrán incrementarse en la mitad de su máximo; la cita lo contiene íntegro. Los distractores (doble, un tercio del mínimo, una cuarta parte) no figuran en el texto. Pregunta clara, sin duplicados en parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 42.Cuatro limita el aislamiento a evidente agresividad o violencia, o alteración reiterada y grave de la convivencia; la cita lo recoge completo. Los demás supuestos (falta grave reciente, petición de internos, reincidencia en leves) no aparecen en el texto. El supuesto planteado es coherente y útil, y las opciones no delatan la respuesta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 23 dice que registros y cacheos se efectúan con las garantías y periodicidad reglamentarias y con respeto a la dignidad de la persona; la cita contiene todos los elementos. Las otras opciones (criterio del funcionario, autorización judicial previa, mensual con representante) no tienen apoyo en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto dice que los precios se controlan por la autoridad competente, pero añade que 'los internos participarán también en el control de calidad y precios'. Por tanto la opción 'Los propios internos' es discutible como también correcta (unica=false). Además la cita, sola, haría parecer errónea esa opción cuando el texto les da participación en el control (cita_suficiente=false). Hay que reformular la pregunta o eliminar ese distractor.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 24 dice que los precios en ningún caso podrán ser superiores a los de la localidad del establecimiento; la cita lo contiene. La parecida 2.0 pregunta quién controla los precios, un hecho distinto (órgano vs. límite de precio), así que no es duplicada. Los distractores (+10%, libre fijación, Consejo de Ministros) contradicen o no figuran en el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 24 dice que la venta es gestionada directamente por la Administración penitenciaria o por Empresas concesionarias; la cita contiene ambos elementos. Las parecidas tratan del control de precios y del tope de precios, hechos distintos. Los distractores (asociaciones, ONG, ayuntamientos) no figuran en el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 9.Dos define jóvenes como quienes no hayan cumplido veintiún años; la cita lo recoge. Los veinticinco años aparecen solo como excepción de permanencia, no como definición, por lo que no compiten con la respuesta. Es un dato de contenido útil y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 9.Dos permite excepcionalmente permanecer en centros de jóvenes a quienes, habiendo cumplido veintiún años, no hayan alcanzado los veinticinco; la cita lo contiene. Los otros distractores (23, 30, mitad de condena) no figuran. Pregunta clara y sin parecidas que la dupliquen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa: el art. 25.Dos menciona ocho horas de descanso nocturno, necesidades espirituales y físicas, sesiones de tratamiento y actividades formativas laborales y culturales. La cita reúne todos esos elementos, de modo que se ve que las opciones a, b y c aparecen en el texto, y 'dos horas diarias de visitas familiares' no figura. Única respuesta posible y pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "6.1",
+    "7.0",
+    "8.0",
+    "8.1",
+    "8.2",
+    "9.0"
+   ],
+   "prompt_sha256": "59f5b699c2f550b2654bdfb33d06ff26e761c3c1689c7f0184d06c71b3a50b3f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "5.0": "1e32eaae2a44a88db72ec8ec0cb74da07e89e493ac702963ee27eb353813cfc1",
+    "5.1": "fd19e21ccd0b26064d7cdf9a9c58bc7ad0c0f936a0e97428edb27d2edbbd7f48",
+    "5.2": "3c230c7f6ea87c9d4385c51bc507b57e569a54f844197c734e251c4e2ae78448",
+    "6.0": "e7b6e27054ef5ff0b7af54e41588bb76411c10fe553c5597c93fd4b5832b2e1d",
+    "6.1": "027de9afb4c4acc4bb9c4630f19f38b36aaca296cd1a08d9b4a4cf2081ca8528",
+    "7.0": "e815aecb5fc07820b233c1b93590b343fb39f1974b320214f3d1aa96a9afe9b9",
+    "8.0": "def73e3b549774ec145c45f36561ecb14b2988e33c9944326cd9a4f3d6fb9807",
+    "8.1": "cf9ccbbf4bc30f4467f518eda0f63e83ac26645b1b90ea197137d5130b0ec447",
+    "8.2": "8e688a337f5b012dd2193834ba2bbc939da677d2f5b7b4b0a56b178820e13f69",
+    "9.0": "b6790c66451a0c1afac616ee4532a5eea714df415e7e7a75a7fc6e6f04790ac6"
+   },
+   "veredictos": [
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 26 dice literalmente que el trabajo es un derecho y un deber del interno y elemento fundamental del tratamiento; la opción A lo reproduce. La cita contiene ambos elementos (derecho y deber, elemento del tratamiento). Las otras opciones (medida de corrección, voluntaria sin relación con el tratamiento, castigo) contradicen la letra a) y el inicio del artículo. Sin parecidas. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La letra f) del art. 26 establece que el trabajo gozará de la protección de la legislación de Seguridad Social; la cita la recoge completa. Los distractores (medida de corrección, supeditado a intereses económicos, carácter aflictivo) contradicen las letras a) y g). La parecida 5.0 evalúa otro hecho (naturaleza de derecho y deber), no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "La letra c) del art. 26 indica que el carácter formativo, creador o conservador de hábitos, productivo o terapéutico es para preparar a los internos para las condiciones normales del trabajo libre; la cita lo contiene entero. Los distractores (financiar establecimientos, reducir condena, compensar a víctimas) no figuran en el texto. Sin parecidas. Pregunta útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 27.1.a) dice que la administración dará carácter preferente a las modalidades de formación profesional; la cita incluye ese elemento. Las otras opciones (artesanales, cooperativas, servicios auxiliares) son modalidades del listado pero sin carácter preferente, por lo que no son correctas. Sin parecidas. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 27.2 establece que todo trabajo directamente productivo será remunerado y con condiciones de seguridad e higiene de la legislación vigente; la cita lo recoge íntegro. Los distractores (voluntario no remunerado, redención de condena, pago en especie) contradicen el texto. La parecida 6.0 trata otro apartado (modalidad preferente), no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 28 dice que el trabajo será compatible con las sesiones de tratamiento y con las necesidades de enseñanza en los niveles obligatorios; la cita contiene ambos elementos. Visitas, deporte y limpieza no aparecen en el texto. El artículo tiene además una segunda frase sobre medidas reglamentarias, y la pregunta evalúa un dato concreto, por lo que es útil. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 29.1.c) exceptúa de trabajar a los mayores de sesenta y cinco años, por lo que la respuesta está respaldada y es única entre las opciones (55 años, más de diez años en prisión y régimen ordinario no figuran). Pero la cita ('Los mayores de sesenta y cinco años.') es un fragmento que por sí solo no indica que se trate de una excepción a la obligación de trabajar de los penados, y la pregunta admite varios supuestos (a-f). Cita insuficiente. No es duplicada de ninguna parecida.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 29.1.e) fija dieciséis semanas ininterrumpidas, ampliables a dieciocho por parto múltiple; la pregunta dice 'con carácter general' y la cita contiene el dato de 16 semanas y su ampliación. Las otras cifras (12, 20, 6) no son correctas; seis semanas es solo el mínimo posterior al parto, pero no es la duración de la excepción. La parecida 8.0 pregunta por la excepción de edad, hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 29.2 dice que los sometidos a prisión preventiva podrán trabajar conforme a sus aptitudes e inclinaciones; la cita lo contiene. Los distractores (misma obligación que los penados, prohibición, obligación en servicios auxiliares) contradicen el texto. La parecida 8.0 trata de las excepciones de los penados, hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 30 respalda la respuesta (carácter preferente en adjudicaciones de suministros y obras de las Administraciones públicas) y la cita la contiene entera; los distractores no aparecen en el texto, de modo que es única. Sin embargo el artículo es una única frase y la opción correcta solo la reproduce, y las otras opciones resultan claramente inventadas, lo que hace la pregunta trivial según el criterio de claridad. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a4cd8f244732a667c.jsonl",
+    "respuesta_sha256": "b3cbc1c3ebc5e15f17f357ada63a02def9063ac4e9b9f65bc56aeb50269eb9b1"
+   },
+   "registrada_el": "2026-11-09T07:50:13",
+   "intentos": [
+    {
+     "t": "2026-11-09T07:50:13",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a4cd8f244732a667c.jsonl",
+      "respuesta_sha256": "b3cbc1c3ebc5e15f17f357ada63a02def9063ac4e9b9f65bc56aeb50269eb9b1"
+     },
+     "respuesta": "[\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 26 dice literalmente que el trabajo es un derecho y un deber del interno y elemento fundamental del tratamiento; la opción A lo reproduce. La cita contiene ambos elementos (derecho y deber, elemento del tratamiento). Las otras opciones (medida de corrección, voluntaria sin relación con el tratamiento, castigo) contradicen la letra a) y el inicio del artículo. Sin parecidas. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"La letra f) del art. 26 establece que el trabajo gozará de la protección de la legislación de Seguridad Social; la cita la recoge completa. Los distractores (medida de corrección, supeditado a intereses económicos, carácter aflictivo) contradicen las letras a) y g). La parecida 5.0 evalúa otro hecho (naturaleza de derecho y deber), no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"La letra c) del art. 26 indica que el carácter formativo, creador o conservador de hábitos, productivo o terapéutico es para preparar a los internos para las condiciones normales del trabajo libre; la cita lo contiene entero. Los distractores (financiar establecimientos, reducir condena, compensar a víctimas) no figuran en el texto. Sin parecidas. Pregunta útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 27.1.a) dice que la administración dará carácter preferente a las modalidades de formación profesional; la cita incluye ese elemento. Las otras opciones (artesanales, cooperativas, servicios auxiliares) son modalidades del listado pero sin carácter preferente, por lo que no son correctas. Sin parecidas. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 27.2 establece que todo trabajo directamente productivo será remunerado y con condiciones de seguridad e higiene de la legislación vigente; la cita lo recoge íntegro. Los distractores (voluntario no remunerado, redención de condena, pago en especie) contradicen el texto. La parecida 6.0 trata otro apartado (modalidad preferente), no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 28 dice que el trabajo será compatible con las sesiones de tratamiento y con las necesidades de enseñanza en los niveles obligatorios; la cita contiene ambos elementos. Visitas, deporte y limpieza no aparecen en el texto. El artículo tiene además una segunda frase sobre medidas reglamentarias, y la pregunta evalúa un dato concreto, por lo que es útil. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 29.1.c) exceptúa de trabajar a los mayores de sesenta y cinco años, por lo que la respuesta está respaldada y es única entre las opciones (55 años, más de diez años en prisión y régimen ordinario no figuran). Pero la cita ('Los mayores de sesenta y cinco años.') es un fragmento que por sí solo no indica que se trate de una excepción a la obligación de trabajar de los penados, y la pregunta admite varios supuestos (a-f). Cita insuficiente. No es duplicada de ninguna parecida.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 29.1.e) fija dieciséis semanas ininterrumpidas, ampliables a dieciocho por parto múltiple; la pregunta dice 'con carácter general' y la cita contiene el dato de 16 semanas y su ampliación. Las otras cifras (12, 20, 6) no son correctas; seis semanas es solo el mínimo posterior al parto, pero no es la duración de la excepción. La parecida 8.0 pregunta por la excepción de edad, hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 29.2 dice que los sometidos a prisión preventiva podrán trabajar conforme a sus aptitudes e inclinaciones; la cita lo contiene. Los distractores (misma obligación que los penados, prohibición, obligación en servicios auxiliares) contradicen el texto. La parecida 8.0 trata de las excepciones de los penados, hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 30 respalda la respuesta (carácter preferente en adjudicaciones de suministros y obras de las Administraciones públicas) y la cita la contiene entera; los distractores no aparecen en el texto, de modo que es única. Sin embargo el artículo es una única frase y la opción correcta solo la reproduce, y las otras opciones resultan claramente inventadas, lo que hace la pregunta trivial según el criterio de claridad. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "10.0",
+    "10.1",
+    "11.0",
+    "11.1",
+    "12.0",
+    "12.1",
+    "12.2",
+    "13.0",
+    "14.0",
+    "14.1"
+   ],
+   "prompt_sha256": "e1935a7e0a681069cdac6d01b3910788e6ef79b2437da035e1ba0b6f0ceb3b43",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "10.0": "c2ee187156bfefb27d798316c578bff81c6ff266933d1c6673b9718b62c9b1b6",
+    "10.1": "5fdc528276f7371b41351f41390b6072e68de518c8586ab08d0755a0dcdd8518",
+    "11.0": "fc7d057f151842a9abd780ebda53b9961a6d5c23970dea8bb6a36b9c16145dfa",
+    "11.1": "66cab62d8f684e7b77b41ca760adcc845d1b6593f65d47fecd185356d019e9d5",
+    "12.0": "65f9d26922068090e59540534cba35a5f77af029e9204866a93871a95f83530e",
+    "12.1": "59fb1a861b32be5b394a7a754377402f2f8d655b9ad88fb0b7c2ea6178040523",
+    "12.2": "22bac7a6d5436bf853fac05626b715b1356ef33468209f027c051b700f451f02",
+    "13.0": "7d110afb1d2d91934cfed47176bfc3c8ff101c40c8d095369e6d4f3111af85dd",
+    "14.0": "786a9bdea3bfb4c0e74a12f2fa9bf6caa7a95ee7b2aa5b000db926bbc618ff74",
+    "14.1": "7f5f243eb2a4e0619732593c8f4c6cb05328b9e2d8cb39a35440d4007fa67f8f"
+   },
+   "veredictos": [
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 28 enumera como principio a) la preferencia de la colaboración voluntaria con las autoridades sanitarias, y la cita lo recoge literalmente. Los otros tres distractores (preferencia de sanciones, aplicación uniforme, prioridad de la libre circulación sobre la salud) no aparecen en el texto y ninguno es defendible. Solo una de las cuatro opciones es uno de los principios del artículo, así que la respuesta es única. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto, letra b), dice que no se podrán ordenar medidas obligatorias que conlleven riesgo para la vida, y la cita lo contiene completo. Las limitaciones a la libre circulación o a la libertad de empresa no están prohibidas (el texto pide usar las que menos perjudiquen), y la proporcionalidad es un requisito, no una prohibición. Por tanto solo la opción a es correcta. La parecida 10.0 (letra a, colaboración voluntaria) evalúa otro hecho, así que no hay duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2.1.b) atribuye a la Secretaría de Estado de Seguridad el ejercicio del mando de las Fuerzas y Cuerpos de Seguridad del Estado, y la cita incluye ese párrafo. Subsecretaría, Dirección General de la Policía y Delegación del Gobierno no tienen esa atribución en el texto. Única respuesta correcta. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2.1 dice que la dirección, coordinación y supervisión de los órganos directivos se ejerce bajo la inmediata autoridad de la persona titular del Ministerio, y la cita lo recoge. Las demás opciones (independencia funcional, Comisión Delegada, propuesta de la Subsecretaría) no están en el texto. La parecida 11.0 trata del mando de las FCSE, un hecho distinto, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 38.1.c) incluye informar preceptivamente los proyectos normativos estatales que desarrollen la Ley, y la cita lo reproduce. Sancionar penalmente, aprobar los presupuestos de las Administraciones públicas y resolver recursos contencioso-administrativos no son funciones del Consejo. Aprobar el anteproyecto de presupuesto es función del Presidente y de su propio presupuesto, y no coincide con el distractor. Única respuesta correcta. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 38.1.d) dice que la memoria anual se presentará ante las Cortes Generales, y la cita lo contiene. Consejo de Ministros, Tribunal de Cuentas y Defensor del Pueblo no aparecen en el texto. La parecida 12.0 trata de la función de informar proyectos normativos, un hecho distinto, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 38.2.a) asigna al Presidente del Consejo la adopción de criterios de interpretación uniforme de las obligaciones de la Ley, y la cita incluye al sujeto (Presidente) y la función. Consejo de Estado, Comisión del Congreso y cada Ministerio no figuran en el texto. Respuesta única. Las parecidas están vacías.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 29 establece que las responsabilidades se determinan atendiendo a las actividades que efectivamente desarrolle cada corresponsable, y la cita lo recoge íntegro. Las opciones de partes iguales, volumen de datos o decisión de la AEPD no aparecen en el texto. El artículo es de una sola frase, pero fija un criterio sustantivo y los distractores son plausibles, por lo que no lo considero trivial. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 84.3 fija un plazo máximo de un mes desde el día siguiente al cese en libre designación para que la Administración de destino acuerde la adscripción a otro puesto, y la cita incluye el plazo y el supuesto. Quince días, tres y seis meses no aparecen para ese plazo. Es un plazo concreto, útil como pregunta. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 84.1 dice que las medidas de movilidad interadministrativa se establecen preferentemente mediante convenio de Conferencia Sectorial u otros instrumentos de colaboración, y la cita lo recoge. Ley orgánica, Mesa General de Negociación y resolución de Subsecretaría no figuran en el texto. La parecida 14.0 trata del plazo de adscripción, un hecho distinto, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a7786f499491a6519.jsonl",
+    "respuesta_sha256": "276788236851504017ad52714ce24615f189efffbfa3d64029b6c78a286ff13d"
+   },
+   "registrada_el": "2026-11-09T07:51:50",
+   "intentos": [
+    {
+     "t": "2026-11-09T07:51:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a7786f499491a6519.jsonl",
+      "respuesta_sha256": "276788236851504017ad52714ce24615f189efffbfa3d64029b6c78a286ff13d"
+     },
+     "respuesta": "[\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 28 enumera como principio a) la preferencia de la colaboración voluntaria con las autoridades sanitarias, y la cita lo recoge literalmente. Los otros tres distractores (preferencia de sanciones, aplicación uniforme, prioridad de la libre circulación sobre la salud) no aparecen en el texto y ninguno es defendible. Solo una de las cuatro opciones es uno de los principios del artículo, así que la respuesta es única. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.1\",\"verdict\":\"VALID\",\"reason\":\"El texto, letra b), dice que no se podrán ordenar medidas obligatorias que conlleven riesgo para la vida, y la cita lo contiene completo. Las limitaciones a la libre circulación o a la libertad de empresa no están prohibidas (el texto pide usar las que menos perjudiquen), y la proporcionalidad es un requisito, no una prohibición. Por tanto solo la opción a es correcta. La parecida 10.0 (letra a, colaboración voluntaria) evalúa otro hecho, así que no hay duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 2.1.b) atribuye a la Secretaría de Estado de Seguridad el ejercicio del mando de las Fuerzas y Cuerpos de Seguridad del Estado, y la cita incluye ese párrafo. Subsecretaría, Dirección General de la Policía y Delegación del Gobierno no tienen esa atribución en el texto. Única respuesta correcta. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 2.1 dice que la dirección, coordinación y supervisión de los órganos directivos se ejerce bajo la inmediata autoridad de la persona titular del Ministerio, y la cita lo recoge. Las demás opciones (independencia funcional, Comisión Delegada, propuesta de la Subsecretaría) no están en el texto. La parecida 11.0 trata del mando de las FCSE, un hecho distinto, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 38.1.c) incluye informar preceptivamente los proyectos normativos estatales que desarrollen la Ley, y la cita lo reproduce. Sancionar penalmente, aprobar los presupuestos de las Administraciones públicas y resolver recursos contencioso-administrativos no son funciones del Consejo. Aprobar el anteproyecto de presupuesto es función del Presidente y de su propio presupuesto, y no coincide con el distractor. Única respuesta correcta. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 38.1.d) dice que la memoria anual se presentará ante las Cortes Generales, y la cita lo contiene. Consejo de Ministros, Tribunal de Cuentas y Defensor del Pueblo no aparecen en el texto. La parecida 12.0 trata de la función de informar proyectos normativos, un hecho distinto, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 38.2.a) asigna al Presidente del Consejo la adopción de criterios de interpretación uniforme de las obligaciones de la Ley, y la cita incluye al sujeto (Presidente) y la función. Consejo de Estado, Comisión del Congreso y cada Ministerio no figuran en el texto. Respuesta única. Las parecidas están vacías.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 29 establece que las responsabilidades se determinan atendiendo a las actividades que efectivamente desarrolle cada corresponsable, y la cita lo recoge íntegro. Las opciones de partes iguales, volumen de datos o decisión de la AEPD no aparecen en el texto. El artículo es de una sola frase, pero fija un criterio sustantivo y los distractores son plausibles, por lo que no lo considero trivial. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 84.3 fija un plazo máximo de un mes desde el día siguiente al cese en libre designación para que la Administración de destino acuerde la adscripción a otro puesto, y la cita incluye el plazo y el supuesto. Quince días, tres y seis meses no aparecen para ese plazo. Es un plazo concreto, útil como pregunta. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 84.1 dice que las medidas de movilidad interadministrativa se establecen preferentemente mediante convenio de Conferencia Sectorial u otros instrumentos de colaboración, y la cita lo recoge. Ley orgánica, Mesa General de Negociación y resolución de Subsecretaría no figuran en el texto. La parecida 14.0 trata del plazo de adscripción, un hecho distinto, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "14.2",
+    "15.0",
+    "15.1",
+    "16.0",
+    "16.1",
+    "17.0",
+    "17.1"
+   ],
+   "prompt_sha256": "a0a982dde7fd1f340eb001312be8149503f7121de3eccd5629f73ba747fc6eaa",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "14.2": "5e76232d75d314c5835279ca71d226b394afaa9f26cb630ad04ab84ded2a343c",
+    "15.0": "6ab19baf6d65089a9a19220e319a92dffa2f0df7ef5820fa0b1059143a7548c7",
+    "15.1": "8fa4b1e2c74e9f172112b9b3cf0bd255ba63c0560f594127d26ad9dd9ec020ae",
+    "16.0": "140138e20e55c551128a3ba102a574b3044e17c1bf2e7aa82369e14c1f3b04cd",
+    "16.1": "e3e0eaf0e0376dd8d3e95f53df1aed7f4b0fb8743cb6fcc3553a9f2c310e002d",
+    "17.0": "18bee3661fb982dec5dca480ebe7ac4cce1b898d0c5e199150d2258efbda9623",
+    "17.1": "2b2706333f85abedd93faa94ad0a09c9bcf85fcf524d6c7c939840905c9659eb"
+   },
+   "veredictos": [
+    {
+     "question_id": "14.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 84.3 dice que en los supuestos de remoción o supresión del puesto obtenido por concurso los funcionarios permanecen en la Administración de destino, que debe asignarles puesto. Esto respalda la opción 0. La cita contiene íntegramente ese elemento. Las demás opciones no aparecen como solución para el concurso: el reingreso en origen y la excedencia solo se mencionan para la libre designación. Pregunta clara y con distractores plausibles.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 34.5 fija la competencia de las Mesas Sectoriales en los temas comunes del sector no decididos por la Mesa General o que esta reenvíe o delegue. La opción 0 lo reproduce y la cita lo recoge completo. Las otras opciones (todas las materias con independencia de la Mesa General, leyes de presupuestos, todos los empleados públicos) no tienen apoyo en el texto. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 34.2 permite a los municipios adherirse con carácter previo o de manera sucesiva a la negociación colectiva del ámbito correspondiente. Esto respalda la opción 0 y la cita lo contiene entero. Constituir una Mesa Sectorial propia, pedir autorización a la Mesa General de la AGE o un acuerdo del Pleno de la Diputación no figuran en el texto. Hecho distinto del de 15.0, así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5 enumera los ámbitos de aplicación y la letra f) es la Administración de justicia. La cita lo recoge. Régimen fiscal, política monetaria y defensa nacional no aparecen en la lista a)-i), así que solo una opción es correcta. Pregunta clara, sobre un listado típico de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.h) dice que en patrimonio cultural se busca conciliar los valores de protección patrimonial y de acceso, goce y disfrute por las personas con discapacidad. La opción 0 y la cita coinciden. Las otras opciones (rentabilidad turística, expropiación, libertad de empresa y medio ambiente) no figuran en el texto. Pregunta clara, y distinta de 16.0 porque trata del propósito de la letra h).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.1 CE dice que los poderes públicos aseguran la protección social, económica y jurídica de la familia. La opción 0 coincide literalmente y la cita contiene la frase completa. Los distractores (sanitaria y educativa, fiscal y laboral, religiosa y cultural) no aparecen en el artículo. Pregunta clara y no ambigua.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.3 CE impone a los padres asistencia de todo orden a los hijos habidos dentro o fuera del matrimonio, durante su minoría de edad y en los demás casos legales. La opción 0 lo reproduce y la cita contiene todos los elementos. Los distractores (hasta los 25 años, hasta emancipación económica, convivencia en el domicilio) contradicen el texto. Hecho distinto del de 17.0.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a74e9f1aee08c4b1e.jsonl",
+    "respuesta_sha256": "6bd9de76085993e7c514d49deec50c5c51e8cd235cc8ace9a0662fe5f5385739"
+   },
+   "registrada_el": "2026-11-09T07:51:50",
+   "intentos": [
+    {
+     "t": "2026-11-09T07:51:50",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a74e9f1aee08c4b1e.jsonl",
+      "respuesta_sha256": "6bd9de76085993e7c514d49deec50c5c51e8cd235cc8ace9a0662fe5f5385739"
+     },
+     "respuesta": "[\n{\"question_id\":\"14.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 84.3 dice que en los supuestos de remoción o supresión del puesto obtenido por concurso los funcionarios permanecen en la Administración de destino, que debe asignarles puesto. Esto respalda la opción 0. La cita contiene íntegramente ese elemento. Las demás opciones no aparecen como solución para el concurso: el reingreso en origen y la excedencia solo se mencionan para la libre designación. Pregunta clara y con distractores plausibles.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 34.5 fija la competencia de las Mesas Sectoriales en los temas comunes del sector no decididos por la Mesa General o que esta reenvíe o delegue. La opción 0 lo reproduce y la cita lo recoge completo. Las otras opciones (todas las materias con independencia de la Mesa General, leyes de presupuestos, todos los empleados públicos) no tienen apoyo en el texto. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 34.2 permite a los municipios adherirse con carácter previo o de manera sucesiva a la negociación colectiva del ámbito correspondiente. Esto respalda la opción 0 y la cita lo contiene entero. Constituir una Mesa Sectorial propia, pedir autorización a la Mesa General de la AGE o un acuerdo del Pleno de la Diputación no figuran en el texto. Hecho distinto del de 15.0, así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 5 enumera los ámbitos de aplicación y la letra f) es la Administración de justicia. La cita lo recoge. Régimen fiscal, política monetaria y defensa nacional no aparecen en la lista a)-i), así que solo una opción es correcta. Pregunta clara, sobre un listado típico de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.h) dice que en patrimonio cultural se busca conciliar los valores de protección patrimonial y de acceso, goce y disfrute por las personas con discapacidad. La opción 0 y la cita coinciden. Las otras opciones (rentabilidad turística, expropiación, libertad de empresa y medio ambiente) no figuran en el texto. Pregunta clara, y distinta de 16.0 porque trata del propósito de la letra h).\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.1 CE dice que los poderes públicos aseguran la protección social, económica y jurídica de la familia. La opción 0 coincide literalmente y la cita contiene la frase completa. Los distractores (sanitaria y educativa, fiscal y laboral, religiosa y cultural) no aparecen en el artículo. Pregunta clara y no ambigua.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.3 CE impone a los padres asistencia de todo orden a los hijos habidos dentro o fuera del matrimonio, durante su minoría de edad y en los demás casos legales. La opción 0 lo reproduce y la cita contiene todos los elementos. Los distractores (hasta los 25 años, hasta emancipación económica, convivencia en el domicilio) contradicen el texto. Hecho distinto del de 17.0.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}

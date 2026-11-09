@@ -8,7 +8,7 @@
  "territorio": "España",
  "grupo": "C1",
  "categoria": "policia",
- "generado": "2026-11-02",
+ "generado": "2026-11-09",
  "ficha_actualizada": "2026-09-29",
  "convocatoria": {
   "actual": {
@@ -32,8 +32,8 @@
  },
  "contenido": {
   "OFFICIAL_EXAM": 0,
-  "TESTLEY_GENERATED": 2225,
-  "REVIEW_REQUIRED": 88,
+  "TESTLEY_GENERATED": 2233,
+  "REVIEW_REQUIRED": 90,
   "DEPRECATED": 0,
   "OUTDATED": 13,
   "nota": "OFFICIAL_EXAM y TESTLEY_GENERATED son bancos separados: nunca se mezclan en un examen oficial ni cuentan como cobertura uno del otro."
@@ -812,7 +812,7 @@
     {
      "ley": "constitucion",
      "art": "39",
-     "preguntas": 0
+     "preguntas": 2
     },
     {
      "ley": "constitucion",
@@ -978,23 +978,23 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 113,
+    "TESTLEY_GENERATED": 115,
     "OFFICIAL_EXAM": 0,
     "REVIEW_REQUIRED": 1,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 10,
-    "2": 29,
+    "1": 11,
+    "2": 30,
     "3": 8,
     "?": 66
    },
    "tipos": {
     "conceptual": 1,
     "dificil": 1,
-    "literal": 1,
-    "negativa": 1,
+    "literal": 2,
+    "negativa": 2,
     "sin_tipo": 109
    },
    "ultima_actualizacion": "2026-09-29",
@@ -1773,26 +1773,28 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 162,
+    "TESTLEY_GENERATED": 166,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 7,
+    "REVIEW_REQUIRED": 8,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 12,
-    "2": 29,
+    "1": 13,
+    "2": 32,
     "3": 9,
     "?": 112
    },
    "tipos": {
-    "aplicacion": 1,
+    "aplicacion": 2,
     "dificil": 1,
+    "excepcion": 1,
+    "plazos": 1,
     "procedimiento": 2,
-    "requisitos": 1,
+    "requisitos": 2,
     "sin_tipo": 157
    },
-   "ultima_actualizacion": "2026-11-02",
+   "ultima_actualizacion": "2026-11-09",
    "cambios_recientes": []
   },
   {
@@ -1841,15 +1843,15 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 49,
+    "TESTLEY_GENERATED": 50,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 4,
+    "REVIEW_REQUIRED": 5,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 11,
-    "2": 28,
+    "2": 29,
     "3": 10
    },
    "tipos": {
@@ -1858,9 +1860,10 @@
     "excepcion": 2,
     "literal": 2,
     "organos": 4,
+    "procedimiento": 1,
     "sin_tipo": 38
    },
-   "ultima_actualizacion": "2026-11-02",
+   "ultima_actualizacion": "2026-11-09",
    "cambios_recientes": []
   },
   {
@@ -1945,15 +1948,15 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 81,
+    "TESTLEY_GENERATED": 82,
     "OFFICIAL_EXAM": 0,
-    "REVIEW_REQUIRED": 7,
+    "REVIEW_REQUIRED": 8,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
     "1": 19,
-    "2": 47,
+    "2": 48,
     "3": 15
    },
    "tipos": {
@@ -1964,11 +1967,11 @@
     "excepcion": 4,
     "literal": 2,
     "organos": 6,
-    "procedimiento": 2,
+    "procedimiento": 3,
     "requisitos": 1,
     "sin_tipo": 60
    },
-   "ultima_actualizacion": "2026-11-02",
+   "ultima_actualizacion": "2026-11-09",
    "cambios_recientes": []
   },
   {
@@ -5483,14 +5486,14 @@
    "cobertura": "CUBIERTO",
    "objetivo": 30,
    "preguntas": {
-    "TESTLEY_GENERATED": 76,
+    "TESTLEY_GENERATED": 77,
     "OFFICIAL_EXAM": 0,
     "REVIEW_REQUIRED": 8,
     "DEPRECATED": 0,
     "OUTDATED": 0
    },
    "dificultad": {
-    "1": 9,
+    "1": 10,
     "2": 21,
     "3": 3,
     "?": 43
@@ -5502,7 +5505,7 @@
     "conceptual": 3,
     "dificil": 2,
     "excepcion": 3,
-    "literal": 3,
+    "literal": 4,
     "negativa": 1,
     "organos": 2,
     "plazos": 1,
@@ -6514,8 +6517,8 @@
     },
     "contenido": {
      "OFFICIAL_EXAM": 0,
-     "TESTLEY_GENERATED": 2225,
-     "REVIEW_REQUIRED": 88
+     "TESTLEY_GENERATED": 2233,
+     "REVIEW_REQUIRED": 90
     },
     "entrenable": true
    },
