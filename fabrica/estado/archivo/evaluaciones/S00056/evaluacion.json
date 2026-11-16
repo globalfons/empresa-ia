@@ -1,0 +1,978 @@
+{
+ "evaluacion": "S00056",
+ "creada_el": "2026-11-16T07:51:31",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 47,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "2.0",
+    "2.1",
+    "3.0",
+    "4.0",
+    "5.0",
+    "5.1"
+   ],
+   "prompt_sha256": "99a7d46ee4ebb5d7d23860b5ff712dee7413076473f7c0ca50fd8361374bc30f",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "7251c73ec5407835ed9a6573da0d3ae9fb1c3fe2cdd69a39ff495a5a5fee35b0",
+    "0.1": "2358ac66fb81a401f4029ad2aec515fa955b395a5e74e757ba45cfd111f8e2cc",
+    "0.2": "da3e2fd46193349f07124aa1d70e575c7a388e0cbc9f950d12f661b2692d0291",
+    "1.0": "d1e218ddc3d9e8200e4ffb5addc814fe0fb53d1358280ebe08006bc19d9a7203",
+    "2.0": "ee970aeb69a71d92e52a5c66dcec9fbeebe684e75438b78262771a99d4fd1477",
+    "2.1": "a47d5a397b4b306268a8567f6727a5568cad7392c599b766f9e7d54f58f851bf",
+    "3.0": "4d5e454a519c589374c5f9d3a7d6a7bf7c2ba52989f368757cd37c0b8b3561d0",
+    "4.0": "cd9fabe2a08b7804ec19bae5bd7b74be2755e0eb07927cd981d6d45f1f094634",
+    "5.0": "70c87d90d10584fe0106299f77ab13bbfac95f9977e822d5011c5accccd2d1c3",
+    "5.1": "e04df9bd487381dc32e9cec33823b1adbfc471925c90b86a037fe65216d5ed69"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.1 dice que la ley se aplica a mayores de catorce y menores de dieciocho; la opción 0 coincide. La cita contiene exactamente ese tramo de edad. Las otras opciones (doce, veintiuno, dieciséis) contradicen el texto. Pregunta sobre un dato de edad, útil para examen. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto dice que la LO 5/2000 se aplica a mayores de catorce y menores de dieciocho que cometan delitos, y un joven de diecisiete encaja, así que la opción 0 está respaldada y la cita lo contiene. Pero la opción 3 (LO 1/1996) aparece en el texto como norma de derechos que se les reconoce, y se puede discutir. Además la pregunta es casi un calco de la 0.0 (mismo hecho, la franja de edad, en forma de caso), aunque 0.0 no figura en parecidas, así que no marco duplicada. Dudo de la claridad por esa redundancia y por la ambigüedad de las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 1.2 dice que gozan de todos los derechos reconocidos en la Constitución y el ordenamiento jurídico, y la opción 0 lo reproduce. La cita contiene ese elemento, pero omite que el texto menciona 'particularmente' la LO 1/1996 y la Convención sobre los Derechos del Niño. Con la cita sola, las opciones 2 y 3 parecen incorrectas aunque el texto las toca, y la opción 3 ('sin más') es discutible. Además la opción 0 es la más amplia y se distingue por su generalidad, lo que facilita acertar sin conocer el texto. Por prudencia marco cita insuficiente y claridad dudosa.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El texto dice que los servicios de inspección educativa velan por el cumplimiento y aplicación de los principios y valores del capítulo para fomentar la igualdad real entre mujeres y hombres en el sistema educativo. La opción 0 coincide y la cita contiene el sujeto. Los distractores (consejos escolares, Observatorio, AMPAs) no aparecen en el texto como responsables. Pregunta sobre un órgano concreto, útil y no trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto dice que los indicadores se aprueban mediante orden del Ministerio de Agricultura, Alimentación y Medio Ambiente, previo informe del Consejo Estatal y de la Conferencia Sectorial, y la cita lo recoge. Pero la opción 1 termina en 'a propuesta' sin completar, lo que es un defecto de redacción. El distractor 2 (Resolución de la Conferencia Sectorial) y el 3 (Acuerdo del Consejo Estatal) son organismos que el texto menciona solo como informantes, y la formulación de las opciones es deficiente. Marco claridad false por la opción mal formada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta NO: las tres primeras opciones (transmitir a la sociedad, toma de decisiones, escala supranacional) aparecen en el texto, y 'fijar sanciones' no aparece, por lo que la opción 3 es la correcta y la cita contiene las tres finalidades. Sin embargo, el distractor correcto es absurdo en el contexto (sanciones en un sistema de indicadores) y se descarta sin conocer el texto, por lo que la pregunta no discrimina. Considero la claridad insuficiente por regalar la respuesta. Es del mismo artículo que 2.0 pero evalúa un hecho distinto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 4 dice que los miembros de la Guardia Civil solo pueden ser privados de libertad en los casos previstos por las Leyes y en la forma que estas dispongan. La opción 0 lo reproduce y la cita contiene la frase completa. Los distractores (mando de unidad, Dirección General, normas reglamentarias) contradicen la reserva de ley. Aunque el artículo es de una sola frase, la pregunta pide un dato de contenido (reserva de ley) y no es una fórmula de aprobación.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 16 dice que los Poderes Públicos procurarán atender al principio de presencia equilibrada de mujeres y hombres en nombramientos y designaciones de cargos de responsabilidad. La opción 0 coincide y la cita contiene la frase completa. Los distractores (paridad estricta 50%, mérito sin sexo, cuota 40%) no figuran en el texto. Pregunta de concepto clave y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 25.1 dice que el envío de armazones y componentes esenciales acabados fundidos en fábricas necesita guía expedida por la Intervención de Armas de la Guardia Civil, y la cita contiene ese sujeto. Respaldada. Sin embargo, el art. 25.3 menciona guías especiales expedidas por la Guardia Civil (otro supuesto), y 5.1 pregunta por el apartado 2, así que son hechos distintos. El texto es claro; no hay duplicada porque 5.1 no figura en parecidas. La opción 1 (banco de pruebas) puede resultar plausible al leer el art. 25.2, por lo que marco unica=false por cautela.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 25.2 dice que donde reside un banco oficial de pruebas el envío fábrica-banco y viceversa se documenta con el talón-guía reglamentario que facilita el propio banco; la opción 0 lo reproduce y la cita lo contiene. Pero la opción 1 (guías especiales de la Guardia Civil) procede del apartado 3, y la opción 2 (guía de la Intervención de Armas) del apartado 1, ambas presentes en el mismo artículo. Con la cita sola resultan erróneas aunque el texto las usa en otros supuestos. La pregunta mezcla supuestos del mismo artículo y es sensible a confusión; marco cita insuficiente por no incluir los elementos que descartan las otras opciones y unica=true porque el supuesto de la pregunta está acotado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-ac4fbe5ac10d0d375.jsonl",
+    "respuesta_sha256": "eadaaafe8a078751451dd1d5b0cb865e699081ca7a3c287098770973a326ed16"
+   },
+   "registrada_el": "2026-11-16T07:52:51",
+   "intentos": [
+    {
+     "t": "2026-11-16T07:52:51",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-ac4fbe5ac10d0d375.jsonl",
+      "respuesta_sha256": "eadaaafe8a078751451dd1d5b0cb865e699081ca7a3c287098770973a326ed16"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.1 dice que la ley se aplica a mayores de catorce y menores de dieciocho; la opción 0 coincide. La cita contiene exactamente ese tramo de edad. Las otras opciones (doce, veintiuno, dieciséis) contradicen el texto. Pregunta sobre un dato de edad, útil para examen. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto dice que la LO 5/2000 se aplica a mayores de catorce y menores de dieciocho que cometan delitos, y un joven de diecisiete encaja, así que la opción 0 está respaldada y la cita lo contiene. Pero la opción 3 (LO 1/1996) aparece en el texto como norma de derechos que se les reconoce, y se puede discutir. Además la pregunta es casi un calco de la 0.0 (mismo hecho, la franja de edad, en forma de caso), aunque 0.0 no figura en parecidas, así que no marco duplicada. Dudo de la claridad por esa redundancia y por la ambigüedad de las opciones.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 1.2 dice que gozan de todos los derechos reconocidos en la Constitución y el ordenamiento jurídico, y la opción 0 lo reproduce. La cita contiene ese elemento, pero omite que el texto menciona 'particularmente' la LO 1/1996 y la Convención sobre los Derechos del Niño. Con la cita sola, las opciones 2 y 3 parecen incorrectas aunque el texto las toca, y la opción 3 ('sin más') es discutible. Además la opción 0 es la más amplia y se distingue por su generalidad, lo que facilita acertar sin conocer el texto. Por prudencia marco cita insuficiente y claridad dudosa.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El texto dice que los servicios de inspección educativa velan por el cumplimiento y aplicación de los principios y valores del capítulo para fomentar la igualdad real entre mujeres y hombres en el sistema educativo. La opción 0 coincide y la cita contiene el sujeto. Los distractores (consejos escolares, Observatorio, AMPAs) no aparecen en el texto como responsables. Pregunta sobre un órgano concreto, útil y no trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto dice que los indicadores se aprueban mediante orden del Ministerio de Agricultura, Alimentación y Medio Ambiente, previo informe del Consejo Estatal y de la Conferencia Sectorial, y la cita lo recoge. Pero la opción 1 termina en 'a propuesta' sin completar, lo que es un defecto de redacción. El distractor 2 (Resolución de la Conferencia Sectorial) y el 3 (Acuerdo del Consejo Estatal) son organismos que el texto menciona solo como informantes, y la formulación de las opciones es deficiente. Marco claridad false por la opción mal formada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta NO: las tres primeras opciones (transmitir a la sociedad, toma de decisiones, escala supranacional) aparecen en el texto, y 'fijar sanciones' no aparece, por lo que la opción 3 es la correcta y la cita contiene las tres finalidades. Sin embargo, el distractor correcto es absurdo en el contexto (sanciones en un sistema de indicadores) y se descarta sin conocer el texto, por lo que la pregunta no discrimina. Considero la claridad insuficiente por regalar la respuesta. Es del mismo artículo que 2.0 pero evalúa un hecho distinto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 4 dice que los miembros de la Guardia Civil solo pueden ser privados de libertad en los casos previstos por las Leyes y en la forma que estas dispongan. La opción 0 lo reproduce y la cita contiene la frase completa. Los distractores (mando de unidad, Dirección General, normas reglamentarias) contradicen la reserva de ley. Aunque el artículo es de una sola frase, la pregunta pide un dato de contenido (reserva de ley) y no es una fórmula de aprobación.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 16 dice que los Poderes Públicos procurarán atender al principio de presencia equilibrada de mujeres y hombres en nombramientos y designaciones de cargos de responsabilidad. La opción 0 coincide y la cita contiene la frase completa. Los distractores (paridad estricta 50%, mérito sin sexo, cuota 40%) no figuran en el texto. Pregunta de concepto clave y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 25.1 dice que el envío de armazones y componentes esenciales acabados fundidos en fábricas necesita guía expedida por la Intervención de Armas de la Guardia Civil, y la cita contiene ese sujeto. Respaldada. Sin embargo, el art. 25.3 menciona guías especiales expedidas por la Guardia Civil (otro supuesto), y 5.1 pregunta por el apartado 2, así que son hechos distintos. El texto es claro; no hay duplicada porque 5.1 no figura en parecidas. La opción 1 (banco de pruebas) puede resultar plausible al leer el art. 25.2, por lo que marco unica=false por cautela.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 25.2 dice que donde reside un banco oficial de pruebas el envío fábrica-banco y viceversa se documenta con el talón-guía reglamentario que facilita el propio banco; la opción 0 lo reproduce y la cita lo contiene. Pero la opción 1 (guías especiales de la Guardia Civil) procede del apartado 3, y la opción 2 (guía de la Intervención de Armas) del apartado 1, ambas presentes en el mismo artículo. Con la cita sola resultan erróneas aunque el texto las usa en otros supuestos. La pregunta mezcla supuestos del mismo artículo y es sensible a confusión; marco cita insuficiente por no incluir los elementos que descartan las otras opciones y unica=true porque el supuesto de la pregunta está acotado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "5.2",
+    "6.0",
+    "6.1",
+    "7.0",
+    "7.1",
+    "8.0",
+    "9.0",
+    "9.1",
+    "9.2",
+    "10.0"
+   ],
+   "prompt_sha256": "5892d6f9a33efc9a87bb30f4e062617da3a5967f6869dd68d96062d59e2db277",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "5.2": "5ec0da142da725b4ce64cec7913c49bfc501ded1a0d49fc67df99a156835698a",
+    "6.0": "e767ed18d1421415fe2f0d296c635d740459ef08cb28299a8e330820788ca4c0",
+    "6.1": "3862793c1efa8894497727f06ccc54775706ae7141aa4f7738dcb628d52a627b",
+    "7.0": "2910eb83e2b89a7a32ff31e31a5d74d2f197ea20e80269ca4197d9cdc6c01e07",
+    "7.1": "2b6b649a35614787e930e84ad21f57c7411189e683fc5dc12ce0ae89a7fecfd9",
+    "8.0": "8345d77c48980406e68d53bccccc6641ebda4162ccddd65796f85076e799980e",
+    "9.0": "df16b7490b038cfcbca1d0f15c44cc166933876306c0460adc2282c80e6645fd",
+    "9.1": "8a10636f6f3c77c9346a430099ae33820e051ba395c5043e30a60657af2ea08d",
+    "9.2": "83351d1621405f341a14e63c16092865d372b4978363aa3ed32b8b30e6e98a9c",
+    "10.0": "cc33820615bec3bd4ef69b0cfddadcee31ef498833d6905a970a6db829943714"
+   },
+   "veredictos": [
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 25.3 dice que las fábricas de otra localidad deben enviar las armas al banco 'salvo que el personal del banco se traslade a las fábricas'. La cita contiene exactamente esa excepción. Las otras opciones (misma provincia, número de armas, autorización de la Delegación) no aparecen en el texto, y la excepción es única. La pregunta es clara y no regala la respuesta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 30.1 LOPDGDD indica que se podrán imponer al representante las medidas del RGPD 'solidariamente con el responsable o encargado'. La cita recoge ese elemento completo. Subsidiaria, mancomunada y exoneración del responsable no están respaldadas (el texto añade expresamente 'sin perjuicio de la responsabilidad' del responsable). Una sola opción correcta, sin duplicados en parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 30.1 atribuye la facultad a la AEPD o, en su caso, a las autoridades autonómicas de protección de datos. La cita contiene ambos elementos. Los distractores (CEPD, autoridad del Estado del responsable, juzgados) no figuran en el texto. Prueba un hecho distinto de 6.0 (quién impone, no cómo), así que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 7.2 respalda la respuesta: en minas, canteras y túneles con técnica minera las funciones las desarrollan 'los órganos específicos contemplados en su normativa reguladora'. Pero la cita termina en 'técnica minera' y omite el sujeto ('por los órganos específicos...'), que es justo la respuesta. Por tanto la cita sola no basta para elegir la opción a. Las otras opciones no están respaldadas por el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 7.1.c dice que se sanciona el incumplimiento 'con arreglo a lo previsto en el capítulo VII' de la ley. La cita lo contiene íntegro. El capítulo V, el Estatuto de los Trabajadores y el Código Penal no aparecen como base sancionadora en el texto. Respuesta única y pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto respalda la opción a y la cita es suficiente. Sin embargo el art. 44 es en esencia una sola frase y la opción correcta ('los mismos que cuando son de diferente sexo') solo la reformula. Es una pregunta trivial y su respuesta es obvia por redacción, por lo que no es útil como pregunta de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 36.1.g indica que los directores de seguridad comunican a las Fuerzas y Cuerpos de Seguridad competentes las circunstancias relevantes para la seguridad ciudadana y los hechos delictivos. La cita contiene el destinatario. Fiscal, Delegación del Gobierno y juzgado no figuran en el texto. Sin duplicados en parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 36.1.e incluye la 'validación provisional' de las medidas de seguridad entre las funciones del director de seguridad, y la cita lo recoge. Los distractores (homologación definitiva, tarjeta de identidad profesional, autorización de empresas) no son funciones listadas; la letra f solo habla de 'comprobar' el cumplimiento de homologación. Única correcta y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "La opción a está respaldada (decisión gubernativa por concentración de riesgo, art. 36.2) y la cita la contiene. Pero el art. 36.2 prevé tres supuestos: exigencia de la normativa de desarrollo por la dimensión del servicio, decisión gubernativa y disposición especial. La pregunta '¿en qué caso?' sugiere un único caso, lo que es ambiguo aunque solo uno aparezca entre las opciones. En la duda se marca unica=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta negativa. El texto solo dice que a ascendientes y descendientes no se les exige la documentación del vínculo familiar. No dice que sí se exijan la tasa, el pasaporte o los medios económicos: el artículo remite a 'lo dispuesto en el presente real decreto' (otros artículos no incluidos). No se puede comprobar con el texto que las otras opciones sí se exigen, así que la respuesta no queda plenamente respaldada. La cita tampoco muestra los elementos de las demás opciones.",
+     "criteria_checked": {
+      "respaldada": false,
+      "cita_suficiente": false,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-adfceb562d0f01589.jsonl",
+    "respuesta_sha256": "30d88ff51fee158b5de1cbd75b9dcc465487357291900844007100039358b221"
+   },
+   "registrada_el": "2026-11-16T07:52:51",
+   "intentos": [
+    {
+     "t": "2026-11-16T07:52:51",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-adfceb562d0f01589.jsonl",
+      "respuesta_sha256": "30d88ff51fee158b5de1cbd75b9dcc465487357291900844007100039358b221"
+     },
+     "respuesta": "[\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 25.3 dice que las fábricas de otra localidad deben enviar las armas al banco 'salvo que el personal del banco se traslade a las fábricas'. La cita contiene exactamente esa excepción. Las otras opciones (misma provincia, número de armas, autorización de la Delegación) no aparecen en el texto, y la excepción es única. La pregunta es clara y no regala la respuesta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 30.1 LOPDGDD indica que se podrán imponer al representante las medidas del RGPD 'solidariamente con el responsable o encargado'. La cita recoge ese elemento completo. Subsidiaria, mancomunada y exoneración del responsable no están respaldadas (el texto añade expresamente 'sin perjuicio de la responsabilidad' del responsable). Una sola opción correcta, sin duplicados en parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 30.1 atribuye la facultad a la AEPD o, en su caso, a las autoridades autonómicas de protección de datos. La cita contiene ambos elementos. Los distractores (CEPD, autoridad del Estado del responsable, juzgados) no figuran en el texto. Prueba un hecho distinto de 6.0 (quién impone, no cómo), así que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 7.2 respalda la respuesta: en minas, canteras y túneles con técnica minera las funciones las desarrollan 'los órganos específicos contemplados en su normativa reguladora'. Pero la cita termina en 'técnica minera' y omite el sujeto ('por los órganos específicos...'), que es justo la respuesta. Por tanto la cita sola no basta para elegir la opción a. Las otras opciones no están respaldadas por el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 7.1.c dice que se sanciona el incumplimiento 'con arreglo a lo previsto en el capítulo VII' de la ley. La cita lo contiene íntegro. El capítulo V, el Estatuto de los Trabajadores y el Código Penal no aparecen como base sancionadora en el texto. Respuesta única y pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto respalda la opción a y la cita es suficiente. Sin embargo el art. 44 es en esencia una sola frase y la opción correcta ('los mismos que cuando son de diferente sexo') solo la reformula. Es una pregunta trivial y su respuesta es obvia por redacción, por lo que no es útil como pregunta de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 36.1.g indica que los directores de seguridad comunican a las Fuerzas y Cuerpos de Seguridad competentes las circunstancias relevantes para la seguridad ciudadana y los hechos delictivos. La cita contiene el destinatario. Fiscal, Delegación del Gobierno y juzgado no figuran en el texto. Sin duplicados en parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 36.1.e incluye la 'validación provisional' de las medidas de seguridad entre las funciones del director de seguridad, y la cita lo recoge. Los distractores (homologación definitiva, tarjeta de identidad profesional, autorización de empresas) no son funciones listadas; la letra f solo habla de 'comprobar' el cumplimiento de homologación. Única correcta y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"La opción a está respaldada (decisión gubernativa por concentración de riesgo, art. 36.2) y la cita la contiene. Pero el art. 36.2 prevé tres supuestos: exigencia de la normativa de desarrollo por la dimensión del servicio, decisión gubernativa y disposición especial. La pregunta '¿en qué caso?' sugiere un único caso, lo que es ambiguo aunque solo uno aparezca entre las opciones. En la duda se marca unica=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta negativa. El texto solo dice que a ascendientes y descendientes no se les exige la documentación del vínculo familiar. No dice que sí se exijan la tasa, el pasaporte o los medios económicos: el artículo remite a 'lo dispuesto en el presente real decreto' (otros artículos no incluidos). No se puede comprobar con el texto que las otras opciones sí se exigen, así que la respuesta no queda plenamente respaldada. La cita tampoco muestra los elementos de las demás opciones.\",\"criteria_checked\":{\"respaldada\":false,\"cita_suficiente\":false,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "11.0",
+    "11.1",
+    "11.2",
+    "12.0",
+    "13.0",
+    "14.0",
+    "14.1",
+    "14.2",
+    "15.0",
+    "16.0"
+   ],
+   "prompt_sha256": "290193c428880c5a1ec01661eba9075cca67449256231c75ff5d6faf5732fbc9",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "11.0": "ffae49dd262f0e271294fcd294b438dddb1b84b3f0c4a6e16c7794d5cb919d71",
+    "11.1": "a95076c93c6188c8582b9b48db56d7a67dace44aed81e396bc6ca37f264336e6",
+    "11.2": "3dae01d9fda01095f262204ca4ef468fe94481dfc31098f21f923ca9b1967622",
+    "12.0": "2e76c5bfb3ca32913d814f832eaa2f32099eae1a679d23010700fdd66825eadc",
+    "13.0": "e11863c316cff4b4e175b39f179bd604bff9d39476866b480679c4850e57048b",
+    "14.0": "12f0b729dcd7045e6f1d0728e569a9e93819bf1eb80da764b715817abe354db8",
+    "14.1": "33b518ca6b744ed2b1757a69790a11b3f28c85166cdde5283687a8bd2fea7ccf",
+    "14.2": "c1f229e9cc56c40bc48fdd8a3bea7efd1a99b66f92773c41e177159a4760bcd6",
+    "15.0": "091c3d202575916a388ffda8ee090679f9ac29acc774e1722f814002388045ad",
+    "16.0": "b8cd6b0dd731e7f03246fc3a8abf1ba96a538a1c20cf73ef3fc6996c2afc003a"
+   },
+   "veredictos": [
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2.4 dice expresamente que la competencia para los delitos de los arts. 571 a 580 CP corresponde al Juzgado Central de Menores de la Audiencia Nacional; la opción A es correcta. La cita contiene el elemento completo. Los distractores (Juzgado de Menores del lugar, Sala de lo Penal, Juzgado Central de Instrucción) no son correctos según el texto. Pregunta clara y útil (órgano competente).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 2.2 atribuye a los Jueces de Menores la competencia para resolver sobre las responsabilidades civiles; la cita lo recoge íntegramente. Ningún otro distractor (Primera Instancia, entidades de protección, Juzgados de lo Penal) tiene apoyo en el texto. Pregunta clara y sin pistas en las opciones.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.2",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 2.3 respalda el Juez de Menores del lugar del hecho (Valladolid). Pero el art. 2.3 añade 'sin perjuicio de lo establecido en el artículo 20.3', y la cita recortada omite esa salvedad; además la pregunta dice 'con carácter general', lo que depende de un artículo no incluido. La cita está truncada (sin la salvedad) y, mostrada sola, puede ser engañosa. Se marca cita_suficiente=false por precaución; la opción A es la única correcta entre las ofrecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto dice que adoptará las medidas 'El Ente público al que corresponda velar para que los medios audiovisuales cumplan sus obligaciones'. La opción A es casi una paráfrasis literal, de modo que la respuesta se da casi sola y la pregunta es de bajo valor discriminante (distractores obviamente ajenos al texto). Además el texto añade 'sin perjuicio de las posibles actuaciones por parte de otras entidades', lo que hace discutible la unicidad de la opción A frente a otras entidades como Delegación del Gobierno o Instituto de las Mujeres. Por la duda, clara=false y unica=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta negativa: el art. 12.2 enumera tres elementos (diagnóstico, objetivos cuantitativos y cualitativos, acciones de la AGE y estimaciones presupuestarias). Las opciones A, B y C coinciden con a), b) y c); la D (régimen sancionador) no figura en el texto, por lo que es la respuesta correcta. La cita contiene los tres elementos, necesarios para ver que las otras opciones sí aparecen. Única y clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.2 indica que el jefe de la unidad, centro u órgano donde presta servicio puede autorizar, de forma motivada, el registro personal cuando lo exija la investigación de un hecho delictivo. La cita contiene el sujeto y el supuesto. Los distractores (juez de instrucción, Director General, fiscal jefe) no aparecen en el texto. Pregunta clara y útil. No es duplicada de las otras preguntas del art. 5 (14.1 y 14.2 tratan hechos distintos: domicilio habitual y formalidades).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.1 establece que el pabellón asignado al guardia civil en su unidad se considerará domicilio habitual; la cita lo recoge literalmente. Los distractores (dependencia oficial, residencia temporal, alojamiento de servicio) no tienen apoyo en el texto. Pregunta concreta, clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 5.2 exige que el registro se realice con la asistencia del interesado y en presencia de, al menos, un testigo; la cita contiene ambos elementos. Los distractores (letrado y LAJ, autorización previa del juez, representante de asociación) no aparecen en el texto. Pregunta clara, bien formada y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 23 dice que el sistema educativo incluirá, dentro de sus principios de calidad, la eliminación de los obstáculos que dificultan la igualdad efectiva entre mujeres y hombres; la opción A lo reproduce y la cita contiene el elemento. Los distractores (cuotas por sexo, órgano de igualdad en cada centro, separar al alumnado) no figuran en el texto. El texto añade también el fomento de la igualdad plena, pero la pregunta es 'qué incluirá' y A es correcta sin que ninguna otra opción lo sea.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 26.1 respalda que la reparación se hace solo por las industrias fabricantes o por armeros autorizados por la Intervención de Armas de la Guardia Civil; la opción A coincide. Sin embargo la cita omite que los establecimientos deben estar abiertos e inscritos en un registro de la Intervención, y la pregunta 'quién puede reparar' se responde bien con la cita. El problema es de claridad: la pregunta es muy genérica y la opción A es casi una copia literal frente a distractores inverosímiles que mencionan organismos inexistentes en el texto; además el enunciado omite 'Intervención de Armas de la Guardia Civil' en la opción, lo que la hace ligeramente imprecisa. Por exigencia, clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a5bf426e07d820d90.jsonl",
+    "respuesta_sha256": "e48dca0d53dafb3b256419f99d18802c839f06d8091e30eaf29e9290c0b282f1"
+   },
+   "registrada_el": "2026-11-16T07:53:29",
+   "intentos": [
+    {
+     "t": "2026-11-16T07:53:29",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a5bf426e07d820d90.jsonl",
+      "respuesta_sha256": "e48dca0d53dafb3b256419f99d18802c839f06d8091e30eaf29e9290c0b282f1"
+     },
+     "respuesta": "[\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 2.4 dice expresamente que la competencia para los delitos de los arts. 571 a 580 CP corresponde al Juzgado Central de Menores de la Audiencia Nacional; la opción A es correcta. La cita contiene el elemento completo. Los distractores (Juzgado de Menores del lugar, Sala de lo Penal, Juzgado Central de Instrucción) no son correctos según el texto. Pregunta clara y útil (órgano competente).\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 2.2 atribuye a los Jueces de Menores la competencia para resolver sobre las responsabilidades civiles; la cita lo recoge íntegramente. Ningún otro distractor (Primera Instancia, entidades de protección, Juzgados de lo Penal) tiene apoyo en el texto. Pregunta clara y sin pistas en las opciones.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.2\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 2.3 respalda el Juez de Menores del lugar del hecho (Valladolid). Pero el art. 2.3 añade 'sin perjuicio de lo establecido en el artículo 20.3', y la cita recortada omite esa salvedad; además la pregunta dice 'con carácter general', lo que depende de un artículo no incluido. La cita está truncada (sin la salvedad) y, mostrada sola, puede ser engañosa. Se marca cita_suficiente=false por precaución; la opción A es la única correcta entre las ofrecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto dice que adoptará las medidas 'El Ente público al que corresponda velar para que los medios audiovisuales cumplan sus obligaciones'. La opción A es casi una paráfrasis literal, de modo que la respuesta se da casi sola y la pregunta es de bajo valor discriminante (distractores obviamente ajenos al texto). Además el texto añade 'sin perjuicio de las posibles actuaciones por parte de otras entidades', lo que hace discutible la unicidad de la opción A frente a otras entidades como Delegación del Gobierno o Instituto de las Mujeres. Por la duda, clara=false y unica=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta negativa: el art. 12.2 enumera tres elementos (diagnóstico, objetivos cuantitativos y cualitativos, acciones de la AGE y estimaciones presupuestarias). Las opciones A, B y C coinciden con a), b) y c); la D (régimen sancionador) no figura en el texto, por lo que es la respuesta correcta. La cita contiene los tres elementos, necesarios para ver que las otras opciones sí aparecen. Única y clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.2 indica que el jefe de la unidad, centro u órgano donde presta servicio puede autorizar, de forma motivada, el registro personal cuando lo exija la investigación de un hecho delictivo. La cita contiene el sujeto y el supuesto. Los distractores (juez de instrucción, Director General, fiscal jefe) no aparecen en el texto. Pregunta clara y útil. No es duplicada de las otras preguntas del art. 5 (14.1 y 14.2 tratan hechos distintos: domicilio habitual y formalidades).\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.1 establece que el pabellón asignado al guardia civil en su unidad se considerará domicilio habitual; la cita lo recoge literalmente. Los distractores (dependencia oficial, residencia temporal, alojamiento de servicio) no tienen apoyo en el texto. Pregunta concreta, clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 5.2 exige que el registro se realice con la asistencia del interesado y en presencia de, al menos, un testigo; la cita contiene ambos elementos. Los distractores (letrado y LAJ, autorización previa del juez, representante de asociación) no aparecen en el texto. Pregunta clara, bien formada y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 23 dice que el sistema educativo incluirá, dentro de sus principios de calidad, la eliminación de los obstáculos que dificultan la igualdad efectiva entre mujeres y hombres; la opción A lo reproduce y la cita contiene el elemento. Los distractores (cuotas por sexo, órgano de igualdad en cada centro, separar al alumnado) no figuran en el texto. El texto añade también el fomento de la igualdad plena, pero la pregunta es 'qué incluirá' y A es correcta sin que ninguna otra opción lo sea.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 26.1 respalda que la reparación se hace solo por las industrias fabricantes o por armeros autorizados por la Intervención de Armas de la Guardia Civil; la opción A coincide. Sin embargo la cita omite que los establecimientos deben estar abiertos e inscritos en un registro de la Intervención, y la pregunta 'quién puede reparar' se responde bien con la cita. El problema es de claridad: la pregunta es muy genérica y la opción A es casi una copia literal frente a distractores inverosímiles que mencionan organismos inexistentes en el texto; además el enunciado omite 'Intervención de Armas de la Guardia Civil' en la opción, lo que la hace ligeramente imprecisa. Por exigencia, clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "16.1",
+    "16.2",
+    "17.0",
+    "17.1",
+    "17.2",
+    "18.0",
+    "18.1",
+    "18.2",
+    "19.0",
+    "20.0"
+   ],
+   "prompt_sha256": "d7437e378d9cd4b399642fb287a77b3a018963d8ea17cc0e83ed2bc0764a4ff2",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "16.1": "1b497edfae99b0872185ab0fee741e7bc2ba6920c4a4177fffc36d5f9f18492a",
+    "16.2": "d75d0c5dda134fc08e399418abc840b0b09720a1bbc3399d78a0fc820aaf4840",
+    "17.0": "9e8d6ccba6cf96c21c6e1780f8894e99854cffc7b21359ca736982c6881bab17",
+    "17.1": "b1356f8a6aa147adc84eeffcae5c6bd029e220b79b2ca15513e58d80c5423c36",
+    "17.2": "b8c760a6e60b2163d6e5a6f7fce58431b30a1be3ea1ea36fe6ac8c91b439db11",
+    "18.0": "c5ca54b45f56cc79c483d4f9e0e4c3372ac5da31a615070a2bc7360270aa68c4",
+    "18.1": "0c38b6686e2762944bbba0bb0eed25442d07f7c100995acb9ac9a7665cce6459",
+    "18.2": "87c32e1d73dc63ef577be1f3086ee91619dc4ca33b5e895ac0ea7fcb6a447f2c",
+    "19.0": "5f453b4568bd715fadf715eba18d6cff4ad7b58038272fc61e9696016fbe217a",
+    "20.0": "2f0b94341a4104f0487cdda7c39792e8f676bd0d504c4f82e0ac24db4379e061"
+   },
+   "veredictos": [
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 2 del art. 26 dice que el establecimiento envía 'mensualmente' a la Intervención de Armas una copia de las anotaciones del libro. La opción a (Mensualmente) es correcta. La cita contiene el dato completo. Los distractores (trimestral, semestral, anual) contradicen el texto. La pregunta no revela la respuesta. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 3 dice que la guía de pertenencia 'quedará en poder del armero mientras dure la reparación'. La cita recoge exactamente eso. Los demás destinos (Intervención, propietario, banco de pruebas) no están respaldados por el texto. Pregunta clara y sin duplicados (parecidas vacío).",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.3 atribuye al responsable del tratamiento la decisión de destruir, devolver o entregar a un nuevo encargado los datos al finalizar el servicio. La cita reproduce el apartado completo. Ninguna otra opción (encargado, AEPD, DPD) tiene respaldo en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.2 dice que 'tendrá asimismo la consideración de responsable del tratamiento quien figurando como encargado utilizase los datos para sus propias finalidades'. La cita lo recoge íntegro. Encargado, subencargado y tercero destinatario no están respaldados por el texto. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.3 dice que no procede la destrucción si hay previsión legal de conservación, y que los datos deberán ser devueltos al responsable, que garantizará su conservación. La cita contiene ambos elementos (condición y consecuencia). Destruirlos, entregarlos a la AEPD o a un nuevo encargado sin el responsable contradicen el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 8.1 define al Instituto Nacional de Seguridad e Higiene en el Trabajo como órgano científico técnico especializado de la AGE para el análisis y estudio de las condiciones de seguridad y salud. La cita incluye esa definición. Las demás opciones (Comisión Nacional, Inspección, Agencia Europea) aparecen en el texto pero con otros roles, así que no son correctas. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "Pregunta negativa (NO es función). El texto respalda la respuesta: las funciones a-e del art. 8.1 no incluyen imponer sanciones, y las otras tres opciones sí son funciones (a, c, d). Pero la cita solo reproduce la función a). Para una pregunta NO, la cita debe mostrar que las otras opciones sí aparecen en el texto, y las funciones c) y d) no están en ella. Por tanto cita_suficiente es false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 8.3 dice que, en relación con las Instituciones de la UE, el Instituto actuará como centro de referencia nacional. La cita lo contiene. Autoridad de control, punto de contacto subsidiario y organismo notificado europeo no figuran en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 47.2 del Código Civil dice que tampoco pueden contraer matrimonio entre sí los colaterales por consanguinidad hasta el tercer grado. La cita lo recoge con el grado exacto. Segundo, cuarto y quinto grado son incorrectos según el texto. Es un dato concreto y útil para examen; la pregunta cita el art. 47 y es unívoca.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "20.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.4 de la Ley 5/2014 dice que, salvo casos previstos en la ley y los que se determinen reglamentariamente, los vigilantes ejercen sus funciones en el interior de los inmuebles o propiedades cuya vigilancia tengan encargada. La cita contiene esa regla. Vía pública, lugar indicado por la empresa y espacios autorizados por la policía local no tienen respaldo en el texto. La pregunta reproduce la salvedad y es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-abf1a652d60ec2976.jsonl",
+    "respuesta_sha256": "a5ebc3f0530c28d04b2d8296f69ca5edd7bd8ecfa143d7792d69c779c8115617"
+   },
+   "registrada_el": "2026-11-16T07:53:32",
+   "intentos": [
+    {
+     "t": "2026-11-16T07:53:32",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-abf1a652d60ec2976.jsonl",
+      "respuesta_sha256": "a5ebc3f0530c28d04b2d8296f69ca5edd7bd8ecfa143d7792d69c779c8115617"
+     },
+     "respuesta": "[\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 2 del art. 26 dice que el establecimiento envía 'mensualmente' a la Intervención de Armas una copia de las anotaciones del libro. La opción a (Mensualmente) es correcta. La cita contiene el dato completo. Los distractores (trimestral, semestral, anual) contradicen el texto. La pregunta no revela la respuesta. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.2\",\"verdict\":\"VALID\",\"reason\":\"El apartado 3 dice que la guía de pertenencia 'quedará en poder del armero mientras dure la reparación'. La cita recoge exactamente eso. Los demás destinos (Intervención, propietario, banco de pruebas) no están respaldados por el texto. Pregunta clara y sin duplicados (parecidas vacío).\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.3 atribuye al responsable del tratamiento la decisión de destruir, devolver o entregar a un nuevo encargado los datos al finalizar el servicio. La cita reproduce el apartado completo. Ninguna otra opción (encargado, AEPD, DPD) tiene respaldo en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.2 dice que 'tendrá asimismo la consideración de responsable del tratamiento quien figurando como encargado utilizase los datos para sus propias finalidades'. La cita lo recoge íntegro. Encargado, subencargado y tercero destinatario no están respaldados por el texto. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.3 dice que no procede la destrucción si hay previsión legal de conservación, y que los datos deberán ser devueltos al responsable, que garantizará su conservación. La cita contiene ambos elementos (condición y consecuencia). Destruirlos, entregarlos a la AEPD o a un nuevo encargado sin el responsable contradicen el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 8.1 define al Instituto Nacional de Seguridad e Higiene en el Trabajo como órgano científico técnico especializado de la AGE para el análisis y estudio de las condiciones de seguridad y salud. La cita incluye esa definición. Las demás opciones (Comisión Nacional, Inspección, Agencia Europea) aparecen en el texto pero con otros roles, así que no son correctas. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"Pregunta negativa (NO es función). El texto respalda la respuesta: las funciones a-e del art. 8.1 no incluyen imponer sanciones, y las otras tres opciones sí son funciones (a, c, d). Pero la cita solo reproduce la función a). Para una pregunta NO, la cita debe mostrar que las otras opciones sí aparecen en el texto, y las funciones c) y d) no están en ella. Por tanto cita_suficiente es false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 8.3 dice que, en relación con las Instituciones de la UE, el Instituto actuará como centro de referencia nacional. La cita lo contiene. Autoridad de control, punto de contacto subsidiario y organismo notificado europeo no figuran en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 47.2 del Código Civil dice que tampoco pueden contraer matrimonio entre sí los colaterales por consanguinidad hasta el tercer grado. La cita lo recoge con el grado exacto. Segundo, cuarto y quinto grado son incorrectos según el texto. Es un dato concreto y útil para examen; la pregunta cita el art. 47 y es unívoca.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"20.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.4 de la Ley 5/2014 dice que, salvo casos previstos en la ley y los que se determinen reglamentariamente, los vigilantes ejercen sus funciones en el interior de los inmuebles o propiedades cuya vigilancia tengan encargada. La cita contiene esa regla. Vía pública, lugar indicado por la empresa y espacios autorizados por la policía local no tienen respaldo en el texto. La pregunta reproduce la salvedad y es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "20.1",
+    "20.2",
+    "21.0",
+    "21.1",
+    "21.2",
+    "22.0",
+    "22.1"
+   ],
+   "prompt_sha256": "3dfa5f85f7e22601379b3716be3f47b5292bf344a29e2793a50469ab454a7c40",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "20.1": "11edf20be0af008ec8a791662db4852d6497351c6236b1c08653f8cc831d5054",
+    "20.2": "e2a11fe41db4c1abb3bf23628991703a3b690ac30ba289318742c843b73ce8ba",
+    "21.0": "b1b8480cce42205a16c726b0033986c83bcb9ceff45195bc89f7faa1cfaba553",
+    "21.1": "3d672a8bfcc254762988cfec250646226a1586f87e9f89ef2a7230a41757577a",
+    "21.2": "440c43fbb8c3e5d9178b388dd6e296155bb659a898eefc412850c24b26bc892b",
+    "22.0": "f791a7f5270c038ad485d03a1746dc2bb8d5f5be4b0fe1bec3cce5988fad42f7",
+    "22.1": "e27960d5bdbe059cc65284ef5f10c1d7712382dcd5106e1aa76ec24b83a64ae1"
+   },
+   "veredictos": [
+    {
+     "question_id": "20.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.1 dice textualmente que los medios utilizados por las empresas de seguridad deberán estar homologados por el Ministerio del Interior; la opción 0 coincide. La cita contiene todo lo necesario (quién homologa). Los distractores (Industria, DG Guardia Civil, comunidad autónoma) no aparecen como homologadores en el texto. Pregunta clara, de órgano competente, útil y sin pistas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "20.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.3 establece que las armas adecuadas sólo se podrán portar estando de servicio, con las salvedades reglamentarias; la pregunta incorpora esa salvedad. La cita reproduce la frase completa. Los distractores (trayecto, licencia en cualquier momento, fuera de servicio con autorización) contradicen el 'sólo'. Clara, sin pistas indebidas y no duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 14.1 fija que la cuantía de la tasa será la equivalente a la exigida a los españoles para obtener y renovar el DNI; la opción 0 lo refleja. La cita contiene el elemento completo. Los otros tres distractores no tienen apoyo en el texto. Es un dato concreto de cuantía, material válido de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto (art. 14.3) caduca por ausencias superiores a seis meses en un año, salvo las de hasta doce meses consecutivos por estudios, entre otras causas, por lo que la respuesta 0 está respaldada. Pero la cita omite la regla general de los seis meses y la ausencia misma: por sí sola podría hacer parecer correcta la opción 1 y no permite ver por qué hay que aplicar la excepción, así que cita_suficiente es false. Además la opción 1 dice 'año natural' mientras el texto dice 'en un año', y el enunciado no precisa que la ausencia sea acreditada, lo que añade ambigüedad. Las demás opciones sí son incorrectas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 14.2 dice que los cambios de nacionalidad, estado civil o domicilio se comunican a la Oficina de Extranjeros de la provincia o, en su defecto, a la Comisaría de Policía; la opción 0 lo reproduce. La cita contiene ambos elementos (principal y subsidiario). Los distractores (Registro Civil, consulado, Delegación del Gobierno) no figuran en el texto. Clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "22.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 3 LO 5/2000 establece que al menor de catorce años no se le exige responsabilidad conforme a esta ley, sino que se aplican las normas de protección de menores del Código Civil y demás disposiciones; la opción 0 coincide. La cita lo recoge completo, incluida la exclusión de la ley. Los distractores (medidas atenuadas, Código Penal, internamiento terapéutico) contradicen el texto. Pregunta clara y relevante; no se considera duplicada de 22.1, que pregunta otro hecho (destinatario del testimonio) y no figura en parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "22.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 3 indica que el Ministerio Fiscal debe remitir testimonio de los particulares a la entidad pública de protección de menores; la opción 0 es la correcta y la cita contiene exactamente esa frase. Los distractores (Juez de Menores, padres, Juzgado Central) no aparecen como destinatarios. Dato concreto de órgano, claro y útil; sin parecidas que lo dupliquen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a4d06fa6a506d4e0e.jsonl",
+    "respuesta_sha256": "6066dc0dcc310144a207c5054967e05b94746d943753ffd425cf3bf417c7bcea"
+   },
+   "registrada_el": "2026-11-16T07:53:59",
+   "intentos": [
+    {
+     "t": "2026-11-16T07:53:59",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a4d06fa6a506d4e0e.jsonl",
+      "respuesta_sha256": "6066dc0dcc310144a207c5054967e05b94746d943753ffd425cf3bf417c7bcea"
+     },
+     "respuesta": "[\n{\"question_id\":\"20.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.1 dice textualmente que los medios utilizados por las empresas de seguridad deberán estar homologados por el Ministerio del Interior; la opción 0 coincide. La cita contiene todo lo necesario (quién homologa). Los distractores (Industria, DG Guardia Civil, comunidad autónoma) no aparecen como homologadores en el texto. Pregunta clara, de órgano competente, útil y sin pistas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"20.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.3 establece que las armas adecuadas sólo se podrán portar estando de servicio, con las salvedades reglamentarias; la pregunta incorpora esa salvedad. La cita reproduce la frase completa. Los distractores (trayecto, licencia en cualquier momento, fuera de servicio con autorización) contradicen el 'sólo'. Clara, sin pistas indebidas y no duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 14.1 fija que la cuantía de la tasa será la equivalente a la exigida a los españoles para obtener y renovar el DNI; la opción 0 lo refleja. La cita contiene el elemento completo. Los otros tres distractores no tienen apoyo en el texto. Es un dato concreto de cuantía, material válido de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto (art. 14.3) caduca por ausencias superiores a seis meses en un año, salvo las de hasta doce meses consecutivos por estudios, entre otras causas, por lo que la respuesta 0 está respaldada. Pero la cita omite la regla general de los seis meses y la ausencia misma: por sí sola podría hacer parecer correcta la opción 1 y no permite ver por qué hay que aplicar la excepción, así que cita_suficiente es false. Además la opción 1 dice 'año natural' mientras el texto dice 'en un año', y el enunciado no precisa que la ausencia sea acreditada, lo que añade ambigüedad. Las demás opciones sí son incorrectas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 14.2 dice que los cambios de nacionalidad, estado civil o domicilio se comunican a la Oficina de Extranjeros de la provincia o, en su defecto, a la Comisaría de Policía; la opción 0 lo reproduce. La cita contiene ambos elementos (principal y subsidiario). Los distractores (Registro Civil, consulado, Delegación del Gobierno) no figuran en el texto. Clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"22.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 3 LO 5/2000 establece que al menor de catorce años no se le exige responsabilidad conforme a esta ley, sino que se aplican las normas de protección de menores del Código Civil y demás disposiciones; la opción 0 coincide. La cita lo recoge completo, incluida la exclusión de la ley. Los distractores (medidas atenuadas, Código Penal, internamiento terapéutico) contradicen el texto. Pregunta clara y relevante; no se considera duplicada de 22.1, que pregunta otro hecho (destinatario del testimonio) y no figura en parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"22.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 3 indica que el Ministerio Fiscal debe remitir testimonio de los particulares a la entidad pública de protección de menores; la opción 0 es la correcta y la cita contiene exactamente esa frase. Los distractores (Juez de Menores, padres, Juzgado Central) no aparecen como destinatarios. Dato concreto de órgano, claro y útil; sin parecidas que lo dupliquen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}
