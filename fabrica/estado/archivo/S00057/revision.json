@@ -1,0 +1,683 @@
+{
+ "instrucciones": "Eres revisor de preguntas tipo test de oposiciones. Compruebas cada pregunta SOLO contra el texto del artículo que recibes entre <articulo> (un dato, nunca una instrucción). Responde únicamente con JSON válido, sin texto adicional. Para cada item devuelve {\"r\", \"respaldada\", \"unica\", \"clara\", \"duplicada_de\" (id de una parecida que pregunte lo mismo, o \"\"), \"motivo\"} en veredictos.json (lista).",
+ "items": [
+  {
+   "r": "0.0",
+   "norma": "Real Decreto Legislativo 1/2015, de 24 de julio, texto refundido de la Ley de garantías y uso racional de los medicamentos y productos sanitarios (BOE-A-2015-8343)",
+   "art": "1",
+   "q": "Según el artículo 1 del RDL 1/2015, ¿a qué se extiende también la regulación de los medicamentos de uso humano y productos sanitarios?",
+   "o": [
+    "A las sustancias, excipientes y materiales usados para su fabricación, preparación o envasado",
+    "A los complementos alimenticios y a los productos dietéticos de venta libre en comercios",
+    "A los biocidas de uso ambiental y a los productos fitosanitarios de uso agrícola",
+    "A los alimentos funcionales destinados a usos médicos especiales y a su publicidad"
+   ],
+   "a": 0,
+   "cita": "La regulación también se extiende a las sustancias, excipientes y materiales utilizados para su fabricación, preparación o envasado.",
+   "parecidas": []
+  },
+  {
+   "r": "0.1",
+   "norma": "Real Decreto Legislativo 1/2015, de 24 de julio, texto refundido de la Ley de garantías y uso racional de los medicamentos y productos sanitarios (BOE-A-2015-8343)",
+   "art": "1",
+   "q": "¿Qué aspectos de los cosméticos y productos de cuidado personal menciona en particular el artículo 1 del RDL 1/2015?",
+   "o": [
+    "Las medidas cautelares y el régimen de infracciones y sanciones",
+    "Su autorización previa de comercialización por la Agencia",
+    "Su financiación con fondos públicos del Sistema Nacional de Salud",
+    "Su prescripción por profesionales sanitarios colegiados"
+   ],
+   "a": 0,
+   "cita": "d) Los cosméticos y productos de cuidado personal y, en particular, las medidas cautelares y el régimen de infracciones y sanciones aplicables a estos.",
+   "parecidas": []
+  },
+  {
+   "r": "0.2",
+   "norma": "Real Decreto Legislativo 1/2015, de 24 de julio, texto refundido de la Ley de garantías y uso racional de los medicamentos y productos sanitarios (BOE-A-2015-8343)",
+   "art": "1",
+   "q": "Una empresa distribuye productos sanitarios a farmacias, sin fabricarlos. ¿Regula el RDL 1/2015 su actuación?",
+   "o": [
+    "Sí, en cuanto interviene en la circulación comercial de esos productos",
+    "No, porque la ley regula el producto y no a quien lo distribuye",
+    "No, porque esa actuación corresponde a la normativa autonómica",
+    "Sí, cuando además figure inscrita como laboratorio fabricante"
+   ],
+   "a": 0,
+   "cita": "b) La actuación de las personas físicas o jurídicas en cuanto intervienen en la circulación industrial o comercial y en la prescripción o dispensación de los medicamentos y productos sanitarios.",
+   "parecidas": []
+  },
+  {
+   "r": "1.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "43",
+   "q": "Según la LOGP, ¿quién vigila diariamente al interno mientras cumple la sanción de aislamiento?",
+   "o": [
+    "El médico del establecimiento",
+    "El director del establecimiento",
+    "El jefe de servicios del centro",
+    "El educador de su módulo"
+   ],
+   "a": 0,
+   "cita": "La sanción de aislamiento se cumplirá con informe del médico del establecimiento, quien vigilará diariamente al interno",
+   "parecidas": []
+  },
+  {
+   "r": "1.1",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "43",
+   "q": "El artículo 43 de la LOGP impide aplicar la sanción de aislamiento a determinadas internas. ¿Cuál de las siguientes NO figura entre ellas?",
+   "o": [
+    "Las mujeres gestantes",
+    "Las madres lactantes",
+    "Las que tuvieran hijos consigo",
+    "Las mayores de sesenta años"
+   ],
+   "a": 3,
+   "cita": "Tres. No se aplicará esta sanción a las mujeres gestantes y las mujeres hasta seis meses después de la terminación del embarazo, a las madres lactantes y a las que tuvieran hijos consigo.",
+   "parecidas": []
+  },
+  {
+   "r": "1.2",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "43",
+   "q": "Con carácter general, ¿dónde se cumple la sanción de aislamiento según la LOGP?",
+   "o": [
+    "En el compartimento que habitualmente ocupe el interno",
+    "En una celda específica del módulo de aislamiento",
+    "En la enfermería, bajo control del médico",
+    "En un departamento especial de régimen cerrado"
+   ],
+   "a": 0,
+   "cita": "Cuatro. El aislamiento se cumplirá en el compartimento que habitualmente ocupe el interno, y en los supuestos de que lo comparta con otros o por su propia seguridad o por el buen orden del establecimiento, pasará a uno individual de semejantes medidas y condiciones.",
+   "parecidas": []
+  },
+  {
+   "r": "2.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "31",
+   "q": "Según la LOGP, ¿a quién corresponde la dirección y el control de las actividades desarrolladas en régimen laboral dentro de los establecimientos?",
+   "o": [
+    "A la Administración penitenciaria",
+    "A la Junta de Tratamiento del centro",
+    "Al Juez de Vigilancia Penitenciaria",
+    "A las empresas que contratan con el centro"
+   ],
+   "a": 0,
+   "cita": "Uno. La dirección y el control de las actividades desarrolladas en régimen laboral dentro de los establecimientos corresponderá a la Administración penitenciaria.",
+   "parecidas": []
+  },
+  {
+   "r": "3.0",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "29",
+   "q": "Según la Ley General de Sanidad, ¿qué precisan los centros y establecimientos sanitarios para su instalación y funcionamiento?",
+   "o": [
+    "Autorización administrativa previa",
+    "Comunicación previa al ayuntamiento",
+    "Declaración responsable del titular",
+    "Inscripción en el registro mercantil"
+   ],
+   "a": 0,
+   "cita": "precisarán autorización administrativa previa para su instalación y funcionamiento",
+   "parecidas": []
+  },
+  {
+   "r": "3.1",
+   "norma": "Ley 14/1986, General de Sanidad (BOE-A-1986-10499)",
+   "art": "29",
+   "q": "Cuando la defensa de la salud de la población lo requiera, ¿qué pueden establecer las Administraciones Sanitarias competentes respecto de los establecimientos sanitarios?",
+   "o": [
+    "Regímenes temporales y excepcionales de funcionamiento",
+    "La exención de autorización para nuevos establecimientos",
+    "La clausura definitiva sin expediente administrativo",
+    "La requisa de los centros privados por orden ministerial"
+   ],
+   "a": 0,
+   "cita": "3. Cuando la defensa de la salud de la población lo requiera, las Administraciones Sanitarias competentes podrán establecer regímenes temporales y excepcionales de funcionamiento de los establecimientos sanitarios.",
+   "parecidas": []
+  },
+  {
+   "r": "4.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "32",
+   "q": "Según la LOGP, ¿de qué órganos de las cooperativas que se constituyan pueden formar parte los internos?",
+   "o": [
+    "Del Consejo Rector y de la Dirección o Gerencia",
+    "De la Asamblea General, sin cargos de gestión",
+    "Del Consejo Rector, con voz pero sin voto",
+    "De la Intervención y del Comité de Recursos"
+   ],
+   "a": 0,
+   "cita": "Los internos podrán formar parte del Consejo Rector y de la Dirección o Gerencia de las cooperativas que se constituyan.",
+   "parecidas": []
+  },
+  {
+   "r": "5.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "10",
+   "q": "Según el artículo 10 de la LOGP, ¿para qué penados existirán establecimientos de régimen cerrado o departamentos especiales?",
+   "o": [
+    "Los de peligrosidad extrema o inadaptados a los regímenes ordinario y abierto",
+    "Los condenados a penas de prisión superiores a diez años de duración",
+    "Los reincidentes que acumulen tres o más condenas firmes anteriores",
+    "Los condenados por delitos graves contra la vida y la integridad física"
+   ],
+   "a": 0,
+   "cita": "existirán establecimientos de cumplimiento de régimen cerrado o departamentos especiales para los penados calificados de peligrosidad extrema o para casos de inadaptación a los regímenes ordinario y abierto",
+   "parecidas": []
+  },
+  {
+   "r": "5.1",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "10",
+   "q": "¿Pueden los internos preventivos ser destinados a los establecimientos o departamentos especiales del artículo 10 de la LOGP?",
+   "o": [
+    "Sí, excepcionalmente, separados de los penados y dando cuenta al juez",
+    "No, porque la ley los reserva a quienes ya están penados",
+    "Sí, con autorización previa del Juez de Vigilancia Penitenciaria",
+    "Sí, cuando lo acuerde la Junta de Tratamiento sin otro requisito"
+   ],
+   "a": 0,
+   "cita": "Dos. También podrán ser destinados a estos establecimientos o departamentos especiales con carácter de excepción y absoluta separación de los penados, dando cuenta a la autoridad judicial correspondiente",
+   "parecidas": []
+  },
+  {
+   "r": "5.2",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "10",
+   "q": "¿Durante cuánto tiempo permanecen los internos destinados a los establecimientos de régimen cerrado o departamentos especiales?",
+   "o": [
+    "El necesario hasta que desaparezcan o disminuyan las razones de su ingreso",
+    "Un máximo de seis meses, prorrogables por resolución motivada",
+    "El tiempo que fije la sentencia condenatoria del interno",
+    "Un mínimo de un año desde la fecha de su ingreso en el centro"
+   ],
+   "a": 0,
+   "cita": "La permanencia de los internos destinados a estos centros será por el tiempo necesario hasta tanto desaparezcan o disminuyan las razones o circunstancias que determinaron su ingreso.",
+   "parecidas": []
+  },
+  {
+   "r": "6.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "33",
+   "q": "Según el artículo 33 de la LOGP, ¿qué límite tiene la jornada de trabajo de los internos?",
+   "o": [
+    "No puede exceder de la máxima legal",
+    "No puede superar seis horas diarias",
+    "No puede superar treinta horas semanales",
+    "La fija cada establecimiento penitenciario"
+   ],
+   "a": 0,
+   "cita": "b) La jornada de trabajo no podrá exceder de la máxima legal",
+   "parecidas": []
+  },
+  {
+   "r": "6.1",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "33",
+   "q": "Un acreedor pretende embargar la retribución que un interno percibe por su trabajo. Según la LOGP, ¿en qué condiciones es embargable?",
+   "o": [
+    "En las establecidas para el salario del trabajador libre",
+    "No es embargable mientras dure la condena del interno",
+    "En las que acuerde el Juez de Vigilancia Penitenciaria",
+    "Hasta la mitad de su importe, sin otros requisitos"
+   ],
+   "a": 0,
+   "cita": "Dos. La retribución del trabajo de los internos sólo será embargable en las condiciones y con los requisitos establecidos para el salario del trabajador libre.",
+   "parecidas": []
+  },
+  {
+   "r": "6.2",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "33",
+   "q": "¿Conforme a qué criterios velará la Administración por la retribución del trabajo productivo de los internos?",
+   "o": [
+    "Rendimiento, categoría profesional y clase de actividad desempeñada",
+    "Antigüedad, conducta penitenciaria y grado de clasificación",
+    "Duración de la condena, cargas familiares y edad del interno",
+    "Salario mínimo, horas trabajadas y productividad del taller"
+   ],
+   "a": 0,
+   "cita": "c) Velará por que la retribución sea conforme al rendimiento, categoría profesional y clase de actividad desempeñada.",
+   "parecidas": []
+  },
+  {
+   "r": "7.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "34",
+   "q": "Según la LOGP, ¿cómo ejercen los internos la defensa de sus derechos e intereses laborales o cooperativos?",
+   "o": [
+    "Individualmente, previa reclamación o conciliación en vía administrativa",
+    "Colectivamente, a través de la Junta de Tratamiento del centro",
+    "Por medio del Juez de Vigilancia, sin vía administrativa previa",
+    "A través de un representante designado por la Administración"
+   ],
+   "a": 0,
+   "cita": "asumirán individualmente la defensa de sus derechos e intereses laborales o cooperativos, que ejercitarán ante los organismos y tribunales competentes, previa reclamación o conciliación en vía administrativa",
+   "parecidas": []
+  },
+  {
+   "r": "8.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "35",
+   "q": "Para tener derecho a la prestación por desempleo si no reciben una oferta de trabajo adecuada, ¿en qué plazo deben inscribirse los liberados en la oficina de empleo?",
+   "o": [
+    "Dentro de los quince días siguientes a su excarcelación",
+    "Dentro del mes siguiente a su excarcelación",
+    "Dentro de los diez días siguientes a su excarcelación",
+    "Dentro de los tres meses siguientes a su excarcelación"
+   ],
+   "a": 0,
+   "cita": "Los liberados que se hayan inscrito en la oficina de empleo dentro de los quince días siguientes a su excarcelación y no hayan recibido una oferta de trabajo adecuada tendrán derecho a la prestación por desempleo",
+   "parecidas": []
+  },
+  {
+   "r": "9.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "36",
+   "q": "Según la LOGP, ¿qué médico existirá, al menos, en cada centro penitenciario?",
+   "o": [
+    "Un Médico general con conocimientos psiquiátricos",
+    "Un médico especialista en medicina interna",
+    "Un médico forense adscrito al juzgado",
+    "Un psiquiatra con dedicación a tiempo completo"
+   ],
+   "a": 0,
+   "cita": "Uno. En cada centro existirá al menos un Médico general con conocimientos psiquiátricos",
+   "parecidas": []
+  },
+  {
+   "r": "9.1",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "36",
+   "q": "Además de los servicios médicos del establecimiento, ¿dónde pueden ser asistidos los internos en caso de necesidad o de urgencia?",
+   "o": [
+    "En otros centros hospitalarios",
+    "En su domicilio familiar",
+    "En hospitales militares",
+    "En consultas privadas pagadas por el Estado"
+   ],
+   "a": 0,
+   "cita": "Dos. Además de los servicios médicos de los establecimientos, los internos podrán ser asistidos en las instituciones hospitalarias y asistenciales de carácter penitenciario y, en caso de necesidad o de urgencia, en otros centros hospitalarios.",
+   "parecidas": []
+  },
+  {
+   "r": "9.2",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "36",
+   "q": "Los internos pueden solicitar a su costa servicios médicos de profesionales ajenos a las instituciones penitenciarias. ¿Cuándo puede limitarse este derecho?",
+   "o": [
+    "Cuando razones de seguridad lo aconsejen",
+    "Cuando el médico del centro lo desaconseje",
+    "Cuando el interno esté en primer grado",
+    "Cuando el tratamiento supere un coste fijado"
+   ],
+   "a": 0,
+   "cita": "Tres. Los internos podrán solicitar a su costa los servicios médicos de profesionales ajenos a las instituciones penitenciarias, excepto cuando razones de seguridad aconsejen limitar este derecho.",
+   "parecidas": []
+  },
+  {
+   "r": "10.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "37",
+   "q": "Según el artículo 37 de la LOGP, ¿cuál de las siguientes dotaciones deben tener todos los establecimientos para la prestación de la asistencia sanitaria?",
+   "o": [
+    "Una unidad para enfermos contagiosos",
+    "Un quirófano para cirugía mayor",
+    "Una unidad de cuidados intensivos",
+    "Un servicio propio de radiología"
+   ],
+   "a": 0,
+   "cita": "Para la prestación de la asistencia sanitaria todos los establecimientos estarán dotados: a) De una enfermería, que contará con un número suficiente de camas, y estará provista del material clínico, instrumental adecuado y productos farmacéuticos básicos para curas de urgencia e intervenciones dentales. b) De una dependencia destinada a la observación psiquiátrica y a la atención de los toxicómanos. c) De una unidad para enfermos contagiosos.",
+   "parecidas": []
+  },
+  {
+   "r": "11.0",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "38",
+   "q": "Según la LOGP, ¿hasta qué edad pueden las internas tener en su compañía a sus hijos?",
+   "o": [
+    "Hasta que alcancen los tres años de edad",
+    "Hasta que alcancen los seis años de edad",
+    "Hasta que alcancen los dos años de edad",
+    "Hasta que alcancen los diez años de edad"
+   ],
+   "a": 0,
+   "cita": "Las internas podrán tener en su compañía a los hijos que no hayan alcanzado los tres años de edad, siempre que acrediten debidamente su filiación.",
+   "parecidas": []
+  },
+  {
+   "r": "11.1",
+   "norma": "Ley Orgánica 1/1979, de 26 de septiembre, General Penitenciaria (BOE-A-1979-23708)",
+   "art": "38",
+   "q": "Una interna tiene un hijo de ocho años que no convive con ella en el centro. ¿Qué prevé la LOGP para las visitas del menor?",
+   "o": [
+    "Un régimen específico, sin restricciones de frecuencia ni de intimidad",
+    "Las visitas ordinarias de familiares, con su mismo horario y límites",
+    "Visitas mensuales supervisadas por el equipo técnico de tratamiento",
+    "Visitas autorizadas caso por caso por el Juez de Vigilancia"
+   ],
+   "a": 0,
+   "cita": "Reglamentariamente se establecerá un régimen específico de visitas para los menores que no superen los diez años y no convivan con la madre en el centro penitenciario. Estas visitas se realizarán sin restricciones de ningún tipo en cuanto a frecuencia e intimidad",
+   "parecidas": []
+  },
+  {
+   "r": "12.0",
+   "norma": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior (BOE-A-2024-3793)",
+   "art": "8bis",
+   "q": "Según el RD 207/2024, ¿a qué órgano corresponde la preparación de planes estatales de protección civil?",
+   "o": [
+    "A la Secretaría General de Protección Civil y Emergencias",
+    "A la Dirección General de la Guardia Civil",
+    "A la Subsecretaría del Ministerio del Interior",
+    "A la Secretaría de Estado de Seguridad"
+   ],
+   "a": 0,
+   "cita": "En particular, corresponden a la Secretaría General las siguientes funciones: a) La preparación de planes estatales de protección civil",
+   "parecidas": []
+  },
+  {
+   "r": "13.0",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "39",
+   "q": "Según la Ley 19/2013, ¿quién aprueba el Estatuto del Consejo de Transparencia y Buen Gobierno y mediante qué norma?",
+   "o": [
+    "El Consejo de Ministros, mediante Real Decreto",
+    "Las Cortes Generales, mediante ley ordinaria",
+    "El propio Consejo, por resolución de su Presidente",
+    "El Ministerio de Hacienda, mediante orden"
+   ],
+   "a": 0,
+   "cita": "2. El Consejo de Ministros aprobará mediante Real Decreto el Estatuto del Consejo de Transparencia y Buen Gobierno",
+   "parecidas": []
+  },
+  {
+   "r": "13.1",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "39",
+   "q": "Con carácter general, ¿por quién serán desempeñados los puestos de trabajo del Consejo de Transparencia y Buen Gobierno?",
+   "o": [
+    "Por funcionarios públicos",
+    "Por personal laboral temporal",
+    "Por personal eventual de confianza",
+    "Por altos cargos designados por el Gobierno"
+   ],
+   "a": 0,
+   "cita": "3. Con carácter general, los puestos de trabajo del Consejo de Transparencia y Buen Gobierno serán desempeñados por funcionarios públicos",
+   "parecidas": []
+  },
+  {
+   "r": "13.2",
+   "norma": "Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887)",
+   "art": "39",
+   "q": "¿Qué elabora anualmente el Consejo de Transparencia y Buen Gobierno según el artículo 39 de la Ley 19/2013?",
+   "o": [
+    "Un anteproyecto de presupuesto para su elevación al Gobierno",
+    "Una memoria económica para el Tribunal de Cuentas",
+    "Un plan de auditorías del sector público estatal",
+    "Un informe de gastos para el Defensor del Pueblo"
+   ],
+   "a": 0,
+   "cita": "Anualmente elaborará un anteproyecto de presupuesto con la estructura que establezca el Ministerio de Hacienda y Administraciones Públicas para su elevación al Gobierno y su posterior integración en los Presupuestos Generales del Estado.",
+   "parecidas": [
+    {
+     "id": "nueva:ley-19-2013:39:0",
+     "q": "Según la Ley 19/2013, ¿quién aprueba el Estatuto del Consejo de Transparencia y Buen Gobierno y mediante qué norma?",
+     "respuesta": "El Consejo de Ministros, mediante Real Decreto"
+    }
+   ]
+  },
+  {
+   "r": "14.0",
+   "norma": "Ley Orgánica 3/2018, de Protección de Datos Personales (LOPDGDD) (BOE-A-2018-16673)",
+   "art": "35",
+   "q": "Según la LO 3/2018, ¿cómo podrá demostrarse, entre otros medios, el cumplimiento de los requisitos para designar al delegado de protección de datos?",
+   "o": [
+    "Mediante mecanismos voluntarios de certificación",
+    "Mediante inscripción en un registro oficial obligatorio",
+    "Mediante una oposición convocada por la Agencia",
+    "Mediante autorización previa de la autoridad autonómica"
+   ],
+   "a": 0,
+   "cita": "podrá demostrarse, entre otros medios, a través de mecanismos voluntarios de certificación",
+   "parecidas": []
+  },
+  {
+   "r": "15.0",
+   "norma": "Texto refundido del Estatuto Básico del Empleado Público (TREBEP) (BOE-A-2015-11719)",
+   "art": "100",
+   "q": "Según el TREBEP, ¿quién designa a los representantes de la Administración Local en la Comisión de Coordinación del Empleo Público?",
+   "o": [
+    "La Federación Española de Municipios y Provincias",
+    "La Conferencia Sectorial de Administración Pública",
+    "Las Diputaciones Provinciales de forma rotatoria",
+    "El Ministerio competente en materia de función pública"
+   ],
+   "a": 0,
+   "cita": "y los representantes de la Administración Local designados por la Federación Española de Municipios y Provincias",
+   "parecidas": []
+  },
+  {
+   "r": "15.1",
+   "norma": "Texto refundido del Estatuto Básico del Empleado Público (TREBEP) (BOE-A-2015-11719)",
+   "art": "100",
+   "q": "La Comisión de Coordinación del Empleo Público elabora un estudio sobre el empleo público. Según el TREBEP, ¿a quién debe remitirlo?",
+   "o": [
+    "A los sindicatos presentes en la Mesa General de Negociación",
+    "A las Cortes Generales para su conocimiento y debate",
+    "Al Consejo de Ministros para su aprobación definitiva",
+    "A las comunidades autónomas para que emitan informe"
+   ],
+   "a": 0,
+   "cita": "c) Elaborar estudios e informes sobre el empleo público. Dichos estudios e informes se remitirán a las organizaciones sindicales presentes en la Mesa General de Negociación de las Administraciones Públicas.",
+   "parecidas": [
+    {
+     "id": "nueva:trebep:100:0",
+     "q": "Según el TREBEP, ¿quién designa a los representantes de la Administración Local en la Comisión de Coordinación del Empleo Público?",
+     "respuesta": "La Federación Española de Municipios y Provincias"
+    }
+   ]
+  },
+  {
+   "r": "15.2",
+   "norma": "Texto refundido del Estatuto Básico del Empleado Público (TREBEP) (BOE-A-2015-11719)",
+   "art": "100",
+   "q": "¿Quién elabora las normas de organización y funcionamiento de la Comisión de Coordinación del Empleo Público?",
+   "o": [
+    "La propia Comisión de Coordinación del Empleo Público",
+    "La Conferencia Sectorial de Administración Pública",
+    "El Consejo de Ministros mediante real decreto",
+    "La Mesa General de Negociación de las Administraciones"
+   ],
+   "a": 0,
+   "cita": "4. La Comisión de Coordinación del Empleo Público elaborará sus propias normas de organización y funcionamiento.",
+   "parecidas": []
+  },
+  {
+   "r": "16.0",
+   "norma": "Texto refundido del Estatuto Básico del Empleado Público (TREBEP) (BOE-A-2015-11719)",
+   "art": "37",
+   "q": "Según el artículo 37 del TREBEP, ¿cuál de las siguientes materias queda excluida de la obligatoriedad de la negociación?",
+   "o": [
+    "Las decisiones que afecten a las potestades de organización de la Administración",
+    "La determinación y aplicación de las retribuciones complementarias de los funcionarios",
+    "Los criterios generales de los planes y fondos para la formación y la promoción interna",
+    "Los criterios generales sobre ofertas de empleo público de cada Administración"
+   ],
+   "a": 0,
+   "cita": "2. Quedan excluidas de la obligatoriedad de la negociación, las materias siguientes: a) Las decisiones de las Administraciones Públicas que afecten a sus potestades de organización.",
+   "parecidas": []
+  },
+  {
+   "r": "16.1",
+   "norma": "Texto refundido del Estatuto Básico del Empleado Público (TREBEP) (BOE-A-2015-11719)",
+   "art": "37",
+   "q": "Una decisión sobre potestades de organización repercute en condiciones de trabajo de los funcionarios incluidas en el apartado 1 del artículo 37 del TREBEP. ¿Qué procede?",
+   "o": [
+    "Negociar esas condiciones con las organizaciones sindicales",
+    "Suspender la decisión hasta que la apruebe la Mesa General",
+    "Someter la decisión a informe previo del Consejo de Estado",
+    "Aplicarla sin negociación, por ser una materia excluida"
+   ],
+   "a": 0,
+   "cita": "Cuando las consecuencias de las decisiones de las Administraciones Públicas que afecten a sus potestades de organización tengan repercusión sobre condiciones de trabajo de los funcionarios públicos contempladas en el apartado anterior, procederá la negociación de dichas condiciones con las organizaciones sindicales a que se refiere este Estatuto.",
+   "parecidas": []
+  },
+  {
+   "r": "17.0",
+   "norma": "Texto refundido de la Ley General de derechos de las personas con discapacidad (BOE-A-2013-12632)",
+   "art": "6",
+   "q": "Según el artículo 6.2 del RDL 1/2013, ¿qué derecho tienen las personas con discapacidad?",
+   "o": [
+    "A la vida independiente y a la inclusión en la comunidad",
+    "A una plaza residencial pública con carácter permanente",
+    "A un sistema de vida específico adaptado a su situación",
+    "A la tutela pública de las decisiones sobre su residencia"
+   ],
+   "a": 0,
+   "cita": "2. Las personas con discapacidad tienen derecho a la vida independiente y a la inclusión en la comunidad, con opciones iguales a las de las demás personas.",
+   "parecidas": []
+  },
+  {
+   "r": "17.1",
+   "norma": "Texto refundido de la Ley General de derechos de las personas con discapacidad (BOE-A-2013-12632)",
+   "art": "6",
+   "q": "Según el RDL 1/2013, ¿qué planes impulsarán los poderes públicos para promover la vida independiente de las personas con discapacidad y en situación de dependencia?",
+   "o": [
+    "Planes de desinstitucionalización",
+    "Planes de internamiento residencial",
+    "Planes de centros especiales de empleo",
+    "Planes de incapacitación judicial"
+   ],
+   "a": 0,
+   "cita": "5. Los poderes públicos impulsarán planes de desinstitucionalización que promuevan la vida independiente y la inclusión en la comunidad de las personas con discapacidad y en situación de dependencia.",
+   "parecidas": []
+  },
+  {
+   "r": "18.0",
+   "norma": "Constitución Española (BOE-A-1978-31229)",
+   "art": "40",
+   "q": "Según el artículo 40 de la Constitución, ¿hacia qué política orientarán de manera especial su actuación los poderes públicos?",
+   "o": [
+    "Hacia el pleno empleo",
+    "Hacia la estabilidad de precios",
+    "Hacia el equilibrio presupuestario",
+    "Hacia la reducción de la deuda"
+   ],
+   "a": 0,
+   "cita": "De manera especial realizarán una política orientada al pleno empleo.",
+   "parecidas": []
+  },
+  {
+   "r": "18.1",
+   "norma": "Constitución Española (BOE-A-1978-31229)",
+   "art": "40",
+   "q": "Según el artículo 40.2 de la Constitución, ¿mediante qué garantizarán los poderes públicos el descanso necesario?",
+   "o": [
+    "Limitación de la jornada, vacaciones periódicas retribuidas y centros adecuados",
+    "Jornada de treinta y cinco horas, un mes de vacaciones y permisos retribuidos",
+    "Prohibición del trabajo nocturno, de los festivos y de las horas extraordinarias",
+    "Descanso semanal de dos días, pausas diarias y excedencias voluntarias pagadas"
+   ],
+   "a": 0,
+   "cita": "garantizarán el descanso necesario, mediante la limitación de la jornada laboral, las vacaciones periódicas retribuidas y la promoción de centros adecuados.",
+   "parecidas": [
+    {
+     "id": "nueva:constitucion:40:0",
+     "q": "Según el artículo 40 de la Constitución, ¿hacia qué política orientarán de manera especial su actuación los poderes públicos?",
+     "respuesta": "Hacia el pleno empleo"
+    }
+   ]
+  },
+  {
+   "r": "19.0",
+   "norma": "Ley Orgánica 2/1979, del Tribunal Constitucional (BOE-A-1979-23709)",
+   "art": "15",
+   "q": "Según la LO 2/1979, ¿quién nombra a los letrados del Tribunal Constitucional?",
+   "o": [
+    "El Presidente del Tribunal",
+    "El Pleno del Tribunal",
+    "El Secretario General",
+    "El Ministro de Justicia"
+   ],
+   "a": 0,
+   "cita": "El Presidente del Tribunal Constitucional ejerce la representación del Tribunal, convoca y preside el Tribunal en Pleno y convoca las Salas; adopta las medidas precisas para el funcionamiento del Tribunal, de las Salas y de las Secciones; comunica a las Cámaras, al Gobierno o al Consejo General del Poder Judicial, en cada caso, las vacantes; nombra a los letrados",
+   "parecidas": []
+  },
+  {
+   "r": "19.1",
+   "norma": "Ley Orgánica 2/1979, del Tribunal Constitucional (BOE-A-1979-23709)",
+   "art": "15",
+   "q": "Se produce una vacante en el Tribunal Constitucional. Según la LO 2/1979, ¿a quién la comunica su Presidente?",
+   "o": [
+    "A las Cámaras, al Gobierno o al CGPJ, en cada caso",
+    "Al Rey, para que proceda a su nombramiento",
+    "Al Ministerio de Justicia, para su convocatoria",
+    "Al Pleno del Tribunal Supremo, para informe"
+   ],
+   "a": 0,
+   "cita": "comunica a las Cámaras, al Gobierno o al Consejo General del Poder Judicial, en cada caso, las vacantes",
+   "parecidas": []
+  },
+  {
+   "r": "20.0",
+   "norma": "Ley Orgánica 3/1981, del Defensor del Pueblo (BOE-A-1981-10325)",
+   "art": "14",
+   "q": "Según la LO 3/1981, ¿en qué ámbito velará el Defensor del Pueblo por los derechos del título primero sin interferir en el mando de la Defensa Nacional?",
+   "o": [
+    "En la Administración Militar",
+    "En la Administración de Justicia",
+    "En las Fuerzas y Cuerpos de Seguridad",
+    "En los servicios de inteligencia"
+   ],
+   "a": 0,
+   "cita": "El Defensor del Pueblo velará por el respeto de los derechos proclamados en el título primero de la Constitución en el ámbito de la Administración Militar, sin que ella pueda entrañar una interferencia en el mando de la Defensa Nacional.",
+   "parecidas": []
+  },
+  {
+   "r": "21.0",
+   "norma": "Ley 39/2015, del Procedimiento Administrativo Común (BOE-A-2015-10565)",
+   "art": "6",
+   "q": "Según la Ley 39/2015, ¿qué validez máxima tienen los poderes inscritos en el registro electrónico de apoderamientos?",
+   "o": [
+    "Cinco años desde la fecha de inscripción",
+    "Tres años desde la fecha de inscripción",
+    "Diez años desde la fecha de otorgamiento",
+    "Un año desde la fecha de otorgamiento"
+   ],
+   "a": 0,
+   "cita": "6. Los poderes inscritos en el registro tendrán una validez determinada máxima de cinco años a contar desde la fecha de inscripción.",
+   "parecidas": []
+  },
+  {
+   "r": "21.1",
+   "norma": "Ley 39/2015, del Procedimiento Administrativo Común (BOE-A-2015-10565)",
+   "art": "6",
+   "q": "¿Impiden los registros generales de apoderamientos que cada Organismo tenga registros particulares?",
+   "o": [
+    "No, cada Organismo puede inscribir poderes para sus trámites específicos",
+    "Sí, salvo autorización expresa del Ministerio de Hacienda y Función Pública",
+    "Sí, desde la entrada en funcionamiento del registro electrónico estatal",
+    "No, pero los poderes deben inscribirse también en el registro general"
+   ],
+   "a": 0,
+   "cita": "Los registros generales de apoderamientos no impedirán la existencia de registros particulares en cada Organismo donde se inscriban los poderes otorgados para la realización de trámites específicos en el mismo.",
+   "parecidas": []
+  },
+  {
+   "r": "22.0",
+   "norma": "Ley 40/2015, de Régimen Jurídico del Sector Público (BOE-A-2015-10566)",
+   "art": "1",
+   "q": "¿Cuál de las siguientes materias NO forma parte del objeto de la Ley 40/2015 según su artículo 1?",
+   "o": [
+    "Las bases del régimen jurídico de las Administraciones Públicas",
+    "Los principios del sistema de responsabilidad de las Administraciones",
+    "La organización y funcionamiento de la Administración General del Estado",
+    "El procedimiento administrativo común de las Administraciones Públicas"
+   ],
+   "a": 3,
+   "cita": "La presente Ley establece y regula las bases del régimen jurídico de las Administraciones Públicas, los principios del sistema de responsabilidad de las Administraciones Públicas y de la potestad sancionadora, así como la organización y funcionamiento de la Administración General del Estado y de su sector público institucional para el desarrollo de sus actividades.",
+   "parecidas": []
+  }
+ ]
+}

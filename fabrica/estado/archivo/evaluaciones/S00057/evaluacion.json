@@ -1,0 +1,930 @@
+{
+ "evaluacion": "S00057",
+ "creada_el": "2026-11-23T07:49:46",
+ "judge_policy_version": "juez-sesion-v4",
+ "policy_hash": "8c697f2934a473ea265a952f207942fe7ad4852754395c8f8db52ae75311e8bc",
+ "judge_model": "claude-sonnet (subagente de la sesión, solo lectura de su tanda)",
+ "session_id": "cse_01Auekbypq3YC2P76P1vg9Ss",
+ "preguntas": 44,
+ "tandas": [
+  {
+   "tanda": "01",
+   "ids": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "1.0",
+    "1.1",
+    "1.2",
+    "2.0",
+    "3.0",
+    "3.1",
+    "4.0"
+   ],
+   "prompt_sha256": "86daa45d7ebe1c6387b7a92dfb083e4ddb66c62a06d9db827ac1aefcb037a42b",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "0.0": "df7e6753550900ef758b744ae537d1d0d948492639a64793df54ebac800df810",
+    "0.1": "dafbc46d7c87be81ec16e100c6ee6a6cff9a6970888d8df58fa9d84c3f0a44f9",
+    "0.2": "1d53dd4d7496604a03216bf0235f9d9cc7bf61ef8a813d9b4e280581eac7e70f",
+    "1.0": "cf21b9fbbd2be01fd4ccffa288998d5e9369882c5fda90c899df50d676ed8ca6",
+    "1.1": "9f930fc5a28e0ee40fe0068e4f486d9e8b84ea5312c5aee144e4dfa068a3a8fb",
+    "1.2": "bc74a271170d048a6d4f6d6a48a0ddec03f711c769d5de5527030e69df3e8a29",
+    "2.0": "1de1d7780209597c3926d81fd0efb25bac9e16aa806d8f320851183c08ce797d",
+    "3.0": "80e6e7e0623b02ad21d9b0088aab6b925f2e7a9d15268178f116687c301354b1",
+    "3.1": "49ccd27f1edca67d7f5f74f512088199e8040cdb54a523f82874af566179f4ce",
+    "4.0": "484562166b9d301bddaad39758398ecfd21af636fea443b425ef3566ca648cc3"
+   },
+   "veredictos": [
+    {
+     "question_id": "0.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.a) dice que la regulación se extiende a las sustancias, excipientes y materiales utilizados para fabricación, preparación o envasado; la opción A lo recoge literalmente. La cita contiene todo lo necesario. Los distractores (complementos alimenticios, biocidas, alimentos funcionales) no aparecen en el texto. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.d) menciona en particular las medidas cautelares y el régimen de infracciones y sanciones de cosméticos y productos de cuidado personal. La cita reproduce el apartado completo. Los otros tres distractores (autorización por la Agencia, financiación pública, prescripción) no figuran para cosméticos en el texto, por lo que la opción A es la única correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "0.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 1.b) incluye la actuación de personas físicas o jurídicas que intervienen en la circulación industrial o comercial de productos sanitarios, lo que cubre al distribuidor; la cita lo contiene entero. Las opciones B, C y D contradicen o añaden requisitos inexistentes en el texto (fabricante inscrito, normativa autonómica). Caso práctico bien formulado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 43.Uno dice que el médico del establecimiento vigila diariamente al interno en aislamiento; la cita lo contiene. El director solo recibe el informe, y jefe de servicios y educador no aparecen. Única respuesta posible y pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta NO: el art. 43.Tres excluye a gestantes, madres lactantes y las que tuvieran hijos consigo, y la cita contiene las tres categorías que aparecen como opciones A, B y C, de modo que permite ver que 'mayores de sesenta años' no figura. La opción D es la única que no está en el texto. Sin ambigüedad.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "1.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 43.Cuatro establece que el aislamiento se cumple en el compartimento que habitualmente ocupe el interno, pasando a uno individual solo en supuestos concretos; la cita incluye regla y excepción. Las demás opciones (módulo específico, enfermería, régimen cerrado) no aparecen. La pregunta dice 'con carácter general', lo que la deja bien acotada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "2.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 31.Uno atribuye la dirección y el control de las actividades en régimen laboral a la Administración penitenciaria; la cita es literal. Ni la Junta de Tratamiento, ni el JVP ni las empresas se mencionan con esa función. Es un dato de competencia útil para examen, no una mera fórmula trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 29.1 exige autorización administrativa previa para instalación y funcionamiento de centros y establecimientos sanitarios; el fragmento citado contiene exactamente ese requisito. Comunicación previa, declaración responsable e inscripción mercantil no aparecen en el texto. Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "3.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 29.3 permite a las Administraciones Sanitarias competentes establecer regímenes temporales y excepcionales de funcionamiento cuando lo requiera la defensa de la salud; la cita es el apartado completo. Los distractores (exención de autorización, clausura sin expediente, requisa ministerial) no tienen apoyo en el texto. Única correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "4.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 32 dice que los internos pueden formar parte del Consejo Rector y de la Dirección o Gerencia de las cooperativas; la cita lo contiene literalmente. La opción C (Consejo Rector con voz pero sin voto) añade una limitación inexistente en el texto, y A/D mencionan órganos no previstos, por lo que solo la opción A es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "01",
+    "transcripcion": "agent-ad8f4dd606ddc1117.jsonl",
+    "respuesta_sha256": "63b1599e7b4ca817186858d451122eb3804c109ed0d258bac4220c0ed4f95b1c"
+   },
+   "registrada_el": "2026-11-23T07:50:55",
+   "intentos": [
+    {
+     "t": "2026-11-23T07:50:55",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "01",
+      "transcripcion": "agent-ad8f4dd606ddc1117.jsonl",
+      "respuesta_sha256": "63b1599e7b4ca817186858d451122eb3804c109ed0d258bac4220c0ed4f95b1c"
+     },
+     "respuesta": "[\n{\"question_id\":\"0.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.a) dice que la regulación se extiende a las sustancias, excipientes y materiales utilizados para fabricación, preparación o envasado; la opción A lo recoge literalmente. La cita contiene todo lo necesario. Los distractores (complementos alimenticios, biocidas, alimentos funcionales) no aparecen en el texto. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.d) menciona en particular las medidas cautelares y el régimen de infracciones y sanciones de cosméticos y productos de cuidado personal. La cita reproduce el apartado completo. Los otros tres distractores (autorización por la Agencia, financiación pública, prescripción) no figuran para cosméticos en el texto, por lo que la opción A es la única correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"0.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 1.b) incluye la actuación de personas físicas o jurídicas que intervienen en la circulación industrial o comercial de productos sanitarios, lo que cubre al distribuidor; la cita lo contiene entero. Las opciones B, C y D contradicen o añaden requisitos inexistentes en el texto (fabricante inscrito, normativa autonómica). Caso práctico bien formulado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 43.Uno dice que el médico del establecimiento vigila diariamente al interno en aislamiento; la cita lo contiene. El director solo recibe el informe, y jefe de servicios y educador no aparecen. Única respuesta posible y pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.1\",\"verdict\":\"VALID\",\"reason\":\"Pregunta NO: el art. 43.Tres excluye a gestantes, madres lactantes y las que tuvieran hijos consigo, y la cita contiene las tres categorías que aparecen como opciones A, B y C, de modo que permite ver que 'mayores de sesenta años' no figura. La opción D es la única que no está en el texto. Sin ambigüedad.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"1.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 43.Cuatro establece que el aislamiento se cumple en el compartimento que habitualmente ocupe el interno, pasando a uno individual solo en supuestos concretos; la cita incluye regla y excepción. Las demás opciones (módulo específico, enfermería, régimen cerrado) no aparecen. La pregunta dice 'con carácter general', lo que la deja bien acotada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"2.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 31.Uno atribuye la dirección y el control de las actividades en régimen laboral a la Administración penitenciaria; la cita es literal. Ni la Junta de Tratamiento, ni el JVP ni las empresas se mencionan con esa función. Es un dato de competencia útil para examen, no una mera fórmula trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 29.1 exige autorización administrativa previa para instalación y funcionamiento de centros y establecimientos sanitarios; el fragmento citado contiene exactamente ese requisito. Comunicación previa, declaración responsable e inscripción mercantil no aparecen en el texto. Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"3.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 29.3 permite a las Administraciones Sanitarias competentes establecer regímenes temporales y excepcionales de funcionamiento cuando lo requiera la defensa de la salud; la cita es el apartado completo. Los distractores (exención de autorización, clausura sin expediente, requisa ministerial) no tienen apoyo en el texto. Única correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"4.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 32 dice que los internos pueden formar parte del Consejo Rector y de la Dirección o Gerencia de las cooperativas; la cita lo contiene literalmente. La opción C (Consejo Rector con voz pero sin voto) añade una limitación inexistente en el texto, y A/D mencionan órganos no previstos, por lo que solo la opción A es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "02",
+   "ids": [
+    "5.0",
+    "5.1",
+    "5.2",
+    "6.0",
+    "6.1",
+    "6.2",
+    "7.0",
+    "8.0",
+    "9.0",
+    "9.1"
+   ],
+   "prompt_sha256": "59683d32ec7bb3e799626bb3947930163616fea179387d380dc9104d48ef544b",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "5.0": "0a1e58b9e79b3a1efc1b48bbf325b34a1ec20e42e503e3fe284bf01662cc54ce",
+    "5.1": "9b25bdbf0cd878aebda1e9d8fa179ec63bc490ed248f9ef461b91f502cf733fa",
+    "5.2": "002b66f2ac7af261b6e9e416aa3571d31bf954949af0a3adcf585a413570fded",
+    "6.0": "f6df302c3e387296c4fbbe3356d2cc2b06d9f1db2edebeddf599445854ed3086",
+    "6.1": "c98e521ad606da263709c5317c840a3b4896f2fd9213bc3373eeb967e98a5993",
+    "6.2": "cc704c6de42438ed395f16786afe346b26869408656b06778ef5a2d66e59c7bd",
+    "7.0": "700d625ba2e4ae4497c30b82a8253ae842c3741e63c8c500c9ba288515873060",
+    "8.0": "0741b06e35141799c9d41289ceca06470ed2ab557cda4c0d9788bcf25428ecb4",
+    "9.0": "76c038a5f5cd3cbf75898db2387fd7e5fb2e737bcbef721392eaf881224a4017",
+    "9.1": "0788a2987a51029d30118c2eb0f6686cb5143d90f19d7a3903a94448c02e617b"
+   },
+   "veredictos": [
+    {
+     "question_id": "5.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 10.Uno dice que existirán establecimientos de régimen cerrado o departamentos especiales para penados de peligrosidad extrema o por inadaptación a los regímenes ordinario y abierto. La opción A lo recoge. La cita contiene ambos supuestos, que son los elementos de la respuesta. Las demás opciones (más de diez años, reincidentes, delitos contra la vida) no aparecen en el texto. Pregunta clara, sin pistas léxicas y sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 10.Dos permite destinar a los preventivos a estos establecimientos con carácter de excepción, con absoluta separación de los penados y dando cuenta a la autoridad judicial. La opción A lo refleja. La cita contiene los tres elementos (excepción, separación, cuenta a la autoridad judicial). B es falsa. C y D añaden requisitos (autorización del JVP, Junta de Tratamiento) que no están en el texto. La pregunta es clara y está bien formada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "5.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 10.Tres fija que la permanencia es por el tiempo necesario hasta que desaparezcan o disminuyan las razones que motivaron el ingreso. La opción A coincide y la cita la contiene entera. Los plazos de B y D y la referencia a la sentencia de C no figuran en el texto. Pregunta clara y única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.Uno.b) dice que la jornada de trabajo no podrá exceder de la máxima legal. La opción A lo recoge y la cita b) es suficiente. Seis horas diarias, treinta semanales o la fijación por cada establecimiento no aparecen en el texto. Es un dato concreto del articulado y no una fórmula trivial.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.Dos dice que la retribución solo es embargable en las condiciones y con los requisitos del salario del trabajador libre. La opción A lo recoge. La cita contiene la frase completa. B (inembargable), C (juez de vigilancia) y D (mitad) contradicen o no figuran en el texto. El supuesto práctico es claro.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "6.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 33.Uno.c) establece que la retribución sea conforme al rendimiento, categoría profesional y clase de actividad desempeñada. La opción A es literal y la cita c) contiene los tres criterios. Los distractores (antigüedad, conducta, grado, cargas familiares, etc.) no son criterios del texto. Pregunta clara y única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "7.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 34 dice que los internos asumen individualmente la defensa de sus derechos laborales o cooperativos ante organismos y tribunales competentes, previa reclamación o conciliación en vía administrativa. La opción A lo recoge y la cita contiene todos los elementos. B, C y D contradicen el texto (colectivamente, sin vía administrativa, representante de la Administración). Pregunta clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "8.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 35 indica que los liberados inscritos en la oficina de empleo dentro de los quince días siguientes a su excarcelación, sin oferta de trabajo adecuada, tienen derecho a prestación por desempleo. La opción A (quince días) es correcta y la cita contiene el plazo y la condición. Los otros plazos (un mes, diez días, tres meses) no figuran. Es una pregunta de plazo concreto, válida como material de examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 36.Uno establece que en cada centro existirá al menos un Médico general con conocimientos psiquiátricos. La opción A es literal y la cita lo contiene. Internista, forense y psiquiatra a tiempo completo no se mencionan en el texto. Pregunta clara y única.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "9.1",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 36.Dos permite la asistencia en caso de necesidad o urgencia en otros centros hospitalarios, y la opción A lo recoge. La cita basta. Pero la opción C (hospitales militares) es un tipo de centro hospitalario, por lo que podría considerarse también correcta bajo la expresión genérica del texto. Eso compromete la unicidad. La respuesta correcta además repite casi literalmente la frase, así que conviene reformular o cambiar el distractor C.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": false,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "02",
+    "transcripcion": "agent-a711be217f3a33c69.jsonl",
+    "respuesta_sha256": "94bbd37548438104ebd913c97b293846e579ccf9457f369c79197c7d7a6a6eae"
+   },
+   "registrada_el": "2026-11-23T07:50:55",
+   "intentos": [
+    {
+     "t": "2026-11-23T07:50:55",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "02",
+      "transcripcion": "agent-a711be217f3a33c69.jsonl",
+      "respuesta_sha256": "94bbd37548438104ebd913c97b293846e579ccf9457f369c79197c7d7a6a6eae"
+     },
+     "respuesta": "[\n{\"question_id\":\"5.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 10.Uno dice que existirán establecimientos de régimen cerrado o departamentos especiales para penados de peligrosidad extrema o por inadaptación a los regímenes ordinario y abierto. La opción A lo recoge. La cita contiene ambos supuestos, que son los elementos de la respuesta. Las demás opciones (más de diez años, reincidentes, delitos contra la vida) no aparecen en el texto. Pregunta clara, sin pistas léxicas y sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 10.Dos permite destinar a los preventivos a estos establecimientos con carácter de excepción, con absoluta separación de los penados y dando cuenta a la autoridad judicial. La opción A lo refleja. La cita contiene los tres elementos (excepción, separación, cuenta a la autoridad judicial). B es falsa. C y D añaden requisitos (autorización del JVP, Junta de Tratamiento) que no están en el texto. La pregunta es clara y está bien formada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"5.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 10.Tres fija que la permanencia es por el tiempo necesario hasta que desaparezcan o disminuyan las razones que motivaron el ingreso. La opción A coincide y la cita la contiene entera. Los plazos de B y D y la referencia a la sentencia de C no figuran en el texto. Pregunta clara y única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.Uno.b) dice que la jornada de trabajo no podrá exceder de la máxima legal. La opción A lo recoge y la cita b) es suficiente. Seis horas diarias, treinta semanales o la fijación por cada establecimiento no aparecen en el texto. Es un dato concreto del articulado y no una fórmula trivial.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.Dos dice que la retribución solo es embargable en las condiciones y con los requisitos del salario del trabajador libre. La opción A lo recoge. La cita contiene la frase completa. B (inembargable), C (juez de vigilancia) y D (mitad) contradicen o no figuran en el texto. El supuesto práctico es claro.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"6.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 33.Uno.c) establece que la retribución sea conforme al rendimiento, categoría profesional y clase de actividad desempeñada. La opción A es literal y la cita c) contiene los tres criterios. Los distractores (antigüedad, conducta, grado, cargas familiares, etc.) no son criterios del texto. Pregunta clara y única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"7.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 34 dice que los internos asumen individualmente la defensa de sus derechos laborales o cooperativos ante organismos y tribunales competentes, previa reclamación o conciliación en vía administrativa. La opción A lo recoge y la cita contiene todos los elementos. B, C y D contradicen el texto (colectivamente, sin vía administrativa, representante de la Administración). Pregunta clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"8.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 35 indica que los liberados inscritos en la oficina de empleo dentro de los quince días siguientes a su excarcelación, sin oferta de trabajo adecuada, tienen derecho a prestación por desempleo. La opción A (quince días) es correcta y la cita contiene el plazo y la condición. Los otros plazos (un mes, diez días, tres meses) no figuran. Es una pregunta de plazo concreto, válida como material de examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 36.Uno establece que en cada centro existirá al menos un Médico general con conocimientos psiquiátricos. La opción A es literal y la cita lo contiene. Internista, forense y psiquiatra a tiempo completo no se mencionan en el texto. Pregunta clara y única.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"9.1\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 36.Dos permite la asistencia en caso de necesidad o urgencia en otros centros hospitalarios, y la opción A lo recoge. La cita basta. Pero la opción C (hospitales militares) es un tipo de centro hospitalario, por lo que podría considerarse también correcta bajo la expresión genérica del texto. Eso compromete la unicidad. La respuesta correcta además repite casi literalmente la frase, así que conviene reformular o cambiar el distractor C.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":false,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "03",
+   "ids": [
+    "9.2",
+    "10.0",
+    "11.0",
+    "11.1",
+    "12.0",
+    "13.0",
+    "13.1",
+    "13.2",
+    "14.0",
+    "15.0"
+   ],
+   "prompt_sha256": "9d89f56596a861f353b89e3035810f41c008f214f45bdec0fb5d3f37230dbcaa",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "9.2": "9ba7aabe20df6589423863627c3f99cf1acc998136ddf8412761db2b7d935031",
+    "10.0": "acc2b5e775ac33ccbacfde0fb64d35e6e53075407eefd97175435eed65472d4b",
+    "11.0": "b02a57325d5510ec855421aa4cb2a0e58291866206115595ab7ffa1ecc638dac",
+    "11.1": "59367c3242ac8cd2a8d3decf9d07c6a25b6edf1085d18187009a44556e66ca2d",
+    "12.0": "84300be529714800a0baa43d42d99130978042b92478432a9e7dcedc5e0d07a4",
+    "13.0": "9e2fc8d8e6d7484b9774bf285dc451eb5b5b215096952005a8df184225b32a8d",
+    "13.1": "0073008ecc88a2051c4ee672c18f650634355322079f038ec5fab9728b02c211",
+    "13.2": "b0888ca36ab33b496d51147d259bcae1dd0cd415ec84eb527cf60e79af5af8c0",
+    "14.0": "16f2b8f402cc719639dd5a1c3e10949072ecf9a34e829c78b9766ba63043e541",
+    "15.0": "75c55bdf8eba8c21a9a9c9a01c1fb42372b207e07745a395b6dac6d9b2b36a37"
+   },
+   "veredictos": [
+    {
+     "question_id": "9.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 36.Tres del texto dice que los internos pueden solicitar a su costa servicios médicos ajenos, excepto cuando razones de seguridad aconsejen limitar este derecho. La cita recoge la frase completa. Las otras opciones (criterio del médico del centro, primer grado, coste fijado) no aparecen en el texto. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "10.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 37 enumera como dotaciones de todos los establecimientos una enfermería, una dependencia de observación psiquiátrica y de toxicómanos, y una unidad para enfermos contagiosos. La cita reproduce la lista completa. Quirófano de cirugía mayor, UCI y radiología propia no figuran, así que solo la opción 0 es correcta.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 38.Dos dice que las internas pueden tener consigo a los hijos que no hayan alcanzado los tres años, y la cita lo recoge. Las opciones de seis y dos años son incorrectas. Los diez años del texto se refieren a las visitas, no a la permanencia con la madre, y por eso funcionan como distractor sin dar una segunda respuesta válida. Es un dato de plazo útil para examen.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "11.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Un menor de ocho años no convive con la madre y no supera los diez años. El art. 38.Tres prevé un régimen específico de visitas sin restricciones de frecuencia ni de intimidad, y la cita contiene ambos elementos. La opción 0 solo afirma lo que el texto dice (frecuencia e intimidad). El texto añade que duración y horario se ajustan al régimen del centro, pero la opción no lo contradice. Las otras tres opciones (visitas ordinarias, mensuales supervisadas, autorización del Juez de Vigilancia) no tienen apoyo en el texto. Caso práctico claro.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "12.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto del art. 8 bis.1.a) atribuye a la Secretaría General de Protección Civil y Emergencias la preparación de planes estatales de protección civil, así que la respuesta está respaldada. Las demás opciones no aparecen en el texto y la opción 0 es única. Sin embargo, la cita dice solo 'corresponden a la Secretaría General las siguientes funciones', sin el nombre completo 'de Protección Civil y Emergencias'. Mostrada sola no identifica de qué Secretaría General se trata, y esa identificación está en la frase anterior del artículo. Por eso cita_suficiente es false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.2 dice que el Consejo de Ministros aprueba mediante Real Decreto el Estatuto del Consejo. La cita contiene tanto el órgano como la norma, que son los dos elementos de la pregunta. Las otras opciones (Cortes con ley ordinaria, resolución del Presidente, orden del Ministerio de Hacienda) no aparecen en el texto. No hay parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.3 dice que, con carácter general, los puestos son desempeñados por funcionarios públicos, y la cita lo recoge. El texto admite también personal laboral, pero no 'temporal'. Tampoco hay apoyo para personal eventual de confianza ni para altos cargos designados por el Gobierno, así que solo la opción 0 es correcta. La pregunta incluye 'con carácter general' y es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "13.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 39.1.a) dice que el Consejo elabora anualmente un anteproyecto de presupuesto para su elevación al Gobierno, y la cita lo reproduce completo. La parecida 13.0 trata sobre quién aprueba el Estatuto (art. 39.2), un hecho distinto, así que no es duplicada. Las demás opciones (memoria económica para el Tribunal de Cuentas, plan de auditorías, informe de gastos para el Defensor del Pueblo) no figuran en el texto.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "14.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 35 dice que el cumplimiento de los requisitos del art. 37.5 del RGPD puede demostrarse, entre otros medios, mediante mecanismos voluntarios de certificación. La cita lo recoge. Inscripción obligatoria, oposición de la Agencia y autorización autonómica no aparecen en el texto. Como el texto dice 'entre otros medios', la pregunta incluye esa cautela y la opción 0 es la única respaldada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 100.3 dice que los representantes de la Administración Local en la Comisión de Coordinación del Empleo Público son designados por la Federación Española de Municipios y Provincias, y la cita contiene exactamente esa frase. Las demás opciones (Conferencia Sectorial, Diputaciones por rotación, Ministerio de función pública) no designan a esos representantes según el texto. La pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "03",
+    "transcripcion": "agent-a983c5e224d1d6e9f.jsonl",
+    "respuesta_sha256": "644150f538d0e41968960905fc2a0c46101642f54427570aa90f796c774aed94"
+   },
+   "registrada_el": "2026-11-23T07:51:43",
+   "intentos": [
+    {
+     "t": "2026-11-23T07:51:43",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "03",
+      "transcripcion": "agent-a983c5e224d1d6e9f.jsonl",
+      "respuesta_sha256": "644150f538d0e41968960905fc2a0c46101642f54427570aa90f796c774aed94"
+     },
+     "respuesta": "[\n{\"question_id\":\"9.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 36.Tres del texto dice que los internos pueden solicitar a su costa servicios médicos ajenos, excepto cuando razones de seguridad aconsejen limitar este derecho. La cita recoge la frase completa. Las otras opciones (criterio del médico del centro, primer grado, coste fijado) no aparecen en el texto. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"10.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 37 enumera como dotaciones de todos los establecimientos una enfermería, una dependencia de observación psiquiátrica y de toxicómanos, y una unidad para enfermos contagiosos. La cita reproduce la lista completa. Quirófano de cirugía mayor, UCI y radiología propia no figuran, así que solo la opción 0 es correcta.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 38.Dos dice que las internas pueden tener consigo a los hijos que no hayan alcanzado los tres años, y la cita lo recoge. Las opciones de seis y dos años son incorrectas. Los diez años del texto se refieren a las visitas, no a la permanencia con la madre, y por eso funcionan como distractor sin dar una segunda respuesta válida. Es un dato de plazo útil para examen.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"11.1\",\"verdict\":\"VALID\",\"reason\":\"Un menor de ocho años no convive con la madre y no supera los diez años. El art. 38.Tres prevé un régimen específico de visitas sin restricciones de frecuencia ni de intimidad, y la cita contiene ambos elementos. La opción 0 solo afirma lo que el texto dice (frecuencia e intimidad). El texto añade que duración y horario se ajustan al régimen del centro, pero la opción no lo contradice. Las otras tres opciones (visitas ordinarias, mensuales supervisadas, autorización del Juez de Vigilancia) no tienen apoyo en el texto. Caso práctico claro.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"12.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto del art. 8 bis.1.a) atribuye a la Secretaría General de Protección Civil y Emergencias la preparación de planes estatales de protección civil, así que la respuesta está respaldada. Las demás opciones no aparecen en el texto y la opción 0 es única. Sin embargo, la cita dice solo 'corresponden a la Secretaría General las siguientes funciones', sin el nombre completo 'de Protección Civil y Emergencias'. Mostrada sola no identifica de qué Secretaría General se trata, y esa identificación está en la frase anterior del artículo. Por eso cita_suficiente es false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.2 dice que el Consejo de Ministros aprueba mediante Real Decreto el Estatuto del Consejo. La cita contiene tanto el órgano como la norma, que son los dos elementos de la pregunta. Las otras opciones (Cortes con ley ordinaria, resolución del Presidente, orden del Ministerio de Hacienda) no aparecen en el texto. No hay parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.3 dice que, con carácter general, los puestos son desempeñados por funcionarios públicos, y la cita lo recoge. El texto admite también personal laboral, pero no 'temporal'. Tampoco hay apoyo para personal eventual de confianza ni para altos cargos designados por el Gobierno, así que solo la opción 0 es correcta. La pregunta incluye 'con carácter general' y es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"13.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 39.1.a) dice que el Consejo elabora anualmente un anteproyecto de presupuesto para su elevación al Gobierno, y la cita lo reproduce completo. La parecida 13.0 trata sobre quién aprueba el Estatuto (art. 39.2), un hecho distinto, así que no es duplicada. Las demás opciones (memoria económica para el Tribunal de Cuentas, plan de auditorías, informe de gastos para el Defensor del Pueblo) no figuran en el texto.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"14.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 35 dice que el cumplimiento de los requisitos del art. 37.5 del RGPD puede demostrarse, entre otros medios, mediante mecanismos voluntarios de certificación. La cita lo recoge. Inscripción obligatoria, oposición de la Agencia y autorización autonómica no aparecen en el texto. Como el texto dice 'entre otros medios', la pregunta incluye esa cautela y la opción 0 es la única respaldada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 100.3 dice que los representantes de la Administración Local en la Comisión de Coordinación del Empleo Público son designados por la Federación Española de Municipios y Provincias, y la cita contiene exactamente esa frase. Las demás opciones (Conferencia Sectorial, Diputaciones por rotación, Ministerio de función pública) no designan a esos representantes según el texto. La pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "04",
+   "ids": [
+    "15.1",
+    "15.2",
+    "16.0",
+    "16.1",
+    "17.0",
+    "17.1",
+    "18.0",
+    "18.1",
+    "19.0",
+    "19.1"
+   ],
+   "prompt_sha256": "144190efa95ef78e979d1dc3b635f722ddb346d1e3083e9f1962a5335a9074d6",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "15.1": "564b7b9194f6e5378156fdb7efe4deb7ce267103fa0c533de67391ea292348ec",
+    "15.2": "cac55283dbf9f69fadc1aa1f68cc5f92a6e477b7178c79a8792c8fd297297352",
+    "16.0": "a35d424a3c8198d0473a90284ce6a1fb2283310de0ff01cef66166c50a2ddc42",
+    "16.1": "dda73f6c5a86ca7c58417988d0a7b24f11787f8a3a908721ed5f8c5f79b52692",
+    "17.0": "ea923616265137ee7b4c6dfe65ae0a0d9db2c27fe07e6b05db7879e3f7b7e30f",
+    "17.1": "e383f9c2ad415f40f758b8f33f5aaf19f0431c5477c69cd9a334263d7b277470",
+    "18.0": "cbdbf6674db4e467082404732334bb0f85859c51f1ff78df390bd3cb490045d7",
+    "18.1": "2a12fb442f2c967a3370b1de671e28e3fdb20c3b60118736833b6990f16d3c09",
+    "19.0": "00d675598fd7ce37c8064716132501c44fde8ddd4a0c10309b23ab828669835d",
+    "19.1": "707745ee8f88802e067b0fec9859960fc25879608c644148616569f9375b56ca"
+   },
+   "veredictos": [
+    {
+     "question_id": "15.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 100.2.c TREBEP dice que los estudios e informes se remiten a las organizaciones sindicales presentes en la Mesa General de Negociación; la opción A lo recoge y la cita contiene ese elemento completo. Ningún distractor (Cortes, Consejo de Ministros, CCAA) aparece en el texto como destinatario. La parecida nueva:trebep:100:0 trata de quién designa a los representantes locales (FEMP), un hecho distinto, así que no es duplicada. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "15.2",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 100.4 establece que la Comisión elabora sus propias normas de organización y funcionamiento; la cita es literal y suficiente. Los distractores (Conferencia Sectorial, Consejo de Ministros, Mesa General) no tienen respaldo en el texto, por lo que la opción es única. No hay parecidas. La pregunta es algo literal pero un dato de órgano es material de examen válido.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El texto del art. 37.2.a TREBEP excluye de la negociación obligatoria las decisiones sobre potestades de organización, y las otras tres opciones figuran en el art. 37.1 (b, f, l), por lo que la respuesta es correcta y única. Sin embargo, es una pregunta negativa y la cita solo contiene el apartado 2.a: no incluye ningún elemento del apartado 1 que muestre que las otras opciones sí son materia negociable, así que la cita no basta por sí sola.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": false,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "16.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 37.2.a, segundo párrafo, dice que cuando las decisiones de organización repercuten en condiciones de trabajo del apartado 1 procede negociar esas condiciones con los sindicatos. La cita recoge íntegro ese supuesto. Las demás opciones (suspender, Consejo de Estado, aplicar sin negociar) no tienen respaldo en el texto; la D es el error típico de la materia excluida. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 6.2 reconoce el derecho a la vida independiente y a la inclusión en la comunidad, y la cita lo contiene literalmente. Los distractores contradicen el texto (el apartado dice que no deben verse obligadas a un sistema de vida específico; no se prevé plaza residencial permanente ni tutela pública sobre la residencia), por lo que solo A es correcta. Sin parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "17.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 6.5 dice que los poderes públicos impulsarán planes de desinstitucionalización que promuevan la vida independiente; la cita lo contiene completo. Los otros planes (internamiento residencial, centros especiales de empleo, incapacitación judicial) no figuran en el texto y contradicen su espíritu, así que A es única. Pregunta clara y sin duplicados.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 40.1 CE dice que los poderes públicos realizarán de manera especial una política orientada al pleno empleo; la cita lo contiene literalmente. Estabilidad de precios, equilibrio presupuestario y reducción de deuda no aparecen (el texto habla de estabilidad económica, que no coincide con ninguna opción), por lo que es única. Pregunta clara y útil.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "18.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 40.2 CE garantiza el descanso mediante limitación de la jornada laboral, vacaciones periódicas retribuidas y promoción de centros adecuados; la cita recoge los tres elementos. Los distractores inventan medidas no previstas (35 horas, prohibición de trabajo nocturno, etc.). La parecida nueva:constitucion:40:0 pregunta por el pleno empleo (art. 40.1), un hecho distinto, por lo que no es duplicada.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 15 LOTC atribuye al Presidente del Tribunal el nombramiento de los letrados (\"nombra a los letrados\"); la cita incluye esa expresión. Pleno, Secretario General y Ministro de Justicia no aparecen como competentes en el texto. No hay parecidas y la pregunta es clara.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "19.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El art. 15 LOTC dice que el Presidente comunica a las Cámaras, al Gobierno o al CGPJ, en cada caso, las vacantes; la cita lo recoge íntegro. Rey, Ministerio de Justicia y Pleno del Tribunal Supremo no aparecen en el texto como destinatarios. Pregunta distinta de 19.0 (nombramiento de letrados), sin duplicado.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "04",
+    "transcripcion": "agent-a11a8ca3cef06031e.jsonl",
+    "respuesta_sha256": "0cbca4e9b116ae8338e9d18e2b24aec296a9eb54866157425cf19a0a1fe351c2"
+   },
+   "registrada_el": "2026-11-23T07:51:40",
+   "intentos": [
+    {
+     "t": "2026-11-23T07:51:40",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "04",
+      "transcripcion": "agent-a11a8ca3cef06031e.jsonl",
+      "respuesta_sha256": "0cbca4e9b116ae8338e9d18e2b24aec296a9eb54866157425cf19a0a1fe351c2"
+     },
+     "respuesta": "[\n{\"question_id\":\"15.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 100.2.c TREBEP dice que los estudios e informes se remiten a las organizaciones sindicales presentes en la Mesa General de Negociación; la opción A lo recoge y la cita contiene ese elemento completo. Ningún distractor (Cortes, Consejo de Ministros, CCAA) aparece en el texto como destinatario. La parecida nueva:trebep:100:0 trata de quién designa a los representantes locales (FEMP), un hecho distinto, así que no es duplicada. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"15.2\",\"verdict\":\"VALID\",\"reason\":\"El art. 100.4 establece que la Comisión elabora sus propias normas de organización y funcionamiento; la cita es literal y suficiente. Los distractores (Conferencia Sectorial, Consejo de Ministros, Mesa General) no tienen respaldo en el texto, por lo que la opción es única. No hay parecidas. La pregunta es algo literal pero un dato de órgano es material de examen válido.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El texto del art. 37.2.a TREBEP excluye de la negociación obligatoria las decisiones sobre potestades de organización, y las otras tres opciones figuran en el art. 37.1 (b, f, l), por lo que la respuesta es correcta y única. Sin embargo, es una pregunta negativa y la cita solo contiene el apartado 2.a: no incluye ningún elemento del apartado 1 que muestre que las otras opciones sí son materia negociable, así que la cita no basta por sí sola.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":false,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"16.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 37.2.a, segundo párrafo, dice que cuando las decisiones de organización repercuten en condiciones de trabajo del apartado 1 procede negociar esas condiciones con los sindicatos. La cita recoge íntegro ese supuesto. Las demás opciones (suspender, Consejo de Estado, aplicar sin negociar) no tienen respaldo en el texto; la D es el error típico de la materia excluida. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 6.2 reconoce el derecho a la vida independiente y a la inclusión en la comunidad, y la cita lo contiene literalmente. Los distractores contradicen el texto (el apartado dice que no deben verse obligadas a un sistema de vida específico; no se prevé plaza residencial permanente ni tutela pública sobre la residencia), por lo que solo A es correcta. Sin parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"17.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 6.5 dice que los poderes públicos impulsarán planes de desinstitucionalización que promuevan la vida independiente; la cita lo contiene completo. Los otros planes (internamiento residencial, centros especiales de empleo, incapacitación judicial) no figuran en el texto y contradicen su espíritu, así que A es única. Pregunta clara y sin duplicados.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 40.1 CE dice que los poderes públicos realizarán de manera especial una política orientada al pleno empleo; la cita lo contiene literalmente. Estabilidad de precios, equilibrio presupuestario y reducción de deuda no aparecen (el texto habla de estabilidad económica, que no coincide con ninguna opción), por lo que es única. Pregunta clara y útil.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"18.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 40.2 CE garantiza el descanso mediante limitación de la jornada laboral, vacaciones periódicas retribuidas y promoción de centros adecuados; la cita recoge los tres elementos. Los distractores inventan medidas no previstas (35 horas, prohibición de trabajo nocturno, etc.). La parecida nueva:constitucion:40:0 pregunta por el pleno empleo (art. 40.1), un hecho distinto, por lo que no es duplicada.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.0\",\"verdict\":\"VALID\",\"reason\":\"El art. 15 LOTC atribuye al Presidente del Tribunal el nombramiento de los letrados (\\\"nombra a los letrados\\\"); la cita incluye esa expresión. Pleno, Secretario General y Ministro de Justicia no aparecen como competentes en el texto. No hay parecidas y la pregunta es clara.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"19.1\",\"verdict\":\"VALID\",\"reason\":\"El art. 15 LOTC dice que el Presidente comunica a las Cámaras, al Gobierno o al CGPJ, en cada caso, las vacantes; la cita lo recoge íntegro. Rey, Ministerio de Justicia y Pleno del Tribunal Supremo no aparecen en el texto como destinatarios. Pregunta distinta de 19.0 (nombramiento de letrados), sin duplicado.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  },
+  {
+   "tanda": "05",
+   "ids": [
+    "20.0",
+    "21.0",
+    "21.1",
+    "22.0"
+   ],
+   "prompt_sha256": "521a73c3d0eab29a64afd0c6b36d3b9e9731e2e885babe296df097582fe42e3b",
+   "estado": "ACEPTADA",
+   "huellas": {
+    "20.0": "3cbc7256320387962c5841468b63239abdf6f71cfb5f1df0952db14414bf4dc9",
+    "21.0": "c307677b83b36ea687de48562e0bf9b19f4c792a48df77ecfaf9a6ae76acb873",
+    "21.1": "7b880440592b8ef1f384552cc80a2b767615b7645d295ed2a5a43c5bcf8e16c5",
+    "22.0": "bab3d8929c97a14885c38ee844138868159b3d407d6373954798495e126c9391"
+   },
+   "veredictos": [
+    {
+     "question_id": "20.0",
+     "verdict_juez": "REVIEW_REQUIRED",
+     "verdict": "REVIEW_REQUIRED",
+     "reason": "El art. 14 es una única frase y la cita la reproduce literalmente. La opción correcta (Administración Militar) se limita a repetir esa frase, y la pregunta casi copia el texto. Está respaldada (el texto dice expresamente 'en el ámbito de la Administración Militar'), la cita basta y ninguna otra opción es correcta según el texto. Sin embargo, es una pregunta trivial de mera reformulación de un artículo de una sola frase, por lo que clara=false.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": false,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 6 del art. 6 dice que los poderes inscritos tienen una validez máxima de cinco años a contar desde la fecha de inscripción, que es la opción a. La cita contiene esa frase completa. Los distractores (3 años, 10 años, 1 año, y 'desde otorgamiento') contradicen el texto. Es un plazo concreto, material de examen útil, y no hay duplicados en parecidas.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "21.1",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "El apartado 1 del art. 6 establece que los registros generales no impiden la existencia de registros particulares en cada Organismo para trámites específicos, y la cita recoge exactamente eso. La opción a es correcta. La opción d añade una exigencia de doble inscripción que el texto no prevé, y las opciones b y c contradicen el texto. No hay duplicados y la pregunta es clara, sobre un artículo extenso.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    },
+    {
+     "question_id": "22.0",
+     "verdict_juez": "VALID",
+     "verdict": "VALID",
+     "reason": "Pregunta en negativo. El art. 1 incluye como objeto las bases del régimen jurídico, los principios de responsabilidad, la potestad sancionadora y la organización y funcionamiento de la AGE y su sector público institucional. La cita muestra todos esos elementos, de modo que las opciones a, b y c aparecen en ella y 'el procedimiento administrativo común' no figura, así que la d es la respuesta NO. Solo una opción es correcta y la pregunta es útil, porque exige discriminar y no restar una frase.",
+     "criteria_checked": {
+      "respaldada": true,
+      "cita_suficiente": true,
+      "unica": true,
+      "clara": true,
+      "duplicada_de": ""
+     },
+     "coherente": true
+    }
+   ],
+   "evidencia": {
+    "herramientas": [
+     "Read",
+     "SubagentHandback"
+    ],
+    "no_permitidas": [],
+    "lecturas_tanda": 1,
+    "ok": true,
+    "tanda": "05",
+    "transcripcion": "agent-a9225a181534fa763.jsonl",
+    "respuesta_sha256": "89a4749ccf9ac5faf5bc155967b255f987972e2135d600be62f71be30487a61e"
+   },
+   "registrada_el": "2026-11-23T07:52:09",
+   "intentos": [
+    {
+     "t": "2026-11-23T07:52:09",
+     "evidencia": {
+      "herramientas": [
+       "Read",
+       "SubagentHandback"
+      ],
+      "no_permitidas": [],
+      "lecturas_tanda": 1,
+      "ok": true,
+      "tanda": "05",
+      "transcripcion": "agent-a9225a181534fa763.jsonl",
+      "respuesta_sha256": "89a4749ccf9ac5faf5bc155967b255f987972e2135d600be62f71be30487a61e"
+     },
+     "respuesta": "[\n{\"question_id\":\"20.0\",\"verdict\":\"REVIEW_REQUIRED\",\"reason\":\"El art. 14 es una única frase y la cita la reproduce literalmente. La opción correcta (Administración Militar) se limita a repetir esa frase, y la pregunta casi copia el texto. Está respaldada (el texto dice expresamente 'en el ámbito de la Administración Militar'), la cita basta y ninguna otra opción es correcta según el texto. Sin embargo, es una pregunta trivial de mera reformulación de un artículo de una sola frase, por lo que clara=false.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":false,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.0\",\"verdict\":\"VALID\",\"reason\":\"El apartado 6 del art. 6 dice que los poderes inscritos tienen una validez máxima de cinco años a contar desde la fecha de inscripción, que es la opción a. La cita contiene esa frase completa. Los distractores (3 años, 10 años, 1 año, y 'desde otorgamiento') contradicen el texto. Es un plazo concreto, material de examen útil, y no hay duplicados en parecidas.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"21.1\",\"verdict\":\"VALID\",\"reason\":\"El apartado 1 del art. 6 establece que los registros generales no impiden la existencia de registros particulares en cada Organismo para trámites específicos, y la cita recoge exactamente eso. La opción a es correcta. La opción d añade una exigencia de doble inscripción que el texto no prevé, y las opciones b y c contradicen el texto. No hay duplicados y la pregunta es clara, sobre un artículo extenso.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}},\n{\"question_id\":\"22.0\",\"verdict\":\"VALID\",\"reason\":\"Pregunta en negativo. El art. 1 incluye como objeto las bases del régimen jurídico, los principios de responsabilidad, la potestad sancionadora y la organización y funcionamiento de la AGE y su sector público institucional. La cita muestra todos esos elementos, de modo que las opciones a, b y c aparecen en ella y 'el procedimiento administrativo común' no figura, así que la d es la respuesta NO. Solo una opción es correcta y la pregunta es útil, porque exige discriminar y no restar una frase.\",\"criteria_checked\":{\"respaldada\":true,\"cita_suficiente\":true,\"unica\":true,\"clara\":true,\"duplicada_de\":\"\"}}\n]",
+     "resultado": "ACEPTADA"
+    }
+   ]
+  }
+ ]
+}
